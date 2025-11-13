@@ -1,0 +1,92 @@
+TEST SCRIPT: TS-092
+Test Scenario: Approve Product Review
+User Story: As a Logged-in Admin, I want to approve a pending review, so that I can make it visible on the product page
+Priority: Medium
+Related Requirements: FR-020
+
+GIVEN the admin is logged in to the admin panel
+  AND there is a pending review:
+    - Review ID: REV-001
+    - Product: "Classic Cotton Shirt"
+    - Customer: Emily Johnson
+    - Rating: 4 stars
+    - Review Title: "Great quality shirt"
+    - Review Text: "I love this shirt! The fabric is soft and the fit is perfect..."
+    - Posted Date: 2024-11-12
+    - Status: "Pending"
+  AND the admin navigates to "Reviews & Ratings" section
+
+WHEN the admin filters reviews by status "Pending"
+
+THEN the system should display all pending reviews including REV-001
+  AND each review in the list should show:
+    - Product name and image thumbnail
+    - Customer name
+    - Rating (stars)
+    - Review title
+    - Review excerpt (first 100 characters)
+    - Posted date
+    - Actions: "Approve" and "Reject" buttons
+
+WHEN the admin clicks on REV-001 to view full details
+
+THEN the system should display the complete review information:
+  - Product Details:
+    - Product name: "Classic Cotton Shirt"
+    - Product SKU
+    - Product image
+  - Customer Details:
+    - Name: Emily Johnson
+    - Email: emily.johnson@email.com
+    - Verified Purchase: Yes
+    - Order Number: #1001
+  - Review Details:
+    - Rating: 4 stars (★★★★☆)
+    - Title: "Great quality shirt"
+    - Full Text: "I love this shirt! The fabric is soft and the fit is perfect..."
+    - Posted Date: 2024-11-12
+    - Current Status: Pending
+  - Action Buttons:
+    - "Approve Review" (green)
+    - "Reject Review" (red)
+
+WHEN the admin clicks "Approve Review" button
+
+THEN the system should prompt for confirmation: "Are you sure you want to approve this review?"
+
+WHEN the admin confirms approval
+
+THEN the system should:
+  - Update review status: "Pending" → "Approved"
+  - Record approval timestamp
+  - Record admin ID who approved
+  - Recalculate product average rating:
+    - Previous ratings count: 10
+    - Previous average: 4.2
+    - New ratings count: 11
+    - New average: 4.18 (recalculated)
+  - Update product rating display
+  - Make review visible on product page
+  - Display success message: "Review approved successfully"
+  - Redirect back to reviews list
+
+WHEN customers view the "Classic Cotton Shirt" product page
+
+THEN the approved review should be visible in the reviews section
+  AND display:
+    - Customer name: Emily J. (privacy-protected)
+    - Rating: 4 stars
+    - Verified Purchase badge
+    - Review title and text
+    - Posted date: "Nov 12, 2024"
+  AND the product's average rating should show 4.18 stars
+  AND the ratings count should show "11 reviews"
+
+EXPECTED RESULT:
+- Admin can successfully approve pending reviews
+- Approved reviews become visible on product pages
+- Product average rating is correctly recalculated
+- Review approval is recorded with timestamp and admin ID
+- Customer identity is appropriately protected on frontend
+- Verified purchase badge is displayed
+- Review moderation workflow functions properly

@@ -1,0 +1,34 @@
+TEST SCRIPT: TS-001
+Test Scenario: Browse Products by Category
+User Story: As a Visitor, I want to browse products by selecting categories and sub-categories, so that I can find specific types of apparel I'm interested in
+Priority: Critical
+Related Requirements: FR-003, FR-004
+
+GIVEN the user is on the ecommerce website homepage
+  AND product categories are configured in the system
+  AND products exist in various categories
+
+WHEN the user clicks on a category (e.g., "Shirts")
+  AND the category page loads
+
+THEN the system should display all products in the selected category
+  AND each product listing should show:
+    - Product thumbnail image
+    - Product name
+    - Product price
+    - Product rating
+  AND filter options should be available (price, size, color, rating)
+  AND sorting options should be available (price, rating, newest)
+
+WHEN the user clicks on a sub-category (e.g., "Casual Shirts" under "Shirts")
+
+THEN the system should display only products in the selected sub-category
+  AND the product listing should update accordingly
+  AND breadcrumb navigation should show the category path
+
+EXPECTED RESULT:
+- User can successfully navigate through categories and sub-categories
+- Products are correctly filtered by selected category/sub-category
+- All product information is displayed correctly
+- Filters and sorting options are functional
+- Page loads within acceptable time (< 30 seconds per NFR-002)

@@ -1,0 +1,83 @@
+TEST SCRIPT: TS-067
+Test Scenario: View Order Details (Admin)
+User Story: As a Logged-in Admin, I want to view complete details of a specific order, so that I can process and fulfill the order
+Priority: Critical
+Related Requirements: FR-017
+
+GIVEN the admin is logged in to the admin panel
+  AND there is an order in the system:
+    - Order Number: #1001
+    - Customer: Emily Johnson (emily.johnson@email.com)
+    - Order Date: 2024-11-01
+    - Status: "Confirmed"
+    - Items:
+      - Classic Cotton Shirt, Size M, Color Red, Qty 2, $29.99 each
+      - Casual T-Shirt, Size L, Color Blue, Qty 1, $19.99
+    - Subtotal: $79.97
+    - Shipping: $7.50
+    - Tax: $7.01
+    - Total: $94.48
+    - Payment: Completed (Credit Card ****3333)
+    - Billing Address: 123 Main St, New York, NY 10001
+    - Shipping Address: 123 Main St, New York, NY 10001
+
+WHEN the admin navigates to "Orders" section
+  AND searches for or filters to find Order #1001
+  AND clicks on Order #1001 to view details
+
+THEN the system should display the complete order information:
+  - Order Details Section:
+    - Order Number: #1001
+    - Order Date: 2024-11-01
+    - Current Status: "Confirmed"
+    - Customer Name: Emily Johnson
+    - Customer Email: emily.johnson@email.com
+    - Customer Phone: 555-0101
+
+  - Items Section:
+    - List of all ordered items with:
+      - Product name, SKU
+      - Variations (size, color)
+      - Quantity
+      - Unit price
+      - Subtotal per item
+    - Items Total: $79.97
+
+  - Pricing Section:
+    - Subtotal: $79.97
+    - Shipping Cost: $7.50
+    - Tax: $7.01
+    - Order Total: $94.48
+
+  - Payment Section:
+    - Payment Method: Credit Card
+    - Last 4 digits: 3333
+    - Payment Status: Completed
+    - Transaction ID
+
+  - Address Section:
+    - Billing Address: 123 Main St, New York, NY 10001
+    - Shipping Address: 123 Main St, New York, NY 10001
+
+  - Action Buttons:
+    - "Update Order Status" dropdown
+    - "Edit Order" button (if applicable)
+    - "Print Invoice" button
+    - "Send Email to Customer" button
+
+WHEN the admin needs to process this order
+
+THEN they can:
+  - View all necessary information in one place
+  - Update the order status
+  - Add shipment tracking information
+  - Contact the customer
+  - Print order details for fulfillment
+
+EXPECTED RESULT:
+- All order information is displayed accurately
+- Admin has complete visibility into order details
+- All customer and product information is accessible
+- Payment and address information is clearly shown
+- Admin can take appropriate actions on the order
+- Page layout is clear and organized

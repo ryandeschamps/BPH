@@ -1,0 +1,47 @@
+TEST SCRIPT: TS-013
+Test Scenario: Login with Email and Password
+User Story: As a Registered Buyer, I want to log in using my email and password, so that I can access my account and make purchases
+Priority: Critical
+Related Requirements: FR-001
+
+GIVEN the user has a registered and verified account
+  AND the user credentials are:
+    - Email: "emily.johnson@email.com"
+    - Password: "Pass@123"
+  AND the user is on the login page
+
+WHEN the user enters the email address in the email field
+  AND the user enters the password in the password field
+  AND the user clicks the "Login" button
+
+THEN the system should validate the credentials
+  AND verify the email exists in the database
+  AND verify the password matches the stored password
+  AND verify the account email is verified
+  AND verify the account status is "Active"
+  AND create a user session
+  AND redirect the user to:
+    - The originally requested page (if accessed via protected route), OR
+    - The account dashboard (if direct login)
+  AND display a welcome message with user's name
+
+WHEN the user enters an incorrect password
+
+THEN the system should display an error message: "Invalid email or password"
+  AND not create a session
+  AND remain on the login page
+  AND allow the user to retry
+
+WHEN the user attempts to login with an unverified email
+
+THEN the system should display a message: "Please verify your email address before logging in"
+  AND provide an option to "Resend Verification Email"
+  AND not create a session
+
+EXPECTED RESULT:
+- User with valid credentials can successfully log in
+- User is redirected to appropriate page after login
+- Session is created and persisted
+- Invalid credentials are rejected with clear error messages
+- Unverified accounts cannot log in
+- Security best practices are followed (passwords not shown, secure session handling)

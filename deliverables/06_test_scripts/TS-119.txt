@@ -1,0 +1,92 @@
+TEST SCRIPT: TS-119
+Test Scenario: Validate Email Uniqueness
+User Story: As a System, I want to ensure email addresses are unique during registration, so that I can prevent duplicate accounts
+Priority: Critical
+Related Requirements: FR-002
+
+GIVEN the system has existing users:
+  - emily.johnson@email.com (registered and verified)
+  - michael.smith@email.com (registered, pending verification)
+  AND a new visitor is attempting to register
+
+WHEN the new visitor navigates to the registration page
+  AND the registration form is displayed
+
+THEN the form should include:
+  - Email address field with validation
+  - Client-side validation indicator
+  - Real-time validation feedback (optional)
+
+WHEN the new visitor enters email "sarah.williams@email.com" (not in database)
+  AND tabs out of the email field or continues filling the form
+
+THEN the system should (optionally) perform real-time validation
+  AND indicate the email is available (green check mark or similar)
+  AND allow the user to continue
+
+WHEN the user completes the form and clicks "Register"
+
+THEN the system should perform server-side validation:
+  - Query database for "sarah.williams@email.com"
+  - Confirm email does not exist
+  - Proceed with account creation
+  - Create new user record
+  - Send verification email
+  - Display success message
+
+WHEN a visitor attempts to register with "emily.johnson@email.com" (existing verified email)
+  AND fills out the registration form
+  AND clicks "Register"
+
+THEN the system should:
+  - Query database for "emily.johnson@email.com"
+  - Find existing user record with status "Verified"
+  - Reject the registration
+  - Display error message: "This email address is already registered. Please log in or use a different email address."
+  - Provide a "Login Instead" link
+  - NOT create a new account
+  - NOT send verification email
+  - Clear or retain form data (except password) for correction
+
+WHEN a visitor attempts to register with "michael.smith@email.com" (existing but unverified)
+  AND fills out the registration form
+  AND clicks "Register"
+
+THEN the system should:
+  - Query database for "michael.smith@email.com"
+  - Find existing user record with status "Unverified"
+  - Reject the duplicate registration
+  - Display error message: "This email address is already registered but not yet verified. Please check your email for the verification link or request a new one."
+  - Provide options:
+    - "Resend Verification Email" button
+    - "Login" link
+  - NOT create a new account
+
+WHEN the system detects duplicate email during registration
+
+THEN it should also:
+  - Log the attempt (for security monitoring)
+  - NOT reveal sensitive information about existing account
+  - NOT allow account enumeration attacks
+  - Implement rate limiting to prevent abuse
+
+VALIDATION SCENARIOS:
+
+WHEN email validation is performed
+
+THEN the system should also check for:
+  - Valid email format (RFC 5322 compliant)
+  - No whitespace in email
+  - Case-insensitive comparison (emily@email.com = EMILY@email.com)
+  - SQL injection prevention
+  - Maximum length validation (254 characters)
+
+EXPECTED RESULT:
+- Unique email addresses are enforced across all user accounts
+- Duplicate email registration is prevented
+- Clear error messages guide users appropriately
+- Both verified and unverified existing emails are detected
+- Email comparison is case-insensitive
+- Security best practices are followed
+- Users with existing accounts are directed to login
+- Verification email resend option is available for unverified accounts

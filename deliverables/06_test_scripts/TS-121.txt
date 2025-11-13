@@ -1,0 +1,125 @@
+TEST SCRIPT: TS-121
+Test Scenario: Handle Invalid Login Credentials
+User Story: As a System, I want to reject invalid login attempts and display error messages, so that I can protect user accounts
+Priority: High
+Related Requirements: FR-001
+
+GIVEN there is a registered user account:
+  - Email: "emily.johnson@email.com"
+  - Password: "Pass@123"
+  - Status: "Active"
+  - Email Verified: Yes
+  AND the user is on the login page
+
+SCENARIO 1: Incorrect Password
+
+WHEN the user enters:
+  - Email: "emily.johnson@email.com"
+  - Password: "WrongPassword123"
+  AND clicks "Login"
+
+THEN the system should:
+  - Validate credentials against database
+  - Detect password mismatch
+  - NOT create a session
+  - Display error message: "Invalid email or password"
+  - NOT specify whether email or password is incorrect (security best practice)
+  - Clear the password field
+  - Retain the email field value
+  - Remain on login page
+  - Log the failed attempt (for security monitoring)
+  - Increment failed login counter for this email
+
+SCENARIO 2: Non-existent Email
+
+WHEN the user enters:
+  - Email: "nonexistent@email.com"
+  - Password: "AnyPassword123"
+  AND clicks "Login"
+
+THEN the system should:
+  - Query database for email
+  - Find no matching user
+  - NOT create a session
+  - Display same error message: "Invalid email or password"
+  - NOT reveal that email doesn't exist
+  - Clear password field
+  - Log the attempt
+
+SCENARIO 3: Multiple Failed Attempts
+
+GIVEN the user has failed login 2 times already
+WHEN the user attempts login with wrong credentials a 3rd time
+
+THEN the system should:
+  - Display error: "Invalid email or password"
+  - Additionally show warning: "You have 2 more attempts before your account is temporarily locked"
+
+GIVEN the user has failed login 5 times
+WHEN the user attempts a 6th failed login
+
+THEN the system should:
+  - Temporarily lock the account for 15 minutes
+  - Display error: "Too many failed login attempts. Your account has been temporarily locked for 15 minutes. Please try again later or use 'Forgot Password'."
+  - Set account lockout timestamp
+  - Send security alert email to user
+  - Provide "Forgot Password" link
+
+SCENARIO 4: Login During Lockout Period
+
+GIVEN the user account is locked due to failed attempts
+  AND lockout period has not expired
+WHEN the user attempts to login with correct credentials
+
+THEN the system should:
+  - Check lockout status
+  - Detect active lockout
+  - Display error: "Your account is temporarily locked due to multiple failed login attempts. Please try again in X minutes or reset your password."
+  - NOT allow login even with correct credentials
+  - Show time remaining until unlock
+
+SCENARIO 5: Empty Fields
+
+WHEN the user clicks "Login" with empty email field
+
+THEN display validation: "Email is required"
+
+WHEN the user clicks "Login" with empty password field
+
+THEN display validation: "Password is required"
+
+SCENARIO 6: SQL Injection Attempt
+
+WHEN a malicious user enters:
+  - Email: "admin' OR '1'='1"
+  - Password: "anything"
+
+THEN the system should:
+  - Use parameterized queries (prevention)
+  - NOT execute SQL injection
+  - Treat input as literal string
+  - Fail authentication
+  - Display standard error message
+  - Log suspicious activity
+
+SCENARIO 7: Rate Limiting
+
+GIVEN multiple rapid login attempts from same IP
+WHEN more than 10 failed attempts occur within 5 minutes
+
+THEN the system should:
+  - Implement rate limiting
+  - Display message: "Too many login attempts from your location. Please try again in 15 minutes."
+  - Block further attempts temporarily
+  - Log potential brute force attack
+
+EXPECTED RESULT:
+- Invalid credentials are consistently rejected
+- Generic error messages prevent account enumeration
+- Account lockout protects against brute force attacks
+- Security events are logged for monitoring
+- Users receive helpful guidance (forgot password link)
+- Rate limiting prevents automated attacks
+- SQL injection and other attacks are prevented
+- User experience balances security with usability
+- Security alerts are sent for suspicious activity

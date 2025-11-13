@@ -1,0 +1,82 @@
+TEST SCRIPT: TS-032
+Test Scenario: Pay with Credit Card
+User Story: As a Buyer in Checkout, I want to pay for my order using a credit card, so that I can complete my purchase
+Priority: Critical
+Related Requirements: FR-008, FR-020
+
+GIVEN the user is logged in and at the payment step of checkout
+  AND the order details are:
+    - Items Total: $79.97
+    - Shipping: $7.50
+    - Tax: $7.01
+    - Order Total: $94.48
+  AND the billing address is: "123 Main St, New York, NY 10001"
+  AND the shipping address is: "123 Main St, New York, NY 10001"
+
+WHEN the user selects "Credit Card" as the payment method
+  AND the payment form is displayed
+
+THEN the system should show fields for:
+  - Card Number (16 digits)
+  - Cardholder Name
+  - Expiration Date (MM/YY)
+  - CVV (3 digits)
+  - Billing ZIP Code
+
+WHEN the user enters valid credit card details:
+  - Card Number: "4532-1111-2222-3333"
+  - Cardholder Name: "Emily Johnson"
+  - Expiration: "12/2026"
+  - CVV: "123"
+  - ZIP: "10001"
+  AND clicks "Place Order" or "Pay Now" button
+
+THEN the system should validate all payment fields
+  AND display a loading indicator
+  AND send payment request to Stripe payment gateway with:
+    - Amount: $94.48
+    - Currency: USD
+    - Payment method details (encrypted)
+    - Order metadata
+  AND Stripe processes the payment
+
+WHEN Stripe approves the payment
+
+THEN the system should receive success response with transaction ID
+  AND create an order record with:
+    - Order Number: (auto-generated)
+    - Status: "Confirmed"
+    - Payment Status: "Completed"
+    - Transaction ID: (from Stripe)
+  AND clear the shopping cart
+  AND send order confirmation email to "emily.johnson@email.com"
+  AND redirect to order confirmation page showing:
+    - Order number
+    - "Thank you for your order" message
+    - Order details
+    - Estimated delivery date
+
+WHEN Stripe declines the payment
+
+THEN the system should receive failure response with reason
+  AND display error message: "Payment failed: [reason]"
+  AND allow the user to:
+    - Retry with same card
+    - Try different payment method
+    - Update card details
+  AND NOT create an order
+  AND NOT clear the shopping cart
+
+WHEN the user enters invalid card number
+
+THEN the system should validate client-side
+  AND display error: "Please enter a valid card number"
+  AND prevent form submission
+
+EXPECTED RESULT:
+- Successful payment creates order and clears cart
+- User receives order confirmation email
+- Failed payment is handled gracefully with retry option
+- Payment security is maintained (PCI compliance via Stripe)
+- Transaction ID is recorded for reference
+- All order details are correctly stored
