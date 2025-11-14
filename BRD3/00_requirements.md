@@ -7,6 +7,51 @@
 
 ---
 
+## Requirements Mapping: BRD to Detailed Requirements
+
+This table maps the original BRD requirement IDs (FR-XXX, NFR-XXX) to the detailed requirements (REQ-XXX) extracted for comprehensive test coverage.
+
+| Original BRD ID | Detailed Requirements | Count | Functional Area |
+|-----------------|----------------------|-------|-----------------|
+| FR-001 (Login) | REQ-001, REQ-002, REQ-003, REQ-004 | 4 | User Authentication |
+| FR-002 (Registration) | REQ-005 through REQ-016 | 12 | User Authentication |
+| FR-003 (Product Search) | REQ-020, REQ-021, REQ-022, REQ-023, REQ-024, REQ-025 | 6 | Product Browsing |
+| FR-004 (Product Listing) | REQ-026 through REQ-032 | 7 | Product Browsing |
+| FR-005 (Product Details) | REQ-033 through REQ-044 | 12 | Product Browsing |
+| FR-006 (Wishlist) | REQ-045 through REQ-049 | 5 | Shopping Features |
+| FR-007 (Shopping Cart) | REQ-053 through REQ-061 | 9 | Shopping Features |
+| FR-008 (Checkout & Payment) | REQ-062 through REQ-075 | 14 | Order Processing |
+| FR-009 (Social Media Sharing) | REQ-050, REQ-051, REQ-052 | 3 | Social Features |
+| FR-010 (My Account) | REQ-083 through REQ-090 | 8 | Account Management |
+| FR-011 (Ratings & Reviews) | REQ-095 through REQ-101 | 7 | Product Feedback |
+| FR-012 (Order History) | REQ-076 through REQ-082 | 7 | Order Management |
+| FR-013 (Contact Support) | REQ-102 through REQ-107 | 6 | Customer Support |
+| FR-014 (Admin Login) | REQ-017, REQ-018, REQ-019 | 3 | Admin Authentication |
+| FR-015 (Admin Dashboard) | REQ-108 through REQ-112 | 5 | Admin Features |
+| FR-016 (Buyers Management) | REQ-113 through REQ-121 | 9 | Admin Features |
+| FR-017 (Orders Management) | REQ-122 through REQ-136 | 15 | Admin Features |
+| FR-018 (Product Categories) | REQ-137 through REQ-144 | 8 | Admin Features |
+| FR-019 (Products Management) | REQ-145 through REQ-154 | 10 | Admin Features |
+| FR-020 (Payment Management) | REQ-155 through REQ-158 | 4 | Admin Features |
+| FR-021 (Ratings & Review Admin) | REQ-159 through REQ-162 | 4 | Admin Features |
+| FR-022 (Statistics & Reports) | REQ-163 through REQ-172 | 10 | Admin Features |
+| FR-023 (System Users Management) | REQ-173 through REQ-177 | 5 | Admin Features |
+| FR-024 (Roles Management) | REQ-178 through REQ-184 | 7 | Admin Features |
+| FR-025 (CMS Management) | REQ-185 through REQ-188 | 4 | Admin Features |
+| FR-026 (Email Management) | REQ-189 through REQ-194 | 6 | Admin Features |
+| FR-027 (Complaints/Feedbacks) | REQ-195 through REQ-198 | 4 | Admin Features |
+| NFR-001 (Scalability) | REQ-199 | 1 | Performance |
+| NFR-002 (Speed) | REQ-200 | 1 | Performance |
+| NFR-003 (Reliability) | REQ-201, REQ-202 | 2 | Reliability |
+| NFR-004 (Security) | REQ-203, REQ-204 | 2 | Security |
+| Assumptions | REQ-205, REQ-206, REQ-207 | 3 | Business Constraints |
+| Business Constraints | REQ-208, REQ-209 | 2 | Business Constraints |
+| Out of Scope | REQ-210, REQ-211, REQ-212 | 3 | Exclusions |
+
+**Total**: 30 BRD requirements expanded into 212 detailed, testable requirements.
+
+---
+
 ## Functional Area 1: User Authentication & Registration
 
 ### Buyer Login (FR-001)

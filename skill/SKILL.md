@@ -13,7 +13,16 @@ Acknowledge and Prepare:
 
 Confirm you have understood the request.
 Ask the user to upload all their requirements and specification documents.
-Once they are provided, create the deliverables/ and deliverables/06_test_scripts/ directories.
+
+Once they are provided, handle the output directory:
+- **If deliverables/ directory does NOT exist**: Create deliverables/ and deliverables/06_test_scripts/
+- **If deliverables/ directory EXISTS**:
+  - Ask user: "Output directory 'deliverables/' already exists. Options: (1) Overwrite, (2) Use timestamped directory (e.g., deliverables_20251114_225805/), (3) Cancel"
+  - Based on user choice:
+    - Overwrite: Remove existing deliverables/ and create fresh directories
+    - Timestamped: Create deliverables_YYYYMMDD_HHMMSS/ and update all subsequent paths
+    - Cancel: Stop and wait for user to manually handle the directory
+
 Set expectations: Tell the user this process generates exhaustive content first, then optimizes.
 
 
@@ -99,9 +108,27 @@ After each batch: Report progress (e.g., "Completed 40/85 test scripts")
 
 VERIFICATION CHECKPOINT:
 
-After completion, list the deliverables/06_test_scripts/ directory
-Count files and verify: "Generated X test scripts for X scenarios - 100% complete"
-If any are missing: Generate the missing scripts immediately before proceeding
+After completion, perform BOTH quantity and quality checks:
+
+**Quantity Check:**
+- List the deliverables/06_test_scripts/ directory
+- Count files and verify: "Generated X test scripts for X scenarios - 100% complete"
+- If any are missing: Generate the missing scripts immediately before proceeding
+
+**Quality Check (CRITICAL - prevents generic templates):**
+- Randomly sample 10-15 scripts (at least 5% of total)
+- For each sampled script, verify it has:
+  ✓ NO generic placeholders like "scenario NN", "appropriate page", "user/admin", "required action"
+  ✓ Specific GIVEN conditions (not "system is in ready state")
+  ✓ Specific WHEN actions (not "performs required action")
+  ✓ Specific THEN outcomes (not "displays expected result")
+  ✓ Concrete test data values (actual names, emails, numbers)
+  ✓ Measurable expected results (specific messages, states, redirects)
+- If ANY sampled script fails quality check:
+  - Identify the affected batch (scripts were generated in batches)
+  - Regenerate that entire batch with explicit instruction: "Be specific, no placeholders, use concrete values"
+  - Re-sample to verify quality
+- Report: "Quality check passed for X/X sampled scripts"
 
 
 Step 8: Produce Combinatorial Plan (OPTIMIZATION):
@@ -121,7 +148,7 @@ python3 skill/scripts/combinatorial.py deliverables/04_variants.csv
   - `--verbose` - Enable detailed logging
   - `--output <path>` - Specify custom output path
 
-10. Step 9: Draft Full Test Plan:
+9. Step 9: Draft Full Test Plan:
 - Synthesize all previous outputs into a comprehensive test plan document.
 - The plan should include:
 - Executive summary with key statistics
@@ -133,7 +160,7 @@ python3 skill/scripts/combinatorial.py deliverables/04_variants.csv
 - Risk assessment
 - Save the document as deliverables/08_test_plan.md.
 
-Step 10: Build Requirements Traceability Matrix (RTM):
+10. Step 10: Build Requirements Traceability Matrix (RTM):
 
 Execute the scripts/rtm_builder.py script using the command:
 
@@ -152,7 +179,7 @@ python3 skill/scripts/rtm_builder.py deliverables/03_test_scenarios.md deliverab
   - `--output <path>` - Specify custom output path
   - `--verbose` - Enable detailed logging
 
-12. Completion and Summary:
+11. Completion and Summary:
 - List all files in deliverables/ directory with file sizes
 - Provide a comprehensive summary with key metrics:
 - Total requirements extracted

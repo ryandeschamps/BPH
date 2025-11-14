@@ -84,8 +84,10 @@ class RTMBuilder:
         self._setup_logging()
 
         # Regex patterns
+        # Only match REQ-XXX format since that's what the extraction step produces
+        # (Original BRD uses FR/NFR, but 00_requirements.md normalizes to REQ-XXX)
         self.req_pattern = re.compile(
-            r'\b((?:FR|NFR|REQ|BR|UR)[-_]?\d+)\b',
+            r'\b(REQ[-_]?\d+)\b',
             re.IGNORECASE
         )
         self.scenario_pattern = re.compile(

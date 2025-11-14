@@ -1,34 +1,4 @@
 Requirement_ID,Requirement_Description,Priority,Test_Scenario_IDs,Test_Script_Available,Coverage_Status,Notes
-FR-001,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-002,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-003,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-004,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-005,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-006,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-007,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-008,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-009,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-010,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-011,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-012,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-013,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-014,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-015,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-016,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-017,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-018,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-019,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-020,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-021,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-022,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-023,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-024,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-025,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-FR-026,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-NFR-001,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-NFR-002,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-NFR-003,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
-NFR-004,N/A,N/A,N/A,N/A,Not Covered,No test scenarios mapped to this requirement
 REQ-001,Users shall be able to log in to the website using email and password,N/A,"TS-007, TS-009, TS-017",Yes,Covered,
 REQ-002,Users shall be able to reset their password if forgotten,N/A,"TS-013, TS-014, TS-015, TS-016, TS-017",Yes,Covered,
 REQ-003,Users shall be able to log in using their Facebook account,N/A,"TS-010, TS-012",Yes,Covered,
