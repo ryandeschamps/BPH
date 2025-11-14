@@ -34,7 +34,11 @@ Follow this workflow precisely. Create a `deliverables/` directory to store all 
 5.  **Step 4: Define Variants:**
     - Identify parameters within the scenarios that can vary (e.g., user types, input values, configurations).
     - Create logical combinations of these parameters to define distinct test variants.
-    - Output this as a CSV file to `deliverables/04_variants.csv`. The headers should be the parameters.
+    - Include a `Variant_ID` column (e.g., V001, V002, etc.) as the first column.
+    - Use "N/A" for parameters that don't apply to certain user types (e.g., payment method for visitors, product details for admins).
+    - Aim for 30-100 comprehensive variants covering different parameter combinations.
+    - Output this as a CSV file to `deliverables/04_variants.csv`. The headers should include `Variant_ID` followed by the parameter names.
+    - **Note:** Step 7 will optimize this set to select the minimal subset for pairwise coverage.
 
 6.  **Step 5: Create Test Data:**
     - For each variant defined in `04_variants.csv`, generate corresponding, realistic test data.
@@ -46,9 +50,18 @@ Follow this workflow precisely. Create a `deliverables/` directory to store all 
     - Save each script as a separate file inside the `deliverables/06_test_scripts/` directory (e.g., `TS-001.txt`).
 
 8.  **Step 7: Produce Combinatorial Plan:**
-    - **Execute the `scripts/combinatorial.py` script.** Pass the `deliverables/04_variants.csv` file as an argument.
-    - This script will generate an optimized, pairwise test execution plan.
-    - Save the script's output to `deliverables/07_combinatorial_plan.md`.
+    - **Execute the `scripts/combinatorial.py` script** using the command:
+      ```bash
+      python3 skill/scripts/combinatorial.py deliverables/04_variants.csv
+      ```
+    - The script will automatically select an optimal subset of variants from `04_variants.csv` that achieves maximum pairwise coverage.
+    - This reduces the number of test executions while maintaining comprehensive parameter interaction coverage.
+    - The output is automatically saved to `deliverables/07_combinatorial_plan.md`.
+    - Review the generated plan for coverage statistics and selected variants.
+    - **Optional flags:**
+      - `--mode generate` - Generate new variants instead of selecting from existing ones (not recommended for typical use)
+      - `--verbose` - Enable detailed logging
+      - `--output <path>` - Specify custom output path
 
 9.  **Step 8: Draft Full Test Plan:**
     - Synthesize all previous outputs into a comprehensive test plan document.
@@ -56,8 +69,22 @@ Follow this workflow precisely. Create a `deliverables/` directory to store all 
     - Save the document as `deliverables/08_test_plan.md`.
 
 10. **Step 9: Build Requirements Traceability Matrix (RTM):**
-    - **Execute the `scripts/rtm_builder.py` script.** Pass the paths to the requirements file(s) and `deliverables/03_test_scenarios.md` as arguments.
-    - The script will generate a CSV mapping requirements to test scenarios.
-    - Save the resulting RTM to `deliverables/09_rtm.csv`.
+    - **Execute the `scripts/rtm_builder.py` script** using the command:
+      ```bash
+      python3 skill/scripts/rtm_builder.py deliverables/03_test_scenarios.md \
+          <requirement_file(s)> --test-scripts deliverables/06_test_scripts
+      ```
+      Replace `<requirement_file(s)>` with your requirements documents (e.g., `BRD.md`, `requirements_assessment.md`)
+    - The script will generate a comprehensive RTM with:
+      - Requirement-to-scenario mappings
+      - Coverage status and statistics
+      - Test script availability tracking
+      - Gap analysis (uncovered requirements, orphaned scenarios)
+    - The output is automatically saved to `deliverables/09_rtm.csv`.
+    - Review the summary statistics and address any coverage gaps.
+    - **Optional flags:**
+      - `--gap-report` - Generate detailed gap analysis report (recommended)
+      - `--output <path>` - Specify custom output path
+      - `--verbose` - Enable detailed logging
 
 11. **Completion:** Notify the user that all QA artifacts have been generated and are available in the `deliverables/` directory.
