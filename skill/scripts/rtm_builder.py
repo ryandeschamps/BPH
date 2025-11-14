@@ -213,6 +213,34 @@ class RTMBuilder:
         # Try to find the requirement in a table or structured format
         # Look for patterns like: FR-001 | Description | Priority
         # or FR-001: Description (Priority: High)
+        # or - **REQ-001**: Description (markdown bold format)
+
+        # Pattern 0: Markdown list with bold - matches: - **REQ-001**: Description
+        markdown_bold_pattern = re.compile(
+            rf'-\s*\*\*{re.escape(req_id)}\*\*\s*:\s*([^\n]+)',
+            re.IGNORECASE
+        )
+        match = markdown_bold_pattern.search(content)
+        if match:
+            line = match.group(1).strip()
+            # Check if priority is mentioned
+            priority_match = re.search(
+                r'\(?\s*(?:Priority|P):\s*(\w+(?:\s*\(\d+\))?)\)?',
+                line,
+                re.IGNORECASE
+            )
+            if priority_match:
+                priority = priority_match.group(1).strip()
+                # Remove priority from description
+                description = re.sub(
+                    r'\(?\s*(?:Priority|P):\s*\w+(?:\s*\(\d+\))?\)?',
+                    '',
+                    line
+                ).strip()
+            else:
+                description = line
+
+            return description, priority
 
         # Pattern 1: Table format with pipes
         table_pattern = re.compile(
@@ -225,7 +253,7 @@ class RTMBuilder:
             priority = match.group(2).strip()
             return description, priority
 
-        # Pattern 2: Line format with colon
+        # Pattern 2: Line format with colon (without bold)
         line_pattern = re.compile(
             rf'{re.escape(req_id)}\s*:\s*([^\n]+)',
             re.IGNORECASE
