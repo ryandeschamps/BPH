@@ -298,19 +298,26 @@ class RTMBuilder:
                         scenario_content
                     )
 
+                    # Debug output for first few scenarios
+                    if i < 20 and self.verbose:
+                        self.logger.debug(f"Scenario {scenario_id}: {len(requirements)} reqs: {requirements}")
+
                     # Check if test script exists
                     has_script = False
                     if test_scripts_dir:
                         script_path = Path(test_scripts_dir) / f"{scenario_id}.txt"
                         has_script = script_path.exists()
 
-                    self.scenarios[scenario_id] = TestScenario(
-                        scenario_id=scenario_id,
-                        title=title,
-                        priority=priority,
-                        requirements=requirements,
-                        has_script=has_script
-                    )
+                    # Only store if this scenario hasn't been stored yet (avoid duplicates)
+                    # OR if this one has requirements and the previous one didn't
+                    if scenario_id not in self.scenarios or (requirements and not self.scenarios[scenario_id].requirements):
+                        self.scenarios[scenario_id] = TestScenario(
+                            scenario_id=scenario_id,
+                            title=title,
+                            priority=priority,
+                            requirements=requirements,
+                            has_script=has_script
+                        )
 
             self.logger.info(f"✓ Extracted {len(self.scenarios)} test scenario(s)")
 
@@ -353,7 +360,7 @@ class RTMBuilder:
 
         # Extract related requirements
         req_match = re.search(
-            r'\*\*Related Requirements\*\*:\s*([^\n]+)',
+            r'Related Requirements:\s*([^\n]+)',
             content,
             re.IGNORECASE
         )
@@ -371,11 +378,17 @@ class RTMBuilder:
         self.logger.info("Building requirements traceability matrix")
 
         # Map scenarios to requirements
+        mapped_count = 0
         for scenario_id, scenario in self.scenarios.items():
+            if self.verbose and scenario_id in ['TS-001', 'TS-002', 'TS-003']:
+                self.logger.debug(f"Mapping {scenario_id} with {len(scenario.requirements)} requirements: {scenario.requirements}")
             for req_id in scenario.requirements:
                 if req_id in self.requirements:
                     if scenario_id not in self.requirements[req_id].scenarios:
                         self.requirements[req_id].scenarios.append(scenario_id)
+                        mapped_count += 1
+                        if self.verbose and req_id in ['REQ-001', 'REQ-002']:
+                            self.logger.debug(f"Mapped {req_id} -> {scenario_id}")
                 else:
                     # Requirement mentioned in scenario but not in requirement files
                     self.logger.warning(
