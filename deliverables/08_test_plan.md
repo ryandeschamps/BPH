@@ -413,9 +413,9 @@ As per BRD Section 3.2.2:
 - ✅ Combinatorial Test Execution Plan
 
 ### 5.2 Test Design Deliverables
-- ✅ Test Scripts (Given/When/Then format)
+- ✅ Test Scripts (Given/When/Then format) - 125 scripts complete
 - ✅ Test Data Specification
-- Requirements Traceability Matrix (RTM)
+- ✅ Requirements Traceability Matrix (RTM)
 - Test Case Repository (in test management tool)
 
 ### 5.3 Test Execution Deliverables
@@ -713,26 +713,75 @@ Based on the Combinatorial Test Execution Plan:
 
 ### 11.3 Test Scripts Created
 
-**Sample Test Scripts**: 15 detailed scripts covering:
-- TS-001: Browse Products by Category
-- TS-002: Search Products by Keyword
-- TS-011: Register New Account
-- TS-013: Login with Email and Password
-- TS-018: Add Product to Shopping Cart
-- TS-026: Proceed to Checkout
-- TS-032: Pay with Credit Card
-- TS-037: View Order History
-- TS-048: Post Product Rating
-- TS-053: Admin Login
-- TS-067: View Order Details (Admin)
-- TS-070: Update Order Status to Shipped
-- TS-080: Create New Product
-- TS-092: Approve Product Review
-- TS-097: View Revenue Report by Period
-- TS-119: Validate Email Uniqueness
-- TS-121: Handle Invalid Login Credentials
+**Total Test Scripts**: 125 detailed scripts (100% scenario coverage)
+
+All 125 test scenarios now have corresponding test scripts in Given/When/Then format, covering:
+
+**Visitor/Guest Functionality (10 scripts)**: TS-001 through TS-010
+- Product browsing, search, filtering, sorting, product details, PIN code validation, reviews, social sharing, contact support
+
+**Registration & Authentication (7 scripts)**: TS-011 through TS-017
+- Registration, email verification, login methods (email/Facebook/Google), password reset, logout
+
+**Shopping Features (8 scripts)**: TS-018 through TS-025
+- Add to cart, view cart, update quantity, remove items, wishlist management
+
+**Checkout & Payment (11 scripts)**: TS-026 through TS-036
+- Checkout flow, billing/shipping address, payment methods (credit/debit/net banking), order confirmation, payment failure handling
+
+**Order Management - Buyer (5 scripts)**: TS-037 through TS-041
+- Order history, order details, tracking, status notifications, reorder
+
+**Account Management (6 scripts)**: TS-042 through TS-047
+- Account dashboard, profile updates, password change, address book, default addresses
+
+**Reviews & Ratings (4 scripts)**: TS-048 through TS-052
+- Post ratings, write reviews, view reviews, purchase verification, support contact
+
+**Admin Authentication (3 scripts)**: TS-053 through TS-055
+- Admin login, password reset, logout
+
+**Admin Dashboard (4 scripts)**: TS-056 through TS-059
+- Statistics, buyer counts, product counts, revenue display
+
+**Admin Customer Management (5 scripts)**: TS-060 through TS-064
+- View customers, customer details, edit profile, activate/deactivate accounts
+
+**Admin Order Management (9 scripts)**: TS-065 through TS-073
+- View orders, filter by status, order details, status transitions, shipment tracking
+
+**Admin Product Category Management (5 scripts)**: TS-074 through TS-078
+- View categories, create/edit categories and sub-categories, activate/deactivate
+
+**Admin Product Management (9 scripts)**: TS-079 through TS-087
+- Product catalog, CRUD operations, image upload, variations, category assignment
+
+**Admin Payment & Review Moderation (8 scripts)**: TS-088 through TS-095
+- Payment info management, review approval workflow
+
+**Admin Reports (4 scripts)**: TS-096 through TS-099
+- Product reports, revenue reports, PDF/Excel export
+
+**Admin User/Role Management (8 scripts)**: TS-100 through TS-107
+- Sub-admin management, role creation, permission management
+
+**Admin CMS Management (4 scripts)**: TS-108 through TS-111
+- Edit static pages (About, Contact, Privacy Policy, Terms)
+
+**Admin Email Management (3 scripts)**: TS-112 through TS-114
+- Promotional email templates
+
+**Admin Support Management (2 scripts)**: TS-115 through TS-116
+- Customer complaints, notifications
+
+**System Features (4 scripts)**: TS-117 through TS-120
+- Stripe integration, automated emails, email uniqueness, order total calculation
+
+**Error Handling (5 scripts)**: TS-121 through TS-125
+- Invalid login, guest checkout prevention, out-of-stock, PIN validation, unverified email
 
 **Format**: Given/When/Then with Expected Results
+**Location**: deliverables/06_test_scripts/
 
 ---
 
@@ -951,21 +1000,29 @@ Upon successful completion of all testing activities and meeting exit criteria, 
 ## APPENDIX A: Test Scenario List
 
 See `deliverables/03_test_scenarios.md` for complete list of 125 test scenarios.
+See `deliverables/06_test_scripts/` for all 125 corresponding test scripts.
 
-**Sample Scenarios**:
-- TS-001: Browse Products by Category
-- TS-002: Search Products by Keyword
-- TS-011: Register New Account
-- TS-013: Login with Email and Password
-- TS-018: Add Product to Shopping Cart
-- ...
-(Full list in referenced document)
+**Coverage Summary**:
+- Total Test Scenarios: 125
+- Total Test Scripts: 125 (100% coverage)
+- Format: Given/When/Then with detailed preconditions, actions, and expected results
+- All scenarios mapped to functional requirements (FR-001 through FR-026)
+- Includes positive, negative, and edge case scenarios
+
+(Full list in referenced documents)
 
 ---
 
 ## APPENDIX B: Requirement Coverage Matrix
 
-See `deliverables/09_rtm.csv` (to be generated in Step 9)
+See `deliverables/09_rtm.csv` for complete Requirements Traceability Matrix.
+
+**RTM Summary**:
+- All 26 Functional Requirements (FR-001 through FR-026): 100% covered
+- All 4 Non-Functional Requirements (NFR-001 through NFR-004): Documented
+- 125 test scenarios mapped to requirements
+- 125 test scripts available
+- Complete bidirectional traceability between requirements and test artifacts
 
 ---
 

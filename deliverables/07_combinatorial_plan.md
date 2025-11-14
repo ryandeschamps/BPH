@@ -10,14 +10,22 @@
 
 ## Executive Summary
 
-This document presents an optimized test execution plan based on combinatorial testing principles. Instead of testing all possible combinations of parameters (which would result in thousands of test cases), we use pairwise (2-way) combinatorial testing to achieve high defect detection rates with significantly fewer test cases.
+This document presents an optimized test execution plan based on combinatorial testing principles. Instead of testing all possible combinations of parameters (which would result in thousands of test cases), we use pairwise (2-way) combinatorial testing to achieve high defect detection rates with significantly fewer parameter combinations.
+
+**Important Note**: This plan uses 50 optimized parameter variants to execute the 125 test scripts. Each test script (TS-001 through TS-125) may be executed with different parameter combinations (variants) as relevant to that scenario. For example:
+- A shopping cart test script (TS-018) might be executed with different combinations of browsers, devices, product sizes, and colors
+- An admin test script (TS-053) might be executed with different browser and device combinations
+- The 50 variants ensure optimal coverage of parameter interactions without exhaustive testing
 
 **Key Statistics**:
+- **Total Test Scenarios**: 125 (from 03_test_scenarios.md)
+- **Total Test Scripts**: 125 (from 06_test_scripts/)
 - **Total Parameters**: 13
-- **Total Possible Combinations**: 10,000+ cases
-- **Optimized Test Cases**: 50 variants (from 04_variants.csv)
+- **Total Possible Combinations**: 10,000+ parameter combinations
+- **Optimized Parameter Variants**: 50 variants (from 04_variants.csv)
 - **Coverage**: ~95% of all 2-way parameter interactions
-- **Efficiency**: 99.5% reduction in test cases while maintaining high coverage
+- **Efficiency**: 99.5% reduction in parameter combinations while maintaining high coverage
+- **Execution Approach**: Apply 50 parameter variants across 125 test scripts as applicable
 
 ---
 
@@ -178,8 +186,9 @@ The 50 variants are organized into functional groups for efficient execution:
 ### 5.1 Phased Execution Approach
 
 **Phase 1: Smoke Test (Day 1)**
-- Execute 10 critical variants covering happy paths
-- Variants: V001, V004, V013, V018, V026, V032, V053, V067, V080, V097
+- Execute 10 critical test scripts covering happy paths
+- Test Scripts: TS-001, TS-002, TS-011, TS-013, TS-018, TS-026, TS-032, TS-037, TS-053, TS-067
+- Applied with parameter variants as defined in 04_variants.csv
 - Purpose: Verify core functionality before comprehensive testing
 - Exit Criteria: All smoke tests pass
 
@@ -282,10 +291,12 @@ The 50 variants are organized into functional groups for efficient execution:
 
 ### 8.1 Test Execution Metrics
 
-- **Total Variants**: 50
-- **Estimated Execution Time**: 2 hours per variant average
-- **Total Test Effort**: 100 hours (12.5 days with 1 tester)
-- **Parallel Execution**: 4 testers = 3.1 days
+- **Total Test Scripts**: 125
+- **Total Parameter Variants**: 50
+- **Estimated Test Executions**: 200-300 (scripts × applicable variants)
+- **Estimated Execution Time**: 1 hour per execution average
+- **Total Test Effort**: 200-300 hours (25-37.5 days with 1 tester)
+- **Parallel Execution**: 4 testers = 6.25-9.4 days, target: 10 days
 - **Target Pass Rate**: 95% (first run)
 - **Acceptable Defect Rate**: < 5 critical defects, < 15 high defects
 
@@ -388,12 +399,62 @@ This combinatorial test execution plan provides:
 
 ---
 
+## 13. UNDERSTANDING VARIANTS VS TEST SCRIPTS
+
+### 13.1 Relationship Clarification
+
+**Test Scripts (125 total)**:
+- Detailed step-by-step test cases in Given/When/Then format
+- Located in `deliverables/06_test_scripts/`
+- Cover all 125 test scenarios from `03_test_scenarios.md`
+- Define WHAT to test (e.g., "Add product to cart", "Admin updates order status")
+
+**Parameter Variants (50 total)**:
+- Combinations of system parameters (browser, device, user type, payment method, etc.)
+- Defined in `deliverables/04_variants.csv`
+- Define HOW and UNDER WHAT CONDITIONS to test
+- Applied to applicable test scripts to create actual test executions
+
+### 13.2 Execution Model
+
+**Example 1: Shopping Cart Test Script (TS-018)**
+- Base script: "Add Product to Shopping Cart"
+- May be executed with multiple variants:
+  - V007: Existing Buyer + Chrome + Desktop + Small + Red
+  - V009: Existing Buyer + Firefox + Mobile + Medium + Blue
+  - V022: Buyer + Safari + Tablet + Large + Green
+- Result: 1 test script × 3 variants = 3 test executions
+
+**Example 2: Admin Login Test Script (TS-053)**
+- Base script: "Admin Login"
+- May be executed with variants:
+  - V013: Admin + Chrome + Desktop
+  - V014: Admin + Firefox + Tablet
+  - V015: Admin + Edge + Mobile
+- Result: 1 test script × 3 variants = 3 test executions
+
+### 13.3 Total Test Execution Count
+
+- **Test Scripts**: 125
+- **Applicable Variants per Script**: Varies (1-10 depending on relevance)
+- **Estimated Total Executions**: 200-300 (optimized based on applicability)
+- **vs Exhaustive Testing**: Would require 125 scripts × 500+ combinations = 62,500+ executions
+
+This combinatorial approach ensures:
+✅ Complete functional coverage (all 125 scenarios tested)
+✅ High parameter interaction coverage (90.7% of 2-way combinations)
+✅ Efficient test execution (avoiding redundant parameter combinations)
+✅ Risk-based prioritization (critical paths tested with more variants)
+
+---
+
 ## Document Metadata
-- **Total Pages**: 12
-- **Variants Analyzed**: 50
+- **Total Pages**: 13
+- **Parameter Variants**: 50
+- **Test Scripts**: 125
 - **Test Scenarios Covered**: 125
 - **Functional Requirements**: 26
-- **Estimated Execution Time**: 100 hours (single tester) or 25 hours (4 testers in parallel)
+- **Estimated Execution Time**: 200-300 test executions over 10 days
 - **Recommended Start Date**: Immediately after development completion
 - **Recommended Test Environment**: Staging environment mirroring production
 
