@@ -1,0 +1,46 @@
+Test Script: TS-083 - Activate/Deactivate Role
+
+Test Scenario: As an admin user, I want to enable or disable roles, so that I can control which roles are available for assignment.
+
+Prerequisites:
+- Admin is logged in with super admin privileges
+- Roles exist (both active and inactive)
+- Role status management is enabled
+
+Test Data:
+- Active Role: Content Manager, Status: Active
+- Inactive Role: Legacy Manager, Status: Inactive
+
+Test Steps:
+
+GIVEN the admin is viewing the roles list
+WHEN the admin views role records
+THEN each role should have a status indicator
+
+GIVEN the admin wants to deactivate a role
+WHEN the admin clicks "Deactivate" for "Content Manager"
+THEN the role status should update to "Inactive"
+AND success message displayed
+
+GIVEN the role is deactivated
+WHEN creating or editing sub-admin users
+THEN the inactive role should not appear in role dropdown
+
+GIVEN the admin wants to activate a role
+WHEN the admin clicks "Activate" for "Legacy Manager"
+THEN the role status should update to "Active"
+AND role should be available for assignment
+
+Expected Result:
+- Roles can be activated/deactivated
+- Inactive roles not available for assignment
+- Active roles available for assignment
+- Status changes saved
+
+Validation Points:
+- Status indicators visible
+- Activate/Deactivate buttons work
+- Status updates in database
+- Inactive roles hidden from dropdown
+- Active roles appear in dropdown
+- Success messages display

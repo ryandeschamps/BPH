@@ -1,0 +1,129 @@
+Test Script: TS-068 - Edit Payment Information
+
+Test Scenario: As an admin user, I want to update payment account details, so that I can ensure payments are processed correctly.
+
+Prerequisites:
+- Admin is logged in with edit permissions
+- Payment management section is accessible
+- Stripe integration is configured
+- Admin has authority to modify payment settings
+
+Test Data:
+- Current Bank: Chase Bank
+- New Bank: Wells Fargo
+- New Account Type: Business Checking
+- New Routing Number: 121000248
+- Stripe API Key: (secured)
+
+Test Steps:
+
+GIVEN the admin is viewing payment information
+WHEN the admin has edit permissions
+THEN an "Edit Payment Settings" or "Update" button should be available
+
+GIVEN the admin clicks "Edit Payment Settings"
+WHEN the edit form opens
+THEN editable fields should be displayed for bank account information
+
+GIVEN the edit form is displayed
+WHEN the admin views the form
+THEN the following fields should be available:
+  - Bank Name (text input)
+  - Account Type (dropdown: Checking, Savings, Business Checking)
+  - Account Number (masked input)
+  - Routing Number (text input)
+  - Account Holder Name (text input)
+  - Stripe API Keys (secured fields)
+
+GIVEN current information is pre-filled
+WHEN the admin views the edit form
+THEN existing bank details should be shown (with masked account numbers)
+
+GIVEN the admin wants to update bank information
+WHEN the admin modifies:
+  - Bank Name: "Wells Fargo"
+  - Routing Number: "121000248"
+AND clicks "Save Changes"
+THEN the system should validate all fields
+
+GIVEN the validation passes
+WHEN the update is processed
+THEN the bank account information should be updated in database
+AND account numbers should be encrypted before storage
+AND a success message should display "Payment information updated successfully"
+
+GIVEN the admin updates Stripe API keys
+WHEN the admin enters new Stripe API keys
+AND saves the changes
+THEN the system should:
+  - Validate the API keys with Stripe
+  - Test the connection
+  - Update if valid
+  - Show error if invalid
+
+GIVEN the admin enters invalid routing number
+WHEN the admin enters an invalid routing number format
+THEN a validation error should be displayed
+AND the message should indicate "Invalid routing number format"
+
+GIVEN the admin enters invalid account number
+WHEN the admin enters account number in wrong format
+THEN a validation error should be displayed
+AND changes should not be saved
+
+GIVEN sensitive data is being updated
+WHEN the admin saves payment information
+THEN all sensitive data should be encrypted
+AND transmission should use SSL/HTTPS
+AND audit log should record the change
+
+GIVEN the update affects payment processing
+WHEN bank account is changed
+THEN a confirmation may be required
+AND the admin may need to verify via email or 2FA
+
+GIVEN the admin wants to cancel changes
+WHEN a "Cancel" button is available
+THEN clicking it should discard changes
+AND return to view mode without saving
+
+GIVEN multiple admins exist
+WHEN payment settings are updated
+THEN the change should be logged
+AND include admin user, timestamp, and fields changed
+
+Expected Result:
+- Admin with permissions can access edit form
+- Edit form displays current payment information
+- Admin can update bank account details
+- Admin can update Stripe API keys
+- Form validation works correctly
+- Sensitive data is encrypted
+- API keys are validated with Stripe
+- Success message displayed
+- Changes are logged for audit
+- Confirmation required for critical changes
+
+Validation Points:
+- Edit button accessible with proper permissions
+- Edit form displays correctly
+- Current data pre-fills form (masked)
+- Bank name field is functional
+- Account type dropdown works
+- Account number field accepts input
+- Routing number field accepts input
+- Stripe API key fields are secured
+- Required field validation works
+- Routing number format validation works
+- Account number format validation works
+- Stripe API key validation works
+- Test connection to Stripe performed
+- Database updated with changes
+- Sensitive data is encrypted
+- SSL/HTTPS used for transmission
+- Success message displays
+- Audit log records change
+- Admin user recorded in log
+- Timestamp captured
+- Confirmation dialog for critical changes (if applicable)
+- Cancel button discards changes

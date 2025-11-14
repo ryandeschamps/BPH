@@ -1,0 +1,71 @@
+Test Script: TS-092 - View Customer Support Requests
+
+Test Scenario: As an admin user, I want to see all customer inquiries and complaints, so that I can provide customer support.
+
+Prerequisites:
+- Admin is logged in
+- Support section accessible
+- Customer support requests exist
+
+Test Data:
+- Request 1: Order inquiry from John Doe
+- Request 2: Product question from Jane Smith
+- Request 3: Complaint from Bob Johnson
+
+Test Steps:
+
+GIVEN the admin is in the admin panel
+WHEN the admin navigates to support section
+THEN "Customer Support" or "Support Requests" option should be visible
+
+GIVEN the admin clicks on "Support Requests"
+WHEN the support page loads
+THEN all customer support requests should be listed
+
+GIVEN the requests are displayed
+WHEN the admin views the list
+THEN each request should show:
+  - Customer name
+  - Email
+  - Subject
+  - Message excerpt
+  - Submission date
+  - Status (New, In Progress, Resolved)
+  - Actions (View, Mark Resolved)
+
+GIVEN the admin wants to view details
+WHEN the admin clicks on a request
+THEN full details should be displayed:
+  - Complete message
+  - Customer contact information
+  - Submission timestamp
+  - Response history (if any)
+
+GIVEN the admin filters requests
+WHEN filter options are available
+THEN the admin can filter by:
+  - Status
+  - Date range
+  - Customer
+
+GIVEN the admin searches requests
+WHEN search is available
+THEN the admin can search by:
+  - Customer name
+  - Email
+  - Keywords in message
+
+Expected Result:
+- Support requests page accessible
+- All requests listed
+- Request details viewable
+- Filters work correctly
+- Search functionality works
+
+Validation Points:
+- Support section accessible
+- Requests list displays
+- All requests shown
+- Details complete
+- Filters functional
+- Search works correctly

@@ -1,0 +1,123 @@
+Test Script: TS-061 - Add New Product Sub-category
+
+Test Scenario: As an admin user, I want to create new product sub-categories, so that I can further organize products within categories.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Parent categories exist in database
+- Sub-category management functionality is enabled
+- Hierarchical category structure is supported
+
+Test Data:
+- Parent Category: Men's Clothing
+- Sub-category Name: Casual Shirts
+- Sub-category Description: Casual and everyday shirts for men
+- Status: Active
+
+Test Steps:
+
+GIVEN the admin is viewing the categories management page
+WHEN the admin views category options
+THEN an option to add sub-categories should be available
+
+GIVEN the admin wants to create a sub-category
+WHEN the admin clicks "Add Sub-category" or "Add New Sub-category"
+OR clicks "Add" next to a parent category
+THEN a sub-category creation form should open
+
+GIVEN the sub-category form is displayed
+WHEN the admin views the form
+THEN the following fields should be available:
+  - Parent Category (dropdown showing available categories)
+  - Sub-category Name (text input)
+  - Sub-category Description (textarea)
+  - Status (Active/Inactive)
+  - Display Order (numeric input, optional)
+
+GIVEN the admin wants to create a new sub-category
+WHEN the admin enters sub-category information:
+  - Parent Category: "Men's Clothing"
+  - Sub-category Name: "Casual Shirts"
+  - Description: "Casual and everyday shirts for men"
+  - Status: "Active"
+AND clicks "Save" or "Create Sub-category" button
+THEN the system should validate all required fields
+
+GIVEN the validation passes
+WHEN the sub-category is saved
+THEN the new sub-category should be created in the database
+AND linked to the parent category "Men's Clothing"
+AND a success message should display "Sub-category created successfully"
+
+GIVEN the sub-category is created
+WHEN the admin views the categories list
+THEN "Casual Shirts" should be visible under "Men's Clothing"
+AND displayed with indentation or hierarchical structure
+AND the status should show "Active"
+
+GIVEN the sub-category is active
+WHEN customers browse the website
+THEN "Men's Clothing" category should show "Casual Shirts" as a sub-category
+AND customers should be able to navigate to "Casual Shirts"
+AND products in this sub-category should be accessible
+
+GIVEN the admin leaves required fields empty
+WHEN the admin tries to save without entering sub-category name or parent category
+THEN validation errors should be displayed
+AND the messages should indicate required fields
+
+GIVEN a sub-category with the same name exists under the same parent
+WHEN the admin tries to create a duplicate sub-category name
+THEN a validation error should be displayed
+AND the message should indicate "A sub-category with this name already exists under this parent category"
+
+GIVEN the same name can exist under different parents
+WHEN the admin creates "Casual Shirts" under "Women's Clothing"
+THEN it should be allowed
+AND both sub-categories should exist independently
+
+GIVEN the display order is specified
+WHEN the admin enters display order
+THEN sub-categories should be sorted according to display order
+AND displayed in that order on the website
+
+GIVEN the status is set to "Inactive"
+WHEN the admin creates a sub-category with inactive status
+THEN the sub-category should be created
+BUT should not be visible to customers
+
+Expected Result:
+- Admin can access sub-category creation
+- Sub-category form displays all required fields
+- Admin can select parent category
+- Admin can enter sub-category details
+- Sub-category is created and linked to parent
+- Success message is displayed
+- Sub-category appears under parent in hierarchy
+- Active sub-categories visible to customers
+- Validation enforces required fields
+- Duplicate names prevented within same parent
+- Same names allowed under different parents
+
+Validation Points:
+- Add Sub-category option is accessible
+- Sub-category creation form displays correctly
+- Parent category dropdown is functional
+- Sub-category name field accepts input
+- Description field accepts input
+- Status toggle/dropdown is functional
+- Display order field accepts numeric input
+- Save button is functional
+- Required field validation works
+- Parent category selection is validated
+- Sub-category name uniqueness check within parent works
+- Database is updated with new sub-category
+- Parent-child relationship is established
+- Success message displays
+- Sub-category visible in hierarchical list
+- Indentation or visual hierarchy is shown
+- Sub-category status is correct
+- Active sub-categories visible on website
+- Inactive sub-categories hidden from website
+- Display order affects sub-category positioning
+- Products can be assigned to sub-category

@@ -1,0 +1,76 @@
+Test Script: TS-097 - Secure Payment Processing
+
+Test Scenario: As a buyer, I want to have my payment information encrypted and secure, so that I can safely make purchases without risk of fraud.
+
+Prerequisites:
+- SSL/TLS certificate installed
+- HTTPS enabled
+- Stripe payment gateway configured
+- Encryption implemented
+
+Test Data:
+- Test Card: 4242 4242 4242 4242
+- Sensitive Data: Card number, CVV, Personal info
+
+Test Steps:
+
+GIVEN the user accesses the website
+WHEN the user navigates to any page
+THEN the connection should use HTTPS
+AND the browser should show secure lock icon
+
+GIVEN the user enters payment information
+WHEN the user fills in card details on checkout
+THEN the form should be served over HTTPS
+AND data should be encrypted before transmission
+
+GIVEN the payment is submitted
+WHEN the user clicks "Pay Now"
+THEN card data should be sent directly to Stripe
+AND NOT stored on the e-commerce server
+AND transmission should use SSL/TLS encryption
+
+GIVEN the payment is processed
+WHEN Stripe handles the transaction
+THEN only tokenized card data should be returned
+AND actual card numbers should never be stored
+AND PCI DSS compliance should be maintained
+
+GIVEN sensitive data is in database
+WHEN personal information is stored
+THEN it should be encrypted at rest
+AND access should be restricted
+
+GIVEN the user views page source
+WHEN inspecting the checkout page
+THEN no card data should be visible in HTML
+AND no sensitive data in JavaScript variables
+
+GIVEN the connection is intercepted (MITM attack)
+WHEN an attacker tries to intercept data
+THEN SSL/TLS should prevent reading encrypted data
+AND certificate validation should prevent spoofing
+
+Expected Result:
+- All pages use HTTPS
+- Payment data encrypted in transit
+- Card data sent directly to Stripe
+- No card numbers stored locally
+- Sensitive data encrypted at rest
+- PCI DSS compliance maintained
+- Protection against attacks
+
+Validation Points:
+- HTTPS enabled site-wide
+- SSL certificate valid
+- Payment form uses HTTPS
+- Data encrypted before transmission
+- Stripe integration secure
+- No card data stored locally
+- Tokenization implemented
+- Database encryption enabled
+- Access controls in place
+- No sensitive data in page source
+- Certificate validation works
+- Protection against MITM attacks
+- PCI DSS requirements met

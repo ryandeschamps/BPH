@@ -1,0 +1,77 @@
+Test Script: TS-008 - Browse Products by Category
+
+Test Scenario: As a visitor or buyer, I want to browse products by category and sub-category, so that I can explore different types of apparel.
+
+Prerequisites:
+- Product catalog is populated with products
+- Product categories and sub-categories are configured
+- At least one category contains products
+- Website is accessible
+
+Test Data:
+- Category: Men's Clothing
+- Sub-category: T-Shirts
+- Expected Products: At least 3 products in T-Shirts sub-category
+
+Test Steps:
+
+GIVEN the user is on the website homepage
+WHEN the user views the navigation menu or homepage
+THEN the user should see product categories displayed (e.g., Men's Clothing, Women's Clothing, Accessories)
+
+GIVEN the user sees the category list
+WHEN the user clicks on a category (e.g., "Men's Clothing")
+THEN the system should display a list of sub-categories under that category
+OR the system should display all products in that category if no sub-categories exist
+
+GIVEN the user is viewing the category page
+WHEN the category has sub-categories
+THEN the user should see sub-category options (e.g., T-Shirts, Shirts, Jeans, Jackets)
+
+GIVEN the user sees the sub-category options
+WHEN the user clicks on a sub-category (e.g., "T-Shirts")
+THEN the system should display all active products in that sub-category
+AND the system should show the category breadcrumb (e.g., Home > Men's Clothing > T-Shirts)
+
+GIVEN the products are displayed
+WHEN the user views the product listing
+THEN each product should display:
+  - Product thumbnail image
+  - Product title
+  - Product price
+  - Product rating (if available)
+
+GIVEN the user is viewing products in a category
+WHEN the user wants to explore different categories
+THEN the user should be able to navigate to other categories without using the back button
+
+GIVEN the user is on a category page
+WHEN no products exist in that category
+THEN the system should display a message "No products available in this category"
+
+GIVEN the user is not logged in (visitor)
+WHEN the user browses categories and sub-categories
+THEN the user should be able to view products without login
+AND all product listings should be visible
+
+Expected Result:
+- Categories are displayed clearly on homepage or navigation
+- User can click on categories to view products or sub-categories
+- Sub-categories are displayed when available
+- Products are displayed with key information (image, title, price, rating)
+- Breadcrumb navigation shows current category path
+- Users can browse without login
+- Appropriate message shown when category is empty
+- Navigation between categories is smooth and intuitive
+
+Validation Points:
+- All active categories are visible and accessible
+- Category links are functional
+- Sub-categories display correctly under parent categories
+- Product listing shows all products in selected category/sub-category
+- Only active (not deactivated) products are displayed
+- Product information is complete and accurate
+- Breadcrumb navigation is correct
+- Category browsing works for both visitors and logged-in users
+- Empty categories display appropriate message
+- Page layout and product grid display correctly

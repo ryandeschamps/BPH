@@ -1,0 +1,110 @@
+Test Script: TS-077 - Edit Sub-admin User
+
+Test Scenario: As an admin user, I want to modify sub-admin user details, so that I can update their information or permissions.
+
+Prerequisites:
+- Admin is logged in with super admin privileges
+- Sub-admin users exist in the system
+- User edit functionality is accessible
+
+Test Data:
+- Existing User: Sarah Johnson (subadmin@example.com)
+- Current Role: Order Manager
+- New Role: Product Manager
+- Current Email: subadmin@example.com
+- New Phone: +1-555-0303
+
+Test Steps:
+
+GIVEN the admin is viewing the admin users list
+WHEN the admin views sub-admin records
+THEN each user should have an "Edit" button or link
+
+GIVEN the admin wants to edit a sub-admin
+WHEN the admin clicks "Edit" for "Sarah Johnson"
+THEN the user edit form should open
+
+GIVEN the edit form is displayed
+WHEN the admin views the form
+THEN the following fields should be available:
+  - First Name
+  - Last Name
+  - Email
+  - Phone (if applicable)
+  - Role (dropdown)
+  - Status (Active/Inactive)
+  - Password reset option
+
+GIVEN the form is pre-filled
+WHEN the admin views current information
+THEN existing user data should be displayed:
+  - First Name: "Sarah"
+  - Last Name: "Johnson"
+  - Email: "subadmin@example.com"
+  - Role: "Order Manager"
+  - Status: "Active"
+
+GIVEN the admin wants to update the user
+WHEN the admin modifies:
+  - Role: "Product Manager"
+  - Phone: "+1-555-0303"
+AND clicks "Save Changes" or "Update User"
+THEN the system should validate all fields
+
+GIVEN the validation passes
+WHEN the update is processed
+THEN the user record should be updated in database
+AND a success message should display "User updated successfully"
+
+GIVEN the user role is changed
+WHEN "Sarah Johnson" logs in after the role change
+THEN she should have permissions according to "Product Manager" role
+AND previous "Order Manager" permissions should be revoked
+
+GIVEN the admin changes user status to inactive
+WHEN the status is set to "Inactive"
+AND saved
+THEN the user account should be deactivated
+AND the user should not be able to login
+
+GIVEN the admin wants to reset password
+WHEN a "Reset Password" option is available
+THEN the admin can generate a new password
+OR send a password reset link to the user
+
+GIVEN the admin enters invalid email
+WHEN the admin changes email to invalid format
+THEN a validation error should be displayed
+
+GIVEN the admin wants to cancel changes
+WHEN a "Cancel" button is available
+THEN clicking it should discard changes
+
+Expected Result:
+- Admin can access user edit form
+- Edit form displays current user information
+- Admin can modify user details
+- Role can be updated
+- Phone and other details can be changed
+- Changes are saved to database
+- Role change updates permissions
+- Status change affects login ability
+- Password reset option available
+- Validation works correctly
+
+Validation Points:
+- Edit button is accessible
+- Edit form displays correctly
+- Current data pre-fills form
+- All fields are editable
+- Role dropdown is functional
+- Status toggle works
+- Phone field accepts input
+- Required field validation works
+- Email format validation works
+- Database is updated
+- Success message displays
+- Role permissions update correctly
+- Inactive status prevents login
+- Password reset works
+- Cancel discards changes

@@ -1,0 +1,132 @@
+Test Script: TS-045 - Contact Customer Support
+
+Test Scenario: As a visitor or buyer, I want to contact customer support with questions or complaints, so that I can get help with issues or inquiries.
+
+Prerequisites:
+- Website contact/support functionality is enabled
+- Contact form is accessible
+- Email service is operational for sending support requests
+- Admin email is configured to receive support requests
+
+Test Data:
+- Name: John Doe
+- Email: john.doe@example.com
+- Phone: +1-555-0101
+- Subject: Question about order delivery
+- Message: "I have a question about my recent order ORD-2025-001234. When will it be delivered?"
+
+Test Steps:
+
+GIVEN the user is on the website (logged in or visitor)
+WHEN the user looks for support options
+THEN the user should see a "Contact Us" or "Customer Support" link in the footer or main navigation
+
+GIVEN the user clicks on "Contact Us"
+WHEN the contact page loads
+THEN a contact form should be displayed
+
+GIVEN the contact form is displayed
+WHEN the user views the form
+THEN the following fields should be available:
+  - Name (text input)
+  - Email (text input)
+  - Contact Number/Phone (text input)
+  - Subject (text input or dropdown, optional)
+  - Message (textarea)
+  - Submit button
+
+GIVEN the form is displayed
+WHEN a logged-in user accesses the form
+THEN the name and email fields may be pre-filled with user's account information
+
+GIVEN the user wants to submit an inquiry
+WHEN the user fills in the contact form:
+  - Name: "John Doe"
+  - Email: "john.doe@example.com"
+  - Phone: "+1-555-0101"
+  - Subject: "Question about order delivery"
+  - Message: "I have a question about my recent order ORD-2025-001234. When will it be delivered?"
+THEN all fields should accept the input
+
+GIVEN the user has filled the form
+WHEN the user clicks the "Submit" or "Send Message" button
+THEN the system should validate all required fields
+AND validate email format
+
+GIVEN all validations pass
+WHEN the form is submitted
+THEN the system should send an email to the admin
+AND the email should contain all the information from the form
+
+GIVEN the email is sent to admin
+WHEN the admin checks their email
+THEN the admin should receive an email with:
+  - Subject indicating "Customer Support Request" or "Contact Form Submission"
+  - Customer's name: John Doe
+  - Customer's email: john.doe@example.com
+  - Customer's phone: +1-555-0101
+  - Subject: Question about order delivery
+  - Message content
+
+GIVEN the form submission is successful
+WHEN the user submits the form
+THEN the system should display a success message
+AND the message should indicate "Thank you for contacting us. We will respond to your inquiry soon."
+AND the form fields should be cleared
+
+GIVEN the user leaves required fields empty
+WHEN the user tries to submit without filling name or email
+THEN validation errors should be displayed
+AND the messages should indicate which fields are required
+AND the form should not be submitted
+
+GIVEN the user enters invalid email
+WHEN the user enters an invalid email format
+THEN a validation error should be displayed
+AND the message should indicate "Please enter a valid email address"
+
+GIVEN the user is a visitor (not logged in)
+WHEN the visitor submits the contact form
+THEN the submission should work the same as for logged-in users
+AND no login should be required to contact support
+
+GIVEN alternative contact methods are available
+WHEN the user views the contact page
+THEN additional contact information may be displayed:
+  - Support email address
+  - Support phone number
+  - Business hours
+  - Physical address (if applicable)
+
+Expected Result:
+- Contact Us link is visible and accessible
+- Contact form displays all required fields
+- Logged-in users see pre-filled information
+- User can enter inquiry details
+- Form validation works correctly
+- Email is sent to admin with inquiry details
+- Admin receives complete support request
+- Success message displayed after submission
+- Form fields are cleared after successful submission
+- Invalid inputs are rejected
+- Feature works for both visitors and logged-in users
+- Alternative contact methods are provided
+
+Validation Points:
+- Contact Us page is accessible
+- Contact form is displayed correctly
+- All required fields are present
+- Pre-fill works for logged-in users
+- Form accepts valid input
+- Required field validation works
+- Email format validation works
+- Form submission triggers email to admin
+- Admin email contains all form data
+- Email sender is user's email address
+- Success message displays after submission
+- Form clears after successful submission
+- Error messages display for validation failures
+- Visitors can submit without login
+- Support request is logged in system
+- Additional contact information is visible
+- Form is protected against spam (CAPTCHA optional)

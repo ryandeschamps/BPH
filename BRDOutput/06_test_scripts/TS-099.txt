@@ -1,0 +1,91 @@
+Test Script: TS-099 - Display Prices in USD Currency
+
+Test Scenario: As a visitor or buyer, I want to see all prices in US dollars, so that I can understand the cost in my local currency.
+
+Prerequisites:
+- System configured for USD
+- Products have prices set
+- Currency display implemented
+
+Test Data:
+- Product Price: $29.99
+- Cart Subtotal: $110.00
+- Shipping: $10.00
+- Tax: $8.80
+- Order Total: $128.80
+
+Test Steps:
+
+GIVEN the user browses product listings
+WHEN the user views product prices
+THEN all prices should be displayed in USD format
+AND include the dollar sign ($)
+AND show two decimal places (e.g., $29.99)
+
+GIVEN the user views product detail page
+WHEN the product price is displayed
+THEN it should show "$29.99" format
+AND be clearly visible
+AND any discount prices should also be in USD
+
+GIVEN the user adds items to cart
+WHEN the user views shopping cart
+THEN all amounts should be in USD:
+  - Item prices: $25.00
+  - Item totals: $50.00
+  - Subtotal: $110.00
+
+GIVEN the user proceeds to checkout
+WHEN the user views order summary
+THEN all costs should be in USD:
+  - Subtotal: $110.00
+  - Shipping: $10.00
+  - Tax: $8.80
+  - Total: $128.80
+
+GIVEN the order is confirmed
+WHEN the user views order confirmation
+THEN the order total should be in USD
+AND formatted as $128.80
+
+GIVEN the admin views reports
+WHEN revenue reports are generated
+THEN all monetary values should be in USD
+AND properly formatted
+
+GIVEN currency symbol placement
+WHEN any price is displayed
+THEN the $ symbol should precede the amount
+AND thousands separator (comma) should be used for large amounts
+(e.g., $1,250.00)
+
+GIVEN no currency conversion
+WHEN prices are displayed
+THEN ONLY USD should be shown
+AND no other currencies should be available
+AND no currency switcher should be present
+
+Expected Result:
+- All prices displayed in USD
+- Dollar sign ($) used consistently
+- Two decimal places for cents
+- Proper formatting throughout
+- No other currencies available
+- Consistent USD display across all pages
+
+Validation Points:
+- Product listing prices in USD
+- Product detail prices in USD
+- Cart prices in USD
+- Checkout prices in USD
+- Order confirmation in USD
+- Email notifications in USD
+- Admin reports in USD
+- Dollar sign ($) used
+- Two decimal places shown
+- Thousands separator used
+- Format: $1,250.00
+- No currency conversion
+- No currency switcher
+- Consistent throughout site
+- Database stores in USD

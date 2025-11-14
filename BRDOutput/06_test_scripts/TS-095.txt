@@ -1,0 +1,62 @@
+Test Script: TS-095 - Load Pages Within Acceptable Time
+
+Test Scenario: As a visitor or buyer, I want to have pages load within 30 seconds, so that I can browse the website without frustration.
+
+Prerequisites:
+- System is deployed
+- Standard internet connection (good speed)
+- Various pages available for testing
+
+Test Data:
+- Pages to Test: Homepage, Category, Product Detail, Cart, Checkout
+- Max Load Time: 30 seconds
+- Network: Broadband connection
+
+Test Steps:
+
+GIVEN the user has good internet speed
+WHEN the user accesses the homepage
+THEN the page should load completely within 30 seconds
+
+GIVEN the user browses categories
+WHEN the user clicks on a category
+THEN the category page should load within 30 seconds
+
+GIVEN the user views product details
+WHEN the user clicks on a product
+THEN the product detail page should load within 30 seconds
+
+GIVEN the user accesses shopping cart
+WHEN the user navigates to cart
+THEN the cart page should load within 30 seconds
+
+GIVEN the user proceeds to checkout
+WHEN the user starts checkout process
+THEN the checkout page should load within 30 seconds
+
+GIVEN images are part of the page
+WHEN the page loads
+THEN images should load progressively
+AND page should be usable before all images complete
+
+GIVEN the database query is complex
+WHEN the page requires data retrieval
+THEN queries should be optimized
+AND caching should be utilized
+
+Expected Result:
+- All pages load within 30 seconds
+- User experience is smooth
+- Images load progressively
+- Performance is acceptable
+
+Validation Points:
+- Homepage loads < 30 seconds
+- Category pages load < 30 seconds
+- Product pages load < 30 seconds
+- Cart page loads < 30 seconds
+- Checkout loads < 30 seconds
+- Images load progressively
+- Page usable before complete load
+- Caching implemented
+- Queries optimized

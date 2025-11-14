@@ -1,0 +1,124 @@
+Test Script: TS-034 - Change Account Password
+
+Test Scenario: As a registered buyer, I want to change my password, so that I can maintain account security.
+
+Prerequisites:
+- User has a registered account
+- User is logged in
+- Password change functionality is accessible
+- User knows current password
+
+Test Data:
+- Current Password: OldPass@123
+- New Password: NewSecure@456
+- Confirm New Password: NewSecure@456
+- Email: john.doe@example.com
+
+Test Steps:
+
+GIVEN the user is logged in
+WHEN the user navigates to "My Account"
+THEN the user should see options for account management
+
+GIVEN the user is in the account section
+WHEN the user looks for password options
+THEN the user should see a "Change Password" or "Security" option
+
+GIVEN the user clicks on "Change Password"
+WHEN the password change page loads
+THEN a password change form should be displayed
+
+GIVEN the password change form is displayed
+WHEN the user views the form
+THEN the following fields should be available:
+  - Current Password (password input)
+  - New Password (password input)
+  - Confirm New Password (password input)
+  - Submit or "Change Password" button
+
+GIVEN the user wants to change password
+WHEN the user enters:
+  - Current Password: "OldPass@123"
+  - New Password: "NewSecure@456"
+  - Confirm New Password: "NewSecure@456"
+AND clicks "Change Password" button
+THEN the system should validate all fields
+
+GIVEN the form validation is in progress
+WHEN the system validates the input
+THEN the system should verify:
+  - Current password is correct
+  - New password meets strength requirements
+  - New password and confirm password match
+  - New password is different from current password
+
+GIVEN all validations pass
+WHEN the password change is processed
+THEN the system should update the password in the database
+AND the password should be encrypted/hashed before storage
+AND the user should see a success message "Password changed successfully"
+AND the user session should remain active
+
+GIVEN the user enters incorrect current password
+WHEN the user enters "WrongPass@000" as current password
+AND tries to submit
+THEN the system should display an error message
+AND the message should indicate "Current password is incorrect"
+AND the password should not be changed
+
+GIVEN the new password doesn't meet requirements
+WHEN the user enters a weak password (e.g., "123456")
+THEN the system should display a validation error
+AND the message should indicate password requirements (e.g., "Password must contain at least 8 characters, uppercase, lowercase, and special characters")
+
+GIVEN the new password and confirm password don't match
+WHEN the user enters different values in new password and confirm password fields
+THEN the system should display an error message
+AND the message should indicate "Passwords do not match"
+
+GIVEN the user tries to use the same password
+WHEN the user enters the current password as the new password
+THEN the system should display an error message
+AND the message should indicate "New password must be different from current password"
+
+GIVEN the password has been changed successfully
+WHEN the user logs out and tries to login
+THEN the old password should no longer work
+AND the new password should authenticate successfully
+
+GIVEN the password change is successful
+WHEN the system processes the change
+THEN a notification email may be sent to the user's email address
+AND the email should inform about the password change for security
+
+Expected Result:
+- User can access password change form
+- Form displays all required password fields
+- User can enter current and new passwords
+- Password validation enforces security requirements
+- Current password is verified before change
+- New password and confirm password must match
+- Password is updated successfully in database
+- Success message is displayed
+- Old password no longer works after change
+- New password works for login
+- Security notification email is sent
+
+Validation Points:
+- Password change page is accessible
+- Password change form is displayed correctly
+- Current password field is functional
+- New password field is functional
+- Confirm password field is functional
+- Current password verification works
+- Password strength validation works
+- Password match validation works
+- Different password requirement enforced
+- Password is encrypted/hashed before storage
+- Database is updated with new password
+- Success message displays
+- Old password is invalidated
+- New password works for authentication
+- User session remains active after change
+- Email notification is sent (if applicable)
+- Password change is logged for security

@@ -1,0 +1,47 @@
+Test Script: TS-085 - Edit Contact Us Page
+
+Test Scenario: As an admin user, I want to update the Contact Us page content, so that I can provide correct contact information.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- CMS management section is accessible
+- Contact Us page exists
+
+Test Data:
+- Current Phone: +1-555-0000
+- New Phone: +1-555-9999
+- Current Email: old@example.com
+- New Email: support@example.com
+
+Test Steps:
+
+GIVEN the admin is viewing CMS pages
+WHEN the admin clicks "Edit" for "Contact Us"
+THEN the Contact Us editor should open
+
+GIVEN the editor is displayed
+WHEN the admin views the content
+THEN it should show current contact information
+
+GIVEN the admin updates contact details
+WHEN the admin changes phone and email
+AND clicks "Save Changes"
+THEN the updates should be saved
+AND success message displayed
+
+GIVEN the changes are saved
+WHEN customers view Contact Us page
+THEN new contact information should be displayed
+
+Expected Result:
+- Contact Us page can be edited
+- Contact information updates
+- Changes save successfully
+- Website shows updated info
+
+Validation Points:
+- Edit page accessible
+- Current content loads
+- Information can be modified
+- Save works correctly
+- Website reflects changes

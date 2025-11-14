@@ -1,0 +1,122 @@
+Test Script: TS-033 - Update Profile Information
+
+Test Scenario: As a registered buyer, I want to update my profile details such as email and phone number, so that I can keep my account information current.
+
+Prerequisites:
+- User has a registered account
+- User is logged in
+- Account profile page is accessible
+- Profile update functionality is enabled
+
+Test Data:
+- Current Email: john.doe@example.com
+- New Email: john.doe.updated@example.com
+- Current Phone: +1-555-0101
+- New Phone: +1-555-0199
+- First Name: John
+- Last Name: Doe
+
+Test Steps:
+
+GIVEN the user is logged in
+WHEN the user wants to access their profile
+THEN the user should see a "My Account" or profile option in the navigation
+
+GIVEN the user clicks on "My Account"
+WHEN the account page loads
+THEN the user should see options including "Profile" or "Personal Information"
+
+GIVEN the user clicks on "Profile" or "Personal Information"
+WHEN the profile page loads
+THEN the user's current profile information should be displayed
+AND editable fields should be available for:
+  - First Name
+  - Last Name
+  - Email
+  - Phone Number
+  - Other profile details
+
+GIVEN the user's current information is displayed
+WHEN the user views the profile form
+THEN the fields should be pre-filled with current values:
+  - Email: "john.doe@example.com"
+  - Phone: "+1-555-0101"
+  - First Name: "John"
+  - Last Name: "Doe"
+
+GIVEN the user wants to update email address
+WHEN the user changes the email field from "john.doe@example.com" to "john.doe.updated@example.com"
+AND clicks "Update" or "Save Changes" button
+THEN the system should validate the new email format
+
+GIVEN the new email format is valid
+WHEN the update is processed
+THEN the system should check if the new email is not already in use
+AND if unique, update the email in the database
+AND display a success message "Profile updated successfully"
+
+GIVEN the user wants to update phone number
+WHEN the user changes the phone field from "+1-555-0101" to "+1-555-0199"
+AND clicks "Update" or "Save Changes"
+THEN the system should validate the phone number format
+AND update the phone number in the database
+AND display a success message
+
+GIVEN the user updates multiple fields
+WHEN the user changes both email and phone number
+AND clicks "Save Changes"
+THEN both fields should be updated
+AND a success confirmation should be displayed
+
+GIVEN the user enters an invalid email format
+WHEN the user enters "invalid-email" in the email field
+AND tries to save
+THEN the system should display a validation error
+AND the message should indicate "Please enter a valid email address"
+AND the changes should not be saved
+
+GIVEN the user enters an email already in use
+WHEN the user tries to change to an email used by another account
+AND clicks save
+THEN the system should display an error message
+AND the message should indicate "This email is already registered"
+
+GIVEN the user leaves a required field empty
+WHEN the user clears the email or first name field
+AND tries to save
+THEN the system should display a validation error
+AND the message should indicate which fields are required
+
+GIVEN the profile is successfully updated
+WHEN the user navigates away and returns to the profile page
+THEN the updated information should be displayed
+AND the changes should be persisted in the database
+
+Expected Result:
+- User can access profile page from account section
+- Current profile information is displayed
+- User can edit email and phone number
+- Form validation works correctly
+- Valid updates are saved successfully
+- Success message is displayed after update
+- Invalid inputs are rejected with error messages
+- Duplicate email detection works
+- Required fields are enforced
+- Updates persist across sessions
+
+Validation Points:
+- Profile page is accessible from My Account
+- Profile form displays current user information
+- All editable fields are functional
+- Email field accepts valid email format
+- Phone number field accepts valid phone format
+- Save/Update button is functional
+- Email format validation works
+- Phone format validation works
+- Duplicate email check works
+- Required field validation works
+- Database is updated with new information
+- Success message displays after update
+- Error messages display for invalid input
+- Updated data persists after page refresh
+- User session remains active after update

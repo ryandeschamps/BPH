@@ -1,0 +1,125 @@
+Test Script: TS-036 - Access My Account Dashboard
+
+Test Scenario: As a registered buyer, I want to access my account dashboard with all my information and options, so that I can manage my account and orders.
+
+Prerequisites:
+- User has a registered and verified account
+- User is logged in
+- Account dashboard is functional
+- User has some activity (orders, wishlist items, etc.)
+
+Test Data:
+- User: john.doe@example.com
+- Past Orders: 3 orders
+- Wishlist Items: 5 items
+- Saved Addresses: 2 addresses
+
+Test Steps:
+
+GIVEN the user is logged in to the website
+WHEN the user clicks on their account name or profile icon in the navigation
+THEN a dropdown menu or account menu should be displayed
+
+GIVEN the account menu is displayed
+WHEN the user clicks on "My Account" or "Dashboard"
+THEN the user should be navigated to the account dashboard page
+
+GIVEN the user is on the account dashboard
+WHEN the page loads
+THEN the dashboard should display a welcome message (e.g., "Welcome, John")
+AND the user's name or email should be visible
+
+GIVEN the dashboard is displayed
+WHEN the user views the page
+THEN the following sections or links should be available:
+  - My Orders
+  - Wishlist
+  - Shopping Cart
+  - Ratings and Reviews
+  - Profile/Personal Information
+  - Saved Addresses
+  - Change Password
+  - Logout
+
+GIVEN the "My Orders" section is visible
+WHEN the user clicks on "My Orders"
+THEN the user should navigate to the orders page
+AND see a list of all past orders
+
+GIVEN the "Wishlist" section is visible
+WHEN the user clicks on "Wishlist"
+THEN the user should navigate to the wishlist page
+AND see all saved wishlist items
+
+GIVEN the "Shopping Cart" section is visible
+WHEN the user clicks on "Shopping Cart"
+THEN the user should navigate to the cart page
+AND see current cart items
+
+GIVEN the "Ratings and Reviews" section is visible
+WHEN the user clicks on "Ratings and Reviews"
+THEN the user should navigate to the reviews page
+AND see all reviews posted by the user
+
+GIVEN the "Profile" or "Personal Information" section is visible
+WHEN the user clicks on it
+THEN the user should navigate to the profile page
+AND see their personal details (name, email, phone)
+
+GIVEN the "Saved Addresses" section is visible
+WHEN the user clicks on "Saved Addresses"
+THEN the user should navigate to the address management page
+AND see all saved addresses
+
+GIVEN the "Change Password" option is visible
+WHEN the user clicks on "Change Password"
+THEN the user should navigate to the password change page
+
+GIVEN the "Logout" option is visible
+WHEN the user clicks on "Logout"
+THEN the user should be logged out
+AND redirected to the homepage or login page
+
+GIVEN the dashboard shows account summary
+WHEN the user views the dashboard
+THEN summary information may be displayed:
+  - Number of recent orders
+  - Number of wishlist items
+  - Number of cart items
+  - Recent activity
+
+Expected Result:
+- Account dashboard is accessible from navigation
+- Dashboard displays welcome message with user's name
+- All account management sections are visible
+- My Orders link navigates to orders page
+- Wishlist link navigates to wishlist page
+- Shopping Cart link navigates to cart page
+- Ratings and Reviews link works
+- Profile link navigates to profile page
+- Saved Addresses link works
+- Change Password link works
+- Logout option is functional
+- Account summary information displayed
+- Navigation between sections is smooth
+
+Validation Points:
+- My Account option is visible when logged in
+- Dashboard page loads correctly
+- Welcome message displays user's name
+- All main sections are present:
+  - My Orders
+  - Wishlist
+  - Shopping Cart
+  - Ratings and Reviews
+  - Profile
+  - Saved Addresses
+  - Logout
+- Each navigation link is functional
+- Links navigate to correct pages
+- Account summary data is accurate
+- User-specific data is displayed
+- Dashboard is only accessible when logged in
+- Non-logged-in users redirected to login
+- Layout is user-friendly and organized
+- All features are easily accessible

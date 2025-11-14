@@ -1,0 +1,127 @@
+Test Script: TS-057 - Edit Order Details
+
+Test Scenario: As an admin user, I want to modify order information if needed, so that I can correct errors or accommodate customer requests.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Order exists in database
+- Order edit functionality is enabled
+- Admin has permission to edit orders
+
+Test Data:
+- Order Number: ORD-2025-001234
+- Current Shipping Address: 456 Oak Ave, San Francisco, CA 94102
+- New Shipping Address: 789 Pine St, San Francisco, CA 94103
+- Current Phone: +1-555-0101
+- New Phone: +1-555-0202
+
+Test Steps:
+
+GIVEN the admin is viewing order details for ORD-2025-001234
+WHEN the admin views the order actions
+THEN an "Edit Order" button should be available
+
+GIVEN the admin clicks "Edit Order"
+WHEN the edit form or page loads
+THEN editable fields should be displayed
+
+GIVEN the edit form is displayed
+WHEN the admin views the form
+THEN the following fields should be editable:
+  - Customer contact information (phone, email)
+  - Shipping address
+  - Billing address
+  - Special instructions or notes
+AND order items, pricing, and payment status may be non-editable or require special permissions
+
+GIVEN the current order information is displayed
+WHEN the admin views the edit form
+THEN fields should be pre-filled with current order data
+
+GIVEN the admin wants to update shipping address
+WHEN the admin modifies the shipping address:
+  - Address: "789 Pine St"
+  - City: "San Francisco"
+  - State: "CA"
+  - ZIP: "94103"
+AND clicks "Save Changes" button
+THEN the system should validate the new address
+
+GIVEN the address validation passes
+WHEN the update is processed
+THEN the shipping address should be updated in the database
+AND a success message should display "Order updated successfully"
+
+GIVEN the admin wants to update contact phone
+WHEN the admin changes phone from "+1-555-0101" to "+1-555-0202"
+AND saves the changes
+THEN the phone number should be validated
+AND updated in the order record
+
+GIVEN the admin updates multiple fields
+WHEN the admin changes both address and phone
+AND saves the order
+THEN all changes should be saved together
+AND the order details should reflect all updates
+
+GIVEN the admin enters invalid data
+WHEN the admin enters invalid ZIP code or phone format
+THEN validation errors should be displayed
+AND the changes should not be saved
+
+GIVEN the order has been shipped
+WHEN the admin tries to edit a shipped order
+THEN certain fields may be restricted from editing
+OR a warning message may appear "Order has been shipped. Changes may affect delivery."
+
+GIVEN the admin saves changes
+WHEN the update is successful
+THEN the admin should be redirected to order details page
+AND all updated information should be visible
+
+GIVEN order modifications are tracked
+WHEN the admin edits an order
+THEN the change should be logged
+AND the log should include:
+  - Admin user who made the change
+  - Timestamp
+  - Fields that were modified
+  - Previous and new values
+
+GIVEN the admin wants to cancel changes
+WHEN a "Cancel" button is available
+THEN clicking it should discard changes
+AND return to order details without saving
+
+Expected Result:
+- Admin can access order edit functionality
+- Edit form displays current order information
+- Admin can modify shipping and billing addresses
+- Admin can update contact information
+- Multiple fields can be updated together
+- Form validation works correctly
+- Changes are saved to database
+- Success message displayed after update
+- Order modifications are logged
+- Cancel option discards changes
+
+Validation Points:
+- Edit Order button is accessible
+- Edit form displays correctly
+- Current order data pre-fills form
+- Editable fields accept input
+- Address validation works
+- Phone validation works
+- ZIP code format validation works
+- Multiple field updates save correctly
+- Database is updated with changes
+- Success message displays
+- Updated data visible in order details
+- Validation prevents invalid data
+- Shipped orders handled appropriately
+- Edit restrictions enforced (if applicable)
+- Changes are logged with details
+- Admin user recorded in log
+- Timestamp captured
+- Cancel button discards changes
+- Order integrity maintained after edit

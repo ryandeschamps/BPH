@@ -1,0 +1,128 @@
+Test Script: TS-062 - Edit Product Sub-category
+
+Test Scenario: As an admin user, I want to modify existing product sub-categories, so that I can maintain accurate catalog organization.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Sub-categories exist in database
+- Sub-category edit functionality is enabled
+- Parent categories exist
+
+Test Data:
+- Parent Category: Men's Clothing
+- Existing Sub-category: "Casual Shirts"
+- Current Description: "Casual and everyday shirts for men"
+- New Description: "Comfortable casual shirts for everyday wear"
+- New Display Order: 2
+
+Test Steps:
+
+GIVEN the admin is viewing the categories list with sub-categories
+WHEN the admin views "Casual Shirts" under "Men's Clothing"
+THEN an "Edit" button or link should be available for the sub-category
+
+GIVEN the admin clicks "Edit" for the sub-category
+WHEN the edit form opens
+THEN the following fields should be displayed:
+  - Parent Category (dropdown)
+  - Sub-category Name (text input)
+  - Sub-category Description (textarea)
+  - Status (Active/Inactive)
+  - Display Order (numeric input)
+
+GIVEN the edit form is pre-filled
+WHEN the admin views the form
+THEN current sub-category data should be displayed:
+  - Parent Category: "Men's Clothing"
+  - Sub-category Name: "Casual Shirts"
+  - Description: "Casual and everyday shirts for men"
+  - Status: "Active"
+
+GIVEN the admin wants to update the sub-category
+WHEN the admin modifies:
+  - Description: "Comfortable casual shirts for everyday wear"
+  - Display Order: "2"
+AND clicks "Save Changes" or "Update" button
+THEN the system should validate all fields
+
+GIVEN the validation passes
+WHEN the update is processed
+THEN the sub-category should be updated in the database
+AND a success message should display "Sub-category updated successfully"
+AND the admin should be redirected to categories list
+
+GIVEN the sub-category is updated
+WHEN the admin views the categories list
+THEN "Casual Shirts" should show the updated description
+AND should be positioned according to the new display order
+
+GIVEN the admin changes the sub-category name
+WHEN the admin updates the name to "Men's Casual Shirts"
+AND saves the changes
+THEN the sub-category name should be updated
+AND all products in this sub-category should remain associated
+
+GIVEN the admin changes the parent category
+WHEN the admin changes parent from "Men's Clothing" to "Unisex Clothing"
+AND saves the changes
+THEN the sub-category should be moved under the new parent
+AND products should remain in the sub-category
+
+GIVEN the admin changes status to "Inactive"
+WHEN the admin sets status from "Active" to "Inactive"
+AND saves the changes
+THEN the sub-category should be deactivated
+AND should not be visible to customers
+BUT products should remain in the sub-category
+
+GIVEN the admin tries to use a duplicate name
+WHEN the admin changes the name to match another sub-category under the same parent
+THEN a validation error should be displayed
+AND the message should indicate "A sub-category with this name already exists under this parent"
+
+GIVEN the admin leaves required fields empty
+WHEN the admin clears the sub-category name
+AND tries to save
+THEN a validation error should be displayed
+AND the message should indicate "Sub-category name is required"
+
+GIVEN the admin wants to cancel changes
+WHEN a "Cancel" button is available
+THEN clicking it should discard changes
+AND return to categories list without saving
+
+Expected Result:
+- Admin can access sub-category edit form
+- Edit form displays current sub-category information
+- Admin can modify name, description, and settings
+- Admin can change parent category
+- Admin can change status and display order
+- Changes are saved to database
+- Success message displayed after update
+- Updated information visible in categories list
+- Parent category changes move sub-category
+- Product associations are maintained
+- Duplicate names prevented within same parent
+- Cancel option discards changes
+
+Validation Points:
+- Edit button accessible for sub-categories
+- Edit form displays correctly
+- Current data pre-fills form
+- All editable fields are functional
+- Sub-category name can be updated
+- Description can be updated
+- Parent category can be changed
+- Status can be changed
+- Display order can be modified
+- Required field validation works
+- Duplicate name check works within parent
+- Database is updated with changes
+- Success message displays
+- Updated data visible in list
+- Parent change moves sub-category correctly
+- Product links preserved after edit
+- Inactive status hides from customers
+- Display order affects positioning
+- Cancel button discards changes
+- Changes reflect on website

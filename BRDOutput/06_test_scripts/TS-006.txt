@@ -1,0 +1,71 @@
+Test Script: TS-006 - User Logout
+
+Test Scenario: As a logged-in buyer, I want to logout from my account, so that I can secure my account when finished shopping.
+
+Prerequisites:
+- User has a registered and verified account
+- User is currently logged in to the website
+- User session is active
+
+Test Data:
+- Email: john.doe@example.com
+- Password: Test@1234
+
+Test Steps:
+
+GIVEN the user is logged in to the website
+WHEN the user is on any page of the website
+THEN the user should see a "Logout" option in the navigation or account menu
+
+GIVEN the user can see the logout option
+WHEN the user clicks on their account name or profile icon
+THEN a dropdown menu or account menu should be displayed
+AND the menu should contain a "Logout" option
+
+GIVEN the user sees the logout option in the menu
+WHEN the user clicks on the "Logout" button or link
+THEN the system should terminate the user's session
+AND the system should clear session cookies
+AND the system should clear any cached user data
+AND the system should redirect the user to the homepage or login page
+AND the user should no longer see their name in the navigation
+AND the user should see "Login" or "Sign In" options instead of "Logout"
+
+GIVEN the user has been logged out
+WHEN the user tries to access account-specific pages (e.g., My Account, Orders, Wishlist)
+THEN the system should redirect to the login page
+AND the system should display a message "Please login to access this page" or similar
+
+GIVEN the user has been logged out
+WHEN the user clicks the browser's back button
+THEN the system should not allow access to previously viewed account pages
+AND the system should redirect to login page or display session expired message
+
+GIVEN the user has been logged out
+WHEN the user navigates to the login page
+AND the user logs in again with valid credentials
+THEN the user should be able to login successfully
+AND a new session should be created
+
+Expected Result:
+- Logout option is visible to logged-in users
+- User can successfully logout from any page
+- User session is terminated properly
+- Session cookies are cleared
+- User is redirected to public page after logout
+- Login/Sign In options are displayed after logout
+- User cannot access protected pages after logout
+- Back button does not allow access to session pages
+- User can login again after logout
+
+Validation Points:
+- Logout option is accessible from all pages when logged in
+- Clicking logout terminates the active session
+- Session cookies are properly cleared
+- User authentication status is reset
+- UI updates to reflect logged-out state
+- Protected routes require re-authentication after logout
+- Browser back button does not bypass session security
+- Shopping cart contents are preserved (or cleared, based on business rules)
+- User can successfully login again with same credentials
+- New session is independent of previous session

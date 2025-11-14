@@ -1,0 +1,108 @@
+Test Script: TS-067 - View Payment Information
+
+Test Scenario: As an admin user, I want to view payment gateway and bank account details, so that I can manage how payments are received.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Payment management section is accessible
+- Payment gateway (Stripe) is configured
+- Bank account details are stored in system
+
+Test Data:
+- Payment Gateway: Stripe
+- Stripe Account ID: acct_1234567890
+- Bank Name: Chase Bank
+- Account Type: Business Checking
+- Last 4 digits: ****6789
+
+Test Steps:
+
+GIVEN the admin is logged in to the admin panel
+WHEN the admin navigates to payment management section
+THEN a "Payment Settings" or "Payment Information" option should be visible
+
+GIVEN the admin clicks on "Payment Settings"
+WHEN the payment information page loads
+THEN payment gateway and bank account details should be displayed
+
+GIVEN the payment gateway information is displayed
+WHEN the admin views the page
+THEN the following should be shown:
+  - Payment Gateway Name: Stripe
+  - Gateway Status: Active/Connected
+  - Account ID or Merchant ID (partially masked)
+  - API Connection Status
+  - Supported Payment Methods (Credit Card, Debit Card, Net Banking)
+
+GIVEN the bank account information is displayed
+WHEN the admin views the bank details section
+THEN the following should be shown:
+  - Bank Name: Chase Bank
+  - Account Type: Business Checking
+  - Account Number: ****6789 (partially masked)
+  - Routing Number: (masked or partially visible)
+  - Account Status: Active
+
+GIVEN the payment information includes sensitive data
+WHEN the admin views account numbers
+THEN full account numbers should be masked
+AND only last 4 digits should be visible
+AND full details should only be visible with proper permissions
+
+GIVEN the admin wants to verify Stripe connection
+WHEN the admin views Stripe integration status
+THEN the connection status should be indicated:
+  - "Connected" or "Active" if properly configured
+  - "Not Connected" or "Error" if issues exist
+
+GIVEN transaction summary is available
+WHEN the admin views payment statistics
+THEN summary information may be displayed:
+  - Total transactions processed
+  - Total amount processed
+  - Failed transactions count
+  - Last transaction date
+
+GIVEN the admin wants to test payment gateway
+WHEN a "Test Connection" button is available
+THEN clicking it should verify Stripe API connection
+AND display success or error message
+
+GIVEN the admin has view-only access
+WHEN the admin views payment information
+THEN sensitive details should be masked
+AND edit options should not be available
+AND only authorized admins can see full details
+
+GIVEN the payment page includes documentation
+WHEN the admin needs help
+THEN links to payment gateway documentation should be available
+AND setup instructions may be provided
+
+Expected Result:
+- Payment information page is accessible
+- Payment gateway details are displayed
+- Bank account information is shown
+- Sensitive data is properly masked
+- Connection status is indicated
+- Supported payment methods are listed
+- Transaction summary available
+- Security measures protect sensitive data
+- View-only access respects permissions
+
+Validation Points:
+- Payment Settings page is accessible
+- Payment gateway information is displayed
+- Stripe account details are shown
+- Gateway connection status is indicated
+- Bank account details are displayed
+- Account numbers are masked appropriately
+- Only last 4 digits visible
+- Full details require proper permissions
+- Payment methods list is accurate
+- Connection status is current
+- Test connection functionality works (if available)
+- Transaction summary is accurate
+- View-only permissions are enforced
+- Sensitive data is secured
+- Page layout is clear and organized

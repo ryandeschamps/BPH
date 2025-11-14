@@ -1,0 +1,132 @@
+Test Script: TS-071 - Reject Customer Review
+
+Test Scenario: As an admin user, I want to reject inappropriate or spam reviews, so that I can maintain review quality.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Customer reviews exist with "Pending" status
+- Review management functionality is accessible
+- Some reviews are inappropriate or spam
+
+Test Data:
+- Review 1: Product "Red Cap", Customer: Spam User, Rating: 5 stars, Comment: "Click here for deals! www.spam.com", Status: Pending
+- Review 2: Product "Summer Dress", Customer: Angry User, Rating: 1 star, Comment: "Inappropriate language and offensive content", Status: Pending
+
+Test Steps:
+
+GIVEN the admin is viewing the reviews management page
+WHEN the admin filters by "Pending" reviews
+THEN all pending customer reviews should be displayed
+
+GIVEN the admin reviews a pending submission
+WHEN the admin views Review 1:
+  - Product: "Red Cap"
+  - Customer: "Spam User"
+  - Rating: 5 stars
+  - Comment: "Click here for deals! www.spam.com"
+  - Status: Pending
+THEN the admin should identify this as spam
+
+GIVEN the review is spam or inappropriate
+WHEN the admin clicks the "Reject" button for Review 1
+THEN a confirmation dialog should appear (optional)
+OR a reason field may be provided
+
+GIVEN the admin is asked for rejection reason
+WHEN a reason field is available
+THEN the admin should be able to select or enter a reason:
+  - Spam
+  - Inappropriate Language
+  - Off-topic
+  - Violates Guidelines
+  - Other (with text field)
+
+GIVEN the admin confirms rejection
+WHEN the rejection is processed
+THEN the review status should be updated to "Rejected"
+AND the database should be updated
+AND a success message should display "Review rejected successfully"
+
+GIVEN the review is rejected
+WHEN the admin views the reviews list
+THEN the review status should show "Rejected"
+AND the review should appear in the "Rejected" filter
+AND should not appear in "Approved" or "Pending" lists
+
+GIVEN the review is rejected
+WHEN customers view the product page
+THEN Review 1 should NOT be visible on the "Red Cap" product page
+AND the rating should NOT be included in the product's average
+AND the review count should NOT include this review
+
+GIVEN the admin rejects another inappropriate review
+WHEN the admin rejects Review 2 for inappropriate language
+THEN the review should be rejected
+AND removed from public visibility
+
+GIVEN bulk rejection is available
+WHEN the admin selects multiple spam reviews
+THEN a "Reject Selected" button may be available
+AND clicking it should reject all selected reviews
+AND all should be hidden from product pages
+
+GIVEN rejected reviews are tracked
+WHEN the admin rejects a review
+THEN the rejection should be logged
+AND the log should include:
+  - Admin user who rejected
+  - Timestamp of rejection
+  - Review ID
+  - Rejection reason (if provided)
+
+GIVEN the admin wants to reconsider
+WHEN a rejected review was mistakenly rejected
+THEN the admin may be able to change status back to pending or approve it
+
+GIVEN notification to customer
+WHEN a review is rejected
+THEN the customer may be notified via email (optional)
+AND the notification should explain the rejection reason
+
+GIVEN the admin reviews rejection history
+WHEN the admin filters by "Rejected"
+THEN all rejected reviews should be listed
+AND rejection reasons should be visible
+AND admin who rejected should be indicated
+
+Expected Result:
+- Admin can view pending reviews
+- Admin can identify spam or inappropriate reviews
+- Admin can reject reviews
+- Rejection reason can be provided
+- Review status updates to "Rejected"
+- Success message displayed
+- Rejected reviews not visible on product pages
+- Rating does not contribute to average
+- Multiple reviews can be rejected
+- Bulk rejection available (if implemented)
+- Rejection is logged with details
+- Status change reversible (if needed)
+
+Validation Points:
+- Pending reviews are accessible
+- Review details are complete
+- Reject button is functional
+- Confirmation dialog appears (if implemented)
+- Rejection reason field available (if implemented)
+- Reason options are appropriate
+- Review status updates to "Rejected"
+- Database is updated
+- Success message displays
+- Rejected review visible in Rejected filter
+- Review not visible on product page
+- Rating does not affect product average
+- Review count does not include rejected
+- Bulk rejection works (if available)
+- Rejection is logged
+- Admin user recorded in log
+- Timestamp captured
+- Rejection reason logged
+- Status change reversible (if allowed)
+- Customer notification sent (if implemented)
+- Rejection history is accessible

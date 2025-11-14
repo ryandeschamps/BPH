@@ -1,0 +1,105 @@
+Test Script: TS-018 - View Shopping Cart Contents
+
+Test Scenario: As a registered buyer, I want to view all items in my shopping cart with prices and totals, so that I can review what I'm about to purchase.
+
+Prerequisites:
+- User has a registered and logged-in account
+- User has added at least 2-3 items to shopping cart
+- Shopping cart functionality is enabled
+- Products in cart are active and available
+
+Test Data:
+- Cart Item 1: Blue T-Shirt, Size M, Quantity 2, Price $25.00 each
+- Cart Item 2: Black Jeans, Size 32, Quantity 1, Price $60.00
+- Cart Item 3: Red Cap, Quantity 1, Price $15.00
+- Expected Subtotal: $125.00
+
+Test Steps:
+
+GIVEN the user is logged in
+WHEN the user clicks on the shopping cart icon or "Cart" link in the navigation
+THEN the system should navigate to the shopping cart page
+
+GIVEN the user is on the shopping cart page
+WHEN the page loads
+THEN all items in the cart should be displayed
+
+GIVEN the cart items are displayed
+WHEN the user views each item
+THEN each item should show:
+  - Product image (thumbnail)
+  - Product name/title
+  - Selected variation (size, color)
+  - Quantity
+  - Unit price
+  - Total price for that item (quantity × unit price)
+  - Remove button or link
+  - Update/edit quantity option
+
+GIVEN multiple items are in the cart
+WHEN the user views the cart
+THEN Item 1 should display: "Blue T-Shirt, Size M, Qty: 2, $25.00 each, Total: $50.00"
+AND Item 2 should display: "Black Jeans, Size 32, Qty: 1, $60.00 each, Total: $60.00"
+AND Item 3 should display: "Red Cap, Qty: 1, $15.00 each, Total: $15.00"
+
+GIVEN all cart items are displayed
+WHEN the user views the price summary section
+THEN the following should be displayed:
+  - Item Total or Subtotal: $125.00
+  - Shipping Cost: (if calculated at this stage)
+  - Tax: (if calculated at this stage)
+  - Order Total or Grand Total
+
+GIVEN the price summary is shown
+WHEN the subtotal is calculated
+THEN the subtotal should equal the sum of all item totals
+AND the subtotal should be: $50.00 + $60.00 + $15.00 = $125.00
+
+GIVEN the cart page is displayed
+WHEN the user views the page
+THEN a "Proceed to Checkout" or "Checkout" button should be prominently displayed
+AND a "Continue Shopping" link or button should be available
+
+GIVEN the cart is empty
+WHEN a user with no items views the cart
+THEN the system should display "Your cart is empty"
+AND a "Continue Shopping" or "Browse Products" link should be provided
+
+GIVEN the user is viewing their cart
+WHEN the cart items are displayed
+THEN the cart should only show items added by the logged-in user
+AND should not show items from other users' carts
+
+GIVEN the user has previously added items to cart
+WHEN the user logs out and logs back in
+THEN the cart items should be preserved
+AND all previously added items should still be in the cart
+
+Expected Result:
+- Shopping cart page displays all cart items
+- Each item shows image, name, variation, quantity, and prices
+- Individual item totals are calculated correctly
+- Subtotal is calculated correctly as sum of all items
+- Price summary section displays subtotal and total
+- Proceed to Checkout button is available
+- Continue Shopping option is available
+- Empty cart shows appropriate message
+- Cart contents are preserved across sessions
+- Only user's own cart items are displayed
+
+Validation Points:
+- All cart items are displayed correctly
+- Product images load properly
+- Product names and variations are accurate
+- Quantities are displayed correctly
+- Unit prices are correct
+- Item totals are calculated correctly (qty × price)
+- Subtotal calculation is accurate
+- Cart icon shows correct item count
+- Remove and update options are available
+- Proceed to Checkout button is functional
+- Continue Shopping navigation works
+- Empty cart message displays when appropriate
+- Cart data persists across login sessions
+- Cart data is user-specific
+- All prices displayed in USD format

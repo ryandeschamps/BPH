@@ -1,0 +1,100 @@
+Test Script: TS-023 - View Wishlist Items
+
+Test Scenario: As a registered buyer, I want to view all products in my wishlist, so that I can review items I saved for later.
+
+Prerequisites:
+- User is registered and logged in
+- User has added at least 3-5 products to wishlist
+- Wishlist page is accessible
+- Products in wishlist are still active
+
+Test Data:
+- Wishlist contains:
+  - Product 1: Women's Floral Dress, $65.00
+  - Product 2: Blue Denim Jacket, $79.99
+  - Product 3: Red Summer Hat, $25.00
+  - Product 4: Black Leather Boots, $120.00
+
+Test Steps:
+
+GIVEN the user is logged in
+WHEN the user wants to access their wishlist
+THEN the user should see a "Wishlist" link in the navigation or account menu
+
+GIVEN the user sees the wishlist option
+WHEN the user clicks on "Wishlist" or "My Wishlist"
+THEN the system should navigate to the wishlist page
+
+GIVEN the user is on the wishlist page
+WHEN the page loads
+THEN all products added to the wishlist should be displayed
+
+GIVEN the wishlist contains multiple products
+WHEN the user views the wishlist
+THEN each product should display:
+  - Product image (thumbnail)
+  - Product title/name
+  - Product price
+  - "Remove from Wishlist" button or icon
+  - "Add to Cart" or "Buy Now" button
+
+GIVEN the products are displayed
+WHEN the user views the wishlist items
+THEN Product 1 should show: "Women's Floral Dress" with image and price $65.00
+AND Product 2 should show: "Blue Denim Jacket" with image and price $79.99
+AND Product 3 should show: "Red Summer Hat" with image and price $25.00
+AND Product 4 should show: "Black Leather Boots" with image and price $120.00
+
+GIVEN the wishlist page is displayed
+WHEN the user views the page header
+THEN the page title should be "My Wishlist" or "Wishlist"
+AND the total number of items should be displayed (e.g., "4 items in your wishlist")
+
+GIVEN the user wants to view product details
+WHEN the user clicks on a product image or title in the wishlist
+THEN the system should navigate to that product's detail page
+
+GIVEN the user has an empty wishlist
+WHEN the user accesses the wishlist page with no items
+THEN the system should display "Your wishlist is empty"
+AND a "Continue Shopping" or "Browse Products" button should be available
+
+GIVEN the user views their wishlist
+WHEN a product in the wishlist has been deactivated or removed from catalog
+THEN the system should either:
+  - Not display the deactivated product
+  OR
+  - Display it with "No longer available" status
+  - Remove it automatically from wishlist
+
+GIVEN the user accesses wishlist from different devices
+WHEN the user logs in from another device
+THEN the same wishlist items should be displayed
+AND wishlist data should sync across devices
+
+Expected Result:
+- Wishlist page is accessible from navigation/account menu
+- All wishlist items are displayed with key information
+- Each item shows image, title, price, and action buttons
+- Item count is displayed
+- User can navigate to product details from wishlist
+- Empty wishlist shows appropriate message
+- Wishlist data is consistent across devices
+- Deactivated products are handled appropriately
+
+Validation Points:
+- Wishlist link is accessible from navigation
+- Wishlist page loads correctly
+- All user's wishlist items are displayed
+- Product images load properly
+- Product titles are accurate
+- Prices are displayed correctly in USD
+- Remove button is present for each item
+- Add to Cart button is present for each item
+- Item count is accurate
+- Product links navigate to correct detail pages
+- Empty wishlist shows appropriate message
+- Only active products are displayed (or inactive marked)
+- Wishlist data is user-specific
+- Wishlist persists across sessions
+- Database queries retrieve correct user's wishlist

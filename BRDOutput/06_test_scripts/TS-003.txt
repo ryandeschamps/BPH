@@ -1,0 +1,80 @@
+Test Script: TS-003 - Password Reset for Forgotten Password
+
+Test Scenario: As a registered buyer who forgot my password, I want to reset my password using a recovery link, so that I can regain access to my account.
+
+Prerequisites:
+- User has a registered account with verified email
+- Email service is operational
+- User is not currently logged in
+
+Test Data:
+- Registered Email: john.doe@example.com
+- New Password: NewPass@5678
+- Confirm New Password: NewPass@5678
+
+Test Steps:
+
+GIVEN the user is on the website homepage
+WHEN the user clicks on the "Login" button
+THEN the login page should be displayed
+
+GIVEN the user is on the login page
+WHEN the user clicks on "Forgot Password?" link
+THEN the password reset request page should be displayed
+
+GIVEN the user is on the password reset request page
+WHEN the user enters email "john.doe@example.com"
+AND the user clicks the "Submit" or "Send Reset Link" button
+THEN the system should validate the email exists in the database
+AND the system should generate a unique password reset token
+AND the system should send a password reset email to "john.doe@example.com"
+AND the system should display a message "Password reset link has been sent to your email"
+
+GIVEN the password reset email has been sent
+WHEN the user checks their email inbox
+THEN the user should receive an email with subject containing "Password Reset"
+AND the email should contain a password reset link with the unique token
+
+GIVEN the user has received the password reset email
+WHEN the user clicks on the password reset link
+THEN the system should navigate to the password reset page
+AND the system should validate the reset token is valid and not expired
+AND the system should display password reset form with fields for new password and confirm password
+
+GIVEN the user is on the password reset form
+WHEN the user enters new password "NewPass@5678"
+AND the user enters confirm password "NewPass@5678"
+AND the user clicks the "Reset Password" or "Submit" button
+THEN the system should validate that passwords match
+AND the system should update the user's password in the database
+AND the system should invalidate the reset token
+AND the system should display a success message "Password reset successfully. Please login with your new password."
+
+GIVEN the password has been reset successfully
+WHEN the user navigates to the login page
+AND the user enters email "john.doe@example.com" and new password "NewPass@5678"
+AND the user clicks the "Login" button
+THEN the system should authenticate the user
+AND the user should be logged in successfully
+AND the user should be redirected to the homepage or dashboard
+
+Expected Result:
+- User can request password reset for registered email
+- Password reset email is sent successfully
+- Reset link with valid token is received
+- User can access password reset form via the link
+- User can set new password successfully
+- Old password is replaced with new password
+- Reset token is invalidated after use
+- User can login with new password
+
+Validation Points:
+- Only registered email addresses can request password reset
+- Reset email is sent to the correct email address
+- Reset link contains valid, unique token
+- Reset token has expiration time (security measure)
+- New password and confirm password must match
+- Password is successfully updated in database
+- Reset token cannot be reused after password change
+- Old password no longer works for login
+- New password works for successful login

@@ -1,0 +1,139 @@
+Test Script: TS-038 - View Detailed Order Information
+
+Test Scenario: As a registered buyer, I want to view complete details of a specific order, so that I can see what I ordered and track delivery status.
+
+Prerequisites:
+- User is logged in
+- User has placed at least one order
+- Order details page is accessible
+- Order exists in the system
+
+Test Data:
+- Order Number: ORD-2025-001234
+- Order Date: January 28, 2025
+- Order Status: Shipped
+- Items: Blue T-Shirt (Qty 2, $50.00), Black Jeans (Qty 1, $60.00)
+- Subtotal: $110.00
+- Shipping: $10.00
+- Tax: $8.80
+- Total: $128.80
+- Shipping Address: 456 Oak Ave, San Francisco, CA 94102
+
+Test Steps:
+
+GIVEN the user is viewing the order history page
+WHEN the user clicks "View Details" for order ORD-2025-001234
+THEN the system should navigate to the order details page
+
+GIVEN the order details page loads
+WHEN the user views the page
+THEN the page title should show "Order Details" or similar
+AND the order number should be prominently displayed
+
+GIVEN the order details are displayed
+WHEN the user views the order information
+THEN the following sections should be visible:
+  - Order number and date
+  - Order status
+  - Ordered items with details
+  - Pricing breakdown
+  - Shipping address
+  - Billing address
+  - Payment method
+  - Tracking information (if shipped)
+
+GIVEN the order header is displayed
+WHEN the user views the top section
+THEN it should show:
+  - Order Number: ORD-2025-001234
+  - Order Date: January 28, 2025
+  - Current Status: Shipped
+
+GIVEN the ordered items are listed
+WHEN the user views the items section
+THEN each item should display:
+  - Product image (thumbnail)
+  - Product name
+  - Selected variations (size, color)
+  - Quantity ordered
+  - Price per unit
+  - Item total
+
+GIVEN the items are displayed
+WHEN the user views the item details
+THEN Item 1 should show: "Blue T-Shirt | Quantity: 2 | $25.00 each | Total: $50.00"
+AND Item 2 should show: "Black Jeans | Quantity: 1 | $60.00 each | Total: $60.00"
+
+GIVEN the pricing breakdown is displayed
+WHEN the user views the cost summary
+THEN it should show:
+  - Subtotal: $110.00
+  - Shipping Cost: $10.00
+  - Tax: $8.80
+  - Order Total: $128.80
+
+GIVEN the shipping address is displayed
+WHEN the user views the shipping information
+THEN it should show the complete address:
+  - Name: John Doe
+  - Address: 456 Oak Ave
+  - City, State, ZIP: San Francisco, CA 94102
+  - Phone: +1-555-0202
+
+GIVEN the billing address is displayed
+WHEN the user views the billing information
+THEN the complete billing address should be shown
+
+GIVEN the payment method is displayed
+WHEN the user views payment information
+THEN it should show the payment method used (e.g., "Credit Card ending in 1234")
+
+GIVEN the order has been shipped
+WHEN the user views tracking information
+THEN the following should be displayed:
+  - Carrier name (e.g., UPS, FedEx)
+  - Tracking number
+  - Link to track shipment
+  - Estimated delivery date
+
+GIVEN a tracking link is provided
+WHEN the user clicks on the tracking link
+THEN the user should be able to view shipment tracking details
+
+GIVEN the user wants to reorder
+WHEN a "Reorder" button is available
+THEN the user should be able to click it
+AND the items should be added to cart
+
+Expected Result:
+- Order details page displays complete order information
+- Order number and date are shown
+- Current order status is displayed
+- All ordered items are listed with details
+- Pricing breakdown is accurate
+- Shipping and billing addresses are displayed
+- Payment method is shown
+- Tracking information is available for shipped orders
+- User can track shipment
+- Reorder option is available
+- All information matches the order record
+
+Validation Points:
+- Order details page loads correctly
+- Order number matches the selected order
+- Order date is accurate
+- Order status is current
+- All items in order are displayed
+- Product images load properly
+- Item quantities are correct
+- Prices are accurate
+- Subtotal calculation is correct
+- Total amount matches order total
+- Shipping address is complete and correct
+- Billing address is displayed
+- Payment method is shown
+- Tracking information is present (if shipped)
+- Tracking link is functional
+- Reorder button works (if available)
+- User can only view their own orders
+- All prices in USD format

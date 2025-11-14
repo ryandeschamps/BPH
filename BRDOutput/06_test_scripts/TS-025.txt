@@ -1,0 +1,103 @@
+Test Script: TS-025 - Move Wishlist Item to Cart
+
+Test Scenario: As a registered buyer, I want to purchase items from my wishlist, so that I can easily checkout with previously saved items.
+
+Prerequisites:
+- User is registered and logged in
+- User has items in wishlist
+- Shopping cart functionality is enabled
+- Wishlist items are in stock and available
+
+Test Data:
+- Wishlist Item: Women's Floral Dress
+- Size: M
+- Color: Blue
+- Price: $65.00
+- Stock Status: Available
+
+Test Steps:
+
+GIVEN the user is logged in and viewing their wishlist page
+WHEN the user views the wishlist items
+THEN each item should have an "Add to Cart" or "Buy Now" button
+
+GIVEN the user wants to purchase a wishlist item
+WHEN the user views "Women's Floral Dress" in the wishlist
+THEN the user should see an "Add to Cart" button for this product
+
+GIVEN the product has variations (size, color)
+WHEN the user clicks "Add to Cart" for a product with variations
+THEN the system should either:
+  - Navigate to the product detail page to select variations
+  OR
+  - Display a quick selection modal for size and color
+  - Show available sizes and colors for selection
+
+GIVEN the user selects product variations
+WHEN the user selects Size "M" and Color "Blue"
+AND clicks "Add to Cart" or "Confirm"
+THEN the system should validate the selection
+AND check if the product with selected variations is in stock
+
+GIVEN the product is in stock
+WHEN the add to cart action is processed
+THEN the system should add the product to the shopping cart
+AND the cart count should increment by 1
+AND a confirmation message should be displayed (e.g., "Item added to cart")
+
+GIVEN the item is added to cart
+WHEN the user decides whether to keep it in wishlist
+THEN the system may:
+  - Keep the item in wishlist (user can buy again later)
+  OR
+  - Remove the item from wishlist automatically
+  - Provide an option to remove from wishlist
+
+GIVEN the user navigates to the shopping cart
+WHEN the cart page loads
+THEN the "Women's Floral Dress" (Size M, Blue) should be displayed in the cart
+AND the price should be $65.00
+AND the quantity should be 1
+
+GIVEN the user wants to add multiple wishlist items to cart
+WHEN the user adds another wishlist item to cart
+THEN the second item should also be added successfully
+AND both items should appear in the cart
+
+GIVEN a wishlist item is out of stock
+WHEN the user tries to add an out-of-stock item to cart
+THEN the system should display an error message
+AND the message should indicate "This item is currently out of stock"
+AND the item should not be added to cart
+
+GIVEN the user completes the purchase
+WHEN the user proceeds to checkout and completes payment
+THEN the purchased items should be removed from cart
+AND the wishlist items may remain in wishlist (based on business rules)
+
+Expected Result:
+- Add to Cart button is visible for wishlist items
+- User can add wishlist items to cart
+- Variation selection works for products with sizes/colors
+- Product is added to cart with correct variations
+- Cart count updates correctly
+- Confirmation message is displayed
+- Item appears in shopping cart
+- Multiple wishlist items can be added to cart
+- Out-of-stock items show error message
+- Wishlist and cart work independently
+
+Validation Points:
+- Add to Cart button is present for each wishlist item
+- Button click triggers add to cart action
+- Variation selection works correctly
+- Product added to cart with correct details
+- Cart database updated with new item
+- Cart count increments correctly
+- Confirmation message displays
+- Item appears in cart with correct price and variations
+- Stock availability is validated
+- Error message shown for out-of-stock items
+- Multiple items can be added from wishlist to cart
+- Wishlist state is managed appropriately
+- User can proceed to checkout with added items

@@ -1,0 +1,136 @@
+Test Script: TS-072 - Generate Products Uploaded Report
+
+Test Scenario: As an admin user, I want to create reports showing products added over time, so that I can track catalog growth.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Products have been added to catalog over time
+- Reports section is accessible
+- Products have creation dates recorded
+
+Test Data:
+- Date Range: January 1, 2025 - January 31, 2025
+- Products added in January: 25 products
+- Products by category: Men's Clothing (10), Women's Clothing (12), Accessories (3)
+
+Test Steps:
+
+GIVEN the admin is logged in to the admin panel
+WHEN the admin navigates to reports section
+THEN a "Reports" or "Statistics" option should be visible
+
+GIVEN the admin clicks on "Reports"
+WHEN the reports page loads
+THEN various report types should be available including "Products Uploaded Report"
+
+GIVEN the admin selects "Products Uploaded Report"
+WHEN the report configuration page opens
+THEN the following options should be available:
+  - Report Type: By Date Range, By Month, By Year
+  - Start Date (for date range)
+  - End Date (for date range)
+  - Month selector (for monthly report)
+  - Year selector (for yearly report)
+  - Generate Report button
+
+GIVEN the admin wants a date range report
+WHEN the admin selects "By Date Range"
+AND enters:
+  - Start Date: "January 1, 2025"
+  - End Date: "January 31, 2025"
+AND clicks "Generate Report"
+THEN the system should retrieve products uploaded in that date range
+
+GIVEN the report is generated
+WHEN the data is processed
+THEN the report should display:
+  - Report title: "Products Uploaded Report"
+  - Date range: "January 1, 2025 - January 31, 2025"
+  - Total products uploaded: 25
+  - Breakdown by category (if available)
+  - List of products with upload dates
+
+GIVEN the report shows product details
+WHEN the admin views the product list
+THEN each product should show:
+  - Product name
+  - SKU
+  - Category
+  - Upload/Creation date
+  - Status (Active/Inactive)
+  - Uploaded by (admin user who added it)
+
+GIVEN the admin wants a monthly report
+WHEN the admin selects "By Month"
+AND selects "January 2025"
+AND generates the report
+THEN the report should show all products added in January 2025
+
+GIVEN the admin wants a yearly report
+WHEN the admin selects "By Year"
+AND selects "2025"
+AND generates the report
+THEN the report should show:
+  - Total products added in 2025
+  - Breakdown by month
+  - Month-over-month comparison
+
+GIVEN the report includes visualizations
+WHEN the report is displayed
+THEN charts or graphs may be shown:
+  - Bar chart of products by month
+  - Pie chart of products by category
+  - Line graph showing growth trend
+
+GIVEN the report is ready
+WHEN the admin wants to export the report
+THEN export options should be available:
+  - Export to PDF
+  - Export to Excel
+AND these will be tested in separate test scripts
+
+GIVEN the admin applies filters
+WHEN filter options are available
+THEN the admin should be able to filter by:
+  - Product category
+  - Product status (Active/Inactive)
+  - Admin user who uploaded
+AND the report should update accordingly
+
+Expected Result:
+- Admin can access reports section
+- Products Uploaded Report option available
+- Report type selection works
+- Date range can be specified
+- Report generates successfully
+- Total product count is accurate
+- Product details are displayed
+- Breakdown by category shown
+- Monthly and yearly reports work
+- Visualizations displayed (if implemented)
+- Filters work correctly
+- Export options available
+
+Validation Points:
+- Reports section is accessible
+- Products Uploaded Report option visible
+- Report type selector works
+- Date range inputs are functional
+- Month selector works
+- Year selector works
+- Generate Report button is functional
+- Report retrieves correct data
+- Product count is accurate
+- Date range filtering works
+- Products listed with details
+- Product names and SKUs displayed
+- Upload dates are accurate
+- Category breakdown is correct
+- Monthly report shows correct data
+- Yearly report shows correct data
+- Month-by-month breakdown accurate
+- Visualizations render correctly
+- Filters apply correctly
+- Export buttons are visible
+- Report data matches database records
+- Performance is acceptable for large datasets

@@ -1,0 +1,65 @@
+Test Script: TS-081 - Edit Role Permissions
+
+Test Scenario: As an admin user, I want to modify role permissions, so that I can adjust access levels as needed.
+
+Prerequisites:
+- Admin is logged in with super admin privileges
+- Roles exist in the system
+- Role edit functionality is enabled
+
+Test Data:
+- Existing Role: Content Manager
+- Current Permissions: CMS Pages, Email Templates
+- New Permission to Add: Customer Support View
+
+Test Steps:
+
+GIVEN the admin is viewing the roles list
+WHEN the admin views existing roles
+THEN each role should have an "Edit" button
+
+GIVEN the admin wants to edit a role
+WHEN the admin clicks "Edit" for "Content Manager"
+THEN the role edit form should open
+
+GIVEN the edit form is displayed
+WHEN the admin views the form
+THEN it should show:
+  - Role Name (editable)
+  - Description (editable)
+  - Permissions list with current permissions checked
+
+GIVEN current permissions are displayed
+WHEN the admin views the permissions
+THEN currently assigned permissions should be checked
+AND unassigned permissions should be unchecked
+
+GIVEN the admin wants to add permissions
+WHEN the admin checks "View Support Requests"
+AND clicks "Save Changes"
+THEN the permission should be added to the role
+AND success message displayed
+
+GIVEN the admin wants to remove permissions
+WHEN the admin unchecks a permission
+AND saves
+THEN the permission should be removed from the role
+
+GIVEN the role is updated
+WHEN users with this role login
+THEN they should see updated access based on new permissions
+
+Expected Result:
+- Role edit form is accessible
+- Current permissions are shown
+- Permissions can be added or removed
+- Changes are saved successfully
+- Users get updated access
+
+Validation Points:
+- Edit button accessible
+- Form pre-fills with current data
+- Permissions correctly checked
+- Changes save to database
+- Success message displays
+- User access updates correctly

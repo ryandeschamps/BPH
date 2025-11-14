@@ -1,0 +1,90 @@
+Test Script: TS-024 - Remove Item from Wishlist
+
+Test Scenario: As a registered buyer, I want to delete items from my wishlist, so that I can keep my wishlist current with items I'm actually interested in.
+
+Prerequisites:
+- User is registered and logged in
+- User has multiple items in wishlist
+- Wishlist removal functionality is enabled
+
+Test Data:
+- Wishlist Items:
+  - Product 1: Women's Floral Dress, $65.00
+  - Product 2: Blue Denim Jacket, $79.99
+  - Product 3: Red Summer Hat, $25.00
+- Item to Remove: Red Summer Hat
+
+Test Steps:
+
+GIVEN the user is logged in and viewing their wishlist page
+WHEN the user views the wishlist items
+THEN each item should have a "Remove" button, link, or icon (e.g., trash icon, X button, or broken heart)
+
+GIVEN the user wants to remove an item from wishlist
+WHEN the user clicks the "Remove" button for "Red Summer Hat"
+THEN a confirmation dialog may appear (optional) asking "Remove this item from wishlist?"
+OR the item is removed immediately
+
+GIVEN the removal is confirmed
+WHEN the system processes the removal
+THEN the system should delete the product from the user's wishlist
+AND the wishlist page should update
+
+GIVEN the item has been removed
+WHEN the wishlist page refreshes or updates
+THEN the "Red Summer Hat" should no longer be displayed in the wishlist
+AND the remaining items (Women's Floral Dress and Blue Denim Jacket) should still be visible
+AND a confirmation message should be displayed (e.g., "Item removed from wishlist")
+
+GIVEN the wishlist item count was 3
+WHEN one item is removed
+THEN the wishlist count should update to 2
+AND the wishlist icon in navigation should reflect the updated count
+
+GIVEN the user removes another item
+WHEN the user clicks "Remove" for "Blue Denim Jacket"
+THEN the item should be removed
+AND the wishlist should now contain only "Women's Floral Dress"
+AND the wishlist count should update to 1
+
+GIVEN the user has only one item left in wishlist
+WHEN the user removes the last item "Women's Floral Dress"
+THEN the item should be removed
+AND the wishlist should be empty
+AND the wishlist page should display "Your wishlist is empty"
+AND a "Continue Shopping" or "Browse Products" button should be displayed
+
+GIVEN an item was removed from wishlist
+WHEN the user navigates to that product's detail page
+THEN the "Add to Wishlist" button should be in default state (not filled/active)
+AND the user should be able to add the product to wishlist again if desired
+
+GIVEN the user removes an item
+WHEN the removal is processed
+THEN the item should be permanently removed from the database wishlist table
+AND the removal should persist across sessions
+
+Expected Result:
+- User can remove individual items from wishlist
+- Remove button is clearly visible for each item
+- Removed item disappears from wishlist
+- Confirmation message is displayed
+- Wishlist count updates in navigation
+- Last item removal results in empty wishlist
+- Empty wishlist displays appropriate message
+- Removed items can be re-added manually
+- Product detail page reflects removal
+
+Validation Points:
+- Remove button/link is present for each wishlist item
+- Remove functionality works correctly
+- Item is deleted from wishlist upon removal
+- Wishlist page updates after removal
+- Confirmation message displays
+- Multiple items can be removed sequentially
+- Wishlist count updates correctly
+- Removing last item shows empty wishlist message
+- Database is updated (item removed from wishlist table)
+- Removed item does not reappear on page refresh
+- Product detail page shows correct wishlist state
+- Continue Shopping link works in empty wishlist

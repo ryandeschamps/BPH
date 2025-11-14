@@ -1,0 +1,79 @@
+Test Script: TS-078 - Delete Sub-admin User
+
+Test Scenario: As an admin user, I want to remove sub-admin users, so that I can revoke access when needed.
+
+Prerequisites:
+- Admin is logged in with super admin privileges
+- Sub-admin users exist in the system
+- User deletion functionality is enabled
+
+Test Data:
+- User to Delete: Sarah Johnson (subadmin@example.com), Role: Order Manager
+
+Test Steps:
+
+GIVEN the admin is viewing the admin users list
+WHEN the admin views sub-admin records
+THEN each user should have a "Delete" button or link
+
+GIVEN the admin wants to delete a sub-admin
+WHEN the admin clicks "Delete" for "Sarah Johnson"
+THEN a confirmation dialog should appear
+
+GIVEN the confirmation dialog is displayed
+WHEN the dialog appears
+THEN it should ask "Are you sure you want to delete this user?"
+AND may warn about data loss or impacts
+
+GIVEN the admin confirms deletion
+WHEN the admin clicks "Yes" or "Confirm Delete"
+THEN the user should be removed from the database
+AND a success message should display "User deleted successfully"
+
+GIVEN the user is deleted
+WHEN the admin views the users list
+THEN "Sarah Johnson" should no longer appear in the list
+
+GIVEN the deleted user tries to login
+WHEN "Sarah Johnson" attempts to access the admin panel
+THEN the login should fail
+AND an error message should indicate invalid credentials
+
+GIVEN user deletion is logged
+WHEN a user is deleted
+THEN the action should be logged
+AND include admin who deleted, timestamp, and deleted user info
+
+GIVEN the admin cancels deletion
+WHEN the confirmation dialog is shown
+AND the admin clicks "Cancel" or "No"
+THEN the user should not be deleted
+AND should remain in the users list
+
+GIVEN the super admin account
+WHEN the admin tries to delete the primary super admin
+THEN the system may prevent deletion
+OR require special confirmation
+
+Expected Result:
+- Delete button is available for sub-admins
+- Confirmation dialog appears
+- User can be deleted successfully
+- Success message displayed
+- Deleted user removed from list
+- Deleted user cannot login
+- Deletion is logged
+- Cancel option works
+
+Validation Points:
+- Delete button is visible
+- Confirmation dialog appears
+- User is removed from database
+- Success message displays
+- User not in list after deletion
+- Login fails for deleted user
+- Deletion is logged
+- Admin user recorded
+- Timestamp captured
+- Cancel prevents deletion
+- Super admin protection (if applicable)

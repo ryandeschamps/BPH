@@ -1,0 +1,118 @@
+Test Script: TS-060 - Activate/Deactivate Product Category
+
+Test Scenario: As an admin user, I want to enable or disable product categories, so that I can control which categories are visible to customers.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Product categories exist (both active and inactive)
+- Category status management is functional
+
+Test Data:
+- Active Category: "Winter Collection", Status: Active
+- Inactive Category: "Summer Clearance", Status: Inactive
+
+Test Steps:
+
+GIVEN the admin is viewing the categories list
+WHEN the admin views category records
+THEN each category should have a status indicator (Active or Inactive)
+AND action buttons for status management should be available
+
+GIVEN the admin wants to deactivate an active category
+WHEN the admin views "Winter Collection" with status "Active"
+THEN a "Deactivate" button, toggle, or status change option should be available
+
+GIVEN the admin clicks "Deactivate"
+WHEN the deactivation is triggered
+THEN a confirmation dialog may appear asking "Are you sure you want to deactivate this category?"
+
+GIVEN the admin confirms deactivation
+WHEN the admin confirms the action
+THEN the system should update the category status to "Inactive"
+AND the database should be updated
+AND a success message should display "Category deactivated successfully"
+
+GIVEN the category has been deactivated
+WHEN the admin views the categories list
+THEN "Winter Collection" status should show "Inactive"
+AND the action button should change to "Activate"
+
+GIVEN the category is deactivated
+WHEN customers browse the website
+THEN "Winter Collection" category should not be visible in navigation
+AND should not appear in category listings
+
+GIVEN products exist in the deactivated category
+WHEN the category is inactive
+THEN products in this category should not be accessible via category browse
+BUT products may still be searchable or accessible via direct link (based on product status)
+
+GIVEN the admin wants to activate an inactive category
+WHEN the admin views "Summer Clearance" with status "Inactive"
+THEN an "Activate" button or toggle should be available
+
+GIVEN the admin clicks "Activate"
+WHEN the activation is triggered
+THEN a confirmation dialog may appear
+
+GIVEN the admin confirms activation
+WHEN the admin confirms the action
+THEN the system should update the category status to "Active"
+AND the database should be updated
+AND a success message should display "Category activated successfully"
+
+GIVEN the category has been activated
+WHEN the admin views the categories list
+THEN "Summer Clearance" status should show "Active"
+AND the action button should change to "Deactivate"
+
+GIVEN the category is activated
+WHEN customers browse the website
+THEN "Summer Clearance" category should be visible in navigation
+AND should appear in category listings
+AND products in this category should be accessible
+
+GIVEN the status change is via edit form
+WHEN the admin edits a category
+THEN the status can also be changed via the edit form
+AND the same activation/deactivation logic applies
+
+GIVEN sub-categories exist under a parent category
+WHEN the admin deactivates a parent category
+THEN the system should handle sub-categories appropriately:
+  - Hide parent and all sub-categories
+  OR
+  - Prompt admin about sub-categories
+  - Allow choice to deactivate sub-categories as well
+
+Expected Result:
+- Admin can view category status (Active/Inactive)
+- Admin can deactivate active categories
+- Admin can activate inactive categories
+- Status changes are saved to database
+- Success messages displayed after status change
+- Deactivated categories hidden from customers
+- Products in deactivated categories not browseable via category
+- Activated categories visible to customers
+- Status toggle works correctly
+- Sub-categories handled appropriately
+
+Validation Points:
+- Category status is displayed correctly
+- Activate/Deactivate buttons are functional
+- Confirmation dialog appears (if implemented)
+- Status update is saved to database
+- Categories list reflects updated status
+- Action button changes after status change
+- Success message displays
+- Deactivated category hidden from website navigation
+- Deactivated category not in customer category lists
+- Products in inactive category not accessible via category
+- Activated category visible on website
+- Activated category in navigation menu
+- Products in active category accessible
+- Status toggle works from list page
+- Status can be changed from edit form
+- Multiple categories can be managed independently
+- Changes take effect immediately on website
+- Sub-categories handled correctly (if hierarchical)

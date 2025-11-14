@@ -1,0 +1,58 @@
+Test Script: TS-093 - Receive Email for New Support Request
+
+Test Scenario: As an admin user, I want to get email notifications when customers submit support requests, so that I can respond promptly.
+
+Prerequisites:
+- Email service configured
+- Admin email set in system
+- Support form functional
+
+Test Data:
+- Customer: John Doe
+- Email: john.doe@example.com
+- Subject: Order Status Question
+- Message: "When will my order ORD-2025-001234 ship?"
+
+Test Steps:
+
+GIVEN a customer submits a support request
+WHEN the contact form is submitted with:
+  - Name: "John Doe"
+  - Email: "john.doe@example.com"
+  - Subject: "Order Status Question"
+  - Message: "When will my order ORD-2025-001234 ship?"
+THEN the system should send notification email to admin
+
+GIVEN the notification email is sent
+WHEN the admin checks their email inbox
+THEN an email should be received with:
+  - Subject: "New Support Request: Order Status Question"
+  - Customer name and email
+  - Full message content
+  - Submission timestamp
+
+GIVEN the email contains customer details
+WHEN the admin views the email
+THEN it should include:
+  - Link to view request in admin panel
+  - Customer's contact information
+  - Complete message
+
+GIVEN the admin wants to respond
+WHEN the admin clicks link in email
+THEN the admin should be directed to the support request in admin panel
+
+Expected Result:
+- Email sent when support request submitted
+- Admin receives notification
+- Email contains complete request details
+- Link to admin panel included
+
+Validation Points:
+- Email triggered on form submission
+- Email sent to admin address
+- Subject line appropriate
+- Customer details included
+- Message content complete
+- Timestamp included
+- Link to admin panel works

@@ -1,0 +1,105 @@
+Test Script: TS-080 - Create Role with Permissions
+
+Test Scenario: As an admin user, I want to define roles with specific permissions, so that I can implement role-based access control.
+
+Prerequisites:
+- Admin is logged in with super admin privileges
+- Roles management section is accessible
+- Permission system is configured
+
+Test Data:
+- Role Name: Content Manager
+- Permissions: CMS Pages, Email Templates, Customer Support
+- Description: Manages content and customer communications
+
+Test Steps:
+
+GIVEN the admin is in the admin panel
+WHEN the admin navigates to roles management
+THEN a "Roles" or "Roles & Permissions" option should be visible
+
+GIVEN the admin clicks on "Roles"
+WHEN the roles page loads
+THEN existing roles should be listed
+AND an "Add New Role" or "Create Role" button should be available
+
+GIVEN the admin clicks "Add New Role"
+WHEN the role creation form opens
+THEN the following should be available:
+  - Role Name (text input)
+  - Role Description (textarea)
+  - Permissions list (checkboxes or multi-select)
+  - Status (Active/Inactive)
+
+GIVEN the permissions list is displayed
+WHEN the admin views available permissions
+THEN permissions should be organized by category:
+  - Dashboard (View Dashboard Stats)
+  - Customers (View, Edit, Activate/Deactivate)
+  - Orders (View, Edit, Update Status, Manage Shipment)
+  - Products (View, Add, Edit, Activate/Deactivate)
+  - Categories (View, Add, Edit, Activate/Deactivate)
+  - Payments (View, Edit)
+  - Reviews (Approve, Reject)
+  - Reports (Generate, Export)
+  - Users (View, Add, Edit, Delete)
+  - Roles (View, Add, Edit, Delete)
+  - CMS (Edit Pages)
+  - Email Marketing (Manage Templates, Send Emails)
+  - Support (View Requests)
+
+GIVEN the admin wants to create a new role
+WHEN the admin enters:
+  - Role Name: "Content Manager"
+  - Description: "Manages content and customer communications"
+AND selects permissions:
+  - CMS: Edit About Us, Edit Contact Us, Edit Privacy Policy, Edit Terms
+  - Email Marketing: Add Email, Edit Email, Delete Email, Send Email
+  - Support: View Support Requests
+AND sets Status to "Active"
+AND clicks "Create Role" or "Save"
+THEN the system should validate the data
+
+GIVEN the validation passes
+WHEN the role is saved
+THEN the new role should be created
+AND a success message should display "Role created successfully"
+
+GIVEN the role is created
+WHEN the admin views the roles list
+THEN "Content Manager" should be visible
+AND the assigned permissions should be shown
+
+GIVEN the role is assigned to a user
+WHEN a sub-admin is assigned the "Content Manager" role
+THEN they should only see and access the permitted features
+
+GIVEN required fields are empty
+WHEN the admin tries to save without role name
+THEN a validation error should be displayed
+
+Expected Result:
+- Roles management is accessible
+- Create Role form is available
+- All permissions are listed
+- Admin can select specific permissions
+- Role is created successfully
+- Role appears in roles list
+- Assigned users have correct access
+- Validation works
+
+Validation Points:
+- Roles page is accessible
+- Add New Role button works
+- Form displays correctly
+- Role name field functional
+- Description field functional
+- Permissions organized by category
+- Checkboxes for each permission
+- All permissions available
+- Required field validation works
+- Role created in database
+- Success message displays
+- Role visible in list
+- Permissions saved correctly
+- Role-based access enforced

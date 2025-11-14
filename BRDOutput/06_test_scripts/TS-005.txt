@@ -1,0 +1,88 @@
+Test Script: TS-005 - Social Login with Google
+
+Test Scenario: As a visitor, I want to login using my Google account, so that I can quickly access the website without creating a new account.
+
+Prerequisites:
+- User has an active Google account
+- Google OAuth integration is configured
+- Website has Google login enabled
+- Internet connection is available
+
+Test Data:
+- Google Email: user@gmail.com
+- Google Password: (User's Google password)
+- Google User ID: 987654321
+- Google User Name: Jane Smith
+
+Test Steps:
+
+GIVEN the user is on the website homepage
+WHEN the user clicks on the "Login" button
+THEN the login page should be displayed
+
+GIVEN the user is on the login page
+WHEN the user views the login options
+THEN the user should see a "Login with Google" button or icon
+
+GIVEN the user sees the Google login option
+WHEN the user clicks on the "Login with Google" button
+THEN the system should redirect to Google's OAuth authorization page
+
+GIVEN the user is on Google's authorization page
+WHEN the user selects their Google account or enters credentials
+AND the user completes Google authentication (including 2FA if enabled)
+THEN Google should authenticate the user
+AND Google should display permission request for the application
+
+GIVEN Google displays the permission request
+WHEN the user clicks "Allow" or "Continue" to grant permissions
+THEN Google should redirect back to the e-commerce website with an authorization code
+
+GIVEN the system receives the Google authorization code
+WHEN the system exchanges the code for an access token
+AND the system retrieves user profile information from Google (name, email)
+THEN the system should check if a user account exists with the Google ID
+
+GIVEN this is the user's first time logging in with Google (no existing account)
+WHEN the system does not find an existing account
+THEN the system should create a new user account
+AND the system should link the Google ID to the new account
+AND the system should populate user profile with Google information (name, email)
+AND the system should mark the email as verified (since Google email is verified)
+AND the system should create a user session
+AND the user should be redirected to the homepage or dashboard
+AND the user should see their name displayed (e.g., "Welcome, Jane")
+
+GIVEN the user has previously logged in with Google (existing account)
+WHEN the system finds an existing account linked to the Google ID
+THEN the system should authenticate the user
+AND the system should create a user session
+AND the user should be redirected to the homepage or dashboard
+AND the user should see their name displayed
+
+Expected Result:
+- Google login button is visible on login page
+- User is redirected to Google for authentication
+- Google authenticates user credentials
+- User grants permissions to the application
+- System receives user information from Google
+- New account is created on first login or existing account is used
+- User is logged in successfully
+- User session is established
+- User can access personalized features
+
+Validation Points:
+- Google login option is available and functional
+- Redirect to Google OAuth page works correctly
+- Google authentication is successful (including 2FA if enabled)
+- Authorization code is received from Google
+- Access token is obtained successfully
+- User profile data is retrieved from Google (name, email)
+- New account creation works for first-time Google users
+- Google ID is properly linked to user account
+- Email from Google is marked as verified
+- User profile is populated with Google information
+- Existing account login works for returning Google users
+- User session is created and maintained
+- User is redirected to appropriate page after login
+- User can access all features available to registered users

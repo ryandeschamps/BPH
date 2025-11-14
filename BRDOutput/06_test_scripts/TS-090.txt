@@ -1,0 +1,43 @@
+Test Script: TS-090 - Delete Email Template
+
+Test Scenario: As an admin user, I want to remove outdated email templates, so that I can keep the email system organized.
+
+Prerequisites:
+- Admin is logged in
+- Email templates exist
+- Delete functionality enabled
+
+Test Data:
+- Template to Delete: Old Summer Sale
+
+Test Steps:
+
+GIVEN the admin is viewing email templates
+WHEN the admin views existing templates
+THEN each template should have a "Delete" button
+
+GIVEN the admin wants to delete a template
+WHEN the admin clicks "Delete" for "Old Summer Sale"
+THEN a confirmation dialog should appear
+
+GIVEN the admin confirms deletion
+WHEN the admin clicks "Confirm"
+THEN the template should be deleted
+AND success message displayed
+
+GIVEN the template is deleted
+WHEN the admin views templates list
+THEN "Old Summer Sale" should not appear
+
+Expected Result:
+- Templates can be deleted
+- Confirmation required
+- Template removed successfully
+- Success message displayed
+
+Validation Points:
+- Delete button accessible
+- Confirmation appears
+- Template deleted from database
+- Success message displays
+- Template not in list

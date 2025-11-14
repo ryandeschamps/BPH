@@ -1,0 +1,44 @@
+Test Script: TS-082 - Delete Role
+
+Test Scenario: As an admin user, I want to remove roles that are no longer needed, so that I can keep the permission system organized.
+
+Prerequisites:
+- Admin is logged in with super admin privileges
+- Deletable roles exist
+- Role deletion functionality is enabled
+
+Test Data:
+- Role to Delete: Content Manager (not assigned to any users)
+
+Test Steps:
+
+GIVEN the admin is viewing the roles list
+WHEN the admin views existing roles
+THEN each role should have a "Delete" button
+
+GIVEN the admin wants to delete a role
+WHEN the admin clicks "Delete" for "Content Manager"
+THEN a confirmation dialog should appear
+
+GIVEN the role is not assigned to users
+WHEN the admin confirms deletion
+THEN the role should be deleted
+AND success message displayed
+
+GIVEN the role is assigned to users
+WHEN the admin tries to delete
+THEN a warning should appear
+AND prevent deletion or require reassignment
+
+Expected Result:
+- Roles can be deleted
+- Confirmation required
+- Assigned roles handled appropriately
+- Success message displayed
+
+Validation Points:
+- Delete button accessible
+- Confirmation dialog appears
+- Role deleted from database
+- Success message displays
+- Assigned role protection works

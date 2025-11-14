@@ -1,0 +1,121 @@
+Test Script: TS-041 - Receive Delivery Confirmation Email
+
+Test Scenario: As a registered buyer, I want to receive email notification when my order is delivered, so that I can confirm receipt of my purchase.
+
+Prerequisites:
+- User has placed an order that has been shipped
+- Order has been delivered successfully
+- Admin has updated order status to "Delivered"
+- Email service is operational
+
+Test Data:
+- Order Number: ORD-2025-001234
+- User Email: john.doe@example.com
+- Delivered Date: February 2, 2025
+- Delivery Time: 2:30 PM
+- Delivered Location: Front Door
+- Items: Blue T-Shirt (Qty 2), Black Jeans (Qty 1)
+
+Test Steps:
+
+GIVEN an order has been shipped
+WHEN the admin updates the order status from "Shipped" to "Delivered"
+OR the carrier confirms delivery
+THEN the system should trigger a delivery confirmation email
+
+GIVEN the delivery confirmation email is triggered
+WHEN the email is generated
+THEN the email should be sent to the user's registered email "john.doe@example.com"
+
+GIVEN the email is sent
+WHEN the user checks their email inbox
+THEN the user should receive an email with subject containing "Order Delivered" or "Your order has been delivered"
+AND the email should be from the e-commerce website's official email address
+
+GIVEN the user opens the delivery confirmation email
+WHEN the user reads the email content
+THEN the email should contain the following information:
+  - Order number (ORD-2025-001234)
+  - Delivery date (February 2, 2025)
+  - Delivery time (2:30 PM)
+  - Delivery location (Front Door)
+  - Shipping address where delivered
+  - List of delivered items
+
+GIVEN the email lists delivered items
+WHEN the user views the item details
+THEN each delivered item should be listed:
+  - Product name
+  - Quantity
+  - Brief product information
+
+GIVEN the email confirms delivery
+WHEN the user reads the delivery information
+THEN the email should clearly state the order has been successfully delivered
+AND may include confirmation that signature was obtained (if applicable)
+
+GIVEN the email provides next steps
+WHEN the user reads the email
+THEN the email should include:
+  - Thank you message for the purchase
+  - Reminder to inspect items upon receipt
+  - Instructions for returns/exchanges (if applicable)
+  - Request to rate and review purchased products
+  - Customer support contact information
+
+GIVEN the email includes review request
+WHEN the user wants to review products
+THEN a "Rate Your Purchase" or "Write a Review" link may be included
+AND clicking the link should navigate to the review page
+
+GIVEN the email contains order details link
+WHEN the user clicks "View Order Details" link
+THEN the link should navigate to the order details page
+AND the order should show "Delivered" status
+AND the delivery date should be displayed
+
+GIVEN the user has concerns about the delivery
+WHEN customer support information is provided
+THEN the email should include:
+  - Support email address
+  - Support phone number
+  - Link to contact form
+  - Instructions for reporting issues
+
+GIVEN the user wants to verify the delivery
+WHEN the user checks the order on the website
+THEN the order status should be updated to "Delivered"
+AND the delivery date should be visible in order details
+
+Expected Result:
+- Delivery confirmation email sent when order marked as delivered
+- Email sent to user's registered email address
+- Email received shortly after delivery
+- Email subject clearly indicates order delivery
+- Email contains order number and delivery information
+- Delivery date, time, and location included
+- Delivered items are listed
+- Thank you message and next steps provided
+- Links to rate/review products included
+- Order details link is functional
+- Customer support information provided
+- Email is professional and well-formatted
+
+Validation Points:
+- Email triggered when order status changes to "Delivered"
+- Email sent to correct email address
+- Email subject line is appropriate
+- Email sender address is correct
+- Order number in email is accurate
+- Delivery date and time are correct
+- Delivery location is mentioned
+- Shipping address is displayed
+- All delivered items are listed correctly
+- Items match the order contents
+- Review/rating link is functional
+- Order details link works
+- Customer support information is complete
+- Email properly formatted (HTML/text)
+- Email delivery is successful
+- Email transaction logged in system
+- Order status on website reflects delivery

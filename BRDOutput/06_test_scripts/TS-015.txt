@@ -1,0 +1,99 @@
+Test Script: TS-015 - View Product Ratings and Reviews
+
+Test Scenario: As a visitor or buyer, I want to read ratings and reviews from other customers, so that I can understand product quality and customer satisfaction.
+
+Prerequisites:
+- Product has approved ratings and reviews from customers
+- Ratings and reviews are displayed on product detail page
+- At least one product has multiple reviews for testing
+
+Test Data:
+- Product: Women's Summer Dress
+- Total Reviews: 15
+- Average Rating: 4.3/5
+- Sample Reviews: Mix of ratings from 5 stars to 3 stars
+
+Test Steps:
+
+GIVEN the user is on a product detail page
+WHEN the user scrolls through the page
+THEN a "Ratings and Reviews" section should be visible
+
+GIVEN the ratings and reviews section is displayed
+WHEN the user views the section
+THEN the average product rating should be prominently displayed (e.g., 4.3 out of 5)
+AND the rating should be shown as stars (e.g., ★★★★☆)
+AND the total number of reviews should be displayed (e.g., "Based on 15 reviews")
+
+GIVEN the average rating is displayed
+WHEN the user views the rating breakdown
+THEN a rating distribution should be shown (optional feature):
+  - 5 stars: X reviews
+  - 4 stars: X reviews
+  - 3 stars: X reviews
+  - 2 stars: X reviews
+  - 1 star: X reviews
+
+GIVEN individual reviews are displayed
+WHEN the user views the reviews list
+THEN each review should contain:
+  - Reviewer name or username
+  - Rating given by reviewer (star rating)
+  - Review date
+  - Review text/comments
+  - Optional: Helpful votes count
+
+GIVEN multiple reviews exist
+WHEN the user views the reviews
+THEN reviews should be displayed in a logical order (e.g., most recent first or most helpful first)
+AND pagination or "Load More" should be available if there are many reviews
+
+GIVEN the user wants to read a specific type of review
+WHEN review filtering options are available
+THEN the user should be able to filter reviews by rating (e.g., "Show only 5-star reviews")
+OR sort reviews (e.g., "Most Recent", "Highest Rating", "Lowest Rating")
+
+GIVEN a product has no reviews yet
+WHEN the user views the ratings section
+THEN the system should display "No reviews yet" or "Be the first to review this product"
+AND the system should show 0 stars or "Not rated yet"
+
+GIVEN the user is viewing reviews
+WHEN the user reads helpful reviews
+THEN the user may see a "Was this review helpful?" option with Yes/No buttons (optional feature)
+
+GIVEN the user is not logged in (visitor)
+WHEN the user views ratings and reviews
+THEN all approved reviews should be visible without requiring login
+
+GIVEN only approved reviews should be displayed
+WHEN the user views the reviews
+THEN only reviews approved by admin should be visible
+AND pending or rejected reviews should not be shown
+
+Expected Result:
+- Ratings and reviews section is clearly visible
+- Average rating is displayed with star representation
+- Total number of reviews is shown
+- Individual reviews display reviewer name, rating, date, and text
+- Reviews are organized in logical order
+- Pagination or load more works for multiple reviews
+- Products without reviews show appropriate message
+- Only approved reviews are displayed
+- Visitors can view reviews without login
+
+Validation Points:
+- Average rating is calculated correctly
+- Star rating display is accurate
+- Total review count is correct
+- Individual reviews contain all required information
+- Reviewer names are displayed (or anonymous if configured)
+- Review dates are formatted correctly
+- Only approved reviews are visible to users
+- Pending/rejected reviews are hidden
+- Reviews are sorted/ordered appropriately
+- Pagination works correctly if many reviews exist
+- "No reviews" message displays for products without reviews
+- Visitors can access reviews without login
+- Review text is complete and formatted properly
+- Rating distribution (if shown) is accurate

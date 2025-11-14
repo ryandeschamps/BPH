@@ -1,0 +1,40 @@
+Test Script: TS-087 - Edit Terms and Conditions Page
+
+Test Scenario: As an admin user, I want to update the Terms and Conditions content, so that I can define usage rules and legal agreements.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- CMS management accessible
+- Terms and Conditions page exists
+
+Test Data:
+- Updated Section: Return Policy
+- New Content: "Items can be returned within 30 days of purchase..."
+
+Test Steps:
+
+GIVEN the admin is viewing CMS pages
+WHEN the admin clicks "Edit" for "Terms and Conditions"
+THEN the Terms editor should open
+
+GIVEN the editor is displayed
+WHEN the admin updates terms content
+AND clicks "Save Changes"
+THEN the updates should be saved
+AND success message displayed
+
+GIVEN the changes are saved
+WHEN customers view Terms and Conditions
+THEN updated terms should be displayed
+
+Expected Result:
+- Terms page can be edited
+- Legal content updates
+- Changes save successfully
+- Website shows updated terms
+
+Validation Points:
+- Edit page accessible
+- Content editor functional
+- Save works correctly
+- Website reflects changes

@@ -1,0 +1,115 @@
+Test Script: TS-058 - Add New Product Category
+
+Test Scenario: As an admin user, I want to create new product categories, so that I can organize products effectively.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Product catalog management section is accessible
+- Category management functionality is enabled
+
+Test Data:
+- Category Name: Winter Collection
+- Category Description: Products for winter season
+- Category Status: Active
+- Display Order: 5
+
+Test Steps:
+
+GIVEN the admin is logged in to the admin panel
+WHEN the admin navigates to "Products" or "Catalog" section
+THEN a "Categories" or "Product Categories" option should be visible
+
+GIVEN the admin clicks on "Categories"
+WHEN the categories page loads
+THEN a list of existing categories should be displayed
+AND an "Add New Category" or "Create Category" button should be available
+
+GIVEN the admin clicks "Add New Category"
+WHEN the category creation form opens
+THEN the following fields should be available:
+  - Category Name (text input)
+  - Category Description (textarea)
+  - Status (Active/Inactive dropdown or toggle)
+  - Display Order (numeric input, optional)
+  - Parent Category (dropdown, optional - for hierarchical categories)
+
+GIVEN the admin wants to create a new category
+WHEN the admin enters category information:
+  - Category Name: "Winter Collection"
+  - Description: "Products for winter season"
+  - Status: "Active"
+  - Display Order: "5"
+AND clicks "Save" or "Create Category" button
+THEN the system should validate all required fields
+
+GIVEN the validation passes
+WHEN the category is saved
+THEN the new category should be created in the database
+AND a success message should display "Category created successfully"
+AND the admin should be redirected to the categories list
+
+GIVEN the category is created
+WHEN the admin views the categories list
+THEN "Winter Collection" should be visible in the list
+AND the status should show "Active"
+AND the category should be available for product assignment
+
+GIVEN the admin leaves required fields empty
+WHEN the admin tries to save without entering category name
+THEN a validation error should be displayed
+AND the message should indicate "Category name is required"
+
+GIVEN a category with the same name exists
+WHEN the admin tries to create a duplicate category name
+THEN a validation error should be displayed
+AND the message should indicate "A category with this name already exists"
+
+GIVEN the admin sets status to "Inactive"
+WHEN the admin creates a category with inactive status
+THEN the category should be created
+BUT should not be visible to customers on the website
+
+GIVEN the display order is specified
+WHEN the admin enters display order "5"
+THEN the category should be positioned according to the order
+AND categories should be sorted by display order on the website
+
+GIVEN parent category option is available (hierarchical)
+WHEN the admin selects a parent category
+THEN the new category should be created as a sub-category
+AND should appear under the parent in the hierarchy
+
+Expected Result:
+- Admin can access category management
+- Add New Category form is accessible
+- Admin can enter category details
+- Category name and description can be entered
+- Status can be set to Active or Inactive
+- Category is created successfully
+- Success message is displayed
+- New category appears in categories list
+- Category is available for product assignment
+- Validation enforces required fields
+- Duplicate category names are prevented
+
+Validation Points:
+- Categories option is accessible
+- Add New Category button is functional
+- Category creation form displays correctly
+- All required fields are present
+- Category name field accepts input
+- Description field accepts input
+- Status dropdown/toggle is functional
+- Display order field accepts numeric input
+- Save button is functional
+- Required field validation works
+- Category name uniqueness check works
+- Database is updated with new category
+- Success message displays
+- New category visible in list
+- Category status is correct
+- Active categories visible to customers
+- Inactive categories hidden from customers
+- Display order affects category positioning
+- Parent category assignment works (if hierarchical)
+- Category ID is generated

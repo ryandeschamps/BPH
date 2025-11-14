@@ -1,0 +1,113 @@
+Test Script: TS-046 - Admin Login to Admin Panel
+
+Test Scenario: As an admin user, I want to login to the admin panel, so that I can manage the e-commerce platform.
+
+Prerequisites:
+- Admin panel is accessible
+- Admin user account exists
+- Admin login page is functional
+- Proper authentication system is in place
+
+Test Data:
+- Admin Username: admin@example.com
+- Admin Password: AdminPass@123
+- Admin Role: Super Admin
+
+Test Steps:
+
+GIVEN the admin wants to access the admin panel
+WHEN the admin navigates to the admin panel URL (e.g., /admin or /admin-panel)
+THEN the admin login page should be displayed
+
+GIVEN the admin login page is displayed
+WHEN the admin views the page
+THEN the following fields should be available:
+  - Username or Email (text input)
+  - Password (password input)
+  - Login button
+AND the page should be clearly branded as "Admin Panel" or "Admin Login"
+
+GIVEN the admin wants to login
+WHEN the admin enters valid credentials:
+  - Username: "admin@example.com"
+  - Password: "AdminPass@123"
+AND clicks the "Login" button
+THEN the system should validate the credentials
+
+GIVEN the credentials are valid
+WHEN the authentication is processed
+THEN the system should verify the user has admin role
+AND create an admin session
+AND redirect to the admin dashboard
+
+GIVEN the admin is logged in
+WHEN the admin dashboard loads
+THEN the admin should see:
+  - Admin dashboard with navigation menu
+  - Key statistics and metrics
+  - Admin user name displayed
+  - Logout option
+
+GIVEN the admin enters incorrect password
+WHEN the admin enters wrong password
+AND clicks login
+THEN an error message should be displayed
+AND the message should indicate "Invalid username or password"
+AND the admin should not be logged in
+
+GIVEN the admin enters non-existent username
+WHEN the admin enters a username that doesn't exist
+AND clicks login
+THEN an error message should be displayed
+AND the message should indicate "Invalid username or password"
+
+GIVEN the admin leaves fields empty
+WHEN the admin tries to login without entering username or password
+THEN validation errors should be displayed
+AND the messages should indicate which fields are required
+
+GIVEN a regular user tries to access admin panel
+WHEN a buyer/customer user tries to login with their credentials
+THEN the login should fail
+OR the user should be redirected to customer login
+AND an error message should indicate "Access denied. Admin access only."
+
+GIVEN the admin is already logged in
+WHEN the admin navigates to the admin login page
+THEN the admin should be automatically redirected to the admin dashboard
+AND should not see the login form again
+
+GIVEN the admin session expires
+WHEN the admin is inactive for extended period
+THEN the session should expire
+AND the admin should be logged out
+AND redirected to login page when trying to access admin pages
+
+Expected Result:
+- Admin login page is accessible via admin URL
+- Admin can enter username and password
+- Valid admin credentials allow login
+- Admin session is created
+- Admin is redirected to admin dashboard
+- Invalid credentials show error message
+- Non-admin users cannot access admin panel
+- Required field validation works
+- Already logged-in admins skip login page
+- Session expiration works correctly
+
+Validation Points:
+- Admin panel URL is accessible
+- Admin login page displays correctly
+- Username and password fields are functional
+- Login button is functional
+- Credentials validation works
+- Admin role verification is performed
+- Non-admin users are blocked
+- Admin session is created upon successful login
+- Admin dashboard loads after login
+- Error messages display for invalid credentials
+- Required field validation works
+- Already authenticated admins redirected to dashboard
+- Session management works correctly
+- Logout functionality is available
+- Admin panel is segregated from customer-facing site

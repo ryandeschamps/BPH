@@ -1,0 +1,91 @@
+Test Script: TS-010 - Sort Product Search Results
+
+Test Scenario: As a visitor or buyer, I want to sort product search results by various criteria, so that I can find products that best match my needs.
+
+Prerequisites:
+- Product catalog contains multiple products with varying prices and ratings
+- User is on a product listing or search results page
+- Website sorting functionality is enabled
+
+Test Data:
+- Category: Men's T-Shirts
+- Products: At least 10 products with different prices and ratings
+- Sort Options: Price (Low to High), Price (High to Low), Rating, Newest First
+
+Test Steps:
+
+GIVEN the user is viewing a product listing page (category, search results, or all products)
+WHEN the user looks for sorting options
+THEN the user should see a "Sort By" dropdown or sorting controls
+
+GIVEN the user sees the sorting options
+WHEN the user clicks on the "Sort By" dropdown
+THEN the system should display available sorting options such as:
+  - Price: Low to High
+  - Price: High to Low
+  - Newest First
+  - Rating: High to Low
+  - Featured/Recommended
+
+GIVEN the user wants to sort by price (low to high)
+WHEN the user selects "Price: Low to High" from the dropdown
+THEN the system should reorder the products
+AND products should be displayed with lowest priced items first
+AND products should be displayed with highest priced items last
+
+GIVEN the user wants to sort by price (high to low)
+WHEN the user selects "Price: High to Low" from the dropdown
+THEN the system should reorder the products
+AND products should be displayed with highest priced items first
+AND products should be displayed with lowest priced items last
+
+GIVEN the user wants to sort by rating
+WHEN the user selects "Rating: High to Low" from the dropdown
+THEN the system should reorder the products
+AND products with highest ratings should appear first
+AND products with lowest or no ratings should appear last
+
+GIVEN the user wants to see newest products
+WHEN the user selects "Newest First" from the dropdown
+THEN the system should reorder the products
+AND most recently added products should appear first
+AND older products should appear later
+
+GIVEN the user has applied filters
+WHEN the user applies a sort option
+THEN the sorting should apply only to the filtered results
+AND both filters and sorting should work together
+
+GIVEN the user sorts products and navigates to next page
+WHEN the user clicks on pagination controls (next page)
+THEN the sort order should be maintained across pages
+AND the selected sort option should remain active
+
+GIVEN the user has sorted the products
+WHEN the user wants to return to default sorting
+THEN the user should be able to select a default option (e.g., "Featured" or "Recommended")
+OR the user should be able to clear the sorting
+
+Expected Result:
+- Sort options are clearly visible and accessible
+- User can sort by multiple criteria (price, rating, date)
+- Products are correctly reordered based on selected sort option
+- Sort order is maintained during pagination
+- Sorting works in combination with filters
+- Sort selection is clearly indicated
+- Sorting works without requiring login
+- Performance is acceptable when sorting large product sets
+
+Validation Points:
+- Sort dropdown is visible on product listing pages
+- All sort options are functional
+- Price sorting (low to high) correctly orders products by ascending price
+- Price sorting (high to low) correctly orders products by descending price
+- Rating sorting correctly orders products by rating value
+- Date sorting shows newest products first
+- Sort order persists across pagination
+- Sorting works with filtered results
+- Selected sort option is visually indicated
+- Sorting works for both visitors and logged-in users
+- Product count remains accurate after sorting
+- Page layout remains consistent after sorting

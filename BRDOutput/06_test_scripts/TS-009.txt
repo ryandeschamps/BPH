@@ -1,0 +1,94 @@
+Test Script: TS-009 - Filter Product Search Results
+
+Test Scenario: As a visitor or buyer, I want to apply filters to product search results, so that I can narrow down products based on my preferences.
+
+Prerequisites:
+- Product catalog contains multiple products with various attributes
+- Products have different sizes, colors, price ranges, and brands
+- User is on a product listing or search results page
+- Website filtering functionality is enabled
+
+Test Data:
+- Search Term: "T-Shirt"
+- Filter Criteria: Price range $20-$50, Size: Medium, Color: Blue
+- Expected Results: Products matching all filter criteria
+
+Test Steps:
+
+GIVEN the user has searched for products or is viewing a category
+WHEN the user is on the product listing page
+THEN the user should see filter options displayed on the page (typically in a sidebar or top section)
+
+GIVEN the user sees the filter options
+WHEN the user views the available filters
+THEN the filters should include options such as:
+  - Price range (min-max or predefined ranges)
+  - Size (S, M, L, XL, etc.)
+  - Color (various colors)
+  - Brand (if applicable)
+  - Rating (if applicable)
+
+GIVEN the user wants to filter by price
+WHEN the user selects a price range (e.g., $20 - $50)
+THEN the system should update the product listing
+AND only products within the selected price range should be displayed
+AND the total number of matching products should be updated
+
+GIVEN the user wants to filter by size
+WHEN the user selects a size (e.g., "Medium")
+THEN the system should apply the size filter
+AND only products available in Medium size should be displayed
+AND the filter should work in combination with previously selected filters
+
+GIVEN the user wants to filter by color
+WHEN the user selects a color (e.g., "Blue")
+THEN the system should apply the color filter
+AND only products available in Blue color should be displayed
+AND the filter should work cumulatively with other selected filters
+
+GIVEN the user has applied multiple filters
+WHEN all filters are applied (Price: $20-$50, Size: Medium, Color: Blue)
+THEN the system should display only products matching ALL filter criteria
+AND the product count should reflect the filtered results
+AND the applied filters should be clearly visible (e.g., as tags or highlighted options)
+
+GIVEN the user has applied filters
+WHEN the user wants to remove a specific filter
+THEN the user should be able to click on a remove/close icon for that filter
+AND the system should update results to exclude that filter
+AND remaining filters should still be applied
+
+GIVEN the user has multiple filters applied
+WHEN the user wants to clear all filters
+THEN the user should see a "Clear All Filters" or "Reset" option
+AND clicking it should remove all applied filters
+AND the product listing should show all products again
+
+GIVEN no products match the filter criteria
+WHEN the user applies filters that result in zero products
+THEN the system should display a message "No products found matching your filters"
+AND the system should suggest removing some filters
+
+Expected Result:
+- Filter options are clearly visible and accessible
+- User can apply single or multiple filters
+- Product listing updates dynamically when filters are applied
+- Multiple filters work cumulatively (AND logic)
+- Applied filters are clearly indicated
+- User can remove individual filters or clear all
+- Product count updates to reflect filtered results
+- Appropriate message shown when no products match filters
+- Filtering works without requiring login
+
+Validation Points:
+- All filter categories are functional
+- Filter options reflect available product attributes
+- Product listing updates correctly when filters are applied
+- Multiple filters work together (cumulative filtering)
+- Filter removal works correctly
+- Clear all filters functionality works
+- Product count is accurate
+- Filtered results match the selected criteria
+- Filter state is maintained when navigating between pages
+- Performance is acceptable when applying filters
+- Empty results show appropriate message

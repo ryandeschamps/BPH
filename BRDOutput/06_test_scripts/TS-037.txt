@@ -1,0 +1,107 @@
+Test Script: TS-037 - View Order History
+
+Test Scenario: As a registered buyer, I want to view a list of all my past orders, so that I can track my purchase history.
+
+Prerequisites:
+- User has a registered account
+- User is logged in
+- User has placed at least 3-5 orders previously
+- Orders are in various statuses (delivered, shipped, in process)
+
+Test Data:
+- Order 1: ORD-2025-001 - Delivered - $150.00 - Jan 15, 2025
+- Order 2: ORD-2025-002 - Shipped - $89.99 - Jan 20, 2025
+- Order 3: ORD-2025-003 - In Process - $245.50 - Jan 25, 2025
+- Order 4: ORD-2025-004 - Confirmed - $120.00 - Jan 28, 2025
+
+Test Steps:
+
+GIVEN the user is logged in
+WHEN the user navigates to "My Account"
+THEN the user should see a "My Orders" or "Order History" option
+
+GIVEN the user clicks on "My Orders"
+WHEN the order history page loads
+THEN a list of all user's past orders should be displayed
+
+GIVEN the order list is displayed
+WHEN the user views the orders
+THEN orders should be displayed in reverse chronological order (newest first)
+
+GIVEN multiple orders are displayed
+WHEN the user views each order in the list
+THEN each order should show:
+  - Order number
+  - Order date
+  - Order status (Delivered, Shipped, In Process, Confirmed, etc.)
+  - Total amount paid
+  - Number of items or brief item description
+  - "View Details" button or link
+
+GIVEN the orders are listed
+WHEN the user views the order list
+THEN Order 1 should display: "ORD-2025-001 | Jan 15, 2025 | Delivered | $150.00"
+AND Order 2 should display: "ORD-2025-002 | Jan 20, 2025 | Shipped | $89.99"
+AND Order 3 should display: "ORD-2025-003 | Jan 25, 2025 | In Process | $245.50"
+AND Order 4 should display: "ORD-2025-004 | Jan 28, 2025 | Confirmed | $120.00"
+
+GIVEN each order has a status
+WHEN the user views the order statuses
+THEN the status should be clearly visible
+AND may be color-coded (e.g., green for Delivered, blue for Shipped)
+
+GIVEN the user wants to see more details about an order
+WHEN the user clicks "View Details" for Order 1
+THEN the user should navigate to the detailed order view page
+AND see complete information about that specific order
+
+GIVEN the user has many orders
+WHEN more than 10-20 orders exist
+THEN pagination should be available
+AND the user should be able to navigate through pages of orders
+
+GIVEN the user wants to filter orders
+WHEN filter options are available (optional feature)
+THEN the user may be able to filter by:
+  - Order status
+  - Date range
+  - Order amount
+
+GIVEN the user has no orders
+WHEN a user with no purchase history accesses the orders page
+THEN the system should display "You have no orders yet"
+AND a "Continue Shopping" button should be available
+
+GIVEN the user views order history
+WHEN the page displays
+THEN only orders belonging to the logged-in user should be visible
+AND other users' orders should not be accessible
+
+Expected Result:
+- Order history page is accessible from My Account
+- All user's orders are listed
+- Orders displayed in reverse chronological order
+- Each order shows key information (number, date, status, total)
+- Order statuses are clearly indicated
+- View Details link navigates to order details
+- Pagination works for large order lists
+- Empty state shown for users with no orders
+- Only user-specific orders are displayed
+- Order list is accurate and up-to-date
+
+Validation Points:
+- My Orders page is accessible
+- All user's orders are retrieved from database
+- Orders displayed in correct order (newest first)
+- Order number is displayed correctly
+- Order date is formatted properly
+- Order status is accurate
+- Total amount is correct
+- View Details link is functional
+- Pagination controls work (if applicable)
+- Filter options work (if implemented)
+- Empty state displays for no orders
+- User can only see their own orders
+- Order data is secure and user-specific
+- Page loads within acceptable time
+- All prices displayed in USD format

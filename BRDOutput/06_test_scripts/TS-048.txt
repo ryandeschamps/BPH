@@ -1,0 +1,130 @@
+Test Script: TS-048 - View Admin Dashboard Statistics
+
+Test Scenario: As an admin user, I want to see key business metrics on the dashboard, so that I can monitor platform performance at a glance.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Admin dashboard is accessible
+- Database contains sample data for statistics
+- Dashboard metrics are configured
+
+Test Data:
+- Active Registered Buyers: 150
+- Inactive Registered Buyers: 25
+- Total Products Uploaded: 500
+- Today's Revenue: $1,250.00
+- Current Month Revenue: $45,680.00
+
+Test Steps:
+
+GIVEN the admin is logged in to the admin panel
+WHEN the admin lands on or navigates to the dashboard
+THEN the admin dashboard page should be displayed
+
+GIVEN the admin dashboard is displayed
+WHEN the admin views the page
+THEN the page title should indicate "Dashboard" or "Admin Dashboard"
+AND a welcome message may be displayed (e.g., "Welcome, Admin")
+
+GIVEN the dashboard displays key metrics
+WHEN the admin views the statistics section
+THEN the following metrics should be visible:
+  - Total number of active registered buyers
+  - Total number of inactive registered buyers
+  - Total number of products uploaded
+  - Total revenue for today
+  - Total revenue for current month
+
+GIVEN the active buyers metric is displayed
+WHEN the admin views this statistic
+THEN it should show:
+  - Label: "Active Registered Buyers" or "Active Customers"
+  - Count: 150
+AND the count should represent buyers with active status
+
+GIVEN the inactive buyers metric is displayed
+WHEN the admin views this statistic
+THEN it should show:
+  - Label: "Inactive Registered Buyers" or "Inactive Customers"
+  - Count: 25
+AND the count should represent buyers with inactive status
+
+GIVEN the products metric is displayed
+WHEN the admin views this statistic
+THEN it should show:
+  - Label: "Total Products" or "Products Uploaded"
+  - Count: 500
+AND the count should represent all products in the catalog
+
+GIVEN the today's revenue metric is displayed
+WHEN the admin views this statistic
+THEN it should show:
+  - Label: "Today's Revenue" or "Revenue Today"
+  - Amount: $1,250.00
+AND the amount should be in USD format
+AND it should represent total order value for current day
+
+GIVEN the monthly revenue metric is displayed
+WHEN the admin views this statistic
+THEN it should show:
+  - Label: "This Month's Revenue" or "Monthly Revenue"
+  - Amount: $45,680.00
+AND the amount should be in USD format
+AND it should represent total order value for current calendar month
+
+GIVEN the statistics are displayed
+WHEN the admin views the dashboard
+THEN the metrics may be presented as:
+  - Cards or tiles with numbers
+  - Charts or graphs
+  - Tables with summaries
+AND the layout should be clear and easy to read
+
+GIVEN the dashboard statistics are calculated
+WHEN the page loads
+THEN all counts should be accurate based on database data
+AND revenue calculations should include only paid/confirmed orders
+AND statistics should reflect real-time or near-real-time data
+
+GIVEN the admin refreshes the dashboard
+WHEN the admin reloads or navigates back to the dashboard
+THEN the statistics should update to reflect current data
+AND any changes in orders or products should be reflected
+
+GIVEN additional dashboard features exist
+WHEN the admin views the dashboard
+THEN additional elements may include:
+  - Recent orders list
+  - Quick action buttons
+  - Navigation menu to other admin sections
+  - Notifications or alerts
+
+Expected Result:
+- Admin dashboard displays upon login
+- Key metrics are clearly visible
+- Active buyers count is accurate
+- Inactive buyers count is accurate
+- Products count is accurate
+- Today's revenue is calculated and displayed
+- Current month revenue is calculated and displayed
+- All amounts in USD currency format
+- Statistics are accurate and up-to-date
+- Dashboard layout is professional and user-friendly
+- Navigation to other admin sections is available
+
+Validation Points:
+- Dashboard page loads correctly
+- All required metrics are displayed
+- Active buyers count is accurate
+- Inactive buyers count is accurate
+- Product count includes all catalog products
+- Today's revenue calculation is correct
+- Monthly revenue calculation is correct
+- Revenue includes only paid orders
+- Statistics reflect current database state
+- USD format is used for all monetary values
+- Metrics update when data changes
+- Dashboard is responsive and loads quickly
+- Navigation menu is accessible
+- Admin can access other sections from dashboard
+- Real-time or near-real-time data is displayed

@@ -1,0 +1,40 @@
+Test Script: TS-086 - Edit Privacy Policy Page
+
+Test Scenario: As an admin user, I want to update the Privacy Policy content, so that I can comply with legal requirements and inform users.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- CMS management accessible
+- Privacy Policy page exists
+
+Test Data:
+- Updated Section: Data Collection Practices
+- New Content: "We collect personal information including name, email, and address..."
+
+Test Steps:
+
+GIVEN the admin is viewing CMS pages
+WHEN the admin clicks "Edit" for "Privacy Policy"
+THEN the Privacy Policy editor should open
+
+GIVEN the editor is displayed
+WHEN the admin updates privacy content
+AND clicks "Save Changes"
+THEN the updates should be saved
+AND success message displayed
+
+GIVEN the changes are saved
+WHEN customers view Privacy Policy
+THEN updated policy should be displayed
+
+Expected Result:
+- Privacy Policy can be edited
+- Legal content updates
+- Changes save successfully
+- Website shows updated policy
+
+Validation Points:
+- Edit page accessible
+- Content editor functional
+- Save works correctly
+- Website reflects changes

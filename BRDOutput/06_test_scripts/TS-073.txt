@@ -1,0 +1,167 @@
+Test Script: TS-073 - Generate Revenue Report
+
+Test Scenario: As an admin user, I want to create sales and revenue reports for various timeframes, so that I can analyze business performance.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Orders with paid status exist
+- Reports section is accessible
+- Orders have payment dates recorded
+
+Test Data:
+- Today's Revenue: $1,250.00 (5 orders)
+- This Week's Revenue: $6,800.00 (28 orders)
+- Date Range (Jan 1-31, 2025): $45,680.00 (187 orders)
+- Monthly (January 2025): $45,680.00
+- Yearly (2025): $145,230.00
+
+Test Steps:
+
+GIVEN the admin is logged in to the admin panel
+WHEN the admin navigates to reports section
+THEN a "Revenue Report" option should be available
+
+GIVEN the admin selects "Revenue Report"
+WHEN the report configuration page opens
+THEN the following options should be available:
+  - Report Type: Today, This Week, Date Range, By Month, By Year
+  - Start Date and End Date (for date range)
+  - Month selector (for monthly report)
+  - Year selector (for yearly report)
+  - Generate Report button
+
+GIVEN the admin wants today's revenue
+WHEN the admin selects "Today"
+AND clicks "Generate Report"
+THEN the report should display:
+  - Report title: "Revenue Report - Today"
+  - Date: Current date
+  - Total Revenue: $1,250.00
+  - Total Orders: 5
+  - Average Order Value: $250.00
+
+GIVEN the admin wants this week's revenue
+WHEN the admin selects "This Week"
+AND generates the report
+THEN the report should display:
+  - Report title: "Revenue Report - This Week"
+  - Week date range
+  - Total Revenue: $6,800.00
+  - Total Orders: 28
+  - Average Order Value: $242.86
+  - Day-by-day breakdown
+
+GIVEN the admin wants a date range report
+WHEN the admin selects "By Date Range"
+AND enters:
+  - Start Date: "January 1, 2025"
+  - End Date: "January 31, 2025"
+AND generates the report
+THEN the report should display:
+  - Report title: "Revenue Report"
+  - Date range: "January 1, 2025 - January 31, 2025"
+  - Total Revenue: $45,680.00
+  - Total Orders: 187
+  - Average Order Value: $244.28
+
+GIVEN the report shows order details
+WHEN the admin views the detailed breakdown
+THEN each order should show:
+  - Order number
+  - Order date
+  - Customer name
+  - Order total
+  - Payment status
+  - Payment method
+
+GIVEN the admin wants a monthly report
+WHEN the admin selects "By Month"
+AND selects "January 2025"
+AND generates the report
+THEN the report should show:
+  - Total Revenue for January: $45,680.00
+  - Total Orders: 187
+  - Day-by-day breakdown for the month
+
+GIVEN the admin wants a yearly report
+WHEN the admin selects "By Year"
+AND selects "2025"
+AND generates the report
+THEN the report should show:
+  - Total Revenue for 2025: $145,230.00
+  - Total Orders
+  - Month-by-month breakdown
+  - Comparison chart showing revenue by month
+
+GIVEN the report includes revenue breakdown
+WHEN the detailed view is displayed
+THEN the following should be shown:
+  - Subtotal of products
+  - Shipping charges collected
+  - Tax collected
+  - Total revenue
+
+GIVEN the report includes payment method breakdown
+WHEN the admin views payment statistics
+THEN revenue should be broken down by:
+  - Credit Card
+  - Debit Card
+  - Net Banking
+
+GIVEN the report includes visualizations
+WHEN the report is displayed
+THEN charts may be shown:
+  - Bar chart of daily/monthly revenue
+  - Line graph showing revenue trend
+  - Pie chart of payment methods
+
+GIVEN the admin applies filters
+WHEN filter options are available
+THEN the admin should be able to filter by:
+  - Payment status (Paid only, Refunded, etc.)
+  - Payment method
+  - Customer type
+AND the report should update accordingly
+
+Expected Result:
+- Revenue Report option is accessible
+- Multiple report timeframes available
+- Today's revenue report generates correctly
+- Weekly revenue report shows breakdown
+- Date range report is accurate
+- Monthly report displays correctly
+- Yearly report shows month-by-month data
+- Order details are included
+- Revenue breakdown is accurate
+- Payment method breakdown shown
+- Visualizations displayed (if implemented)
+- Filters work correctly
+- Export options available
+
+Validation Points:
+- Revenue Report option is accessible
+- Report type selector works
+- Today option generates correct data
+- This Week option works
+- Date range inputs are functional
+- Month selector works
+- Year selector works
+- Generate Report button is functional
+- Today's revenue calculation is accurate
+- Weekly revenue calculation is accurate
+- Date range revenue is correct
+- Monthly revenue is accurate
+- Yearly revenue is accurate
+- Order count is correct
+- Average order value calculated correctly
+- Only paid orders included in revenue
+- Refunded orders handled appropriately
+- Order details are complete
+- Revenue breakdown is accurate
+- Payment method breakdown is correct
+- Day-by-day breakdown accurate (weekly/monthly)
+- Month-by-month breakdown accurate (yearly)
+- Visualizations render correctly
+- Filters apply correctly
+- All amounts in USD format
+- Performance is acceptable

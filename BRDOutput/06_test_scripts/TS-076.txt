@@ -1,0 +1,139 @@
+Test Script: TS-076 - Create Sub-admin User
+
+Test Scenario: As an admin user, I want to add new sub-admin users, so that I can delegate administrative tasks.
+
+Prerequisites:
+- Admin is logged in with super admin privileges
+- User management section is accessible
+- Sub-admin creation functionality is enabled
+- Roles are defined in the system
+
+Test Data:
+- Username: subadmin@example.com
+- First Name: Sarah
+- Last Name: Johnson
+- Email: subadmin@example.com
+- Role: Order Manager
+- Status: Active
+
+Test Steps:
+
+GIVEN the admin is logged in to the admin panel
+WHEN the admin navigates to user management
+THEN a "Users" or "Admin Users" option should be visible
+
+GIVEN the admin clicks on "Admin Users"
+WHEN the user management page loads
+THEN a list of existing admin users should be displayed
+AND an "Add New User" or "Create Sub-admin" button should be available
+
+GIVEN the admin clicks "Add New User"
+WHEN the user creation form opens
+THEN the following fields should be available:
+  - First Name (text input)
+  - Last Name (text input)
+  - Email/Username (text input)
+  - Password (password input)
+  - Confirm Password (password input)
+  - Role (dropdown showing available roles)
+  - Status (Active/Inactive toggle or dropdown)
+
+GIVEN the admin wants to create a new sub-admin
+WHEN the admin enters user information:
+  - First Name: "Sarah"
+  - Last Name: "Johnson"
+  - Email: "subadmin@example.com"
+  - Password: "SecurePass@123"
+  - Confirm Password: "SecurePass@123"
+  - Role: "Order Manager"
+  - Status: "Active"
+AND clicks "Create User" or "Save" button
+THEN the system should validate all required fields
+
+GIVEN the validation passes
+WHEN the user is saved
+THEN the new sub-admin should be created in the database
+AND the password should be encrypted/hashed
+AND a success message should display "Sub-admin user created successfully"
+
+GIVEN the user is created
+WHEN the admin views the admin users list
+THEN "Sarah Johnson" should be visible
+AND the role should show "Order Manager"
+AND the status should show "Active"
+
+GIVEN the new sub-admin is created
+WHEN the sub-admin logs in with the credentials
+THEN the sub-admin should be able to access the admin panel
+AND should have permissions according to the "Order Manager" role
+
+GIVEN the admin leaves required fields empty
+WHEN the admin tries to save without filling first name or email
+THEN validation errors should be displayed
+AND the messages should indicate required fields
+
+GIVEN the passwords don't match
+WHEN the admin enters different values in password and confirm password
+THEN a validation error should be displayed
+AND the message should indicate "Passwords do not match"
+
+GIVEN the email already exists
+WHEN the admin tries to create a user with an existing email
+THEN a validation error should be displayed
+AND the message should indicate "This email is already in use"
+
+GIVEN the password doesn't meet requirements
+WHEN the admin enters a weak password
+THEN a validation error should be displayed
+AND requirements should be shown (minimum length, special characters, etc.)
+
+GIVEN a welcome email is sent
+WHEN the sub-admin is created
+THEN a welcome email may be sent to the new user
+AND the email should contain login credentials or setup link
+
+GIVEN role-based permissions are enforced
+WHEN the new sub-admin logs in
+THEN they should only see menu options and features allowed by their role
+AND restricted features should not be accessible
+
+Expected Result:
+- Admin can access user management
+- Add New User form is accessible
+- Admin can enter sub-admin details
+- Role can be assigned from available roles
+- User is created successfully
+- Success message is displayed
+- New user appears in admin users list
+- Sub-admin can login with credentials
+- Permissions are applied based on role
+- Validation enforces required fields
+- Password requirements enforced
+- Duplicate email prevented
+- Welcome email sent (if implemented)
+
+Validation Points:
+- Admin Users menu is accessible
+- Add New User button is functional
+- User creation form displays correctly
+- All required fields are present
+- First name field accepts input
+- Last name field accepts input
+- Email field accepts input
+- Password fields accept input
+- Role dropdown is functional
+- Status toggle/dropdown works
+- Required field validation works
+- Email format validation works
+- Password match validation works
+- Password strength validation works
+- Email uniqueness check works
+- Database is updated with new user
+- Password is encrypted before storage
+- Success message displays
+- New user visible in list
+- User details are accurate
+- Sub-admin can login successfully
+- Role-based permissions applied correctly
+- Welcome email sent (if implemented)
+- Email contains correct information

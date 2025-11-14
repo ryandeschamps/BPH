@@ -1,0 +1,89 @@
+Test Script: TS-012 - Navigate to Product Details from Listing
+
+Test Scenario: As a visitor or buyer, I want to click on a product to view its details, so that I can learn more about the product before purchasing.
+
+Prerequisites:
+- Product catalog contains products
+- Product listing page is accessible
+- Products have detail pages configured
+- Website navigation is functional
+
+Test Data:
+- Category: Men's Shirts
+- Product: Blue Cotton Casual Shirt
+- Product ID: PROD-12345
+
+Test Steps:
+
+GIVEN the user is on a product listing page
+WHEN the user views the products displayed
+THEN each product should have clickable elements (image and/or title)
+
+GIVEN the user sees a product of interest
+WHEN the user hovers over the product image or title
+THEN the cursor should change to indicate the element is clickable (pointer cursor)
+AND the product image or title may be highlighted or underlined
+
+GIVEN the user wants to view product details
+WHEN the user clicks on the product image
+THEN the system should navigate to the product detail page
+AND the correct product details should be displayed
+
+GIVEN the user is on the product listing page
+WHEN the user clicks on the product title instead of the image
+THEN the system should navigate to the same product detail page
+AND the same product details should be displayed
+
+GIVEN the user navigates to a product detail page
+WHEN the page loads
+THEN the URL should reflect the product (e.g., /product/blue-cotton-casual-shirt or /product/12345)
+AND the page should display comprehensive product information
+
+GIVEN the user is viewing product details
+WHEN the user wants to return to the listing
+THEN the user should be able to click the browser back button
+AND the user should return to the same position in the product listing
+OR the user should be able to click a breadcrumb link (e.g., "Men's Shirts")
+AND the user should return to the category listing
+
+GIVEN the user clicks on multiple products
+WHEN the user navigates back and forth between listing and details
+THEN each navigation should work correctly
+AND the correct product details should be shown each time
+AND no errors should occur
+
+GIVEN the user is not logged in (visitor)
+WHEN the user clicks on a product to view details
+THEN the navigation should work without requiring login
+AND the product detail page should be accessible
+
+GIVEN a product link is broken or product doesn't exist
+WHEN the user clicks on a non-existent product
+THEN the system should display an appropriate error message
+AND the system should not show a "page not found" error
+AND the user should be offered options to continue browsing
+
+Expected Result:
+- Product images are clickable and navigate to detail page
+- Product titles are clickable and navigate to detail page
+- Correct product detail page is displayed
+- Navigation works for both visitors and logged-in users
+- Back button returns user to listing page
+- Breadcrumb navigation is available
+- Multiple navigations work correctly
+- Broken links show user-friendly error messages
+- URL reflects the product being viewed
+
+Validation Points:
+- Product image click navigates to correct detail page
+- Product title click navigates to correct detail page
+- Both clicks lead to the same detail page for same product
+- Product ID in URL matches the selected product
+- Detail page loads completely with all information
+- Browser back button works correctly
+- Breadcrumb navigation works correctly
+- Visitor access works without login
+- Navigation is fast and responsive
+- No JavaScript errors occur during navigation
+- Deep linking to product pages works
+- Product detail page displays correct product information

@@ -1,0 +1,117 @@
+Test Script: TS-042 - Reorder from Order History
+
+Test Scenario: As a registered buyer, I want to easily reorder products from my past orders, so that I can quickly repurchase items I liked.
+
+Prerequisites:
+- User is logged in
+- User has completed at least one past order
+- Order history is accessible
+- Products from past order are still active and available
+- Reorder functionality is enabled
+
+Test Data:
+- Past Order Number: ORD-2025-001234
+- Past Order Date: January 15, 2025
+- Past Order Items:
+  - Blue T-Shirt, Size M (Qty 2)
+  - Black Jeans, Size 32 (Qty 1)
+- Order Status: Delivered
+
+Test Steps:
+
+GIVEN the user is logged in and viewing order history
+WHEN the user navigates to "My Orders"
+THEN a list of past orders should be displayed
+
+GIVEN the user views the order list
+WHEN the user looks at order details or actions
+THEN each delivered order should have a "Reorder" button or link
+
+GIVEN the user wants to reorder items
+WHEN the user clicks "Reorder" button for order ORD-2025-001234
+THEN the system should retrieve all items from that order
+
+GIVEN the system retrieves the order items
+WHEN the reorder is processed
+THEN the system should check if all items are still available and active
+
+GIVEN all items are available
+WHEN the reorder action continues
+THEN all items from the order should be added to the shopping cart:
+  - Blue T-Shirt, Size M (Qty 2)
+  - Black Jeans, Size 32 (Qty 1)
+AND the cart should be updated with these items
+
+GIVEN the items are added to cart
+WHEN the user views the shopping cart
+THEN all reordered items should be visible in the cart
+AND quantities should match the original order
+AND sizes/colors should match the original order
+AND current prices should be displayed (not historical prices)
+
+GIVEN the items are in cart
+WHEN the cart page is displayed
+THEN a confirmation message should show "Items from order ORD-2025-001234 have been added to your cart"
+AND the cart count should update to reflect added items
+
+GIVEN the user already has items in cart
+WHEN the user reorders from order history
+THEN the reordered items should be added to existing cart items
+AND existing cart items should be preserved
+AND the cart should contain both old and new items
+
+GIVEN some items are no longer available
+WHEN one or more items from the past order are deactivated or out of stock
+THEN the system should add only available items to cart
+AND display a message indicating which items could not be added
+AND the message should state "Some items from your order are no longer available"
+
+GIVEN the user reorders successfully
+WHEN items are added to cart
+THEN the user should be able to:
+  - Modify quantities before checkout
+  - Remove items if desired
+  - Proceed to checkout
+  - Continue shopping
+
+GIVEN the user wants to proceed with the reorder
+WHEN the user clicks "Proceed to Checkout"
+THEN the user should navigate to the checkout page
+AND be able to complete the new order
+
+GIVEN the user has reordered multiple times
+WHEN the user reorders from different past orders
+THEN each reorder should work independently
+AND items should be added to cart correctly each time
+
+Expected Result:
+- Reorder button is available for delivered orders
+- User can click reorder for any past order
+- System retrieves all items from selected order
+- Available items are added to shopping cart
+- Quantities and variations match original order
+- Current prices are used (not historical)
+- Confirmation message is displayed
+- Existing cart items are preserved
+- Unavailable items are handled gracefully
+- User can modify cart before checkout
+- User can proceed to checkout with reordered items
+
+Validation Points:
+- Reorder button is visible on order history
+- Button click triggers reorder process
+- System retrieves correct order items
+- All items from order are identified
+- Availability check is performed
+- Available items added to cart successfully
+- Quantities are correct
+- Size/color variations are correct
+- Current prices are displayed (not order prices)
+- Cart database is updated
+- Confirmation message displays
+- Existing cart items not removed
+- Unavailable items message shown when applicable
+- Cart count updates correctly
+- User can modify reordered items in cart
+- Checkout process works with reordered items
+- Multiple reorders can be processed

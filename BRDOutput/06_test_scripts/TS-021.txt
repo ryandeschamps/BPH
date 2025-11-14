@@ -1,0 +1,101 @@
+Test Script: TS-021 - Proceed to Checkout from Cart
+
+Test Scenario: As a registered buyer, I want to proceed to checkout with items in my cart, so that I can complete my purchase.
+
+Prerequisites:
+- User is logged in
+- User has items in shopping cart
+- All cart items are in stock and available
+- Checkout process is functional
+
+Test Data:
+- Cart Items: 2-3 products totaling $150.00
+- User Email: john.doe@example.com
+- User Status: Logged in and verified
+
+Test Steps:
+
+GIVEN the user is logged in and viewing the shopping cart
+WHEN the user views the cart page
+THEN a "Proceed to Checkout" or "Checkout" button should be prominently displayed
+
+GIVEN the cart contains valid items
+WHEN the user reviews the cart items and totals
+THEN the cart should display:
+  - All cart items with quantities and prices
+  - Subtotal amount
+  - Proceed to Checkout button
+
+GIVEN the user is ready to checkout
+WHEN the user clicks the "Proceed to Checkout" button
+THEN the system should validate that:
+  - User is logged in
+  - Cart is not empty
+  - All items are still available and in stock
+
+GIVEN the validation passes
+WHEN the system processes the checkout request
+THEN the system should navigate to the checkout page
+AND the user should remain logged in
+AND the cart items should be carried forward to checkout
+
+GIVEN the user is on the checkout page
+WHEN the page loads
+THEN the user should see:
+  - Billing address section
+  - Shipping address section
+  - Order summary showing cart items
+  - Payment method selection
+  - Place Order or Continue button
+
+GIVEN the user tries to checkout with empty cart
+WHEN the cart is empty and user clicks checkout
+THEN the system should prevent navigation to checkout
+AND display a message "Your cart is empty. Please add items to cart before checkout."
+
+GIVEN the user is not logged in
+WHEN a non-logged-in user tries to access checkout
+THEN the system should redirect to the login page
+AND display a message "Please login to continue with checkout"
+AND after login, the user should be redirected back to cart or checkout
+
+GIVEN an item becomes unavailable during checkout
+WHEN the user proceeds to checkout but an item is out of stock
+THEN the system should display an error message
+AND the message should indicate which item is unavailable
+AND the user should be returned to the cart to remove/update the item
+
+GIVEN the user navigates to checkout
+WHEN the checkout page loads
+THEN the system should maintain the user session
+AND preserve all cart items
+AND display accurate pricing information
+
+Expected Result:
+- Proceed to Checkout button is visible and accessible
+- Clicking checkout validates user login status
+- Logged-in users navigate to checkout page successfully
+- Cart items are carried forward to checkout
+- Empty cart prevents checkout with appropriate message
+- Non-logged-in users are prompted to login
+- Out-of-stock items are detected and prevent checkout
+- User session is maintained during navigation
+- Checkout page displays all necessary sections
+- Order summary shows correct cart items and pricing
+
+Validation Points:
+- Proceed to Checkout button is present on cart page
+- Button click triggers validation checks
+- User must be logged in to access checkout
+- Cart must not be empty to proceed
+- All cart items must be in stock
+- Navigation to checkout page works correctly
+- Cart data transfers to checkout accurately
+- Empty cart shows error message
+- Non-authenticated users redirected to login
+- Post-login redirect back to checkout works
+- Stock availability check prevents invalid checkout
+- Session is maintained throughout process
+- Checkout page loads with all required sections
+- Order summary matches cart contents
+- Pricing calculations are accurate

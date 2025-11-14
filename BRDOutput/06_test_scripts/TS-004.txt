@@ -1,0 +1,85 @@
+Test Script: TS-004 - Social Login with Facebook
+
+Test Scenario: As a visitor, I want to login using my Facebook account, so that I can quickly access the website without creating a new account.
+
+Prerequisites:
+- User has an active Facebook account
+- Facebook OAuth integration is configured
+- Website has Facebook login enabled
+- Internet connection is available
+
+Test Data:
+- Facebook Email: user@facebook.com
+- Facebook Password: (User's Facebook password)
+- Facebook User ID: 123456789
+- Facebook User Name: John Doe
+
+Test Steps:
+
+GIVEN the user is on the website homepage
+WHEN the user clicks on the "Login" button
+THEN the login page should be displayed
+
+GIVEN the user is on the login page
+WHEN the user views the login options
+THEN the user should see a "Login with Facebook" button or icon
+
+GIVEN the user sees the Facebook login option
+WHEN the user clicks on the "Login with Facebook" button
+THEN the system should redirect to Facebook's OAuth authorization page
+
+GIVEN the user is on Facebook's authorization page
+WHEN the user enters their Facebook credentials
+AND the user clicks "Continue" or "Login" on Facebook
+THEN Facebook should authenticate the user
+AND Facebook should display permission request for the application
+
+GIVEN Facebook displays the permission request
+WHEN the user clicks "Allow" or "Continue" to grant permissions
+THEN Facebook should redirect back to the e-commerce website with an authorization code
+
+GIVEN the system receives the Facebook authorization code
+WHEN the system exchanges the code for an access token
+AND the system retrieves user profile information from Facebook (name, email)
+THEN the system should check if a user account exists with the Facebook ID
+
+GIVEN this is the user's first time logging in with Facebook (no existing account)
+WHEN the system does not find an existing account
+THEN the system should create a new user account
+AND the system should link the Facebook ID to the new account
+AND the system should mark the email as verified (since Facebook email is verified)
+AND the system should create a user session
+AND the user should be redirected to the homepage or dashboard
+AND the user should see their name displayed (e.g., "Welcome, John")
+
+GIVEN the user has previously logged in with Facebook (existing account)
+WHEN the system finds an existing account linked to the Facebook ID
+THEN the system should authenticate the user
+AND the system should create a user session
+AND the user should be redirected to the homepage or dashboard
+AND the user should see their name displayed
+
+Expected Result:
+- Facebook login button is visible on login page
+- User is redirected to Facebook for authentication
+- Facebook authenticates user credentials
+- User grants permissions to the application
+- System receives user information from Facebook
+- New account is created on first login or existing account is used
+- User is logged in successfully
+- User session is established
+- User can access personalized features
+
+Validation Points:
+- Facebook login option is available and functional
+- Redirect to Facebook OAuth page works correctly
+- Facebook authentication is successful
+- Authorization code is received from Facebook
+- Access token is obtained successfully
+- User profile data is retrieved from Facebook (name, email)
+- New account creation works for first-time Facebook users
+- Facebook ID is properly linked to user account
+- Email from Facebook is marked as verified
+- Existing account login works for returning Facebook users
+- User session is created and maintained
+- User is redirected to appropriate page after login

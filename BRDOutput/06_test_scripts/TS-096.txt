@@ -1,0 +1,62 @@
+Test Script: TS-096 - Display User-friendly Error Messages
+
+Test Scenario: As a visitor or buyer, I want to see helpful error messages when something goes wrong, so that I can understand the issue and take appropriate action.
+
+Prerequisites:
+- System is deployed
+- Error handling implemented
+- Various error scenarios can be triggered
+
+Test Data:
+- Error Scenarios: Page not found, Form validation, Server error, Network error
+
+Test Steps:
+
+GIVEN the user navigates to non-existent page
+WHEN a 404 error occurs
+THEN a user-friendly error page should be displayed
+AND NOT show "Page not found" technical error
+AND provide options to return home or search
+
+GIVEN the user submits invalid form data
+WHEN validation fails
+THEN clear error messages should be displayed
+AND indicate which fields have errors
+AND explain what needs to be corrected
+
+GIVEN a server error occurs
+WHEN a 500 error happens
+THEN a friendly error message should be displayed
+AND NOT show technical stack traces
+AND suggest contacting support
+
+GIVEN the network connection fails
+WHEN a timeout occurs
+THEN a message should indicate connection issue
+AND suggest trying again
+
+GIVEN the product is out of stock
+WHEN user tries to add to cart
+THEN a clear message should indicate "Product currently out of stock"
+AND suggest alternatives or notify when available
+
+GIVEN payment fails
+WHEN payment processing errors
+THEN a clear message should explain the issue
+AND suggest next steps (verify card, try another payment method)
+
+Expected Result:
+- All errors show user-friendly messages
+- No technical jargon displayed
+- Helpful guidance provided
+- Users can recover from errors
+
+Validation Points:
+- 404 errors show custom page
+- Form validation errors clear
+- Server errors user-friendly
+- Network errors helpful
+- Stock errors informative
+- Payment errors actionable
+- No stack traces shown
+- Recovery options provided

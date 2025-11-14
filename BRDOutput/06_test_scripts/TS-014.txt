@@ -1,0 +1,90 @@
+Test Script: TS-014 - Check Shipping Availability by PIN Code
+
+Test Scenario: As a visitor or buyer, I want to check if a product can be shipped to my location, so that I can know if I can order the product before adding to cart.
+
+Prerequisites:
+- Product detail page is accessible
+- PIN code validation system is configured
+- Shipping zones are defined in the system
+- Product is available for shipping
+
+Test Data:
+- Valid US PIN Code: 90210 (Beverly Hills, CA)
+- Invalid US PIN Code: 00000
+- Non-US PIN Code: M5H 2N2 (Toronto, Canada)
+- Product: Men's Casual Shirt
+
+Test Steps:
+
+GIVEN the user is on a product detail page
+WHEN the user views the page
+THEN a "Check Delivery Availability" or "Check PIN Code" section should be visible
+
+GIVEN the PIN code check section is displayed
+WHEN the user views the input field
+THEN there should be a text input field for entering PIN code
+AND there should be a "Check" or "Verify" button next to the input field
+
+GIVEN the user wants to check shipping availability
+WHEN the user enters a valid US PIN code "90210" in the input field
+AND the user clicks the "Check" button
+THEN the system should validate the PIN code format
+AND the system should check if shipping is available to that location
+
+GIVEN the PIN code is valid and within US shipping zones
+WHEN the system completes the check
+THEN the system should display a success message
+AND the message should indicate "Delivery available to PIN code 90210"
+AND the estimated delivery time may be shown (e.g., "Delivery in 5-7 business days")
+
+GIVEN the user enters an invalid PIN code format
+WHEN the user enters "00000" or an incomplete PIN code
+AND the user clicks the "Check" button
+THEN the system should display an error message
+AND the message should indicate "Invalid PIN code format. Please enter a valid US ZIP code."
+
+GIVEN the user enters a non-US PIN code
+WHEN the user enters a Canadian postal code "M5H 2N2"
+AND the user clicks the "Check" button
+THEN the system should validate the PIN code
+AND the system should display a message "Delivery not available. We currently ship only within the United States."
+
+GIVEN the shipping is not available to a particular US location
+WHEN the user enters a US ZIP code where shipping is not available
+AND the user clicks the "Check" button
+THEN the system should display a message "Delivery not available to this location at the moment"
+
+GIVEN the user has checked one PIN code
+WHEN the user wants to check another PIN code
+THEN the user should be able to clear the previous result
+AND enter a new PIN code
+AND check availability again
+
+GIVEN the user is not logged in (visitor)
+WHEN the user checks PIN code availability
+THEN the feature should work without requiring login
+
+Expected Result:
+- PIN code check field is visible on product detail page
+- User can enter PIN code and check availability
+- System validates PIN code format
+- System correctly identifies US ZIP codes
+- Delivery availability message is displayed for valid US locations
+- Error message shown for invalid PIN code format
+- Appropriate message shown for non-US locations
+- Feature works without login requirement
+- Multiple PIN codes can be checked sequentially
+
+Validation Points:
+- PIN code input field is present and functional
+- Check button triggers validation
+- System validates US ZIP code format (5 digits or ZIP+4)
+- Valid US PIN codes return availability status
+- Invalid PIN codes show error message
+- Non-US PIN codes are rejected with appropriate message
+- Delivery availability is based on configured shipping zones
+- Estimated delivery time is shown (if available)
+- Feature accessible to both visitors and logged-in users
+- Results clear when new PIN code is entered
+- System adheres to "US only" shipping constraint
+- User-friendly error messages are displayed

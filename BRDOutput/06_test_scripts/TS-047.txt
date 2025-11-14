@@ -1,0 +1,125 @@
+Test Script: TS-047 - Admin Password Reset
+
+Test Scenario: As an admin user who forgot my password, I want to reset my admin password, so that I can regain access to the admin panel.
+
+Prerequisites:
+- Admin user account exists
+- Admin has forgotten password
+- Email service is operational
+- Password reset functionality is enabled for admin
+
+Test Data:
+- Admin Email: admin@example.com
+- New Password: NewAdminPass@456
+- Confirm New Password: NewAdminPass@456
+
+Test Steps:
+
+GIVEN the admin is on the admin login page
+WHEN the admin views the login form
+THEN a "Forgot Password?" link should be visible
+
+GIVEN the admin cannot remember password
+WHEN the admin clicks on "Forgot Password?" link
+THEN the admin should be navigated to the password reset request page
+
+GIVEN the admin is on the password reset request page
+WHEN the page loads
+THEN an email input field should be displayed
+AND a "Send Reset Link" or "Submit" button should be available
+
+GIVEN the admin wants to reset password
+WHEN the admin enters email "admin@example.com"
+AND clicks "Send Reset Link"
+THEN the system should validate the email exists in admin users
+AND generate a unique password reset token
+AND send a password reset email to the admin's email address
+
+GIVEN the password reset email is sent
+WHEN the admin checks their email inbox
+THEN the admin should receive an email with subject "Admin Password Reset" or similar
+AND the email should contain a password reset link with token
+
+GIVEN the admin receives the reset email
+WHEN the admin clicks on the password reset link
+THEN the admin should be navigated to the password reset form page
+AND the reset token should be validated
+
+GIVEN the password reset form is displayed
+WHEN the admin views the form
+THEN the following fields should be available:
+  - New Password (password input)
+  - Confirm New Password (password input)
+  - Submit or "Reset Password" button
+
+GIVEN the admin enters new password
+WHEN the admin fills in:
+  - New Password: "NewAdminPass@456"
+  - Confirm New Password: "NewAdminPass@456"
+AND clicks "Reset Password"
+THEN the system should validate:
+  - Passwords match
+  - Password meets strength requirements
+  - Reset token is valid and not expired
+
+GIVEN all validations pass
+WHEN the password reset is processed
+THEN the admin password should be updated in the database
+AND the reset token should be invalidated
+AND a success message should be displayed
+AND the admin should be directed to the admin login page
+
+GIVEN the password has been reset
+WHEN the admin tries to login with old password
+THEN the login should fail
+AND an error message should be displayed
+
+GIVEN the password has been reset
+WHEN the admin logs in with new password "NewAdminPass@456"
+THEN the authentication should succeed
+AND the admin should be logged in to the admin panel
+
+GIVEN the passwords don't match
+WHEN the admin enters different values in new password and confirm password
+THEN a validation error should be displayed
+AND the message should indicate "Passwords do not match"
+
+GIVEN the reset link has expired
+WHEN the admin clicks on an expired reset link
+THEN an error message should be displayed
+AND the message should indicate "Reset link has expired. Please request a new one."
+
+Expected Result:
+- Forgot Password link is visible on admin login page
+- Admin can request password reset via email
+- Password reset email is sent successfully
+- Reset link with token is received
+- Admin can access password reset form
+- Admin can set new password
+- Password validation enforces security requirements
+- Old password is replaced with new password
+- Reset token is invalidated after use
+- Admin can login with new password
+- Old password no longer works
+- Password match validation works
+- Expired tokens are handled appropriately
+
+Validation Points:
+- Forgot Password link is present on admin login
+- Password reset request page loads correctly
+- Email field is functional
+- Email validation works
+- Reset email is sent to admin's email
+- Email contains valid reset link
+- Reset token is unique and secure
+- Password reset form displays correctly
+- New password fields are functional
+- Password strength validation works
+- Password match validation works
+- Token validation works
+- Expired token detection works
+- Password is updated in database
+- Old password is invalidated
+- New password works for login
+- Reset token cannot be reused
+- Admin can regain access after reset

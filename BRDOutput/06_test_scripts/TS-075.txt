@@ -1,0 +1,155 @@
+Test Script: TS-075 - Export Report to Excel
+
+Test Scenario: As an admin user, I want to export reports in Excel format, so that I can perform additional analysis or share data.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- A report has been generated (Products or Revenue)
+- Excel export functionality is enabled
+- Excel generation library is configured
+
+Test Data:
+- Report Type: Products Uploaded Report
+- Date Range: January 1-31, 2025
+- Total Products: 25
+- Products with details in multiple rows
+
+Test Steps:
+
+GIVEN the admin has generated a report
+WHEN the admin views the report results
+THEN an "Export to Excel" button or option should be available
+
+GIVEN the export options are displayed
+WHEN the admin views the export section
+THEN an "Excel" or "Download as Excel" button should be visible
+
+GIVEN the admin wants to export the report
+WHEN the admin clicks "Export to Excel" button
+THEN the system should begin generating the Excel file
+
+GIVEN the Excel file is being generated
+WHEN the generation process runs
+THEN a loading indicator or "Generating Excel..." message should be displayed
+AND the button should be disabled during generation
+
+GIVEN the Excel generation is complete
+WHEN the file is ready
+THEN the Excel file should automatically download
+OR a download link should be provided
+AND a success message may be displayed "Excel exported successfully"
+
+GIVEN the Excel file is downloaded
+WHEN the admin opens the file in Excel or similar spreadsheet application
+THEN the file should open without errors
+AND be in .xlsx or .xls format
+
+GIVEN the Excel file contains report data
+WHEN the admin views the spreadsheet
+THEN the following should be present:
+  - Sheet name (e.g., "Products Report" or "Revenue Report")
+  - Report title in first row or header area
+  - Date range or report period
+  - Column headers
+  - Data rows
+
+GIVEN the Excel file has column headers
+WHEN the admin views the first data row
+THEN clear column headers should be present:
+  - For Products Report: Product Name, SKU, Category, Upload Date, Status
+  - For Revenue Report: Order Number, Date, Customer, Amount, Payment Status
+
+GIVEN the Excel file contains data rows
+WHEN the admin scrolls through the data
+THEN all 25 products (or all orders) should be listed
+AND each row should have complete data in all columns
+
+GIVEN the data has proper formatting
+WHEN the admin views the cells
+THEN:
+  - Dates should be formatted as dates (not text)
+  - Currency values should be formatted as currency with $ symbol
+  - Numbers should be formatted as numbers
+  - Text should be left-aligned
+  - Numbers/currency should be right-aligned
+
+GIVEN the Excel file includes totals
+WHEN summary rows are included
+THEN:
+  - Total row may be at the bottom
+  - Total revenue or total count displayed
+  - Formulas used for totals (e.g., =SUM(D2:D186))
+
+GIVEN the columns are sized appropriately
+WHEN the admin views the spreadsheet
+THEN:
+  - Column widths should accommodate the data
+  - Headers should be visible
+  - Auto-fit or reasonable widths applied
+
+GIVEN the admin wants to analyze the data
+WHEN the Excel file is open
+THEN the admin should be able to:
+  - Sort columns
+  - Filter data
+  - Create pivot tables
+  - Perform calculations
+  - Create charts
+
+GIVEN the filename is descriptive
+WHEN the Excel file is downloaded
+THEN the filename should be meaningful:
+  - Example: "Products_Report_Jan2025_20250131.xlsx"
+  - Include report type and date
+  - Be unique to avoid overwriting
+
+GIVEN the admin exports multiple reports
+WHEN different reports are exported
+THEN each Excel file should be generated correctly
+AND contain the appropriate data for that report
+
+Expected Result:
+- Export to Excel button is available
+- Excel file generation starts
+- Loading indicator shown
+- Excel file downloads successfully
+- File opens in spreadsheet applications
+- All report data is included
+- Column headers are clear
+- Data is properly formatted
+- Dates, currency, and numbers formatted correctly
+- Totals included (if applicable)
+- Columns sized appropriately
+- Data is editable and analyzable
+- Filename is descriptive
+
+Validation Points:
+- Export to Excel button is visible
+- Button click triggers Excel generation
+- Loading indicator displays
+- Button disabled during generation
+- Excel file is generated
+- File downloads automatically or link provided
+- Success message displays
+- File is in .xlsx or .xls format
+- File opens without errors
+- Sheet name is appropriate
+- Report title is present
+- Date range is displayed
+- Column headers are correct
+- All data rows are included
+- Data count matches report
+- Dates formatted as Excel dates
+- Currency formatted with $ symbol
+- Numbers formatted as numbers
+- Cell alignment is appropriate
+- Totals row included (if applicable)
+- Formulas used for calculations
+- Column widths are readable
+- Data can be sorted
+- Data can be filtered
+- Pivot tables can be created
+- Charts can be created
+- Filename is descriptive
+- Multiple exports work correctly
+- No data corruption or errors

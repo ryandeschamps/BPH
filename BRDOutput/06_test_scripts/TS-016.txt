@@ -1,0 +1,113 @@
+Test Script: TS-016 - Share Product on Social Media
+
+Test Scenario: As a visitor or buyer, I want to share products on social media, so that I can show products to friends or save for later reference.
+
+Prerequisites:
+- Product detail page is accessible
+- Social media sharing functionality is integrated
+- Social media platforms (Facebook, Twitter, Pinterest, etc.) are accessible
+- Website has proper meta tags for social sharing
+
+Test Data:
+- Product: Trendy Summer Dress
+- Product URL: https://www.example.com/product/trendy-summer-dress
+- Social Platforms: Facebook, Twitter, Pinterest
+
+Test Steps:
+
+GIVEN the user is on a product detail page
+WHEN the user views the page
+THEN social media sharing buttons or icons should be visible
+
+GIVEN the sharing buttons are displayed
+WHEN the user views the available options
+THEN the user should see share buttons for common platforms:
+  - Facebook
+  - Twitter
+  - Pinterest
+  - Email (optional)
+  - Copy Link (optional)
+
+GIVEN the user wants to share on Facebook
+WHEN the user clicks the "Share on Facebook" button
+THEN a Facebook sharing dialog should open (in new window or popup)
+AND the dialog should be pre-populated with:
+  - Product image
+  - Product title
+  - Product description/excerpt
+  - Product URL
+AND the user should be able to add comments before sharing
+
+GIVEN the Facebook sharing dialog is open
+WHEN the user is logged into Facebook
+THEN the user should be able to post the product to their timeline
+OR share in a message
+OR share to a group
+AND the user should be able to complete the share without logging into the e-commerce site
+
+GIVEN the user wants to share on Twitter
+WHEN the user clicks the "Share on Twitter" button
+THEN a Twitter sharing dialog should open
+AND the dialog should be pre-populated with:
+  - Product title or description (within character limit)
+  - Product URL (shortened if possible)
+AND the user should be able to edit the tweet before posting
+
+GIVEN the user wants to share on Pinterest
+WHEN the user clicks the "Pin it" or Pinterest button
+THEN a Pinterest dialog should open
+AND the dialog should be pre-populated with:
+  - Product image
+  - Product description
+  - Product URL
+AND the user should be able to select which board to pin to
+
+GIVEN the user wants to copy the product link
+WHEN the user clicks the "Copy Link" button (if available)
+THEN the product URL should be copied to clipboard
+AND a confirmation message should be displayed (e.g., "Link copied!")
+
+GIVEN the user wants to share via email
+WHEN the user clicks the "Email" or "Share via Email" button (if available)
+THEN the default email client should open
+OR an email sharing dialog should appear
+AND the email should be pre-populated with product details and link
+
+GIVEN the user is not logged in (visitor)
+WHEN the user clicks on social sharing buttons
+THEN the sharing functionality should work without requiring login to the e-commerce site
+AND the user will need to be logged into their social media accounts to complete sharing
+
+GIVEN the user shares a product
+WHEN the product is shared on social media
+THEN the shared post should display:
+  - Correct product image (Open Graph image)
+  - Correct product title
+  - Correct product description
+  - Correct product URL that links back to the product page
+
+Expected Result:
+- Social sharing buttons are visible on product detail page
+- User can share product to multiple social platforms
+- Sharing dialogs open correctly for each platform
+- Product information (image, title, description, URL) is correctly populated
+- User can complete sharing without logging into e-commerce site
+- Shared posts display correct product information
+- Copy link functionality works
+- Email sharing works (if implemented)
+- Feature works for both visitors and logged-in users
+
+Validation Points:
+- Social sharing buttons are present and visible
+- All sharing buttons are functional
+- Facebook share opens correct dialog with product info
+- Twitter share opens correct dialog with product info
+- Pinterest share opens correct dialog with product info
+- Product image displays correctly in social shares
+- Product URL is correct in shared posts
+- Meta tags (Open Graph) are properly configured
+- Sharing works without e-commerce site login
+- Copy link copies correct URL to clipboard
+- Email share pre-populates correctly
+- Shared links direct back to correct product page
+- Feature accessible to both visitors and logged-in users

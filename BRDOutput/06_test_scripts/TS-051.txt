@@ -1,0 +1,135 @@
+Test Script: TS-051 - Edit Customer Information
+
+Test Scenario: As an admin user, I want to edit customer account details, so that I can correct information or assist customers.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Customer exists in database
+- Customer edit page is accessible
+- Admin has permission to edit customer data
+
+Test Data:
+- Customer: John Doe
+- Current Email: john.doe@example.com
+- New Email: john.doe.updated@example.com
+- Current Phone: +1-555-0101
+- New Phone: +1-555-0199
+- Current First Name: John
+- New First Name: Jonathan
+
+Test Steps:
+
+GIVEN the admin is viewing customer details or customer list
+WHEN the admin clicks "Edit" button for customer "John Doe"
+THEN the admin should navigate to the customer edit page
+
+GIVEN the customer edit page loads
+WHEN the admin views the page
+THEN the page title should indicate "Edit Customer" or "Update Customer Information"
+
+GIVEN the edit form is displayed
+WHEN the admin views the form
+THEN the following fields should be available:
+  - First Name
+  - Last Name
+  - Email
+  - Phone Number
+  - Status (Active/Inactive dropdown or toggle)
+
+GIVEN the form fields are displayed
+WHEN the admin views the current information
+THEN the fields should be pre-filled with customer's current data:
+  - First Name: "John"
+  - Last Name: "Doe"
+  - Email: "john.doe@example.com"
+  - Phone: "+1-555-0101"
+  - Status: "Active"
+
+GIVEN the admin wants to update customer information
+WHEN the admin modifies the fields:
+  - First Name: "Jonathan" (changed from John)
+  - Email: "john.doe.updated@example.com" (changed)
+  - Phone: "+1-555-0199" (changed)
+AND clicks "Save" or "Update Customer" button
+THEN the system should validate all fields
+
+GIVEN the validation passes
+WHEN the update is processed
+THEN the system should:
+  - Check if new email is not already in use by another customer
+  - Validate email format
+  - Validate phone number format
+  - Update customer record in database
+
+GIVEN all validations pass
+WHEN the customer information is updated
+THEN the changes should be saved to the database
+AND a success message should be displayed
+AND the admin should be redirected to customer details or list page
+
+GIVEN the updated customer details are viewed
+WHEN the admin navigates to customer detail page
+THEN the updated information should be displayed:
+  - First Name: Jonathan
+  - Email: john.doe.updated@example.com
+  - Phone: +1-555-0199
+
+GIVEN the admin tries to use an email already in use
+WHEN the admin enters an email belonging to another customer
+AND clicks save
+THEN a validation error should be displayed
+AND the message should indicate "This email is already registered to another customer"
+AND the changes should not be saved
+
+GIVEN the admin enters invalid email format
+WHEN the admin enters "invalid-email" in the email field
+THEN a validation error should be displayed
+AND the message should indicate "Please enter a valid email address"
+
+GIVEN the admin leaves required fields empty
+WHEN the admin clears the first name or email field
+AND tries to save
+THEN validation errors should be displayed
+AND the messages should indicate which fields are required
+
+GIVEN the admin wants to change customer status
+WHEN the admin changes status from "Active" to "Inactive"
+AND saves the changes
+THEN the customer's account status should be updated
+AND the customer's account should be deactivated
+
+GIVEN the admin wants to cancel changes
+WHEN a "Cancel" button is available
+THEN clicking it should discard changes
+AND navigate back to customer list or details
+
+Expected Result:
+- Admin can access customer edit page
+- Edit form displays current customer information
+- Admin can modify customer details
+- Email, phone, and name can be updated
+- Form validation works correctly
+- Changes are saved to database
+- Success message displayed after update
+- Duplicate email detection works
+- Invalid inputs are rejected
+- Customer status can be changed
+- Cancel option discards changes
+
+Validation Points:
+- Edit page is accessible
+- Form pre-fills with current customer data
+- All editable fields are functional
+- Email field accepts valid email format
+- Phone field accepts valid phone format
+- Email format validation works
+- Phone format validation works
+- Duplicate email check works
+- Required field validation works
+- Database is updated with new information
+- Success message displays after update
+- Error messages display for invalid input
+- Customer status update works
+- Cancel button discards changes
+- Changes persist in database
+- Updated data visible in customer details

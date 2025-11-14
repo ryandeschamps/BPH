@@ -1,0 +1,46 @@
+Test Script: TS-089 - Edit Promotional Email Content
+
+Test Scenario: As an admin user, I want to modify promotional email templates, so that I can update marketing campaigns.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Email templates exist
+- Edit functionality enabled
+
+Test Data:
+- Existing Template: Summer Sale
+- Current Subject: "Summer Sale - 20% Off"
+- New Subject: "Summer Sale Extended - 30% Off"
+
+Test Steps:
+
+GIVEN the admin is viewing email templates
+WHEN the admin views existing templates
+THEN each template should have an "Edit" button
+
+GIVEN the admin wants to edit a template
+WHEN the admin clicks "Edit" for "Summer Sale"
+THEN the template editor should open
+
+GIVEN the editor is displayed
+WHEN the admin updates subject and content
+AND clicks "Save Changes"
+THEN the template should be updated
+AND success message displayed
+
+GIVEN the template is updated
+WHEN the admin sends the campaign
+THEN the new content should be used
+
+Expected Result:
+- Templates can be edited
+- Subject and content update
+- Changes save successfully
+- Updated template ready to send
+
+Validation Points:
+- Edit button accessible
+- Editor loads correctly
+- Current content displayed
+- Updates save correctly
+- Success message displays

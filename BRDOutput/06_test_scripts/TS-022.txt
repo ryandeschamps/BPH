@@ -1,0 +1,94 @@
+Test Script: TS-022 - Add Product to Wishlist
+
+Test Scenario: As a registered buyer, I want to add products to my wishlist, so that I can save items for future purchase consideration.
+
+Prerequisites:
+- User is registered and logged in
+- Wishlist functionality is enabled
+- Product catalog contains available products
+- Product detail page is accessible
+
+Test Data:
+- Product: Women's Floral Dress
+- Product ID: PROD-56789
+- Price: $65.00
+- User: john.doe@example.com (logged in)
+
+Test Steps:
+
+GIVEN the user is logged in and viewing a product detail page
+WHEN the user views the page
+THEN an "Add to Wishlist" button or heart icon should be visible
+
+GIVEN the user wants to add the product to wishlist
+WHEN the user clicks the "Add to Wishlist" button or heart icon
+THEN the system should verify the user is logged in
+
+GIVEN the user is logged in
+WHEN the add to wishlist action is processed
+THEN the system should add the product to the user's wishlist
+AND the system should save the product ID and user ID association
+AND the wishlist button should change appearance (e.g., filled heart or "Added to Wishlist")
+AND a confirmation message should be displayed (e.g., "Product added to wishlist")
+
+GIVEN the product was successfully added to wishlist
+WHEN the user views the wishlist button
+THEN the button should indicate the product is in wishlist
+AND the button text may change to "View Wishlist" or show a filled heart icon
+
+GIVEN the user navigates to their wishlist page
+WHEN the user accesses "My Wishlist" from account menu
+THEN the product "Women's Floral Dress" should be displayed in the wishlist
+AND the product should show image, title, and price
+
+GIVEN the user tries to add the same product again
+WHEN the user clicks "Add to Wishlist" for a product already in wishlist
+THEN the system should detect the duplicate
+AND display a message "This product is already in your wishlist"
+OR navigate to the wishlist page
+AND not create a duplicate entry
+
+GIVEN the user is not logged in
+WHEN a visitor tries to click "Add to Wishlist"
+THEN the system should prompt the user to login
+AND display a message "Please login to add items to wishlist"
+AND redirect to login page or show login modal
+
+GIVEN the user logs in after being prompted
+WHEN the user successfully logs in
+THEN the system may automatically add the product to wishlist
+OR return the user to the product page to add again
+
+GIVEN the user adds multiple products to wishlist
+WHEN the user adds different products from various pages
+THEN each product should be added to the wishlist successfully
+AND the wishlist count should increment with each addition
+AND the wishlist icon in navigation should show the count
+
+Expected Result:
+- Add to Wishlist button is visible on product pages
+- Logged-in users can add products to wishlist
+- Product is successfully saved to user's wishlist
+- Confirmation message is displayed
+- Button appearance changes after adding
+- Product appears in wishlist page
+- Duplicate additions are prevented
+- Non-logged-in users are prompted to login
+- Wishlist count updates in navigation
+- Multiple products can be added to wishlist
+
+Validation Points:
+- Add to Wishlist button is present and functional
+- User authentication is verified before adding
+- Product is saved to wishlist table with user ID
+- Confirmation message displays correctly
+- Button state changes after adding (visual feedback)
+- Product appears in user's wishlist page
+- Duplicate detection prevents same product being added twice
+- Login requirement is enforced for non-authenticated users
+- Login redirect works correctly
+- Wishlist counter updates accurately
+- Database records wishlist entry correctly
+- Multiple products can be added independently
+- Wishlist data persists across sessions
+- Only user's own wishlist items are accessible

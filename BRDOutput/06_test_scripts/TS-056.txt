@@ -1,0 +1,135 @@
+Test Script: TS-056 - Manage Order Shipment Details
+
+Test Scenario: As an admin user, I want to enter and update shipment information for orders, so that I can enable customer tracking and manage logistics.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Order exists with status "Confirmed" or "In Process"
+- Shipment management functionality is enabled
+- Order detail page is accessible
+
+Test Data:
+- Order Number: ORD-2025-001234
+- Carrier: UPS
+- Tracking Number: 1Z999AA10123456784
+- Shipping Date: January 29, 2025
+- Estimated Delivery: February 2, 2025
+- Shipping Cost: $10.00
+- Delivery Address: 456 Oak Ave, San Francisco, CA 94102
+
+Test Steps:
+
+GIVEN the admin is viewing order details for order ORD-2025-001234
+WHEN the order status is "Confirmed" or "In Process"
+THEN an "Add Shipment" or "Manage Shipment" button should be available
+
+GIVEN the admin clicks "Add Shipment"
+WHEN the shipment form or modal opens
+THEN the following fields should be available:
+  - Carrier Name (dropdown or text)
+  - Tracking Number (text input)
+  - Shipping Date (date picker)
+  - Estimated Delivery Date (date picker)
+  - Shipping Cost (numeric input)
+  - Delivery Address (pre-filled or editable)
+
+GIVEN the shipment form is displayed
+WHEN the admin enters shipment details:
+  - Carrier: "UPS"
+  - Tracking Number: "1Z999AA10123456784"
+  - Shipping Date: "January 29, 2025"
+  - Estimated Delivery: "February 2, 2025"
+  - Shipping Cost: "$10.00"
+AND clicks "Save Shipment" or "Submit" button
+THEN the system should validate all required fields
+
+GIVEN the shipment validation passes
+WHEN the shipment is saved
+THEN the shipment information should be saved to the database
+AND the order status should be automatically updated to "Shipped"
+AND a success message should display "Shipment details added successfully"
+
+GIVEN the shipment is added
+WHEN the system updates the order
+THEN a shipping notification email should be sent to the customer
+AND the email should include:
+  - Carrier name
+  - Tracking number
+  - Estimated delivery date
+
+GIVEN the shipment details are displayed
+WHEN the admin views the order details
+THEN the shipment section should show:
+  - Carrier: UPS
+  - Tracking Number: 1Z999AA10123456784
+  - Shipped Date: January 29, 2025
+  - Estimated Delivery: February 2, 2025
+  - Shipping Cost: $10.00
+
+GIVEN the admin wants to update shipment information
+WHEN the admin clicks "Edit Shipment" or "Update Tracking"
+THEN the shipment form should open with current values pre-filled
+
+GIVEN the admin modifies shipment details
+WHEN the admin changes tracking number to a new value
+AND saves the changes
+THEN the updated tracking number should be saved
+AND the order details should reflect the updated information
+AND a success message should display
+
+GIVEN the tracking number is displayed
+WHEN the admin or customer views it
+THEN the tracking number should be a clickable link
+AND clicking it should open the carrier's tracking page
+
+GIVEN the delivery address is shown
+WHEN the admin views the shipment section
+THEN the complete delivery address should be displayed
+AND should match the order's shipping address
+
+GIVEN multiple shipments exist (partial shipments)
+WHEN an order ships in multiple packages
+THEN the admin should be able to add multiple shipment records
+AND each shipment should have its own tracking information
+
+GIVEN the shipment cost is entered
+WHEN the shipping cost is saved
+THEN it should be reflected in the order total (if not already included)
+OR confirmed as matching the charged amount
+
+Expected Result:
+- Admin can access shipment management from order details
+- Shipment form displays all required fields
+- Admin can enter carrier and tracking information
+- Shipping dates can be selected
+- Shipment details are saved to database
+- Order status updates to "Shipped" automatically
+- Shipping notification email is sent to customer
+- Shipment information is visible in order details
+- Admin can update shipment information
+- Tracking number is clickable link
+- Multiple shipments can be added (if applicable)
+
+Validation Points:
+- Add Shipment button is accessible
+- Shipment form displays correctly
+- All required fields are present
+- Carrier dropdown/field is functional
+- Tracking number field accepts input
+- Date pickers work correctly
+- Shipping cost field accepts numeric input
+- Delivery address is displayed
+- Required field validation works
+- Shipment data is saved to database
+- Order status updates to "Shipped"
+- Success message displays
+- Shipping email is triggered
+- Email contains correct tracking info
+- Shipment details visible in order details
+- Tracking number is accurate
+- Dates are formatted correctly
+- Edit Shipment functionality works
+- Updated tracking info is saved
+- Tracking link directs to carrier site
+- Multiple shipments can be managed
+- All monetary values in USD format

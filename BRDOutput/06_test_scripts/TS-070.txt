@@ -1,0 +1,137 @@
+Test Script: TS-070 - Approve Customer Review
+
+Test Scenario: As an admin user, I want to approve customer product reviews, so that I can publish legitimate feedback.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Customer reviews exist with "Pending" status
+- Review management functionality is accessible
+- Customers have posted reviews for products
+
+Test Data:
+- Review 1: Product "Blue T-Shirt", Customer: John Doe, Rating: 5 stars, Comment: "Great quality!", Status: Pending
+- Review 2: Product "Black Jeans", Customer: Jane Smith, Rating: 4 stars, Comment: "Good fit", Status: Pending
+
+Test Steps:
+
+GIVEN the admin is logged in to the admin panel
+WHEN the admin navigates to reviews management
+THEN a "Reviews" or "Ratings & Reviews" option should be visible
+
+GIVEN the admin clicks on "Reviews"
+WHEN the reviews management page loads
+THEN a list of all customer reviews should be displayed
+
+GIVEN the reviews list is displayed
+WHEN the admin views the list
+THEN reviews should be filterable by status:
+  - All Reviews
+  - Pending
+  - Approved
+  - Rejected
+
+GIVEN the admin filters by "Pending"
+WHEN pending reviews are displayed
+THEN each review should show:
+  - Product name and image
+  - Customer name
+  - Star rating
+  - Review text
+  - Review date
+  - Current status: Pending
+  - Action buttons: Approve, Reject
+
+GIVEN the admin wants to review a pending submission
+WHEN the admin views Review 1:
+  - Product: "Blue T-Shirt"
+  - Customer: "John Doe"
+  - Rating: 5 stars
+  - Comment: "Great quality!"
+  - Status: Pending
+THEN the full review details should be visible
+
+GIVEN the review is appropriate and legitimate
+WHEN the admin clicks the "Approve" button for Review 1
+THEN a confirmation may be requested
+
+GIVEN the admin confirms approval
+WHEN the approval is processed
+THEN the review status should be updated to "Approved"
+AND the database should be updated
+AND a success message should display "Review approved successfully"
+
+GIVEN the review is approved
+WHEN the admin views the reviews list
+THEN the review status should show "Approved"
+AND the review should appear in the "Approved" filter
+
+GIVEN the review is approved
+WHEN customers view the product page
+THEN Review 1 should be visible on the "Blue T-Shirt" product page
+AND the 5-star rating should be included in the product's average rating
+AND the review count should increment
+
+GIVEN the admin approves multiple reviews
+WHEN the admin approves Review 2 as well
+THEN both reviews should be approved
+AND both should be visible on their respective product pages
+
+GIVEN bulk approval is available
+WHEN the admin selects multiple pending reviews
+THEN a "Approve Selected" button may be available
+AND clicking it should approve all selected reviews
+
+GIVEN the admin wants to view review details before approving
+WHEN the admin clicks on a review to expand or view details
+THEN the full review text should be displayed
+AND product information should be shown
+AND customer information should be available
+
+GIVEN approved reviews are tracked
+WHEN the admin approves a review
+THEN the approval should be logged
+AND the log should include:
+  - Admin user who approved
+  - Timestamp of approval
+  - Review ID
+
+GIVEN the admin changes their mind
+WHEN an approved review needs to be unapproved
+THEN the admin may be able to change status back to pending or reject it
+
+Expected Result:
+- Admin can access reviews management
+- Pending reviews are listed
+- Admin can view review details
+- Admin can approve reviews
+- Approval updates review status
+- Success message displayed
+- Approved reviews visible on product pages
+- Rating contributes to product average
+- Multiple reviews can be approved
+- Bulk approval available (if implemented)
+- Approval is logged with admin info
+
+Validation Points:
+- Reviews management page is accessible
+- Reviews list displays correctly
+- Filter by status works
+- Pending reviews are shown
+- Review details are complete
+- Product information is displayed
+- Customer name is shown
+- Rating and comment are visible
+- Approve button is functional
+- Confirmation dialog appears (if implemented)
+- Review status updates to "Approved"
+- Database is updated
+- Success message displays
+- Approved review visible in filter
+- Review appears on product page
+- Rating contributes to product average
+- Review count increments
+- Bulk approval works (if available)
+- Approval is logged
+- Admin user recorded in log
+- Timestamp captured
+- Status change reversible (if allowed)

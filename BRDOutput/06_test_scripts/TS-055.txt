@@ -1,0 +1,121 @@
+Test Script: TS-055 - Update Order Status
+
+Test Scenario: As an admin user, I want to change the status of orders through the fulfillment process, so that I can track order progress from placement to delivery.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Orders exist with different statuses
+- Order status update functionality is enabled
+- Valid status transitions are configured
+
+Test Data:
+- Order Number: ORD-2025-001234
+- Initial Status: Confirmed
+- Available Statuses: Open, Confirmed, In Process, Shipped, Delivered
+- New Status: In Process
+
+Test Steps:
+
+GIVEN the admin is viewing order details
+WHEN the admin views order ORD-2025-001234 with status "Confirmed"
+THEN the current status should be clearly displayed
+
+GIVEN the admin wants to update order status
+WHEN the admin views the order actions
+THEN an "Update Status" button or dropdown should be available
+
+GIVEN the status update option is available
+WHEN the admin clicks "Update Status" or views status dropdown
+THEN a list of available statuses should be displayed:
+  - Open
+  - Confirmed
+  - In Process
+  - Shipped
+  - Delivered
+
+GIVEN the admin selects a new status
+WHEN the admin selects "In Process" from the dropdown
+AND clicks "Save" or "Update Status" button
+THEN the system should update the order status
+
+GIVEN the status update is processed
+WHEN the system saves the new status
+THEN the order status in the database should be updated to "In Process"
+AND a success message should display "Order status updated successfully"
+AND the order detail page should reflect the new status
+
+GIVEN the order status is "In Process"
+WHEN the admin wants to update to "Shipped"
+THEN the admin should be able to change status to "Shipped"
+AND this transition should be allowed
+
+GIVEN the order status is "Shipped"
+WHEN the admin updates to "Delivered"
+THEN the status should change to "Delivered"
+AND the order should be marked as complete
+
+GIVEN status changes are tracked
+WHEN an admin updates order status
+THEN the status change should be logged
+AND the log should include:
+  - Previous status
+  - New status
+  - Admin user who made the change
+  - Timestamp of change
+
+GIVEN the admin tries invalid status transition
+WHEN business rules restrict certain transitions (if implemented)
+THEN the system may prevent invalid transitions
+AND display an appropriate message
+
+GIVEN the order status is updated to "Shipped"
+WHEN the status becomes "Shipped"
+THEN the system should:
+  - Require shipment information (carrier, tracking number)
+  - Send shipping notification email to customer
+  - Update order fulfillment workflow
+
+GIVEN the order status is updated to "Delivered"
+WHEN the status becomes "Delivered"
+THEN the system should:
+  - Record delivery date
+  - Send delivery confirmation email to customer
+  - Mark order as completed
+
+GIVEN the admin updates status from order list
+WHEN quick status update is available from order list page
+THEN the admin should be able to update status without opening order details
+AND the change should be saved immediately
+
+Expected Result:
+- Admin can access status update functionality
+- Available order statuses are displayed
+- Admin can select new status
+- Status update is saved to database
+- Success message is displayed
+- Updated status is reflected immediately
+- Status transitions follow business logic
+- Status changes are logged with details
+- Email notifications sent for certain statuses
+- Quick update available from order list
+
+Validation Points:
+- Update Status option is accessible
+- All valid statuses are available
+- Status dropdown/selector is functional
+- Selected status is saved to database
+- Order status updates correctly
+- Success message displays
+- Status change is reflected in order details
+- Status change is reflected in order list
+- Transition from Confirmed to In Process works
+- Transition from In Process to Shipped works
+- Transition from Shipped to Delivered works
+- Invalid transitions are prevented (if applicable)
+- Status change is logged with timestamp
+- Admin user is recorded in log
+- Previous and new status are logged
+- Shipping notification sent when status = Shipped
+- Delivery notification sent when status = Delivered
+- Shipment details required for Shipped status
+- Delivery date recorded for Delivered status

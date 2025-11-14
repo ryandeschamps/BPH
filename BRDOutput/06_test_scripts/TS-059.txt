@@ -1,0 +1,125 @@
+Test Script: TS-059 - Edit Product Category
+
+Test Scenario: As an admin user, I want to modify existing product categories, so that I can keep the catalog structure current.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Product categories exist in database
+- Category edit functionality is enabled
+
+Test Data:
+- Existing Category: "Winter Collection"
+- Current Description: "Products for winter season"
+- New Description: "Premium winter clothing and accessories"
+- Current Status: Active
+- New Display Order: 3
+
+Test Steps:
+
+GIVEN the admin is viewing the categories list
+WHEN the admin views existing categories
+THEN each category should have an "Edit" button or link
+
+GIVEN the admin wants to edit a category
+WHEN the admin clicks "Edit" for "Winter Collection" category
+THEN the category edit form should open
+
+GIVEN the edit form is displayed
+WHEN the admin views the form
+THEN the following fields should be available:
+  - Category Name (text input)
+  - Category Description (textarea)
+  - Status (Active/Inactive)
+  - Display Order (numeric input)
+
+GIVEN the form fields are pre-filled
+WHEN the admin views the edit form
+THEN current category data should be displayed:
+  - Category Name: "Winter Collection"
+  - Description: "Products for winter season"
+  - Status: "Active"
+
+GIVEN the admin wants to update the category
+WHEN the admin modifies the description to "Premium winter clothing and accessories"
+AND changes display order to "3"
+AND clicks "Save Changes" or "Update" button
+THEN the system should validate all fields
+
+GIVEN the validation passes
+WHEN the update is processed
+THEN the category should be updated in the database
+AND a success message should display "Category updated successfully"
+AND the admin should be redirected to categories list
+
+GIVEN the category is updated
+WHEN the admin views the categories list
+THEN "Winter Collection" should show the updated description
+AND the display order should be reflected in the list ordering
+
+GIVEN the admin changes the category name
+WHEN the admin updates the name from "Winter Collection" to "Winter Essentials"
+AND saves the changes
+THEN the category name should be updated
+AND all products in this category should remain associated
+
+GIVEN the admin changes status to "Inactive"
+WHEN the admin sets status from "Active" to "Inactive"
+AND saves the changes
+THEN the category should be deactivated
+AND should no longer be visible to customers on the website
+BUT products should remain in the category
+
+GIVEN the admin tries to use a duplicate name
+WHEN the admin changes the name to match another existing category
+THEN a validation error should be displayed
+AND the message should indicate "A category with this name already exists"
+
+GIVEN the admin leaves required fields empty
+WHEN the admin clears the category name field
+AND tries to save
+THEN a validation error should be displayed
+AND the message should indicate "Category name is required"
+
+GIVEN category updates affect the website
+WHEN the admin updates a category
+THEN changes should be reflected on the customer-facing website
+AND category navigation should update accordingly
+
+GIVEN the admin wants to cancel changes
+WHEN a "Cancel" button is available
+THEN clicking it should discard changes
+AND return to categories list without saving
+
+Expected Result:
+- Admin can access category edit form
+- Edit form displays current category information
+- Admin can modify category name and description
+- Admin can change status and display order
+- Changes are saved to database
+- Success message displayed after update
+- Updated information visible in categories list
+- Category name changes maintain product associations
+- Status changes affect website visibility
+- Duplicate names are prevented
+- Cancel option discards changes
+
+Validation Points:
+- Edit button is accessible for each category
+- Edit form displays correctly
+- Current category data pre-fills form
+- All editable fields are functional
+- Category name can be updated
+- Description can be updated
+- Status can be changed
+- Display order can be modified
+- Required field validation works
+- Duplicate name check works
+- Database is updated with changes
+- Success message displays
+- Updated data visible in list
+- Category name change preserves product links
+- Inactive status hides category from customers
+- Active products in inactive category handled correctly
+- Display order affects category positioning
+- Cancel button discards changes
+- Changes reflect on website

@@ -1,0 +1,119 @@
+Test Script: TS-063 - Activate/Deactivate Product Sub-category
+
+Test Scenario: As an admin user, I want to enable or disable product sub-categories, so that I can control catalog visibility.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Sub-categories exist (both active and inactive)
+- Sub-category status management is functional
+- Parent categories exist
+
+Test Data:
+- Active Sub-category: "Casual Shirts" under "Men's Clothing", Status: Active
+- Inactive Sub-category: "Vintage Collection" under "Men's Clothing", Status: Inactive
+
+Test Steps:
+
+GIVEN the admin is viewing the categories list with sub-categories
+WHEN the admin views sub-category records
+THEN each sub-category should have a status indicator (Active or Inactive)
+AND action buttons for status management should be available
+
+GIVEN the admin wants to deactivate an active sub-category
+WHEN the admin views "Casual Shirts" with status "Active"
+THEN a "Deactivate" button, toggle, or status change option should be available
+
+GIVEN the admin clicks "Deactivate"
+WHEN the deactivation is triggered
+THEN a confirmation dialog may appear
+
+GIVEN the admin confirms deactivation
+WHEN the admin confirms the action
+THEN the system should update the sub-category status to "Inactive"
+AND the database should be updated
+AND a success message should display "Sub-category deactivated successfully"
+
+GIVEN the sub-category has been deactivated
+WHEN the admin views the categories list
+THEN "Casual Shirts" status should show "Inactive"
+AND the action button should change to "Activate"
+
+GIVEN the sub-category is deactivated
+WHEN customers browse the website
+THEN "Casual Shirts" should not appear under "Men's Clothing" navigation
+AND should not be visible in sub-category listings
+
+GIVEN products exist in the deactivated sub-category
+WHEN the sub-category is inactive
+THEN products should not be accessible via sub-category browse
+BUT the parent category "Men's Clothing" should remain active
+AND other active sub-categories should still be visible
+
+GIVEN the admin wants to activate an inactive sub-category
+WHEN the admin views "Vintage Collection" with status "Inactive"
+THEN an "Activate" button or toggle should be available
+
+GIVEN the admin clicks "Activate"
+WHEN the activation is triggered
+THEN a confirmation dialog may appear
+
+GIVEN the admin confirms activation
+WHEN the admin confirms the action
+THEN the system should update the sub-category status to "Active"
+AND the database should be updated
+AND a success message should display "Sub-category activated successfully"
+
+GIVEN the sub-category has been activated
+WHEN the admin views the categories list
+THEN "Vintage Collection" status should show "Active"
+AND the action button should change to "Deactivate"
+
+GIVEN the sub-category is activated
+WHEN customers browse the website
+THEN "Vintage Collection" should be visible under "Men's Clothing"
+AND should appear in sub-category listings
+AND products in this sub-category should be accessible
+
+GIVEN the parent category is inactive
+WHEN a sub-category is active but parent is inactive
+THEN the sub-category should not be visible to customers
+AND both parent and sub-category should be hidden
+
+GIVEN the status change is via edit form
+WHEN the admin edits a sub-category
+THEN the status can also be changed via the edit form
+AND the same activation/deactivation logic applies
+
+Expected Result:
+- Admin can view sub-category status
+- Admin can deactivate active sub-categories
+- Admin can activate inactive sub-categories
+- Status changes are saved to database
+- Success messages displayed
+- Deactivated sub-categories hidden from customers
+- Parent category remains unaffected
+- Products in inactive sub-categories not browseable
+- Activated sub-categories visible to customers
+- Parent category status affects sub-category visibility
+- Status toggle works correctly
+
+Validation Points:
+- Sub-category status is displayed correctly
+- Activate/Deactivate buttons are functional
+- Confirmation dialog appears (if implemented)
+- Status update is saved to database
+- List reflects updated status
+- Action button changes after status change
+- Success message displays
+- Deactivated sub-category hidden from website
+- Products in inactive sub-category not accessible via sub-category
+- Parent category visibility unaffected
+- Other active sub-categories remain visible
+- Activated sub-category visible on website
+- Activated sub-category in navigation
+- Products in active sub-category accessible
+- Inactive parent hides active sub-categories
+- Status toggle works from list page
+- Status can be changed from edit form
+- Multiple sub-categories can be managed independently
+- Changes take effect immediately on website

@@ -1,0 +1,132 @@
+Test Script: TS-031 - Complete Payment with Net Banking
+
+Test Scenario: As a registered buyer, I want to pay for my order using net banking, so that I can complete my purchase directly from my bank account.
+
+Prerequisites:
+- User is logged in
+- User has items in cart and completed checkout steps
+- User is on payment page
+- Stripe payment gateway supports net banking/ACH
+- SSL security is enabled
+
+Test Data:
+- Bank Name: Chase Bank
+- Account Type: Checking
+- Account Number: 000123456789
+- Routing Number: 110000000
+- Account Holder Name: John Doe
+- Order Total: $128.80
+
+Test Steps:
+
+GIVEN the user is on the payment page
+WHEN the page loads
+THEN payment method options should be displayed
+AND "Net Banking" or "Bank Transfer" should be one of the available options
+
+GIVEN the payment options are displayed
+WHEN the user selects "Net Banking" or "Bank Transfer" as payment method
+THEN a net banking payment form should be displayed
+
+GIVEN the net banking form is displayed
+WHEN the user views the form
+THEN the following should be available:
+  - Bank selection dropdown (list of supported banks)
+  OR Bank account details form
+  - Account holder name
+  - Account number
+  - Routing number
+  - Account type (Checking/Savings)
+
+GIVEN the user wants to pay via net banking
+WHEN the user selects or enters banking details:
+  - Bank: "Chase Bank"
+  - Account Holder Name: "John Doe"
+  - Account Number: "000123456789"
+  - Routing Number: "110000000"
+  - Account Type: "Checking"
+THEN all fields should accept the input
+
+GIVEN the user has entered banking details
+WHEN the user clicks "Pay Now" or "Complete Order" button
+THEN the system should validate all banking fields
+AND validate account number format
+AND validate routing number format
+
+GIVEN the banking details are valid
+WHEN the system processes the payment
+THEN the banking information should be encrypted
+AND the payment should be transmitted securely via SSL
+AND the payment request should be sent to Stripe payment gateway
+
+GIVEN Stripe processes the net banking payment
+WHEN the user is redirected to their bank's login page
+THEN the user should be able to login to their online banking
+AND authorize the payment
+
+GIVEN the user authorizes the payment
+WHEN the bank approves the transaction
+THEN the system should receive payment confirmation from Stripe
+AND the system should create the order in the database
+AND the order status should be set to "Confirmed" or "Paid"
+AND a unique order number should be generated
+
+GIVEN the payment is successful
+WHEN the order is created
+THEN the system should clear the shopping cart
+AND the system should send order confirmation email to the user
+AND the user should be redirected to order confirmation page
+AND the confirmation page should display order number and details
+
+GIVEN the payment is declined or cancelled
+WHEN the user cancels at bank login or payment is declined
+THEN the system should display an appropriate message
+AND the message should indicate "Payment cancelled" or "Payment declined"
+AND the order should not be created
+AND the user should remain on the payment page to retry
+
+GIVEN the user enters invalid banking details
+WHEN account or routing number is invalid
+THEN the system should display a validation error
+AND the message should indicate the specific issue
+
+GIVEN the payment is being processed
+WHEN the user waits for bank redirect and confirmation
+THEN a loading indicator or "Redirecting to your bank..." message should be displayed
+AND the submit button should be disabled to prevent duplicate submissions
+
+Expected Result:
+- Net banking payment option is available
+- Payment form displays all required banking fields
+- User can enter bank account details
+- Banking information is validated
+- Payment is processed securely via SSL
+- User is redirected to bank for authorization
+- Stripe payment gateway processes the transaction
+- Successful payment creates order
+- Order confirmation email is sent
+- User redirected to confirmation page
+- Failed/cancelled payments show error message
+- Duplicate submissions are prevented
+
+Validation Points:
+- Net banking option is available
+- Payment form fields are present and functional
+- Bank selection or account details entry works
+- Account number validation works
+- Routing number validation works
+- Payment data is encrypted before transmission
+- SSL security is active (HTTPS)
+- Integration with Stripe works correctly
+- Bank redirect functionality works
+- Payment authorization process completes
+- Payment success creates order in database
+- Order status is set correctly
+- Shopping cart is cleared after successful payment
+- Order confirmation email is sent
+- Order number is generated
+- User redirected to confirmation page
+- Payment decline/cancellation handled gracefully
+- Error messages are user-friendly
+- Duplicate payment prevention works
+- Payment transaction is logged

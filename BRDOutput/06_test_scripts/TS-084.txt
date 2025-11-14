@@ -1,0 +1,71 @@
+Test Script: TS-084 - Edit About Us Page
+
+Test Scenario: As an admin user, I want to update the About Us page content, so that I can keep company information current.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- CMS management section is accessible
+- About Us page exists
+
+Test Data:
+- Current Content: "Welcome to our online store..."
+- New Content: "We are a leading provider of quality apparel since 2020..."
+
+Test Steps:
+
+GIVEN the admin is in the admin panel
+WHEN the admin navigates to CMS section
+THEN a "CMS Pages" or "Content Management" option should be visible
+
+GIVEN the admin clicks on "CMS Pages"
+WHEN the CMS pages list loads
+THEN the following pages should be listed:
+  - About Us
+  - Contact Us
+  - Privacy Policy
+  - Terms and Conditions
+
+GIVEN the admin wants to edit About Us
+WHEN the admin clicks "Edit" for "About Us"
+THEN the page editor should open
+
+GIVEN the editor is displayed
+WHEN the admin views the form
+THEN it should include:
+  - Page Title
+  - Content editor (WYSIWYG or textarea)
+  - Status (Active/Inactive)
+  - Save button
+
+GIVEN the current content is displayed
+WHEN the admin views the editor
+THEN existing About Us content should be loaded
+
+GIVEN the admin updates content
+WHEN the admin modifies the content to new text
+AND clicks "Save Changes"
+THEN the content should be updated
+AND success message displayed
+
+GIVEN the content is saved
+WHEN customers view the About Us page
+THEN the new content should be displayed
+
+Expected Result:
+- CMS pages are accessible
+- About Us page can be edited
+- WYSIWYG editor available
+- Content saves successfully
+- Changes reflect on website
+
+Validation Points:
+- CMS Pages option accessible
+- About Us listed
+- Edit button works
+- Editor loads correctly
+- Current content displayed
+- Content can be modified
+- Save button functional
+- Database updated
+- Success message displays
+- Website shows updated content

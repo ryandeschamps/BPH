@@ -1,0 +1,123 @@
+Test Script: TS-066 - Activate/Deactivate Product
+
+Test Scenario: As an admin user, I want to enable or disable products in the catalog, so that I can control which products are available for purchase.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Products exist (both active and inactive)
+- Product status management is functional
+
+Test Data:
+- Active Product: "Men's Blue T-Shirt", Status: Active, SKU: TS-001
+- Inactive Product: "Vintage Jacket", Status: Inactive, SKU: JK-099
+
+Test Steps:
+
+GIVEN the admin is viewing the products list
+WHEN the admin views product records
+THEN each product should have a status indicator (Active or Inactive)
+AND action buttons for status management should be available
+
+GIVEN the admin wants to deactivate an active product
+WHEN the admin views "Men's Blue T-Shirt" with status "Active"
+THEN a "Deactivate" button or toggle should be available
+
+GIVEN the admin clicks "Deactivate"
+WHEN the deactivation is triggered
+THEN a confirmation dialog may appear
+
+GIVEN the admin confirms deactivation
+WHEN the admin confirms the action
+THEN the system should update the product status to "Inactive"
+AND the database should be updated
+AND a success message should display "Product deactivated successfully"
+
+GIVEN the product has been deactivated
+WHEN the admin views the products list
+THEN "Men's Blue T-Shirt" status should show "Inactive"
+AND the action button should change to "Activate"
+
+GIVEN the product is deactivated
+WHEN customers browse the website
+THEN "Men's Blue T-Shirt" should not appear in product listings
+AND should not be searchable
+AND direct links should show "Product not available" message
+AND the product should not be purchasable
+
+GIVEN the product is in customer's cart or wishlist
+WHEN the product is deactivated
+THEN it should be removed from active carts
+OR marked as unavailable in cart/wishlist
+
+GIVEN the admin wants to activate an inactive product
+WHEN the admin views "Vintage Jacket" with status "Inactive"
+THEN an "Activate" button or toggle should be available
+
+GIVEN the admin clicks "Activate"
+WHEN the activation is triggered
+THEN a confirmation dialog may appear
+
+GIVEN the admin confirms activation
+WHEN the admin confirms the action
+THEN the system should update the product status to "Active"
+AND the database should be updated
+AND a success message should display "Product activated successfully"
+
+GIVEN the product has been activated
+WHEN the admin views the products list
+THEN "Vintage Jacket" status should show "Active"
+AND the action button should change to "Deactivate"
+
+GIVEN the product is activated
+WHEN customers browse the website
+THEN "Vintage Jacket" should appear in product listings
+AND should be searchable
+AND should be available for purchase
+AND customers should be able to add it to cart
+
+GIVEN the status change is via edit form
+WHEN the admin edits a product
+THEN the status can also be changed via the edit form
+AND the same activation/deactivation logic applies
+
+GIVEN the product has no stock
+WHEN the admin activates a product with zero stock
+THEN the product should become active
+BUT may show as "Out of Stock" to customers
+AND may not be purchasable until stock is added
+
+Expected Result:
+- Admin can view product status
+- Admin can deactivate active products
+- Admin can activate inactive products
+- Status changes are saved to database
+- Success messages displayed
+- Deactivated products hidden from customers
+- Deactivated products not purchasable
+- Activated products visible to customers
+- Activated products available for purchase
+- Cart/wishlist handling for deactivated products
+- Status toggle works correctly
+
+Validation Points:
+- Product status is displayed correctly
+- Activate/Deactivate buttons are functional
+- Confirmation dialog appears (if implemented)
+- Status update is saved to database
+- List reflects updated status
+- Action button changes after status change
+- Success message displays
+- Deactivated product hidden from website
+- Deactivated product not in search results
+- Deactivated product not purchasable
+- Direct link to deactivated product shows unavailable message
+- Cart items handled when product deactivated
+- Wishlist items handled when product deactivated
+- Activated product visible on website
+- Activated product in search results
+- Activated product can be purchased
+- Status toggle works from list page
+- Status can be changed from edit form
+- Multiple products can be managed independently
+- Changes take effect immediately on website
+- Stock status considered with active status

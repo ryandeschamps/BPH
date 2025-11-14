@@ -1,0 +1,91 @@
+Test Script: TS-020 - Remove Item from Shopping Cart
+
+Test Scenario: As a registered buyer, I want to remove items from my shopping cart, so that I can only purchase items I actually want.
+
+Prerequisites:
+- User is logged in
+- User has multiple items in shopping cart
+- Cart removal functionality is enabled
+
+Test Data:
+- Cart Item 1: Blue T-Shirt, Quantity 2, Price $50.00
+- Cart Item 2: Black Jeans, Quantity 1, Price $60.00
+- Cart Item 3: Red Cap, Quantity 1, Price $15.00
+- Initial Cart Total: $125.00
+
+Test Steps:
+
+GIVEN the user is logged in and viewing the shopping cart
+WHEN the user views the cart items
+THEN each item should have a "Remove" button, link, or icon (e.g., trash icon, X button)
+
+GIVEN the user wants to remove an item from cart
+WHEN the user clicks the "Remove" button for "Red Cap"
+THEN a confirmation dialog may appear (optional) asking "Are you sure you want to remove this item?"
+OR the item is removed immediately
+
+GIVEN the user confirms removal (if confirmation dialog exists)
+WHEN the user clicks "Yes" or "Remove"
+THEN the system should remove the item from the cart
+
+GIVEN the item has been removed
+WHEN the cart page refreshes or updates
+THEN the "Red Cap" item should no longer be displayed in the cart
+AND the remaining items (Blue T-Shirt and Black Jeans) should still be in the cart
+AND the cart subtotal should recalculate from $125.00 to $110.00
+AND a confirmation message should be displayed (e.g., "Item removed from cart")
+
+GIVEN the cart has been updated
+WHEN the user views the cart item count
+THEN the cart count should decrease from 3 items to 2 items
+AND the cart icon in navigation should reflect the updated count
+
+GIVEN the user removes another item
+WHEN the user clicks "Remove" for "Black Jeans"
+THEN the item should be removed
+AND the cart should now contain only "Blue T-Shirt"
+AND the cart subtotal should update to $50.00
+
+GIVEN the user has only one item left in cart
+WHEN the user removes the last item "Blue T-Shirt"
+THEN the item should be removed
+AND the cart should be empty
+AND the cart page should display "Your cart is empty"
+AND a "Continue Shopping" or "Browse Products" button should be displayed
+
+GIVEN an item was accidentally removed
+WHEN the user wants to add it back
+THEN the user should navigate back to the product page
+AND add the item to cart again
+OR an "Undo" option may be available (optional feature)
+
+GIVEN the user removes an item
+WHEN the removal is processed
+THEN the item should be removed from the database cart table
+AND the removal should be permanent unless re-added
+
+Expected Result:
+- User can remove individual items from cart
+- Remove button is clearly visible for each item
+- Removed item disappears from cart immediately
+- Cart subtotal recalculates correctly after removal
+- Cart item count updates in navigation
+- Confirmation message is displayed
+- Last item removal results in empty cart
+- Empty cart displays appropriate message
+- Removed items must be re-added manually to cart
+
+Validation Points:
+- Remove button/link is present for each cart item
+- Remove functionality works correctly
+- Item is deleted from cart upon removal
+- Cart page updates after removal (no page errors)
+- Cart subtotal recalculates accurately
+- Cart item count updates correctly
+- Confirmation message displays
+- Multiple items can be removed sequentially
+- Removing last item shows empty cart message
+- Database is updated (item removed from cart table)
+- Removed item does not reappear on page refresh
+- Cart state persists correctly
+- Continue Shopping link works in empty cart

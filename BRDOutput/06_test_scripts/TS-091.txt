@@ -1,0 +1,68 @@
+Test Script: TS-091 - Send Promotional Email to Customers
+
+Test Scenario: As an admin user, I want to send marketing emails to buyers, so that I can promote sales and new products.
+
+Prerequisites:
+- Admin is logged in
+- Email template exists
+- Email service configured
+- Customer list available
+
+Test Data:
+- Template: Winter Sale - 30% Off
+- Recipients: All active buyers (150 customers)
+- Send Time: Immediate
+
+Test Steps:
+
+GIVEN the admin is viewing email templates
+WHEN the admin views a template
+THEN a "Send Email" or "Launch Campaign" button should be available
+
+GIVEN the admin clicks "Send Email"
+WHEN the send configuration opens
+THEN the following options should be available:
+  - Recipient Selection (All Buyers, Specific Segment, Test Email)
+  - Send Time (Immediate, Schedule for Later)
+  - Preview option
+
+GIVEN the admin configures send settings
+WHEN the admin selects:
+  - Recipients: "All Active Buyers"
+  - Send Time: "Immediate"
+AND clicks "Send Campaign"
+THEN a confirmation should appear
+
+GIVEN the admin confirms sending
+WHEN the campaign is launched
+THEN emails should be queued for sending
+AND success message displayed
+
+GIVEN emails are being sent
+WHEN the process runs
+THEN emails should be sent to all active buyers
+AND delivery status should be tracked
+
+GIVEN the campaign is complete
+WHEN the admin views campaign stats
+THEN statistics should show:
+  - Total sent
+  - Delivery rate
+  - Open rate (if tracking enabled)
+
+Expected Result:
+- Admin can send campaigns
+- Recipient selection works
+- Emails sent successfully
+- Confirmation required
+- Statistics available
+
+Validation Points:
+- Send Email button accessible
+- Configuration options displayed
+- Recipient selection works
+- Send time options work
+- Confirmation dialog appears
+- Emails queued successfully
+- Delivery tracking works
+- Statistics accurate

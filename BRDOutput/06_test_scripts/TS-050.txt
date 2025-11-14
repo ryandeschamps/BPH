@@ -1,0 +1,140 @@
+Test Script: TS-050 - View Customer Details
+
+Test Scenario: As an admin user, I want to view complete customer information including orders and activity, so that I can provide better customer service.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Customer list is accessible
+- Sample customer exists with orders and activity
+- Customer detail page is functional
+
+Test Data:
+- Customer: John Doe
+- Email: john.doe@example.com
+- Phone: +1-555-0101
+- Status: Active
+- Registration Date: January 1, 2025
+- Total Orders: 5
+- Total Spent: $650.00
+- Wishlist Items: 3
+- Cart Items: 2
+
+Test Steps:
+
+GIVEN the admin is viewing the customer list
+WHEN the admin clicks "View Details" for customer "John Doe"
+THEN the admin should navigate to the customer detail page
+
+GIVEN the customer detail page loads
+WHEN the admin views the page
+THEN the page title should indicate "Customer Details" or show customer name
+
+GIVEN the customer profile is displayed
+WHEN the admin views the profile section
+THEN the following information should be visible:
+  - Customer Name: John Doe
+  - Email: john.doe@example.com
+  - Phone: +1-555-0101
+  - Registration Date: January 1, 2025
+  - Account Status: Active
+
+GIVEN the customer statistics are displayed
+WHEN the admin views the summary section
+THEN key metrics should be shown:
+  - Total Orders: 5
+  - Total Amount Spent: $650.00
+  - Number of Wishlist Items: 3
+  - Number of Cart Items: 2
+
+GIVEN the customer addresses are displayed
+WHEN the admin views the addresses section
+THEN all saved addresses should be listed
+AND each address should show:
+  - Full address details
+  - Address type (Shipping/Billing)
+  - Default address indicator (if applicable)
+
+GIVEN the customer order history is displayed
+WHEN the admin views the orders section
+THEN a list of customer's orders should be shown
+AND each order should display:
+  - Order number
+  - Order date
+  - Order status
+  - Order total
+  - Link to view full order details
+
+GIVEN the customer wishlist is displayed
+WHEN the admin views the wishlist section
+THEN all wishlist items should be listed
+AND each item should show:
+  - Product name
+  - Product price
+  - Date added to wishlist
+
+GIVEN the customer shopping cart is displayed
+WHEN the admin views the cart section
+THEN current cart items should be listed
+AND each item should show:
+  - Product name
+  - Quantity
+  - Price
+  - Item total
+
+GIVEN the admin wants to edit customer information
+WHEN an "Edit Customer" button is available
+THEN clicking it should navigate to the customer edit page
+OR open an edit modal
+
+GIVEN the admin wants to activate/deactivate customer
+WHEN the admin views the customer actions
+THEN an "Activate" or "Deactivate" button should be available
+AND clicking it should toggle the customer's account status
+
+GIVEN the admin wants to return to customer list
+WHEN a "Back" or "Return to Customers" button is available
+THEN clicking it should navigate back to the customer list page
+
+GIVEN the customer detail page shows all sections
+WHEN the admin scrolls through the page
+THEN the sections should be organized:
+  - Profile Information
+  - Account Statistics
+  - Saved Addresses
+  - Order History
+  - Wishlist
+  - Shopping Cart
+  - Action Buttons
+
+Expected Result:
+- Customer detail page displays complete information
+- Personal details are accurate and complete
+- Account statistics show correct metrics
+- All saved addresses are listed
+- Order history is displayed
+- Wishlist items are shown
+- Cart items are visible
+- Edit and status change options are available
+- Navigation back to customer list works
+- Page layout is organized and user-friendly
+
+Validation Points:
+- Customer detail page loads correctly
+- Customer ID matches selected customer
+- Name and email are accurate
+- Phone number is displayed correctly
+- Registration date is formatted properly
+- Account status is current
+- Total orders count is accurate
+- Total spent calculation is correct
+- Wishlist count matches database
+- Cart items count is accurate
+- All addresses are retrieved and displayed
+- Order history shows all customer orders
+- Wishlist items are displayed correctly
+- Cart items are shown accurately
+- Edit button is functional
+- Activate/Deactivate button works
+- Back navigation is functional
+- Data is customer-specific and secure
+- All monetary values in USD format

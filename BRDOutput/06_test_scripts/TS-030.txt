@@ -1,0 +1,121 @@
+Test Script: TS-030 - Complete Payment with Debit Card
+
+Test Scenario: As a registered buyer, I want to pay for my order using a debit card, so that I can complete my purchase using my bank account.
+
+Prerequisites:
+- User is logged in
+- User has items in cart and completed checkout steps
+- User is on payment page
+- Stripe payment gateway is configured and active
+- SSL security is enabled
+
+Test Data:
+- Debit Card Number: 4000 0566 5566 5556 (Test card)
+- Expiry Date: 12/25
+- CVV: 123
+- Cardholder Name: John Doe
+- Order Total: $128.80
+
+Test Steps:
+
+GIVEN the user is on the payment page
+WHEN the page loads
+THEN payment method options should be displayed
+AND "Debit Card" should be one of the available options
+
+GIVEN the payment options are displayed
+WHEN the user selects "Debit Card" as payment method
+THEN a debit card payment form should be displayed
+
+GIVEN the debit card form is displayed
+WHEN the user views the form
+THEN the following fields should be available:
+  - Card Number (16-digit input)
+  - Expiry Date (MM/YY format)
+  - CVV/CVC (3-4 digit security code)
+  - Cardholder Name (text input)
+
+GIVEN the user wants to pay with debit card
+WHEN the user enters the following information:
+  - Card Number: "4000 0566 5566 5556"
+  - Expiry Date: "12/25"
+  - CVV: "123"
+  - Cardholder Name: "John Doe"
+THEN all fields should accept the input
+
+GIVEN the user has entered card details
+WHEN the user clicks "Pay Now" or "Complete Order" button
+THEN the system should validate all payment fields
+AND validate card number format
+AND validate expiry date is not in the past
+AND validate CVV format
+
+GIVEN the payment details are valid
+WHEN the system processes the payment
+THEN the payment information should be encrypted
+AND the payment should be transmitted securely via SSL
+AND the payment request should be sent to Stripe payment gateway
+
+GIVEN Stripe processes the payment
+WHEN the payment is approved
+THEN the system should receive payment confirmation from Stripe
+AND the system should create the order in the database
+AND the order status should be set to "Confirmed" or "Paid"
+AND a unique order number should be generated
+
+GIVEN the payment is successful
+WHEN the order is created
+THEN the system should clear the shopping cart
+AND the system should send order confirmation email to the user
+AND the user should be redirected to order confirmation page
+AND the confirmation page should display order number and details
+
+GIVEN the payment is declined by the bank
+WHEN Stripe returns a decline response
+THEN the system should display an error message
+AND the message should indicate "Payment declined. Please check your card details or try another payment method."
+AND the order should not be created
+AND the user should remain on the payment page to retry
+
+GIVEN the user enters invalid card details
+WHEN the card number is invalid or expired
+THEN the system should display a validation error
+AND the message should indicate the specific issue (e.g., "Invalid card number" or "Card expired")
+
+GIVEN the payment is being processed
+WHEN the user waits for confirmation
+THEN a loading indicator or "Processing payment..." message should be displayed
+AND the submit button should be disabled to prevent duplicate submissions
+
+Expected Result:
+- Debit card payment option is available
+- Payment form displays all required fields
+- User can enter debit card details
+- Card information is validated
+- Payment is processed securely via SSL
+- Stripe payment gateway processes the transaction
+- Successful payment creates order
+- Order confirmation email is sent
+- User redirected to confirmation page
+- Failed payments show error message
+- Duplicate submissions are prevented
+
+Validation Points:
+- Debit card option is available
+- Payment form fields are present and functional
+- Card number validation works
+- Expiry date validation works
+- CVV validation works
+- Payment data is encrypted before transmission
+- SSL security is active (HTTPS)
+- Integration with Stripe works correctly
+- Payment success creates order in database
+- Order status is set correctly
+- Shopping cart is cleared after successful payment
+- Order confirmation email is sent
+- Order number is generated
+- User redirected to confirmation page
+- Payment decline handled gracefully
+- Error messages are user-friendly
+- Duplicate payment prevention works
+- Payment transaction is logged

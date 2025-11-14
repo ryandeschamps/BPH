@@ -1,0 +1,60 @@
+Test Script: TS-088 - Create Email Campaign for New Products
+
+Test Scenario: As an admin user, I want to create email content for new product launches, so that I can inform customers about new arrivals.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Email marketing section is accessible
+- Email templates functionality enabled
+
+Test Data:
+- Template Name: New Arrivals - Winter 2025
+- Subject: Check out our new winter collection!
+- Content: Email body with product highlights
+
+Test Steps:
+
+GIVEN the admin is in the admin panel
+WHEN the admin navigates to email marketing
+THEN "Email Marketing" or "Email Templates" option should be visible
+
+GIVEN the admin clicks on "Email Templates"
+WHEN the templates page loads
+THEN existing templates should be listed
+AND "Add New Template" button should be available
+
+GIVEN the admin clicks "Add New Template"
+WHEN the template form opens
+THEN the following fields should be available:
+  - Template Name
+  - Email Subject
+  - Email Body (WYSIWYG editor)
+  - Template Type (New Product, Promotional, etc.)
+
+GIVEN the admin creates new product email
+WHEN the admin enters:
+  - Name: "New Arrivals - Winter 2025"
+  - Subject: "Check out our new winter collection!"
+  - Body: Product highlights and images
+AND clicks "Save Template"
+THEN the template should be created
+AND success message displayed
+
+GIVEN the template is created
+WHEN the admin views templates list
+THEN "New Arrivals - Winter 2025" should be visible
+
+Expected Result:
+- Email marketing section accessible
+- New template can be created
+- WYSIWYG editor available
+- Template saves successfully
+- Template appears in list
+
+Validation Points:
+- Email Marketing accessible
+- Add Template button works
+- Form displays correctly
+- All fields functional
+- Template saves to database
+- Success message displays

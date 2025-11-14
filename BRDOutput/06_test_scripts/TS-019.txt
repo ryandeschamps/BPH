@@ -1,0 +1,104 @@
+Test Script: TS-019 - Update Item Quantity in Cart
+
+Test Scenario: As a registered buyer, I want to change the quantity of items in my cart, so that I can purchase the exact number of items I need.
+
+Prerequisites:
+- User is logged in
+- User has items in shopping cart
+- Cart update functionality is enabled
+- Sufficient stock is available for products
+
+Test Data:
+- Cart Item: Blue T-Shirt, Size M
+- Initial Quantity: 2
+- Updated Quantity: 5
+- Unit Price: $25.00
+- Initial Total: $50.00
+- Updated Total: $125.00
+
+Test Steps:
+
+GIVEN the user is logged in and viewing the shopping cart
+WHEN the user views a cart item
+THEN each item should have a quantity selector or input field
+
+GIVEN the quantity selector is visible
+WHEN the user views the quantity control
+THEN it should show the current quantity (e.g., "2")
+AND it should allow increasing or decreasing the quantity
+
+GIVEN the user wants to increase quantity
+WHEN the user changes the quantity from 2 to 5
+THEN the quantity field should update to show "5"
+
+GIVEN the quantity has been changed
+WHEN the user confirms the update (by clicking "Update" button or automatic update)
+THEN the system should validate the new quantity
+AND the system should check if sufficient stock is available
+
+GIVEN sufficient stock is available
+WHEN the quantity update is processed
+THEN the item total should be recalculated (5 × $25.00 = $125.00)
+AND the item total should update from $50.00 to $125.00
+AND the cart subtotal should be recalculated
+AND the cart subtotal should update accordingly
+AND a confirmation message may be shown (e.g., "Cart updated")
+
+GIVEN the quantity has been updated
+WHEN the user views the cart
+THEN the updated quantity should be displayed
+AND the updated item total should be displayed
+AND the updated cart subtotal should be displayed
+
+GIVEN the user wants to decrease quantity
+WHEN the user changes quantity from 5 to 3
+AND confirms the update
+THEN the item total should recalculate to $75.00 (3 × $25.00)
+AND the cart subtotal should update accordingly
+
+GIVEN the user tries to enter quantity more than available stock
+WHEN the user enters a quantity exceeding available stock (e.g., 1000)
+AND attempts to update
+THEN the system should display an error message
+AND the message should indicate "Only X items available in stock"
+AND the quantity should remain unchanged or reset to available stock
+
+GIVEN the user tries to enter invalid quantity
+WHEN the user enters zero or negative number
+AND attempts to update
+THEN the system should display an error message
+AND the message should indicate "Please enter a valid quantity"
+OR the system should automatically remove the item from cart (if quantity set to 0)
+
+GIVEN the user updates quantity to 0
+WHEN the user sets quantity to zero and updates
+THEN the item should be removed from the cart
+AND a message should confirm "Item removed from cart"
+
+Expected Result:
+- User can update quantity for cart items
+- Quantity can be increased or decreased
+- Item total recalculates based on new quantity
+- Cart subtotal recalculates automatically
+- Stock availability is validated
+- Error message shown if requested quantity exceeds stock
+- Invalid quantities are rejected
+- Setting quantity to 0 removes item from cart
+- Cart updates are confirmed with message
+- All calculations are accurate
+
+Validation Points:
+- Quantity selector/input is functional
+- Quantity can be increased successfully
+- Quantity can be decreased successfully
+- Item total recalculates correctly (qty × unit price)
+- Cart subtotal updates correctly
+- Stock availability is checked before update
+- Error shown when quantity exceeds available stock
+- Error shown for invalid quantities (zero, negative, non-numeric)
+- Setting quantity to 0 removes the item
+- Update confirmation message is displayed
+- Cart state persists after update
+- Database is updated with new quantity
+- Multiple items can be updated independently
+- Page refreshes or updates appropriately after change

@@ -1,0 +1,112 @@
+Test Script: TS-039 - Track Current Order Shipment
+
+Test Scenario: As a registered buyer, I want to track the shipping status of my current orders, so that I can know when to expect delivery.
+
+Prerequisites:
+- User is logged in
+- User has at least one order that has been shipped
+- Order has tracking information assigned
+- Tracking functionality is enabled
+
+Test Data:
+- Order Number: ORD-2025-001234
+- Order Status: Shipped
+- Carrier: UPS
+- Tracking Number: 1Z999AA10123456784
+- Shipped Date: January 29, 2025
+- Estimated Delivery: February 2, 2025
+
+Test Steps:
+
+GIVEN the user is logged in and viewing order history
+WHEN the user navigates to "My Orders"
+THEN orders should be displayed with their current status
+
+GIVEN the user has a shipped order
+WHEN the user views the order list
+THEN orders with status "Shipped" should be visible
+AND these orders should have tracking information available
+
+GIVEN the user wants to track an order
+WHEN the user clicks "View Details" for order ORD-2025-001234
+THEN the order details page should load
+AND tracking information section should be visible
+
+GIVEN the tracking information is displayed
+WHEN the user views the tracking section
+THEN the following information should be shown:
+  - Order Status: Shipped
+  - Carrier Name: UPS
+  - Tracking Number: 1Z999AA10123456784
+  - Shipped Date: January 29, 2025
+  - Estimated Delivery Date: February 2, 2025
+
+GIVEN the tracking number is displayed
+WHEN the user views the tracking section
+THEN a "Track Shipment" button or tracking number link should be available
+
+GIVEN the user wants to see shipment progress
+WHEN the user clicks "Track Shipment" or the tracking number link
+THEN the system should redirect to the carrier's tracking page
+OR display tracking information embedded on the page
+
+GIVEN the carrier tracking page opens
+WHEN the page loads
+THEN the user should see detailed shipment status from the carrier
+AND the tracking number should be pre-filled
+
+GIVEN shipment tracking information is available
+WHEN the user views the tracking details
+THEN the current location and status of the package should be visible
+AND the tracking history may show:
+  - Package picked up
+  - In transit
+  - Out for delivery
+  - Current location
+
+GIVEN the order is in different statuses
+WHEN the order status is "Confirmed" or "In Process"
+THEN tracking information should not be available yet
+AND a message should indicate "Your order is being processed"
+
+GIVEN the order has been delivered
+WHEN the order status is "Delivered"
+THEN the tracking section should show:
+  - Status: Delivered
+  - Delivery Date
+  - Delivered location confirmation
+
+GIVEN the user has multiple shipped orders
+WHEN the user wants to track different orders
+THEN each order should have its own tracking information
+AND the user should be able to track each shipment independently
+
+Expected Result:
+- User can access tracking information from order details
+- Shipped orders display tracking information
+- Carrier name and tracking number are shown
+- Shipped date and estimated delivery date displayed
+- Track Shipment link or button is available
+- Link directs to carrier's tracking page
+- Tracking number is pre-filled on carrier page
+- Current shipment status is visible
+- Orders not yet shipped show appropriate message
+- Delivered orders show delivery confirmation
+- Each order has independent tracking
+
+Validation Points:
+- Tracking section is visible for shipped orders
+- Order status is accurate
+- Carrier name is displayed correctly
+- Tracking number is valid and displayed
+- Shipped date is accurate
+- Estimated delivery date is shown
+- Track Shipment link is functional
+- Link correctly redirects to carrier website
+- Tracking number passes to carrier correctly
+- Orders without tracking show appropriate message
+- Delivered status shows delivery date
+- Multiple orders can be tracked independently
+- Tracking data matches shipment record
+- User can only track their own orders
+- Tracking information is up-to-date

@@ -1,0 +1,112 @@
+Test Script: TS-026 - Enter Billing Address at Checkout
+
+Test Scenario: As a registered buyer, I want to provide my billing address during checkout, so that I can complete payment processing.
+
+Prerequisites:
+- User is logged in
+- User has items in shopping cart
+- User has proceeded to checkout page
+- Address form is functional
+
+Test Data:
+- First Name: John
+- Last Name: Doe
+- Address Line 1: 123 Main Street
+- Address Line 2: Apt 4B
+- City: Los Angeles
+- State: California
+- ZIP Code: 90210
+- Country: United States
+- Phone: +1-555-0101
+
+Test Steps:
+
+GIVEN the user is on the checkout page
+WHEN the page loads
+THEN a "Billing Address" section should be displayed
+
+GIVEN the user views the billing address section
+WHEN the section is displayed
+THEN the following fields should be available:
+  - First Name (text input)
+  - Last Name (text input)
+  - Address Line 1 (text input)
+  - Address Line 2 (text input, optional)
+  - City (text input)
+  - State (dropdown or text input)
+  - ZIP Code (text input)
+  - Country (dropdown, pre-filled with "United States")
+  - Phone Number (text input)
+
+GIVEN the user has saved addresses in their account
+WHEN the billing address section loads
+THEN the user may see an option to "Select from saved addresses"
+OR the default address may be pre-filled
+AND the user should be able to choose "Use a different address"
+
+GIVEN the user wants to enter a new billing address
+WHEN the user fills in the billing address form:
+  - First Name: "John"
+  - Last Name: "Doe"
+  - Address Line 1: "123 Main Street"
+  - Address Line 2: "Apt 4B"
+  - City: "Los Angeles"
+  - State: "California"
+  - ZIP Code: "90210"
+  - Phone: "+1-555-0101"
+THEN all fields should accept the input
+
+GIVEN the user has entered the billing address
+WHEN the user clicks "Continue" or "Save and Continue"
+THEN the system should validate all required fields
+AND validate the address format
+
+GIVEN all validations pass
+WHEN the form is submitted
+THEN the billing address should be saved for this order
+AND the user should proceed to the shipping address section
+OR if billing and shipping are the same, proceed to payment section
+
+GIVEN the user leaves required fields empty
+WHEN the user tries to continue without filling required fields
+THEN the system should display validation errors
+AND highlight the missing fields
+AND display messages like "First Name is required", "ZIP Code is required"
+
+GIVEN the user enters invalid ZIP code format
+WHEN the user enters "ABC123" in the ZIP code field
+THEN the system should display an error message
+AND the message should indicate "Please enter a valid US ZIP code"
+
+GIVEN the user wants to use billing address as shipping address
+WHEN a checkbox "Same as shipping address" is available
+THEN the user should be able to check this option
+AND the shipping address should auto-populate with billing address
+
+Expected Result:
+- Billing address form is displayed at checkout
+- All required address fields are present
+- User can enter new billing address
+- User can select from saved addresses
+- Form validation works correctly
+- Required fields are enforced
+- ZIP code format is validated
+- Address is saved for the order
+- User proceeds to next checkout step
+- Option to use same address for shipping
+
+Validation Points:
+- Billing address section is visible
+- All required fields are present
+- Optional fields are marked as optional
+- Saved addresses can be selected
+- New address can be entered
+- Form accepts valid input
+- Required field validation works
+- ZIP code format validation works
+- State selection works correctly
+- Country field shows United States
+- Phone number field accepts valid format
+- Address is saved to order record
+- User can proceed after entering valid address
+- Same as shipping address option works

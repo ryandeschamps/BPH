@@ -1,0 +1,125 @@
+Test Script: TS-049 - View Customer List
+
+Test Scenario: As an admin user, I want to view a list of all registered customers, so that I can manage the customer base.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Customer management section is accessible
+- Database contains registered customer accounts
+- At least 10-15 customer accounts exist for testing
+
+Test Data:
+- Sample Customers:
+  - Customer 1: John Doe, john.doe@example.com, Active
+  - Customer 2: Jane Smith, jane.smith@example.com, Active
+  - Customer 3: Bob Johnson, bob.j@example.com, Inactive
+
+Test Steps:
+
+GIVEN the admin is logged in to the admin panel
+WHEN the admin views the navigation menu
+THEN a "Customers" or "Customer Management" option should be visible
+
+GIVEN the admin clicks on "Customers"
+WHEN the customer management page loads
+THEN a list of all registered customers should be displayed
+
+GIVEN the customer list is displayed
+WHEN the admin views the list
+THEN the page title should indicate "Customers" or "Customer List"
+AND a table or grid showing customer information should be visible
+
+GIVEN the customer table is displayed
+WHEN the admin views the table
+THEN the following columns should be present:
+  - Customer ID or #
+  - Customer Name
+  - Email Address
+  - Registration Date
+  - Status (Active/Inactive)
+  - Actions (View, Edit, Activate/Deactivate)
+
+GIVEN multiple customers are listed
+WHEN the admin views the customer data
+THEN each row should display complete customer information:
+  - Name: "John Doe"
+  - Email: "john.doe@example.com"
+  - Status: "Active" or "Inactive"
+  - Registration Date
+
+GIVEN the customer list is long
+WHEN more than 20-50 customers exist
+THEN pagination should be available
+AND the admin should be able to navigate between pages
+AND a per-page limit selector may be available (e.g., show 10, 25, 50 per page)
+
+GIVEN the admin wants to search for a customer
+WHEN a search functionality is available
+THEN the admin should be able to search by:
+  - Customer name
+  - Email address
+  - Customer ID
+AND search results should filter the customer list
+
+GIVEN the admin wants to filter customers
+WHEN filter options are available
+THEN the admin should be able to filter by:
+  - Status (Active/Inactive)
+  - Registration date range
+AND filtered results should be displayed
+
+GIVEN each customer has action buttons
+WHEN the admin views a customer row
+THEN the following actions should be available:
+  - View Details (eye icon or button)
+  - Edit (pencil icon or button)
+  - Activate/Deactivate (toggle or button)
+
+GIVEN the admin wants to view customer details
+WHEN the admin clicks "View Details" for a customer
+THEN the admin should navigate to the customer detail page
+OR a modal should display customer details
+
+GIVEN the admin wants to edit customer information
+WHEN the admin clicks "Edit" for a customer
+THEN the admin should navigate to the customer edit page
+OR a modal should display editable customer fields
+
+GIVEN the customer list displays status
+WHEN the admin views the status column
+THEN active customers should be indicated (e.g., green badge "Active")
+AND inactive customers should be indicated (e.g., red badge "Inactive")
+
+Expected Result:
+- Customer management page is accessible
+- All registered customers are listed
+- Customer information is displayed in organized table
+- Name, email, status, and date are visible for each customer
+- Pagination works for large customer lists
+- Search functionality filters customers
+- Filter options narrow down results
+- Action buttons are functional
+- View Details navigates to customer details
+- Edit button accesses customer edit form
+- Status indicators are clear
+- Admin can manage all customers from this page
+
+Validation Points:
+- Customers menu option is accessible
+- Customer list page loads correctly
+- All customers retrieved from database
+- Table displays all required columns
+- Customer data is accurate
+- Names and emails are displayed correctly
+- Status (Active/Inactive) is accurate
+- Registration dates are formatted properly
+- Pagination controls work correctly
+- Search functionality is operational
+- Filter options work correctly
+- View Details button is functional
+- Edit button is functional
+- Activate/Deactivate actions are available
+- Status indicators are visually distinct
+- Only admin can access this page
+- Customer data is sorted appropriately
+- Page performance is acceptable

@@ -1,0 +1,114 @@
+Test Script: TS-040 - Receive Shipping Notification Email
+
+Test Scenario: As a registered buyer, I want to receive email notification when my order is shipped, so that I can know my order is on the way.
+
+Prerequisites:
+- User has placed an order successfully
+- Order payment has been processed
+- Admin has updated order status to "Shipped"
+- Email service is operational
+- Shipment details have been entered by admin
+
+Test Data:
+- Order Number: ORD-2025-001234
+- User Email: john.doe@example.com
+- Carrier: UPS
+- Tracking Number: 1Z999AA10123456784
+- Shipped Date: January 29, 2025
+- Estimated Delivery: February 2, 2025
+
+Test Steps:
+
+GIVEN an order has been placed and confirmed
+WHEN the admin updates the order status from "Confirmed" or "In Process" to "Shipped"
+AND enters shipment details (carrier, tracking number)
+THEN the system should trigger a shipping notification email
+
+GIVEN the shipping email is triggered
+WHEN the email is generated
+THEN the email should be sent to the user's registered email "john.doe@example.com"
+
+GIVEN the email is sent
+WHEN the user checks their email inbox within a few minutes
+THEN the user should receive an email with subject containing "Order Shipped" or "Your order is on the way"
+AND the email should be from the e-commerce website's official email address
+
+GIVEN the user opens the shipping notification email
+WHEN the user reads the email content
+THEN the email should contain the following information:
+  - Order number (ORD-2025-001234)
+  - Shipped date (January 29, 2025)
+  - Carrier name (UPS)
+  - Tracking number (1Z999AA10123456784)
+  - Estimated delivery date (February 2, 2025)
+  - Shipping address
+  - List of items shipped
+
+GIVEN the email includes the tracking number
+WHEN the user views the tracking information
+THEN the tracking number should be displayed clearly
+AND may be formatted as a clickable link to the carrier's tracking page
+
+GIVEN the email contains tracking link
+WHEN the user clicks on the tracking number or "Track Shipment" link
+THEN the link should open the carrier's tracking page
+AND the tracking number should be pre-filled or automatically tracked
+
+GIVEN the email lists shipped items
+WHEN the user views the item details
+THEN each shipped item should be listed:
+  - Product name
+  - Quantity
+  - Basic product information
+
+GIVEN the email provides next steps
+WHEN the user reads the email
+THEN the email should include:
+  - Estimated delivery timeframe
+  - Instructions for tracking the shipment
+  - Customer support contact information
+  - Link to view order details on the website
+
+GIVEN the email contains links
+WHEN the user clicks "View Order Details" link
+THEN the link should navigate to the order details page
+AND the user may need to login if not already logged in
+AND the correct order should be displayed
+
+GIVEN multiple items in an order ship separately
+WHEN partial shipment occurs
+THEN separate shipping notification emails should be sent
+AND each email should specify which items were shipped
+
+Expected Result:
+- Shipping notification email sent when order marked as shipped
+- Email sent to user's registered email address
+- Email received within minutes of shipment
+- Email subject clearly indicates order shipment
+- Email contains order number and tracking information
+- Carrier and tracking number are displayed
+- Estimated delivery date is included
+- Shipping address is shown
+- Shipped items are listed
+- Tracking link is functional
+- Links to order details work
+- Email is professional and well-formatted
+
+Validation Points:
+- Email triggered when order status changes to "Shipped"
+- Email sent to correct email address
+- Email subject line is appropriate
+- Email sender address is correct
+- Order number in email matches the shipped order
+- Carrier name is correct
+- Tracking number is accurate
+- Shipped date is correct
+- Estimated delivery date is included
+- Shipping address is complete
+- All shipped items are listed
+- Tracking link is valid and functional
+- Order details link works correctly
+- Email properly formatted (HTML/text)
+- Email delivery is successful
+- Email transaction logged in system
+- Partial shipment notifications work correctly

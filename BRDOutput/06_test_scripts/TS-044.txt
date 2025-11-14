@@ -1,0 +1,121 @@
+Test Script: TS-044 - View My Posted Reviews
+
+Test Scenario: As a registered buyer, I want to see all reviews I have posted, so that I can manage my product feedback.
+
+Prerequisites:
+- User is logged in
+- User has previously posted ratings and reviews for products
+- Reviews have been approved by admin
+- My Account dashboard includes Reviews section
+
+Test Data:
+- User: john.doe@example.com
+- Posted Reviews:
+  - Review 1: Blue T-Shirt - 5 stars - "Great quality!"
+  - Review 2: Black Jeans - 4 stars - "Good fit, comfortable"
+  - Review 3: Summer Dress - 5 stars - "Perfect for warm weather"
+
+Test Steps:
+
+GIVEN the user is logged in
+WHEN the user navigates to "My Account"
+THEN the user should see a "Ratings and Reviews" or "My Reviews" option
+
+GIVEN the user clicks on "Ratings and Reviews"
+WHEN the reviews page loads
+THEN a list of all reviews posted by the user should be displayed
+
+GIVEN the reviews list is displayed
+WHEN the user views the page
+THEN the page title should indicate "My Reviews" or "Ratings and Reviews"
+AND the total number of reviews may be shown (e.g., "You have posted 3 reviews")
+
+GIVEN multiple reviews are displayed
+WHEN the user views each review
+THEN each review should show:
+  - Product image (thumbnail)
+  - Product name
+  - Rating given (number of stars)
+  - Review text/comments
+  - Date review was posted
+  - Review status (Approved, Pending, Rejected)
+
+GIVEN the reviews are listed
+WHEN the user views the review details
+THEN Review 1 should display:
+  - Product: Blue T-Shirt
+  - Rating: 5 stars (★★★★★)
+  - Comment: "Great quality!"
+  - Status: Approved
+AND Review 2 should display:
+  - Product: Black Jeans
+  - Rating: 4 stars (★★★★☆)
+  - Comment: "Good fit, comfortable"
+  - Status: Approved
+
+GIVEN a review is approved
+WHEN the review status is "Approved"
+THEN a checkmark or "Approved" label should be visible
+AND the review should be visible on the product page
+
+GIVEN a review is pending
+WHEN the review status is "Pending"
+THEN a "Pending Approval" label should be displayed
+AND a note indicating it's awaiting admin approval
+
+GIVEN a review is rejected
+WHEN the review status is "Rejected"
+THEN a "Rejected" label should be displayed
+AND optionally, a reason for rejection may be shown
+
+GIVEN the user wants to view the product
+WHEN the user clicks on the product name or image in a review
+THEN the user should navigate to that product's detail page
+
+GIVEN the user has posted many reviews
+WHEN more than 10-20 reviews exist
+THEN pagination should be available
+OR a "Load More" button should allow viewing additional reviews
+
+GIVEN the user has not posted any reviews
+WHEN a user with no reviews accesses this page
+THEN the system should display "You haven't posted any reviews yet"
+AND a "Browse Products" or "Continue Shopping" link should be available
+
+GIVEN the user can only review purchased items
+WHEN the user views their reviews
+THEN all reviewed products should be items the user has actually ordered
+AND reviews should only appear for completed/delivered orders
+
+Expected Result:
+- My Reviews page is accessible from My Account
+- All user's reviews are listed
+- Each review shows product, rating, text, and date
+- Review status (approved/pending/rejected) is indicated
+- Approved reviews are visible on product pages
+- Pending reviews show awaiting approval status
+- User can navigate to product pages from reviews
+- Pagination works for multiple reviews
+- Empty state shown for users with no reviews
+- Only user's own reviews are displayed
+- Reviews match user's purchase history
+
+Validation Points:
+- Ratings and Reviews option visible in My Account
+- My Reviews page loads correctly
+- All user's reviews retrieved from database
+- Product images display correctly
+- Product names are accurate
+- Star ratings display correctly
+- Review text is complete
+- Review date is formatted properly
+- Review status is accurate
+- Approved reviews show approval indicator
+- Pending reviews show pending status
+- Rejected reviews handled appropriately
+- Product links navigate correctly
+- Pagination works (if applicable)
+- Empty state displays when no reviews
+- User can only see their own reviews
+- Reviews correspond to purchased products
+- Page is user-specific and secure

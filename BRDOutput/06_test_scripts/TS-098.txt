@@ -1,0 +1,80 @@
+Test Script: TS-098 - Restrict Orders to US Only
+
+Test Scenario: As a system, I want to accept orders only from United States addresses, so that I can comply with business operational constraints.
+
+Prerequisites:
+- Shipping restriction implemented
+- Country validation enabled
+- Checkout process functional
+
+Test Data:
+- US Address: 123 Main St, Los Angeles, CA 90210, USA
+- Canadian Address: 456 Maple Ave, Toronto, ON M5H 2N2, Canada
+- UK Address: 789 High St, London, UK SW1A 1AA
+
+Test Steps:
+
+GIVEN the user is on the checkout page
+WHEN the user enters shipping address
+THEN the country field should default to "United States"
+AND may only show "United States" as option
+OR other countries may be disabled
+
+GIVEN the user enters a US address
+WHEN the user provides:
+  - Address: "123 Main St"
+  - City: "Los Angeles"
+  - State: "CA"
+  - ZIP: "90210"
+  - Country: "United States"
+AND proceeds to payment
+THEN the order should be accepted
+AND checkout should complete successfully
+
+GIVEN the user tries to enter non-US address
+WHEN the user selects or enters:
+  - Country: "Canada"
+AND tries to proceed
+THEN a validation error should be displayed
+AND the message should indicate "We only ship to United States addresses"
+AND the user should not be able to complete checkout
+
+GIVEN the user enters Canadian ZIP code
+WHEN the user tries postal code "M5H 2N2"
+THEN the system should detect non-US format
+AND display error message
+AND prevent order placement
+
+GIVEN the user checks PIN code availability
+WHEN the user enters a Canadian postal code on product page
+THEN the system should indicate "Delivery not available. We only ship within the US."
+
+GIVEN the address validation runs
+WHEN the system validates shipping address
+THEN it should verify:
+  - Country is "United States"
+  - State is valid US state
+  - ZIP code is valid US format (5 digits or ZIP+4)
+
+Expected Result:
+- Only US addresses accepted for shipping
+- Country field restricted to US
+- Non-US addresses rejected
+- Clear error messages displayed
+- Checkout prevented for non-US orders
+- ZIP code validation enforces US format
+
+Validation Points:
+- Country field defaults to US
+- Non-US countries blocked or unavailable
+- US address validation works
+- US order completes successfully
+- Non-US address triggers error
+- Error message clear and helpful
+- Canadian address rejected
+- UK address rejected
+- ZIP code format validated
+- State validation works
+- PIN code check enforces US only
+- Checkout blocked for non-US
+- Business rule enforced throughout

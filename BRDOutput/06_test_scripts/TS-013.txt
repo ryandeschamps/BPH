@@ -1,0 +1,107 @@
+Test Script: TS-013 - View Complete Product Details
+
+Test Scenario: As a visitor or buyer, I want to view comprehensive product information including images, description, price, and variations, so that I can make an informed purchase decision.
+
+Prerequisites:
+- Product exists in catalog with complete information
+- Product has multiple images and variations configured
+- Website product detail page is functional
+
+Test Data:
+- Product: Men's Blue Denim Jacket
+- SKU: DN-JAC-001
+- Price: $79.99
+- Available Sizes: S, M, L, XL
+- Available Colors: Blue, Black, Grey
+- Images: 5 product images
+
+Test Steps:
+
+GIVEN the user has navigated to a product detail page
+WHEN the page loads
+THEN the product detail page should be displayed with all information
+
+GIVEN the product detail page is displayed
+WHEN the user views the page
+THEN the following information should be visible:
+  - Product title/name
+  - Product SKU code
+  - Product price in USD
+  - Product description
+  - Product images (thumbnail and main image)
+  - Available size variations
+  - Available color variations
+  - Product ratings and reviews section
+  - Add to cart button
+  - Add to wishlist button
+
+GIVEN the product images are displayed
+WHEN the user views the image section
+THEN a main/featured product image should be prominently displayed
+AND thumbnail images should be shown below or beside the main image
+AND the user should be able to click thumbnails to change the main image
+
+GIVEN the user wants to view different product images
+WHEN the user clicks on a thumbnail image
+THEN the main product image should update to show the selected image
+AND the selected thumbnail should be highlighted or indicated
+
+GIVEN the product description is displayed
+WHEN the user reads the description
+THEN the description should include:
+  - Detailed product information
+  - Material/fabric details
+  - Care instructions (if applicable)
+  - Product features and benefits
+
+GIVEN the product has size variations
+WHEN the user views the size options
+THEN all available sizes should be displayed (e.g., S, M, L, XL)
+AND unavailable sizes should be indicated as "Out of Stock" or disabled
+AND the user should be able to select a size
+
+GIVEN the product has color variations
+WHEN the user views the color options
+THEN all available colors should be displayed (e.g., Blue, Black, Grey)
+AND color options may be shown as color swatches or text
+AND unavailable colors should be indicated as "Out of Stock" or disabled
+AND the user should be able to select a color
+
+GIVEN the ratings and reviews section is displayed
+WHEN the user scrolls to the ratings section
+THEN the average product rating should be shown (e.g., 4.5/5 stars)
+AND the total number of reviews should be displayed
+AND individual customer reviews should be visible or accessible
+
+GIVEN the user is not logged in (visitor)
+WHEN the user views the product detail page
+THEN all product information should be visible without requiring login
+
+Expected Result:
+- Complete product information is displayed clearly
+- Product title, SKU, and price are visible
+- Multiple product images are available and viewable
+- Image gallery works smoothly
+- Product description provides comprehensive information
+- Size variations are displayed and selectable
+- Color variations are displayed and selectable
+- Stock availability is indicated for variations
+- Ratings and reviews section is present
+- Page layout is professional and user-friendly
+- All information is accessible to visitors without login
+
+Validation Points:
+- All required product information is present
+- Product images load correctly
+- Image gallery/thumbnails work properly
+- Main image updates when thumbnail is clicked
+- Product price is displayed in USD format
+- Product description is complete and formatted properly
+- Size options are correctly displayed
+- Color options are correctly displayed
+- Out of stock variations are clearly indicated
+- Ratings and reviews section is functional
+- Add to cart and wishlist buttons are visible
+- Page is accessible to both visitors and logged-in users
+- Product information matches the database records
+- SKU code is correctly displayed

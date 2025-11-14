@@ -1,0 +1,94 @@
+Test Script: TS-011 - View Product Listing
+
+Test Scenario: As a visitor or buyer, I want to view product listings with key information, so that I can compare products at a glance.
+
+Prerequisites:
+- Product catalog is populated with active products
+- Products have complete information (title, image, price, rating)
+- Website is accessible
+
+Test Data:
+- Category: Women's Dresses
+- Expected Products: At least 12 products
+- Product Information: Title, Image, Price, Rating
+
+Test Steps:
+
+GIVEN the user is on the website
+WHEN the user navigates to a category or performs a search
+THEN the user should be directed to a product listing page
+
+GIVEN the user is on the product listing page
+WHEN the page loads
+THEN products should be displayed in a grid or list layout
+
+GIVEN the products are displayed
+WHEN the user views each product card
+THEN each product should display the following information:
+  - Product title
+  - Product thumbnail image
+  - Product price
+  - Product rating (number of stars or rating value)
+
+GIVEN the product thumbnail is displayed
+WHEN the user views the image
+THEN the image should be clear and properly sized
+AND the image should represent the actual product
+AND the image should load completely
+
+GIVEN the product title is displayed
+WHEN the user views the title
+THEN the title should be complete and readable
+AND the title should accurately describe the product
+
+GIVEN the product price is displayed
+WHEN the user views the price
+THEN the price should be shown in USD currency format (e.g., $29.99)
+AND the price should be clearly visible
+AND any discounts or sale prices should be indicated
+
+GIVEN the product rating is displayed
+WHEN the user views the rating
+THEN the rating should be shown (e.g., 4.5 stars or 4.5/5)
+AND the number of reviews should be displayed (e.g., "(24 reviews)")
+OR if no ratings exist, it should show "No ratings yet" or similar message
+
+GIVEN multiple products are displayed
+WHEN the user scrolls through the listing
+THEN products should be arranged in a consistent grid layout
+AND pagination should be available if there are many products
+AND the number of products per page should be reasonable (e.g., 12, 20, or 24 items)
+
+GIVEN the user is viewing the product listing
+WHEN the user is not logged in (visitor)
+THEN the user should still be able to view all product information
+AND no login should be required to view the listing
+
+GIVEN there are no products in a category
+WHEN the user navigates to that category
+THEN the system should display a message "No products available in this category"
+
+Expected Result:
+- Product listing page displays products in organized grid/list
+- Each product shows thumbnail image, title, price, and rating
+- Images are clear and load properly
+- Prices are displayed in USD format
+- Ratings are visible with number of reviews
+- Layout is consistent and professional
+- Pagination works for large product sets
+- Visitors can view listings without login
+- Appropriate message shown for empty categories
+
+Validation Points:
+- All active products in category are displayed
+- Product thumbnail images load correctly
+- Product titles are complete and accurate
+- Prices are displayed in correct USD format
+- Ratings display correctly (or "No ratings" for new products)
+- Grid/list layout is responsive and user-friendly
+- Pagination controls work correctly
+- Product count is accurate
+- No login required to view listings
+- Page loads within acceptable time
+- Deactivated products are not shown
+- Product information is up-to-date

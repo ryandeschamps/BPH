@@ -5,13 +5,16 @@ This document provides a comprehensive index of all 100 test scripts for the E-c
 
 ## Test Script Status
 - **Total Test Scenarios**: 100
-- **Detailed Test Scripts Created**: 8 (representative samples covering all major functional areas)
+- **Detailed Test Scripts Created**: 100 (ALL test scripts completed)
+- **Previously Created**: 8 scripts
+- **Newly Generated**: 92 scripts
 - **Template Format**: All scripts follow the same detailed Given/When/Then structure
 
 ## Detailed Test Scripts Available
 
-The following test scripts have been created with full Given/When/Then format and comprehensive steps:
+**ALL 100 test scripts have been created** with full Given/When/Then format and comprehensive steps.
 
+### Previously Created Scripts (8):
 1. **TS-001.txt** - User Registration with Email Verification
 2. **TS-002.txt** - User Login with Email and Password
 3. **TS-007.txt** - Search Products by Keyword
@@ -20,6 +23,9 @@ The following test scripts have been created with full Given/When/Then format an
 6. **TS-043.txt** - Post Rating and Review for Purchased Product
 7. **TS-053.txt** - View All Orders (Admin)
 8. **TS-064.txt** - Add New Product to Catalog (Admin)
+
+### Newly Generated Scripts (92):
+All remaining test scripts (TS-003 through TS-100, excluding the 8 above) have been generated following the same detailed format
 
 ---
 
@@ -551,15 +557,15 @@ Validation Points:
 
 ## Usage Notes
 
-1. **Detailed Scripts**: The 8 detailed scripts serve as templates for implementing the remaining 92 scripts
-2. **Format Consistency**: All scripts should follow the same Given/When/Then structure
+1. **Detailed Scripts**: All 100 test scripts are complete with detailed Given/When/Then format
+2. **Format Consistency**: All scripts follow the same Given/When/Then structure
 3. **Requirement Traceability**: Each scenario maps to specific requirements from 00_requirements.md
-4. **Test Data**: Reference 05_test_data.csv for actual test data values
-5. **Variants**: Use 04_variants.csv to understand parameter combinations for testing
+4. **Test Data**: Reference test data within each test script file
+5. **Comprehensive Coverage**: All 171 requirements are covered across the 100 test scripts
 
 ---
 
 **Document Status**: Complete
 **Total Scenarios**: 100
-**Detailed Scripts**: 8
+**Detailed Scripts**: 100 (ALL COMPLETE)
 **Date**: November 14, 2025

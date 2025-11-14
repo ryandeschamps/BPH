@@ -1,0 +1,149 @@
+Test Script: TS-054 - View Order Details
+
+Test Scenario: As an admin user, I want to view complete details of a specific order, so that I can process and fulfill the order.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Orders exist in database
+- Order detail page is accessible
+- Sample order has complete information
+
+Test Data:
+- Order Number: ORD-2025-001234
+- Order Date: January 28, 2025
+- Customer: John Doe (john.doe@example.com)
+- Status: Confirmed
+- Items: Blue T-Shirt (Qty 2, $50.00), Black Jeans (Qty 1, $60.00)
+- Subtotal: $110.00
+- Shipping: $10.00
+- Tax: $8.80
+- Total: $128.80
+- Payment Method: Credit Card
+- Payment Status: Paid
+
+Test Steps:
+
+GIVEN the admin is viewing the orders list
+WHEN the admin clicks "View Details" for order ORD-2025-001234
+THEN the admin should navigate to the order detail page
+
+GIVEN the order detail page loads
+WHEN the admin views the page
+THEN the page title should show "Order Details" or the order number
+
+GIVEN the order header information is displayed
+WHEN the admin views the top section
+THEN the following should be visible:
+  - Order Number: ORD-2025-001234
+  - Order Date: January 28, 2025
+  - Order Status: Confirmed
+  - Payment Status: Paid
+
+GIVEN the customer information is displayed
+WHEN the admin views the customer section
+THEN the following should be shown:
+  - Customer Name: John Doe
+  - Customer Email: john.doe@example.com
+  - Customer Phone: (if available)
+  - Link to view customer profile
+
+GIVEN the ordered items are displayed
+WHEN the admin views the items section
+THEN all ordered items should be listed
+AND each item should show:
+  - Product image (thumbnail)
+  - Product name
+  - SKU code
+  - Selected variations (size, color)
+  - Quantity ordered
+  - Price per unit
+  - Item total
+
+GIVEN the items details are shown
+WHEN the admin views the item list
+THEN Item 1 should display: "Blue T-Shirt | SKU: TS-001 | Size: M | Qty: 2 | $25.00 each | Total: $50.00"
+AND Item 2 should display: "Black Jeans | SKU: JN-002 | Size: 32 | Qty: 1 | $60.00 each | Total: $60.00"
+
+GIVEN the pricing breakdown is displayed
+WHEN the admin views the order summary
+THEN the following should be shown:
+  - Subtotal: $110.00
+  - Shipping Cost: $10.00
+  - Tax: $8.80
+  - Order Total: $128.80
+
+GIVEN the shipping address is displayed
+WHEN the admin views the shipping section
+THEN complete shipping address should be shown:
+  - Recipient Name
+  - Address Line 1 and 2
+  - City, State, ZIP Code
+  - Country
+  - Phone Number
+
+GIVEN the billing address is displayed
+WHEN the admin views the billing section
+THEN complete billing address should be shown
+
+GIVEN the payment information is displayed
+WHEN the admin views the payment section
+THEN the following should be shown:
+  - Payment Method: Credit Card
+  - Payment Status: Paid
+  - Transaction ID (if available)
+  - Payment Date
+
+GIVEN the shipment information is displayed
+WHEN the order has been shipped
+THEN shipping details should be shown:
+  - Carrier name
+  - Tracking number
+  - Shipped date
+  - Estimated delivery date
+
+GIVEN the admin wants to edit the order
+WHEN an "Edit Order" button is available
+THEN clicking it should allow order modifications
+
+GIVEN the admin wants to update order status
+WHEN status update options are available
+THEN the admin should be able to change status to:
+  - Confirmed, In Process, Shipped, Delivered
+
+GIVEN the admin wants to manage shipment
+WHEN "Add Shipment" or "Update Shipment" button is available
+THEN clicking it should allow entering tracking information
+
+Expected Result:
+- Order detail page displays complete order information
+- Order number, date, and status are shown
+- Customer information is displayed
+- All ordered items are listed with details
+- Pricing breakdown is accurate
+- Shipping and billing addresses are complete
+- Payment information is displayed
+- Shipment details shown (if shipped)
+- Edit and update options are available
+- Admin can manage order from this page
+
+Validation Points:
+- Order detail page loads correctly
+- Order number matches selected order
+- Order date is accurate
+- Order status is current
+- Payment status is correct
+- Customer information is complete
+- All items in order are displayed
+- Product details are accurate
+- Quantities and prices are correct
+- Subtotal calculation is accurate
+- Shipping and tax are correct
+- Total amount matches order total
+- Addresses are complete and accurate
+- Payment method is displayed
+- Transaction information shown
+- Shipment details present (if applicable)
+- Edit options are functional
+- Status update options work
+- All prices in USD format
+- Data is order-specific and secure

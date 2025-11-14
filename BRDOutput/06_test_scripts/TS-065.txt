@@ -1,0 +1,140 @@
+Test Script: TS-065 - Edit Existing Product
+
+Test Scenario: As an admin user, I want to update product information and variations, so that I can keep product details accurate and current.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Products exist in catalog
+- Product edit functionality is enabled
+- Categories and variations are configured
+
+Test Data:
+- Existing Product: "Men's Blue T-Shirt"
+- Current Price: $25.00
+- New Price: $29.99
+- Current Description: "Comfortable cotton t-shirt"
+- New Description: "Premium quality cotton t-shirt with modern fit"
+- Current Stock: 50
+- New Stock: 75
+
+Test Steps:
+
+GIVEN the admin is viewing the products list
+WHEN the admin views product records
+THEN each product should have an "Edit" button or link
+
+GIVEN the admin wants to edit a product
+WHEN the admin clicks "Edit" for "Men's Blue T-Shirt"
+THEN the product edit form should open
+
+GIVEN the edit form is displayed
+WHEN the admin views the form
+THEN the following fields should be available:
+  - Product Name
+  - SKU Code
+  - Description
+  - Price
+  - Category and Sub-category
+  - Product Images
+  - Variations (Size, Color)
+  - Stock/Inventory
+  - Status (Active/Inactive)
+  - Keywords/Tags
+
+GIVEN the form is pre-filled
+WHEN the admin views the edit form
+THEN current product data should be displayed:
+  - Name: "Men's Blue T-Shirt"
+  - Price: "$25.00"
+  - Description: "Comfortable cotton t-shirt"
+  - Current images
+  - Existing variations
+
+GIVEN the admin wants to update product information
+WHEN the admin modifies:
+  - Price: "$29.99"
+  - Description: "Premium quality cotton t-shirt with modern fit"
+  - Stock: "75"
+AND clicks "Save Changes" or "Update Product"
+THEN the system should validate all fields
+
+GIVEN the validation passes
+WHEN the update is processed
+THEN the product should be updated in the database
+AND a success message should display "Product updated successfully"
+
+GIVEN the admin updates product images
+WHEN the admin removes an old image and uploads a new one
+AND saves the changes
+THEN the old image should be removed
+AND the new image should be added
+AND image order should be preserved
+
+GIVEN the admin updates variations
+WHEN the admin adds a new size "XXL"
+OR removes an existing color
+AND saves the changes
+THEN the variations should be updated
+AND inventory for new variations should be initialized
+
+GIVEN the admin changes category
+WHEN the admin moves product from "T-Shirts" to "Premium Shirts"
+AND saves
+THEN the product should be reassigned to new category
+AND visible under new category on website
+
+GIVEN the admin changes product status
+WHEN the admin sets status from "Active" to "Inactive"
+THEN the product should be deactivated
+AND hidden from customer-facing website
+
+GIVEN the admin enters invalid data
+WHEN the admin enters negative price or empty product name
+THEN validation errors should be displayed
+AND changes should not be saved
+
+GIVEN the admin updates SKU
+WHEN the admin changes SKU to a value already in use
+THEN a validation error should display
+AND the message should indicate "SKU already exists"
+
+GIVEN multiple fields are updated
+WHEN the admin changes price, description, stock, and images together
+AND saves
+THEN all changes should be saved simultaneously
+AND reflected in product details
+
+Expected Result:
+- Admin can access product edit form
+- Edit form displays current product information
+- Admin can modify all product fields
+- Price, description, and stock can be updated
+- Images can be added, removed, or reordered
+- Variations can be added or removed
+- Category can be changed
+- Product status can be changed
+- Validation works correctly
+- All changes saved to database
+- Success message displayed
+
+Validation Points:
+- Edit button accessible for products
+- Edit form displays correctly
+- Current data pre-fills form
+- All fields are editable
+- Price field accepts decimal values
+- Description field accepts text
+- Stock field accepts numeric input
+- Image upload/removal works
+- Variation management works
+- Category selection works
+- Status toggle works
+- Required field validation works
+- Price validation works (no negatives)
+- SKU uniqueness check works
+- Database updated with changes
+- Success message displays
+- Updated data visible on website
+- Images display correctly
+- Category change reflected
+- Inactive products hidden from customers

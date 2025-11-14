@@ -1,0 +1,103 @@
+Test Script: TS-100 - Manage Products with SKU Codes
+
+Test Scenario: As an admin user, I want to use SKU codes to identify and track products, so that I can manage inventory and orders efficiently.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Product management accessible
+- SKU system implemented
+
+Test Data:
+- Product: Men's Blue T-Shirt
+- SKU: TS-MEN-BLU-001
+- Category: Men's Clothing
+- Size Variations: S, M, L, XL
+
+Test Steps:
+
+GIVEN the admin is adding a new product
+WHEN the product creation form is displayed
+THEN a "SKU Code" field should be available
+
+GIVEN the admin enters product details
+WHEN the admin fills in:
+  - Product Name: "Men's Blue T-Shirt"
+  - SKU: "TS-MEN-BLU-001"
+  - Category: "Men's Clothing"
+AND saves the product
+THEN the SKU should be stored with the product
+
+GIVEN the SKU must be unique
+WHEN the admin tries to create another product with SKU "TS-MEN-BLU-001"
+THEN a validation error should appear
+AND the message should indicate "SKU code already exists"
+AND prevent duplicate SKU creation
+
+GIVEN the product has variations
+WHEN the product has sizes S, M, L, XL
+THEN each variation may have its own SKU:
+  - TS-MEN-BLU-001-S
+  - TS-MEN-BLU-001-M
+  - TS-MEN-BLU-001-L
+  - TS-MEN-BLU-001-XL
+OR all variations may share the base SKU
+
+GIVEN the admin views product list
+WHEN the products are displayed
+THEN the SKU code should be visible in the list
+AND admin can search/filter by SKU
+
+GIVEN the admin searches by SKU
+WHEN the admin enters "TS-MEN-BLU-001" in search
+THEN the matching product should be found
+AND displayed in results
+
+GIVEN orders contain SKU codes
+WHEN the admin views order details
+THEN each ordered item should display its SKU code
+AND SKU should help identify exact product/variation
+
+GIVEN inventory is tracked
+WHEN stock levels are managed
+THEN SKU codes should be used to identify items
+AND inventory should be associated with SKU
+
+GIVEN reports are generated
+WHEN product reports are created
+THEN SKU codes should be included
+AND enable product tracking and analysis
+
+GIVEN customers view products
+WHEN products are displayed on website
+THEN SKU codes may be shown on product pages
+OR kept internal for admin use only
+
+Expected Result:
+- SKU field available for products
+- SKU codes stored and displayed
+- SKU uniqueness enforced
+- Variations can have individual SKUs
+- Search by SKU works
+- Orders show SKU codes
+- Inventory tracked by SKU
+- Reports include SKU codes
+- Efficient product identification
+
+Validation Points:
+- SKU field present in product form
+- SKU accepts alphanumeric input
+- SKU is saved with product
+- SKU uniqueness validated
+- Duplicate SKU prevented
+- Error message for duplicate SKU
+- Variation SKUs supported
+- SKU visible in product list
+- Search by SKU functional
+- Filter by SKU works
+- Order items show SKU
+- Inventory linked to SKU
+- Reports include SKU column
+- SKU aids product tracking
+- SKU format flexible
+- SKU used for identification
+- Admin can manage via SKU

@@ -1,0 +1,113 @@
+Test Script: TS-052 - Activate/Deactivate Customer Account
+
+Test Scenario: As an admin user, I want to activate or deactivate customer accounts, so that I can manage access and handle policy violations.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Customer accounts exist in database
+- Both active and inactive customers exist for testing
+- Account status management is functional
+
+Test Data:
+- Active Customer: John Doe, john.doe@example.com, Status: Active
+- Inactive Customer: Jane Smith, jane.smith@example.com, Status: Inactive
+
+Test Steps:
+
+GIVEN the admin is viewing the customer list
+WHEN the admin views customer records
+THEN each customer should have a status indicator (Active or Inactive)
+AND action buttons for status management should be available
+
+GIVEN the admin wants to deactivate an active customer
+WHEN the admin views customer "John Doe" with status "Active"
+THEN a "Deactivate" button or toggle should be available
+
+GIVEN the admin clicks "Deactivate"
+WHEN the deactivation is triggered
+THEN a confirmation dialog may appear asking "Are you sure you want to deactivate this customer?"
+
+GIVEN the admin confirms deactivation
+WHEN the admin confirms the action
+THEN the system should update the customer's status to "Inactive"
+AND the database should be updated
+AND a success message should display "Customer account deactivated successfully"
+
+GIVEN the customer account has been deactivated
+WHEN the admin views the customer list
+THEN the customer status should show "Inactive"
+AND the action button should change to "Activate"
+
+GIVEN the customer tries to login after deactivation
+WHEN the deactivated customer attempts to login
+THEN the login should fail
+AND an error message should indicate "Your account has been deactivated. Please contact support."
+
+GIVEN the deactivated customer tries to place an order
+WHEN the customer attempts to checkout or make a purchase
+THEN the system should prevent the transaction
+AND display an appropriate message
+
+GIVEN the admin wants to activate an inactive customer
+WHEN the admin views customer "Jane Smith" with status "Inactive"
+THEN an "Activate" button or toggle should be available
+
+GIVEN the admin clicks "Activate"
+WHEN the activation is triggered
+THEN a confirmation dialog may appear asking "Are you sure you want to activate this customer?"
+
+GIVEN the admin confirms activation
+WHEN the admin confirms the action
+THEN the system should update the customer's status to "Active"
+AND the database should be updated
+AND a success message should display "Customer account activated successfully"
+
+GIVEN the customer account has been activated
+WHEN the admin views the customer list
+THEN the customer status should show "Active"
+AND the action button should change to "Deactivate"
+
+GIVEN the customer tries to login after activation
+WHEN the previously inactive customer attempts to login
+THEN the login should succeed
+AND the customer should have full access to their account
+
+GIVEN the status change is logged
+WHEN an admin activates or deactivates a customer
+THEN the action should be logged in the system
+AND the log should include admin user, timestamp, and action performed
+
+GIVEN the admin can toggle status from customer detail page
+WHEN the admin is viewing a customer's detail page
+THEN the activate/deactivate option should also be available
+AND should function the same as from the customer list
+
+Expected Result:
+- Admin can view customer status (Active/Inactive)
+- Admin can deactivate active customers
+- Admin can activate inactive customers
+- Status changes are saved to database
+- Success messages displayed after status change
+- Deactivated customers cannot login
+- Deactivated customers cannot make purchases
+- Activated customers regain full access
+- Status changes are logged
+- Toggle works from both list and detail pages
+
+Validation Points:
+- Customer status is displayed correctly
+- Activate/Deactivate buttons are functional
+- Confirmation dialog appears (if implemented)
+- Status update is saved to database
+- Customer list reflects updated status
+- Action button changes after status change
+- Success message displays
+- Deactivated customer login is blocked
+- Deactivated customer transactions are prevented
+- Activated customer can login successfully
+- Activated customer has full access
+- Status change is logged with admin info
+- Logs include timestamp and action
+- Status toggle works from detail page
+- Multiple customers can be managed independently
+- Changes take effect immediately

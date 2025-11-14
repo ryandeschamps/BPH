@@ -1,0 +1,114 @@
+Test Script: TS-035 - Manage Saved Addresses
+
+Test Scenario: As a registered buyer, I want to add, edit, and delete saved addresses, so that I can quickly select addresses during checkout.
+
+Prerequisites:
+- User has a registered account
+- User is logged in
+- Address management functionality is accessible
+- User may have existing saved addresses
+
+Test Data:
+- Address 1: 123 Main St, Los Angeles, CA 90210
+- Address 2: 456 Oak Ave, San Francisco, CA 94102
+- New Address: 789 Pine Rd, San Diego, CA 92101
+
+Test Steps:
+
+GIVEN the user is logged in
+WHEN the user navigates to "My Account"
+THEN the user should see an option for "Saved Addresses" or "Address Book"
+
+GIVEN the user clicks on "Saved Addresses"
+WHEN the address management page loads
+THEN a list of saved addresses should be displayed (if any exist)
+AND an option to "Add New Address" should be available
+
+GIVEN the user wants to add a new address
+WHEN the user clicks "Add New Address" button
+THEN an address entry form should be displayed with fields:
+  - First Name, Last Name
+  - Address Line 1, Address Line 2
+  - City, State, ZIP Code
+  - Country, Phone Number
+
+GIVEN the address form is displayed
+WHEN the user enters new address details:
+  - Name: "John Doe"
+  - Address: "789 Pine Rd"
+  - City: "San Diego"
+  - State: "CA"
+  - ZIP: "92101"
+AND clicks "Save Address"
+THEN the system should validate the address
+AND save the address to the user's address book
+AND display success message "Address saved successfully"
+AND the new address should appear in the saved addresses list
+
+GIVEN the user has saved addresses
+WHEN the user views the address list
+THEN each address should display:
+  - Full address details
+  - "Edit" button or link
+  - "Delete" or "Remove" button or link
+  - Option to set as default (optional)
+
+GIVEN the user wants to edit an existing address
+WHEN the user clicks "Edit" for Address 1
+THEN the address form should open pre-filled with current address details
+
+GIVEN the address form is pre-filled
+WHEN the user modifies the address (e.g., changes ZIP code from 90210 to 90211)
+AND clicks "Update" or "Save Changes"
+THEN the system should validate the updated address
+AND update the address in the database
+AND display success message "Address updated successfully"
+AND the updated address should be reflected in the list
+
+GIVEN the user wants to delete an address
+WHEN the user clicks "Delete" for Address 2
+THEN a confirmation dialog should appear asking "Are you sure you want to delete this address?"
+
+GIVEN the delete confirmation is displayed
+WHEN the user confirms deletion
+THEN the address should be removed from the database
+AND removed from the saved addresses list
+AND a confirmation message should display "Address deleted successfully"
+
+GIVEN the user has multiple saved addresses
+WHEN the user sets one address as default
+THEN that address should be marked as default
+AND be automatically selected during future checkouts
+
+GIVEN the user tries to save an invalid address
+WHEN the user enters invalid ZIP code or leaves required fields empty
+THEN validation errors should be displayed
+AND the address should not be saved
+
+Expected Result:
+- User can access address management from account
+- User can view all saved addresses
+- User can add new addresses successfully
+- User can edit existing addresses
+- User can delete addresses
+- Confirmation required for deletion
+- Address validation works correctly
+- Default address can be set
+- Success messages displayed for all actions
+
+Validation Points:
+- Address management page is accessible
+- Saved addresses list displays correctly
+- Add address form is functional
+- All address fields accept valid input
+- Address validation works (ZIP code, state, etc.)
+- New address is saved to database
+- Address appears in list after saving
+- Edit functionality pre-fills form correctly
+- Address updates are saved
+- Delete confirmation dialog appears
+- Address is removed from database after deletion
+- Default address setting works
+- Required field validation works
+- Success/error messages display appropriately
+- Changes persist across sessions

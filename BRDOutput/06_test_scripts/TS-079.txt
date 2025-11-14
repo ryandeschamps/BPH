@@ -1,0 +1,63 @@
+Test Script: TS-079 - Activate/Deactivate Sub-admin User
+
+Test Scenario: As an admin user, I want to enable or disable sub-admin accounts, so that I can temporarily suspend access without deletion.
+
+Prerequisites:
+- Admin is logged in with super admin privileges
+- Sub-admin users exist (both active and inactive)
+- Status management functionality is enabled
+
+Test Data:
+- Active User: Sarah Johnson (subadmin@example.com), Status: Active
+- Inactive User: Bob Wilson (bob@example.com), Status: Inactive
+
+Test Steps:
+
+GIVEN the admin is viewing the admin users list
+WHEN the admin views user records
+THEN each user should have a status indicator and action buttons
+
+GIVEN the admin wants to deactivate an active user
+WHEN the admin views "Sarah Johnson" with status "Active"
+THEN a "Deactivate" button or toggle should be available
+
+GIVEN the admin clicks "Deactivate"
+WHEN the action is triggered
+THEN the user status should be updated to "Inactive"
+AND a success message should display "User deactivated successfully"
+
+GIVEN the user is deactivated
+WHEN "Sarah Johnson" tries to login
+THEN the login should fail
+AND an error message should indicate account is deactivated
+
+GIVEN the admin wants to activate an inactive user
+WHEN the admin views "Bob Wilson" with status "Inactive"
+THEN an "Activate" button should be available
+
+GIVEN the admin clicks "Activate"
+WHEN the action is triggered
+THEN the user status should be updated to "Active"
+AND a success message should display "User activated successfully"
+
+GIVEN the user is activated
+WHEN "Bob Wilson" logs in
+THEN the login should succeed
+AND he should have access according to his role
+
+Expected Result:
+- Admin can deactivate active users
+- Admin can activate inactive users
+- Status changes are saved
+- Deactivated users cannot login
+- Activated users can login
+- Success messages displayed
+
+Validation Points:
+- Status indicators are visible
+- Activate/Deactivate buttons functional
+- Status updates in database
+- Success messages display
+- Deactivated user login blocked
+- Activated user login works
+- Permissions applied correctly

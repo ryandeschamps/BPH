@@ -1,0 +1,120 @@
+Test Script: TS-028 - Review Order Summary Before Payment
+
+Test Scenario: As a registered buyer, I want to review order summary with all costs breakdown, so that I can verify the total amount before payment.
+
+Prerequisites:
+- User is logged in
+- User has items in shopping cart
+- User has entered billing and shipping addresses
+- User is on order review or payment page
+
+Test Data:
+- Cart Items:
+  - Blue T-Shirt (Qty 2): $50.00
+  - Black Jeans (Qty 1): $60.00
+- Item Total: $110.00
+- Shipping Cost: $10.00
+- Tax (8%): $8.80
+- Order Total: $128.80
+
+Test Steps:
+
+GIVEN the user has completed address entry at checkout
+WHEN the user proceeds to the order review or payment section
+THEN an "Order Summary" section should be displayed
+
+GIVEN the order summary is displayed
+WHEN the user views the summary
+THEN the following should be visible:
+  - List of all items being purchased
+  - Item quantities and prices
+  - Item Total or Subtotal
+  - Shipping Cost
+  - Tax amount
+  - Order Total or Grand Total
+
+GIVEN the items section is displayed
+WHEN the user reviews the items
+THEN each item should show:
+  - Product name
+  - Selected variations (size, color)
+  - Quantity
+  - Unit price
+  - Item total (quantity × unit price)
+
+GIVEN the order summary shows pricing details
+WHEN the user views the cost breakdown
+THEN the Item Total should be $110.00 (sum of all item totals)
+AND the Shipping Cost should be displayed (e.g., $10.00)
+AND the Tax should be calculated and displayed (e.g., $8.80)
+AND the Order Total should be $128.80 (Item Total + Shipping + Tax)
+
+GIVEN the order summary includes addresses
+WHEN the user reviews shipping information
+THEN the billing address should be displayed
+AND the shipping address should be displayed
+AND both addresses should be accurate and complete
+
+GIVEN the user wants to verify order details
+WHEN the user reviews the summary
+THEN all information should be clearly organized:
+  - Order items with quantities and prices
+  - Billing address
+  - Shipping address
+  - Payment method (if already selected)
+  - Price breakdown (subtotal, shipping, tax, total)
+
+GIVEN the user finds an error in the order
+WHEN the user wants to make changes
+THEN options to edit should be available:
+  - "Edit Cart" or link to cart
+  - "Edit Billing Address" or "Edit Shipping Address"
+AND clicking these should allow the user to make changes
+
+GIVEN the calculations are displayed
+WHEN the user verifies the math
+THEN Item Total = $50.00 + $60.00 = $110.00
+AND Tax = $110.00 × 8% = $8.80 (or applicable rate)
+AND Order Total = $110.00 + $10.00 + $8.80 = $128.80
+AND all calculations should be accurate
+
+GIVEN the order summary is complete and accurate
+WHEN the user is satisfied with the order
+THEN a "Proceed to Payment" or "Place Order" button should be prominently displayed
+AND the button should be enabled for the user to continue
+
+GIVEN all amounts are in USD
+WHEN the user views prices
+THEN all prices should be displayed in USD format (e.g., $128.80)
+AND currency symbol ($) should be consistently shown
+
+Expected Result:
+- Order summary is clearly displayed
+- All order items are listed with quantities and prices
+- Item total is calculated correctly
+- Shipping cost is displayed
+- Tax is calculated and displayed
+- Order total is accurate
+- Billing and shipping addresses are shown
+- Price breakdown is clear and organized
+- User can edit order details if needed
+- Proceed to payment option is available
+- All prices in USD currency
+
+Validation Points:
+- Order summary section is visible
+- All cart items are listed
+- Item quantities are correct
+- Unit prices are accurate
+- Item totals calculated correctly (qty × price)
+- Item Total/Subtotal is sum of all items
+- Shipping cost is displayed
+- Tax calculation is correct
+- Order Total is accurate (subtotal + shipping + tax)
+- Billing address displayed correctly
+- Shipping address displayed correctly
+- Edit options are functional
+- All prices in USD format
+- Currency symbols displayed consistently
+- Proceed to Payment button is present and functional
+- Summary matches cart contents exactly

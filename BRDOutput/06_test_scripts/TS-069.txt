@@ -1,0 +1,131 @@
+Test Script: TS-069 - View Order Payment Status
+
+Test Scenario: As an admin user, I want to see payment status for each order, so that I can verify which orders have been paid.
+
+Prerequisites:
+- Admin is logged in to admin panel
+- Orders exist with various payment statuses
+- Payment tracking is functional
+- Stripe payment integration is active
+
+Test Data:
+- Order 1: ORD-2025-001, Payment Status: Paid, Amount: $128.80
+- Order 2: ORD-2025-002, Payment Status: Pending, Amount: $95.50
+- Order 3: ORD-2025-003, Payment Status: Failed, Amount: $210.00
+- Order 4: ORD-2025-004, Payment Status: Refunded, Amount: $75.00
+
+Test Steps:
+
+GIVEN the admin is viewing the orders list
+WHEN the admin views order records
+THEN each order should display payment status
+
+GIVEN the orders list shows payment information
+WHEN the admin views the list
+THEN the following should be visible for each order:
+  - Order Number
+  - Order Total
+  - Payment Status (Paid, Pending, Failed, Refunded)
+  - Payment Method (if paid)
+
+GIVEN the payment status is displayed
+WHEN the admin views Order 1 (ORD-2025-001)
+THEN the payment status should show "Paid"
+AND may be indicated with a green badge or checkmark
+AND the payment amount should show $128.80
+
+GIVEN the payment is pending
+WHEN the admin views Order 2 (ORD-2025-002)
+THEN the payment status should show "Pending"
+AND may be indicated with a yellow/orange badge
+AND order should not be processed until payment confirms
+
+GIVEN the payment failed
+WHEN the admin views Order 3 (ORD-2025-003)
+THEN the payment status should show "Failed"
+AND may be indicated with a red badge
+AND the order should not be fulfilled
+
+GIVEN the payment was refunded
+WHEN the admin views Order 4 (ORD-2025-004)
+THEN the payment status should show "Refunded"
+AND may be indicated with a gray badge
+AND refund date should be visible
+
+GIVEN the admin wants detailed payment information
+WHEN the admin clicks on an order to view details
+THEN the order detail page should show:
+  - Payment Status
+  - Payment Method (Credit Card, Debit Card, Net Banking)
+  - Transaction ID from Stripe
+  - Payment Date and Time
+  - Card last 4 digits (if card payment)
+  - Payment Gateway (Stripe)
+
+GIVEN the admin filters orders by payment status
+WHEN filter options are available
+THEN the admin should be able to filter by:
+  - Paid
+  - Pending
+  - Failed
+  - Refunded
+AND the list should show only matching orders
+
+GIVEN the admin wants to search for a transaction
+WHEN a search function is available
+THEN the admin should be able to search by:
+  - Order number
+  - Transaction ID
+  - Payment amount
+AND results should be filtered
+
+GIVEN the payment status needs verification
+WHEN the admin wants to verify with Stripe
+THEN a link or option to view transaction in Stripe dashboard may be available
+AND clicking it should open Stripe dashboard with transaction details
+
+GIVEN payment statistics are displayed
+WHEN the admin views the payment dashboard
+THEN summary information should be shown:
+  - Total paid orders
+  - Total pending payments
+  - Total failed payments
+  - Total refunded amount
+
+GIVEN the admin exports payment data
+WHEN export functionality is available
+THEN the admin should be able to export payment reports
+AND export should include all payment status information
+
+Expected Result:
+- Payment status is visible for all orders
+- Status indicators are clear (Paid, Pending, Failed, Refunded)
+- Payment amounts are displayed
+- Payment methods are shown
+- Transaction IDs are accessible
+- Filter by payment status works
+- Search by payment details works
+- Detailed payment information available
+- Link to Stripe dashboard available
+- Payment statistics are accurate
+
+Validation Points:
+- Payment status displayed in orders list
+- All payment statuses are accurate
+- Paid orders show "Paid" status
+- Pending orders show "Pending" status
+- Failed orders show "Failed" status
+- Refunded orders show "Refunded" status
+- Status badges/colors are visually distinct
+- Payment amounts are correct
+- Payment methods are displayed
+- Transaction IDs are shown
+- Payment dates are formatted correctly
+- Card last 4 digits shown (for card payments)
+- Stripe indicated as payment gateway
+- Filter functionality works
+- Search functionality works
+- Link to Stripe dashboard works
+- Payment statistics are accurate
+- Export functionality works (if available)
+- USD format used for all amounts
