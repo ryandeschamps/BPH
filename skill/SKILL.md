@@ -83,12 +83,18 @@ Before starting the workflow, check if OUTPUT_DIR contains any existing artifact
   - `00_requirements.md` (Step 2 complete)
   - `02_entities_and_flows.md` (Step 3 complete)
   - `03_test_scenarios.md` (Step 4 complete)
-  - `04_variants.csv` (Step 5 complete)
-  - `05_test_data.csv` (Step 6 complete)
-  - `06_test_scripts/` directory with files (Step 7 complete)
-  - `07_combinatorial_plan.md` (Step 8 complete)
+  - **NEW**: `scenarios/` directory with TS-* folders containing variants.csv (Step 5 complete)
+  - **NEW**: `scenarios/` directory with TS-* folders containing test_data.csv (Step 6 complete)
+  - **NEW**: `scenarios/` directory with TS-* folders containing scripts/ directories with files (Step 7 complete)
+  - **NEW**: `scenarios/` directory with TS-* folders containing combinatorial_plan.md (Step 8 complete)
   - `08_test_plan.md` (Step 9 complete)
   - `09_rtm.csv` (Step 10 complete)
+
+**Legacy Checkpoint Detection** (for older projects):
+  - `04_variants.csv` (Step 5 complete - legacy monolithic mode)
+  - `05_test_data.csv` (Step 6 complete - legacy monolithic mode)
+  - `06_test_scripts/` directory with files (Step 7 complete - legacy monolithic mode)
+  - `07_combinatorial_plan.md` (Step 8 complete - legacy monolithic mode)
 
 **Resume Logic:**
 If ANY files exist, ask the user: "Found existing artifacts from a previous run. Options:
@@ -284,13 +290,20 @@ git commit -m "Complete Step 4: Generate test scenarios (X scenarios)"
 ```
 
 
-Step 5: Define Variants (EXHAUSTIVE):
+Step 5: Define Variants (EXHAUSTIVE - Per-Scenario Architecture):
 
-**CRITICAL**: This step must generate the TRUE EXHAUSTIVE CARTESIAN PRODUCT of all parameters. This is NOT "a few variants per scenario" - this is EVERY POSSIBLE COMBINATION.
+**CRITICAL IMPROVEMENT**: Variants are now generated **per-scenario** in isolated folders for better organization, maintainability, and scalability.
 
-**Step 5A: Identify Global Parameters**
+**NEW ARCHITECTURE BENEFITS:**
+- ✅ **Isolation**: Each scenario's variants are self-contained
+- ✅ **Modularity**: Add/remove/debug scenarios independently
+- ✅ **Scalability**: Linear growth instead of exponential
+- ✅ **Clarity**: Folder structure shows what's being tested
+- ✅ **Traceability**: Clear path from scenario → variants → data → scripts
 
-First, identify ALL parameters that apply across scenarios (these form the columns of your CSV):
+**Step 5A: Identify Parameters (Same as Before)**
+
+First, identify ALL parameters that apply across scenarios:
 - **User_Type**: All roles (Visitor, Buyer, Seller, Admin, Sub_Admin, etc.)
 - **Browser**: Chrome, Firefox, Safari, Edge
 - **Device**: Desktop, Mobile, Tablet
@@ -301,188 +314,410 @@ First, identify ALL parameters that apply across scenarios (these form the colum
 - **Payment_Method**: Credit Card, PayPal, Stripe (if applicable)
 - And any other scenario-specific parameters
 
-**Step 5B: For EACH Scenario, Generate Full Cartesian Product**
+**Step 5B: Generate Variants Per-Scenario Using Automated Script**
 
-For each scenario (e.g., TS-001: User Registration), calculate the FULL Cartesian product:
+Execute the scenario orchestrator to generate variants for all scenarios:
 
-**Example Calculation for TS-001:**
+```bash
+python3 skill/scripts/scenario_orchestrator.py \
+  --all \
+  --steps variants \
+  --scenarios-file OUTPUT_DIR/03_test_scenarios.md \
+  --output-dir OUTPUT_DIR/scenarios
 ```
-Parameters applicable to Registration:
-- User_Type: 1 value (Visitor only - not logged in yet)
+
+**IMPORTANT:** Replace OUTPUT_DIR with the actual directory path being used (e.g., `deliverables/` or custom path).
+
+**What This Does:**
+1. Parses `03_test_scenarios.md` to extract all scenario IDs (TS-001, TS-002, etc.)
+2. For each scenario:
+   - Creates isolated directory: `OUTPUT_DIR/scenarios/TS-XXX_Title/`
+   - Generates exhaustive variants using Cartesian product: `variants.csv`
+   - Calculates expected variant count
+   - Saves scenario metadata: `metrics.json`
+3. Provides real-time progress tracking
+
+**Expected Output Structure:**
+```
+OUTPUT_DIR/scenarios/
+├── TS-001_New_Buyer_Registration_with_Email_Verification/
+│   ├── variants.csv              (864 variants - isolated to TS-001 only)
+│   └── metrics.json              (statistics: variant count, parameters, timestamps)
+│
+├── TS-002_Registration_with_Invalid_Email_Format/
+│   ├── variants.csv              (144 variants - isolated to TS-002 only)
+│   └── metrics.json
+│
+├── TS-010_Checkout_Process_with_Payment/
+│   ├── variants.csv              (5,184 variants - isolated to TS-010 only)
+│   └── metrics.json
+│
+└── ... (one folder per scenario)
+```
+
+**Example Calculation (Same Math, Different Organization):**
+
+**TS-001 Variants (in TS-001_New_Buyer_Registration/ folder):**
+```
+Parameters:
+- User_Type: 1 value (Visitor)
 - Input_Validity: 2 values (Valid, Invalid)
-- Field_Values: 12 values (All_Valid, Missing_FirstName, Missing_LastName, Missing_Email,
-  Invalid_Email, Weak_Password, Password_Mismatch, Duplicate_Email, Invalid_Phone,
-  Missing_Phone, Terms_Not_Accepted, etc.)
+- Field_Values: 12 values (All_Valid, Missing_FirstName, Missing_Email, etc.)
 - Browser: 4 values (Chrome, Firefox, Safari, Edge)
 - Device: 3 values (Desktop, Mobile, Tablet)
 - Network_Speed: 3 values (High, Medium, Low)
 
 Total TS-001 variants = 1 × 2 × 12 × 4 × 3 × 3 = 864 variants
+Saved to: OUTPUT_DIR/scenarios/TS-001_New_Buyer_Registration/variants.csv
 ```
 
-**Example Calculation for TS-010: Checkout Process:**
+**TS-010 Variants (in TS-010_Checkout_Process/ folder):**
 ```
 Parameters:
 - User_Type: 2 values (Buyer, Guest)
 - Input_Validity: 2 values (Valid, Invalid)
 - Payment_Method: 3 values (Credit_Card, PayPal, Stripe)
 - Shipping_Address: 3 values (New, Existing, Invalid)
-- Cart_State: 4 values (Single_Item, Multiple_Items, Max_Quantity, Out_Of_Stock_Item)
+- Cart_State: 4 values (Single_Item, Multiple_Items, Max_Quantity, Out_Of_Stock)
 - Browser: 4 values
 - Device: 3 values
 - Network_Speed: 3 values
 
 Total TS-010 variants = 2 × 2 × 3 × 3 × 4 × 4 × 3 × 3 = 5,184 variants
+Saved to: OUTPUT_DIR/scenarios/TS-010_Checkout_Process/variants.csv
 ```
 
-**Expected Scale:**
-- Small application (20 scenarios): 10,000-25,000 variants
-- Moderate application (100 scenarios): 25,000-75,000 variants
-- Large application (200+ scenarios): 75,000-200,000+ variants
+**Expected Scale (Per Scenario):**
+- Simple scenarios: 100-500 variants per folder
+- Moderate scenarios: 500-2,000 variants per folder
+- Complex scenarios: 2,000-10,000 variants per folder
 
-**Step 5C: Generate Variants Systematically**
+**Expected Scale (Total Across All Scenarios):**
+- Small application (20 scenarios): 10,000-25,000 total variants
+- Moderate application (100 scenarios): 25,000-75,000 total variants
+- Large application (200+ scenarios): 75,000-200,000+ total variants
 
-Use a systematic approach to ensure NO combinations are missed:
+**Per-Scenario CSV Format:**
 
-1. For each scenario, list all parameter dimensions
-2. Calculate total expected variants (multiply all dimension sizes)
-3. Use nested loops or itertools.product() approach to generate ALL combinations
-4. Assign sequential Variant_IDs starting from V001
+Each `variants.csv` file contains ONLY variants for that scenario:
 
-**PROGRESS TRACKING (for long-running generation):**
-
-When generating variants, provide real-time progress updates:
-- **Before starting**: Report total scenarios and estimated variants (e.g., "Generating ~50,000 variants for 100 scenarios...")
-- **During generation**: Update progress at regular intervals
-  - Report every 10-20 scenarios completed (e.g., "Completed 20/100 scenarios - 10,248 variants generated so far")
-  - Show percentage complete (e.g., "[25%] Processing scenario TS-025...")
-- **After completion**: Report final count and duration (e.g., "✓ Generated 47,520 variants in 2m 15s")
-
-**REQUIRED CSV FORMAT (for combinatorial.py script consumption):**
-
-**Column structure:**
-1. First column MUST be: `Scenario_ID` (links to TS-XXX from 03_test_scenarios.md)
-2. Second column MUST be: `Variant_ID` (format: V001, V002, V003, etc.)
-3. Remaining columns: Parameter names (e.g., User_Type, Browser, Input_Validity, Data_State, etc.)
-
-**Example format showing TRUE exhaustive generation:**
 ```csv
 Scenario_ID,Variant_ID,User_Type,Input_Validity,Field_Values,Browser,Device,Network_Speed
-TS-001,V001,Visitor,Valid,All_Valid,Chrome,Desktop,High
-TS-001,V002,Visitor,Valid,All_Valid,Chrome,Desktop,Medium
-TS-001,V003,Visitor,Valid,All_Valid,Chrome,Desktop,Low
-TS-001,V004,Visitor,Valid,All_Valid,Chrome,Mobile,High
-TS-001,V005,Visitor,Valid,All_Valid,Chrome,Mobile,Medium
+TS-001,V00001,Visitor,Valid,All_Valid,Chrome,Desktop,High
+TS-001,V00002,Visitor,Valid,All_Valid,Chrome,Desktop,Medium
+TS-001,V00003,Visitor,Valid,All_Valid,Chrome,Desktop,Low
 ...
-TS-001,V864,Visitor,Invalid,Terms_Not_Accepted,Edge,Tablet,Low
-TS-002,V865,Buyer,Valid,Valid_Login,Chrome,Desktop,High
-...
+TS-001,V00864,Visitor,Invalid,Terms_Not_Accepted,Edge,Tablet,Low
 ```
 
-**CRITICAL FORMAT REQUIREMENTS:**
+**CRITICAL FORMAT REQUIREMENTS (unchanged):**
 - Use exact column names: `Scenario_ID` and `Variant_ID` (case-sensitive)
-- Variant IDs MUST be unique across entire file
-- Use "N/A" for parameters that don't apply to certain combinations (e.g., payment_method=N/A for visitor registration)
+- Variant IDs use 5-digit zero-padded format: V00001, V00002, etc.
+- Use "N/A" for parameters that don't apply
 - NO empty cells - use "N/A" instead
-- Parameter values should be consistent (e.g., don't mix "Admin" and "Administrator")
-- DO NOT skip combinations - generate ALL of them
+- Parameter values should be consistent
 
-**Generation Approach (if using Python helper):**
-```python
-from itertools import product
+**PROGRESS TRACKING:**
 
-# For TS-001:
-user_types = ['Visitor']
-input_validity = ['Valid', 'Invalid']
-field_values = ['All_Valid', 'Missing_FirstName', 'Missing_Email', ...]  # 12 values
-browsers = ['Chrome', 'Firefox', 'Safari', 'Edge']
-devices = ['Desktop', 'Mobile', 'Tablet']
-network_speeds = ['High', 'Medium', 'Low']
+The orchestrator provides real-time updates:
+```
+Scenario Orchestration - Variants Generation
+============================================================
+Output Directory: deliverables/scenarios
+Total Scenarios: 106
+Selected Steps: variants
 
-variants = list(product(user_types, input_validity, field_values, browsers, devices, network_speeds))
-# This generates 1×2×12×4×3×3 = 864 combinations automatically
+[1/106] TS-001: New Buyer Registration
+  ✓ Generated 864 variants
+  Output: deliverables/scenarios/TS-001_New_Buyer_Registration/variants.csv
+
+[2/106] TS-002: Invalid Email Format
+  ✓ Generated 144 variants
+  Output: deliverables/scenarios/TS-002_Invalid_Email_Format/variants.csv
+
+...
+
+[106/106] TS-106: Security Testing
+  ✓ Generated 36 variants
+  Output: deliverables/scenarios/TS-106_Security_Testing/variants.csv
+
+Summary:
+  Total Scenarios Processed: 106
+  Total Variants Generated: 47,520
+  Average Variants per Scenario: 448
+  Successful: 106
+  Failed: 0
 ```
 
-Output this as a CSV file to OUTPUT_DIR/04_variants.csv.
+**ALTERNATIVE USAGE - Specific Scenarios Only:**
+
+If you only need to generate/regenerate specific scenarios:
+
+```bash
+# Generate single scenario
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenario TS-001 \
+  --steps variants \
+  --scenarios-file OUTPUT_DIR/03_test_scenarios.md \
+  --output-dir OUTPUT_DIR/scenarios
+
+# Generate specific scenarios
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenarios TS-001,TS-002,TS-010 \
+  --steps variants \
+  --scenarios-file OUTPUT_DIR/03_test_scenarios.md \
+  --output-dir OUTPUT_DIR/scenarios
+```
 
 **VERIFICATION CHECKPOINT:**
-After generating, perform these checks:
-1. **Count total variants** and report: "Generated X variants across Y scenarios"
-2. **Calculate expected minimum**: Should be 50+ average variants per scenario for true exhaustive
-3. **Spot check Cartesian product**: Pick one scenario and verify ALL combinations exist
-   - Example: For TS-001 with 4 browsers × 3 devices = verify all 12 browser/device combos exist
-4. **Report scale**: "This represents the EXHAUSTIVE set. Step 8 will reduce by ~90-95%"
 
-**If variant count seems too low (<5,000 for moderate app), YOU HAVE NOT GENERATED THE FULL CARTESIAN PRODUCT. Go back and regenerate.**
+After generation completes:
 
-Note: Step 8 will use combinatorial analysis to reduce this to an optimal subset (~90-95% reduction, achieving 95%+ pairwise coverage).
+1. **Count total scenarios:**
+   ```bash
+   ls -d OUTPUT_DIR/scenarios/TS-* | wc -l
+   ```
+   Should match scenario count from Step 4.
+
+2. **Count total variants across all scenarios:**
+   ```bash
+   python3 skill/scripts/summary_aggregator.py --scenarios-dir OUTPUT_DIR/scenarios
+   ```
+
+3. **View summary report:**
+   Check `OUTPUT_DIR/summary/metrics_dashboard.md` for:
+   - Total variants across all scenarios
+   - Min/max/average variants per scenario
+   - Scenarios with missing artifacts
+
+4. **Spot-check individual scenario:**
+   ```bash
+   # View TS-001 metrics
+   cat OUTPUT_DIR/scenarios/TS-001_*/metrics.json
+
+   # Count TS-001 variants
+   wc -l OUTPUT_DIR/scenarios/TS-001_*/variants.csv
+   ```
+
+5. **Report Results:**
+   - "Generated X variants across Y scenarios"
+   - "Average Z variants per scenario"
+   - "Min: A variants (TS-XXX), Max: B variants (TS-YYY)"
+   - "All scenario folders created successfully"
+
+**If variant count seems too low (<5,000 for moderate app), YOU HAVE NOT GENERATED THE FULL CARTESIAN PRODUCT. Regenerate specific scenarios with --force flag.**
+
+**BACKWARDS COMPATIBILITY:**
+
+The old monolithic approach is still supported via legacy mode:
+
+```bash
+python3 skill/scripts/generate_variants.py \
+  --monolithic \
+  --output OUTPUT_DIR/04_variants.csv
+```
+
+However, the **per-scenario approach is strongly recommended** for all new projects.
 
 **GIT CHECKPOINT - Commit Step 5:**
 ```bash
-git add OUTPUT_DIR/04_variants.csv
-git commit -m "Complete Step 5: Generate exhaustive variants (X variants)"
+git add OUTPUT_DIR/scenarios/
+git commit -m "Complete Step 5: Generate exhaustive variants per-scenario (X total variants across Y scenarios)"
 ```
 
 
-Step 6: Create Test Data (EXHAUSTIVE):
+Step 6: Create Test Data (EXHAUSTIVE - Per-Scenario):
 
-For EACH AND EVERY variant in OUTPUT_DIR/04_variants.csv, generate corresponding realistic test data.
-DO NOT skip variants. One variant = one data row.
-Include the Variant_ID as the first column to maintain traceability.
-Save this data in OUTPUT_DIR/05_test_data.csv.
+**CRITICAL IMPROVEMENT**: Test data is now generated **per-scenario** to match the new variants architecture.
 
-**PROGRESS TRACKING (for large datasets):**
-
-When generating test data, provide regular progress updates:
-- **Before starting**: Report total variants from 04_variants.csv (e.g., "Generating test data for 47,520 variants...")
-- **During generation**: Update progress at regular intervals
-  - Report every 5,000-10,000 variants (e.g., "Generated 10,000/47,520 variants [21%]")
-  - Show time estimates if generation is slow (e.g., "~3 minutes remaining")
-- **After completion**: Report final count (e.g., "✓ Generated test data for 47,520 variants")
-
-VERIFICATION CHECKPOINT: After generating, verify row count matches OUTPUT_DIR/04_variants.csv and report: "Generated test data for X variants."
-
-**DATA VALIDATION (CRITICAL):**
-
-After generating test data, run the validation script to ensure data quality and consistency:
+Generate test data for each scenario's variants using the orchestrator:
 
 ```bash
-python3 skill/scripts/validate_test_data.py OUTPUT_DIR/04_variants.csv OUTPUT_DIR/05_test_data.csv
+python3 skill/scripts/scenario_orchestrator.py \
+  --all \
+  --steps test-data \
+  --output-dir OUTPUT_DIR/scenarios
 ```
 
 **IMPORTANT:** Replace OUTPUT_DIR with the actual directory path being used (e.g., `deliverables/` or custom path).
 
+**What This Does:**
+1. For each scenario directory in `OUTPUT_DIR/scenarios/`:
+   - Reads the scenario's `variants.csv`
+   - Generates realistic test data for EACH variant (one variant = one data row)
+   - Saves to `test_data.csv` in the same scenario folder
+   - Updates `metrics.json` with test data statistics
+2. Provides real-time progress tracking
+
+**Expected Output Structure:**
+```
+OUTPUT_DIR/scenarios/
+├── TS-001_New_Buyer_Registration/
+│   ├── variants.csv              (864 variants)
+│   ├── test_data.csv             (864 rows - NEW)
+│   └── metrics.json              (updated with test data count)
+│
+├── TS-002_Invalid_Email_Format/
+│   ├── variants.csv              (144 variants)
+│   ├── test_data.csv             (144 rows - NEW)
+│   └── metrics.json
+│
+└── ... (test_data.csv in each scenario folder)
+```
+
+**Per-Scenario Test Data Format:**
+
+Each `test_data.csv` contains realistic data for that scenario's variants:
+
+```csv
+Variant_ID,First_Name,Last_Name,Email,Password,Phone,Browser,Device,Network_Speed
+V00001,John,Smith,john.smith@example.com,SecurePass123!,+1-555-0101,Chrome,Desktop,High
+V00002,Jane,Doe,jane.doe@example.com,AnotherPass456!,+1-555-0102,Chrome,Desktop,Medium
+V00003,Bob,Johnson,bob.j@test.com,MyPassword789!,+1-555-0103,Chrome,Desktop,Low
+...
+V00864,Alice,Williams,alice.w@demo.com,TestPass321!,+1-555-0864,Edge,Tablet,Low
+```
+
+**PROGRESS TRACKING:**
+
+The orchestrator provides real-time updates:
+```
+Scenario Orchestration - Test Data Generation
+============================================================
+Output Directory: deliverables/scenarios
+Total Scenarios: 106
+Selected Steps: test-data
+
+[1/106] TS-001: New Buyer Registration
+  Reading variants from: TS-001_New_Buyer_Registration/variants.csv
+  ✓ Generated 864 test data rows
+  Output: TS-001_New_Buyer_Registration/test_data.csv
+
+[2/106] TS-002: Invalid Email Format
+  Reading variants from: TS-002_Invalid_Email_Format/variants.csv
+  ✓ Generated 144 test data rows
+  Output: TS-002_Invalid_Email_Format/test_data.csv
+
+...
+
+[106/106] TS-106: Security Testing
+  ✓ Generated 36 test data rows
+  Output: TS-106_Security_Testing/test_data.csv
+
+Summary:
+  Total Scenarios Processed: 106
+  Total Test Data Rows: 47,520
+  Successful: 106
+  Failed: 0
+```
+
+**ALTERNATIVE USAGE - Specific Scenarios Only:**
+
+Generate test data for specific scenarios only:
+
+```bash
+# Single scenario
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenario TS-001 \
+  --steps test-data \
+  --output-dir OUTPUT_DIR/scenarios
+
+# Multiple scenarios
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenarios TS-001,TS-002,TS-010 \
+  --steps test-data \
+  --output-dir OUTPUT_DIR/scenarios
+```
+
+**VERIFICATION CHECKPOINT:**
+
+After generation completes:
+
+1. **Verify all scenarios have test data:**
+   ```bash
+   # Count test_data.csv files
+   find OUTPUT_DIR/scenarios -name "test_data.csv" | wc -l
+   ```
+   Should match scenario count.
+
+2. **Verify row counts match variants:**
+   ```bash
+   # Check TS-001 specifically
+   echo "Variants: $(wc -l < OUTPUT_DIR/scenarios/TS-001_*/variants.csv)"
+   echo "Test Data: $(wc -l < OUTPUT_DIR/scenarios/TS-001_*/test_data.csv)"
+   ```
+   Counts should match (excluding header row).
+
+3. **View aggregate statistics:**
+   ```bash
+   python3 skill/scripts/summary_aggregator.py --scenarios-dir OUTPUT_DIR/scenarios
+   cat OUTPUT_DIR/summary/metrics_dashboard.md
+   ```
+
+4. **Report Results:**
+   - "Generated test data for X scenarios"
+   - "Total test data rows: Y"
+   - "All variants have corresponding test data"
+
+**DATA VALIDATION (Per-Scenario):**
+
+Validate test data quality for each scenario:
+
+```bash
+# Validate all scenarios
+python3 skill/scripts/validate_test_data.py \
+  --scenarios-dir OUTPUT_DIR/scenarios \
+  --all
+
+# Validate specific scenario
+python3 skill/scripts/validate_test_data.py \
+  --scenario-dir OUTPUT_DIR/scenarios/TS-001_New_Buyer_Registration
+```
+
 **The validation script checks:**
-- Row count matches between variants and test data
+- Row count matches between variants and test data (per scenario)
 - All Variant_IDs are present in both files
 - Parameter consistency (test data reflects variant parameters)
 - Data completeness (no empty critical fields)
+- Data realism (valid emails, phone numbers, etc.)
 
 **Expected output:**
-- ✅ "All validations passed!" - Continue to next step
-- ❌ "Validation completed with errors" - Fix errors before proceeding:
-  - Missing test data rows: Generate data for missing variants
-  - Row count mismatch: Verify generation process completed fully
-  - Empty fields: Populate missing test data values
+- ✅ "All scenarios validated successfully!" - Continue to next step
+- ❌ "Validation failed for X scenarios" - Fix errors before proceeding:
+  - Missing test data rows: Regenerate data for specific scenarios
+  - Row count mismatch: Check variants.csv and test_data.csv line counts
+  - Empty fields: Review data generation logic
 
 Quality check: Ensure data is realistic, valid, and matches the variant parameters.
 
+**BACKWARDS COMPATIBILITY:**
+
+The old monolithic approach is still supported:
+
+```bash
+python3 skill/scripts/generate_test_data.py \
+  --monolithic \
+  --variants OUTPUT_DIR/04_variants.csv \
+  --output OUTPUT_DIR/05_test_data.csv
+```
+
+However, the **per-scenario approach is strongly recommended** for all new projects.
+
 **GIT CHECKPOINT - Commit Step 6:**
 ```bash
-git add OUTPUT_DIR/05_test_data.csv
-git commit -m "Complete Step 6: Generate test data (X rows)"
+git add OUTPUT_DIR/scenarios/*/test_data.csv OUTPUT_DIR/scenarios/*/metrics.json
+git commit -m "Complete Step 6: Generate test data per-scenario (X total rows across Y scenarios)"
 ```
 
 
-Step 7: Generate Test Scripts (AUTOMATED - VARIANT-BASED):
+Step 7: Generate Test Scripts (AUTOMATED - Per-Scenario):
 
-**CRITICAL IMPROVEMENT**: Instead of manually writing test scripts (which causes LLM fatigue and quality degradation), we now use an automated script that generates test scripts programmatically from your variants and test data.
+**CRITICAL IMPROVEMENT**: Test scripts are now generated **per-scenario** in isolated folders, matching the new architecture.
 
 **How It Works:**
 - Reads test scenarios from `03_test_scenarios.md` to understand what to test
-- Reads variants from `04_variants.csv` to get parameter combinations
-- Reads test data from `05_test_data.csv` to get concrete values
-- **Automatically generates** one test script per variant (e.g., TS-001_V001.txt, TS-001_V002.txt, etc.)
+- For each scenario, reads variants and test data from scenario folder
+- **Automatically generates** one test script per variant in scenario's `scripts/` folder
 - Uses intelligent templates based on scenario type (Registration, Login, Checkout, etc.)
 - Injects specific test data and parameters into GIVEN/WHEN/THEN sections
 
@@ -490,10 +725,176 @@ Step 7: Generate Test Scripts (AUTOMATED - VARIANT-BASED):
 - ✅ **100% automated** - no manual LLM script writing
 - ✅ **Perfect consistency** - no quality degradation across thousands of scripts
 - ✅ **Instant generation** - generates 25,000-75,000 scripts in seconds
-- ✅ **Maintainable** - update templates, regenerate all scripts
-- ✅ **Eliminates Critique Issue #3** - no more generic placeholders or template fatigue
+- ✅ **Isolated by scenario** - easy to find, debug, and manage scripts
+- ✅ **Maintainable** - update templates, regenerate all or specific scenarios
 
-**Execute the script:**
+**Execute the orchestrator:**
+
+```bash
+python3 skill/scripts/scenario_orchestrator.py \
+  --all \
+  --steps scripts \
+  --scenarios-file OUTPUT_DIR/03_test_scenarios.md \
+  --output-dir OUTPUT_DIR/scenarios
+```
+
+**IMPORTANT:** Replace OUTPUT_DIR with the actual directory path being used (e.g., `deliverables/` or custom path).
+
+**Expected Output Structure:**
+```
+OUTPUT_DIR/scenarios/
+├── TS-001_New_Buyer_Registration/
+│   ├── variants.csv
+│   ├── test_data.csv
+│   ├── scripts/                  (NEW - 864 scripts)
+│   │   ├── TS-001_V00001.txt
+│   │   ├── TS-001_V00002.txt
+│   │   ├── TS-001_V00003.txt
+│   │   └── ... (864 total)
+│   └── metrics.json              (updated with script count)
+│
+├── TS-002_Invalid_Email_Format/
+│   ├── variants.csv
+│   ├── test_data.csv
+│   ├── scripts/                  (NEW - 144 scripts)
+│   │   ├── TS-002_V00001.txt
+│   │   ├── TS-002_V00002.txt
+│   │   └── ... (144 total)
+│   └── metrics.json
+│
+└── ... (scripts/ folder in each scenario)
+```
+
+**File Naming Convention (unchanged):**
+- Format: `TS-XXX_VXXXXX.txt` where:
+  - `TS-XXX` = Scenario ID (e.g., TS-001)
+  - `VXXXXX` = Variant ID with zero-padding (e.g., V00001, V00002)
+- Example: `TS-001_V00001.txt` = Registration scenario, variant 1 (Chrome/Desktop/Valid)
+- Example: `TS-001_V00864.txt` = Registration scenario, variant 864 (Edge/Tablet/Invalid)
+
+**Script Content Format (unchanged):**
+Each generated script contains:
+- **Header**: Scenario title, variant ID, priority, description
+- **GIVEN**: Specific preconditions based on variant parameters
+- **WHEN**: Specific actions with concrete test data from CSV
+- **THEN**: Specific assertions based on input validity
+- **EXPECTED RESULT**: Detailed outcomes with verification steps
+- **VARIANT PARAMETERS**: All parameter values for this variant
+- **TEST DATA**: All test data fields for this variant
+- **RELATED REQUIREMENTS**: Traceability to requirements
+
+**PROGRESS TRACKING:**
+
+The orchestrator provides real-time updates:
+```
+Scenario Orchestration - Test Scripts Generation
+============================================================
+Output Directory: deliverables/scenarios
+Scenarios File: deliverables/03_test_scenarios.md
+Total Scenarios: 106
+Selected Steps: scripts
+
+[1/106] TS-001: New Buyer Registration
+  Reading variants: TS-001_New_Buyer_Registration/variants.csv (864 variants)
+  Reading test data: TS-001_New_Buyer_Registration/test_data.csv (864 rows)
+  ✓ Generated 864 test scripts
+  Output: TS-001_New_Buyer_Registration/scripts/
+
+[2/106] TS-002: Invalid Email Format
+  Reading variants: TS-002_Invalid_Email_Format/variants.csv (144 variants)
+  Reading test data: TS-002_Invalid_Email_Format/test_data.csv (144 rows)
+  ✓ Generated 144 test scripts
+  Output: TS-002_Invalid_Email_Format/scripts/
+
+...
+
+[106/106] TS-106: Security Testing
+  ✓ Generated 36 test scripts
+  Output: TS-106_Security_Testing/scripts/
+
+Summary:
+  Total Scenarios Processed: 106
+  Total Test Scripts Generated: 47,520
+  Generation Speed: ~1,850 scripts/sec
+  Total Time: 25.7 seconds
+  Successful: 106
+  Failed: 0
+```
+
+**ALTERNATIVE USAGE - Specific Scenarios Only:**
+
+Generate scripts for specific scenarios only:
+
+```bash
+# Single scenario
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenario TS-001 \
+  --steps scripts \
+  --scenarios-file OUTPUT_DIR/03_test_scenarios.md \
+  --output-dir OUTPUT_DIR/scenarios
+
+# Multiple scenarios
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenarios TS-001,TS-002,TS-010 \
+  --steps scripts \
+  --scenarios-file OUTPUT_DIR/03_test_scenarios.md \
+  --output-dir OUTPUT_DIR/scenarios
+```
+
+**VERIFICATION CHECKPOINT:**
+
+After generation completes:
+
+**1. Quantity Check:**
+```bash
+# Count total scripts across all scenarios
+find OUTPUT_DIR/scenarios -name "*.txt" -type f | wc -l
+
+# Count scripts for specific scenario
+ls OUTPUT_DIR/scenarios/TS-001_*/scripts/*.txt | wc -l
+
+# View aggregate statistics
+python3 skill/scripts/summary_aggregator.py --scenarios-dir OUTPUT_DIR/scenarios
+cat OUTPUT_DIR/summary/metrics_dashboard.md
+```
+
+**2. Quality Spot-Check (10 random scripts):**
+
+Sample random scripts from different scenarios to verify template quality:
+
+```bash
+# View random scripts from TS-001
+ls OUTPUT_DIR/scenarios/TS-001_*/scripts/TS-001_V*.txt | shuf | head -3 | xargs cat
+
+# Check scripts contain variant-specific data (not placeholders)
+grep -l "Chrome" OUTPUT_DIR/scenarios/TS-001_*/scripts/*.txt | head -5
+
+# Verify no placeholder text remains
+grep -r "scenario NN\|TODO\|PLACEHOLDER" OUTPUT_DIR/scenarios/*/scripts/ || echo "✓ No placeholders found"
+```
+
+**3. Verify Script Quality Criteria:**
+- ✓ Contains specific scenario details (not generic "scenario NN")
+- ✓ GIVEN section has concrete conditions (user email, device, browser)
+- ✓ WHEN section has concrete test data values from CSV
+- ✓ THEN section has specific assertions
+- ✓ EXPECTED RESULT has measurable outcomes
+- ✓ Variant parameters and test data are populated
+
+**4. Report Results:**
+- "Generated X test scripts across Y scenarios"
+- "Generation speed: Z scripts/second"
+- "Spot-checked 10 random scripts - all contain specific variant data"
+- "Quality verification complete - programmatic generation ensures consistency"
+
+**If Issues Found:**
+- **Missing scripts**: Verify variants.csv and test_data.csv exist for the scenario
+- **Generic scripts**: Check that test data is being read correctly
+- **Wrong scenario details**: Verify 03_test_scenarios.md has correct scenario descriptions
+
+**BACKWARDS COMPATIBILITY:**
+
+The old monolithic approach is still supported:
 
 ```bash
 python3 skill/scripts/generate_test_scripts_from_variants.py \
@@ -503,149 +904,245 @@ python3 skill/scripts/generate_test_scripts_from_variants.py \
   -o OUTPUT_DIR/06_test_scripts
 ```
 
-**IMPORTANT:** Replace OUTPUT_DIR with the actual directory path being used (e.g., `deliverables/` or custom path).
-
-**Expected Output:**
-- One test script per variant: `TS-XXX_VXXX.txt`
-- Generation summary: `00_GENERATION_SUMMARY.txt`
-- Progress updates every 5% with ETA
-- Generation speed: ~500-2,000 scripts per second
-- **Example**: For 47,520 variants, expect ~30-60 seconds generation time
-
-**File Naming Convention:**
-- Format: `TS-XXX_VXXX.txt` where:
-  - `TS-XXX` = Scenario ID (e.g., TS-001)
-  - `VXXX` = Variant ID (e.g., V001)
-- Example: `TS-001_V001.txt` = Registration scenario, variant 1 (Chrome/Desktop/Valid)
-- Example: `TS-001_V002.txt` = Registration scenario, variant 2 (Chrome/Desktop/Invalid email)
-
-**Script Content Format:**
-Each generated script contains:
-- **Header**: Scenario title, variant ID, priority, description
-- **GIVEN**: Specific preconditions based on variant parameters (user type, browser, device, network)
-- **WHEN**: Specific actions with concrete test data from CSV
-- **THEN**: Specific assertions based on input validity and scenario type
-- **EXPECTED RESULT**: Detailed outcomes with database/email/UI verification
-- **VARIANT PARAMETERS**: All parameter values for this variant
-- **TEST DATA**: All test data fields for this variant
-- **RELATED REQUIREMENTS**: Traceability to requirements
-
-VERIFICATION CHECKPOINT:
-
-After generation completes, perform these checks:
-
-**Quantity Check:**
-- List the OUTPUT_DIR/06_test_scripts/ directory
-- Count files: `ls OUTPUT_DIR/06_test_scripts/*.txt | wc -l`
-- Verify count matches variant count from 04_variants.csv
-- Check generation summary: `cat OUTPUT_DIR/06_test_scripts/00_GENERATION_SUMMARY.txt`
-- **Report**: "Generated X test scripts for Y variants - 100% complete"
-
-**Quality Spot-Check (10 random scripts):**
-
-Since scripts are generated programmatically, quality is consistent. However, verify the templates work correctly:
-
-Sample 10 random scripts and verify:
-- ✓ Contains specific scenario details (not generic "scenario NN")
-- ✓ GIVEN section has concrete conditions (user email, device, browser)
-- ✓ WHEN section has concrete test data values from CSV
-- ✓ THEN section has specific assertions
-- ✓ EXPECTED RESULT has measurable outcomes
-- ✓ Variant parameters and test data are populated
-
-**Example commands to spot-check:**
-```bash
-# View a few random scripts
-ls OUTPUT_DIR/06_test_scripts/TS-001_V*.txt | head -3 | xargs cat
-
-# Check script contains variant-specific data
-grep -l "Chrome" OUTPUT_DIR/06_test_scripts/TS-001_*.txt | head -5
-
-# Verify no placeholder text remains
-grep -r "scenario NN\|TODO\|PLACEHOLDER" OUTPUT_DIR/06_test_scripts/ || echo "✓ No placeholders found"
-```
-
-**Report:**
-- "Generated X test scripts in Y seconds (Z scripts/sec)"
-- "Spot-checked 10 random scripts - all contain specific variant data"
-- "Quality verification complete - programmatic generation ensures consistency"
-
-**If Issues Found:**
-- If scripts are missing data: Verify test data CSV has all variant IDs
-- If scripts are generic: Check that variant parameters are being read correctly
-- If scenario-specific details are wrong: Update template logic in the Python script and regenerate
+However, the **per-scenario approach is strongly recommended** for all new projects.
 
 **GIT CHECKPOINT - Commit Step 7:**
 ```bash
-git add OUTPUT_DIR/06_test_scripts/
-git commit -m "Complete Step 7: Generate test scripts (X scripts)"
+git add OUTPUT_DIR/scenarios/*/scripts/ OUTPUT_DIR/scenarios/*/metrics.json
+git commit -m "Complete Step 7: Generate test scripts per-scenario (X total scripts across Y scenarios)"
 ```
 
 
-Step 8: Produce Combinatorial Plan (OPTIMIZATION):
+Step 8: Produce Combinatorial Plan (OPTIMIZATION - Per-Scenario):
 
-**THIS IS WHERE THE MAGIC HAPPENS**: You have generated 25,000-75,000 exhaustive variants. Now reduce to ~500-2,000 optimized test cases while maintaining 95%+ pairwise coverage.
+**THIS IS WHERE THE MAGIC HAPPENS**: You have generated 25,000-75,000 exhaustive variants across all scenarios. Now optimize **each scenario independently** to reduce to ~500-2,000 total optimized test cases while maintaining 95%+ pairwise coverage per scenario.
 
-Execute the scripts/combinatorial.py script using the command:
+**CRITICAL IMPROVEMENT**: Combinatorial optimization is now performed **per-scenario** for better flexibility and precision.
 
-python3 skill/scripts/combinatorial.py OUTPUT_DIR/04_variants.csv --output OUTPUT_DIR/07_combinatorial_plan.md
+**Benefits of Per-Scenario Optimization:**
+- ✅ **Independent optimization**: Different scenarios can have different optimization targets
+- ✅ **Better coverage**: Complex scenarios get more test cases, simple ones get fewer
+- ✅ **Easier debugging**: Issues isolated to specific scenario optimizations
+- ✅ **Flexible**: Can reoptimize individual scenarios without affecting others
+
+**Execute the orchestrator:**
+
+```bash
+python3 skill/scripts/scenario_orchestrator.py \
+  --all \
+  --steps combinatorial \
+  --output-dir OUTPUT_DIR/scenarios
+```
 
 **IMPORTANT:** Replace OUTPUT_DIR with the actual directory path being used (e.g., `deliverables/` or custom path).
 
-**How Combinatorial Optimization Works:**
-- The script analyzes all parameter pairs in your exhaustive variants
-- Selects a minimal subset that covers 95%+ of all possible parameter pair interactions
-- Example: Instead of testing all 4 browsers × 3 devices × 3 network speeds (36 combos), tests ~12 carefully selected combos that cover all pairs
-- This is the foundation of "pairwise testing" - research shows 70-90% of bugs are caused by single parameters or pairs
+**What This Does:**
+1. For each scenario directory:
+   - Reads the scenario's `variants.csv`
+   - Analyzes parameter pair combinations
+   - Selects optimal subset achieving 95%+ pairwise coverage
+   - Saves optimization plan to `combinatorial_plan.md`
+   - Updates `metrics.json` with optimization statistics
+2. Provides real-time progress tracking with reduction percentages
 
-**Expected Results (for truly exhaustive input):**
+**Expected Output Structure:**
+```
+OUTPUT_DIR/scenarios/
+├── TS-001_New_Buyer_Registration/
+│   ├── variants.csv              (864 exhaustive variants)
+│   ├── test_data.csv
+│   ├── scripts/
+│   ├── combinatorial_plan.md     (NEW - optimization details)
+│   └── metrics.json              (updated with optimized count: ~42 test cases)
+│
+├── TS-002_Invalid_Email_Format/
+│   ├── variants.csv              (144 exhaustive variants)
+│   ├── test_data.csv
+│   ├── scripts/
+│   ├── combinatorial_plan.md     (NEW - ~18 test cases)
+│   └── metrics.json
+│
+├── TS-010_Checkout_Process/
+│   ├── variants.csv              (5,184 exhaustive variants)
+│   ├── combinatorial_plan.md     (NEW - ~127 test cases)
+│   └── metrics.json
+│
+└── ... (combinatorial_plan.md in each scenario folder)
+```
 
-| Input Variants | Expected Output | Expected Reduction | Expected Coverage |
-|----------------|-----------------|-------------------|-------------------|
-| 10,000-25,000  | 300-800        | 92-97%           | 95-100%          |
-| 25,000-75,000  | 800-2,000      | 95-98%           | 95-100%          |
-| 75,000-200,000 | 2,000-5,000    | 97-99%           | 95-100%          |
+**How Combinatorial Optimization Works (unchanged):**
+- Analyzes all parameter pairs in scenario's exhaustive variants
+- Selects a minimal subset covering 95%+ of all possible parameter pair interactions
+- Example: For 864 variants → selects ~42 that cover all critical parameter combinations
+- Foundation of "pairwise testing" - research shows 70-90% of bugs are caused by single parameters or pairs
 
-**After Execution:**
+**Expected Results Per Scenario:**
 
-1. **Review the generated OUTPUT_DIR/07_combinatorial_plan.md** for:
-   - Total exhaustive variants (input)
-   - Selected optimal variants (output)
-   - Pairwise coverage percentage
-   - Coverage statistics table
+| Scenario Complexity | Input Variants | Expected Output | Expected Reduction | Expected Coverage |
+|---------------------|----------------|-----------------|-------------------|-------------------|
+| Simple | 100-500 | 10-25 | 90-95% | 95-100% |
+| Moderate | 500-2,000 | 25-75 | 92-96% | 95-100% |
+| Complex | 2,000-10,000 | 75-300 | 95-98% | 95-100% |
 
-2. **Verify Expected Performance:**
-   - Reduction should be 90-95%+
-   - Pairwise coverage should be 95%+
-   - If reduction < 90% or coverage < 95%, something went wrong
+**Expected Results Overall:**
 
-3. **Report Results:**
-   - "Combinatorial analysis reduced X variants to Y test cases (Z% reduction) with W% pairwise coverage."
-   - Example: "Combinatorial analysis reduced 47,520 variants to 1,247 test cases (97.4% reduction) with 98.2% pairwise coverage."
+| Total Input Variants | Expected Total Output | Expected Reduction | Average Coverage |
+|----------------------|----------------------|-------------------|------------------|
+| 10,000-25,000 | 300-800 | 92-97% | 95-100% |
+| 25,000-75,000 | 800-2,000 | 95-98% | 95-100% |
+| 75,000-200,000 | 2,000-5,000 | 97-99% | 95-100% |
+
+**PROGRESS TRACKING:**
+
+The orchestrator provides real-time updates:
+```
+Scenario Orchestration - Combinatorial Optimization
+============================================================
+Output Directory: deliverables/scenarios
+Total Scenarios: 106
+Selected Steps: combinatorial
+
+[1/106] TS-001: New Buyer Registration
+  Reading variants: TS-001_New_Buyer_Registration/variants.csv (864 variants)
+  Analyzing parameter pairs...
+  ✓ Optimized to 42 test cases (95.1% reduction, 98.2% coverage)
+  Output: TS-001_New_Buyer_Registration/combinatorial_plan.md
+
+[2/106] TS-002: Invalid Email Format
+  Reading variants: TS-002_Invalid_Email_Format/variants.csv (144 variants)
+  ✓ Optimized to 18 test cases (87.5% reduction, 96.8% coverage)
+  Output: TS-002_Invalid_Email_Format/combinatorial_plan.md
+
+[10/106] TS-010: Checkout Process
+  Reading variants: TS-010_Checkout_Process/variants.csv (5,184 variants)
+  Analyzing parameter pairs...
+  ✓ Optimized to 127 test cases (97.5% reduction, 97.1% coverage)
+  Output: TS-010_Checkout_Process/combinatorial_plan.md
+
+...
+
+[106/106] TS-106: Security Testing
+  ✓ Optimized to 12 test cases (66.7% reduction, 95.5% coverage)
+  Output: TS-106_Security_Testing/combinatorial_plan.md
+
+Summary:
+  Total Exhaustive Variants: 47,520
+  Total Optimized Test Cases: 1,892
+  Overall Reduction: 96.0%
+  Average Coverage: 97.1%
+  Min Coverage: 95.5% (TS-106)
+  Max Coverage: 99.8% (TS-035)
+  Successful: 106
+  Failed: 0
+```
+
+**ALTERNATIVE USAGE - Specific Scenarios Only:**
+
+Optimize specific scenarios only:
+
+```bash
+# Single scenario
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenario TS-001 \
+  --steps combinatorial \
+  --output-dir OUTPUT_DIR/scenarios
+
+# Multiple scenarios
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenarios TS-001,TS-010,TS-035 \
+  --steps combinatorial \
+  --output-dir OUTPUT_DIR/scenarios
+```
+
+**VERIFICATION CHECKPOINT:**
+
+After optimization completes:
+
+**1. Review Individual Scenario Optimization:**
+```bash
+# View TS-001 combinatorial plan
+cat OUTPUT_DIR/scenarios/TS-001_*/combinatorial_plan.md
+
+# Check TS-001 metrics
+cat OUTPUT_DIR/scenarios/TS-001_*/metrics.json
+```
+
+**2. View Aggregate Summary:**
+```bash
+python3 skill/scripts/summary_aggregator.py --scenarios-dir OUTPUT_DIR/scenarios
+cat OUTPUT_DIR/summary/metrics_dashboard.md
+```
+
+**3. Verify Expected Performance:**
+
+For each scenario:
+- Reduction should be 85-98% (varies by complexity)
+- Pairwise coverage should be 95%+
+- Optimized count should be manageable (10-300 test cases per scenario)
+
+Overall:
+- Total reduction: 90-96%
+- Average coverage: 95%+
+- Total optimized test cases: Reasonable for execution (500-2,000 total)
+
+**4. Report Results:**
+- "Combinatorial analysis completed for X scenarios"
+- "Total exhaustive variants: Y"
+- "Total optimized test cases: Z (W% reduction)"
+- "Average pairwise coverage: V%"
+- "Min coverage: A% (TS-XXX), Max coverage: B% (TS-YYY)"
+
+**Example Report:**
+```
+Combinatorial analysis completed for 106 scenarios
+Total exhaustive variants: 47,520
+Total optimized test cases: 1,892 (96.0% reduction)
+Average pairwise coverage: 97.1%
+Min coverage: 95.5% (TS-106), Max coverage: 99.8% (TS-035)
+```
 
 **If Results Don't Meet Expectations:**
 
 | Issue | Likely Cause | Fix |
 |-------|-------------|-----|
-| Reduction < 50% | Input wasn't truly exhaustive | Go back to Step 5, regenerate with full Cartesian product |
-| Coverage < 80% | Too few parameter combinations | Check that Step 5 identified all relevant parameters |
-| Output > 10,000 | Input was TOO exhaustive (millions of rows) | Consider reducing some parameter dimensions or splitting into multiple runs |
+| Coverage < 95% for a scenario | Too few parameters or variants | Regenerate that scenario with more parameter dimensions |
+| Reduction < 50% for a scenario | Input wasn't truly exhaustive | Regenerate that scenario with full Cartesian product |
+| Output > 10,000 total | Too many complex scenarios | Review if all scenarios are necessary; consider prioritization |
 
-**Optional flags:**
-- `--mode select` - Select optimal subset from existing variants (DEFAULT - recommended)
-- `--mode generate` - Generate new variants from scratch (not recommended - use Step 5 instead)
-- `--verbose` - Enable detailed logging to see selection algorithm progress
-- `--output <path>` - Specify custom output path (REQUIRED when using custom OUTPUT_DIR)
+**Per-Scenario Reoptimization:**
+
+If a specific scenario's optimization is unsatisfactory, regenerate just that scenario:
+
+```bash
+python3 skill/scripts/scenario_orchestrator.py \
+  --scenario TS-035 \
+  --steps combinatorial \
+  --output-dir OUTPUT_DIR/scenarios \
+  --force
+```
 
 **What Happens Next:**
-- The optimized variant list from Step 8 is used for test execution planning
-- The exhaustive variant list (Step 5) remains as documentation of full coverage
-- Step 9 (Test Plan) references both: exhaustive for documentation, optimized for execution
+- Each scenario's `combinatorial_plan.md` contains the optimized variant list
+- Exhaustive variants remain in `variants.csv` for documentation
+- Summary aggregator creates overall optimization statistics
+- Test Plan (Step 9) references both exhaustive and optimized counts
+
+**BACKWARDS COMPATIBILITY:**
+
+The old monolithic approach is still supported:
+
+```bash
+python3 skill/scripts/combinatorial.py \
+  OUTPUT_DIR/04_variants.csv \
+  --output OUTPUT_DIR/07_combinatorial_plan.md
+```
+
+However, the **per-scenario approach is strongly recommended** for all new projects.
 
 **GIT CHECKPOINT - Commit Step 8:**
 ```bash
-git add OUTPUT_DIR/07_combinatorial_plan.md
-git commit -m "Complete Step 8: Combinatorial optimization (X% reduction, Y% coverage)"
+git add OUTPUT_DIR/scenarios/*/combinatorial_plan.md OUTPUT_DIR/scenarios/*/metrics.json
+git commit -m "Complete Step 8: Combinatorial optimization per-scenario (X% reduction, Y% coverage)"
 ```
 
 9. Step 9: Draft Full Test Plan:
@@ -722,27 +1219,149 @@ git commit -m "Complete Step 10: Build RTM (X% coverage)"
 11. Completion and Summary:
 - List all files in OUTPUT_DIR directory with file sizes
 - Provide a comprehensive summary with key metrics:
-- Total requirements extracted
-- Total test scenarios generated
-- Total variants created (exhaustive)
-- Optimized test case count (from combinatorial analysis)
-- Reduction percentage achieved
-- Requirements coverage percentage
-- Test scripts completion status
-- Notify the user that all QA artifacts have been generated and are available in the OUTPUT_DIR directory.
+  - Total requirements extracted
+  - Total test scenarios generated
+  - **Per-Scenario Breakdown**:
+    - Total scenario folders created
+    - Total variants created (exhaustive, across all scenarios)
+    - Total test data rows generated
+    - Total test scripts generated
+    - Total optimized test cases (from combinatorial analysis across all scenarios)
+  - Reduction percentage achieved (overall)
+  - Average pairwise coverage percentage
+  - Requirements coverage percentage
+  - Test artifacts completion status
+
+**Generate Final Summary Report:**
+```bash
+# Generate comprehensive summary across all scenarios
+python3 skill/scripts/summary_aggregator.py --scenarios-dir OUTPUT_DIR/scenarios
+
+# View the summary dashboard
+cat OUTPUT_DIR/summary/metrics_dashboard.md
+
+# View scenario index
+cat OUTPUT_DIR/summary/scenario_index.json
+```
+
+**Expected Output Structure:**
+```
+OUTPUT_DIR/
+├── 00_requirements.md
+├── 01_requirements_assessment.md
+├── 02_entities_and_flows.md
+├── 03_test_scenarios.md
+├── 08_test_plan.md
+├── 09_rtm.csv
+├── 09_rtm_gap_report.md
+│
+├── scenarios/                       (NEW - per-scenario architecture)
+│   ├── TS-001_Title/
+│   │   ├── variants.csv
+│   │   ├── test_data.csv
+│   │   ├── scripts/
+│   │   │   ├── TS-001_V00001.txt
+│   │   │   └── ... (864 scripts)
+│   │   ├── combinatorial_plan.md
+│   │   └── metrics.json
+│   │
+│   ├── TS-002_Title/
+│   │   └── ... (same structure)
+│   │
+│   └── ... (106 scenario folders)
+│
+└── summary/                        (NEW - aggregate analytics)
+    ├── metrics_dashboard.md
+    ├── scenario_index.json
+    └── (optional) all_variants.csv
+```
+
+**Final Verification Checklist:**
+
+✅ **Core Documents:**
+- [ ] 00_requirements.md exists and contains all requirements
+- [ ] 01_requirements_assessment.md exists
+- [ ] 02_entities_and_flows.md exists
+- [ ] 03_test_scenarios.md exists and contains all scenarios
+- [ ] 08_test_plan.md exists
+- [ ] 09_rtm.csv exists
+- [ ] 09_rtm_gap_report.md exists
+
+✅ **Per-Scenario Artifacts:**
+- [ ] All scenarios have their own folder in OUTPUT_DIR/scenarios/
+- [ ] Each scenario folder contains: variants.csv, test_data.csv, scripts/, combinatorial_plan.md, metrics.json
+- [ ] Variant counts match expected exhaustive Cartesian products
+- [ ] Test data row counts match variant counts
+- [ ] Script counts match variant counts
+- [ ] Combinatorial plans show 95%+ coverage
+
+✅ **Summary Reports:**
+- [ ] OUTPUT_DIR/summary/metrics_dashboard.md exists
+- [ ] OUTPUT_DIR/summary/scenario_index.json exists
+- [ ] Aggregate metrics look correct
+
+**Verification Commands:**
+```bash
+# Count scenario folders
+ls -d OUTPUT_DIR/scenarios/TS-* | wc -l
+
+# Count total variants
+find OUTPUT_DIR/scenarios -name "variants.csv" -exec wc -l {} + | tail -1
+
+# Count total scripts
+find OUTPUT_DIR/scenarios -name "*.txt" -type f | wc -l
+
+# Verify no missing artifacts
+python3 skill/scripts/summary_aggregator.py --scenarios-dir OUTPUT_DIR/scenarios --validate
+```
+
+**Example Summary Report:**
+```
+QA Artifact Generation Complete!
+================================
+
+Core Deliverables:
+  ✓ Requirements: 47 requirements extracted
+  ✓ Assessment: Gaps and ambiguities documented
+  ✓ Entities & Flows: 12 entities, 8 flows identified
+  ✓ Test Scenarios: 106 scenarios generated
+  ✓ Test Plan: Comprehensive test plan drafted
+  ✓ RTM: 98.5% requirement coverage
+
+Per-Scenario Artifacts (NEW Architecture):
+  ✓ Scenario Folders: 106 scenarios
+  ✓ Exhaustive Variants: 47,520 variants total
+    - Simple scenarios: 100-500 variants each
+    - Complex scenarios: 2,000-10,000 variants each
+  ✓ Test Data: 47,520 realistic data rows
+  ✓ Test Scripts: 47,520 automated scripts
+  ✓ Combinatorial Optimization: 1,892 optimized test cases
+    - Overall Reduction: 96.0%
+    - Average Coverage: 97.1%
+    - Min Coverage: 95.5%, Max Coverage: 99.8%
+
+All artifacts saved to: OUTPUT_DIR/
+```
+
+**Notify the user:**
+- All QA artifacts have been generated and are available in the OUTPUT_DIR directory
 - Confirm the final output directory path (e.g., "All artifacts saved to: deliverables/")
-- Final verification: Confirm no gaps or missing artifacts.
+- Highlight the new scenario-based architecture benefits
+- Confirm no gaps or missing artifacts
 
 **FINAL GIT CHECKPOINT - Commit all remaining files:**
 ```bash
+# Add summary reports
+git add OUTPUT_DIR/summary/
+
 # Add any remaining files not yet committed
 git add OUTPUT_DIR/
 
 # Create final summary commit
-git commit -m "Complete QA artifacts generation: $(ls OUTPUT_DIR/ | wc -l) files generated"
+git commit -m "Complete QA artifacts generation: $(find OUTPUT_DIR -type f | wc -l) files generated across $(ls -d OUTPUT_DIR/scenarios/TS-* | wc -l) scenarios"
 
 # Optional: Tag this completion
-git tag -a "qa-artifacts-$(date +%Y%m%d-%H%M%S)" -m "Completed QA artifact generation"
+git tag -a "qa-artifacts-$(date +%Y%m%d-%H%M%S)" -m "Completed QA artifact generation with scenario-based architecture"
 ```
 
 **Report final git status:**
