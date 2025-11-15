@@ -32,6 +32,50 @@ from typing import Dict, List, Set, Tuple, Optional
 from dataclasses import dataclass
 from datetime import datetime
 
+try:
+    from tqdm import tqdm
+    TQDM_AVAILABLE = True
+except ImportError:
+    TQDM_AVAILABLE = False
+    # Fallback: simple progress indicator
+    class tqdm:
+        def __init__(self, iterable=None, total=None, desc=None, disable=False, **kwargs):
+            self.iterable = iterable
+            self.total = total or (len(iterable) if iterable else 0)
+            self.desc = desc
+            self.disable = disable
+            self.n = 0
+            self.postfix = {}
+            
+        def __iter__(self):
+            for item in self.iterable:
+                yield item
+                self.update(1)
+            
+        def __enter__(self):
+            return self
+            
+        def __exit__(self, *args):
+            pass
+            
+        def update(self, n=1):
+            self.n += n
+            if not self.disable and self.total > 0:
+                pct = (self.n / self.total) * 100
+                if self.n % max(1, self.total // 20) == 0 or self.n == self.total:
+                    postfix_str = ', '.join(f"{k}: {v}" for k, v in self.postfix.items())
+                    postfix_str = f" [{postfix_str}]" if postfix_str else ""
+                    print(f"\r{self.desc}: {self.n}/{self.total} ({pct:.1f}%){postfix_str}", end='', flush=True)
+                    if self.n == self.total:
+                        print()  # New line at completion
+        
+        def set_postfix(self, **kwargs):
+            self.postfix.update(kwargs)
+        
+        def close(self):
+            if not self.disable and self.total > 0 and self.n > 0:
+                print()  # Ensure newline at end
+
 
 @dataclass
 class CoverageStats:
@@ -262,21 +306,30 @@ class CombinatorialTestGenerator:
         iteration = 0
         max_iter = max_iterations or total_combinations * 2
 
+        # Create progress bar
+        pbar = tqdm(
+            total=total_pairs,
+            desc="Generating pairwise plan",
+            unit="pairs",
+            disable=False  # Always show progress bar
+        )
+
         while uncovered_pairs and remaining_candidates and iteration < max_iter:
             iteration += 1
-
-            if iteration % 10 == 0:
-                coverage = (1 - len(uncovered_pairs) / total_pairs) * 100
-                self.logger.info(
-                    f"Iteration {iteration}: {len(pairwise_plan)} test cases, "
-                    f"{coverage:.1f}% coverage"
-                )
 
             best_candidate = None
             best_coverage = -1
 
+            # Show progress during candidate evaluation if there are many candidates
+            candidates_iter = tqdm(
+                remaining_candidates,
+                desc=f"  Evaluating candidates (iteration {iteration})",
+                leave=False,
+                disable=False
+            ) if len(remaining_candidates) > 1000 else remaining_candidates
+
             # Evaluate each remaining candidate
-            for candidate in remaining_candidates:
+            for candidate in candidates_iter:
                 pairs_covered = set()
 
                 # Count how many uncovered pairs this candidate covers
@@ -299,12 +352,25 @@ class CombinatorialTestGenerator:
             pairwise_plan.append(best_candidate)
             remaining_candidates.remove(best_candidate)
 
-            # Mark pairs as covered
+            # Mark pairs as covered and update progress bar
+            pairs_covered_this_iteration = 0
             for i in range(len(headers)):
                 for j in range(i + 1, len(headers)):
                     pair = ((headers[i], best_candidate[i]), (headers[j], best_candidate[j]))
-                    uncovered_pairs.discard(pair)
+                    if pair in uncovered_pairs:
+                        uncovered_pairs.discard(pair)
+                        pairs_covered_this_iteration += 1
+            
+            # Update progress bar
+            pbar.update(pairs_covered_this_iteration)
+            coverage_pct = ((total_pairs - len(uncovered_pairs)) / total_pairs * 100) if total_pairs > 0 else 0
+            pbar.set_postfix(
+                test_cases=len(pairwise_plan),
+                coverage=f'{coverage_pct:.1f}%'
+            )
 
+        pbar.close()
+        
         coverage_pct = ((total_pairs - len(uncovered_pairs)) / total_pairs * 100) if total_pairs > 0 else 0
         self.logger.info(
             f"✓ Generated {len(pairwise_plan)} test cases with {coverage_pct:.1f}% coverage"
@@ -376,6 +442,14 @@ class CombinatorialTestGenerator:
         selected_variants = []
         remaining_candidates = candidates.copy()
 
+        # Create progress bar for the selection process
+        pbar = tqdm(
+            total=total_pairs,
+            desc="Selecting optimal variants",
+            unit="pairs",
+            disable=False  # Always show progress bar
+        )
+
         iteration = 0
         while uncovered_pairs and remaining_candidates and iteration < len(candidates):
             iteration += 1
@@ -383,7 +457,15 @@ class CombinatorialTestGenerator:
             best_variant = None
             best_coverage = -1
 
-            for variant_id, values in remaining_candidates:
+            # Show progress during candidate evaluation (slow part)
+            candidates_iter = tqdm(
+                remaining_candidates,
+                desc=f"  Evaluating candidates (iteration {iteration})",
+                leave=False,
+                disable=False
+            ) if len(remaining_candidates) > 1000 else remaining_candidates
+
+            for variant_id, values in candidates_iter:
                 pairs_covered = set()
 
                 for i in range(len(param_headers)):
@@ -407,20 +489,27 @@ class CombinatorialTestGenerator:
             selected_variants.append(best_variant)
             remaining_candidates.remove(best_variant)
 
-            # Mark pairs as covered
+            # Mark pairs as covered and update progress bar
             variant_id, values = best_variant
+            pairs_covered_this_iteration = 0
             for i in range(len(param_headers)):
                 for j in range(i + 1, len(param_headers)):
                     v1, v2 = values[i], values[j]
                     if v1.upper() not in ('N/A', 'NA') and v2.upper() not in ('N/A', 'NA'):
                         pair = ((param_headers[i], v1), (param_headers[j], v2))
-                        uncovered_pairs.discard(pair)
+                        if pair in uncovered_pairs:
+                            uncovered_pairs.discard(pair)
+                            pairs_covered_this_iteration += 1
+            
+            # Update progress bar
+            pbar.update(pairs_covered_this_iteration)
+            coverage = (1 - len(uncovered_pairs) / total_pairs) * 100
+            pbar.set_postfix(
+                variants=len(selected_variants),
+                coverage=f'{coverage:.1f}%'
+            )
 
-            if iteration % 5 == 0:
-                coverage = (1 - len(uncovered_pairs) / total_pairs) * 100
-                self.logger.info(
-                    f"Selected {len(selected_variants)} variants, {coverage:.1f}% coverage"
-                )
+        pbar.close()
 
         covered_pairs = total_pairs - len(uncovered_pairs)
         coverage_pct = (covered_pairs / total_pairs * 100) if total_pairs > 0 else 0
