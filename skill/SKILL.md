@@ -74,6 +74,12 @@ Carefully read all the provided requirement documents.
 Analyze them for gaps, ambiguities, contradictions, and unstated assumptions.
 Synthesize your findings into a markdown file named OUTPUT_DIR/01_requirements_assessment.md.
 
+**GIT CHECKPOINT - Commit Step 1:**
+```bash
+git add OUTPUT_DIR/01_requirements_assessment.md
+git commit -m "Complete Step 1: Requirements assessment"
+```
+
 
 Step 2: Extract and Number Requirements:
 
@@ -124,12 +130,24 @@ Save to OUTPUT_DIR/00_requirements.md (numbered 00 to appear first in directory 
 Count and report: State the total number of requirements extracted (e.g., "Extracted 47 requirements").
 This document will be used by Step 10 for Requirements Traceability Matrix generation.
 
+**GIT CHECKPOINT - Commit Step 2:**
+```bash
+git add OUTPUT_DIR/00_requirements.md
+git commit -m "Complete Step 2: Extract and number requirements (X requirements)"
+```
+
 
 Step 3: Extract Entities and Flows:
 
 From the requirements, identify and list all key entities (e.g., user roles, system components, data objects) and the primary user/system flows.
 Document these in OUTPUT_DIR/02_entities_and_flows.md.
 Count and report: State the number of entities and flows identified.
+
+**GIT CHECKPOINT - Commit Step 3:**
+```bash
+git add OUTPUT_DIR/02_entities_and_flows.md
+git commit -m "Complete Step 3: Extract entities and flows (X entities, Y flows)"
+```
 
 
 Step 4: Derive Test Scenarios (EXHAUSTIVE):
@@ -162,6 +180,12 @@ As a [user role], I want to [perform an action], so that I can [achieve a benefi
 Save these to OUTPUT_DIR/03_test_scenarios.md.
 VERIFICATION CHECKPOINT: After generating, count the total scenarios and report: "Generated X test scenarios covering Y requirements."
 Cross-check: Review OUTPUT_DIR/00_requirements.md to ensure every requirement has at least one scenario. If any are missing, add them now.
+
+**GIT CHECKPOINT - Commit Step 4:**
+```bash
+git add OUTPUT_DIR/03_test_scenarios.md
+git commit -m "Complete Step 4: Generate test scenarios (X scenarios)"
+```
 
 
 Step 5: Define Variants (EXHAUSTIVE):
@@ -297,6 +321,12 @@ After generating, perform these checks:
 
 Note: Step 8 will use combinatorial analysis to reduce this to an optimal subset (~90-95% reduction, achieving 95%+ pairwise coverage).
 
+**GIT CHECKPOINT - Commit Step 5:**
+```bash
+git add OUTPUT_DIR/04_variants.csv
+git commit -m "Complete Step 5: Generate exhaustive variants (X variants)"
+```
+
 
 Step 6: Create Test Data (EXHAUSTIVE):
 
@@ -341,93 +371,119 @@ python3 skill/scripts/validate_test_data.py OUTPUT_DIR/04_variants.csv OUTPUT_DI
 
 Quality check: Ensure data is realistic, valid, and matches the variant parameters.
 
+**GIT CHECKPOINT - Commit Step 6:**
+```bash
+git add OUTPUT_DIR/05_test_data.csv
+git commit -m "Complete Step 6: Generate test data (X rows)"
+```
 
-Step 7: Generate Test Scripts (EXHAUSTIVE - BATCH APPROACH):
 
-CRITICAL: You must generate a test script for EVERY SINGLE SCENARIO from OUTPUT_DIR/03_test_scenarios.md.
-DO NOT skip any scenarios. Missing scripts break traceability.
+Step 7: Generate Test Scripts (AUTOMATED - VARIANT-BASED):
 
-**REQUIRED FORMAT (for rtm_builder.py script consumption):**
-- File naming: MUST use format `TS-XXX.txt` where XXX matches scenario ID
-- Content format: Use "Given / When / Then" format with clear "Expected Result"
-- Save location: OUTPUT_DIR/06_test_scripts/
+**CRITICAL IMPROVEMENT**: Instead of manually writing test scripts (which causes LLM fatigue and quality degradation), we now use an automated script that generates test scripts programmatically from your variants and test data.
 
-BATCH PROCESSING STRATEGY (for large scenario counts):
+**How It Works:**
+- Reads test scenarios from `03_test_scenarios.md` to understand what to test
+- Reads variants from `04_variants.csv` to get parameter combinations
+- Reads test data from `05_test_data.csv` to get concrete values
+- **Automatically generates** one test script per variant (e.g., TS-001_V001.txt, TS-001_V002.txt, etc.)
+- Uses intelligent templates based on scenario type (Registration, Login, Checkout, etc.)
+- Injects specific test data and parameters into GIVEN/WHEN/THEN sections
 
-**PROGRESS TRACKING:**
+**Benefits:**
+- ✅ **100% automated** - no manual LLM script writing
+- ✅ **Perfect consistency** - no quality degradation across thousands of scripts
+- ✅ **Instant generation** - generates 25,000-75,000 scripts in seconds
+- ✅ **Maintainable** - update templates, regenerate all scripts
+- ✅ **Eliminates Critique Issue #3** - no more generic placeholders or template fatigue
 
-First: Count total scenarios to generate (e.g., "Need to generate 85 test scripts")
-Batch 1 (scripts 1-20): Generate TS-001 through TS-020, save all files
-  - Report: "[24%] Completed batch 1: 20/85 test scripts generated"
-Batch 2 (scripts 21-40): Generate TS-021 through TS-040, save all files
-  - Report: "[47%] Completed batch 2: 40/85 test scripts generated"
-Batch 3 (scripts 41-60): Generate TS-041 through TS-060, save all files
-  - Report: "[71%] Completed batch 3: 60/85 test scripts generated"
-Continue until ALL scenarios have scripts
-After each batch: Report progress with percentage (e.g., "[94%] Completed 80/85 test scripts")
-Final: Report completion (e.g., "✓ Generated all 85 test scripts")
+**Execute the script:**
+
+```bash
+python3 skill/scripts/generate_test_scripts_from_variants.py \
+  OUTPUT_DIR/03_test_scenarios.md \
+  OUTPUT_DIR/04_variants.csv \
+  OUTPUT_DIR/05_test_data.csv \
+  -o OUTPUT_DIR/06_test_scripts
+```
+
+**IMPORTANT:** Replace OUTPUT_DIR with the actual directory path being used (e.g., `deliverables/` or custom path).
+
+**Expected Output:**
+- One test script per variant: `TS-XXX_VXXX.txt`
+- Generation summary: `00_GENERATION_SUMMARY.txt`
+- Progress updates every 5% with ETA
+- Generation speed: ~500-2,000 scripts per second
+- **Example**: For 47,520 variants, expect ~30-60 seconds generation time
+
+**File Naming Convention:**
+- Format: `TS-XXX_VXXX.txt` where:
+  - `TS-XXX` = Scenario ID (e.g., TS-001)
+  - `VXXX` = Variant ID (e.g., V001)
+- Example: `TS-001_V001.txt` = Registration scenario, variant 1 (Chrome/Desktop/Valid)
+- Example: `TS-001_V002.txt` = Registration scenario, variant 2 (Chrome/Desktop/Invalid email)
+
+**Script Content Format:**
+Each generated script contains:
+- **Header**: Scenario title, variant ID, priority, description
+- **GIVEN**: Specific preconditions based on variant parameters (user type, browser, device, network)
+- **WHEN**: Specific actions with concrete test data from CSV
+- **THEN**: Specific assertions based on input validity and scenario type
+- **EXPECTED RESULT**: Detailed outcomes with database/email/UI verification
+- **VARIANT PARAMETERS**: All parameter values for this variant
+- **TEST DATA**: All test data fields for this variant
+- **RELATED REQUIREMENTS**: Traceability to requirements
 
 VERIFICATION CHECKPOINT:
 
-After completion, perform BOTH quantity and quality checks:
+After generation completes, perform these checks:
 
 **Quantity Check:**
 - List the OUTPUT_DIR/06_test_scripts/ directory
-- Count files and verify: "Generated X test scripts for X scenarios - 100% complete"
-- If any are missing: Generate the missing scripts immediately before proceeding
+- Count files: `ls OUTPUT_DIR/06_test_scripts/*.txt | wc -l`
+- Verify count matches variant count from 04_variants.csv
+- Check generation summary: `cat OUTPUT_DIR/06_test_scripts/00_GENERATION_SUMMARY.txt`
+- **Report**: "Generated X test scripts for Y variants - 100% complete"
 
-**Quality Check (CRITICAL - prevents generic templates):**
+**Quality Spot-Check (10 random scripts):**
 
-**Sampling Strategy:**
-- Sample at least 15-20 scripts (minimum 10% of total, distributed across all batches)
-- Must include scripts from: Beginning (TS-001 to TS-020), Middle (around TS-050% mark), End (last 20 scripts)
-- Example for 100 scripts: Sample TS-005, TS-012, TS-025, TS-038, TS-047, TS-053, TS-066, TS-071, TS-084, TS-091, TS-095, TS-099
-- This ensures quality doesn't degrade in later batches
+Since scripts are generated programmatically, quality is consistent. However, verify the templates work correctly:
 
-**For EACH sampled script, verify:**
+Sample 10 random scripts and verify:
+- ✓ Contains specific scenario details (not generic "scenario NN")
+- ✓ GIVEN section has concrete conditions (user email, device, browser)
+- ✓ WHEN section has concrete test data values from CSV
+- ✓ THEN section has specific assertions
+- ✓ EXPECTED RESULT has measurable outcomes
+- ✓ Variant parameters and test data are populated
 
-✓ **NO generic placeholders**:
-  - BAD: "scenario NN", "scenario 50", "appropriate page", "user/admin", "required action", "expected result"
-  - GOOD: Specific page names ("Product Search page", "Checkout page"), specific roles ("Buyer", "Admin")
+**Example commands to spot-check:**
+```bash
+# View a few random scripts
+ls OUTPUT_DIR/06_test_scripts/TS-001_V*.txt | head -3 | xargs cat
 
-✓ **Specific GIVEN conditions**:
-  - BAD: "system is in ready state", "preconditions are met"
-  - GOOD: "Buyer is logged in with account john.doe@example.com", "Shopping cart contains 3 items totaling $127.99"
+# Check script contains variant-specific data
+grep -l "Chrome" OUTPUT_DIR/06_test_scripts/TS-001_*.txt | head -5
 
-✓ **Specific WHEN actions**:
-  - BAD: "performs required action", "executes the operation", "completes the task"
-  - GOOD: "Clicks 'Add to Cart' button", "Enters credit card number 4111-1111-1111-1111", "Selects 'Express Shipping'"
-
-✓ **Specific THEN outcomes**:
-  - BAD: "displays expected result", "system updates correctly", "appropriate message shown"
-  - GOOD: "Displays success message 'Item added to cart'", "Redirects to /cart page", "Cart badge shows quantity '4'"
-
-✓ **Concrete test data values**:
-  - BAD: "[User email]", "valid credentials", "sample data"
-  - GOOD: "john.doe@example.com", "Password: SecurePass123!", "Product ID: PROD-12345"
-
-✓ **Measurable expected results**:
-  - BAD: "confirmation message displayed", "system behaves correctly"
-  - GOOD: "Email sent to john.doe@example.com with subject 'Order Confirmation #ORD-456'", "Database shows order status = 'PENDING'"
-
-**Quality Assessment:**
-- Create a checklist for each sampled script with the 6 criteria above
-- Mark each as PASS or FAIL
-- Calculate pass rate: X/Y scripts passed quality check
-
-**If quality check fails (pass rate < 90%):**
-1. Identify all FAILED scripts and note their batch numbers
-2. List specific quality issues found (e.g., "TS-050 uses 'scenario 50' placeholder", "TS-078 has vague expected result")
-3. Regenerate ENTIRE affected batches with explicit instruction:
-   - "Generate test scripts with SPECIFIC details. Use concrete values, not placeholders. Reference actual field names, button labels, error messages, and page URLs."
-4. After regeneration, re-sample the regenerated batches (sample 20% of regenerated scripts)
-5. Verify quality improved to >90% pass rate
-6. If still failing, regenerate individual scripts one by one with detailed prompting
+# Verify no placeholder text remains
+grep -r "scenario NN\|TODO\|PLACEHOLDER" OUTPUT_DIR/06_test_scripts/ || echo "✓ No placeholders found"
+```
 
 **Report:**
-- "Quality check: X/Y sampled scripts passed (Z% pass rate)"
-- If <90%: "Regenerated batches [list], re-verified, final pass rate: W%"
-- If ≥90%: "Quality verification complete - all scripts meet standards"
+- "Generated X test scripts in Y seconds (Z scripts/sec)"
+- "Spot-checked 10 random scripts - all contain specific variant data"
+- "Quality verification complete - programmatic generation ensures consistency"
+
+**If Issues Found:**
+- If scripts are missing data: Verify test data CSV has all variant IDs
+- If scripts are generic: Check that variant parameters are being read correctly
+- If scenario-specific details are wrong: Update template logic in the Python script and regenerate
+
+**GIT CHECKPOINT - Commit Step 7:**
+```bash
+git add OUTPUT_DIR/06_test_scripts/
+git commit -m "Complete Step 7: Generate test scripts (X scripts)"
+```
 
 
 Step 8: Produce Combinatorial Plan (OPTIMIZATION):
@@ -490,6 +546,12 @@ python3 skill/scripts/combinatorial.py OUTPUT_DIR/04_variants.csv --output OUTPU
 - The exhaustive variant list (Step 5) remains as documentation of full coverage
 - Step 9 (Test Plan) references both: exhaustive for documentation, optimized for execution
 
+**GIT CHECKPOINT - Commit Step 8:**
+```bash
+git add OUTPUT_DIR/07_combinatorial_plan.md
+git commit -m "Complete Step 8: Combinatorial optimization (X% reduction, Y% coverage)"
+```
+
 9. Step 9: Draft Full Test Plan:
 - Synthesize all previous outputs into a comprehensive test plan document.
 - The plan should include:
@@ -513,6 +575,12 @@ python3 skill/scripts/combinatorial.py OUTPUT_DIR/04_variants.csv --output OUTPU
   - **Risk Assessment**: Potential risks and mitigation strategies
   - **Entry and Exit Criteria**: When testing can start and when it's considered complete
 - Save the document as OUTPUT_DIR/08_test_plan.md.
+
+**GIT CHECKPOINT - Commit Step 9:**
+```bash
+git add OUTPUT_DIR/08_test_plan.md
+git commit -m "Complete Step 9: Draft test plan"
+```
 
 10. Step 10: Build Requirements Traceability Matrix (RTM):
 
@@ -549,6 +617,12 @@ REQ-003,System performance requirements...,Medium,Performance,N/A,TS-025,Yes,Cov
 - **Type**: Requirement category (Functional/Non-Functional/Security/Performance/Usability, or N/A if not specified)
 - **Affected_Roles**: User roles impacted by this requirement (extracted from requirements, or N/A if not specified)
 
+**GIT CHECKPOINT - Commit Step 10:**
+```bash
+git add OUTPUT_DIR/09_rtm.csv OUTPUT_DIR/09_rtm_gap_report.md
+git commit -m "Complete Step 10: Build RTM (X% coverage)"
+```
+
 11. Completion and Summary:
 - List all files in OUTPUT_DIR directory with file sizes
 - Provide a comprehensive summary with key metrics:
@@ -562,3 +636,21 @@ REQ-003,System performance requirements...,Medium,Performance,N/A,TS-025,Yes,Cov
 - Notify the user that all QA artifacts have been generated and are available in the OUTPUT_DIR directory.
 - Confirm the final output directory path (e.g., "All artifacts saved to: deliverables/")
 - Final verification: Confirm no gaps or missing artifacts.
+
+**FINAL GIT CHECKPOINT - Commit all remaining files:**
+```bash
+# Add any remaining files not yet committed
+git add OUTPUT_DIR/
+
+# Create final summary commit
+git commit -m "Complete QA artifacts generation: $(ls OUTPUT_DIR/ | wc -l) files generated"
+
+# Optional: Tag this completion
+git tag -a "qa-artifacts-$(date +%Y%m%d-%H%M%S)" -m "Completed QA artifact generation"
+```
+
+**Report final git status:**
+```bash
+git log --oneline -11  # Show all 11 commits (10 steps + final)
+git status
+```
