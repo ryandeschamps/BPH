@@ -15,6 +15,51 @@ Confirm you have understood the request.
 Ask the user to upload all their requirements and specification documents.
 Ask the user if they want to use a custom output directory or use the default `deliverables/` directory.
 
+**HANDLE LARGE PDF FILES:**
+
+If the user provides PDF files, check if they might be too large for LLM processing:
+- Run the PDF chunking script to analyze the file:
+  ```bash
+  python3 skill/scripts/chunk_large_pdf.py <pdf_file>
+  ```
+- The script will automatically detect if chunking is needed based on:
+  - File size (>5 MB)
+  - Page count (>50 pages)
+  - Character count (>100,000 chars)
+
+**If chunking is NOT needed:**
+- Script will report "No chunking needed"
+- Process the PDF normally
+
+**If chunking IS needed:**
+- Script will automatically create chunks in `<pdf_name>_chunks/` directory
+- Chunks are saved as text files with page number preservation
+- Review the `00_CHUNKING_SUMMARY.txt` file for chunk details
+- **Processing Strategy**: When extracting requirements (Step 2), process chunks sequentially:
+  1. Read chunk_001_pages_X-Y.txt
+  2. Extract requirements with page number references
+  3. Move to chunk_002_pages_X-Y.txt
+  4. Continue until all chunks processed
+  5. Combine requirements from all chunks into single 00_requirements.md
+
+**Chunking Options:**
+```bash
+# Auto-detect and chunk if needed (recommended)
+python3 skill/scripts/chunk_large_pdf.py requirements.pdf
+
+# Force chunking with specific strategy
+python3 skill/scripts/chunk_large_pdf.py requirements.pdf --strategy pages --pages-per-chunk 10
+
+# Custom output directory
+python3 skill/scripts/chunk_large_pdf.py requirements.pdf --output custom_chunks/
+```
+
+**Available Strategies:**
+- `auto` - Automatically select best strategy (default)
+- `pages` - Chunk by page count (good for very large PDFs)
+- `size` - Chunk by character count (consistent sizing)
+- `sections` - Chunk by detected headings/sections (best quality, preserves logical structure)
+
 Once they are provided, handle the output directory:
 - **Set OUTPUT_DIR variable**: If user specified a custom directory, use it (e.g., `custom_output/`). Otherwise, use `deliverables/`
 - **If OUTPUT_DIR does NOT exist**: Create OUTPUT_DIR and OUTPUT_DIR/06_test_scripts/

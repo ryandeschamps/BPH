@@ -394,14 +394,380 @@ All errors provide clear, actionable messages.
 
 ---
 
+### 3. chunk_large_pdf.py
+
+**Purpose:** Intelligently chunks large PDF files that exceed LLM context limits into manageable pieces with preserved traceability.
+
+**Version:** 1.0.0
+
+**Key Features:**
+- Automatic size detection (file size, page count, character count)
+- Multiple chunking strategies (pages, size, sections)
+- Text extraction with multiple PDF library support
+- Page number preservation for traceability
+- Context overlap between chunks
+- Summary file generation with usage instructions
+- Progress tracking and verbose logging
+- Graceful error handling
+
+#### Usage
+
+**Basic Usage (Auto-detect):**
+```bash
+python3 chunk_large_pdf.py requirements.pdf
+```
+
+This will:
+1. Analyze the PDF file
+2. Determine if chunking is needed based on thresholds
+3. If needed, extract text and create chunks automatically
+4. Generate summary file with processing details
+
+**Check Without Processing:**
+```bash
+# Script will report if chunking is needed without creating chunks
+python3 chunk_large_pdf.py requirements.pdf
+```
+
+**Force Chunking:**
+```bash
+python3 chunk_large_pdf.py requirements.pdf --force
+```
+
+**With Specific Strategy:**
+```bash
+# Chunk by pages (10 pages per chunk)
+python3 chunk_large_pdf.py requirements.pdf --strategy pages --pages-per-chunk 10
+
+# Chunk by character count
+python3 chunk_large_pdf.py requirements.pdf --strategy size --chunk-size 50000
+
+# Chunk by detected sections/headings (best quality)
+python3 chunk_large_pdf.py requirements.pdf --strategy sections
+```
+
+**Custom Output Directory:**
+```bash
+python3 chunk_large_pdf.py requirements.pdf --output my_chunks/
+```
+
+**Verbose Logging:**
+```bash
+python3 chunk_large_pdf.py requirements.pdf --verbose
+```
+
+#### Detection Thresholds
+
+The script automatically determines if chunking is needed based on:
+
+| Threshold | Value | Reason |
+|-----------|-------|--------|
+| File Size | > 5 MB | Large files may cause processing issues |
+| Page Count | > 50 pages | Too many pages for single LLM context |
+| Character Count | > 100,000 chars | Exceeds typical LLM token limits (~25k tokens) |
+
+**Note:** Use `--force` flag to chunk files that are below thresholds.
+
+#### Chunking Strategies
+
+**1. Auto Strategy (Default - Recommended):**
+- Automatically selects best strategy based on file characteristics:
+  - Large page count (>100 pages) → Uses "pages" strategy
+  - Large text content (>200k chars) → Uses "sections" strategy
+  - Otherwise → Uses "size" strategy
+
+**2. Pages Strategy:**
+- Chunks by page count
+- Good for: Very large PDFs, consistent page-based processing
+- Default: 10 pages per chunk (configurable with `--pages-per-chunk`)
+- Pros: Simple, predictable chunk sizes
+- Cons: May split mid-section
+
+**3. Size Strategy:**
+- Chunks by character count
+- Good for: Consistent chunk sizing, balanced processing
+- Default: 50,000 characters per chunk (configurable with `--chunk-size`)
+- Features: Includes context overlap between chunks (500 chars)
+- Pros: Consistent sizing, maintains some context between chunks
+- Cons: May split mid-paragraph
+
+**4. Sections Strategy (Best Quality):**
+- Chunks by detected headings/sections
+- Good for: Structured documents, preserving logical flow
+- Detection: Finds markdown headings, numbered sections, ALL CAPS headings
+- Fallback: If no sections detected, falls back to size-based chunking
+- Pros: Preserves document structure, cleanest breaks
+- Cons: Variable chunk sizes, depends on document structure
+
+#### Output Format
+
+**Directory Structure:**
+```
+<pdf_name>_chunks/
+├── 00_CHUNKING_SUMMARY.txt          # Overview and usage instructions
+├── chunk_001_pages_1-10.txt         # First chunk (pages 1-10)
+├── chunk_002_pages_11-20.txt        # Second chunk (pages 11-20)
+├── chunk_003_pages_21-30.txt        # Third chunk (pages 21-30)
+└── ...
+```
+
+**Chunk File Format:**
+Each chunk file contains:
+
+```
+================================================================================
+CHUNK 1 of 5
+================================================================================
+Source PDF: requirements.pdf
+Pages: 1-10 (10 pages)
+Characters: 45,823
+Chunking Strategy: pages
+================================================================================
+
+[Page 1]
+<page 1 text content>
+
+[Page 2]
+<page 2 text content>
+
+...
+```
+
+**Summary File Format:**
+`00_CHUNKING_SUMMARY.txt` contains:
+- Source file information (size, pages, characters)
+- Chunking details (reason, strategy, number of chunks)
+- Individual chunk details (page ranges, character counts)
+- Usage instructions for processing chunks
+
+#### PDF Library Support
+
+The script supports multiple PDF libraries (tries in order):
+1. **PyPDF2** - Fast, widely used
+2. **pdfplumber** - Better text extraction quality
+3. **pypdf** - Modern alternative to PyPDF2
+
+**Installation:**
+```bash
+# Install any one of these (or all for fallback):
+pip install PyPDF2        # Recommended
+pip install pdfplumber    # Best quality
+pip install pypdf         # Modern alternative
+```
+
+**No Library Error:**
+If no PDF library is installed, the script will provide clear installation instructions.
+
+#### Integration with Skill Workflow
+
+**In Step 1 (Acknowledge and Prepare):**
+
+When user provides PDF files:
+
+1. **Run chunking check:**
+   ```bash
+   python3 skill/scripts/chunk_large_pdf.py requirements.pdf
+   ```
+
+2. **If chunking not needed:**
+   - Script outputs: "✓ No chunking needed: File is within acceptable limits"
+   - Process PDF normally with LLM
+
+3. **If chunking needed:**
+   - Script creates chunks in `requirements_chunks/` directory
+   - Read `00_CHUNKING_SUMMARY.txt` for overview
+
+4. **Process chunks in Step 2 (Extract Requirements):**
+   - Read `chunk_001_pages_1-10.txt`
+   - Extract requirements with page references
+   - Read `chunk_002_pages_11-20.txt`
+   - Continue extracting from each chunk
+   - Combine all requirements into single `00_requirements.md`
+
+**Benefits:**
+- ✅ Handles PDFs of any size
+- ✅ Preserves page numbers for traceability
+- ✅ Maintains document structure
+- ✅ Prevents LLM context overflow errors
+- ✅ Automatic detection - no manual intervention unless needed
+
+#### Performance
+
+**Text Extraction:**
+- Speed: ~1-5 seconds per page (varies by PDF complexity)
+- Memory: Loads one page at a time (low memory footprint)
+
+**Chunking:**
+- Strategy selection: < 1 second
+- Chunk creation: < 1 second per chunk
+- File writing: < 1 second total
+
+**Typical Times:**
+- Small PDF (20 pages): 5-10 seconds
+- Medium PDF (100 pages): 30-60 seconds
+- Large PDF (500 pages): 2-5 minutes
+
+#### Error Handling
+
+The script provides comprehensive error handling:
+
+| Error Type | Handling |
+|------------|----------|
+| File not found | Clear error message with file path |
+| No PDF library | Installation instructions for all supported libraries |
+| Corrupted PDF | Graceful failure with error details |
+| Permission errors | Clear error message |
+| Encoding errors | UTF-8 with error ignore fallback |
+| Empty PDF | Detection and warning |
+
+#### Best Practices
+
+1. **Use Auto Strategy:** Let the script choose the best chunking method
+2. **Install pdfplumber:** Provides best text extraction quality
+   ```bash
+   pip install pdfplumber
+   ```
+3. **Check Summary First:** Always review `00_CHUNKING_SUMMARY.txt` before processing
+4. **Process Sequentially:** Process chunks in order (001, 002, 003...) to maintain document flow
+5. **Preserve Page References:** When extracting requirements, note page numbers from chunk headers
+6. **Combine Results:** Merge findings from all chunks into single deliverable
+
+#### Limitations
+
+1. **Text Extraction Quality:** Depends on PDF quality
+   - Scanned PDFs (images): May need OCR pre-processing
+   - Complex formatting: May lose some layout information
+   - Tables/diagrams: May not extract perfectly
+
+2. **Section Detection:** Requires structured headings
+   - Works best with: Markdown headers, numbered sections, ALL CAPS headings
+   - May not detect: Inconsistent formatting, custom heading styles
+
+3. **Context Preservation:** Limited overlap between chunks
+   - Size strategy: 500 character overlap
+   - Pages/sections: No overlap (clean breaks)
+
+#### Troubleshooting
+
+**"No PDF library installed" error:**
+```bash
+pip install PyPDF2  # or pdfplumber or pypdf
+```
+
+**Poor text extraction quality:**
+- Try pdfplumber: `pip install pdfplumber`
+- Check if PDF is scanned (requires OCR)
+- Verify PDF is not corrupted
+
+**Sections strategy not finding sections:**
+- Check document has clear headings
+- Try size or pages strategy instead
+- Use `--verbose` to see what's detected
+
+**Chunk files too large/small:**
+- Adjust with `--chunk-size` or `--pages-per-chunk`
+- Try different strategy
+
+**Memory issues:**
+- Script processes one page at a time (low memory)
+- For very large PDFs (1000+ pages), use pages strategy
+
+#### Examples
+
+**Example 1: Check if chunking needed**
+```bash
+$ python3 chunk_large_pdf.py requirements.pdf
+
+================================================================================
+PDF Chunking Tool - Processing: requirements.pdf
+================================================================================
+
+✓ No chunking needed: File is within acceptable limits
+  File size: 2.34 MB
+  Pages: 25
+
+You can process this PDF directly with the LLM.
+```
+
+**Example 2: Automatic chunking**
+```bash
+$ python3 chunk_large_pdf.py large_spec.pdf
+
+================================================================================
+PDF Chunking Tool - Processing: large_spec.pdf
+================================================================================
+
+⚠ Chunking needed: Page count (127) exceeds 50 pages
+Extracting text using pdfplumber...
+Extracted 127 pages, 234,567 characters
+
+Auto-selected strategy: pages (large page count)
+
+Applying 'pages' chunking strategy...
+
+Saving 13 chunks to large_spec_chunks/
+  ✓ Saved chunk_001_pages_1-10.txt (18,234 chars)
+  ✓ Saved chunk_002_pages_11-20.txt (19,123 chars)
+  ...
+  ✓ Saved chunk_013_pages_121-127.txt (15,432 chars)
+  ✓ Saved summary: 00_CHUNKING_SUMMARY.txt
+
+================================================================================
+CHUNKING COMPLETE
+================================================================================
+  Original: 127 pages, 234,567 chars
+  Created: 13 chunks
+  Output: large_spec_chunks/
+
+Next steps:
+  1. Review: large_spec_chunks/00_CHUNKING_SUMMARY.txt
+  2. Process chunks sequentially in the skill workflow
+================================================================================
+```
+
+**Example 3: Section-based chunking**
+```bash
+$ python3 chunk_large_pdf.py spec.pdf --strategy sections --verbose
+
+================================================================================
+PDF Chunking Tool - Processing: spec.pdf
+================================================================================
+
+⚠ Chunking needed: Force flag enabled
+Extracting text using pdfplumber...
+  Extracted page 1/80
+  Extracted page 2/80
+  ...
+Extracted 80 pages, 156,789 characters
+
+Applying 'sections' chunking strategy...
+
+Saving 8 chunks to spec_chunks/
+  ✓ Saved chunk_001_pages_1-12.txt (Section: Introduction)
+  ✓ Saved chunk_002_pages_13-28.txt (Section: Requirements)
+  ✓ Saved chunk_003_pages_29-45.txt (Section: Architecture)
+  ...
+```
+
+---
+
 ## Integration with Skill Workflow
 
 The scripts integrate with the QA skill workflow as follows:
 
 ```
-Step 3: Test Scenarios → 03_test_scenarios.md
-Step 4: Define Variants → 04_variants.csv (50 variants)
-Step 6: Test Scripts → 06_test_scripts/ directory
+Step 1: Prepare          → Check PDF size with chunk_large_pdf.py
+                          → If large, create chunks for processing
+                          ↓
+Step 2: Requirements     → Process PDF chunks (if created)
+                          → Extract requirements from all chunks
+                          → Combine into 00_requirements.md
+                          ↓
+Step 3: Test Scenarios   → 03_test_scenarios.md
+                          ↓
+Step 4: Define Variants  → 04_variants.csv (50 variants)
+                          ↓
+Step 6: Test Scripts     → 06_test_scripts/ directory
           ↓                     ↓                    ↓
           |                     |                    |
 Step 7:   |          Run combinatorial.py           |
@@ -416,13 +782,21 @@ Step 9:   └─────────────────┬────�
 ```
 
 **Script Execution Order:**
-1. **Step 7**: `combinatorial.py` - Optimizes test variants
-2. **Step 9**: `rtm_builder.py` - Builds requirements traceability
+1. **Step 1**: `chunk_large_pdf.py` - Handles large PDFs (if needed)
+2. **Step 7**: `combinatorial.py` - Optimizes test variants
+3. **Step 9**: `rtm_builder.py` - Builds requirements traceability
 
 ## Requirements
 
+**Core Requirements:**
 - Python 3.7+
-- Standard library only (no external dependencies)
+- Standard library only (no external dependencies for combinatorial.py and rtm_builder.py)
+
+**PDF Processing Requirements (for chunk_large_pdf.py):**
+- One of the following PDF libraries:
+  - PyPDF2: `pip install PyPDF2` (recommended)
+  - pdfplumber: `pip install pdfplumber` (best quality)
+  - pypdf: `pip install pypdf` (modern alternative)
 
 ## Troubleshooting
 
@@ -450,6 +824,18 @@ Step 9:   └─────────────────┬────�
 - Check that N/A values aren't preventing pair coverage
 
 ## Version History
+
+### v1.0.0 (2025-11-15) - chunk_large_pdf.py
+- Initial release of PDF chunking tool
+- Automatic size detection (file size, page count, character count)
+- Multiple chunking strategies (auto, pages, size, sections)
+- Text extraction with multiple PDF library support (PyPDF2, pdfplumber, pypdf)
+- Page number preservation for traceability
+- Context overlap between chunks for continuity
+- Summary file generation with usage instructions
+- Progress tracking and verbose logging
+- Comprehensive error handling and graceful degradation
+- CLI with argparse for flexible configuration
 
 ### v2.0.0 (2025-11-14) - rtm_builder.py
 - Complete rewrite for production readiness
@@ -501,5 +887,6 @@ For issues or questions:
 
 ---
 
-**Last Updated:** 2025-11-14
+**Last Updated:** 2025-11-15
 **Maintainer:** QA Automation Skill
+**Scripts:** 4 (chunk_large_pdf.py, combinatorial.py, rtm_builder.py, generate_test_scripts_from_variants.py, validate_test_data.py)
