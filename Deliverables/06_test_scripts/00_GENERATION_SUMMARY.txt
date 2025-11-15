@@ -1,0 +1,434 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 17:22:28
+Total Scripts: 24048
+Total Scenarios: 106
+Generation Time: 6.8 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-001: New Buyer Registration with Email Verification
+  Variants: 864
+  Files: TS-001_V*.txt
+
+TS-002: Registration with Invalid Email Format
+  Variants: 144
+  Files: TS-002_V*.txt
+
+TS-003: Registration with Password Mismatch
+  Variants: 108
+  Files: TS-003_V*.txt
+
+TS-004: Registration with Existing Email Address
+  Variants: 108
+  Files: TS-004_V*.txt
+
+TS-005: Registration Without Accepting Terms and Conditions
+  Variants: 36
+  Files: TS-005_V*.txt
+
+TS-006: Login with Valid Email and Password
+  Variants: 72
+  Files: TS-006_V*.txt
+
+TS-007: Login with Invalid Credentials
+  Variants: 180
+  Files: TS-007_V*.txt
+
+TS-008: Login with Unverified Email
+  Variants: 72
+  Files: TS-008_V*.txt
+
+TS-009: Social Login with Facebook
+  Variants: 288
+  Files: TS-009_V*.txt
+
+TS-010: Social Login with Google
+  Variants: 288
+  Files: TS-010_V*.txt
+
+TS-011: Password Reset Request
+  Variants: 216
+  Files: TS-011_V*.txt
+
+TS-012: Password Reset with Invalid Email
+  Variants: 72
+  Files: TS-012_V*.txt
+
+TS-013: Search Products by Keyword as Visitor
+  Variants: 864
+  Files: TS-013_V*.txt
+
+TS-014: Search Products with No Results
+  Variants: 216
+  Files: TS-014_V*.txt
+
+TS-015: Browse Products by Category
+  Variants: 864
+  Files: TS-015_V*.txt
+
+TS-016: Browse Products by Sub-Category
+  Variants: 1440
+  Files: TS-016_V*.txt
+
+TS-017: Filter Product Listing
+  Variants: 576
+  Files: TS-017_V*.txt
+
+TS-018: Sort Product Listing
+  Variants: 360
+  Files: TS-018_V*.txt
+
+TS-019: View Product Details as Visitor
+  Variants: 720
+  Files: TS-019_V*.txt
+
+TS-020: Check Shipping Availability by PIN Code
+  Variants: 432
+  Files: TS-020_V*.txt
+
+TS-021: View Product Variations (Size and Color)
+  Variants: 648
+  Files: TS-021_V*.txt
+
+TS-022: View Product Ratings and Reviews
+  Variants: 864
+  Files: TS-022_V*.txt
+
+TS-023: Add Product to Cart as Logged-in Buyer
+  Variants: 576
+  Files: TS-023_V*.txt
+
+TS-024: Add Product to Cart Without Login
+  Variants: 108
+  Files: TS-024_V*.txt
+
+TS-025: Add Multiple Quantities of Same Product
+  Variants: 432
+  Files: TS-025_V*.txt
+
+TS-026: View Shopping Cart
+  Variants: 432
+  Files: TS-026_V*.txt
+
+TS-027: Update Item Quantity in Cart
+  Variants: 288
+  Files: TS-027_V*.txt
+
+TS-028: Remove Item from Cart
+  Variants: 216
+  Files: TS-028_V*.txt
+
+TS-029: View Empty Cart
+  Variants: 108
+  Files: TS-029_V*.txt
+
+TS-030: Add Product to Wishlist as Logged-in Buyer
+  Variants: 216
+  Files: TS-030_V*.txt
+
+TS-031: Add Product to Wishlist Without Login
+  Variants: 108
+  Files: TS-031_V*.txt
+
+TS-032: View Wishlist
+  Variants: 324
+  Files: TS-032_V*.txt
+
+TS-033: Remove Product from Wishlist
+  Variants: 144
+  Files: TS-033_V*.txt
+
+TS-034: Move Product from Wishlist to Cart
+  Variants: 216
+  Files: TS-034_V*.txt
+
+TS-035: Checkout as Logged-in Buyer with Valid Data
+  Variants: 432
+  Files: TS-035_V*.txt
+
+TS-036: Checkout Without Login
+  Variants: 72
+  Files: TS-036_V*.txt
+
+TS-037: Checkout with Same Billing and Shipping Address
+  Variants: 216
+  Files: TS-037_V*.txt
+
+TS-038: Checkout with Different Billing and Shipping Addresses
+  Variants: 324
+  Files: TS-038_V*.txt
+
+TS-039: Select Credit/Debit Card Payment Method
+  Variants: 864
+  Files: TS-039_V*.txt
+
+TS-040: Select Net Banking Payment Method
+  Variants: 432
+  Files: TS-040_V*.txt
+
+TS-041: Successful Payment and Order Confirmation
+  Variants: 432
+  Files: TS-041_V*.txt
+
+TS-042: Failed Payment Handling
+  Variants: 1620
+  Files: TS-042_V*.txt
+
+TS-043: View Order Summary Before Payment
+  Variants: 648
+  Files: TS-043_V*.txt
+
+TS-044: Email Notification for Order Status Updates
+  Variants: 432
+  Files: TS-044_V*.txt
+
+TS-045: Share Product on Social Media as Visitor
+  Variants: 288
+  Files: TS-045_V*.txt
+
+TS-046: Share Product on Social Media as Buyer
+  Variants: 144
+  Files: TS-046_V*.txt
+
+TS-047: Post Rating and Review for Purchased Product
+  Variants: 180
+  Files: TS-047_V*.txt
+
+TS-048: Attempt to Review Product Without Purchase
+  Variants: 36
+  Files: TS-048_V*.txt
+
+TS-049: Attempt to Review Without Login
+  Variants: 36
+  Files: TS-049_V*.txt
+
+TS-050: View My Account Dashboard
+  Variants: 36
+  Files: TS-050_V*.txt
+
+TS-051: Update Profile Information
+  Variants: 108
+  Files: TS-051_V*.txt
+
+TS-052: Change Password
+  Variants: 108
+  Files: TS-052_V*.txt
+
+TS-053: Manage Address Book
+  Variants: 144
+  Files: TS-053_V*.txt
+
+TS-054: View Order History
+  Variants: 108
+  Files: TS-054_V*.txt
+
+TS-055: View Order Details
+  Variants: 144
+  Files: TS-055_V*.txt
+
+TS-056: Reorder Items from Order History
+  Variants: 108
+  Files: TS-056_V*.txt
+
+TS-057: Track Current Order
+  Variants: 72
+  Files: TS-057_V*.txt
+
+TS-058: Logout from Account
+  Variants: 36
+  Files: TS-058_V*.txt
+
+TS-059: Submit Contact Support Request as Buyer
+  Variants: 108
+  Files: TS-059_V*.txt
+
+TS-060: Submit Contact Support Request as Visitor
+  Variants: 72
+  Files: TS-060_V*.txt
+
+TS-061: Admin Login with Valid Credentials
+  Variants: 36
+  Files: TS-061_V*.txt
+
+TS-062: Admin Login with Invalid Credentials
+  Variants: 108
+  Files: TS-062_V*.txt
+
+TS-063: Admin Password Reset
+  Variants: 72
+  Files: TS-063_V*.txt
+
+TS-064: View Admin Dashboard Metrics
+  Variants: 36
+  Files: TS-064_V*.txt
+
+TS-065: View All Buyers
+  Variants: 108
+  Files: TS-065_V*.txt
+
+TS-066: View Buyer Details
+  Variants: 144
+  Files: TS-066_V*.txt
+
+TS-067: Edit Buyer Information
+  Variants: 144
+  Files: TS-067_V*.txt
+
+TS-068: Deactivate Buyer Account
+  Variants: 36
+  Files: TS-068_V*.txt
+
+TS-069: Reactivate Buyer Account
+  Variants: 36
+  Files: TS-069_V*.txt
+
+TS-070: View All Orders
+  Variants: 108
+  Files: TS-070_V*.txt
+
+TS-071: Filter Orders by Status
+  Variants: 180
+  Files: TS-071_V*.txt
+
+TS-072: View Order Details
+  Variants: 108
+  Files: TS-072_V*.txt
+
+TS-073: Update Order Status from Open to Confirmed
+  Variants: 36
+  Files: TS-073_V*.txt
+
+TS-074: Update Order Status from Confirmed to In Process
+  Variants: 36
+  Files: TS-074_V*.txt
+
+TS-075: Update Order Status to Shipped with Tracking Information
+  Variants: 72
+  Files: TS-075_V*.txt
+
+TS-076: Update Order Status to Delivered
+  Variants: 36
+  Files: TS-076_V*.txt
+
+TS-077: Edit Order Details
+  Variants: 108
+  Files: TS-077_V*.txt
+
+TS-078: Create New Product
+  Variants: 144
+  Files: TS-078_V*.txt
+
+TS-079: Edit Product Information
+  Variants: 180
+  Files: TS-079_V*.txt
+
+TS-080: Deactivate Product
+  Variants: 36
+  Files: TS-080_V*.txt
+
+TS-081: Reactivate Product
+  Variants: 36
+  Files: TS-081_V*.txt
+
+TS-082: Delete Product
+  Variants: 72
+  Files: TS-082_V*.txt
+
+TS-083: Create Product Category
+  Variants: 36
+  Files: TS-083_V*.txt
+
+TS-084: Create Product Sub-Category
+  Variants: 36
+  Files: TS-084_V*.txt
+
+TS-085: Edit Product Category
+  Variants: 72
+  Files: TS-085_V*.txt
+
+TS-086: Deactivate Product Category
+  Variants: 36
+  Files: TS-086_V*.txt
+
+TS-087: Approve Product Review
+  Variants: 36
+  Files: TS-087_V*.txt
+
+TS-088: Reject Product Review
+  Variants: 36
+  Files: TS-088_V*.txt
+
+TS-089: Edit CMS Page Content
+  Variants: 144
+  Files: TS-089_V*.txt
+
+TS-090: Create Email Template
+  Variants: 72
+  Files: TS-090_V*.txt
+
+TS-091: Send Promotional Email to Buyers
+  Variants: 72
+  Files: TS-091_V*.txt
+
+TS-092: View Products Uploaded Report
+  Variants: 108
+  Files: TS-092_V*.txt
+
+TS-093: View Revenue Report
+  Variants: 180
+  Files: TS-093_V*.txt
+
+TS-094: Export Report to PDF
+  Variants: 36
+  Files: TS-094_V*.txt
+
+TS-095: Export Report to Excel
+  Variants: 36
+  Files: TS-095_V*.txt
+
+TS-096: Create Sub-Admin User
+  Variants: 108
+  Files: TS-096_V*.txt
+
+TS-097: Edit Sub-Admin User
+  Variants: 108
+  Files: TS-097_V*.txt
+
+TS-098: Deactivate Sub-Admin User
+  Variants: 36
+  Files: TS-098_V*.txt
+
+TS-099: Delete Sub-Admin User
+  Variants: 36
+  Files: TS-099_V*.txt
+
+TS-100: View Customer Complaints and Feedback
+  Variants: 108
+  Files: TS-100_V*.txt
+
+TS-101: View Payment Status for Orders
+  Variants: 108
+  Files: TS-101_V*.txt
+
+TS-102: Update Bank Account Information
+  Variants: 108
+  Files: TS-102_V*.txt
+
+TS-103: Concurrent User Load Test
+  Variants: 108
+  Files: TS-103_V*.txt
+
+TS-104: Page Load Performance Test
+  Variants: 540
+  Files: TS-104_V*.txt
+
+TS-105: Error Handling for Page Not Found
+  Variants: 108
+  Files: TS-105_V*.txt
+
+TS-106: SSL Security for Payment Transactions
+  Variants: 108
+  Files: TS-106_V*.txt

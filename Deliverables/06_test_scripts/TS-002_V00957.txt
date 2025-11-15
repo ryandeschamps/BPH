@@ -1,0 +1,164 @@
+TEST SCRIPT: TS-002_V00957
+
+SCENARIO: Registration with Invalid Email Format
+VARIANT: V00957
+PRIORITY: High
+GENERATED: 2025-11-15 17:22:21
+
+DESCRIPTION:
+As a visitor, I want to see validation errors when I enter an invalid email format, so that I can correct it before submitting.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.rodriguez@example.com
+- User enters phone: +1-738-155-8051
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: N/A
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Account_State: N/A
+  Action: N/A
+  Address_Action: N/A
+  Address_State: N/A
+  Address_Type: N/A
+  Auth_Method: N/A
+  Bank: N/A
+  Bank_Field: N/A
+  Browser: Safari
+  Buyer_Filter: N/A
+  Buyer_Status: N/A
+  CMS_Page: N/A
+  Card_Type: N/A
+  Cart_Items: N/A
+  Cart_State: N/A
+  Category_Level: N/A
+  Category_Status: N/A
+  Category_Type: N/A
+  Credential_Error: N/A
+  Device: Desktop
+  Edit_Field: N/A
+  Edit_Type: N/A
+  Email_Delivery: N/A
+  Email_Format: Special_Chars
+  Email_State: N/A
+  Email_Verification: N/A
+  Error_Type: N/A
+  Export_Format: N/A
+  Failure_Reason: N/A
+  Feedback_Type: N/A
+  Field_Updated: N/A
+  Field_Values: N/A
+  Filter_Type: N/A
+  Filter_Value: N/A
+  Has_Orders: N/A
+  Image_Count: N/A
+  Input_Validity: Invalid
+  Item_Availability: N/A
+  Load_Time: N/A
+  Load_Type: N/A
+  Message_Type: N/A
+  Network_Speed: Low
+  OAuth_State: N/A
+  Order_Count: N/A
+  Order_Details: N/A
+  Order_Filter: N/A
+  Order_Size: N/A
+  Order_Status: N/A
+  PIN_Code_State: N/A
+  Page_Type: N/A
+  Password_State: N/A
+  Password_Validity: N/A
+  Payment_Method: N/A
+  Payment_Status: N/A
+  Product_Count: N/A
+  Product_State: N/A
+  Product_Status: N/A
+  Product_Type: N/A
+  Product_Variation: N/A
+  Quantity: N/A
+  Quantity_Change: N/A
+  Rating: N/A
+  Rating_Range: N/A
+  Redirect_Action: N/A
+  Removal_Action: N/A
+  Reorder_Items: N/A
+  Report_Period: N/A
+  Reset_Link_State: N/A
+  Reset_State: N/A
+  Results_Count: N/A
+  Retry_Action: N/A
+  Review_Count: N/A
+  Review_Status: N/A
+  Role_Type: N/A
+  Search_Query: N/A
+  Security_Type: N/A
+  Shipping_Cost: N/A
+  Social_Platform: N/A
+  Sort_By: N/A
+  Status_Change: N/A
+  Stock_Level: N/A
+  Sub_Admin_Status: N/A
+  Sub_Category_Type: N/A
+  Target_Audience: N/A
+  Tax_Applicable: N/A
+  Template_Type: N/A
+  Terms_Accepted: N/A
+  Tracking_Data: N/A
+  User_Count: N/A
+  User_Type: Visitor
+  Variation_Availability: N/A
+  Variation_Type: N/A
+  Wishlist_State: N/A
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-227431
+  Order_Quantity: 4
+  Order_Total: 805.68
+  Password: weak
+  Phone: +1-738-155-8051
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 201.42
+  Product_SKU: SKU-58372
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-680417503
+  User_Type: Visitor
+  ZIP_Code: 34646
+
+RELATED REQUIREMENTS:
+REQ-002

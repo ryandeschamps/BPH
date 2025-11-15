@@ -1,0 +1,155 @@
+TEST SCRIPT: TS-044_V18023
+
+SCENARIO: Email Notification for Order Status Updates
+VARIANT: V18023
+PRIORITY: High
+GENERATED: 2025-11-15 17:22:26
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I can track my order progress.
+
+GIVEN:
+- Buyer is logged in with account robert.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Email Notification for Order Status Updates
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Account_State: N/A
+  Action: N/A
+  Address_Action: N/A
+  Address_State: N/A
+  Address_Type: N/A
+  Auth_Method: N/A
+  Bank: N/A
+  Bank_Field: N/A
+  Browser: Safari
+  Buyer_Filter: N/A
+  Buyer_Status: N/A
+  CMS_Page: N/A
+  Card_Type: N/A
+  Cart_Items: N/A
+  Cart_State: N/A
+  Category_Level: N/A
+  Category_Status: N/A
+  Category_Type: N/A
+  Credential_Error: N/A
+  Device: Mobile
+  Edit_Field: N/A
+  Edit_Type: N/A
+  Email_Delivery: Delayed
+  Email_Format: N/A
+  Email_State: N/A
+  Email_Verification: N/A
+  Error_Type: N/A
+  Export_Format: N/A
+  Failure_Reason: N/A
+  Feedback_Type: N/A
+  Field_Updated: N/A
+  Field_Values: N/A
+  Filter_Type: N/A
+  Filter_Value: N/A
+  Has_Orders: N/A
+  Image_Count: N/A
+  Input_Validity: N/A
+  Item_Availability: N/A
+  Load_Time: N/A
+  Load_Type: N/A
+  Message_Type: N/A
+  Network_Speed: Medium
+  OAuth_State: N/A
+  Order_Count: N/A
+  Order_Details: N/A
+  Order_Filter: N/A
+  Order_Size: N/A
+  Order_Status: Delivered
+  PIN_Code_State: N/A
+  Page_Type: N/A
+  Password_State: N/A
+  Password_Validity: N/A
+  Payment_Method: N/A
+  Payment_Status: N/A
+  Product_Count: N/A
+  Product_State: N/A
+  Product_Status: N/A
+  Product_Type: N/A
+  Product_Variation: N/A
+  Quantity: N/A
+  Quantity_Change: N/A
+  Rating: N/A
+  Rating_Range: N/A
+  Redirect_Action: N/A
+  Removal_Action: N/A
+  Reorder_Items: N/A
+  Report_Period: N/A
+  Reset_Link_State: N/A
+  Reset_State: N/A
+  Results_Count: N/A
+  Retry_Action: N/A
+  Review_Count: N/A
+  Review_Status: N/A
+  Role_Type: N/A
+  Search_Query: N/A
+  Security_Type: N/A
+  Shipping_Cost: N/A
+  Social_Platform: N/A
+  Sort_By: N/A
+  Status_Change: N/A
+  Stock_Level: N/A
+  Sub_Admin_Status: N/A
+  Sub_Category_Type: N/A
+  Target_Audience: N/A
+  Tax_Applicable: N/A
+  Template_Type: N/A
+  Terms_Accepted: N/A
+  Tracking_Data: N/A
+  User_Count: N/A
+  User_Type: Buyer
+  Variation_Availability: N/A
+  Variation_Type: N/A
+  Wishlist_State: N/A
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-135683
+  Order_Quantity: 1
+  Order_Total: 180.76
+  Password: weak
+  Phone: +1-317-609-5071
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 180.76
+  Product_SKU: SKU-23734
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-984316308
+  User_Type: Buyer
+  ZIP_Code: 41173
+
+RELATED REQUIREMENTS:
+REQ-008, REQ-017
