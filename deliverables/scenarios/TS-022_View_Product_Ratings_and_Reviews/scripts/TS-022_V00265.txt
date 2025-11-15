@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00265
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00265
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Rating_Range: Mixed_Ratings
+  Review_Count: Few_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-524236
+  Order_Quantity: 3
+  Order_Total: 561.6
+  Password: weak
+  Phone: +1-979-510-4502
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 187.2
+  Product_SKU: SKU-16314
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-929489064
+  User_Type: Visitor
+  ZIP_Code: 33326
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-064_V00022
+
+SCENARIO: Write Review for Purchased Product
+VARIANT: V00022
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to write a detailed review, so that I can help other buyers.
+
+GIVEN:
+- Admin is logged in with account jane.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Write Review for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-442838
+  Order_Quantity: 5
+  Order_Total: 487.9
+  Password: weak
+  Phone: +1-526-803-6831
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 97.58
+  Product_SKU: SKU-74901
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-203978582
+  User_Type: Admin
+  ZIP_Code: 51969
+
+RELATED REQUIREMENTS:
+FR-011

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01139
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01139
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account john.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Failure_Reason: Insufficient_Funds
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-394851
+  Order_Quantity: 2
+  Order_Total: 308.0
+  Password: weak
+  Phone: +1-999-992-8243
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 154.0
+  Product_SKU: SKU-83302
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-325913723
+  User_Type: Buyer
+  ZIP_Code: 52349
+
+RELATED REQUIREMENTS:
+FR-006

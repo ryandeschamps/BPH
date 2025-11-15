@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00403
+
+SCENARIO: Product Browse by Category
+VARIANT: V00403
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Image_Count: Multiple_Images
+  Network_Speed: High
+  Product_State: Active
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-903849
+  Order_Quantity: 1
+  Order_Total: 48.94
+  Password: weak
+  Phone: +1-795-432-9379
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 48.94
+  Product_SKU: SKU-96790
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-313250714
+  User_Type: Buyer
+  ZIP_Code: 54561
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-067_V00013
+
+SCENARIO: Share Product on Social Media as Guest
+VARIANT: V00013
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a guest user, I want to share a product on social media, so that I can show it to friends without logging in.
+
+GIVEN:
+- Admin is logged in with account sarah.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Edit_Field: Name
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-362018
+  Order_Quantity: 1
+  Order_Total: 282.55
+  Password: weak
+  Phone: +1-702-105-1501
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 282.55
+  Product_SKU: SKU-71758
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-752297651
+  User_Type: Admin
+  ZIP_Code: 54808
+
+RELATED REQUIREMENTS:
+FR-009

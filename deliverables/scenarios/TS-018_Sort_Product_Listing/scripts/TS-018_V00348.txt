@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00348
+
+SCENARIO: Product Search with No Results
+VARIANT: V00348
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Sort_By: Oldest_First
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-631746
+  Order_Quantity: 5
+  Order_Total: 902.5
+  Password: weak
+  Phone: +1-265-561-5062
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 180.5
+  Product_SKU: SKU-69970
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-441532353
+  User_Type: Buyer
+  ZIP_Code: 34178
+
+RELATED REQUIREMENTS:
+FR-003

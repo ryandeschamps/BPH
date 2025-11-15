@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-002_V00096
+
+SCENARIO: Registration with Invalid Email Format
+VARIANT: V00096
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate my email format during registration, so that I provide a valid email address.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.johnson@example.com
+- User enters phone: +1-544-829-1525
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_Format: Special_Chars
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-195157
+  Order_Quantity: 3
+  Order_Total: 399.3
+  Password: weak
+  Phone: +1-544-829-1525
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 133.1
+  Product_SKU: SKU-77956
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-735342445
+  User_Type: Visitor
+  ZIP_Code: 73655
+
+RELATED REQUIREMENTS:
+FR-002

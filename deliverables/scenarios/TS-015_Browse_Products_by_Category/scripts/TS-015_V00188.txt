@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00188
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00188
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for david.rodriguez@example.com
+
+WHEN:
+- User enters email: david.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Type: Women
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Count: Few
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-113823
+  Order_Quantity: 2
+  Order_Total: 284.82
+  Password: weak
+  Phone: +1-220-798-8343
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 142.41
+  Product_SKU: SKU-17246
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-162039623
+  User_Type: Visitor
+  ZIP_Code: 32708
+
+RELATED REQUIREMENTS:
+FR-014

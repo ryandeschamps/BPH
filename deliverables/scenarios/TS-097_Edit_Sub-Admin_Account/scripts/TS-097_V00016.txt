@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00016
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00016
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account jane.williams@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Edit_Type: Username
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-862235
+  Order_Quantity: 4
+  Order_Total: 495.52
+  Password: weak
+  Phone: +1-342-872-1457
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Wool Sweater
+  Product_Price: 123.88
+  Product_SKU: SKU-29510
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-633295911
+  User_Type: Admin
+  ZIP_Code: 64222
+
+RELATED REQUIREMENTS:
+FR-019

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-072_V00061
+
+SCENARIO: Manage Address Book
+VARIANT: V00061
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to add, edit, and delete addresses in my address book, so that I can quickly select addresses during checkout.
+
+GIVEN:
+- Admin is logged in with account emily.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Manage Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Order_Details: With_Items
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-546680
+  Order_Quantity: 5
+  Order_Total: 1128.0
+  Password: weak
+  Phone: +1-864-433-9819
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 225.6
+  Product_SKU: SKU-62587
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-509669558
+  User_Type: Admin
+  ZIP_Code: 33887
+
+RELATED REQUIREMENTS:
+FR-010

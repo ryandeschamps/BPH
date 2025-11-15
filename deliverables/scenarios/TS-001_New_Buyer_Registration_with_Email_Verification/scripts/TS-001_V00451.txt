@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00451
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00451
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: john.miller@example.com
+- User enters phone: +1-243-784-4884
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: All_Valid
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Field_Values: All_Valid
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-878176
+  Order_Quantity: 1
+  Order_Total: 75.48
+  Password: weak
+  Phone: +1-243-784-4884
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 75.48
+  Product_SKU: SKU-94238
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-248154461
+  User_Type: Visitor
+  ZIP_Code: 94574
+
+RELATED REQUIREMENTS:
+FR-002

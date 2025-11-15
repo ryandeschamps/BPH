@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-073_V00022
+
+SCENARIO: Logout
+VARIANT: V00022
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to logout of my account, so that I can secure my session on shared devices.
+
+GIVEN:
+- Admin is logged in with account mary.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Logout
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Status_Change: Open_To_Confirmed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-306107
+  Order_Quantity: 5
+  Order_Total: 781.45
+  Password: weak
+  Phone: +1-654-190-2593
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 156.29
+  Product_SKU: SKU-77844
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-682877643
+  User_Type: Admin
+  ZIP_Code: 91215
+
+RELATED REQUIREMENTS:
+FR-010

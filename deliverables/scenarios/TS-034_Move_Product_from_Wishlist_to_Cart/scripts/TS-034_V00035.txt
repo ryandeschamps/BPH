@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00035
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00035
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account jane.davis@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Empty
+  Device: Tablet
+  Network_Speed: Medium
+  Product_State: In_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-442765
+  Order_Quantity: 3
+  Order_Total: 568.98
+  Password: weak
+  Phone: +1-310-467-7218
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 189.66
+  Product_SKU: SKU-10810
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-232134400
+  User_Type: Buyer
+  ZIP_Code: 28998
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

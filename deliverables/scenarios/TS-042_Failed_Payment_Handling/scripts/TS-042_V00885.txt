@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00885
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00885
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account emily.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Failure_Reason: Timeout
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 08/30
+  Card_Number: 4532-****-****-5497
+  Device: Desktop
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-727451
+  Order_Quantity: 3
+  Order_Total: 338.04
+  Password: weak
+  Phone: +1-573-778-4868
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 112.68
+  Product_SKU: SKU-60416
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-232566483
+  User_Type: Buyer
+  ZIP_Code: 41119
+
+RELATED REQUIREMENTS:
+FR-006

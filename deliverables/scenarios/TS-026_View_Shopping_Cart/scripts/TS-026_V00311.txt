@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00311
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00311
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account sarah.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Multiple_Items
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-825284
+  Order_Quantity: 1
+  Order_Total: 160.52
+  Password: weak
+  Phone: +1-950-567-6104
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 160.52
+  Product_SKU: SKU-84663
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-194573598
+  User_Type: Buyer
+  ZIP_Code: 53964
+
+RELATED REQUIREMENTS:
+FR-005

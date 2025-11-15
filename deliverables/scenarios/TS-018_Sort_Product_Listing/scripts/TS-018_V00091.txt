@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00091
+
+SCENARIO: Product Search with No Results
+VARIANT: V00091
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Sort_By: Rating_High_Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-632718
+  Order_Quantity: 2
+  Order_Total: 354.58
+  Password: weak
+  Phone: +1-803-884-5155
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Wool Sweater
+  Product_Price: 177.29
+  Product_SKU: SKU-85057
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-179731234
+  User_Type: Visitor
+  ZIP_Code: 84315
+
+RELATED REQUIREMENTS:
+FR-003

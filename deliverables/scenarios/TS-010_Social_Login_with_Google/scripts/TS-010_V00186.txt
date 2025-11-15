@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00186
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00186
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for robert.rodriguez@example.com
+
+WHEN:
+- User enters email: robert.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-355173
+  Order_Quantity: 4
+  Order_Total: 774.72
+  Password: weak
+  Phone: +1-364-900-7903
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 193.68
+  Product_SKU: SKU-84965
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-268816854
+  User_Type: Visitor
+  ZIP_Code: 21368
+
+RELATED REQUIREMENTS:
+FR-001

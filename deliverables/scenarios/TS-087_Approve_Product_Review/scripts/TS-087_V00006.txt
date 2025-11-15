@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-087_V00006
+
+SCENARIO: View Order Details
+VARIANT: V00006
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to view complete order details (items, prices, addresses, payment status), so that I can fulfill orders correctly.
+
+GIVEN:
+- Admin is logged in with account emily.martinez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Action: Approve
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-800005
+  Order_Quantity: 2
+  Order_Total: 571.56
+  Password: weak
+  Phone: +1-628-641-6246
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 285.78
+  Product_SKU: SKU-82413
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-278106517
+  User_Type: Admin
+  ZIP_Code: 66725
+
+RELATED REQUIREMENTS:
+FR-017

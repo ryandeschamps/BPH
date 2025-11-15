@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00482
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00482
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Load_Time: Medium
+  Network_Speed: Medium
+  Page_Type: Checkout
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-866365
+  Order_Quantity: 5
+  Order_Total: 1465.6
+  Password: weak
+  Phone: +1-972-883-8980
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 293.12
+  Product_SKU: SKU-81414
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-196373908
+  User_Type: N/A
+  ZIP_Code: 54798
+
+RELATED REQUIREMENTS:
+FR-022

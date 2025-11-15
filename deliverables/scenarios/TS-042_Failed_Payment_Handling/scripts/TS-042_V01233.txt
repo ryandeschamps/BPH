@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01233
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01233
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Failure_Reason: Invalid_Card
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-632981
+  Order_Quantity: 1
+  Order_Total: 95.24
+  Password: weak
+  Phone: +1-803-171-4222
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 95.24
+  Product_SKU: SKU-21055
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-384805793
+  User_Type: Buyer
+  ZIP_Code: 73275
+
+RELATED REQUIREMENTS:
+FR-006

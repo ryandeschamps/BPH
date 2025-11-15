@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00229
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00229
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account lisa.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Failure_Reason: Declined
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 09/30
+  Card_Number: 4532-****-****-7325
+  Device: Mobile
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-921260
+  Order_Quantity: 2
+  Order_Total: 288.36
+  Password: weak
+  Phone: +1-956-208-3978
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 144.18
+  Product_SKU: SKU-69206
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-266199799
+  User_Type: Buyer
+  ZIP_Code: 29081
+
+RELATED REQUIREMENTS:
+FR-006

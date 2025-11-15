@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00021
+
+SCENARIO: Change Password
+VARIANT: V00021
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account jane.garcia@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Order_Status: Open
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-634131
+  Order_Quantity: 4
+  Order_Total: 337.52
+  Password: weak
+  Phone: +1-285-228-8232
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 84.38
+  Product_SKU: SKU-47367
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-433910048
+  User_Type: Admin
+  ZIP_Code: 32793
+
+RELATED REQUIREMENTS:
+FR-010

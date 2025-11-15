@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00061
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00061
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account emily.rodriguez@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Image_Count: Multiple
+  Network_Speed: High
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-743848
+  Order_Quantity: 4
+  Order_Total: 619.12
+  Password: weak
+  Phone: +1-943-816-2997
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 154.78
+  Product_SKU: SKU-51781
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-288923720
+  User_Type: Admin
+  ZIP_Code: 73703
+
+RELATED REQUIREMENTS:
+FR-016

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00403
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00403
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- Buyer is logged in with account michael.williams@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  PIN_Code_State: Invalid_Format
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.williams@example.com
+  First_Name: Michael
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-155794
+  Order_Quantity: 5
+  Order_Total: 1151.5
+  Password: weak
+  Phone: +1-625-479-5965
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 230.3
+  Product_SKU: SKU-22836
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-135568089
+  User_Type: Buyer
+  ZIP_Code: 11916
+
+RELATED REQUIREMENTS:
+FR-003

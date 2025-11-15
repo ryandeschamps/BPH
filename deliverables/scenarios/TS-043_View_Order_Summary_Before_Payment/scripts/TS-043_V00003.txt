@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00003
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00003
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account lisa.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_Items: Single
+  Device: Desktop
+  Network_Speed: Low
+  Shipping_Cost: Standard
+  Tax_Applicable: Yes
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-538633
+  Order_Quantity: 5
+  Order_Total: 964.2
+  Password: weak
+  Phone: +1-542-157-3722
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 192.84
+  Product_SKU: SKU-42168
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-828040624
+  User_Type: Buyer
+  ZIP_Code: 45318
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

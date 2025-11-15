@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00238
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00238
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account emily.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Safari
+  Cart_Items: Single
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 02/26
+  Card_Number: 4532-****-****-3777
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-944026
+  Order_Quantity: 4
+  Order_Total: 267.64
+  Password: Test@123
+  Phone: +1-947-239-8245
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 66.91
+  Product_SKU: SKU-40675
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-503748766
+  User_Type: Buyer
+  ZIP_Code: 58975
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-085_V00025
+
+SCENARIO: Update Order Status to Shipped with Tracking
+VARIANT: V00025
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Shipped and add tracking details (carrier, tracking ID), so that buyers can track their shipment.
+
+GIVEN:
+- Admin is logged in with account john.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Shipped with Tracking
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Edit_Field: Name
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-685706
+  Order_Quantity: 1
+  Order_Total: 151.01
+  Password: weak
+  Phone: +1-252-916-9395
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 151.01
+  Product_SKU: SKU-13591
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-653127467
+  User_Type: Admin
+  ZIP_Code: 60151
+
+RELATED REQUIREMENTS:
+FR-017

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00103
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00103
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account robert.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Empty
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-434753
+  Order_Quantity: 1
+  Order_Total: 48.83
+  Password: weak
+  Phone: +1-689-676-5011
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 48.83
+  Product_SKU: SKU-97906
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-223035744
+  User_Type: Buyer
+  ZIP_Code: 71406
+
+RELATED REQUIREMENTS:
+FR-005

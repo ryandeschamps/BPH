@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00007
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00007
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Redirect_Action: Login
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-123524
+  Order_Quantity: 3
+  Order_Total: 661.47
+  Password: weak
+  Phone: +1-653-975-1101
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 220.49
+  Product_SKU: SKU-42703
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-988826588
+  User_Type: Visitor
+  ZIP_Code: 82262
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

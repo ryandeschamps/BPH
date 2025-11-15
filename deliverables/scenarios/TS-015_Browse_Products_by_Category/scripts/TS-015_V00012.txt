@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00012
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00012
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.garcia@example.com
+
+WHEN:
+- User enters email: mary.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Men
+  Device: Desktop
+  Network_Speed: Low
+  Product_Count: Many
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-614958
+  Order_Quantity: 1
+  Order_Total: 72.78
+  Password: weak
+  Phone: +1-903-596-9317
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 72.78
+  Product_SKU: SKU-77882
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-101912325
+  User_Type: Visitor
+  ZIP_Code: 34115
+
+RELATED REQUIREMENTS:
+FR-014

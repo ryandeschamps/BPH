@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00037
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00037
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account david.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for david.brown@example.com
+
+WHEN:
+- User enters email: david.brown@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Email_State: Registered
+  Input_Validity: Valid
+  Network_Speed: High
+  Reset_Link_State: Expired
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-802552
+  Order_Quantity: 5
+  Order_Total: 974.15
+  Password: Test@123
+  Phone: +1-535-317-5165
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 194.83
+  Product_SKU: SKU-64780
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-851377008
+  User_Type: Buyer
+  ZIP_Code: 71411
+
+RELATED REQUIREMENTS:
+FR-001

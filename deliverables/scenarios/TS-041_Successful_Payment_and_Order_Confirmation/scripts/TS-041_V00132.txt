@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00132
+
+SCENARIO: View Wishlist Items
+VARIANT: V00132
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account david.davis@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_Delivery: Delayed
+  Network_Speed: Low
+  Order_Size: Multiple_Items
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 05/28
+  Card_Number: 4532-****-****-6284
+  Device: Mobile
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-120208
+  Order_Quantity: 1
+  Order_Total: 133.74
+  Password: weak
+  Phone: +1-336-384-4676
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 133.74
+  Product_SKU: SKU-98059
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-918080353
+  User_Type: Buyer
+  ZIP_Code: 48513
+
+RELATED REQUIREMENTS:
+FR-006

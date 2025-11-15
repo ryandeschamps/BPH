@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00319
+
+SCENARIO: Product Search with No Results
+VARIANT: V00319
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account jane.garcia@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Sort_By: Newest_First
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-868657
+  Order_Quantity: 1
+  Order_Total: 128.85
+  Password: weak
+  Phone: +1-370-353-7093
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 128.85
+  Product_SKU: SKU-30316
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-835358045
+  User_Type: Buyer
+  ZIP_Code: 93707
+
+RELATED REQUIREMENTS:
+FR-003

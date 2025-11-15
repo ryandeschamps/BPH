@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00078
+
+SCENARIO: Export Report to PDF
+VARIANT: V00078
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Error_Type: Timeout
+  Network_Speed: Low
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-500826
+  Order_Quantity: 5
+  Order_Total: 1469.65
+  Password: weak
+  Phone: +1-799-103-2645
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 293.93
+  Product_SKU: SKU-59250
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-399368649
+  User_Type: N/A
+  ZIP_Code: 40203
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00058
+
+SCENARIO: Product Search with No Results
+VARIANT: V00058
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Sort_By: Price_High_Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-782824
+  Order_Quantity: 2
+  Order_Total: 426.86
+  Password: weak
+  Phone: +1-581-714-1561
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 213.43
+  Product_SKU: SKU-18991
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-230423380
+  User_Type: Visitor
+  ZIP_Code: 23071
+
+RELATED REQUIREMENTS:
+FR-003

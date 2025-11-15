@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00097
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00097
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account robert.martinez@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Items_Removed
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-542882
+  Order_Quantity: 2
+  Order_Total: 373.6
+  Password: weak
+  Phone: +1-636-183-2135
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 186.8
+  Product_SKU: SKU-26234
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-836575458
+  User_Type: Buyer
+  ZIP_Code: 62697
+
+RELATED REQUIREMENTS:
+FR-005

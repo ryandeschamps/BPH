@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-094_V00011
+
+SCENARIO: Upload Product Images
+VARIANT: V00011
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to upload multiple product images and set thumbnail, so that buyers can see the product.
+
+GIVEN:
+- Admin is logged in with account michael.miller@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Upload Product Images
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Export_Format: PDF
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-294607
+  Order_Quantity: 1
+  Order_Total: 60.97
+  Password: weak
+  Phone: +1-584-446-4897
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 60.97
+  Product_SKU: SKU-49299
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-192393187
+  User_Type: Admin
+  ZIP_Code: 32202
+
+RELATED REQUIREMENTS:
+FR-019

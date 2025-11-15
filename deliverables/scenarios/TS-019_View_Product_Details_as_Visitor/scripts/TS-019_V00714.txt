@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00714
+
+SCENARIO: Product Browse by Category
+VARIANT: V00714
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Image_Count: Multiple_Images
+  Network_Speed: Low
+  Product_State: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-886236
+  Order_Quantity: 4
+  Order_Total: 951.24
+  Password: weak
+  Phone: +1-563-472-1565
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 237.81
+  Product_SKU: SKU-63835
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-953005429
+  User_Type: Buyer
+  ZIP_Code: 39493
+
+RELATED REQUIREMENTS:
+FR-003

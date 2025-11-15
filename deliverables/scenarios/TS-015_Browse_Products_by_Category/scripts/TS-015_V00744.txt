@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00744
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00744
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account emily.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.rodriguez@example.com
+
+WHEN:
+- User enters email: emily.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Type: Kids
+  Device: Mobile
+  Network_Speed: Low
+  Product_Count: Many
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-344858
+  Order_Quantity: 2
+  Order_Total: 88.62
+  Password: weak
+  Phone: +1-580-544-4481
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 44.31
+  Product_SKU: SKU-33642
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-657756214
+  User_Type: Buyer
+  ZIP_Code: 76745
+
+RELATED REQUIREMENTS:
+FR-014

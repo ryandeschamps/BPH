@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-008_V00015
+
+SCENARIO: Login with Invalid Credentials
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer, I want to be notified when my login credentials are incorrect, so that I can retry or reset my password.
+
+GIVEN:
+- Buyer is logged in with account david.martinez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for david.martinez@example.com
+
+WHEN:
+- User enters email: david.martinez@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Account_State: Unverified
+  Browser: Firefox
+  Device: Mobile
+  Email_Verification: Not_Clicked
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-503739
+  Order_Quantity: 2
+  Order_Total: 199.76
+  Password: Test@123
+  Phone: +1-893-445-1261
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 99.88
+  Product_SKU: SKU-52049
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-548908437
+  User_Type: Buyer
+  ZIP_Code: 53447
+
+RELATED REQUIREMENTS:
+FR-001

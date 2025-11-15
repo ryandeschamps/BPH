@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00053
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00053
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account david.martinez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Image_Count: Multiple
+  Network_Speed: Medium
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-904771
+  Order_Quantity: 2
+  Order_Total: 261.7
+  Password: weak
+  Phone: +1-826-922-2649
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 130.85
+  Product_SKU: SKU-93073
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-806525253
+  User_Type: Admin
+  ZIP_Code: 80616
+
+RELATED REQUIREMENTS:
+FR-016

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-084_V00005
+
+SCENARIO: Update Order Status to In Process
+VARIANT: V00005
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status to In Process, so that buyers know their order is being prepared.
+
+GIVEN:
+- Admin is logged in with account emily.brown@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to In Process
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Level: Sub_Level
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-357603
+  Order_Quantity: 1
+  Order_Total: 165.3
+  Password: weak
+  Phone: +1-965-462-1156
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 165.3
+  Product_SKU: SKU-70348
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-677617005
+  User_Type: Admin
+  ZIP_Code: 98924
+
+RELATED REQUIREMENTS:
+FR-017

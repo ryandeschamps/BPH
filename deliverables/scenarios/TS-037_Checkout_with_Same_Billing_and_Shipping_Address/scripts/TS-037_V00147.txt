@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00147
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00147
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account john.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Saved
+  Address_Type: Same_Address
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 03/27
+  Card_Number: 4532-****-****-7684
+  Device: Desktop
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-260826
+  Order_Quantity: 3
+  Order_Total: 897.18
+  Password: weak
+  Phone: +1-634-967-6975
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 299.06
+  Product_SKU: SKU-52334
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-793336298
+  User_Type: Buyer
+  ZIP_Code: 78271
+
+RELATED REQUIREMENTS:
+FR-007

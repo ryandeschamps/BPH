@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00067
+
+SCENARIO: View Own Reviews
+VARIANT: V00067
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account david.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Buyer_Status: Inactive
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-204172
+  Order_Quantity: 2
+  Order_Total: 193.02
+  Password: weak
+  Phone: +1-253-256-3604
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 96.51
+  Product_SKU: SKU-91959
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-157980886
+  User_Type: Admin
+  ZIP_Code: 26848
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

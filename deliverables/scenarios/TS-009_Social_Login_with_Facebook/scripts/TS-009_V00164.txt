@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00164
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00164
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for emily.rodriguez@example.com
+
+WHEN:
+- User enters email: emily.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-518761
+  Order_Quantity: 2
+  Order_Total: 584.36
+  Password: weak
+  Phone: +1-318-809-9767
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 292.18
+  Product_SKU: SKU-36185
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-332107216
+  User_Type: Visitor
+  ZIP_Code: 40516
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

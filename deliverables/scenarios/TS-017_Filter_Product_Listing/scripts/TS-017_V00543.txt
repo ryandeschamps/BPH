@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00543
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00543
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account david.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Filter_Type: Multiple_Filters
+  Filter_Value: Multiple_Values
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-207982
+  Order_Quantity: 1
+  Order_Total: 195.29
+  Password: weak
+  Phone: +1-577-936-3135
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 195.29
+  Product_SKU: SKU-36580
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-598942565
+  User_Type: Buyer
+  ZIP_Code: 77942
+
+RELATED REQUIREMENTS:
+FR-003

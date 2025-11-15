@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00243
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00243
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account david.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Mixed
+  Address_Type: Different_Addresses
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 10/30
+  Card_Number: 4532-****-****-9736
+  Device: Tablet
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-320724
+  Order_Quantity: 1
+  Order_Total: 255.04
+  Password: weak
+  Phone: +1-601-373-1578
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 255.04
+  Product_SKU: SKU-86966
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-421414762
+  User_Type: Buyer
+  ZIP_Code: 98511
+
+RELATED REQUIREMENTS:
+FR-007

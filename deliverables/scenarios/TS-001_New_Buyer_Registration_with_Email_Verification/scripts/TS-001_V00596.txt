@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00596
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00596
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: emily.rodriguez@example.com
+- User enters phone: +1-622-954-6663
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Email
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Invalid_Email
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Field_Values: Invalid_Email
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-692100
+  Order_Quantity: 1
+  Order_Total: 61.34
+  Password: weak
+  Phone: +1-622-954-6663
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 61.34
+  Product_SKU: SKU-19206
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-654498276
+  User_Type: Visitor
+  ZIP_Code: 29783
+
+RELATED REQUIREMENTS:
+FR-002

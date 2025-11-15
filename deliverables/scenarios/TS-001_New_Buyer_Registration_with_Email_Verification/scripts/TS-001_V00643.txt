@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00643
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00643
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: michael.davis@example.com
+- User enters phone: +1-865-679-7652
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Contact
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Contact
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Field_Values: Missing_Contact
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-185260
+  Order_Quantity: 3
+  Order_Total: 657.72
+  Password: weak
+  Phone: +1-865-679-7652
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 219.24
+  Product_SKU: SKU-76226
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-519217932
+  User_Type: Visitor
+  ZIP_Code: 56631
+
+RELATED REQUIREMENTS:
+FR-002

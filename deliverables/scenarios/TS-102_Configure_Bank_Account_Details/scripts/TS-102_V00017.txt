@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00017
+
+SCENARIO: Reject Product Review
+VARIANT: V00017
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account david.martinez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Bank_Field: Account_Number
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-647036
+  Order_Quantity: 2
+  Order_Total: 113.06
+  Password: weak
+  Phone: +1-286-381-5056
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 56.53
+  Product_SKU: SKU-54516
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-508922597
+  User_Type: Admin
+  ZIP_Code: 90593
+
+RELATED REQUIREMENTS:
+FR-021

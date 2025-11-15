@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00079
+
+SCENARIO: Export Report to PDF
+VARIANT: V00079
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Error_Type: Timeout
+  Network_Speed: High
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-247573
+  Order_Quantity: 2
+  Order_Total: 253.0
+  Password: weak
+  Phone: +1-522-152-9814
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 126.5
+  Product_SKU: SKU-96375
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-486914853
+  User_Type: N/A
+  ZIP_Code: 68800
+
+RELATED REQUIREMENTS:
+FR-022

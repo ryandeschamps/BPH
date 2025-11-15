@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-024_V00073
+
+SCENARIO: View Product Listing with Thumbnail and Price
+VARIANT: V00073
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product thumbnails, names, and prices in listings, so that I can quickly evaluate options.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Listing with Thumbnail and Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Redirect_Action: Cancel
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-513861
+  Order_Quantity: 3
+  Order_Total: 388.83
+  Password: weak
+  Phone: +1-272-926-4965
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 129.61
+  Product_SKU: SKU-88978
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-412070688
+  User_Type: Visitor
+  ZIP_Code: 61502
+
+RELATED REQUIREMENTS:
+FR-004

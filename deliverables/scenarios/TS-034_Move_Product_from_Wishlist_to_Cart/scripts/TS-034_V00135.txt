@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00135
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00135
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Has_Items
+  Device: Tablet
+  Network_Speed: Low
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-132507
+  Order_Quantity: 4
+  Order_Total: 981.68
+  Password: weak
+  Phone: +1-356-947-3530
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 245.42
+  Product_SKU: SKU-16517
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-855869099
+  User_Type: Buyer
+  ZIP_Code: 78962
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

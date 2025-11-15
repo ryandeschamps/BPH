@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-059",
+  "scenario_title": "Contact Customer Support as Buyer",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Message_Type": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-059_Contact_Customer_Support_as_Buyer/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

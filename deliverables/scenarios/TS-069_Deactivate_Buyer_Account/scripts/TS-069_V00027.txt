@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-069_V00027
+
+SCENARIO: View My Account Profile
+VARIANT: V00027
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a buyer, I want to view my profile details (name, email, phone), so that I can verify my information.
+
+GIVEN:
+- Admin is logged in with account james.miller@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View My Account Profile
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: Inactive
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-660662
+  Order_Quantity: 1
+  Order_Total: 129.21
+  Password: weak
+  Phone: +1-711-652-7222
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 129.21
+  Product_SKU: SKU-63322
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-818672831
+  User_Type: Admin
+  ZIP_Code: 80907
+
+RELATED REQUIREMENTS:
+FR-010

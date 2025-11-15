@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00049
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00049
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Order_Status: Confirmed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-712522
+  Order_Quantity: 1
+  Order_Total: 187.32
+  Password: weak
+  Phone: +1-985-241-9441
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 187.32
+  Product_SKU: SKU-61024
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-582652378
+  User_Type: Buyer
+  ZIP_Code: 52816
+
+RELATED REQUIREMENTS:
+FR-008

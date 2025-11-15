@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00113
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00113
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account lisa.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  Quantity_Change: Decrease
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-986822
+  Order_Quantity: 3
+  Order_Total: 607.11
+  Password: weak
+  Phone: +1-307-150-7614
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 202.37
+  Product_SKU: SKU-25927
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-863494538
+  User_Type: Buyer
+  ZIP_Code: 92352
+
+RELATED REQUIREMENTS:
+FR-005

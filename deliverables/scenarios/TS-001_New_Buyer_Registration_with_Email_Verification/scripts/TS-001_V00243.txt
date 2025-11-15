@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00243
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00243
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: jane.jones@example.com
+- User enters phone: +1-568-179-7665
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Contact
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for jane.jones@example.com
+- Verification email sent to jane.jones@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Field_Values: Invalid_Contact
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-130335
+  Order_Quantity: 5
+  Order_Total: 1498.6
+  Password: Test@123
+  Phone: +1-568-179-7665
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 299.72
+  Product_SKU: SKU-60549
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-313729560
+  User_Type: Visitor
+  ZIP_Code: 93706
+
+RELATED REQUIREMENTS:
+FR-002

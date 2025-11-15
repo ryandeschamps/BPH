@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-070_V00107
+
+SCENARIO: Edit Profile Details
+VARIANT: V00107
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to edit my email and phone number, so that I can keep my information current.
+
+GIVEN:
+- Admin is logged in with account sarah.rodriguez@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Profile Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Medium
+  Order_Filter: By_Date
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-884849
+  Order_Quantity: 4
+  Order_Total: 101.6
+  Password: weak
+  Phone: +1-603-870-3928
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 25.4
+  Product_SKU: SKU-43243
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-424307022
+  User_Type: Admin
+  ZIP_Code: 89048
+
+RELATED REQUIREMENTS:
+FR-010

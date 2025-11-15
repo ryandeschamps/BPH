@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00135
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00135
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  PIN_Code_State: Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-517038
+  Order_Quantity: 5
+  Order_Total: 1387.3
+  Password: weak
+  Phone: +1-775-365-3523
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 277.46
+  Product_SKU: SKU-83662
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-185151520
+  User_Type: Visitor
+  ZIP_Code: 47146
+
+RELATED REQUIREMENTS:
+FR-003

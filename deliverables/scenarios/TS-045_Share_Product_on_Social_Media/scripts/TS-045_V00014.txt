@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-045_V00014
+
+SCENARIO: Proceed to Checkout from Cart
+VARIANT: V00014
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:23
+
+DESCRIPTION:
+As a buyer, I want to proceed to checkout from my cart, so that I can complete my purchase.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to sarah.miller@example.com
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Social_Platform: Facebook
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-982446
+  Order_Quantity: 1
+  Order_Total: 242.01
+  Password: weak
+  Phone: +1-666-913-4954
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 242.01
+  Product_SKU: SKU-45945
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-117070058
+  User_Type: Visitor
+  ZIP_Code: 25135
+
+RELATED REQUIREMENTS:
+FR-008

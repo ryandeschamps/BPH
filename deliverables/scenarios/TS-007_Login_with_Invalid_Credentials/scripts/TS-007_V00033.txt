@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00033
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00033
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.rodriguez@example.com
+
+WHEN:
+- User enters email: emily.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Credential_Error: Wrong_Email
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-499764
+  Order_Quantity: 5
+  Order_Total: 550.8
+  Password: weak
+  Phone: +1-625-401-6597
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 110.16
+  Product_SKU: SKU-92498
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-747801203
+  User_Type: Visitor
+  ZIP_Code: 23814
+
+RELATED REQUIREMENTS:
+FR-001

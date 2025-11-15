@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00376
+
+SCENARIO: Forgot Password Request
+VARIANT: V00376
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: Few_Results
+  Search_Query: Exact_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-774540
+  Order_Quantity: 4
+  Order_Total: 1178.56
+  Password: Test@123
+  Phone: +1-489-588-7447
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 294.64
+  Product_SKU: SKU-24531
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-489457456
+  User_Type: Visitor
+  ZIP_Code: 12380
+
+RELATED REQUIREMENTS:
+FR-001

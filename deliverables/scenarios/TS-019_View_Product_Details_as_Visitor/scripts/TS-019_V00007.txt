@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00007
+
+SCENARIO: Product Browse by Category
+VARIANT: V00007
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: Active
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-465141
+  Order_Quantity: 5
+  Order_Total: 480.75
+  Password: weak
+  Phone: +1-437-751-3493
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 96.15
+  Product_SKU: SKU-88571
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-851089264
+  User_Type: Visitor
+  ZIP_Code: 85143
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-085_V00055
+
+SCENARIO: Update Order Status to Shipped with Tracking
+VARIANT: V00055
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Shipped and add tracking details (carrier, tracking ID), so that buyers can track their shipment.
+
+GIVEN:
+- Admin is logged in with account sarah.brown@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Shipped with Tracking
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Edit_Field: Description
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-269824
+  Order_Quantity: 1
+  Order_Total: 25.94
+  Password: weak
+  Phone: +1-932-316-9344
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 25.94
+  Product_SKU: SKU-62420
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-688290835
+  User_Type: Admin
+  ZIP_Code: 82817
+
+RELATED REQUIREMENTS:
+FR-017

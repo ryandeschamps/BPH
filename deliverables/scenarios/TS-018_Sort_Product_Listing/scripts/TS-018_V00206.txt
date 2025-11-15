@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00206
+
+SCENARIO: Product Search with No Results
+VARIANT: V00206
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account michael.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Sort_By: Price_Low_High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-516842
+  Order_Quantity: 3
+  Order_Total: 821.16
+  Password: weak
+  Phone: +1-535-220-3710
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 273.72
+  Product_SKU: SKU-75903
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-109100729
+  User_Type: Buyer
+  ZIP_Code: 97472
+
+RELATED REQUIREMENTS:
+FR-003

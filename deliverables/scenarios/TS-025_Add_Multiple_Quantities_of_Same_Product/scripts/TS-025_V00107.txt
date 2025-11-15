@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00107
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00107
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Medium
+  Quantity: Two
+  Stock_Level: Exact_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-636377
+  Order_Quantity: 3
+  Order_Total: 425.82
+  Password: weak
+  Phone: +1-312-556-3371
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 141.94
+  Product_SKU: SKU-29733
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-677620750
+  User_Type: Buyer
+  ZIP_Code: 99523
+
+RELATED REQUIREMENTS:
+FR-004

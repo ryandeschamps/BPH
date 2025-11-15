@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00526
+
+SCENARIO: Product Browse by Category
+VARIANT: V00526
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: No_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-396895
+  Order_Quantity: 4
+  Order_Total: 761.96
+  Password: weak
+  Phone: +1-879-648-2759
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 190.49
+  Product_SKU: SKU-98821
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-815260739
+  User_Type: Buyer
+  ZIP_Code: 33409
+
+RELATED REQUIREMENTS:
+FR-003

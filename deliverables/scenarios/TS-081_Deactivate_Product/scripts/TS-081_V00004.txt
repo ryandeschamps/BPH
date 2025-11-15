@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-081_V00004
+
+SCENARIO: View All Orders List
+VARIANT: V00004
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to view list of all orders with current status, so that I can manage order fulfillment.
+
+GIVEN:
+- Admin is logged in with account lisa.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View All Orders List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Product_Status: Inactive
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-813733
+  Order_Quantity: 1
+  Order_Total: 192.42
+  Password: weak
+  Phone: +1-920-729-5394
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 192.42
+  Product_SKU: SKU-64585
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-775880053
+  User_Type: Admin
+  ZIP_Code: 32612
+
+RELATED REQUIREMENTS:
+FR-017

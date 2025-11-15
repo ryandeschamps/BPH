@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-067_V00044
+
+SCENARIO: Share Product on Social Media as Guest
+VARIANT: V00044
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a guest user, I want to share a product on social media, so that I can show it to friends without logging in.
+
+GIVEN:
+- Admin is logged in with account james.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Edit_Field: Email
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-962503
+  Order_Quantity: 5
+  Order_Total: 555.1
+  Password: weak
+  Phone: +1-462-276-6115
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 111.02
+  Product_SKU: SKU-54524
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-267484947
+  User_Type: Admin
+  ZIP_Code: 43139
+
+RELATED REQUIREMENTS:
+FR-009

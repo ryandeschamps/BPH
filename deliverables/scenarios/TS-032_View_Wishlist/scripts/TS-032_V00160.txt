@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00160
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00160
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account michael.brown@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: High
+  User_Type: Buyer
+  Wishlist_State: Single_Item
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-435783
+  Order_Quantity: 1
+  Order_Total: 62.71
+  Password: weak
+  Phone: +1-239-475-4345
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 62.71
+  Product_SKU: SKU-75472
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-204550006
+  User_Type: Buyer
+  ZIP_Code: 13816
+
+RELATED REQUIREMENTS:
+FR-007

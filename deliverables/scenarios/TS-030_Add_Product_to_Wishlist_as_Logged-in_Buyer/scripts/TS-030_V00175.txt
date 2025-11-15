@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00175
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00175
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account robert.smith@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Product_State: In_Stock
+  User_Type: Buyer
+  Wishlist_State: Product_Already_In_Wishlist
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-625094
+  Order_Quantity: 5
+  Order_Total: 960.2
+  Password: weak
+  Phone: +1-646-257-6729
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 192.04
+  Product_SKU: SKU-36292
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-276342650
+  User_Type: Buyer
+  ZIP_Code: 10214
+
+RELATED REQUIREMENTS:
+FR-005

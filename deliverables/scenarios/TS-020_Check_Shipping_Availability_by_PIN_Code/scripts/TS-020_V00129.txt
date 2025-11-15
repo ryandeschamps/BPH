@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00129
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00129
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  PIN_Code_State: Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-434638
+  Order_Quantity: 5
+  Order_Total: 976.75
+  Password: weak
+  Phone: +1-943-810-9263
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 195.35
+  Product_SKU: SKU-79085
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-423645686
+  User_Type: Visitor
+  ZIP_Code: 23979
+
+RELATED REQUIREMENTS:
+FR-003

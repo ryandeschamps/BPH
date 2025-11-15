@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-065_V00099
+
+SCENARIO: Prevent Review from Non-Purchaser
+VARIANT: V00099
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a system, I want to prevent users from reviewing products they haven't purchased, so that reviews are authentic.
+
+GIVEN:
+- Admin is logged in with account emily.brown@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Prevent Review from Non-Purchaser
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Filter: Inactive
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-683413
+  Order_Quantity: 2
+  Order_Total: 552.58
+  Password: weak
+  Phone: +1-575-308-8666
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 276.29
+  Product_SKU: SKU-87423
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-506390207
+  User_Type: Admin
+  ZIP_Code: 81678
+
+RELATED REQUIREMENTS:
+FR-011

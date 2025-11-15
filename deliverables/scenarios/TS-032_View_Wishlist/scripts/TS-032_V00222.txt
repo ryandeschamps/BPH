@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00222
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00222
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account david.brown@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Item_Availability: All_Available
+  Network_Speed: Low
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-537548
+  Order_Quantity: 3
+  Order_Total: 288.93
+  Password: weak
+  Phone: +1-977-683-8178
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 96.31
+  Product_SKU: SKU-14386
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-599063467
+  User_Type: Buyer
+  ZIP_Code: 75655
+
+RELATED REQUIREMENTS:
+FR-007

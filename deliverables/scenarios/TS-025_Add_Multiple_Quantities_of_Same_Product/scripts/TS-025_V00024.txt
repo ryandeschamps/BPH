@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00024
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00024
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account david.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Quantity: Two
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-869316
+  Order_Quantity: 2
+  Order_Total: 295.48
+  Password: weak
+  Phone: +1-967-749-3793
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 147.74
+  Product_SKU: SKU-23181
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-659639008
+  User_Type: Buyer
+  ZIP_Code: 81898
+
+RELATED REQUIREMENTS:
+FR-004

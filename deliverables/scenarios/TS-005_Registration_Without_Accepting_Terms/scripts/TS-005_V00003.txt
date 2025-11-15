@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-005_V00003
+
+SCENARIO: Registration Without Accepting Terms and Conditions
+VARIANT: V00003
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a visitor, I want to be prevented from registering if I don't accept terms, so that the website ensures legal compliance.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.jones@example.com
+- User enters phone: +1-875-173-1137
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  Terms_Accepted: No
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-439495
+  Order_Quantity: 4
+  Order_Total: 246.88
+  Password: weak
+  Phone: +1-875-173-1137
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 61.72
+  Product_SKU: SKU-44986
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-249357310
+  User_Type: Visitor
+  ZIP_Code: 34773
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-081_V00008
+
+SCENARIO: View All Orders List
+VARIANT: V00008
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to view list of all orders with current status, so that I can manage order fulfillment.
+
+GIVEN:
+- Admin is logged in with account david.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View All Orders List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Status: Inactive
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-453600
+  Order_Quantity: 5
+  Order_Total: 151.4
+  Password: weak
+  Phone: +1-440-905-5334
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 30.28
+  Product_SKU: SKU-61823
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-829432030
+  User_Type: Admin
+  ZIP_Code: 30129
+
+RELATED REQUIREMENTS:
+FR-017

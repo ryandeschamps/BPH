@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00138
+
+SCENARIO: View Own Reviews
+VARIANT: V00138
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account lisa.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Buyer_Status: No_Orders
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-511963
+  Order_Quantity: 2
+  Order_Total: 543.08
+  Password: weak
+  Phone: +1-444-724-2787
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 271.54
+  Product_SKU: SKU-32414
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-273804767
+  User_Type: Admin
+  ZIP_Code: 86500
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

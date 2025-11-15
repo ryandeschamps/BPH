@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00648
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00648
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account lisa.garcia@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Failure_Reason: Insufficient_Funds
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 06/30
+  Card_Number: 4532-****-****-3809
+  Device: Tablet
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-557441
+  Order_Quantity: 4
+  Order_Total: 1106.36
+  Password: weak
+  Phone: +1-320-713-1733
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 276.59
+  Product_SKU: SKU-15831
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-566153909
+  User_Type: Buyer
+  ZIP_Code: 25897
+
+RELATED REQUIREMENTS:
+FR-006

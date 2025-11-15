@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00056
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00056
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: michael.davis@example.com
+- User enters phone: +1-519-106-7788
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Email_State: Inactive_Account
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-904151
+  Order_Quantity: 2
+  Order_Total: 83.46
+  Password: weak
+  Phone: +1-519-106-7788
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 41.73
+  Product_SKU: SKU-18863
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-692301731
+  User_Type: Visitor
+  ZIP_Code: 31181
+
+RELATED REQUIREMENTS:
+FR-002

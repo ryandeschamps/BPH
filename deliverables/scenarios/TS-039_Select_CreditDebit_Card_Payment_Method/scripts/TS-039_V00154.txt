@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00154
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00154
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account john.miller@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Card_Type: Mastercard
+  Device: Desktop
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Payment_Status: Declined
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 08/27
+  Card_Number: 4532-****-****-8777
+  Device: Desktop
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-279758
+  Order_Quantity: 3
+  Order_Total: 149.49
+  Password: weak
+  Phone: +1-851-450-6299
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 49.83
+  Product_SKU: SKU-92265
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-444299944
+  User_Type: Buyer
+  ZIP_Code: 99307
+
+RELATED REQUIREMENTS:
+FR-006

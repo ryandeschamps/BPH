@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-046_V00038
+
+SCENARIO: Enter Billing Address During Checkout
+VARIANT: V00038
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:23
+
+DESCRIPTION:
+As a buyer, I want to enter my billing address during checkout, so that payment can be processed.
+
+GIVEN:
+- Buyer is logged in with account jane.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to jane.miller@example.com
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Social_Platform: Twitter
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-503145
+  Order_Quantity: 2
+  Order_Total: 369.64
+  Password: weak
+  Phone: +1-941-788-9973
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 184.82
+  Product_SKU: SKU-70376
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-141101518
+  User_Type: Buyer
+  ZIP_Code: 97226
+
+RELATED REQUIREMENTS:
+FR-008

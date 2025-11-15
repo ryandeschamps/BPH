@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-077_V00059
+
+SCENARIO: View All Buyers List
+VARIANT: V00059
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view list of all registered buyers, so that I can manage customers.
+
+GIVEN:
+- Admin is logged in with account james.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View All Buyers List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Edit_Type: Items
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-704553
+  Order_Quantity: 3
+  Order_Total: 462.21
+  Password: weak
+  Phone: +1-865-259-4428
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 154.07
+  Product_SKU: SKU-15012
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-604646735
+  User_Type: Admin
+  ZIP_Code: 15026
+
+RELATED REQUIREMENTS:
+FR-016

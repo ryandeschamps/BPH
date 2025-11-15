@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00083
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00083
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account jane.garcia@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Medium
+  Removal_Action: Remove_One
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-704481
+  Order_Quantity: 2
+  Order_Total: 550.32
+  Password: weak
+  Phone: +1-808-569-6507
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 275.16
+  Product_SKU: SKU-97590
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-913777664
+  User_Type: Buyer
+  ZIP_Code: 37524
+
+RELATED REQUIREMENTS:
+FR-007

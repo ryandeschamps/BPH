@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00113
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00113
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- Buyer is logged in with account james.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Zero
+  Search_Query: No_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-353502
+  Order_Quantity: 2
+  Order_Total: 372.18
+  Password: Test@123
+  Phone: +1-442-535-7071
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 186.09
+  Product_SKU: SKU-41410
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-584366993
+  User_Type: Buyer
+  ZIP_Code: 55508
+
+RELATED REQUIREMENTS:
+FR-001

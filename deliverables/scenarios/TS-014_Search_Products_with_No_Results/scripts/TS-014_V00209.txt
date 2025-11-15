@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00209
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00209
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- Buyer is logged in with account sarah.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Zero
+  Search_Query: Special_Characters
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-951185
+  Order_Quantity: 1
+  Order_Total: 279.92
+  Password: Test@123
+  Phone: +1-385-442-6801
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 279.92
+  Product_SKU: SKU-92015
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-628843954
+  User_Type: Buyer
+  ZIP_Code: 34055
+
+RELATED REQUIREMENTS:
+FR-001

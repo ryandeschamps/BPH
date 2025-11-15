@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-076_V00019
+
+SCENARIO: View Admin Dashboard
+VARIANT: V00019
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to view dashboard with key metrics (active buyers, products, revenue), so that I can monitor business performance.
+
+GIVEN:
+- Admin is logged in with account emily.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: View Admin Dashboard
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Status_Change: Shipped_To_Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-366777
+  Order_Quantity: 1
+  Order_Total: 240.69
+  Password: weak
+  Phone: +1-674-882-6936
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 240.69
+  Product_SKU: SKU-48287
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-411560348
+  User_Type: Admin
+  ZIP_Code: 27499
+
+RELATED REQUIREMENTS:
+FR-015

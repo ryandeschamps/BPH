@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00183
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00183
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for david.jones@example.com
+
+WHEN:
+- User enters email: david.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-445272
+  Order_Quantity: 4
+  Order_Total: 310.76
+  Password: weak
+  Phone: +1-224-264-1625
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 77.69
+  Product_SKU: SKU-51876
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-906573182
+  User_Type: Visitor
+  ZIP_Code: 86152
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

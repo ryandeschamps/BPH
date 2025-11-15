@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-012_V00058
+
+SCENARIO: First-Time Social Login Account Creation
+VARIANT: V00058
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a visitor using social login for the first time, I want the system to auto-create my account, so that I don't need to fill registration forms.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for mary.williams@example.com
+
+WHEN:
+- User enters email: mary.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_State: Invalid_Format
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-637151
+  Order_Quantity: 2
+  Order_Total: 309.82
+  Password: weak
+  Phone: +1-289-475-7674
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 154.91
+  Product_SKU: SKU-57245
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-945033488
+  User_Type: Visitor
+  ZIP_Code: 65269
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

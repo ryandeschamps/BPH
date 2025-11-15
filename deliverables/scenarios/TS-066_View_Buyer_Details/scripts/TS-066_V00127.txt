@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00127
+
+SCENARIO: View Own Reviews
+VARIANT: V00127
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account david.smith@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: No_Orders
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-941602
+  Order_Quantity: 2
+  Order_Total: 463.5
+  Password: weak
+  Phone: +1-999-499-1884
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 231.75
+  Product_SKU: SKU-22445
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-595125754
+  User_Type: Admin
+  ZIP_Code: 95748
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

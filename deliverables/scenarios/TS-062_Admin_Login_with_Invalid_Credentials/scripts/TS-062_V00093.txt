@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00093
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00093
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account michael.jones@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Both
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-602051
+  Order_Quantity: 1
+  Order_Total: 80.25
+  Password: weak
+  Phone: +1-203-506-6881
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 80.25
+  Product_SKU: SKU-86851
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-946253921
+  User_Type: Admin
+  ZIP_Code: 87882
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

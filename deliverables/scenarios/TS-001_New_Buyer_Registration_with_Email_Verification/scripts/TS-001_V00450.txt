@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00450
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00450
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: james.brown@example.com
+- User enters phone: +1-527-454-3351
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: All_Valid
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Field_Values: All_Valid
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-116750
+  Order_Quantity: 5
+  Order_Total: 1422.2
+  Password: weak
+  Phone: +1-527-454-3351
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 284.44
+  Product_SKU: SKU-30216
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-649072370
+  User_Type: Visitor
+  ZIP_Code: 17661
+
+RELATED REQUIREMENTS:
+FR-002

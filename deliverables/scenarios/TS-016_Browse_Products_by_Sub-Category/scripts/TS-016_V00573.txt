@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00573
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00573
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for robert.smith@example.com
+
+WHEN:
+- User enters email: robert.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Low
+  Product_Count: None
+  Sub_Category_Type: Dresses
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-415938
+  Order_Quantity: 1
+  Order_Total: 229.77
+  Password: weak
+  Phone: +1-439-651-8710
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 229.77
+  Product_SKU: SKU-71738
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-947580704
+  User_Type: Visitor
+  ZIP_Code: 35180
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

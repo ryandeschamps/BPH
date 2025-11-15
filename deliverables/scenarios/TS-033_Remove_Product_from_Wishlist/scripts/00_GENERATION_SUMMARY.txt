@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:15
+Total Scripts: 144
+Total Scenarios: 1
+Generation Time: 0.0 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-033: Add Product to Cart as Logged-In Buyer
+  Variants: 144
+  Files: TS-033_V*.txt

@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00012
+
+SCENARIO: Export Report to PDF
+VARIANT: V00012
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Error_Type: 404
+  Network_Speed: Low
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-802097
+  Order_Quantity: 4
+  Order_Total: 564.28
+  Password: weak
+  Phone: +1-429-217-9814
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 141.07
+  Product_SKU: SKU-81008
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-120105577
+  User_Type: N/A
+  ZIP_Code: 86940
+
+RELATED REQUIREMENTS:
+FR-022

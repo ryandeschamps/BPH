@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00621
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00621
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Card_Type: Mastercard
+  Device: Tablet
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  Payment_Status: Timeout
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 10/30
+  Card_Number: 4532-****-****-5434
+  Device: Tablet
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-326275
+  Order_Quantity: 1
+  Order_Total: 220.1
+  Password: weak
+  Phone: +1-911-929-7324
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 220.1
+  Product_SKU: SKU-12876
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-398390643
+  User_Type: Buyer
+  ZIP_Code: 94562
+
+RELATED REQUIREMENTS:
+FR-006

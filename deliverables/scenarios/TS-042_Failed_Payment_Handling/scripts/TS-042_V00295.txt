@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00295
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00295
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account david.williams@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Failure_Reason: Declined
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 12/28
+  Card_Number: 4532-****-****-1869
+  Device: Tablet
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-889730
+  Order_Quantity: 3
+  Order_Total: 560.94
+  Password: weak
+  Phone: +1-371-419-2093
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 186.98
+  Product_SKU: SKU-15528
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-533717624
+  User_Type: Buyer
+  ZIP_Code: 90864
+
+RELATED REQUIREMENTS:
+FR-006

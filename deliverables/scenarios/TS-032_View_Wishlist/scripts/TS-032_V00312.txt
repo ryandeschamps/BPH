@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00312
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00312
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account david.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: Low
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-167954
+  Order_Quantity: 4
+  Order_Total: 953.08
+  Password: weak
+  Phone: +1-934-200-4914
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 238.27
+  Product_SKU: SKU-45284
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-238676110
+  User_Type: Buyer
+  ZIP_Code: 74154
+
+RELATED REQUIREMENTS:
+FR-007

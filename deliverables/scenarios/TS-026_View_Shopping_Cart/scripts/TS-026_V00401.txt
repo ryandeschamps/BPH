@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00401
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00401
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account john.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Mixed_Variations
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-948272
+  Order_Quantity: 2
+  Order_Total: 333.2
+  Password: weak
+  Phone: +1-865-677-3269
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 166.6
+  Product_SKU: SKU-86649
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-651343718
+  User_Type: Buyer
+  ZIP_Code: 80005
+
+RELATED REQUIREMENTS:
+FR-005

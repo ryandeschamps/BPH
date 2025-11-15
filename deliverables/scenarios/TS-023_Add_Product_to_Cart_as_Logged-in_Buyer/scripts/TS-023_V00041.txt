@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00041
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00041
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account robert.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Variation: No_Variation
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-143179
+  Order_Quantity: 1
+  Order_Total: 210.15
+  Password: weak
+  Phone: +1-765-538-7244
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 210.15
+  Product_SKU: SKU-24509
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-966650173
+  User_Type: Buyer
+  ZIP_Code: 17868
+
+RELATED REQUIREMENTS:
+FR-003

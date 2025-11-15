@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00727
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00727
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account robert.davis@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Failure_Reason: Invalid_Card
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 02/27
+  Card_Number: 4532-****-****-1108
+  Device: Tablet
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-148140
+  Order_Quantity: 1
+  Order_Total: 147.15
+  Password: weak
+  Phone: +1-673-668-7350
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 147.15
+  Product_SKU: SKU-12049
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-236325708
+  User_Type: Buyer
+  ZIP_Code: 90439
+
+RELATED REQUIREMENTS:
+FR-006

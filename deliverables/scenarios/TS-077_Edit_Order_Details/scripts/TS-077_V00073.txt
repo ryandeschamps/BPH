@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-077_V00073
+
+SCENARIO: View All Buyers List
+VARIANT: V00073
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view list of all registered buyers, so that I can manage customers.
+
+GIVEN:
+- Admin is logged in with account michael.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View All Buyers List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Edit_Type: Quantity
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-633304
+  Order_Quantity: 3
+  Order_Total: 763.29
+  Password: weak
+  Phone: +1-775-302-3804
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 254.43
+  Product_SKU: SKU-32473
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-482863868
+  User_Type: Admin
+  ZIP_Code: 75241
+
+RELATED REQUIREMENTS:
+FR-016

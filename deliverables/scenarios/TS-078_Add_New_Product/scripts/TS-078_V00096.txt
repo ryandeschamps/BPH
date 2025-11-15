@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00096
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00096
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account mary.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Image_Count: Single
+  Network_Speed: Low
+  Product_Type: With_Variations
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-218268
+  Order_Quantity: 5
+  Order_Total: 1048.25
+  Password: weak
+  Phone: +1-723-450-7698
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 209.65
+  Product_SKU: SKU-32867
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-854840707
+  User_Type: Admin
+  ZIP_Code: 14157
+
+RELATED REQUIREMENTS:
+FR-016

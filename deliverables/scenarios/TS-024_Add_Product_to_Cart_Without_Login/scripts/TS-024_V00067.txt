@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-024_V00067
+
+SCENARIO: View Product Listing with Thumbnail and Price
+VARIANT: V00067
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product thumbnails, names, and prices in listings, so that I can quickly evaluate options.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Listing with Thumbnail and Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Redirect_Action: Register
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-466469
+  Order_Quantity: 2
+  Order_Total: 325.8
+  Password: weak
+  Phone: +1-395-513-1957
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 162.9
+  Product_SKU: SKU-79516
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-620866022
+  User_Type: Visitor
+  ZIP_Code: 52622
+
+RELATED REQUIREMENTS:
+FR-004

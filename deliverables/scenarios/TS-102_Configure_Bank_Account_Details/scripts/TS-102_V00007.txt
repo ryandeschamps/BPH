@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00007
+
+SCENARIO: Reject Product Review
+VARIANT: V00007
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account john.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Bank_Field: Account_Number
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-302381
+  Order_Quantity: 3
+  Order_Total: 595.38
+  Password: weak
+  Phone: +1-374-791-7541
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 198.46
+  Product_SKU: SKU-95251
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-508018150
+  User_Type: Admin
+  ZIP_Code: 74581
+
+RELATED REQUIREMENTS:
+FR-021

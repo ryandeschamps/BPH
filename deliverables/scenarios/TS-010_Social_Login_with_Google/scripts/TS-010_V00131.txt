@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-010_V00131
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00131
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for robert.davis@example.com
+
+WHEN:
+- User enters email: robert.davis@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-984114
+  Order_Quantity: 2
+  Order_Total: 255.62
+  Password: Test@123
+  Phone: +1-867-613-1046
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 127.81
+  Product_SKU: SKU-85849
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-563815831
+  User_Type: Visitor
+  ZIP_Code: 98847
+
+RELATED REQUIREMENTS:
+FR-001

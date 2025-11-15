@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00370
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00370
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Load_Time: Medium
+  Network_Speed: High
+  Page_Type: Cart
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-306984
+  Order_Quantity: 2
+  Order_Total: 170.0
+  Password: weak
+  Phone: +1-912-379-1253
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Wool Sweater
+  Product_Price: 85.0
+  Product_SKU: SKU-50098
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-284691870
+  User_Type: N/A
+  ZIP_Code: 29535
+
+RELATED REQUIREMENTS:
+FR-022

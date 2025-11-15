@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00047
+
+SCENARIO: Add New Product
+VARIANT: V00047
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account robert.brown@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Medium
+  Report_Period: Week
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-641838
+  Order_Quantity: 4
+  Order_Total: 902.8
+  Password: weak
+  Phone: +1-529-721-3904
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 225.7
+  Product_SKU: SKU-51145
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-511665115
+  User_Type: Admin
+  ZIP_Code: 62477
+
+RELATED REQUIREMENTS:
+FR-019

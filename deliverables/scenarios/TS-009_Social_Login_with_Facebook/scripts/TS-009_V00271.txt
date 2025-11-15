@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00271
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00271
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for lisa.rodriguez@example.com
+
+WHEN:
+- User enters email: lisa.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-184981
+  Order_Quantity: 4
+  Order_Total: 306.16
+  Password: weak
+  Phone: +1-809-681-1538
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 76.54
+  Product_SKU: SKU-61034
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-747465954
+  User_Type: Visitor
+  ZIP_Code: 69040
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

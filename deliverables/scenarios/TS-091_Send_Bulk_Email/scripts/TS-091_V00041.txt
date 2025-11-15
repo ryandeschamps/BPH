@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-091_V00041
+
+SCENARIO: Edit Product Category
+VARIANT: V00041
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to edit category details, so that I can update category information.
+
+GIVEN:
+- Admin is logged in with account jane.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  Target_Audience: Filtered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-843848
+  Order_Quantity: 5
+  Order_Total: 1159.9
+  Password: weak
+  Phone: +1-429-653-1363
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 231.98
+  Product_SKU: SKU-63815
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-584146676
+  User_Type: Admin
+  ZIP_Code: 32915
+
+RELATED REQUIREMENTS:
+FR-018

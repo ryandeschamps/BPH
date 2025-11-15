@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00040
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00040
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account michael.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 04/26
+  Card_Number: 4532-****-****-1536
+  Device: Mobile
+  Email: michael.williams@example.com
+  First_Name: Michael
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-348351
+  Order_Quantity: 4
+  Order_Total: 876.32
+  Password: weak
+  Phone: +1-970-249-5706
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 219.08
+  Product_SKU: SKU-97350
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-375432408
+  User_Type: Buyer
+  ZIP_Code: 30667
+
+RELATED REQUIREMENTS:
+FR-007

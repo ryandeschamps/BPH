@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00266
+
+SCENARIO: View Wishlist Items
+VARIANT: V00266
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Email_Delivery: Delayed
+  Network_Speed: Medium
+  Order_Size: Multiple_Items
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 08/27
+  Card_Number: 4532-****-****-5589
+  Device: Mobile
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-683399
+  Order_Quantity: 1
+  Order_Total: 127.72
+  Password: weak
+  Phone: +1-682-881-7451
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 127.72
+  Product_SKU: SKU-50520
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-131037962
+  User_Type: Buyer
+  ZIP_Code: 49217
+
+RELATED REQUIREMENTS:
+FR-006

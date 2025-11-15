@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-103",
+  "scenario_title": "Load Testing with Concurrent Users",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "Load_Type": 1,
+    "User_Count": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-103_Load_Testing_with_Concurrent_Users/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-072_V00024
+
+SCENARIO: Manage Address Book
+VARIANT: V00024
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to add, edit, and delete addresses in my address book, so that I can quickly select addresses during checkout.
+
+GIVEN:
+- Admin is logged in with account john.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Manage Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Order_Details: Basic
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-590181
+  Order_Quantity: 3
+  Order_Total: 850.38
+  Password: weak
+  Phone: +1-645-207-3044
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 283.46
+  Product_SKU: SKU-77005
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-413942758
+  User_Type: Admin
+  ZIP_Code: 56113
+
+RELATED REQUIREMENTS:
+FR-010

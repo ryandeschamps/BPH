@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00024
+
+SCENARIO: Reject Product Review
+VARIANT: V00024
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account mary.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Bank_Field: Account_Number
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-404426
+  Order_Quantity: 1
+  Order_Total: 64.43
+  Password: weak
+  Phone: +1-625-436-3470
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 64.43
+  Product_SKU: SKU-20259
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-878757863
+  User_Type: Admin
+  ZIP_Code: 28687
+
+RELATED REQUIREMENTS:
+FR-021

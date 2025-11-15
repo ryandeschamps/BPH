@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00643
+
+SCENARIO: Forgot Password Request
+VARIANT: V00643
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account emily.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: One_Result
+  Search_Query: Multiple_Keywords
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-733023
+  Order_Quantity: 3
+  Order_Total: 657.9
+  Password: Test@123
+  Phone: +1-687-195-8720
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 219.3
+  Product_SKU: SKU-98742
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-968993066
+  User_Type: Buyer
+  ZIP_Code: 28773
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-058_V00005
+
+SCENARIO: View Order Details
+VARIANT: V00005
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to view detailed information about a specific order, so that I can review what I purchased.
+
+GIVEN:
+- Buyer is logged in with account james.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-437469
+  Order_Quantity: 2
+  Order_Total: 47.56
+  Password: weak
+  Phone: +1-221-486-7247
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 23.78
+  Product_SKU: SKU-88799
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-900701148
+  User_Type: Buyer
+  ZIP_Code: 43675
+
+RELATED REQUIREMENTS:
+FR-012

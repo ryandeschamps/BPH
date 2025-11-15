@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-072_V00051
+
+SCENARIO: Manage Address Book
+VARIANT: V00051
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to add, edit, and delete addresses in my address book, so that I can quickly select addresses during checkout.
+
+GIVEN:
+- Admin is logged in with account michael.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Manage Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Order_Details: With_Items
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-677175
+  Order_Quantity: 3
+  Order_Total: 836.64
+  Password: weak
+  Phone: +1-514-814-5228
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 278.88
+  Product_SKU: SKU-72546
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-628960303
+  User_Type: Admin
+  ZIP_Code: 84865
+
+RELATED REQUIREMENTS:
+FR-010

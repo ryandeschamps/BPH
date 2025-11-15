@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00008
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00008
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Medium
+  PIN_Code_State: Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-155052
+  Order_Quantity: 5
+  Order_Total: 425.25
+  Password: Test@123
+  Phone: +1-679-188-8830
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 85.05
+  Product_SKU: SKU-85090
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-156850911
+  User_Type: Visitor
+  ZIP_Code: 31408
+
+RELATED REQUIREMENTS:
+FR-003

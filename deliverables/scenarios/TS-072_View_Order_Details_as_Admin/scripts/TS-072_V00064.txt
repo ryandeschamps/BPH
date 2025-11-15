@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-072_V00064
+
+SCENARIO: Manage Address Book
+VARIANT: V00064
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to add, edit, and delete addresses in my address book, so that I can quickly select addresses during checkout.
+
+GIVEN:
+- Admin is logged in with account john.brown@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Manage Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Order_Details: With_Items
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-583938
+  Order_Quantity: 4
+  Order_Total: 869.68
+  Password: weak
+  Phone: +1-796-997-1279
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 217.42
+  Product_SKU: SKU-43504
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-728226030
+  User_Type: Admin
+  ZIP_Code: 52073
+
+RELATED REQUIREMENTS:
+FR-010

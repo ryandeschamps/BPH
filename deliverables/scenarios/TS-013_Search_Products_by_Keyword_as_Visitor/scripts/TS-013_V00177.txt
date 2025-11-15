@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00177
+
+SCENARIO: Forgot Password Request
+VARIANT: V00177
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Few_Results
+  Search_Query: Multiple_Keywords
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-954368
+  Order_Quantity: 4
+  Order_Total: 242.2
+  Password: Test@123
+  Phone: +1-213-296-2010
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 60.55
+  Product_SKU: SKU-59579
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-981954056
+  User_Type: Visitor
+  ZIP_Code: 74264
+
+RELATED REQUIREMENTS:
+FR-001

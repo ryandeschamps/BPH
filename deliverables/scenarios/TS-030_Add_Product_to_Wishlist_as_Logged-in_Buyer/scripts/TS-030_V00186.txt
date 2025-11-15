@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00186
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00186
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account lisa.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+  Wishlist_State: Product_Already_In_Wishlist
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-495872
+  Order_Quantity: 2
+  Order_Total: 329.92
+  Password: weak
+  Phone: +1-930-193-7971
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 164.96
+  Product_SKU: SKU-46292
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-826519438
+  User_Type: Buyer
+  ZIP_Code: 44416
+
+RELATED REQUIREMENTS:
+FR-005

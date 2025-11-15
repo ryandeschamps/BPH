@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-072_V00014
+
+SCENARIO: Manage Address Book
+VARIANT: V00014
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to add, edit, and delete addresses in my address book, so that I can quickly select addresses during checkout.
+
+GIVEN:
+- Admin is logged in with account sarah.johnson@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Manage Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Order_Details: Basic
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-673200
+  Order_Quantity: 4
+  Order_Total: 414.44
+  Password: weak
+  Phone: +1-514-857-5446
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 103.61
+  Product_SKU: SKU-96570
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-967892325
+  User_Type: Admin
+  ZIP_Code: 42734
+
+RELATED REQUIREMENTS:
+FR-010

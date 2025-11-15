@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00089
+
+SCENARIO: View Own Reviews
+VARIANT: V00089
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account emily.rodriguez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Status: Has_Orders
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-326523
+  Order_Quantity: 3
+  Order_Total: 451.65
+  Password: weak
+  Phone: +1-330-325-9947
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 150.55
+  Product_SKU: SKU-46616
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-307561728
+  User_Type: Admin
+  ZIP_Code: 97480
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

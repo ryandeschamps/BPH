@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-045_V00018
+
+SCENARIO: Proceed to Checkout from Cart
+VARIANT: V00018
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:23
+
+DESCRIPTION:
+As a buyer, I want to proceed to checkout from my cart, so that I can complete my purchase.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to robert.williams@example.com
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Social_Platform: Facebook
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-865156
+  Order_Quantity: 5
+  Order_Total: 1155.55
+  Password: weak
+  Phone: +1-933-766-3064
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 231.11
+  Product_SKU: SKU-65563
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-489469099
+  User_Type: Visitor
+  ZIP_Code: 91755
+
+RELATED REQUIREMENTS:
+FR-008

@@ -1,0 +1,15 @@
+{
+  "scenario_id": "TS-106",
+  "scenario_title": "Security Testing",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "Security_Type": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-106_Security_Testing/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-023",
+  "scenario_title": "Add Product to Cart as Logged-in Buyer",
+  "variant_count": 576,
+  "expected_variant_count": 576,
+  "parameters": {
+    "User_Type": 1,
+    "Product_Variation": 4,
+    "Quantity": 2,
+    "Cart_State": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-023_Add_Product_to_Cart_as_Logged-in_Buyer/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

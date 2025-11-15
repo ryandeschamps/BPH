@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00091
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00091
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account emily.martinez@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Order_Status: Shipped
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-697292
+  Order_Quantity: 2
+  Order_Total: 104.52
+  Password: weak
+  Phone: +1-681-434-1728
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 52.26
+  Product_SKU: SKU-19941
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-158360925
+  User_Type: Buyer
+  ZIP_Code: 58763
+
+RELATED REQUIREMENTS:
+FR-008

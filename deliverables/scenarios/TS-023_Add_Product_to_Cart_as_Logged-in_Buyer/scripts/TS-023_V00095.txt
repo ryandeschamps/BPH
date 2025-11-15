@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00095
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00095
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account emily.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Empty
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Variation: No_Variation
+  Quantity: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.williams@example.com
+  First_Name: Emily
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-330375
+  Order_Quantity: 2
+  Order_Total: 391.68
+  Password: weak
+  Phone: +1-868-566-8831
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 195.84
+  Product_SKU: SKU-46392
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-851245053
+  User_Type: Buyer
+  ZIP_Code: 55027
+
+RELATED REQUIREMENTS:
+FR-003

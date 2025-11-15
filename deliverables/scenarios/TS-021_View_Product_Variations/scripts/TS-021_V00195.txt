@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00195
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00195
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Visitor
+  Variation_Availability: All_Out_Of_Stock
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-501759
+  Order_Quantity: 4
+  Order_Total: 216.2
+  Password: weak
+  Phone: +1-504-752-3887
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 54.05
+  Product_SKU: SKU-58879
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-976777663
+  User_Type: Visitor
+  ZIP_Code: 14750
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00108
+
+SCENARIO: Export Report to Excel
+VARIANT: V00108
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Low
+  Security_Type: Encrypted_Data
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-347663
+  Order_Quantity: 2
+  Order_Total: 40.3
+  Password: weak
+  Phone: +1-945-856-8540
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 20.15
+  Product_SKU: SKU-52902
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-645023279
+  User_Type: N/A
+  ZIP_Code: 36077
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00022
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00022
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Rating_Range: High_Rated
+  Review_Count: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-801804
+  Order_Quantity: 3
+  Order_Total: 504.06
+  Password: weak
+  Phone: +1-857-835-4544
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 168.02
+  Product_SKU: SKU-52274
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-732992174
+  User_Type: Visitor
+  ZIP_Code: 60277
+
+RELATED REQUIREMENTS:
+FR-003

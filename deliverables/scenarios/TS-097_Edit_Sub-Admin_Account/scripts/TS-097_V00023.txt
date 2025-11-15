@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00023
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00023
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account john.martinez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Edit_Type: Username
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-412100
+  Order_Quantity: 5
+  Order_Total: 1439.9
+  Password: weak
+  Phone: +1-687-709-2359
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 287.98
+  Product_SKU: SKU-20834
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-742148843
+  User_Type: Admin
+  ZIP_Code: 43539
+
+RELATED REQUIREMENTS:
+FR-019

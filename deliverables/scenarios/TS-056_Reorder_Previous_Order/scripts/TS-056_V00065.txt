@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-056_V00065
+
+SCENARIO: Checkout Without Login
+VARIANT: V00065
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a guest user, I want to be required to login before checkout, so that the system can track my order.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for robert.miller@example.com
+
+WHEN:
+- User enters email: robert.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Medium
+  Reorder_Items: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-375254
+  Order_Quantity: 5
+  Order_Total: 212.1
+  Password: weak
+  Phone: +1-270-982-7634
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 42.42
+  Product_SKU: SKU-31113
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-145703018
+  User_Type: Buyer
+  ZIP_Code: 68325
+
+RELATED REQUIREMENTS:
+FR-008

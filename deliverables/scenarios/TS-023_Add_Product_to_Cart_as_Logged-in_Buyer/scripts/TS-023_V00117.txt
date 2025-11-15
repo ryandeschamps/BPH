@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00117
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00117
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account lisa.martinez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Has_Items
+  Device: Tablet
+  Network_Speed: Low
+  Product_Variation: No_Variation
+  Quantity: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-928787
+  Order_Quantity: 3
+  Order_Total: 680.91
+  Password: weak
+  Phone: +1-250-830-5416
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 226.97
+  Product_SKU: SKU-84919
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-993551454
+  User_Type: Buyer
+  ZIP_Code: 99457
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00160
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00160
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.martinez@example.com
+
+WHEN:
+- User enters email: emily.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-433324
+  Order_Quantity: 2
+  Order_Total: 421.08
+  Password: weak
+  Phone: +1-474-702-3415
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 210.54
+  Product_SKU: SKU-39621
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-280719783
+  User_Type: Visitor
+  ZIP_Code: 39295
+
+RELATED REQUIREMENTS:
+FR-001

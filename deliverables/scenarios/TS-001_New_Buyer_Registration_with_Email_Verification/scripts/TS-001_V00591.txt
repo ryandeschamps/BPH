@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00591
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00591
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: lisa.davis@example.com
+- User enters phone: +1-407-769-1301
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Email
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Invalid_Email
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Field_Values: Invalid_Email
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-874882
+  Order_Quantity: 1
+  Order_Total: 149.43
+  Password: weak
+  Phone: +1-407-769-1301
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 149.43
+  Product_SKU: SKU-66999
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-488619935
+  User_Type: Visitor
+  ZIP_Code: 52881
+
+RELATED REQUIREMENTS:
+FR-002

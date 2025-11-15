@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00150
+
+SCENARIO: Add New Product
+VARIANT: V00150
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account james.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Report_Period: Custom
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-354989
+  Order_Quantity: 3
+  Order_Total: 146.91
+  Password: weak
+  Phone: +1-209-551-9455
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 48.97
+  Product_SKU: SKU-60300
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-358420293
+  User_Type: Admin
+  ZIP_Code: 41054
+
+RELATED REQUIREMENTS:
+FR-019

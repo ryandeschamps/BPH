@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00073
+
+SCENARIO: Create New Product Category
+VARIANT: V00073
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account david.jones@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  CMS_Page: Privacy_Policy
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-435227
+  Order_Quantity: 1
+  Order_Total: 216.33
+  Password: weak
+  Phone: +1-591-556-9625
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 216.33
+  Product_SKU: SKU-16616
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-687747780
+  User_Type: Admin
+  ZIP_Code: 59434
+
+RELATED REQUIREMENTS:
+FR-018

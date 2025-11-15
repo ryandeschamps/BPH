@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00339
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00339
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account john.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Quantity: Hundred
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-269968
+  Order_Quantity: 2
+  Order_Total: 546.08
+  Password: weak
+  Phone: +1-746-540-4363
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 273.04
+  Product_SKU: SKU-61426
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-191078197
+  User_Type: Buyer
+  ZIP_Code: 29015
+
+RELATED REQUIREMENTS:
+FR-004

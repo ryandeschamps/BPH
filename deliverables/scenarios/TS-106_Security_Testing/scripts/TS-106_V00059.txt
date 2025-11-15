@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00059
+
+SCENARIO: Export Report to Excel
+VARIANT: V00059
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Security_Type: HTTPS
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-484818
+  Order_Quantity: 5
+  Order_Total: 503.3
+  Password: weak
+  Phone: +1-919-319-8347
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 100.66
+  Product_SKU: SKU-47327
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-778294608
+  User_Type: N/A
+  ZIP_Code: 85608
+
+RELATED REQUIREMENTS:
+FR-022

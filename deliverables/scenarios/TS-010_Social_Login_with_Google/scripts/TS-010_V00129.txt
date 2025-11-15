@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-010_V00129
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00129
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for john.miller@example.com
+
+WHEN:
+- User enters email: john.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-940859
+  Order_Quantity: 4
+  Order_Total: 1054.96
+  Password: Test@123
+  Phone: +1-214-612-3998
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 263.74
+  Product_SKU: SKU-15995
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-629156713
+  User_Type: Visitor
+  ZIP_Code: 75079
+
+RELATED REQUIREMENTS:
+FR-001

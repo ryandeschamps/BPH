@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00433
+
+SCENARIO: Product Browse by Category
+VARIANT: V00433
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account john.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: Has_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-407519
+  Order_Quantity: 5
+  Order_Total: 1090.6
+  Password: weak
+  Phone: +1-953-795-4725
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 218.12
+  Product_SKU: SKU-67759
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-467565955
+  User_Type: Buyer
+  ZIP_Code: 21760
+
+RELATED REQUIREMENTS:
+FR-003

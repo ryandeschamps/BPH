@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00047
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00047
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for sarah.brown@example.com
+
+WHEN:
+- User enters email: sarah.brown@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Wrong_Password
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-444117
+  Order_Quantity: 4
+  Order_Total: 955.56
+  Password: weak
+  Phone: +1-403-723-1266
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 238.89
+  Product_SKU: SKU-95190
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-552955534
+  User_Type: Visitor
+  ZIP_Code: 26636
+
+RELATED REQUIREMENTS:
+FR-001

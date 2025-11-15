@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00173
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00173
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account sarah.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Edit_Field: Variations
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-216559
+  Order_Quantity: 3
+  Order_Total: 556.32
+  Password: weak
+  Phone: +1-335-756-7794
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 185.44
+  Product_SKU: SKU-33999
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-685970418
+  User_Type: Admin
+  ZIP_Code: 43977
+
+RELATED REQUIREMENTS:
+FR-016

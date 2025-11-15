@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00092
+
+SCENARIO: Change Password
+VARIANT: V00092
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account jane.williams@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Order_Status: In_Process
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-897232
+  Order_Quantity: 2
+  Order_Total: 321.84
+  Password: weak
+  Phone: +1-579-867-6733
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Canvas Sneakers
+  Product_Price: 160.92
+  Product_SKU: SKU-53427
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-988942043
+  User_Type: Admin
+  ZIP_Code: 87337
+
+RELATED REQUIREMENTS:
+FR-010

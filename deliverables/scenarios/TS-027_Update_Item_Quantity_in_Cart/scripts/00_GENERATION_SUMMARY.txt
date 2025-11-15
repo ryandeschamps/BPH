@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:12
+Total Scripts: 288
+Total Scenarios: 1
+Generation Time: 0.1 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-027: View Product Images Gallery
+  Variants: 288
+  Files: TS-027_V*.txt

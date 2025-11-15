@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00232
+
+SCENARIO: Product Search with No Results
+VARIANT: V00232
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account sarah.rodriguez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Sort_By: Price_High_Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-581360
+  Order_Quantity: 5
+  Order_Total: 1198.7
+  Password: weak
+  Phone: +1-741-750-7775
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 239.74
+  Product_SKU: SKU-84929
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-761358645
+  User_Type: Buyer
+  ZIP_Code: 39671
+
+RELATED REQUIREMENTS:
+FR-003

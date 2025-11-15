@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00223
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00223
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for david.miller@example.com
+
+WHEN:
+- User enters email: david.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: One
+  Sub_Category_Type: Jeans
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-432178
+  Order_Quantity: 5
+  Order_Total: 167.05
+  Password: weak
+  Phone: +1-619-988-5625
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 33.41
+  Product_SKU: SKU-81941
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-463649129
+  User_Type: Visitor
+  ZIP_Code: 61533
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

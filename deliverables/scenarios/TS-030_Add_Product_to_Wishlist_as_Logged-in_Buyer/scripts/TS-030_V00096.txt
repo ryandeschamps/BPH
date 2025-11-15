@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00096
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00096
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account mary.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Product_State: In_Stock
+  User_Type: Buyer
+  Wishlist_State: Has_Items
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-202871
+  Order_Quantity: 1
+  Order_Total: 278.3
+  Password: weak
+  Phone: +1-512-526-3477
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 278.3
+  Product_SKU: SKU-82245
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-442573912
+  User_Type: Buyer
+  ZIP_Code: 54175
+
+RELATED REQUIREMENTS:
+FR-005

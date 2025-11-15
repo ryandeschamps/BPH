@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-077_V00096
+
+SCENARIO: View All Buyers List
+VARIANT: V00096
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view list of all registered buyers, so that I can manage customers.
+
+GIVEN:
+- Admin is logged in with account michael.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View All Buyers List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Edit_Type: Quantity
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-167500
+  Order_Quantity: 1
+  Order_Total: 147.37
+  Password: weak
+  Phone: +1-793-669-2234
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 147.37
+  Product_SKU: SKU-28216
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-713149988
+  User_Type: Admin
+  ZIP_Code: 97055
+
+RELATED REQUIREMENTS:
+FR-016

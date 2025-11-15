@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00520
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00520
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Card_Type: Visa
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Payment_Status: Timeout
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 08/28
+  Card_Number: 4532-****-****-4080
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-505900
+  Order_Quantity: 5
+  Order_Total: 438.5
+  Password: weak
+  Phone: +1-971-517-2833
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 87.7
+  Product_SKU: SKU-91075
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-146854558
+  User_Type: Buyer
+  ZIP_Code: 42850
+
+RELATED REQUIREMENTS:
+FR-006

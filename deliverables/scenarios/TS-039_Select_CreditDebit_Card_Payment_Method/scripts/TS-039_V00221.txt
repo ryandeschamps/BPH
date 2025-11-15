@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00221
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00221
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account emily.jones@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Card_Type: Amex
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 10/26
+  Card_Number: 4532-****-****-9239
+  Device: Mobile
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-552243
+  Order_Quantity: 1
+  Order_Total: 155.86
+  Password: weak
+  Phone: +1-317-343-8470
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 155.86
+  Product_SKU: SKU-98599
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-499286159
+  User_Type: Buyer
+  ZIP_Code: 87658
+
+RELATED REQUIREMENTS:
+FR-006

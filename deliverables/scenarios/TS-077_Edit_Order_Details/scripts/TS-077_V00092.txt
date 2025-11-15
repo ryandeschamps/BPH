@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-077_V00092
+
+SCENARIO: View All Buyers List
+VARIANT: V00092
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view list of all registered buyers, so that I can manage customers.
+
+GIVEN:
+- Admin is logged in with account mary.martinez@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View All Buyers List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Edit_Type: Quantity
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-931623
+  Order_Quantity: 1
+  Order_Total: 150.52
+  Password: weak
+  Phone: +1-691-234-4807
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 150.52
+  Product_SKU: SKU-85425
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-520854074
+  User_Type: Admin
+  ZIP_Code: 20993
+
+RELATED REQUIREMENTS:
+FR-016

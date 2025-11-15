@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-061_V00019
+
+SCENARIO: Reorder Previous Order Items
+VARIANT: V00019
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to quickly reorder items from a previous order, so that I can repurchase without searching again.
+
+GIVEN:
+- Admin is logged in with account jane.jones@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Reorder Previous Order Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-120874
+  Order_Quantity: 5
+  Order_Total: 242.8
+  Password: Test@123
+  Phone: +1-514-169-2614
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 48.56
+  Product_SKU: SKU-56083
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-415181100
+  User_Type: Admin
+  ZIP_Code: 97649
+
+RELATED REQUIREMENTS:
+FR-012

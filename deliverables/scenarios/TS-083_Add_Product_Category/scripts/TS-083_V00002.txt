@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-083_V00002
+
+SCENARIO: Update Order Status to Confirmed
+VARIANT: V00002
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status from Open to Confirmed, so that I can indicate order acceptance.
+
+GIVEN:
+- Admin is logged in with account james.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Confirmed
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Level: Top_Level
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-712634
+  Order_Quantity: 1
+  Order_Total: 67.05
+  Password: weak
+  Phone: +1-414-735-3980
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 67.05
+  Product_SKU: SKU-58264
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-159506471
+  User_Type: Admin
+  ZIP_Code: 56638
+
+RELATED REQUIREMENTS:
+FR-017

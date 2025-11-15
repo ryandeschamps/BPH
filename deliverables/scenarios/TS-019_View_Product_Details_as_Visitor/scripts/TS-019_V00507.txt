@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00507
+
+SCENARIO: Product Browse by Category
+VARIANT: V00507
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account lisa.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single_Image
+  Network_Speed: Low
+  Product_State: No_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-236100
+  Order_Quantity: 5
+  Order_Total: 1474.1
+  Password: weak
+  Phone: +1-265-261-8639
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 294.82
+  Product_SKU: SKU-72086
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-500339076
+  User_Type: Buyer
+  ZIP_Code: 90465
+
+RELATED REQUIREMENTS:
+FR-003

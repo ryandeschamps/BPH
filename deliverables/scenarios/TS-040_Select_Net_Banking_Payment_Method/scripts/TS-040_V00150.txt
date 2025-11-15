@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-040_V00150
+
+SCENARIO: Add Product to Wishlist as Logged-In Buyer
+VARIANT: V00150
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:19
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my wishlist, so that I can save items for later consideration.
+
+GIVEN:
+- Buyer is logged in with account jane.smith@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Logged-In Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Bank: BofA
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  Payment_Status: Failed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-240166
+  Order_Quantity: 5
+  Order_Total: 505.75
+  Password: weak
+  Phone: +1-386-565-7507
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Wool Sweater
+  Product_Price: 101.15
+  Product_SKU: SKU-90577
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-889976331
+  User_Type: Buyer
+  ZIP_Code: 12396
+
+RELATED REQUIREMENTS:
+FR-006

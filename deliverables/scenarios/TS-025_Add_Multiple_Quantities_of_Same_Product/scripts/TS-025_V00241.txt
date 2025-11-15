@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00241
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00241
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account robert.smith@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Quantity: Ten
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-154633
+  Order_Quantity: 4
+  Order_Total: 974.24
+  Password: weak
+  Phone: +1-755-376-6298
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 243.56
+  Product_SKU: SKU-83904
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-621876110
+  User_Type: Buyer
+  ZIP_Code: 78094
+
+RELATED REQUIREMENTS:
+FR-004

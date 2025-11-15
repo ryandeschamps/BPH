@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00319
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00319
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account robert.rodriguez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Multiple_Items
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-475098
+  Order_Quantity: 2
+  Order_Total: 248.82
+  Password: weak
+  Phone: +1-629-373-1775
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 124.41
+  Product_SKU: SKU-73641
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-765169968
+  User_Type: Buyer
+  ZIP_Code: 55196
+
+RELATED REQUIREMENTS:
+FR-005

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00301
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00301
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Rating_Range: High_Rated
+  Review_Count: Many_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-970871
+  Order_Quantity: 1
+  Order_Total: 199.69
+  Password: weak
+  Phone: +1-579-761-9630
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 199.69
+  Product_SKU: SKU-13116
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-775985965
+  User_Type: Visitor
+  ZIP_Code: 21697
+
+RELATED REQUIREMENTS:
+FR-003

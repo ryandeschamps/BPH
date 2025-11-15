@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00162
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00162
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account emily.davis@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Edit_Field: Variations
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-974019
+  Order_Quantity: 4
+  Order_Total: 152.16
+  Password: weak
+  Phone: +1-936-966-4322
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 38.04
+  Product_SKU: SKU-24429
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-366547203
+  User_Type: Admin
+  ZIP_Code: 82309
+
+RELATED REQUIREMENTS:
+FR-016

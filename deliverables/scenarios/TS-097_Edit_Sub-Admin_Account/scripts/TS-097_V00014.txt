@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00014
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00014
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account james.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Edit_Type: Username
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-676673
+  Order_Quantity: 5
+  Order_Total: 211.55
+  Password: weak
+  Phone: +1-217-442-8928
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 42.31
+  Product_SKU: SKU-27366
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-416224537
+  User_Type: Admin
+  ZIP_Code: 37377
+
+RELATED REQUIREMENTS:
+FR-019

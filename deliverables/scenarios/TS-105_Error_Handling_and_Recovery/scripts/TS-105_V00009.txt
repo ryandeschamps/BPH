@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00009
+
+SCENARIO: Export Report to PDF
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Error_Type: 404
+  Network_Speed: Low
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.martinez@example.com
+  First_Name: Jane
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-471653
+  Order_Quantity: 3
+  Order_Total: 709.62
+  Password: weak
+  Phone: +1-987-952-3486
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 236.54
+  Product_SKU: SKU-24993
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-897755208
+  User_Type: N/A
+  ZIP_Code: 68531
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-009_V00049
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00049
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for michael.johnson@example.com
+
+WHEN:
+- User enters email: michael.johnson@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-668668
+  Order_Quantity: 4
+  Order_Total: 241.36
+  Password: Test@123
+  Phone: +1-224-439-8609
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Canvas Sneakers
+  Product_Price: 60.34
+  Product_SKU: SKU-58876
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-739613793
+  User_Type: Visitor
+  ZIP_Code: 21219
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

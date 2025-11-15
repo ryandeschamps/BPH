@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00307
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00307
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Visitor
+  Variation_Availability: All_Out_Of_Stock
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-275583
+  Order_Quantity: 1
+  Order_Total: 216.29
+  Password: weak
+  Phone: +1-618-216-2781
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 216.29
+  Product_SKU: SKU-72751
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-672689835
+  User_Type: Visitor
+  ZIP_Code: 90284
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-092_V00086
+
+SCENARIO: Activate/Deactivate Product Category
+VARIANT: V00086
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate categories, so that I can control category visibility.
+
+GIVEN:
+- Admin is logged in with account david.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Report_Period: Year
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-622734
+  Order_Quantity: 1
+  Order_Total: 266.12
+  Password: weak
+  Phone: +1-267-127-8801
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 266.12
+  Product_SKU: SKU-20348
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-599448450
+  User_Type: Admin
+  ZIP_Code: 55396
+
+RELATED REQUIREMENTS:
+FR-018

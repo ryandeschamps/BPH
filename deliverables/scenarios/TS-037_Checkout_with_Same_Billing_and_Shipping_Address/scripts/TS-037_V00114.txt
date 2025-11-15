@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00114
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00114
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account robert.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Saved
+  Address_Type: Same_Address
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 09/30
+  Card_Number: 4532-****-****-8177
+  Device: Mobile
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-166166
+  Order_Quantity: 5
+  Order_Total: 727.4
+  Password: weak
+  Phone: +1-338-293-4462
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 145.48
+  Product_SKU: SKU-98508
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-112139240
+  User_Type: Buyer
+  ZIP_Code: 29330
+
+RELATED REQUIREMENTS:
+FR-007

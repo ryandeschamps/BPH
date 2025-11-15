@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-063_V00051
+
+SCENARIO: Post Rating for Purchased Product
+VARIANT: V00051
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to post a rating (1-5 stars), so that I can share my opinion.
+
+GIVEN:
+- Admin is logged in with account john.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Post Rating for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Reset_State: Expired
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-978364
+  Order_Quantity: 3
+  Order_Total: 625.71
+  Password: weak
+  Phone: +1-711-278-2596
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 208.57
+  Product_SKU: SKU-15059
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-967574950
+  User_Type: Admin
+  ZIP_Code: 16330
+
+RELATED REQUIREMENTS:
+FR-011

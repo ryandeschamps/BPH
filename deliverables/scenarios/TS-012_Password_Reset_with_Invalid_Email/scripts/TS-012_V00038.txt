@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-012_V00038
+
+SCENARIO: First-Time Social Login Account Creation
+VARIANT: V00038
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a visitor using social login for the first time, I want the system to auto-create my account, so that I don't need to fill registration forms.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for robert.miller@example.com
+
+WHEN:
+- User enters email: robert.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Email_State: Invalid_Format
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-846009
+  Order_Quantity: 2
+  Order_Total: 306.48
+  Password: weak
+  Phone: +1-746-165-5700
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 153.24
+  Product_SKU: SKU-13954
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-990047137
+  User_Type: Visitor
+  ZIP_Code: 31687
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

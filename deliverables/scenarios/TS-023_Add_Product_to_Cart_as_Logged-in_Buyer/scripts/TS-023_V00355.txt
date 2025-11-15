@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00355
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00355
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account sarah.jones@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: High
+  Product_Variation: Color_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-413217
+  Order_Quantity: 5
+  Order_Total: 569.45
+  Password: weak
+  Phone: +1-906-965-1255
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 113.89
+  Product_SKU: SKU-19591
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-133776439
+  User_Type: Buyer
+  ZIP_Code: 49190
+
+RELATED REQUIREMENTS:
+FR-003

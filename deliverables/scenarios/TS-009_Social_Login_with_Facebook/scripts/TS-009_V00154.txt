@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00154
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00154
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for david.williams@example.com
+
+WHEN:
+- User enters email: david.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Firefox
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-430606
+  Order_Quantity: 3
+  Order_Total: 210.87
+  Password: weak
+  Phone: +1-756-873-9163
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 70.29
+  Product_SKU: SKU-42252
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-340353782
+  User_Type: Visitor
+  ZIP_Code: 44404
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

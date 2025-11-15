@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00110
+
+SCENARIO: Add New Product
+VARIANT: V00110
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account david.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Report_Period: Year
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.garcia@example.com
+  First_Name: David
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-693435
+  Order_Quantity: 2
+  Order_Total: 110.88
+  Password: weak
+  Phone: +1-710-894-6578
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 55.44
+  Product_SKU: SKU-34208
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-164517654
+  User_Type: Admin
+  ZIP_Code: 72589
+
+RELATED REQUIREMENTS:
+FR-019

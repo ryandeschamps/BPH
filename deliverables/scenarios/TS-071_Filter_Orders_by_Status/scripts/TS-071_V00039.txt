@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00039
+
+SCENARIO: Change Password
+VARIANT: V00039
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account michael.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Order_Status: Confirmed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-987157
+  Order_Quantity: 2
+  Order_Total: 166.12
+  Password: weak
+  Phone: +1-903-706-9618
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 83.06
+  Product_SKU: SKU-14616
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-678333482
+  User_Type: Admin
+  ZIP_Code: 70466
+
+RELATED REQUIREMENTS:
+FR-010

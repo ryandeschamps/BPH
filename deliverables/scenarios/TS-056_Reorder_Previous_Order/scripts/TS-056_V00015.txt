@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-056_V00015
+
+SCENARIO: Checkout Without Login
+VARIANT: V00015
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a guest user, I want to be required to login before checkout, so that the system can track my order.
+
+GIVEN:
+- Buyer is logged in with account lisa.johnson@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for lisa.johnson@example.com
+
+WHEN:
+- User enters email: lisa.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Reorder_Items: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-657408
+  Order_Quantity: 5
+  Order_Total: 1449.3
+  Password: weak
+  Phone: +1-355-768-6832
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 289.86
+  Product_SKU: SKU-62404
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-978016618
+  User_Type: Buyer
+  ZIP_Code: 28402
+
+RELATED REQUIREMENTS:
+FR-008

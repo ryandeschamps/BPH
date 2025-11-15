@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00423
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00423
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account david.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Safari
+  Cart_Items: Multiple
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.garcia@example.com
+  First_Name: David
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-296394
+  Order_Quantity: 1
+  Order_Total: 281.96
+  Password: Test@123
+  Phone: +1-477-351-8850
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 281.96
+  Product_SKU: SKU-82019
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-458626228
+  User_Type: Buyer
+  ZIP_Code: 27830
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00026
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00026
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Medium
+  PIN_Code_State: Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-963209
+  Order_Quantity: 2
+  Order_Total: 578.44
+  Password: Test@123
+  Phone: +1-214-765-2498
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 289.22
+  Product_SKU: SKU-78654
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-360180880
+  User_Type: Visitor
+  ZIP_Code: 69648
+
+RELATED REQUIREMENTS:
+FR-003

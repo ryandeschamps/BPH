@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00075
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00075
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.jones@example.com
+
+WHEN:
+- User enters email: emily.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Credential_Error: Both_Wrong
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-775048
+  Order_Quantity: 4
+  Order_Total: 959.68
+  Password: weak
+  Phone: +1-643-526-9264
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 239.92
+  Product_SKU: SKU-35964
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-536431172
+  User_Type: Visitor
+  ZIP_Code: 73175
+
+RELATED REQUIREMENTS:
+FR-001

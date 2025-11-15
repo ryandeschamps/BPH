@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00067
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00067
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account john.brown@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: High
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-710887
+  Order_Quantity: 2
+  Order_Total: 148.58
+  Password: weak
+  Phone: +1-299-300-2213
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 74.29
+  Product_SKU: SKU-50465
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-453052148
+  User_Type: Buyer
+  ZIP_Code: 91834
+
+RELATED REQUIREMENTS:
+FR-007

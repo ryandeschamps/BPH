@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00313
+
+SCENARIO: Product Browse by Category
+VARIANT: V00313
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-802220
+  Order_Quantity: 3
+  Order_Total: 833.67
+  Password: weak
+  Phone: +1-920-673-6792
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 277.89
+  Product_SKU: SKU-27766
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-608662593
+  User_Type: Visitor
+  ZIP_Code: 80906
+
+RELATED REQUIREMENTS:
+FR-003

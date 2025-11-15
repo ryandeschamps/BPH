@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00079
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00079
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account robert.davis@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Items_Removed
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-952238
+  Order_Quantity: 2
+  Order_Total: 126.24
+  Password: weak
+  Phone: +1-440-584-1789
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 63.12
+  Product_SKU: SKU-64712
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-809007779
+  User_Type: Buyer
+  ZIP_Code: 12604
+
+RELATED REQUIREMENTS:
+FR-005

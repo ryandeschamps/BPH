@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00076
+
+SCENARIO: Export Report to Excel
+VARIANT: V00076
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Security_Type: Encrypted_Data
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-561618
+  Order_Quantity: 4
+  Order_Total: 1191.24
+  Password: weak
+  Phone: +1-466-865-4205
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 297.81
+  Product_SKU: SKU-10336
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-223267890
+  User_Type: N/A
+  ZIP_Code: 61961
+
+RELATED REQUIREMENTS:
+FR-022

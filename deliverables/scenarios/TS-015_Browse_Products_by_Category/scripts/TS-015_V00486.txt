@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00486
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00486
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.miller@example.com
+
+WHEN:
+- User enters email: emily.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Men
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: Few
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-956395
+  Order_Quantity: 5
+  Order_Total: 734.25
+  Password: weak
+  Phone: +1-755-534-3707
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 146.85
+  Product_SKU: SKU-22871
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-859741161
+  User_Type: Buyer
+  ZIP_Code: 78403
+
+RELATED REQUIREMENTS:
+FR-014

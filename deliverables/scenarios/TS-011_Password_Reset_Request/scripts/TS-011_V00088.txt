@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00088
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00088
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account john.miller@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for john.miller@example.com
+
+WHEN:
+- User enters email: john.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Email_State: Registered
+  Input_Validity: Valid
+  Network_Speed: High
+  Reset_Link_State: Already_Used
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-600667
+  Order_Quantity: 2
+  Order_Total: 429.16
+  Password: Test@123
+  Phone: +1-884-678-3678
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 214.58
+  Product_SKU: SKU-91710
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-857312231
+  User_Type: Buyer
+  ZIP_Code: 16085
+
+RELATED REQUIREMENTS:
+FR-001

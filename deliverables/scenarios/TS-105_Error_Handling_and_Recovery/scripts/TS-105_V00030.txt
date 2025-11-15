@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00030
+
+SCENARIO: Export Report to PDF
+VARIANT: V00030
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Error_Type: 404
+  Network_Speed: Low
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-856605
+  Order_Quantity: 4
+  Order_Total: 262.4
+  Password: weak
+  Phone: +1-903-687-2579
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 65.6
+  Product_SKU: SKU-41235
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-551144161
+  User_Type: N/A
+  ZIP_Code: 75167
+
+RELATED REQUIREMENTS:
+FR-022

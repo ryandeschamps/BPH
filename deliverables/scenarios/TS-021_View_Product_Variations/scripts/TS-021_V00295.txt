@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00295
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00295
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Visitor
+  Variation_Availability: All_Out_Of_Stock
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-135535
+  Order_Quantity: 4
+  Order_Total: 633.68
+  Password: weak
+  Phone: +1-423-672-1670
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 158.42
+  Product_SKU: SKU-85306
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-336425346
+  User_Type: Visitor
+  ZIP_Code: 85922
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00149
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00149
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account james.smith@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Empty
+  Device: Mobile
+  Network_Speed: Medium
+  Product_State: Price_Changed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-747771
+  Order_Quantity: 3
+  Order_Total: 80.37
+  Password: weak
+  Phone: +1-857-998-6498
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 26.79
+  Product_SKU: SKU-94469
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-745131643
+  User_Type: Buyer
+  ZIP_Code: 83164
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

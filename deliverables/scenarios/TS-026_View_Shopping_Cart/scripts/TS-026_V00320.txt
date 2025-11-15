@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00320
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00320
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account robert.brown@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Multiple_Items
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-401489
+  Order_Quantity: 3
+  Order_Total: 151.89
+  Password: weak
+  Phone: +1-508-633-5461
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 50.63
+  Product_SKU: SKU-74357
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-573526530
+  User_Type: Buyer
+  ZIP_Code: 97805
+
+RELATED REQUIREMENTS:
+FR-005

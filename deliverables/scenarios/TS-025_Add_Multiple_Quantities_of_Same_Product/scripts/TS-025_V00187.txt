@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00187
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00187
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account david.williams@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Quantity: Five
+  Stock_Level: Exact_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-626138
+  Order_Quantity: 5
+  Order_Total: 1350.2
+  Password: weak
+  Phone: +1-789-900-1037
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 270.04
+  Product_SKU: SKU-61336
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-499304492
+  User_Type: Buyer
+  ZIP_Code: 85982
+
+RELATED REQUIREMENTS:
+FR-004

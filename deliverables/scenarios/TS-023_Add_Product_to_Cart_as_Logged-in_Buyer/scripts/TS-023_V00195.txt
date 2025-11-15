@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00195
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00195
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account robert.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: Low
+  Product_Variation: Size_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-998107
+  Order_Quantity: 1
+  Order_Total: 56.62
+  Password: weak
+  Phone: +1-724-780-8114
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 56.62
+  Product_SKU: SKU-84993
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-161971141
+  User_Type: Buyer
+  ZIP_Code: 99092
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00074
+
+SCENARIO: Edit Product Details
+VARIANT: V00074
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account lisa.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Role_Type: Customer_Support
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.brown@example.com
+  First_Name: Lisa
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-641855
+  Order_Quantity: 1
+  Order_Total: 77.44
+  Password: weak
+  Phone: +1-463-880-9827
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 77.44
+  Product_SKU: SKU-74652
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-347802971
+  User_Type: Admin
+  ZIP_Code: 47051
+
+RELATED REQUIREMENTS:
+FR-019

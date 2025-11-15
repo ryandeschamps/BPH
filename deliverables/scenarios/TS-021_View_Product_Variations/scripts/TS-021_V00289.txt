@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00289
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00289
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Visitor
+  Variation_Availability: All_Out_Of_Stock
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-519502
+  Order_Quantity: 3
+  Order_Total: 677.25
+  Password: weak
+  Phone: +1-731-747-2118
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 225.75
+  Product_SKU: SKU-23631
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-556078900
+  User_Type: Visitor
+  ZIP_Code: 28446
+
+RELATED REQUIREMENTS:
+FR-003

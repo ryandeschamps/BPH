@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00021
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00021
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Redirect_Action: Login
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-557288
+  Order_Quantity: 1
+  Order_Total: 102.73
+  Password: weak
+  Phone: +1-347-436-3165
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 102.73
+  Product_SKU: SKU-91689
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-257962589
+  User_Type: Visitor
+  ZIP_Code: 90567
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

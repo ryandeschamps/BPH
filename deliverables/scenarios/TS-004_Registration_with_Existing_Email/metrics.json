@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-004",
+  "scenario_title": "Registration with Existing Email",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Input_Validity": 1,
+    "Email_State": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-004_Registration_with_Existing_Email/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

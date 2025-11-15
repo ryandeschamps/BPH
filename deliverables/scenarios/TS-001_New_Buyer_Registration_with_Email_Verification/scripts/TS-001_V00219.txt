@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00219
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00219
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: lisa.johnson@example.com
+- User enters phone: +1-861-953-5351
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Contact
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for lisa.johnson@example.com
+- Verification email sent to lisa.johnson@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Field_Values: Invalid_Contact
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-706794
+  Order_Quantity: 4
+  Order_Total: 939.76
+  Password: Test@123
+  Phone: +1-861-953-5351
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 234.94
+  Product_SKU: SKU-60239
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-706178981
+  User_Type: Visitor
+  ZIP_Code: 62360
+
+RELATED REQUIREMENTS:
+FR-002

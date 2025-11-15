@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-081",
+  "scenario_title": "Deactivate Product",
+  "variant_count": 36,
+  "expected_variant_count": 36,
+  "parameters": {
+    "User_Type": 1,
+    "Product_Status": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-081_Deactivate_Product/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00330
+
+SCENARIO: Forgot Password Request
+VARIANT: V00330
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Many_Results
+  Search_Query: Exact_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-446119
+  Order_Quantity: 2
+  Order_Total: 112.58
+  Password: Test@123
+  Phone: +1-867-157-5476
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 56.29
+  Product_SKU: SKU-40144
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-490471487
+  User_Type: Visitor
+  ZIP_Code: 31288
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00222
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00222
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Load_Time: Fast
+  Network_Speed: Low
+  Page_Type: Product_Detail
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-384645
+  Order_Quantity: 5
+  Order_Total: 1030.25
+  Password: weak
+  Phone: +1-865-711-2998
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 206.05
+  Product_SKU: SKU-99536
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-837675187
+  User_Type: N/A
+  ZIP_Code: 32584
+
+RELATED REQUIREMENTS:
+FR-022

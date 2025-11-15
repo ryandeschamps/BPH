@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00278
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00278
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Rating_Range: Mixed_Ratings
+  Review_Count: Few_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-239020
+  Order_Quantity: 3
+  Order_Total: 192.06
+  Password: weak
+  Phone: +1-313-760-8643
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 64.02
+  Product_SKU: SKU-35592
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-890394973
+  User_Type: Visitor
+  ZIP_Code: 53097
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00403
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00403
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account michael.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Filter_Type: Color
+  Filter_Value: Multiple_Values
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-259067
+  Order_Quantity: 1
+  Order_Total: 90.59
+  Password: weak
+  Phone: +1-533-415-7169
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 90.59
+  Product_SKU: SKU-30608
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-329068166
+  User_Type: Buyer
+  ZIP_Code: 23254
+
+RELATED REQUIREMENTS:
+FR-003

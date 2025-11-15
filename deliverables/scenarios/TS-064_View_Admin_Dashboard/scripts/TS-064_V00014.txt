@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-064_V00014
+
+SCENARIO: Write Review for Purchased Product
+VARIANT: V00014
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to write a detailed review, so that I can help other buyers.
+
+GIVEN:
+- Admin is logged in with account robert.martinez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Write Review for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-595456
+  Order_Quantity: 5
+  Order_Total: 575.6
+  Password: weak
+  Phone: +1-724-996-8680
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 115.12
+  Product_SKU: SKU-59751
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-607122487
+  User_Type: Admin
+  ZIP_Code: 72504
+
+RELATED REQUIREMENTS:
+FR-011

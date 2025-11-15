@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00405
+
+SCENARIO: Forgot Password Request
+VARIANT: V00405
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: One_Result
+  Search_Query: Exact_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-846996
+  Order_Quantity: 3
+  Order_Total: 63.84
+  Password: Test@123
+  Phone: +1-705-330-1463
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 21.28
+  Product_SKU: SKU-43893
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-254628724
+  User_Type: Visitor
+  ZIP_Code: 97764
+
+RELATED REQUIREMENTS:
+FR-001

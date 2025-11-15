@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00340
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00340
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account robert.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Card_Type: Discover
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 12/26
+  Card_Number: 4532-****-****-6543
+  Device: Tablet
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-910172
+  Order_Quantity: 4
+  Order_Total: 328.96
+  Password: weak
+  Phone: +1-869-779-8632
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 82.24
+  Product_SKU: SKU-70867
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-363332609
+  User_Type: Buyer
+  ZIP_Code: 20637
+
+RELATED REQUIREMENTS:
+FR-006

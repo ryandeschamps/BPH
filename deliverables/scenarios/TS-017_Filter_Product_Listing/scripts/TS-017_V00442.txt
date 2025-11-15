@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00442
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00442
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account michael.garcia@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Filter_Type: Price_Range
+  Filter_Value: Single_Value
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-842656
+  Order_Quantity: 4
+  Order_Total: 804.48
+  Password: weak
+  Phone: +1-625-597-7333
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 201.12
+  Product_SKU: SKU-58420
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-627474418
+  User_Type: Buyer
+  ZIP_Code: 55894
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00222
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00222
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for david.jones@example.com
+
+WHEN:
+- User enters email: david.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: Already_Linked
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-160582
+  Order_Quantity: 4
+  Order_Total: 361.04
+  Password: weak
+  Phone: +1-626-990-1277
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 90.26
+  Product_SKU: SKU-39888
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-635846659
+  User_Type: Visitor
+  ZIP_Code: 74736
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00006
+
+SCENARIO: View Wishlist Items
+VARIANT: V00006
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account john.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Email_Delivery: Delivered
+  Network_Speed: Low
+  Order_Size: Single_Item
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 10/25
+  Card_Number: 4532-****-****-4512
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-848252
+  Order_Quantity: 4
+  Order_Total: 615.08
+  Password: weak
+  Phone: +1-596-384-9468
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 153.77
+  Product_SKU: SKU-55426
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-376786196
+  User_Type: Buyer
+  ZIP_Code: 12976
+
+RELATED REQUIREMENTS:
+FR-006

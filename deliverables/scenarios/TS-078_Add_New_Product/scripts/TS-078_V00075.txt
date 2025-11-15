@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00075
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00075
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account jane.johnson@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single
+  Network_Speed: Low
+  Product_Type: With_Variations
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-884863
+  Order_Quantity: 1
+  Order_Total: 211.94
+  Password: weak
+  Phone: +1-900-332-2857
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Wool Sweater
+  Product_Price: 211.94
+  Product_SKU: SKU-12262
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-106178158
+  User_Type: Admin
+  ZIP_Code: 80726
+
+RELATED REQUIREMENTS:
+FR-016

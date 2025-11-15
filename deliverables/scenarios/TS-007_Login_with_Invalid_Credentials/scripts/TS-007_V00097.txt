@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00097
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00097
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for david.williams@example.com
+
+WHEN:
+- User enters email: david.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Both_Wrong
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-411207
+  Order_Quantity: 2
+  Order_Total: 314.1
+  Password: weak
+  Phone: +1-762-997-8320
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 157.05
+  Product_SKU: SKU-26594
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-901273995
+  User_Type: Visitor
+  ZIP_Code: 67321
+
+RELATED REQUIREMENTS:
+FR-001

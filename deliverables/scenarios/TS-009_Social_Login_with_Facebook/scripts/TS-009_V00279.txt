@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00279
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00279
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.johnson@example.com
+
+WHEN:
+- User enters email: emily.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-756881
+  Order_Quantity: 4
+  Order_Total: 723.16
+  Password: weak
+  Phone: +1-550-383-4671
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 180.79
+  Product_SKU: SKU-48219
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-765365215
+  User_Type: Visitor
+  ZIP_Code: 49840
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

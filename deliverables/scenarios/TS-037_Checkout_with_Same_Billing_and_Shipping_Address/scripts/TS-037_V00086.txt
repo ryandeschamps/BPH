@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00086
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00086
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account emily.johnson@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-817050
+  Order_Quantity: 4
+  Order_Total: 871.24
+  Password: weak
+  Phone: +1-201-884-6724
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 217.81
+  Product_SKU: SKU-66920
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-888155640
+  User_Type: Buyer
+  ZIP_Code: 83090
+
+RELATED REQUIREMENTS:
+FR-007

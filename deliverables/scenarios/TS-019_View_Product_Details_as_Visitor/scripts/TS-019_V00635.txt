@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00635
+
+SCENARIO: Product Browse by Category
+VARIANT: V00635
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account mary.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Image_Count: Multiple_Images
+  Network_Speed: Medium
+  Product_State: Has_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-679454
+  Order_Quantity: 5
+  Order_Total: 351.7
+  Password: weak
+  Phone: +1-490-881-1234
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 70.34
+  Product_SKU: SKU-21776
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-731840612
+  User_Type: Buyer
+  ZIP_Code: 47951
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00578
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00578
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Buyer
+  Variation_Availability: Some_Out_Of_Stock
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-598121
+  Order_Quantity: 3
+  Order_Total: 549.27
+  Password: weak
+  Phone: +1-678-379-3959
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 183.09
+  Product_SKU: SKU-74276
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-306817421
+  User_Type: Buyer
+  ZIP_Code: 85107
+
+RELATED REQUIREMENTS:
+FR-003

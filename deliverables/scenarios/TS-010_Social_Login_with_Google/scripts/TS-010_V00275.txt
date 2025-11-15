@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00275
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00275
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for michael.miller@example.com
+
+WHEN:
+- User enters email: michael.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-973422
+  Order_Quantity: 1
+  Order_Total: 282.83
+  Password: weak
+  Phone: +1-205-403-3904
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 282.83
+  Product_SKU: SKU-41828
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-378011513
+  User_Type: Visitor
+  ZIP_Code: 90172
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00154
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00154
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for jane.smith@example.com
+
+WHEN:
+- User enters email: jane.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Firefox
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-809354
+  Order_Quantity: 5
+  Order_Total: 1060.45
+  Password: weak
+  Phone: +1-932-293-9083
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 212.09
+  Product_SKU: SKU-14746
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-919113766
+  User_Type: Visitor
+  ZIP_Code: 24159
+
+RELATED REQUIREMENTS:
+FR-001

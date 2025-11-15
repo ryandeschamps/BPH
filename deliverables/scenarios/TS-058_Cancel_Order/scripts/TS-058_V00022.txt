@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-058_V00022
+
+SCENARIO: View Order Details
+VARIANT: V00022
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to view detailed information about a specific order, so that I can review what I purchased.
+
+GIVEN:
+- Buyer is logged in with account robert.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-469194
+  Order_Quantity: 2
+  Order_Total: 176.86
+  Password: weak
+  Phone: +1-802-764-5253
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 88.43
+  Product_SKU: SKU-79687
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-372015380
+  User_Type: Buyer
+  ZIP_Code: 81173
+
+RELATED REQUIREMENTS:
+FR-012

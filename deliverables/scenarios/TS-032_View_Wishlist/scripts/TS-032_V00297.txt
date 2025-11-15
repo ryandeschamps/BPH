@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00297
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00297
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account mary.smith@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Item_Availability: Price_Changed
+  Network_Speed: Low
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.smith@example.com
+  First_Name: Mary
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-795561
+  Order_Quantity: 4
+  Order_Total: 132.32
+  Password: weak
+  Phone: +1-666-701-2930
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 33.08
+  Product_SKU: SKU-69689
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-417763309
+  User_Type: Buyer
+  ZIP_Code: 76870
+
+RELATED REQUIREMENTS:
+FR-007

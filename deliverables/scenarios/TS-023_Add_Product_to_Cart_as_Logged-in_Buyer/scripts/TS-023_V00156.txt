@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00156
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00156
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account john.johnson@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Empty
+  Device: Desktop
+  Network_Speed: Low
+  Product_Variation: Size_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-939354
+  Order_Quantity: 2
+  Order_Total: 72.66
+  Password: weak
+  Phone: +1-263-907-6572
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 36.33
+  Product_SKU: SKU-20289
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-723348836
+  User_Type: Buyer
+  ZIP_Code: 14962
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-010_V00126
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00126
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.brown@example.com
+
+WHEN:
+- User enters email: mary.brown@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.brown@example.com
+  First_Name: Mary
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-464164
+  Order_Quantity: 5
+  Order_Total: 939.5
+  Password: Test@123
+  Phone: +1-394-412-4866
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 187.9
+  Product_SKU: SKU-42236
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-591537902
+  User_Type: Visitor
+  ZIP_Code: 55880
+
+RELATED REQUIREMENTS:
+FR-001

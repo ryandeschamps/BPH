@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00062
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00062
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: michael.williams@example.com
+- User enters phone: +1-227-836-6200
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Email_State: Inactive_Account
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.williams@example.com
+  First_Name: Michael
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-915237
+  Order_Quantity: 2
+  Order_Total: 527.12
+  Password: weak
+  Phone: +1-227-836-6200
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 263.56
+  Product_SKU: SKU-82391
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-226304236
+  User_Type: Visitor
+  ZIP_Code: 84834
+
+RELATED REQUIREMENTS:
+FR-002

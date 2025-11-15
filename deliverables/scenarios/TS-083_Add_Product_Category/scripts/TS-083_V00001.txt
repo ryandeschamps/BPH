@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-083_V00001
+
+SCENARIO: Update Order Status to Confirmed
+VARIANT: V00001
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status from Open to Confirmed, so that I can indicate order acceptance.
+
+GIVEN:
+- Admin is logged in with account emily.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Confirmed
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Level: Top_Level
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-660284
+  Order_Quantity: 1
+  Order_Total: 91.87
+  Password: weak
+  Phone: +1-874-409-1251
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 91.87
+  Product_SKU: SKU-37297
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-128867453
+  User_Type: Admin
+  ZIP_Code: 39936
+
+RELATED REQUIREMENTS:
+FR-017

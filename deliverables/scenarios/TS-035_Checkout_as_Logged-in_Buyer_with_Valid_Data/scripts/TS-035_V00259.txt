@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00259
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00259
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account robert.brown@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Chrome
+  Cart_Items: Multiple
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 02/28
+  Card_Number: 4532-****-****-5244
+  Device: Tablet
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-626034
+  Order_Quantity: 3
+  Order_Total: 806.46
+  Password: Test@123
+  Phone: +1-537-853-1260
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 268.82
+  Product_SKU: SKU-56543
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-705573656
+  User_Type: Buyer
+  ZIP_Code: 54904
+
+RELATED REQUIREMENTS:
+FR-007

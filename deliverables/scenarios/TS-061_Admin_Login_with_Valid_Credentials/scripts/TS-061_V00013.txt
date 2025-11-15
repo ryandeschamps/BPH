@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-061_V00013
+
+SCENARIO: Reorder Previous Order Items
+VARIANT: V00013
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to quickly reorder items from a previous order, so that I can repurchase without searching again.
+
+GIVEN:
+- Admin is logged in with account david.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Reorder Previous Order Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-821766
+  Order_Quantity: 1
+  Order_Total: 161.07
+  Password: Test@123
+  Phone: +1-226-131-4678
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 161.07
+  Product_SKU: SKU-67126
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-798949875
+  User_Type: Admin
+  ZIP_Code: 80943
+
+RELATED REQUIREMENTS:
+FR-012

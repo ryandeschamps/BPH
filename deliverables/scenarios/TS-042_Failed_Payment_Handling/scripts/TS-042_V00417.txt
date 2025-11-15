@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00417
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00417
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Failure_Reason: Timeout
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 11/30
+  Card_Number: 4532-****-****-1236
+  Device: Desktop
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-401078
+  Order_Quantity: 4
+  Order_Total: 698.16
+  Password: weak
+  Phone: +1-551-340-8770
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 174.54
+  Product_SKU: SKU-30007
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-979089789
+  User_Type: Buyer
+  ZIP_Code: 11111
+
+RELATED REQUIREMENTS:
+FR-006

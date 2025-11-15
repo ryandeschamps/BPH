@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00510
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00510
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account david.brown@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Rating_Range: Low_Rated
+  Review_Count: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-656235
+  Order_Quantity: 3
+  Order_Total: 577.47
+  Password: weak
+  Phone: +1-989-136-4093
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Wool Sweater
+  Product_Price: 192.49
+  Product_SKU: SKU-27475
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-398548305
+  User_Type: Buyer
+  ZIP_Code: 24672
+
+RELATED REQUIREMENTS:
+FR-003

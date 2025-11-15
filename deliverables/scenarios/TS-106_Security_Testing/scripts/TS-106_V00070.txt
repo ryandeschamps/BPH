@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00070
+
+SCENARIO: Export Report to Excel
+VARIANT: V00070
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: High
+  Security_Type: HTTPS
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.martinez@example.com
+  First_Name: Jane
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-289270
+  Order_Quantity: 3
+  Order_Total: 169.17
+  Password: weak
+  Phone: +1-554-943-8876
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 56.39
+  Product_SKU: SKU-36039
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-867549243
+  User_Type: N/A
+  ZIP_Code: 35721
+
+RELATED REQUIREMENTS:
+FR-022

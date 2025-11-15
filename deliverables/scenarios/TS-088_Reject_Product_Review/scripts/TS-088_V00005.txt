@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-088_V00005
+
+SCENARIO: Edit Order Details
+VARIANT: V00005
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to edit order information if needed, so that I can correct errors.
+
+GIVEN:
+- Admin is logged in with account john.rodriguez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Action: Reject
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-656927
+  Order_Quantity: 3
+  Order_Total: 614.13
+  Password: weak
+  Phone: +1-514-135-2437
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 204.71
+  Product_SKU: SKU-97628
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-173478925
+  User_Type: Admin
+  ZIP_Code: 74515
+
+RELATED REQUIREMENTS:
+FR-017

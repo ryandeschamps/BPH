@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00024
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00024
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Account_State: Active_Verified
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-183963
+  Order_Quantity: 1
+  Order_Total: 206.96
+  Password: Test@123
+  Phone: +1-863-685-7515
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 206.96
+  Product_SKU: SKU-27351
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-751369502
+  User_Type: Buyer
+  ZIP_Code: 33352
+
+RELATED REQUIREMENTS:
+FR-002

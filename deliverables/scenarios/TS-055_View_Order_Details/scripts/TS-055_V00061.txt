@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00061
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00061
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account jane.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Order_Status: Confirmed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-540040
+  Order_Quantity: 2
+  Order_Total: 442.76
+  Password: weak
+  Phone: +1-436-815-4011
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 221.38
+  Product_SKU: SKU-39066
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-821530813
+  User_Type: Buyer
+  ZIP_Code: 91729
+
+RELATED REQUIREMENTS:
+FR-008

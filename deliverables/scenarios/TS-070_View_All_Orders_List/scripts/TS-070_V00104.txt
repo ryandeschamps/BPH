@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-070_V00104
+
+SCENARIO: Edit Profile Details
+VARIANT: V00104
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to edit my email and phone number, so that I can keep my information current.
+
+GIVEN:
+- Admin is logged in with account john.garcia@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Profile Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Order_Filter: By_Date
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-187663
+  Order_Quantity: 4
+  Order_Total: 872.56
+  Password: weak
+  Phone: +1-373-476-9435
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 218.14
+  Product_SKU: SKU-28095
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-424731512
+  User_Type: Admin
+  ZIP_Code: 58359
+
+RELATED REQUIREMENTS:
+FR-010

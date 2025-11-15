@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00032
+
+SCENARIO: Add New Product
+VARIANT: V00032
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account john.williams@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Report_Period: Today
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-233215
+  Order_Quantity: 3
+  Order_Total: 222.39
+  Password: weak
+  Phone: +1-288-349-2453
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 74.13
+  Product_SKU: SKU-67962
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-249438244
+  User_Type: Admin
+  ZIP_Code: 23490
+
+RELATED REQUIREMENTS:
+FR-019

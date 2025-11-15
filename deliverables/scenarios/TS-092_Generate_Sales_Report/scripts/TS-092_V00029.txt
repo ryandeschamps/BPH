@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-092_V00029
+
+SCENARIO: Activate/Deactivate Product Category
+VARIANT: V00029
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate categories, so that I can control category visibility.
+
+GIVEN:
+- Admin is logged in with account michael.miller@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Medium
+  Report_Period: Date_Range
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-674927
+  Order_Quantity: 1
+  Order_Total: 213.35
+  Password: weak
+  Phone: +1-908-636-2641
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 213.35
+  Product_SKU: SKU-51576
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-777562886
+  User_Type: Admin
+  ZIP_Code: 29631
+
+RELATED REQUIREMENTS:
+FR-018

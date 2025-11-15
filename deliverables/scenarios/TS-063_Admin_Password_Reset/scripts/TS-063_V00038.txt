@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-063_V00038
+
+SCENARIO: Post Rating for Purchased Product
+VARIANT: V00038
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to post a rating (1-5 stars), so that I can share my opinion.
+
+GIVEN:
+- Admin is logged in with account sarah.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Post Rating for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Reset_State: Expired
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-914575
+  Order_Quantity: 4
+  Order_Total: 166.8
+  Password: weak
+  Phone: +1-623-493-5688
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 41.7
+  Product_SKU: SKU-16415
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-358119086
+  User_Type: Admin
+  ZIP_Code: 45227
+
+RELATED REQUIREMENTS:
+FR-011

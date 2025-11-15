@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00033
+
+SCENARIO: Reject Product Review
+VARIANT: V00033
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account james.smith@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Bank_Field: Account_Number
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-780575
+  Order_Quantity: 2
+  Order_Total: 482.88
+  Password: weak
+  Phone: +1-552-578-8990
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 241.44
+  Product_SKU: SKU-96600
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-743166039
+  User_Type: Admin
+  ZIP_Code: 93528
+
+RELATED REQUIREMENTS:
+FR-021

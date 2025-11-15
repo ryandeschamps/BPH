@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-081_V00003
+
+SCENARIO: View All Orders List
+VARIANT: V00003
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to view list of all orders with current status, so that I can manage order fulfillment.
+
+GIVEN:
+- Admin is logged in with account robert.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View All Orders List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Product_Status: Inactive
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-785901
+  Order_Quantity: 3
+  Order_Total: 128.34
+  Password: weak
+  Phone: +1-332-884-3268
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 42.78
+  Product_SKU: SKU-20711
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-881106629
+  User_Type: Admin
+  ZIP_Code: 77574
+
+RELATED REQUIREMENTS:
+FR-017

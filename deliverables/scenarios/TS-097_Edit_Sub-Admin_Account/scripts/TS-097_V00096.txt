@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00096
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00096
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account michael.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Edit_Type: Role
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-192254
+  Order_Quantity: 2
+  Order_Total: 471.04
+  Password: weak
+  Phone: +1-581-650-8784
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 235.52
+  Product_SKU: SKU-41290
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-963466205
+  User_Type: Admin
+  ZIP_Code: 22814
+
+RELATED REQUIREMENTS:
+FR-019

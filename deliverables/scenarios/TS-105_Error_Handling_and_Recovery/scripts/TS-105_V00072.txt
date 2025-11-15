@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00072
+
+SCENARIO: Export Report to PDF
+VARIANT: V00072
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Error_Type: 500
+  Network_Speed: Low
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-396393
+  Order_Quantity: 5
+  Order_Total: 327.05
+  Password: weak
+  Phone: +1-925-279-4502
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 65.41
+  Product_SKU: SKU-47054
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-781643722
+  User_Type: N/A
+  ZIP_Code: 14084
+
+RELATED REQUIREMENTS:
+FR-022

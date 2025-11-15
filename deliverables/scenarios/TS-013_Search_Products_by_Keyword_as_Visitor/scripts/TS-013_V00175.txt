@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00175
+
+SCENARIO: Forgot Password Request
+VARIANT: V00175
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: Few_Results
+  Search_Query: Multiple_Keywords
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-753036
+  Order_Quantity: 1
+  Order_Total: 136.94
+  Password: Test@123
+  Phone: +1-339-900-5718
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 136.94
+  Product_SKU: SKU-65078
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-449052691
+  User_Type: Visitor
+  ZIP_Code: 20970
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00113
+
+SCENARIO: View Own Reviews
+VARIANT: V00113
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account jane.brown@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Buyer_Status: No_Orders
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-598248
+  Order_Quantity: 1
+  Order_Total: 177.1
+  Password: weak
+  Phone: +1-576-431-9528
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 177.1
+  Product_SKU: SKU-96695
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-497507012
+  User_Type: Admin
+  ZIP_Code: 15473
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

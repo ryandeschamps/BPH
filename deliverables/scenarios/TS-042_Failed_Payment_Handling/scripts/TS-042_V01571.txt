@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01571
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01571
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account emily.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Failure_Reason: Network_Error
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-388715
+  Order_Quantity: 2
+  Order_Total: 275.4
+  Password: weak
+  Phone: +1-440-365-5955
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 137.7
+  Product_SKU: SKU-30465
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-172917160
+  User_Type: Buyer
+  ZIP_Code: 23486
+
+RELATED REQUIREMENTS:
+FR-006

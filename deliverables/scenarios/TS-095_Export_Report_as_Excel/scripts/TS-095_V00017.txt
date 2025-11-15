@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-095_V00017
+
+SCENARIO: Add Product Variants (Size and Color)
+VARIANT: V00017
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to add product variants with different sizes and colors, so that buyers have options.
+
+GIVEN:
+- Admin is logged in with account emily.davis@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product Variants (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Export_Format: Excel
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-960154
+  Order_Quantity: 3
+  Order_Total: 159.45
+  Password: weak
+  Phone: +1-869-447-8137
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 53.15
+  Product_SKU: SKU-39115
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-606024329
+  User_Type: Admin
+  ZIP_Code: 67403
+
+RELATED REQUIREMENTS:
+FR-019

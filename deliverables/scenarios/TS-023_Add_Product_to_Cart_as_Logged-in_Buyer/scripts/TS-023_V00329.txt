@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00329
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00329
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account james.smith@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Variation: Color_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-433070
+  Order_Quantity: 4
+  Order_Total: 369.24
+  Password: weak
+  Phone: +1-750-411-2698
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 92.31
+  Product_SKU: SKU-62699
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-666127038
+  User_Type: Buyer
+  ZIP_Code: 48203
+
+RELATED REQUIREMENTS:
+FR-003

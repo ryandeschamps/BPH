@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00163
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00163
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account emily.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Single_Item
+  Device: Desktop
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-208862
+  Order_Quantity: 5
+  Order_Total: 497.95
+  Password: weak
+  Phone: +1-557-756-4837
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 99.59
+  Product_SKU: SKU-21002
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-164225152
+  User_Type: Buyer
+  ZIP_Code: 93721
+
+RELATED REQUIREMENTS:
+FR-005

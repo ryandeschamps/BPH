@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00003
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00003
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account michael.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Credential_Error: Wrong_Username
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-769865
+  Order_Quantity: 3
+  Order_Total: 99.81
+  Password: weak
+  Phone: +1-886-940-8000
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 33.27
+  Product_SKU: SKU-66025
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-205590624
+  User_Type: Admin
+  ZIP_Code: 77731
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

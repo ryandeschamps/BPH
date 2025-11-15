@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00195
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00195
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-833598
+  Order_Quantity: 3
+  Order_Total: 640.23
+  Password: weak
+  Phone: +1-357-858-5189
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 213.41
+  Product_SKU: SKU-95840
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-203694065
+  User_Type: Buyer
+  ZIP_Code: 42049
+
+RELATED REQUIREMENTS:
+FR-007

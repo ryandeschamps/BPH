@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00023
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00023
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Failure_Reason: Insufficient_Funds
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 10/26
+  Card_Number: 4532-****-****-2655
+  Device: Mobile
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-404052
+  Order_Quantity: 3
+  Order_Total: 148.74
+  Password: weak
+  Phone: +1-764-629-7630
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 49.58
+  Product_SKU: SKU-24254
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-169305430
+  User_Type: Buyer
+  ZIP_Code: 17940
+
+RELATED REQUIREMENTS:
+FR-006

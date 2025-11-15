@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-067_V00135
+
+SCENARIO: Share Product on Social Media as Guest
+VARIANT: V00135
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a guest user, I want to share a product on social media, so that I can show it to friends without logging in.
+
+GIVEN:
+- Admin is logged in with account jane.smith@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Edit_Field: Multiple
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-278717
+  Order_Quantity: 4
+  Order_Total: 175.16
+  Password: weak
+  Phone: +1-486-562-5468
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 43.79
+  Product_SKU: SKU-50308
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-121633997
+  User_Type: Admin
+  ZIP_Code: 75509
+
+RELATED REQUIREMENTS:
+FR-009

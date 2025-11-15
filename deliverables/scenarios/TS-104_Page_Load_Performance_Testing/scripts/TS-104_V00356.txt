@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00356
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00356
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Load_Time: Fast
+  Network_Speed: Medium
+  Page_Type: Cart
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.smith@example.com
+  First_Name: Michael
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-932914
+  Order_Quantity: 4
+  Order_Total: 953.6
+  Password: weak
+  Phone: +1-461-236-5100
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 238.4
+  Product_SKU: SKU-43482
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-286320780
+  User_Type: N/A
+  ZIP_Code: 68324
+
+RELATED REQUIREMENTS:
+FR-022

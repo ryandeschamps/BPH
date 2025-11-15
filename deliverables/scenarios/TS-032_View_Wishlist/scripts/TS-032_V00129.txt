@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00129
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00129
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account michael.smith@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Item_Availability: All_Available
+  Network_Speed: Low
+  User_Type: Buyer
+  Wishlist_State: Single_Item
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.smith@example.com
+  First_Name: Michael
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-688606
+  Order_Quantity: 5
+  Order_Total: 1410.25
+  Password: weak
+  Phone: +1-940-132-4431
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 282.05
+  Product_SKU: SKU-61760
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-297555378
+  User_Type: Buyer
+  ZIP_Code: 86524
+
+RELATED REQUIREMENTS:
+FR-007

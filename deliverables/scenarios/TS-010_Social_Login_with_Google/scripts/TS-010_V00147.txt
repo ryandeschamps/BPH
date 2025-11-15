@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00147
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00147
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for jane.brown@example.com
+
+WHEN:
+- User enters email: jane.brown@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-829536
+  Order_Quantity: 5
+  Order_Total: 396.5
+  Password: weak
+  Phone: +1-643-478-1381
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 79.3
+  Product_SKU: SKU-40363
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-852303412
+  User_Type: Visitor
+  ZIP_Code: 21096
+
+RELATED REQUIREMENTS:
+FR-001

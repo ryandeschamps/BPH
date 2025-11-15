@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00060
+
+SCENARIO: Approve Product Review
+VARIANT: V00060
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account emily.davis@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Status: Completed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-900762
+  Order_Quantity: 2
+  Order_Total: 297.98
+  Password: weak
+  Phone: +1-919-572-4156
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 148.99
+  Product_SKU: SKU-35385
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-392682540
+  User_Type: Admin
+  ZIP_Code: 88500
+
+RELATED REQUIREMENTS:
+FR-021

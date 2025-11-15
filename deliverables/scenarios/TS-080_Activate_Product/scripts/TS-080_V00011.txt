@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-080_V00011
+
+SCENARIO: Edit Buyer Account Information
+VARIANT: V00011
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to edit buyer account details, so that I can correct information when needed.
+
+GIVEN:
+- Admin is logged in with account lisa.rodriguez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Buyer Account Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Medium
+  Product_Status: Active
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-413656
+  Order_Quantity: 1
+  Order_Total: 90.75
+  Password: weak
+  Phone: +1-848-442-3210
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 90.75
+  Product_SKU: SKU-13321
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-484583221
+  User_Type: Admin
+  ZIP_Code: 72253
+
+RELATED REQUIREMENTS:
+FR-016

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00129
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00129
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account emily.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+  Wishlist_State: Has_Items
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-820385
+  Order_Quantity: 2
+  Order_Total: 135.18
+  Password: weak
+  Phone: +1-332-639-9243
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 67.59
+  Product_SKU: SKU-41472
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-791765491
+  User_Type: Buyer
+  ZIP_Code: 66224
+
+RELATED REQUIREMENTS:
+FR-005

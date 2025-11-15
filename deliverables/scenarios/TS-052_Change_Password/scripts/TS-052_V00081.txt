@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-052_V00081
+
+SCENARIO: Payment with Debit Card
+VARIANT: V00081
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:26
+
+DESCRIPTION:
+As a buyer, I want to pay using my debit card, so that I can complete my purchase.
+
+GIVEN:
+- Buyer is logged in with account emily.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to emily.rodriguez@example.com
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Password_Validity: Weak
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-519776
+  Order_Quantity: 5
+  Order_Total: 242.65
+  Password: weak
+  Phone: +1-243-539-3814
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 48.53
+  Product_SKU: SKU-90188
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-159662319
+  User_Type: Buyer
+  ZIP_Code: 70496
+
+RELATED REQUIREMENTS:
+FR-008, FR-020

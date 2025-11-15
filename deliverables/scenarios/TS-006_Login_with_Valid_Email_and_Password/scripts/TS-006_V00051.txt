@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00051
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00051
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account mary.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.smith@example.com
+  First_Name: Mary
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-484030
+  Order_Quantity: 5
+  Order_Total: 935.2
+  Password: Test@123
+  Phone: +1-713-245-7902
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 187.04
+  Product_SKU: SKU-57310
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-655242384
+  User_Type: Buyer
+  ZIP_Code: 96355
+
+RELATED REQUIREMENTS:
+FR-002

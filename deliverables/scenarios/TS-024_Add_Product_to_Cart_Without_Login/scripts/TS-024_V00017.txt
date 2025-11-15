@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-024_V00017
+
+SCENARIO: View Product Listing with Thumbnail and Price
+VARIANT: V00017
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product thumbnails, names, and prices in listings, so that I can quickly evaluate options.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Listing with Thumbnail and Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Medium
+  Redirect_Action: Login
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-246285
+  Order_Quantity: 5
+  Order_Total: 609.6
+  Password: weak
+  Phone: +1-310-201-2275
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 121.92
+  Product_SKU: SKU-96701
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-259578754
+  User_Type: Visitor
+  ZIP_Code: 52980
+
+RELATED REQUIREMENTS:
+FR-004

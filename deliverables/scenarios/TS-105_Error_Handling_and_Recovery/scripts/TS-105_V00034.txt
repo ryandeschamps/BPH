@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00034
+
+SCENARIO: Export Report to PDF
+VARIANT: V00034
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Error_Type: 404
+  Network_Speed: High
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-894119
+  Order_Quantity: 5
+  Order_Total: 311.4
+  Password: weak
+  Phone: +1-569-186-7766
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 62.28
+  Product_SKU: SKU-88092
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-172578405
+  User_Type: N/A
+  ZIP_Code: 46175
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,79 @@
+TEST SCRIPT: TS-001_V00384
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00384
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: john.brown@example.com
+- User enters phone: +1-913-181-6399
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for john.brown@example.com
+- Verification email sent to john.brown@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Field_Values: Terms_Not_Accepted
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-258589
+  Order_Quantity: 5
+  Order_Total: 108.25
+  Password: Test@123
+  Phone: +1-913-181-6399
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 21.65
+  Product_SKU: SKU-63281
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-345876751
+  User_Type: Visitor
+  ZIP_Code: 12055
+
+RELATED REQUIREMENTS:
+FR-002

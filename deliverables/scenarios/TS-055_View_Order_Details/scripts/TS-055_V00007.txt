@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00007
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00007
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account lisa.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Order_Status: Open
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-507400
+  Order_Quantity: 4
+  Order_Total: 588.6
+  Password: weak
+  Phone: +1-632-326-5712
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 147.15
+  Product_SKU: SKU-18678
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-854792705
+  User_Type: Buyer
+  ZIP_Code: 22677
+
+RELATED REQUIREMENTS:
+FR-008

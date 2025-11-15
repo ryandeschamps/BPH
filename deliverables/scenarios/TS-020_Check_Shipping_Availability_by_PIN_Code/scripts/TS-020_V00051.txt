@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00051
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00051
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  PIN_Code_State: Not_Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-420750
+  Order_Quantity: 3
+  Order_Total: 847.68
+  Password: Test@123
+  Phone: +1-888-159-2319
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 282.56
+  Product_SKU: SKU-47580
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-867684503
+  User_Type: Visitor
+  ZIP_Code: 45719
+
+RELATED REQUIREMENTS:
+FR-003

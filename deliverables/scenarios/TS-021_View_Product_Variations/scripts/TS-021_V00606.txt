@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00606
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00606
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account jane.garcia@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Buyer
+  Variation_Availability: Some_Out_Of_Stock
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-994185
+  Order_Quantity: 5
+  Order_Total: 1379.6
+  Password: weak
+  Phone: +1-951-168-2583
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 275.92
+  Product_SKU: SKU-16718
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-180040658
+  User_Type: Buyer
+  ZIP_Code: 76741
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00114
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00114
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account lisa.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Edit_Field: Images
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-593509
+  Order_Quantity: 3
+  Order_Total: 845.58
+  Password: weak
+  Phone: +1-861-609-6936
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 281.86
+  Product_SKU: SKU-94905
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-140833129
+  User_Type: Admin
+  ZIP_Code: 66473
+
+RELATED REQUIREMENTS:
+FR-016

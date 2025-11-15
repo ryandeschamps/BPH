@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00059
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00059
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account mary.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Variation: No_Variation
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-289638
+  Order_Quantity: 3
+  Order_Total: 879.75
+  Password: weak
+  Phone: +1-553-855-5549
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 293.25
+  Product_SKU: SKU-49446
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-230746929
+  User_Type: Buyer
+  ZIP_Code: 36833
+
+RELATED REQUIREMENTS:
+FR-003

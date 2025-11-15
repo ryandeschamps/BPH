@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00058
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00058
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for john.miller@example.com
+
+WHEN:
+- User enters email: john.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Wrong_Password
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-278109
+  Order_Quantity: 4
+  Order_Total: 1054.96
+  Password: weak
+  Phone: +1-243-107-7162
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 263.74
+  Product_SKU: SKU-29458
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-955602297
+  User_Type: Visitor
+  ZIP_Code: 52204
+
+RELATED REQUIREMENTS:
+FR-001

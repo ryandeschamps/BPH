@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-068_V00024
+
+SCENARIO: Share Product on Social Media as Buyer
+VARIANT: V00024
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a buyer, I want to share a product on social media, so that I can recommend it to my network.
+
+GIVEN:
+- Admin is logged in with account john.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: Active
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-261590
+  Order_Quantity: 3
+  Order_Total: 300.24
+  Password: weak
+  Phone: +1-869-304-1818
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 100.08
+  Product_SKU: SKU-18452
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-385909502
+  User_Type: Admin
+  ZIP_Code: 14307
+
+RELATED REQUIREMENTS:
+FR-009

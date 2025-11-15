@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00718
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00718
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: john.johnson@example.com
+- User enters phone: +1-958-143-6756
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Password
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Password
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Field_Values: Missing_Password
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-898539
+  Order_Quantity: 1
+  Order_Total: 110.08
+  Password: weak
+  Phone: +1-958-143-6756
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 110.08
+  Product_SKU: SKU-24978
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-110316300
+  User_Type: Visitor
+  ZIP_Code: 39487
+
+RELATED REQUIREMENTS:
+FR-002

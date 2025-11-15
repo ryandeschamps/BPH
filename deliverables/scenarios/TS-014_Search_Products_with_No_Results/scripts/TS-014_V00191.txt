@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00191
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00191
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- Buyer is logged in with account robert.rodriguez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Zero
+  Search_Query: Special_Characters
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-374923
+  Order_Quantity: 2
+  Order_Total: 169.3
+  Password: Test@123
+  Phone: +1-268-173-7842
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 84.65
+  Product_SKU: SKU-81779
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-898628130
+  User_Type: Buyer
+  ZIP_Code: 64047
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00111
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00111
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account lisa.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Multiple_Items
+  Device: Desktop
+  Network_Speed: Low
+  Removal_Action: Remove_One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-491520
+  Order_Quantity: 3
+  Order_Total: 805.89
+  Password: weak
+  Phone: +1-526-132-9280
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 268.63
+  Product_SKU: SKU-72615
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-682795935
+  User_Type: Buyer
+  ZIP_Code: 25393
+
+RELATED REQUIREMENTS:
+FR-005

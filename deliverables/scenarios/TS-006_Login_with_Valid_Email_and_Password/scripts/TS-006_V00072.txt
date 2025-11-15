@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00072
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00072
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account david.davis@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Edge
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-709405
+  Order_Quantity: 3
+  Order_Total: 743.19
+  Password: Test@123
+  Phone: +1-940-772-8342
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 247.73
+  Product_SKU: SKU-52225
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-670895875
+  User_Type: Buyer
+  ZIP_Code: 53538
+
+RELATED REQUIREMENTS:
+FR-002

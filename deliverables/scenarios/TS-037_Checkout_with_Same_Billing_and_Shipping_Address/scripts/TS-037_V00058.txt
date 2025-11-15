@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00058
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00058
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account emily.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 10/26
+  Card_Number: 4532-****-****-4287
+  Device: Mobile
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-170219
+  Order_Quantity: 3
+  Order_Total: 159.51
+  Password: weak
+  Phone: +1-970-256-5463
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 53.17
+  Product_SKU: SKU-36714
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-345800106
+  User_Type: Buyer
+  ZIP_Code: 25441
+
+RELATED REQUIREMENTS:
+FR-007

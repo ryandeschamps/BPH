@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00171
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00171
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account mary.jones@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Safari
+  Cart_Items: Single
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 07/27
+  Card_Number: 4532-****-****-3205
+  Device: Tablet
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-502564
+  Order_Quantity: 5
+  Order_Total: 471.25
+  Password: Test@123
+  Phone: +1-753-495-3455
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 94.25
+  Product_SKU: SKU-95722
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-839003886
+  User_Type: Buyer
+  ZIP_Code: 57254
+
+RELATED REQUIREMENTS:
+FR-007

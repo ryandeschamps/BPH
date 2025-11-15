@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00325
+
+SCENARIO: Product Browse by Category
+VARIANT: V00325
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Multiple_Images
+  Network_Speed: High
+  Product_State: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-860403
+  Order_Quantity: 5
+  Order_Total: 745.95
+  Password: weak
+  Phone: +1-919-210-8596
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 149.19
+  Product_SKU: SKU-14747
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-489886402
+  User_Type: Visitor
+  ZIP_Code: 87722
+
+RELATED REQUIREMENTS:
+FR-003

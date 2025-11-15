@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00400
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00400
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Load_Time: Slow
+  Network_Speed: High
+  Page_Type: Cart
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-366908
+  Order_Quantity: 5
+  Order_Total: 1433.35
+  Password: weak
+  Phone: +1-224-670-5942
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 286.67
+  Product_SKU: SKU-81561
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-634498726
+  User_Type: N/A
+  ZIP_Code: 47257
+
+RELATED REQUIREMENTS:
+FR-022

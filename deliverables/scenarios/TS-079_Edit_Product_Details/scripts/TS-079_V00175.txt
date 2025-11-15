@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00175
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00175
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account lisa.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Edit_Field: Variations
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-510297
+  Order_Quantity: 1
+  Order_Total: 143.15
+  Password: weak
+  Phone: +1-239-745-6857
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 143.15
+  Product_SKU: SKU-74238
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-344474331
+  User_Type: Admin
+  ZIP_Code: 30523
+
+RELATED REQUIREMENTS:
+FR-016

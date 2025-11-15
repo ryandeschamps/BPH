@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00081
+
+SCENARIO: Track Current Order Status
+VARIANT: V00081
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Message_Type: Feedback
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-642173
+  Order_Quantity: 5
+  Order_Total: 1084.15
+  Password: weak
+  Phone: +1-957-687-7829
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 216.83
+  Product_SKU: SKU-94059
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-939245389
+  User_Type: Buyer
+  ZIP_Code: 81877
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

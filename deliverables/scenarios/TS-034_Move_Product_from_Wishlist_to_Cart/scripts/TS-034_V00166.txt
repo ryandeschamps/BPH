@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00166
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00166
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Empty
+  Device: Mobile
+  Network_Speed: High
+  Product_State: Price_Changed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-818429
+  Order_Quantity: 1
+  Order_Total: 104.46
+  Password: weak
+  Phone: +1-393-830-4448
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Casual Shirt
+  Product_Price: 104.46
+  Product_SKU: SKU-47104
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-737466323
+  User_Type: Buyer
+  ZIP_Code: 85219
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

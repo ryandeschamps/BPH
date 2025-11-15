@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00080
+
+SCENARIO: Create New Product Category
+VARIANT: V00080
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account robert.brown@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  CMS_Page: Privacy_Policy
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-490401
+  Order_Quantity: 1
+  Order_Total: 136.9
+  Password: weak
+  Phone: +1-316-649-3370
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 136.9
+  Product_SKU: SKU-28141
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-637054820
+  User_Type: Admin
+  ZIP_Code: 19083
+
+RELATED REQUIREMENTS:
+FR-018

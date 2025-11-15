@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-010_V00031
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00031
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for david.jones@example.com
+
+WHEN:
+- User enters email: david.jones@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-754843
+  Order_Quantity: 1
+  Order_Total: 76.56
+  Password: Test@123
+  Phone: +1-282-599-7388
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 76.56
+  Product_SKU: SKU-28715
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-342845835
+  User_Type: Visitor
+  ZIP_Code: 21922
+
+RELATED REQUIREMENTS:
+FR-001

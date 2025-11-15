@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-080_V00013
+
+SCENARIO: Edit Buyer Account Information
+VARIANT: V00013
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to edit buyer account details, so that I can correct information when needed.
+
+GIVEN:
+- Admin is logged in with account james.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Buyer Account Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Product_Status: Active
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.jones@example.com
+  First_Name: James
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-552664
+  Order_Quantity: 5
+  Order_Total: 1015.7
+  Password: weak
+  Phone: +1-356-472-8489
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 203.14
+  Product_SKU: SKU-62703
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-669181144
+  User_Type: Admin
+  ZIP_Code: 15521
+
+RELATED REQUIREMENTS:
+FR-016

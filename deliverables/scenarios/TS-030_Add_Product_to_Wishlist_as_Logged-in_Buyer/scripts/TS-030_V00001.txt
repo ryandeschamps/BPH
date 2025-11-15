@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00001
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00001
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account john.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Product_State: In_Stock
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-251193
+  Order_Quantity: 5
+  Order_Total: 388.3
+  Password: weak
+  Phone: +1-438-426-6988
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 77.66
+  Product_SKU: SKU-74653
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-357589552
+  User_Type: Buyer
+  ZIP_Code: 99395
+
+RELATED REQUIREMENTS:
+FR-005

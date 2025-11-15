@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-002_V00140
+
+SCENARIO: Registration with Invalid Email Format
+VARIANT: V00140
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate my email format during registration, so that I provide a valid email address.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: mary.davis@example.com
+- User enters phone: +1-923-255-3051
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Email_Format: No_Domain
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-655288
+  Order_Quantity: 5
+  Order_Total: 932.55
+  Password: weak
+  Phone: +1-923-255-3051
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 186.51
+  Product_SKU: SKU-75497
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-964624290
+  User_Type: Visitor
+  ZIP_Code: 81702
+
+RELATED REQUIREMENTS:
+FR-002

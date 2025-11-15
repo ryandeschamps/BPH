@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-095_V00011
+
+SCENARIO: Add Product Variants (Size and Color)
+VARIANT: V00011
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to add product variants with different sizes and colors, so that buyers have options.
+
+GIVEN:
+- Admin is logged in with account mary.smith@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product Variants (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Export_Format: Excel
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.smith@example.com
+  First_Name: Mary
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-431520
+  Order_Quantity: 1
+  Order_Total: 235.87
+  Password: weak
+  Phone: +1-645-526-4336
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 235.87
+  Product_SKU: SKU-52029
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-475478046
+  User_Type: Admin
+  ZIP_Code: 33446
+
+RELATED REQUIREMENTS:
+FR-019

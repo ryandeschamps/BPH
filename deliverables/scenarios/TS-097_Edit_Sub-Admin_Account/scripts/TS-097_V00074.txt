@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00074
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00074
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account lisa.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Edit_Type: Role
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-639893
+  Order_Quantity: 1
+  Order_Total: 205.37
+  Password: weak
+  Phone: +1-350-165-5551
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 205.37
+  Product_SKU: SKU-82314
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-242510095
+  User_Type: Admin
+  ZIP_Code: 23379
+
+RELATED REQUIREMENTS:
+FR-019

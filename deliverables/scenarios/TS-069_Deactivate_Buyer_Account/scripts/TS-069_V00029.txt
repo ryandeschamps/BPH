@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-069_V00029
+
+SCENARIO: View My Account Profile
+VARIANT: V00029
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a buyer, I want to view my profile details (name, email, phone), so that I can verify my information.
+
+GIVEN:
+- Admin is logged in with account robert.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View My Account Profile
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Buyer_Status: Inactive
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-696216
+  Order_Quantity: 4
+  Order_Total: 771.88
+  Password: weak
+  Phone: +1-535-932-3363
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 192.97
+  Product_SKU: SKU-34448
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-722310375
+  User_Type: Admin
+  ZIP_Code: 57022
+
+RELATED REQUIREMENTS:
+FR-010

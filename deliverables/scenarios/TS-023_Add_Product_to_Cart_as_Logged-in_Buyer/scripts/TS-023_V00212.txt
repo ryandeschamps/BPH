@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00212
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00212
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Variation: Size_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-272379
+  Order_Quantity: 2
+  Order_Total: 360.92
+  Password: weak
+  Phone: +1-309-514-3318
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 180.46
+  Product_SKU: SKU-50301
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-450554494
+  User_Type: Buyer
+  ZIP_Code: 31110
+
+RELATED REQUIREMENTS:
+FR-003

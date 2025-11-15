@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00306
+
+SCENARIO: Product Search with No Results
+VARIANT: V00306
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account john.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Sort_By: Newest_First
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.jones@example.com
+  First_Name: John
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-938816
+  Order_Quantity: 5
+  Order_Total: 1263.05
+  Password: weak
+  Phone: +1-475-964-4307
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 252.61
+  Product_SKU: SKU-95048
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-997592401
+  User_Type: Buyer
+  ZIP_Code: 82316
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00214
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00214
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  PIN_Code_State: Invalid_Format
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-856604
+  Order_Quantity: 3
+  Order_Total: 790.92
+  Password: weak
+  Phone: +1-998-306-5954
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 263.64
+  Product_SKU: SKU-32884
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-643176268
+  User_Type: Visitor
+  ZIP_Code: 48515
+
+RELATED REQUIREMENTS:
+FR-003

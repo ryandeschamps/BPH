@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-082_V00053
+
+SCENARIO: Filter Orders by Status
+VARIANT: V00053
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to filter orders by status (Open, Confirmed, In Process, Shipped, Delivered), so that I can focus on specific order groups.
+
+GIVEN:
+- Admin is logged in with account jane.martinez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Filter Orders by Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Has_Orders: No
+  Network_Speed: Medium
+  Product_Status: Any
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.martinez@example.com
+  First_Name: Jane
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-400918
+  Order_Quantity: 2
+  Order_Total: 296.72
+  Password: weak
+  Phone: +1-215-296-9288
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 148.36
+  Product_SKU: SKU-80390
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-275071673
+  User_Type: Admin
+  ZIP_Code: 94138
+
+RELATED REQUIREMENTS:
+FR-017

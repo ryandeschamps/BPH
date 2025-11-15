@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00041
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00041
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account james.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Chrome
+  Cart_Items: Multiple
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 02/25
+  Card_Number: 4532-****-****-9973
+  Device: Mobile
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-480441
+  Order_Quantity: 3
+  Order_Total: 545.31
+  Password: Test@123
+  Phone: +1-630-162-2341
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 181.77
+  Product_SKU: SKU-16988
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-260022123
+  User_Type: Buyer
+  ZIP_Code: 96754
+
+RELATED REQUIREMENTS:
+FR-007

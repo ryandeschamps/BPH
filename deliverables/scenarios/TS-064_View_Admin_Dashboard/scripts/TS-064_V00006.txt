@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-064_V00006
+
+SCENARIO: Write Review for Purchased Product
+VARIANT: V00006
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to write a detailed review, so that I can help other buyers.
+
+GIVEN:
+- Admin is logged in with account james.rodriguez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Write Review for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-984514
+  Order_Quantity: 4
+  Order_Total: 369.2
+  Password: weak
+  Phone: +1-442-773-7301
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 92.3
+  Product_SKU: SKU-61866
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-152272672
+  User_Type: Admin
+  ZIP_Code: 73443
+
+RELATED REQUIREMENTS:
+FR-011

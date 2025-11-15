@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00140
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00140
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account lisa.williams@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+  Wishlist_State: Has_Items
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-289159
+  Order_Quantity: 2
+  Order_Total: 543.2
+  Password: weak
+  Phone: +1-332-648-1784
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 271.6
+  Product_SKU: SKU-25714
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-958167171
+  User_Type: Buyer
+  ZIP_Code: 46612
+
+RELATED REQUIREMENTS:
+FR-005

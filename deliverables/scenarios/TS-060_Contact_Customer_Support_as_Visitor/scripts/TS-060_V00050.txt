@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-060_V00050
+
+SCENARIO: View Shipping Tracking Information
+VARIANT: V00050
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer with a shipped order, I want to see tracking information (carrier, tracking ID), so that I can track my package.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Shipping Tracking Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Message_Type: Inquiry
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-971299
+  Order_Quantity: 1
+  Order_Total: 279.99
+  Password: weak
+  Phone: +1-345-879-6926
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 279.99
+  Product_SKU: SKU-14809
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-743255501
+  User_Type: Visitor
+  ZIP_Code: 86595
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00148
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00148
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for david.smith@example.com
+
+WHEN:
+- User enters email: david.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-822885
+  Order_Quantity: 1
+  Order_Total: 186.85
+  Password: weak
+  Phone: +1-976-298-4627
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 186.85
+  Product_SKU: SKU-61120
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-571922035
+  User_Type: Visitor
+  ZIP_Code: 81506
+
+RELATED REQUIREMENTS:
+FR-001

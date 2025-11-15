@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-070_V00049
+
+SCENARIO: Edit Profile Details
+VARIANT: V00049
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to edit my email and phone number, so that I can keep my information current.
+
+GIVEN:
+- Admin is logged in with account john.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Profile Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Order_Filter: By_Status
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-508577
+  Order_Quantity: 1
+  Order_Total: 293.18
+  Password: weak
+  Phone: +1-220-499-9630
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 293.18
+  Product_SKU: SKU-36896
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-642953129
+  User_Type: Admin
+  ZIP_Code: 95505
+
+RELATED REQUIREMENTS:
+FR-010

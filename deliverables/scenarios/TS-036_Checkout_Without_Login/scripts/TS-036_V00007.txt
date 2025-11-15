@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-036_V00007
+
+SCENARIO: Remove Item from Cart
+VARIANT: V00007
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to remove items from my cart, so that I don't purchase unwanted products.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Redirect_Action: Login
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-983908
+  Order_Quantity: 4
+  Order_Total: 567.6
+  Password: weak
+  Phone: +1-274-903-6855
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 141.9
+  Product_SKU: SKU-98708
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-320862256
+  User_Type: Visitor
+  ZIP_Code: 67894
+
+RELATED REQUIREMENTS:
+FR-007

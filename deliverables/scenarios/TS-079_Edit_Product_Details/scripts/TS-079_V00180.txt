@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00180
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00180
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account sarah.smith@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Edit_Field: Variations
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-670699
+  Order_Quantity: 1
+  Order_Total: 170.93
+  Password: weak
+  Phone: +1-812-633-4855
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Silk Scarf
+  Product_Price: 170.93
+  Product_SKU: SKU-92748
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-243660345
+  User_Type: Admin
+  ZIP_Code: 13528
+
+RELATED REQUIREMENTS:
+FR-016

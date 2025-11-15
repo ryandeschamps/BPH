@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00079
+
+SCENARIO: Reject Product Review
+VARIANT: V00079
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account james.williams@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Bank_Field: Bank_Name
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-962795
+  Order_Quantity: 5
+  Order_Total: 1000.1
+  Password: weak
+  Phone: +1-677-181-7932
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 200.02
+  Product_SKU: SKU-11409
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-708543199
+  User_Type: Admin
+  ZIP_Code: 44081
+
+RELATED REQUIREMENTS:
+FR-021

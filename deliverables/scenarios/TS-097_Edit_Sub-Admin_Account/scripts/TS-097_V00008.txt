@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00008
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00008
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account john.smith@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Edit_Type: Username
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-416719
+  Order_Quantity: 2
+  Order_Total: 158.16
+  Password: weak
+  Phone: +1-437-560-7026
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 79.08
+  Product_SKU: SKU-78464
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-856697750
+  User_Type: Admin
+  ZIP_Code: 67092
+
+RELATED REQUIREMENTS:
+FR-019

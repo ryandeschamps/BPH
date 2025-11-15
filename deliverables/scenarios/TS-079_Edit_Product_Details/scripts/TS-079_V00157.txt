@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00157
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00157
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account james.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Edit_Field: Variations
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-402010
+  Order_Quantity: 4
+  Order_Total: 645.44
+  Password: weak
+  Phone: +1-690-916-1279
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 161.36
+  Product_SKU: SKU-79105
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-589816134
+  User_Type: Admin
+  ZIP_Code: 62696
+
+RELATED REQUIREMENTS:
+FR-016

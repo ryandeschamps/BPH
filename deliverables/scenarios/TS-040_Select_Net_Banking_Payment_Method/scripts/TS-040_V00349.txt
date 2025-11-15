@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-040_V00349
+
+SCENARIO: Add Product to Wishlist as Logged-In Buyer
+VARIANT: V00349
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:19
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my wishlist, so that I can save items for later consideration.
+
+GIVEN:
+- Buyer is logged in with account emily.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Logged-In Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Bank: Citi
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Net_Banking
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-465082
+  Order_Quantity: 4
+  Order_Total: 386.52
+  Password: weak
+  Phone: +1-393-391-7204
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 96.63
+  Product_SKU: SKU-32079
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-693414915
+  User_Type: Buyer
+  ZIP_Code: 73190
+
+RELATED REQUIREMENTS:
+FR-006

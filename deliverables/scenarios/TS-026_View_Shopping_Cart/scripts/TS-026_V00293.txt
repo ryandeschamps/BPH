@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00293
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00293
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account lisa.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Multiple_Items
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-361687
+  Order_Quantity: 5
+  Order_Total: 889.75
+  Password: weak
+  Phone: +1-211-397-4845
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 177.95
+  Product_SKU: SKU-59905
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-697406452
+  User_Type: Buyer
+  ZIP_Code: 30404
+
+RELATED REQUIREMENTS:
+FR-005

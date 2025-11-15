@@ -1,0 +1,81 @@
+TEST SCRIPT: TS-044_V00403
+
+SCENARIO: Checkout Directly from Wishlist
+VARIANT: V00403
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to checkout items directly from my wishlist, so that I can quickly purchase saved items.
+
+GIVEN:
+- Buyer is logged in with account lisa.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to lisa.garcia@example.com
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Email_Delivery: Failed
+  Network_Speed: High
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-720393
+  Order_Quantity: 5
+  Order_Total: 330.0
+  Password: weak
+  Phone: +1-532-177-9517
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 66.0
+  Product_SKU: SKU-71662
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-154804873
+  User_Type: Buyer
+  ZIP_Code: 12710
+
+RELATED REQUIREMENTS:
+FR-006, FR-008

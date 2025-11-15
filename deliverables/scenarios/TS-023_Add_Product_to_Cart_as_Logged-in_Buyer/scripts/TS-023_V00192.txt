@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00192
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00192
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account jane.brown@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Has_Items
+  Device: Desktop
+  Network_Speed: Low
+  Product_Variation: Size_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-380568
+  Order_Quantity: 5
+  Order_Total: 1012.2
+  Password: weak
+  Phone: +1-271-798-9856
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 202.44
+  Product_SKU: SKU-61129
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-456407955
+  User_Type: Buyer
+  ZIP_Code: 73219
+
+RELATED REQUIREMENTS:
+FR-003

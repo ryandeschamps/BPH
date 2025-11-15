@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-092_V00068
+
+SCENARIO: Activate/Deactivate Product Category
+VARIANT: V00068
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate categories, so that I can control category visibility.
+
+GIVEN:
+- Admin is logged in with account lisa.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Report_Period: Month
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-259103
+  Order_Quantity: 3
+  Order_Total: 297.54
+  Password: weak
+  Phone: +1-237-346-9887
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 99.18
+  Product_SKU: SKU-93264
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-149844051
+  User_Type: Admin
+  ZIP_Code: 61982
+
+RELATED REQUIREMENTS:
+FR-018

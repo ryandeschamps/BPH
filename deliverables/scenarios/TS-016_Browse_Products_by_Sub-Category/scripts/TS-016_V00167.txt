@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00167
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00167
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for robert.smith@example.com
+
+WHEN:
+- User enters email: robert.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Count: Many
+  Sub_Category_Type: Jeans
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-784716
+  Order_Quantity: 5
+  Order_Total: 469.35
+  Password: weak
+  Phone: +1-827-602-3884
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 93.87
+  Product_SKU: SKU-13888
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-429499566
+  User_Type: Visitor
+  ZIP_Code: 99752
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

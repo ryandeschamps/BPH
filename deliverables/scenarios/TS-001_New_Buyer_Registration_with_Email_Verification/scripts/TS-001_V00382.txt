@@ -1,0 +1,79 @@
+TEST SCRIPT: TS-001_V00382
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00382
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.davis@example.com
+- User enters phone: +1-292-641-6659
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for david.davis@example.com
+- Verification email sent to david.davis@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Field_Values: Terms_Not_Accepted
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-809000
+  Order_Quantity: 3
+  Order_Total: 452.43
+  Password: Test@123
+  Phone: +1-292-641-6659
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 150.81
+  Product_SKU: SKU-67860
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-562483637
+  User_Type: Visitor
+  ZIP_Code: 78213
+
+RELATED REQUIREMENTS:
+FR-002

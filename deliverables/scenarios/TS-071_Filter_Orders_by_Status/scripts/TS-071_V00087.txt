@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00087
+
+SCENARIO: Change Password
+VARIANT: V00087
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account emily.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Order_Status: In_Process
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-329471
+  Order_Quantity: 2
+  Order_Total: 529.62
+  Password: weak
+  Phone: +1-705-609-3062
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 264.81
+  Product_SKU: SKU-62530
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-107655976
+  User_Type: Admin
+  ZIP_Code: 89853
+
+RELATED REQUIREMENTS:
+FR-010

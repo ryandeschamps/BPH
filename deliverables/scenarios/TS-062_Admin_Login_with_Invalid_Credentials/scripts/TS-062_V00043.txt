@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00043
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00043
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account james.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Credential_Error: Wrong_Password
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-505471
+  Order_Quantity: 1
+  Order_Total: 60.9
+  Password: weak
+  Phone: +1-651-735-8961
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 60.9
+  Product_SKU: SKU-71356
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-250513628
+  User_Type: Admin
+  ZIP_Code: 76531
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-008_V00037
+
+SCENARIO: Login with Invalid Credentials
+VARIANT: V00037
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer, I want to be notified when my login credentials are incorrect, so that I can retry or reset my password.
+
+GIVEN:
+- Buyer is logged in with account emily.johnson@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.johnson@example.com
+
+WHEN:
+- User enters email: emily.johnson@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Account_State: Unverified
+  Browser: Chrome
+  Device: Desktop
+  Email_Verification: Link_Expired
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-794739
+  Order_Quantity: 5
+  Order_Total: 565.15
+  Password: Test@123
+  Phone: +1-996-128-5396
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 113.03
+  Product_SKU: SKU-75453
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-401914183
+  User_Type: Buyer
+  ZIP_Code: 56462
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00351
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00351
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_Items: Multiple
+  Device: Tablet
+  Network_Speed: Low
+  Shipping_Cost: Express
+  Tax_Applicable: No
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-736959
+  Order_Quantity: 1
+  Order_Total: 196.82
+  Password: weak
+  Phone: +1-758-616-1253
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 196.82
+  Product_SKU: SKU-81500
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-765634583
+  User_Type: Buyer
+  ZIP_Code: 55386
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

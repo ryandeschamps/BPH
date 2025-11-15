@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-040_V00122
+
+SCENARIO: Add Product to Wishlist as Logged-In Buyer
+VARIANT: V00122
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:19
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my wishlist, so that I can save items for later consideration.
+
+GIVEN:
+- Buyer is logged in with account david.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Logged-In Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Bank: BofA
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-903373
+  Order_Quantity: 2
+  Order_Total: 276.74
+  Password: weak
+  Phone: +1-999-895-4520
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 138.37
+  Product_SKU: SKU-75466
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-674500690
+  User_Type: Buyer
+  ZIP_Code: 53636
+
+RELATED REQUIREMENTS:
+FR-006

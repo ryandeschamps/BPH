@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-010_V00045
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00045
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.rodriguez@example.com
+
+WHEN:
+- User enters email: mary.rodriguez@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-893875
+  Order_Quantity: 4
+  Order_Total: 323.6
+  Password: Test@123
+  Phone: +1-907-486-7486
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 80.9
+  Product_SKU: SKU-13169
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-403860169
+  User_Type: Visitor
+  ZIP_Code: 42293
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00233
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00233
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Firefox
+  Cart_Items: Single
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 04/26
+  Card_Number: 4532-****-****-6368
+  Device: Tablet
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-636318
+  Order_Quantity: 5
+  Order_Total: 514.95
+  Password: Test@123
+  Phone: +1-893-742-4429
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 102.99
+  Product_SKU: SKU-95998
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-435809554
+  User_Type: Buyer
+  ZIP_Code: 57896
+
+RELATED REQUIREMENTS:
+FR-007

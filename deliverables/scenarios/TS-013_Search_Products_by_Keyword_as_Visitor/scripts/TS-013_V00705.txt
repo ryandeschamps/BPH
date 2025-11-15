@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00705
+
+SCENARIO: Forgot Password Request
+VARIANT: V00705
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account john.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Few_Results
+  Search_Query: Partial_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-990702
+  Order_Quantity: 2
+  Order_Total: 581.08
+  Password: Test@123
+  Phone: +1-852-990-5095
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 290.54
+  Product_SKU: SKU-48455
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-144177916
+  User_Type: Buyer
+  ZIP_Code: 90946
+
+RELATED REQUIREMENTS:
+FR-001

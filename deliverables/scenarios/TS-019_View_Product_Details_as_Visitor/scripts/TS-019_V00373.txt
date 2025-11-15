@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00373
+
+SCENARIO: Product Browse by Category
+VARIANT: V00373
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account sarah.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: Active
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-110434
+  Order_Quantity: 5
+  Order_Total: 861.6
+  Password: weak
+  Phone: +1-764-683-5341
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 172.32
+  Product_SKU: SKU-27798
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-649640639
+  User_Type: Buyer
+  ZIP_Code: 92540
+
+RELATED REQUIREMENTS:
+FR-003

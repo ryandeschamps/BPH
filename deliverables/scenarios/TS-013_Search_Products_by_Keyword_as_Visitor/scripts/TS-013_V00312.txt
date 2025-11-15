@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00312
+
+SCENARIO: Forgot Password Request
+VARIANT: V00312
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: One_Result
+  Search_Query: Partial_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-523956
+  Order_Quantity: 3
+  Order_Total: 294.63
+  Password: Test@123
+  Phone: +1-702-410-8683
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 98.21
+  Product_SKU: SKU-15955
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-885259789
+  User_Type: Visitor
+  ZIP_Code: 14464
+
+RELATED REQUIREMENTS:
+FR-001

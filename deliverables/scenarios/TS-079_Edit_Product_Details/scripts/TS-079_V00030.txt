@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00030
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00030
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account lisa.rodriguez@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Edit_Field: Name
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-103455
+  Order_Quantity: 2
+  Order_Total: 314.34
+  Password: weak
+  Phone: +1-576-321-4713
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 157.17
+  Product_SKU: SKU-73805
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-144285335
+  User_Type: Admin
+  ZIP_Code: 27535
+
+RELATED REQUIREMENTS:
+FR-016

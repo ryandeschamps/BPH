@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00145
+
+SCENARIO: Add New Product
+VARIANT: V00145
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account james.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Report_Period: Custom
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-336606
+  Order_Quantity: 5
+  Order_Total: 1491.4
+  Password: weak
+  Phone: +1-451-997-6464
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 298.28
+  Product_SKU: SKU-30107
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-352903570
+  User_Type: Admin
+  ZIP_Code: 53819
+
+RELATED REQUIREMENTS:
+FR-019

@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00229
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00229
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account lisa.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Mixed
+  Address_Type: Different_Addresses
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 02/25
+  Card_Number: 4532-****-****-4636
+  Device: Mobile
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-487330
+  Order_Quantity: 2
+  Order_Total: 320.56
+  Password: weak
+  Phone: +1-873-465-5092
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 160.28
+  Product_SKU: SKU-20779
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-254748510
+  User_Type: Buyer
+  ZIP_Code: 64510
+
+RELATED REQUIREMENTS:
+FR-007

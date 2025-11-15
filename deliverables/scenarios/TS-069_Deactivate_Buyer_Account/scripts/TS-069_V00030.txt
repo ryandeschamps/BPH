@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-069_V00030
+
+SCENARIO: View My Account Profile
+VARIANT: V00030
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a buyer, I want to view my profile details (name, email, phone), so that I can verify my information.
+
+GIVEN:
+- Admin is logged in with account james.rodriguez@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View My Account Profile
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Buyer_Status: Inactive
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-225481
+  Order_Quantity: 1
+  Order_Total: 194.19
+  Password: weak
+  Phone: +1-259-545-5471
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 194.19
+  Product_SKU: SKU-75248
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-963534219
+  User_Type: Admin
+  ZIP_Code: 12300
+
+RELATED REQUIREMENTS:
+FR-010

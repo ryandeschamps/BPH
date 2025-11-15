@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00148
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00148
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  PIN_Code_State: Not_Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-459568
+  Order_Quantity: 2
+  Order_Total: 219.22
+  Password: weak
+  Phone: +1-851-846-8826
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 109.61
+  Product_SKU: SKU-10973
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-146445397
+  User_Type: Visitor
+  ZIP_Code: 99858
+
+RELATED REQUIREMENTS:
+FR-003

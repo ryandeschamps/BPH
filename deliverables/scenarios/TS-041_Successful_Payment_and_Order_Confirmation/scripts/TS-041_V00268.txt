@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00268
+
+SCENARIO: View Wishlist Items
+VARIANT: V00268
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account mary.garcia@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Email_Delivery: Delayed
+  Network_Speed: High
+  Order_Size: Multiple_Items
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 04/30
+  Card_Number: 4532-****-****-4800
+  Device: Tablet
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-365967
+  Order_Quantity: 2
+  Order_Total: 178.48
+  Password: weak
+  Phone: +1-414-965-8339
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 89.24
+  Product_SKU: SKU-76460
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-913817335
+  User_Type: Buyer
+  ZIP_Code: 61062
+
+RELATED REQUIREMENTS:
+FR-006

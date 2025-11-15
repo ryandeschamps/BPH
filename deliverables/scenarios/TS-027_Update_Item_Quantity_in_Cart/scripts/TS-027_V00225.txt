@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00225
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00225
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account lisa.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Quantity_Change: Zero
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-372886
+  Order_Quantity: 3
+  Order_Total: 259.29
+  Password: weak
+  Phone: +1-941-477-6833
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Silk Scarf
+  Product_Price: 86.43
+  Product_SKU: SKU-71541
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-679691820
+  User_Type: Buyer
+  ZIP_Code: 18999
+
+RELATED REQUIREMENTS:
+FR-005

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-060_V00053
+
+SCENARIO: View Shipping Tracking Information
+VARIANT: V00053
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer with a shipped order, I want to see tracking information (carrier, tracking ID), so that I can track my package.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Shipping Tracking Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Message_Type: Inquiry
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-459920
+  Order_Quantity: 1
+  Order_Total: 144.0
+  Password: weak
+  Phone: +1-633-926-7320
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 144.0
+  Product_SKU: SKU-94209
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-465973576
+  User_Type: Visitor
+  ZIP_Code: 10896
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

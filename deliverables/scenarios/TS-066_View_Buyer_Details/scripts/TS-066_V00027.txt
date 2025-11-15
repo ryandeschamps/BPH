@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00027
+
+SCENARIO: View Own Reviews
+VARIANT: V00027
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account david.brown@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: Active
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-930983
+  Order_Quantity: 1
+  Order_Total: 254.68
+  Password: weak
+  Phone: +1-413-524-8833
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 254.68
+  Product_SKU: SKU-33988
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-727875517
+  User_Type: Admin
+  ZIP_Code: 46274
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

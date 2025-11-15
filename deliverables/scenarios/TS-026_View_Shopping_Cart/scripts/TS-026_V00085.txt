@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00085
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00085
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Empty
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-489407
+  Order_Quantity: 1
+  Order_Total: 122.19
+  Password: weak
+  Phone: +1-759-328-8329
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 122.19
+  Product_SKU: SKU-13779
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-115116617
+  User_Type: Buyer
+  ZIP_Code: 99999
+
+RELATED REQUIREMENTS:
+FR-005

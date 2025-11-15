@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-068_V00020
+
+SCENARIO: Share Product on Social Media as Buyer
+VARIANT: V00020
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a buyer, I want to share a product on social media, so that I can recommend it to my network.
+
+GIVEN:
+- Admin is logged in with account michael.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: Active
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-938226
+  Order_Quantity: 2
+  Order_Total: 116.88
+  Password: weak
+  Phone: +1-263-333-1860
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 58.44
+  Product_SKU: SKU-64604
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-642849535
+  User_Type: Admin
+  ZIP_Code: 13088
+
+RELATED REQUIREMENTS:
+FR-009

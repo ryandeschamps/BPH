@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-058_V00007
+
+SCENARIO: View Order Details
+VARIANT: V00007
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to view detailed information about a specific order, so that I can review what I purchased.
+
+GIVEN:
+- Buyer is logged in with account david.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-141285
+  Order_Quantity: 2
+  Order_Total: 387.92
+  Password: weak
+  Phone: +1-649-333-9459
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 193.96
+  Product_SKU: SKU-35549
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-925734378
+  User_Type: Buyer
+  ZIP_Code: 19949
+
+RELATED REQUIREMENTS:
+FR-012

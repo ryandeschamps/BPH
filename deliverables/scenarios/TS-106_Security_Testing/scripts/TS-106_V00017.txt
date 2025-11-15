@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00017
+
+SCENARIO: Export Report to Excel
+VARIANT: V00017
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Medium
+  Security_Type: SSL_Certificate
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-790936
+  Order_Quantity: 2
+  Order_Total: 343.22
+  Password: weak
+  Phone: +1-315-655-9074
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 171.61
+  Product_SKU: SKU-76040
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-539995509
+  User_Type: N/A
+  ZIP_Code: 20421
+
+RELATED REQUIREMENTS:
+FR-022

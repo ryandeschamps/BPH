@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00649
+
+SCENARIO: Forgot Password Request
+VARIANT: V00649
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account jane.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: Many_Results
+  Search_Query: Partial_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-952839
+  Order_Quantity: 4
+  Order_Total: 1088.84
+  Password: Test@123
+  Phone: +1-458-298-6614
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 272.21
+  Product_SKU: SKU-90130
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-611599405
+  User_Type: Buyer
+  ZIP_Code: 75094
+
+RELATED REQUIREMENTS:
+FR-001

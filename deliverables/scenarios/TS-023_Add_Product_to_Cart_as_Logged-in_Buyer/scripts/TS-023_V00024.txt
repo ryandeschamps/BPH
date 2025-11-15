@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00024
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00024
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account sarah.martinez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Empty
+  Device: Mobile
+  Network_Speed: Low
+  Product_Variation: No_Variation
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-546505
+  Order_Quantity: 2
+  Order_Total: 129.06
+  Password: weak
+  Phone: +1-777-176-4892
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 64.53
+  Product_SKU: SKU-44979
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-529525262
+  User_Type: Buyer
+  ZIP_Code: 93481
+
+RELATED REQUIREMENTS:
+FR-003

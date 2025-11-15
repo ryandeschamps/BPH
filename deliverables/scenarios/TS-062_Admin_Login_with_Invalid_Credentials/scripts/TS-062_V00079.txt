@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00079
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00079
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account sarah.jones@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Credential_Error: Both
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-311897
+  Order_Quantity: 3
+  Order_Total: 652.17
+  Password: weak
+  Phone: +1-514-345-6898
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 217.39
+  Product_SKU: SKU-41117
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-796792608
+  User_Type: Admin
+  ZIP_Code: 22050
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

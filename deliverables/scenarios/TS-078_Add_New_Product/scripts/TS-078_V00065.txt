@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00065
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00065
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account jane.williams@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Image_Count: Multiple
+  Network_Speed: Medium
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-523461
+  Order_Quantity: 1
+  Order_Total: 224.36
+  Password: weak
+  Phone: +1-945-797-2471
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 224.36
+  Product_SKU: SKU-41543
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-425611677
+  User_Type: Admin
+  ZIP_Code: 30223
+
+RELATED REQUIREMENTS:
+FR-016

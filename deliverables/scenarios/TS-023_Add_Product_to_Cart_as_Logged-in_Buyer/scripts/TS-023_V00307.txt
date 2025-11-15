@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00307
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00307
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account robert.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Empty
+  Device: Desktop
+  Network_Speed: High
+  Product_Variation: Color_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-146110
+  Order_Quantity: 4
+  Order_Total: 992.76
+  Password: weak
+  Phone: +1-301-613-9429
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 248.19
+  Product_SKU: SKU-64093
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-737788022
+  User_Type: Buyer
+  ZIP_Code: 79752
+
+RELATED REQUIREMENTS:
+FR-003

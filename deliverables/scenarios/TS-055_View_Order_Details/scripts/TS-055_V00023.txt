@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00023
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00023
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account lisa.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Order_Status: Open
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-596816
+  Order_Quantity: 5
+  Order_Total: 1218.05
+  Password: weak
+  Phone: +1-994-661-8479
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 243.61
+  Product_SKU: SKU-37765
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-773673560
+  User_Type: Buyer
+  ZIP_Code: 15563
+
+RELATED REQUIREMENTS:
+FR-008

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-064_V00017
+
+SCENARIO: Write Review for Purchased Product
+VARIANT: V00017
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to write a detailed review, so that I can help other buyers.
+
+GIVEN:
+- Admin is logged in with account james.davis@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Write Review for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-686081
+  Order_Quantity: 3
+  Order_Total: 729.18
+  Password: weak
+  Phone: +1-919-502-4029
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 243.06
+  Product_SKU: SKU-50999
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-912723576
+  User_Type: Admin
+  ZIP_Code: 79853
+
+RELATED REQUIREMENTS:
+FR-011

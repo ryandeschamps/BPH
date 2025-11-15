@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00193
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00193
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  PIN_Code_State: Invalid_Format
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-319955
+  Order_Quantity: 5
+  Order_Total: 103.9
+  Password: weak
+  Phone: +1-665-198-6086
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 20.78
+  Product_SKU: SKU-67342
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-875677185
+  User_Type: Visitor
+  ZIP_Code: 20834
+
+RELATED REQUIREMENTS:
+FR-003

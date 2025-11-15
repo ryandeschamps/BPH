@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00855
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00855
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Failure_Reason: Declined
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 03/30
+  Card_Number: 4532-****-****-8857
+  Device: Tablet
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-456071
+  Order_Quantity: 4
+  Order_Total: 1140.64
+  Password: weak
+  Phone: +1-275-145-5298
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 285.16
+  Product_SKU: SKU-33584
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-926740589
+  User_Type: Buyer
+  ZIP_Code: 99019
+
+RELATED REQUIREMENTS:
+FR-006

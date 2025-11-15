@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00057
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00057
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  PIN_Code_State: Not_Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-980360
+  Order_Quantity: 5
+  Order_Total: 657.75
+  Password: Test@123
+  Phone: +1-749-805-6278
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 131.55
+  Product_SKU: SKU-99226
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-175183751
+  User_Type: Visitor
+  ZIP_Code: 40773
+
+RELATED REQUIREMENTS:
+FR-003

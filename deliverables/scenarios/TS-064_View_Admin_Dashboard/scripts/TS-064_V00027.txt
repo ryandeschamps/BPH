@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-064_V00027
+
+SCENARIO: Write Review for Purchased Product
+VARIANT: V00027
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to write a detailed review, so that I can help other buyers.
+
+GIVEN:
+- Admin is logged in with account robert.jones@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Write Review for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-980898
+  Order_Quantity: 4
+  Order_Total: 751.0
+  Password: weak
+  Phone: +1-834-693-3163
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 187.75
+  Product_SKU: SKU-89823
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-356661441
+  User_Type: Admin
+  ZIP_Code: 14186
+
+RELATED REQUIREMENTS:
+FR-011

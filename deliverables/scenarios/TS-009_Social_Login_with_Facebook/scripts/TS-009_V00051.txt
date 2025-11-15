@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-009_V00051
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00051
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.miller@example.com
+
+WHEN:
+- User enters email: sarah.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-379773
+  Order_Quantity: 5
+  Order_Total: 732.9
+  Password: Test@123
+  Phone: +1-213-887-1057
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 146.58
+  Product_SKU: SKU-57376
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-406011270
+  User_Type: Visitor
+  ZIP_Code: 16702
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

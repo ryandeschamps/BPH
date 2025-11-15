@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00004
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00004
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account robert.jones@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Edit_Type: Username
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-487612
+  Order_Quantity: 2
+  Order_Total: 140.52
+  Password: weak
+  Phone: +1-419-177-7003
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Casual Shirt
+  Product_Price: 70.26
+  Product_SKU: SKU-69831
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-747953113
+  User_Type: Admin
+  ZIP_Code: 39188
+
+RELATED REQUIREMENTS:
+FR-019

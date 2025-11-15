@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00242
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00242
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Rating_Range: Low_Rated
+  Review_Count: Few_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-634355
+  Order_Quantity: 3
+  Order_Total: 451.38
+  Password: weak
+  Phone: +1-298-530-4818
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 150.46
+  Product_SKU: SKU-80328
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-972307483
+  User_Type: Visitor
+  ZIP_Code: 31426
+
+RELATED REQUIREMENTS:
+FR-003

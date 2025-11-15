@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00104
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00104
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account sarah.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Edit_Type: Role
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-488385
+  Order_Quantity: 2
+  Order_Total: 257.92
+  Password: weak
+  Phone: +1-302-287-8228
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 128.96
+  Product_SKU: SKU-93156
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-393885912
+  User_Type: Admin
+  ZIP_Code: 64605
+
+RELATED REQUIREMENTS:
+FR-019

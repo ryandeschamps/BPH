@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00039
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00039
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account mary.smith@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Credential_Error: Wrong_Password
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.smith@example.com
+  First_Name: Mary
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-292476
+  Order_Quantity: 4
+  Order_Total: 652.12
+  Password: weak
+  Phone: +1-244-374-8160
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 163.03
+  Product_SKU: SKU-29078
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-959532634
+  User_Type: Admin
+  ZIP_Code: 88649
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

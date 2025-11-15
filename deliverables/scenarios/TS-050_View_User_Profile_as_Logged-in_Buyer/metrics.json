@@ -1,0 +1,15 @@
+{
+  "scenario_id": "TS-050",
+  "scenario_title": "View User Profile as Logged-in Buyer",
+  "variant_count": 36,
+  "expected_variant_count": 36,
+  "parameters": {
+    "User_Type": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-050_View_User_Profile_as_Logged-in_Buyer/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

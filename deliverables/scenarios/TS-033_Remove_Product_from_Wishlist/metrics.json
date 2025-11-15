@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-033",
+  "scenario_title": "Remove Product from Wishlist",
+  "variant_count": 144,
+  "expected_variant_count": 144,
+  "parameters": {
+    "User_Type": 1,
+    "Wishlist_State": 2,
+    "Removal_Action": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-033_Remove_Product_from_Wishlist/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

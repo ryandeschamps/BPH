@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00117
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00117
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account robert.davis@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 09/30
+  Card_Number: 4532-****-****-7329
+  Device: Tablet
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-149611
+  Order_Quantity: 3
+  Order_Total: 640.74
+  Password: weak
+  Phone: +1-371-904-8479
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 213.58
+  Product_SKU: SKU-15252
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-876200587
+  User_Type: Buyer
+  ZIP_Code: 31060
+
+RELATED REQUIREMENTS:
+FR-007

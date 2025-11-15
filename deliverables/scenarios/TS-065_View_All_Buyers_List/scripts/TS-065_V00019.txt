@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-065_V00019
+
+SCENARIO: Prevent Review from Non-Purchaser
+VARIANT: V00019
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a system, I want to prevent users from reviewing products they haven't purchased, so that reviews are authentic.
+
+GIVEN:
+- Admin is logged in with account jane.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Prevent Review from Non-Purchaser
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Filter: All
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-288645
+  Order_Quantity: 3
+  Order_Total: 287.55
+  Password: weak
+  Phone: +1-837-766-6828
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 95.85
+  Product_SKU: SKU-34271
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-829396182
+  User_Type: Admin
+  ZIP_Code: 21623
+
+RELATED REQUIREMENTS:
+FR-011

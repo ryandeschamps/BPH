@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-088_V00003
+
+SCENARIO: Edit Order Details
+VARIANT: V00003
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to edit order information if needed, so that I can correct errors.
+
+GIVEN:
+- Admin is logged in with account emily.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Action: Reject
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-666791
+  Order_Quantity: 1
+  Order_Total: 177.67
+  Password: weak
+  Phone: +1-276-972-4028
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 177.67
+  Product_SKU: SKU-16581
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-650322236
+  User_Type: Admin
+  ZIP_Code: 58106
+
+RELATED REQUIREMENTS:
+FR-017

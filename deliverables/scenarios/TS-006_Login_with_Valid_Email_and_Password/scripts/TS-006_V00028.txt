@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00028
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00028
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account james.martinez@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Account_State: Active_Verified
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-693857
+  Order_Quantity: 4
+  Order_Total: 579.12
+  Password: Test@123
+  Phone: +1-695-349-4453
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 144.78
+  Product_SKU: SKU-43441
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-689811371
+  User_Type: Buyer
+  ZIP_Code: 27314
+
+RELATED REQUIREMENTS:
+FR-002

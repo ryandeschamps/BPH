@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00159
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00159
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account michael.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 03/25
+  Card_Number: 4532-****-****-8550
+  Device: Mobile
+  Email: michael.smith@example.com
+  First_Name: Michael
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-499846
+  Order_Quantity: 1
+  Order_Total: 117.38
+  Password: weak
+  Phone: +1-814-519-2438
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 117.38
+  Product_SKU: SKU-92818
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-470583804
+  User_Type: Buyer
+  ZIP_Code: 86384
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00247
+
+SCENARIO: Product Search with No Results
+VARIANT: V00247
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account michael.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Sort_By: Price_High_Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-779170
+  Order_Quantity: 4
+  Order_Total: 191.0
+  Password: weak
+  Phone: +1-935-745-4828
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Casual Shirt
+  Product_Price: 47.75
+  Product_SKU: SKU-81146
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-315130821
+  User_Type: Buyer
+  ZIP_Code: 73957
+
+RELATED REQUIREMENTS:
+FR-003

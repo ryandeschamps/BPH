@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-057_V00039
+
+SCENARIO: View Order History
+VARIANT: V00039
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a buyer, I want to view my past orders, so that I can track my purchase history.
+
+GIVEN:
+- Buyer is logged in with account james.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Order History
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-883365
+  Order_Quantity: 4
+  Order_Total: 435.96
+  Password: weak
+  Phone: +1-892-424-4004
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 108.99
+  Product_SKU: SKU-39103
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-455974443
+  User_Type: Buyer
+  ZIP_Code: 11880
+
+RELATED REQUIREMENTS:
+FR-012

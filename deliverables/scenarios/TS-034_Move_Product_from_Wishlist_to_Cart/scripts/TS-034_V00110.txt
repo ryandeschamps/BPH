@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00110
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00110
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account lisa.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Has_Items
+  Device: Desktop
+  Network_Speed: Medium
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-855059
+  Order_Quantity: 3
+  Order_Total: 195.51
+  Password: weak
+  Phone: +1-209-284-8935
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 65.17
+  Product_SKU: SKU-99638
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-815819792
+  User_Type: Buyer
+  ZIP_Code: 77584
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

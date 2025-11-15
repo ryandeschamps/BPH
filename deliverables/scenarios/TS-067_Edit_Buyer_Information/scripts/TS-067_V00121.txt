@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-067_V00121
+
+SCENARIO: Share Product on Social Media as Guest
+VARIANT: V00121
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a guest user, I want to share a product on social media, so that I can show it to friends without logging in.
+
+GIVEN:
+- Admin is logged in with account michael.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Edit_Field: Multiple
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-143300
+  Order_Quantity: 2
+  Order_Total: 163.42
+  Password: weak
+  Phone: +1-214-812-6539
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 81.71
+  Product_SKU: SKU-70029
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-672520213
+  User_Type: Admin
+  ZIP_Code: 45609
+
+RELATED REQUIREMENTS:
+FR-009

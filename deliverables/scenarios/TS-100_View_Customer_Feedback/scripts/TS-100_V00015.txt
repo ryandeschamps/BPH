@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-100_V00015
+
+SCENARIO: View Order Payment Status
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:46
+
+DESCRIPTION:
+As an admin, I want to view payment status for each order, so that I can track revenue.
+
+GIVEN:
+- Admin is logged in with account robert.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to robert.rodriguez@example.com
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Feedback_Type: Complaint
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-785717
+  Order_Quantity: 3
+  Order_Total: 776.43
+  Password: weak
+  Phone: +1-216-255-9754
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 258.81
+  Product_SKU: SKU-43043
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-215923659
+  User_Type: Admin
+  ZIP_Code: 69697
+
+RELATED REQUIREMENTS:
+FR-020, FR-017

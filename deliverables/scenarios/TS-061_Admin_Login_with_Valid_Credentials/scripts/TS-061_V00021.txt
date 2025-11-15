@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-061_V00021
+
+SCENARIO: Reorder Previous Order Items
+VARIANT: V00021
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to quickly reorder items from a previous order, so that I can repurchase without searching again.
+
+GIVEN:
+- Admin is logged in with account mary.jones@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Reorder Previous Order Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-134881
+  Order_Quantity: 2
+  Order_Total: 320.86
+  Password: Test@123
+  Phone: +1-871-501-6600
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 160.43
+  Product_SKU: SKU-35311
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-592468924
+  User_Type: Admin
+  ZIP_Code: 43950
+
+RELATED REQUIREMENTS:
+FR-012

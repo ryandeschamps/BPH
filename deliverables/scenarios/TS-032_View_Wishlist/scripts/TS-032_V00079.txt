@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00079
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00079
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account john.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Item_Availability: Price_Changed
+  Network_Speed: High
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-346814
+  Order_Quantity: 3
+  Order_Total: 479.58
+  Password: weak
+  Phone: +1-886-588-8098
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 159.86
+  Product_SKU: SKU-74931
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-895065941
+  User_Type: Buyer
+  ZIP_Code: 39288
+
+RELATED REQUIREMENTS:
+FR-007

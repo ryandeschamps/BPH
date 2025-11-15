@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01552
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01552
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account sarah.martinez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Failure_Reason: Network_Error
+  Network_Speed: High
+  Payment_Method: Net_Banking
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-135755
+  Order_Quantity: 5
+  Order_Total: 1476.6
+  Password: weak
+  Phone: +1-219-292-1118
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 295.32
+  Product_SKU: SKU-76497
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-608427547
+  User_Type: Buyer
+  ZIP_Code: 78783
+
+RELATED REQUIREMENTS:
+FR-006

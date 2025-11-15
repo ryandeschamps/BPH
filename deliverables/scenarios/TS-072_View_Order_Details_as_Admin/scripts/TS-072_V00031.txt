@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-072_V00031
+
+SCENARIO: Manage Address Book
+VARIANT: V00031
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to add, edit, and delete addresses in my address book, so that I can quickly select addresses during checkout.
+
+GIVEN:
+- Admin is logged in with account robert.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Manage Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Order_Details: Basic
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-637576
+  Order_Quantity: 4
+  Order_Total: 1160.44
+  Password: weak
+  Phone: +1-408-604-5533
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 290.11
+  Product_SKU: SKU-93769
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-981278356
+  User_Type: Admin
+  ZIP_Code: 92108
+
+RELATED REQUIREMENTS:
+FR-010

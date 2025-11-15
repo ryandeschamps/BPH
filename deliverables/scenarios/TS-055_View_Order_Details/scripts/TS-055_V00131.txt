@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00131
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00131
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account lisa.davis@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-688232
+  Order_Quantity: 3
+  Order_Total: 790.59
+  Password: weak
+  Phone: +1-496-565-1702
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 263.53
+  Product_SKU: SKU-52322
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-840708369
+  User_Type: Buyer
+  ZIP_Code: 84041
+
+RELATED REQUIREMENTS:
+FR-008

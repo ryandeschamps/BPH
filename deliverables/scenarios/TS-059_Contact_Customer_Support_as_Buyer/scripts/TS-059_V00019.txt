@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00019
+
+SCENARIO: Track Current Order Status
+VARIANT: V00019
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account james.williams@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Message_Type: Question
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-773586
+  Order_Quantity: 3
+  Order_Total: 754.11
+  Password: weak
+  Phone: +1-838-294-3561
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 251.37
+  Product_SKU: SKU-55613
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-947637277
+  User_Type: Buyer
+  ZIP_Code: 55775
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

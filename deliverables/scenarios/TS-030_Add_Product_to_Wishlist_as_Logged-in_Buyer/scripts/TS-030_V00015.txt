@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00015
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00015
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account emily.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Product_State: In_Stock
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-195968
+  Order_Quantity: 2
+  Order_Total: 501.96
+  Password: weak
+  Phone: +1-629-325-4950
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 250.98
+  Product_SKU: SKU-25724
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-244483673
+  User_Type: Buyer
+  ZIP_Code: 46397
+
+RELATED REQUIREMENTS:
+FR-005

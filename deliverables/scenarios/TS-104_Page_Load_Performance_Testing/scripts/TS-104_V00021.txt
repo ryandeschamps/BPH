@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00021
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00021
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Load_Time: Fast
+  Network_Speed: Low
+  Page_Type: Home
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-210616
+  Order_Quantity: 4
+  Order_Total: 699.04
+  Password: weak
+  Phone: +1-592-177-8025
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 174.76
+  Product_SKU: SKU-26915
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-903954214
+  User_Type: N/A
+  ZIP_Code: 49294
+
+RELATED REQUIREMENTS:
+FR-022

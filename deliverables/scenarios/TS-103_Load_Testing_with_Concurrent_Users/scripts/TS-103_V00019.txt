@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00019
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00019
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Load_Type: Concurrent_Users
+  Network_Speed: High
+  User_Count: 50
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-339932
+  Order_Quantity: 4
+  Order_Total: 141.4
+  Password: weak
+  Phone: +1-362-290-6343
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 35.35
+  Product_SKU: SKU-17592
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-814650175
+  User_Type: N/A
+  ZIP_Code: 80716
+
+RELATED REQUIREMENTS:
+FR-022

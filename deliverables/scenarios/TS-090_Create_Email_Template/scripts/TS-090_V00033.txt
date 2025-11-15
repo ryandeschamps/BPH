@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-090_V00033
+
+SCENARIO: Create Product Sub-Category
+VARIANT: V00033
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create sub-categories under categories, so that I can further organize products.
+
+GIVEN:
+- Admin is logged in with account emily.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Create Product Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Low
+  Template_Type: Promotional
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-376454
+  Order_Quantity: 1
+  Order_Total: 81.07
+  Password: weak
+  Phone: +1-546-343-2428
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 81.07
+  Product_SKU: SKU-39142
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-811929427
+  User_Type: Admin
+  ZIP_Code: 55518
+
+RELATED REQUIREMENTS:
+FR-018

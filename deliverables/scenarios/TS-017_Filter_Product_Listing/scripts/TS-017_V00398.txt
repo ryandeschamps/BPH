@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00398
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00398
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account lisa.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Filter_Type: Color
+  Filter_Value: Multiple_Values
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-380364
+  Order_Quantity: 5
+  Order_Total: 219.05
+  Password: weak
+  Phone: +1-226-937-7769
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 43.81
+  Product_SKU: SKU-59277
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-685955493
+  User_Type: Buyer
+  ZIP_Code: 77016
+
+RELATED REQUIREMENTS:
+FR-003

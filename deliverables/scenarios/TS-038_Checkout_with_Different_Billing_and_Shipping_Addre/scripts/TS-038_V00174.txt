@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00174
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00174
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account mary.williams@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 09/27
+  Card_Number: 4532-****-****-4441
+  Device: Desktop
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-712204
+  Order_Quantity: 4
+  Order_Total: 278.08
+  Password: weak
+  Phone: +1-370-503-4216
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 69.52
+  Product_SKU: SKU-44190
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-609420641
+  User_Type: Buyer
+  ZIP_Code: 24009
+
+RELATED REQUIREMENTS:
+FR-007

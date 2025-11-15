@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00134
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00134
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account james.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-626451
+  Order_Quantity: 2
+  Order_Total: 311.1
+  Password: weak
+  Phone: +1-242-139-1993
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 155.55
+  Product_SKU: SKU-89018
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-580318281
+  User_Type: Buyer
+  ZIP_Code: 59059
+
+RELATED REQUIREMENTS:
+FR-008

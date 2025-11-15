@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-065_V00001
+
+SCENARIO: Prevent Review from Non-Purchaser
+VARIANT: V00001
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a system, I want to prevent users from reviewing products they haven't purchased, so that reviews are authentic.
+
+GIVEN:
+- Admin is logged in with account mary.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Prevent Review from Non-Purchaser
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Buyer_Filter: All
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-918199
+  Order_Quantity: 2
+  Order_Total: 478.06
+  Password: weak
+  Phone: +1-579-587-9452
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 239.03
+  Product_SKU: SKU-43003
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-147329853
+  User_Type: Admin
+  ZIP_Code: 68463
+
+RELATED REQUIREMENTS:
+FR-011

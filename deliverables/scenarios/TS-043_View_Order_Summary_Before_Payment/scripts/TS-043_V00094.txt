@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00094
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00094
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account emily.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_Items: Single
+  Device: Mobile
+  Network_Speed: High
+  Shipping_Cost: Express
+  Tax_Applicable: Yes
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-941022
+  Order_Quantity: 1
+  Order_Total: 106.06
+  Password: weak
+  Phone: +1-874-107-8097
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 106.06
+  Product_SKU: SKU-96297
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-735680763
+  User_Type: Buyer
+  ZIP_Code: 81672
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

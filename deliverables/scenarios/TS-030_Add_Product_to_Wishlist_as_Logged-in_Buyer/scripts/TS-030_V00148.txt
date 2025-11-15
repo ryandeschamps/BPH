@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00148
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00148
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account emily.rodriguez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Product_State: In_Stock
+  User_Type: Buyer
+  Wishlist_State: Product_Already_In_Wishlist
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-103559
+  Order_Quantity: 3
+  Order_Total: 885.48
+  Password: weak
+  Phone: +1-811-456-8146
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 295.16
+  Product_SKU: SKU-12639
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-397728008
+  User_Type: Buyer
+  ZIP_Code: 23789
+
+RELATED REQUIREMENTS:
+FR-005

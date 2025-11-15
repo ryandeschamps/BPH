@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00011
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00011
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account sarah.johnson@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Wrong_Username
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-417147
+  Order_Quantity: 5
+  Order_Total: 844.9
+  Password: weak
+  Phone: +1-356-172-3003
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 168.98
+  Product_SKU: SKU-32506
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-226326872
+  User_Type: Admin
+  ZIP_Code: 29108
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

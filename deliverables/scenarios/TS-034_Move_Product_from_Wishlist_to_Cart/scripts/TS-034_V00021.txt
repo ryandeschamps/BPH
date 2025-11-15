@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00021
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00021
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account john.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Empty
+  Device: Desktop
+  Network_Speed: Low
+  Product_State: In_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-490641
+  Order_Quantity: 4
+  Order_Total: 647.44
+  Password: weak
+  Phone: +1-393-899-1309
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 161.86
+  Product_SKU: SKU-78998
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-158118179
+  User_Type: Buyer
+  ZIP_Code: 66710
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

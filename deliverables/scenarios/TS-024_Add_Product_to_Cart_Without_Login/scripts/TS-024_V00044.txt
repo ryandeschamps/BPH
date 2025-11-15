@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-024_V00044
+
+SCENARIO: View Product Listing with Thumbnail and Price
+VARIANT: V00044
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product thumbnails, names, and prices in listings, so that I can quickly evaluate options.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Listing with Thumbnail and Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  Redirect_Action: Register
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-282884
+  Order_Quantity: 5
+  Order_Total: 203.8
+  Password: weak
+  Phone: +1-998-273-3913
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 40.76
+  Product_SKU: SKU-36569
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-111907619
+  User_Type: Visitor
+  ZIP_Code: 32793
+
+RELATED REQUIREMENTS:
+FR-004

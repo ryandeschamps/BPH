@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-082_V00045
+
+SCENARIO: Filter Orders by Status
+VARIANT: V00045
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to filter orders by status (Open, Confirmed, In Process, Shipped, Delivered), so that I can focus on specific order groups.
+
+GIVEN:
+- Admin is logged in with account lisa.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Filter Orders by Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Has_Orders: No
+  Network_Speed: Low
+  Product_Status: Any
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-515688
+  Order_Quantity: 5
+  Order_Total: 1483.65
+  Password: weak
+  Phone: +1-389-511-5878
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 296.73
+  Product_SKU: SKU-90106
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-997963591
+  User_Type: Admin
+  ZIP_Code: 34824
+
+RELATED REQUIREMENTS:
+FR-017

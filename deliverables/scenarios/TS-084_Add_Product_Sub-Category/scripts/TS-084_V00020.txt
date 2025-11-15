@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-084_V00020
+
+SCENARIO: Update Order Status to In Process
+VARIANT: V00020
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status to In Process, so that buyers know their order is being prepared.
+
+GIVEN:
+- Admin is logged in with account michael.brown@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to In Process
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Level: Sub_Level
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-922393
+  Order_Quantity: 2
+  Order_Total: 330.52
+  Password: weak
+  Phone: +1-813-862-6072
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 165.26
+  Product_SKU: SKU-73345
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-302051482
+  User_Type: Admin
+  ZIP_Code: 72250
+
+RELATED REQUIREMENTS:
+FR-017

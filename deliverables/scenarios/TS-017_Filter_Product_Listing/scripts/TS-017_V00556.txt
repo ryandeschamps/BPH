@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00556
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00556
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Filter_Type: Multiple_Filters
+  Filter_Value: Multiple_Values
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-814842
+  Order_Quantity: 4
+  Order_Total: 996.16
+  Password: weak
+  Phone: +1-982-359-3250
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 249.04
+  Product_SKU: SKU-26249
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-118574683
+  User_Type: Buyer
+  ZIP_Code: 67154
+
+RELATED REQUIREMENTS:
+FR-003

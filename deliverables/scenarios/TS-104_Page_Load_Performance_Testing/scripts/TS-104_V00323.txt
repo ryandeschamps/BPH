@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00323
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00323
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Load_Time: Slow
+  Network_Speed: Medium
+  Page_Type: Product_Detail
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-753352
+  Order_Quantity: 3
+  Order_Total: 328.92
+  Password: weak
+  Phone: +1-836-187-4163
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 109.64
+  Product_SKU: SKU-43743
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-415026562
+  User_Type: N/A
+  ZIP_Code: 13065
+
+RELATED REQUIREMENTS:
+FR-022

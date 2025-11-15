@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00079
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00079
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account sarah.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Edit_Type: Role
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-293179
+  Order_Quantity: 2
+  Order_Total: 166.12
+  Password: weak
+  Phone: +1-531-259-4397
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 83.06
+  Product_SKU: SKU-67169
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-541728590
+  User_Type: Admin
+  ZIP_Code: 92067
+
+RELATED REQUIREMENTS:
+FR-019

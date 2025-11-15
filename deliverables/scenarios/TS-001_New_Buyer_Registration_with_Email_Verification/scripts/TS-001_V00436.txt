@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00436
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00436
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.garcia@example.com
+- User enters phone: +1-521-259-7662
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: All_Valid
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Field_Values: All_Valid
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-254961
+  Order_Quantity: 3
+  Order_Total: 497.22
+  Password: weak
+  Phone: +1-521-259-7662
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 165.74
+  Product_SKU: SKU-60318
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-402742244
+  User_Type: Visitor
+  ZIP_Code: 33222
+
+RELATED REQUIREMENTS:
+FR-002

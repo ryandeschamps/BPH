@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00113
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00113
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account lisa.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Multiple_Items
+  Device: Mobile
+  Network_Speed: Medium
+  Removal_Action: Remove_One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-654068
+  Order_Quantity: 4
+  Order_Total: 652.72
+  Password: weak
+  Phone: +1-274-157-9172
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 163.18
+  Product_SKU: SKU-78548
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-243121573
+  User_Type: Buyer
+  ZIP_Code: 59488
+
+RELATED REQUIREMENTS:
+FR-005

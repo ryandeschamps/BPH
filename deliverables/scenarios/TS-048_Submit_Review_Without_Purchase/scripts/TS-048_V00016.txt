@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-048_V00016
+
+SCENARIO: Use Same Address for Billing and Shipping
+VARIANT: V00016
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:24
+
+DESCRIPTION:
+As a buyer, I want to use the same address for billing and shipping, so that I don't have to enter it twice.
+
+GIVEN:
+- Buyer is logged in with account david.miller@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Use Same Address for Billing and Shipping
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Product_State: Not_Purchased
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-298666
+  Order_Quantity: 3
+  Order_Total: 222.72
+  Password: weak
+  Phone: +1-494-533-3391
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 74.24
+  Product_SKU: SKU-78239
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-887615727
+  User_Type: Buyer
+  ZIP_Code: 95915
+
+RELATED REQUIREMENTS:
+FR-008

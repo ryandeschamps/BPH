@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-012_V00037
+
+SCENARIO: First-Time Social Login Account Creation
+VARIANT: V00037
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a visitor using social login for the first time, I want the system to auto-create my account, so that I don't need to fill registration forms.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for lisa.williams@example.com
+
+WHEN:
+- User enters email: lisa.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Email_State: Invalid_Format
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-518235
+  Order_Quantity: 5
+  Order_Total: 1467.8
+  Password: weak
+  Phone: +1-683-299-8434
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 293.56
+  Product_SKU: SKU-16181
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-555388298
+  User_Type: Visitor
+  ZIP_Code: 90534
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

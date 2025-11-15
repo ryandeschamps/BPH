@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00044
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00044
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account mary.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Credential_Error: Wrong_Password
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-589805
+  Order_Quantity: 4
+  Order_Total: 759.6
+  Password: weak
+  Phone: +1-308-935-8582
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 189.9
+  Product_SKU: SKU-84408
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-724437143
+  User_Type: Admin
+  ZIP_Code: 77314
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

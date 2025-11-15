@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00340
+
+SCENARIO: View Wishlist Items
+VARIANT: V00340
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account james.davis@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Email_Delivery: Delayed
+  Network_Speed: High
+  Order_Size: Single_Item
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-186544
+  Order_Quantity: 5
+  Order_Total: 387.1
+  Password: weak
+  Phone: +1-930-726-8408
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 77.42
+  Product_SKU: SKU-39685
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-232612450
+  User_Type: Buyer
+  ZIP_Code: 10970
+
+RELATED REQUIREMENTS:
+FR-006

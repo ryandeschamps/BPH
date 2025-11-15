@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00060
+
+SCENARIO: Create New Product Category
+VARIANT: V00060
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account john.martinez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  CMS_Page: Contact_Us
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-424032
+  Order_Quantity: 4
+  Order_Total: 842.68
+  Password: weak
+  Phone: +1-959-754-1872
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 210.67
+  Product_SKU: SKU-82996
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-513936461
+  User_Type: Admin
+  ZIP_Code: 87290
+
+RELATED REQUIREMENTS:
+FR-018

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00457
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00457
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account emily.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Rating_Range: High_Rated
+  Review_Count: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-884010
+  Order_Quantity: 3
+  Order_Total: 789.78
+  Password: weak
+  Phone: +1-617-532-8745
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 263.26
+  Product_SKU: SKU-60690
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-580954692
+  User_Type: Buyer
+  ZIP_Code: 53711
+
+RELATED REQUIREMENTS:
+FR-003

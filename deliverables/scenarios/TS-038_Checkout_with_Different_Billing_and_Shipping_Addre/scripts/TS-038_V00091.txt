@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00091
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00091
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account john.jones@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Both_New
+  Address_Type: Different_Addresses
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.jones@example.com
+  First_Name: John
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-904056
+  Order_Quantity: 2
+  Order_Total: 595.7
+  Password: weak
+  Phone: +1-534-995-3596
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 297.85
+  Product_SKU: SKU-39420
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-306288349
+  User_Type: Buyer
+  ZIP_Code: 36215
+
+RELATED REQUIREMENTS:
+FR-007

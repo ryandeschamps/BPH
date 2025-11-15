@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00034
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00034
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account james.johnson@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Empty
+  Device: Tablet
+  Network_Speed: High
+  Product_Variation: No_Variation
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-779202
+  Order_Quantity: 1
+  Order_Total: 286.9
+  Password: weak
+  Phone: +1-706-692-6790
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 286.9
+  Product_SKU: SKU-58797
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-117057400
+  User_Type: Buyer
+  ZIP_Code: 89791
+
+RELATED REQUIREMENTS:
+FR-003

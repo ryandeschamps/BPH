@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-073_V00018
+
+SCENARIO: Logout
+VARIANT: V00018
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to logout of my account, so that I can secure my session on shared devices.
+
+GIVEN:
+- Admin is logged in with account emily.smith@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Logout
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Status_Change: Open_To_Confirmed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-494848
+  Order_Quantity: 4
+  Order_Total: 567.56
+  Password: weak
+  Phone: +1-335-635-3469
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 141.89
+  Product_SKU: SKU-64647
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-266758261
+  User_Type: Admin
+  ZIP_Code: 11329
+
+RELATED REQUIREMENTS:
+FR-010

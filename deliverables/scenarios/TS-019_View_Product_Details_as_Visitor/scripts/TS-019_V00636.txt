@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00636
+
+SCENARIO: Product Browse by Category
+VARIANT: V00636
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Image_Count: Multiple_Images
+  Network_Speed: Low
+  Product_State: Has_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-394503
+  Order_Quantity: 3
+  Order_Total: 701.43
+  Password: weak
+  Phone: +1-271-283-3633
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 233.81
+  Product_SKU: SKU-39675
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-792701758
+  User_Type: Buyer
+  ZIP_Code: 65206
+
+RELATED REQUIREMENTS:
+FR-003

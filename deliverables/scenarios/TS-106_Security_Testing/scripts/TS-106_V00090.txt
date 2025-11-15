@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00090
+
+SCENARIO: Export Report to Excel
+VARIANT: V00090
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Security_Type: Encrypted_Data
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-983569
+  Order_Quantity: 5
+  Order_Total: 1476.45
+  Password: weak
+  Phone: +1-495-658-9480
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 295.29
+  Product_SKU: SKU-77300
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-350635207
+  User_Type: N/A
+  ZIP_Code: 68936
+
+RELATED REQUIREMENTS:
+FR-022

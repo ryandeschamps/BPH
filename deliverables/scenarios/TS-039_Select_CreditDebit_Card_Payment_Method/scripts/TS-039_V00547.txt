@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00547
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00547
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account robert.davis@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Card_Type: Mastercard
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 03/26
+  Card_Number: 4532-****-****-1397
+  Device: Tablet
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-937665
+  Order_Quantity: 1
+  Order_Total: 254.12
+  Password: weak
+  Phone: +1-486-259-6968
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 254.12
+  Product_SKU: SKU-86520
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-171636780
+  User_Type: Buyer
+  ZIP_Code: 15927
+
+RELATED REQUIREMENTS:
+FR-006

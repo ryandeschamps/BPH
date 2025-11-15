@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00021
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00021
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account sarah.miller@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Product_State: In_Stock
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-272838
+  Order_Quantity: 2
+  Order_Total: 540.4
+  Password: weak
+  Phone: +1-637-168-7904
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 270.2
+  Product_SKU: SKU-86529
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-950182978
+  User_Type: Buyer
+  ZIP_Code: 42211
+
+RELATED REQUIREMENTS:
+FR-005

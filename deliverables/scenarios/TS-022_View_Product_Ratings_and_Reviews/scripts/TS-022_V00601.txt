@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00601
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00601
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account john.jones@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Rating_Range: High_Rated
+  Review_Count: Few_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.jones@example.com
+  First_Name: John
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-937819
+  Order_Quantity: 4
+  Order_Total: 310.12
+  Password: weak
+  Phone: +1-583-747-9576
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 77.53
+  Product_SKU: SKU-78754
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-799781016
+  User_Type: Buyer
+  ZIP_Code: 78597
+
+RELATED REQUIREMENTS:
+FR-003

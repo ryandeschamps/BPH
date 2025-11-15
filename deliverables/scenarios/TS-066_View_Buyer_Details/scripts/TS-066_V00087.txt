@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00087
+
+SCENARIO: View Own Reviews
+VARIANT: V00087
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account emily.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Status: Has_Orders
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-532672
+  Order_Quantity: 1
+  Order_Total: 228.65
+  Password: weak
+  Phone: +1-649-961-5159
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 228.65
+  Product_SKU: SKU-28664
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-204085097
+  User_Type: Admin
+  ZIP_Code: 59318
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

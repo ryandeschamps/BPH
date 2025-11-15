@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00092
+
+SCENARIO: Edit Product Details
+VARIANT: V00092
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account mary.martinez@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Role_Type: Customer_Support
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-730905
+  Order_Quantity: 3
+  Order_Total: 690.36
+  Password: weak
+  Phone: +1-719-674-1539
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 230.12
+  Product_SKU: SKU-89192
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-967627842
+  User_Type: Admin
+  ZIP_Code: 37355
+
+RELATED REQUIREMENTS:
+FR-019

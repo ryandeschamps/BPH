@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00091
+
+SCENARIO: Export Report to Excel
+VARIANT: V00091
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Security_Type: Encrypted_Data
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.williams@example.com
+  First_Name: Michael
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-696800
+  Order_Quantity: 3
+  Order_Total: 793.98
+  Password: weak
+  Phone: +1-361-696-5401
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 264.66
+  Product_SKU: SKU-12127
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-721461530
+  User_Type: N/A
+  ZIP_Code: 27052
+
+RELATED REQUIREMENTS:
+FR-022

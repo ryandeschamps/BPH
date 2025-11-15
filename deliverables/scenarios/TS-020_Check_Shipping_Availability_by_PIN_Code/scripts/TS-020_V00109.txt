@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00109
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00109
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  PIN_Code_State: Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-346067
+  Order_Quantity: 3
+  Order_Total: 112.14
+  Password: weak
+  Phone: +1-812-774-5253
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 37.38
+  Product_SKU: SKU-41709
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-783844576
+  User_Type: Visitor
+  ZIP_Code: 14135
+
+RELATED REQUIREMENTS:
+FR-003

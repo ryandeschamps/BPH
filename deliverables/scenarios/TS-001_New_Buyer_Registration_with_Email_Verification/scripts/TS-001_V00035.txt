@@ -1,0 +1,79 @@
+TEST SCRIPT: TS-001_V00035
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00035
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: james.martinez@example.com
+- User enters phone: +1-672-775-5293
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for james.martinez@example.com
+- Verification email sent to james.martinez@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Field_Values: All_Valid
+  Input_Validity: Valid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-263171
+  Order_Quantity: 5
+  Order_Total: 696.25
+  Password: Test@123
+  Phone: +1-672-775-5293
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 139.25
+  Product_SKU: SKU-52398
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-949339947
+  User_Type: Visitor
+  ZIP_Code: 55007
+
+RELATED REQUIREMENTS:
+FR-002

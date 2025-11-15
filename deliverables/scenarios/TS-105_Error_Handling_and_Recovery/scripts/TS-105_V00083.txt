@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00083
+
+SCENARIO: Export Report to PDF
+VARIANT: V00083
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Error_Type: Timeout
+  Network_Speed: Medium
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-146638
+  Order_Quantity: 2
+  Order_Total: 255.32
+  Password: weak
+  Phone: +1-859-318-6956
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 127.66
+  Product_SKU: SKU-63736
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-979321701
+  User_Type: N/A
+  ZIP_Code: 24791
+
+RELATED REQUIREMENTS:
+FR-022

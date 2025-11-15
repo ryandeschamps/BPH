@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00220
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00220
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Visitor
+  Variation_Availability: All_Available
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-493032
+  Order_Quantity: 2
+  Order_Total: 81.58
+  Password: weak
+  Phone: +1-653-302-2471
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 40.79
+  Product_SKU: SKU-68952
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-155816161
+  User_Type: Visitor
+  ZIP_Code: 49905
+
+RELATED REQUIREMENTS:
+FR-003

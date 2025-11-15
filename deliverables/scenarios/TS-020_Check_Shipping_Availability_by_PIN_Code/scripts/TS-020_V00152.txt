@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00152
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00152
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  PIN_Code_State: Not_Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-812782
+  Order_Quantity: 3
+  Order_Total: 609.09
+  Password: weak
+  Phone: +1-878-584-7744
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 203.03
+  Product_SKU: SKU-60896
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-448657955
+  User_Type: Visitor
+  ZIP_Code: 99925
+
+RELATED REQUIREMENTS:
+FR-003

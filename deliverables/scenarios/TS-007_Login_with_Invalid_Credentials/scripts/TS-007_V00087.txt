@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00087
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00087
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.williams@example.com
+
+WHEN:
+- User enters email: sarah.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Both_Wrong
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-771700
+  Order_Quantity: 5
+  Order_Total: 1389.1
+  Password: weak
+  Phone: +1-743-451-9860
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 277.82
+  Product_SKU: SKU-71390
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-448689802
+  User_Type: Visitor
+  ZIP_Code: 16859
+
+RELATED REQUIREMENTS:
+FR-001

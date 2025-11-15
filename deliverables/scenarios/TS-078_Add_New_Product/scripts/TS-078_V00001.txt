@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00001
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00001
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account michael.smith@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single
+  Network_Speed: High
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.smith@example.com
+  First_Name: Michael
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-297664
+  Order_Quantity: 1
+  Order_Total: 274.19
+  Password: weak
+  Phone: +1-899-609-4156
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 274.19
+  Product_SKU: SKU-84106
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-120788445
+  User_Type: Admin
+  ZIP_Code: 47377
+
+RELATED REQUIREMENTS:
+FR-016

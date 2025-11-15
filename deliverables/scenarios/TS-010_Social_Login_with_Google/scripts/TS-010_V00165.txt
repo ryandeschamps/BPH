@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00165
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00165
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for james.johnson@example.com
+
+WHEN:
+- User enters email: james.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-699770
+  Order_Quantity: 3
+  Order_Total: 90.72
+  Password: weak
+  Phone: +1-439-759-9895
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Wool Sweater
+  Product_Price: 30.24
+  Product_SKU: SKU-64861
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-115996963
+  User_Type: Visitor
+  ZIP_Code: 76403
+
+RELATED REQUIREMENTS:
+FR-001

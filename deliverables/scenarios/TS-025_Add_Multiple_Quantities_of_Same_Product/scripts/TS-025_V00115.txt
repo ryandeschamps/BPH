@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00115
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00115
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account john.martinez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Quantity: Five
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-479980
+  Order_Quantity: 2
+  Order_Total: 242.28
+  Password: weak
+  Phone: +1-929-796-6581
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 121.14
+  Product_SKU: SKU-81306
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-267931847
+  User_Type: Buyer
+  ZIP_Code: 76655
+
+RELATED REQUIREMENTS:
+FR-004

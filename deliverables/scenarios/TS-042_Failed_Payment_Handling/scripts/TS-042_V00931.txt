@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00931
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00931
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Failure_Reason: Timeout
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 10/27
+  Card_Number: 4532-****-****-2579
+  Device: Mobile
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-874713
+  Order_Quantity: 5
+  Order_Total: 324.8
+  Password: weak
+  Phone: +1-300-195-8066
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Casual Shirt
+  Product_Price: 64.96
+  Product_SKU: SKU-66124
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-236034548
+  User_Type: Buyer
+  ZIP_Code: 93785
+
+RELATED REQUIREMENTS:
+FR-006

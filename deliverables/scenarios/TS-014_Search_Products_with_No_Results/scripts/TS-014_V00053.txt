@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00053
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00053
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Zero
+  Search_Query: Typo
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-737958
+  Order_Quantity: 4
+  Order_Total: 944.32
+  Password: Test@123
+  Phone: +1-253-643-5116
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 236.08
+  Product_SKU: SKU-23504
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-372061558
+  User_Type: Visitor
+  ZIP_Code: 37833
+
+RELATED REQUIREMENTS:
+FR-001

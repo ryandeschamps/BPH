@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-058_V00025
+
+SCENARIO: View Order Details
+VARIANT: V00025
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to view detailed information about a specific order, so that I can review what I purchased.
+
+GIVEN:
+- Buyer is logged in with account robert.brown@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-921374
+  Order_Quantity: 2
+  Order_Total: 340.58
+  Password: weak
+  Phone: +1-465-743-1029
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 170.29
+  Product_SKU: SKU-21196
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-854347902
+  User_Type: Buyer
+  ZIP_Code: 39835
+
+RELATED REQUIREMENTS:
+FR-012

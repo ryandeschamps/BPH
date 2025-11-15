@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-091_V00049
+
+SCENARIO: Edit Product Category
+VARIANT: V00049
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to edit category details, so that I can update category information.
+
+GIVEN:
+- Admin is logged in with account robert.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Target_Audience: Filtered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-806280
+  Order_Quantity: 1
+  Order_Total: 181.99
+  Password: weak
+  Phone: +1-837-563-8707
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 181.99
+  Product_SKU: SKU-77842
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-337462599
+  User_Type: Admin
+  ZIP_Code: 65985
+
+RELATED REQUIREMENTS:
+FR-018

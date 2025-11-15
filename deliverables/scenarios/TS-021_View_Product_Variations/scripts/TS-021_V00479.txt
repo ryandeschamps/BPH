@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00479
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00479
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account david.johnson@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Buyer
+  Variation_Availability: Some_Out_Of_Stock
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-936120
+  Order_Quantity: 4
+  Order_Total: 523.8
+  Password: weak
+  Phone: +1-740-457-9535
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 130.95
+  Product_SKU: SKU-29597
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-963635749
+  User_Type: Buyer
+  ZIP_Code: 61934
+
+RELATED REQUIREMENTS:
+FR-003

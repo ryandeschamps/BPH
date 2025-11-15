@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00104
+
+SCENARIO: Reject Product Review
+VARIANT: V00104
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account john.brown@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Bank_Field: Bank_Name
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-340442
+  Order_Quantity: 1
+  Order_Total: 161.39
+  Password: weak
+  Phone: +1-974-935-9055
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Canvas Sneakers
+  Product_Price: 161.39
+  Product_SKU: SKU-49418
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-674392969
+  User_Type: Admin
+  ZIP_Code: 14637
+
+RELATED REQUIREMENTS:
+FR-021

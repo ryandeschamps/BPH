@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00502
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00502
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account emily.smith@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Buyer
+  Variation_Availability: Some_Out_Of_Stock
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-224746
+  Order_Quantity: 5
+  Order_Total: 1315.85
+  Password: weak
+  Phone: +1-438-762-9191
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 263.17
+  Product_SKU: SKU-81855
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-206715795
+  User_Type: Buyer
+  ZIP_Code: 76461
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-075_V00009
+
+SCENARIO: Admin Receives Support Request Email
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to receive email notifications for support requests, so that I can respond to customer queries.
+
+GIVEN:
+- Admin is logged in with account emily.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: Admin Receives Support Request Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Status_Change: InProcess_To_Shipped
+  Tracking_Data: Complete
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-600870
+  Order_Quantity: 2
+  Order_Total: 498.48
+  Password: weak
+  Phone: +1-764-535-3363
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 249.24
+  Product_SKU: SKU-86332
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-166128199
+  User_Type: Admin
+  ZIP_Code: 64025
+
+RELATED REQUIREMENTS:
+FR-013, FR-027

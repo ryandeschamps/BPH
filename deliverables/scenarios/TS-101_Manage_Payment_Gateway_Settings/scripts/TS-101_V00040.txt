@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00040
+
+SCENARIO: Approve Product Review
+VARIANT: V00040
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account michael.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Payment_Status: Completed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-233524
+  Order_Quantity: 3
+  Order_Total: 181.8
+  Password: weak
+  Phone: +1-941-905-1733
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 60.6
+  Product_SKU: SKU-17137
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-461697263
+  User_Type: Admin
+  ZIP_Code: 24719
+
+RELATED REQUIREMENTS:
+FR-021

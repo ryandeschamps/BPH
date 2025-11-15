@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-012_V00015
+
+SCENARIO: First-Time Social Login Account Creation
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a visitor using social login for the first time, I want the system to auto-create my account, so that I don't need to fill registration forms.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.davis@example.com
+
+WHEN:
+- User enters email: emily.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Email_State: Not_Registered
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-560885
+  Order_Quantity: 4
+  Order_Total: 935.84
+  Password: weak
+  Phone: +1-532-825-3137
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 233.96
+  Product_SKU: SKU-84290
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-266094901
+  User_Type: Visitor
+  ZIP_Code: 59025
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

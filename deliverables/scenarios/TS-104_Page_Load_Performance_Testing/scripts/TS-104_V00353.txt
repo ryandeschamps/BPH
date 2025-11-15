@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00353
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00353
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Load_Time: Fast
+  Network_Speed: Medium
+  Page_Type: Cart
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-928430
+  Order_Quantity: 3
+  Order_Total: 349.53
+  Password: weak
+  Phone: +1-486-256-4028
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 116.51
+  Product_SKU: SKU-85256
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-482607327
+  User_Type: N/A
+  ZIP_Code: 22309
+
+RELATED REQUIREMENTS:
+FR-022

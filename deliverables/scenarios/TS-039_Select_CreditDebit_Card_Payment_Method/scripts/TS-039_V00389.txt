@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00389
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00389
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account michael.miller@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Card_Type: Discover
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  Payment_Status: Declined
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 09/26
+  Card_Number: 4532-****-****-9010
+  Device: Desktop
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-823751
+  Order_Quantity: 1
+  Order_Total: 237.98
+  Password: weak
+  Phone: +1-253-823-7318
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 237.98
+  Product_SKU: SKU-60109
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-728854900
+  User_Type: Buyer
+  ZIP_Code: 42852
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00015
+
+SCENARIO: View Own Reviews
+VARIANT: V00015
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account robert.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Status: Active
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-121158
+  Order_Quantity: 2
+  Order_Total: 234.58
+  Password: weak
+  Phone: +1-813-324-1332
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 117.29
+  Product_SKU: SKU-47865
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-626507919
+  User_Type: Admin
+  ZIP_Code: 76998
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00156
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00156
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account david.johnson@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Low
+  Product_State: In_Stock
+  User_Type: Buyer
+  Wishlist_State: Product_Already_In_Wishlist
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-947073
+  Order_Quantity: 1
+  Order_Total: 135.24
+  Password: weak
+  Phone: +1-823-932-3784
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 135.24
+  Product_SKU: SKU-40486
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-581225197
+  User_Type: Buyer
+  ZIP_Code: 51752
+
+RELATED REQUIREMENTS:
+FR-005

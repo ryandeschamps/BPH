@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00114
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00114
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Filter_Type: Color
+  Filter_Value: Multiple_Values
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-245292
+  Order_Quantity: 2
+  Order_Total: 569.36
+  Password: weak
+  Phone: +1-370-173-1317
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 284.68
+  Product_SKU: SKU-71182
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-558106294
+  User_Type: Visitor
+  ZIP_Code: 49517
+
+RELATED REQUIREMENTS:
+FR-003

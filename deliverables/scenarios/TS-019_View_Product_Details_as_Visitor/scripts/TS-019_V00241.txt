@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00241
+
+SCENARIO: Product Browse by Category
+VARIANT: V00241
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: Has_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-225589
+  Order_Quantity: 3
+  Order_Total: 88.83
+  Password: weak
+  Phone: +1-677-514-9422
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 29.61
+  Product_SKU: SKU-91412
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-198883809
+  User_Type: Visitor
+  ZIP_Code: 44961
+
+RELATED REQUIREMENTS:
+FR-003

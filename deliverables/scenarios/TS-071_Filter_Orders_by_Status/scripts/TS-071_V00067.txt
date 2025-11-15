@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00067
+
+SCENARIO: Change Password
+VARIANT: V00067
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account james.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Order_Status: Confirmed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-457159
+  Order_Quantity: 3
+  Order_Total: 240.78
+  Password: weak
+  Phone: +1-201-817-6911
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 80.26
+  Product_SKU: SKU-95678
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-917534038
+  User_Type: Admin
+  ZIP_Code: 87713
+
+RELATED REQUIREMENTS:
+FR-010

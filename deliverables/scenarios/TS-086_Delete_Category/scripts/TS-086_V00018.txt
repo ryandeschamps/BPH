@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-086_V00018
+
+SCENARIO: Update Order Status to Delivered
+VARIANT: V00018
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Delivered, so that the order lifecycle is complete.
+
+GIVEN:
+- Admin is logged in with account jane.davis@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Delivered
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Status: Active
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-821057
+  Order_Quantity: 2
+  Order_Total: 364.02
+  Password: weak
+  Phone: +1-783-483-8203
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 182.01
+  Product_SKU: SKU-58785
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-777897867
+  User_Type: Admin
+  ZIP_Code: 95823
+
+RELATED REQUIREMENTS:
+FR-017

@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00225
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00225
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Filter_Type: Multiple_Filters
+  Filter_Value: Single_Value
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-996358
+  Order_Quantity: 1
+  Order_Total: 265.05
+  Password: weak
+  Phone: +1-739-427-2992
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 265.05
+  Product_SKU: SKU-32626
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-815898754
+  User_Type: Visitor
+  ZIP_Code: 67891
+
+RELATED REQUIREMENTS:
+FR-003

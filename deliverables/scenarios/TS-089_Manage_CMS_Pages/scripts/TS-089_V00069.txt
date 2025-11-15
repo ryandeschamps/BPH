@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00069
+
+SCENARIO: Create New Product Category
+VARIANT: V00069
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account lisa.johnson@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  CMS_Page: Contact_Us
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-556459
+  Order_Quantity: 1
+  Order_Total: 101.14
+  Password: weak
+  Phone: +1-339-680-4701
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 101.14
+  Product_SKU: SKU-67981
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-130242692
+  User_Type: Admin
+  ZIP_Code: 69479
+
+RELATED REQUIREMENTS:
+FR-018

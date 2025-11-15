@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00005
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00005
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  Redirect_Action: Login
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-282954
+  Order_Quantity: 1
+  Order_Total: 131.91
+  Password: weak
+  Phone: +1-823-913-6321
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 131.91
+  Product_SKU: SKU-41972
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-332004469
+  User_Type: Visitor
+  ZIP_Code: 63349
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

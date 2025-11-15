@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-003_V00073
+
+SCENARIO: Registration with Mismatched Passwords
+VARIANT: V00073
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate that my password and confirm password match, so that I don't lock myself out with a typo.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: michael.smith@example.com
+- User enters phone: +1-483-566-2876
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  Password_State: Empty_Confirm
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.smith@example.com
+  First_Name: Michael
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-210262
+  Order_Quantity: 1
+  Order_Total: 290.94
+  Password: weak
+  Phone: +1-483-566-2876
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 290.94
+  Product_SKU: SKU-83974
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-801805029
+  User_Type: Visitor
+  ZIP_Code: 16247
+
+RELATED REQUIREMENTS:
+FR-002

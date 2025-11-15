@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00322
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00322
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Load_Time: Slow
+  Network_Speed: High
+  Page_Type: Product_Detail
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-389446
+  Order_Quantity: 3
+  Order_Total: 487.89
+  Password: weak
+  Phone: +1-437-441-4601
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 162.63
+  Product_SKU: SKU-11794
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-721038620
+  User_Type: N/A
+  ZIP_Code: 71758
+
+RELATED REQUIREMENTS:
+FR-022

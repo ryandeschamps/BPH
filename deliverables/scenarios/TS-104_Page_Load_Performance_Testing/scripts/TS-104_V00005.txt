@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00005
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00005
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Load_Time: Fast
+  Network_Speed: Medium
+  Page_Type: Home
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-774305
+  Order_Quantity: 1
+  Order_Total: 185.01
+  Password: weak
+  Phone: +1-764-841-8635
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 185.01
+  Product_SKU: SKU-38498
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-107163419
+  User_Type: N/A
+  ZIP_Code: 37656
+
+RELATED REQUIREMENTS:
+FR-022

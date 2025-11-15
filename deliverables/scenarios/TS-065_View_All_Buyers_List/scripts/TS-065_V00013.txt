@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-065_V00013
+
+SCENARIO: Prevent Review from Non-Purchaser
+VARIANT: V00013
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a system, I want to prevent users from reviewing products they haven't purchased, so that reviews are authentic.
+
+GIVEN:
+- Admin is logged in with account james.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Prevent Review from Non-Purchaser
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Filter: All
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-436737
+  Order_Quantity: 2
+  Order_Total: 394.84
+  Password: weak
+  Phone: +1-758-222-8598
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 197.42
+  Product_SKU: SKU-98769
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-820358326
+  User_Type: Admin
+  ZIP_Code: 40156
+
+RELATED REQUIREMENTS:
+FR-011

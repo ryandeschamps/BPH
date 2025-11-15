@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00156
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00156
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account robert.martinez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for robert.martinez@example.com
+
+WHEN:
+- User enters email: robert.martinez@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Email_State: Verified
+  Input_Validity: Valid
+  Network_Speed: Low
+  Reset_Link_State: Expired
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-307654
+  Order_Quantity: 1
+  Order_Total: 121.39
+  Password: Test@123
+  Phone: +1-201-876-4373
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 121.39
+  Product_SKU: SKU-40569
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-927322017
+  User_Type: Buyer
+  ZIP_Code: 39941
+
+RELATED REQUIREMENTS:
+FR-001

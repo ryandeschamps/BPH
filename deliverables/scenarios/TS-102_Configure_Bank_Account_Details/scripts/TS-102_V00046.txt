@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00046
+
+SCENARIO: Reject Product Review
+VARIANT: V00046
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account john.davis@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Bank_Field: Routing
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-203545
+  Order_Quantity: 4
+  Order_Total: 752.44
+  Password: weak
+  Phone: +1-473-787-3444
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 188.11
+  Product_SKU: SKU-33419
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-675450152
+  User_Type: Admin
+  ZIP_Code: 86744
+
+RELATED REQUIREMENTS:
+FR-021

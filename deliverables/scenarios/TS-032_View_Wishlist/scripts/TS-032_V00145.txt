@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00145
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00145
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account jane.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: High
+  User_Type: Buyer
+  Wishlist_State: Single_Item
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-663685
+  Order_Quantity: 1
+  Order_Total: 245.05
+  Password: weak
+  Phone: +1-880-587-9400
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 245.05
+  Product_SKU: SKU-17734
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-601379767
+  User_Type: Buyer
+  ZIP_Code: 85268
+
+RELATED REQUIREMENTS:
+FR-007

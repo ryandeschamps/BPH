@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00046
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00046
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Filter_Type: Size
+  Filter_Value: Multiple_Values
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-937571
+  Order_Quantity: 4
+  Order_Total: 812.0
+  Password: weak
+  Phone: +1-662-908-6028
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 203.0
+  Product_SKU: SKU-97164
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-730288929
+  User_Type: Visitor
+  ZIP_Code: 88238
+
+RELATED REQUIREMENTS:
+FR-003

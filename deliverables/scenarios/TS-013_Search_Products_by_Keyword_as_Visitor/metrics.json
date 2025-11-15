@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-013",
+  "scenario_title": "Search Products by Keyword as Visitor",
+  "variant_count": 864,
+  "expected_variant_count": 864,
+  "parameters": {
+    "User_Type": 2,
+    "Input_Validity": 1,
+    "Search_Query": 4,
+    "Results_Count": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-013_Search_Products_by_Keyword_as_Visitor/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00138
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00138
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-808281
+  Order_Quantity: 1
+  Order_Total: 180.7
+  Password: weak
+  Phone: +1-371-183-8208
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 180.7
+  Product_SKU: SKU-68359
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-911999713
+  User_Type: Buyer
+  ZIP_Code: 43916
+
+RELATED REQUIREMENTS:
+FR-008

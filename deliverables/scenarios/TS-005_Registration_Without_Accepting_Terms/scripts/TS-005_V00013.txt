@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-005_V00013
+
+SCENARIO: Registration Without Accepting Terms and Conditions
+VARIANT: V00013
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a visitor, I want to be prevented from registering if I don't accept terms, so that the website ensures legal compliance.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: jane.brown@example.com
+- User enters phone: +1-974-931-4247
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  Terms_Accepted: No
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-777413
+  Order_Quantity: 4
+  Order_Total: 208.6
+  Password: weak
+  Phone: +1-974-931-4247
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 52.15
+  Product_SKU: SKU-19341
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-682576148
+  User_Type: Visitor
+  ZIP_Code: 80801
+
+RELATED REQUIREMENTS:
+FR-002

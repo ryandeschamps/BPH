@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-045_V00186
+
+SCENARIO: Proceed to Checkout from Cart
+VARIANT: V00186
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:23
+
+DESCRIPTION:
+As a buyer, I want to proceed to checkout from my cart, so that I can complete my purchase.
+
+GIVEN:
+- Buyer is logged in with account david.rodriguez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to david.rodriguez@example.com
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Social_Platform: Twitter
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-578612
+  Order_Quantity: 2
+  Order_Total: 474.4
+  Password: weak
+  Phone: +1-351-849-1220
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 237.2
+  Product_SKU: SKU-37746
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-146586189
+  User_Type: Buyer
+  ZIP_Code: 34998
+
+RELATED REQUIREMENTS:
+FR-008

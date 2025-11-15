@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00008
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00008
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  Redirect_Action: Login
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-197513
+  Order_Quantity: 3
+  Order_Total: 434.28
+  Password: weak
+  Phone: +1-465-268-4480
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 144.76
+  Product_SKU: SKU-54078
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-835148460
+  User_Type: Visitor
+  ZIP_Code: 11537
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

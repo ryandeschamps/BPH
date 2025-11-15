@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00074
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00074
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.johnson@example.com
+- User enters phone: +1-228-984-9307
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Email_State: Unverified_Account
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-708354
+  Order_Quantity: 1
+  Order_Total: 166.66
+  Password: weak
+  Phone: +1-228-984-9307
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 166.66
+  Product_SKU: SKU-82343
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-836429056
+  User_Type: Visitor
+  ZIP_Code: 14202
+
+RELATED REQUIREMENTS:
+FR-002

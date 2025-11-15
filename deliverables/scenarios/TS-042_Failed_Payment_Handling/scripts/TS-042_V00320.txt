@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00320
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00320
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account david.williams@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Failure_Reason: Declined
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 11/26
+  Card_Number: 4532-****-****-3103
+  Device: Mobile
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-319197
+  Order_Quantity: 5
+  Order_Total: 370.5
+  Password: weak
+  Phone: +1-761-729-9987
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Wool Sweater
+  Product_Price: 74.1
+  Product_SKU: SKU-31897
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-102649170
+  User_Type: Buyer
+  ZIP_Code: 64130
+
+RELATED REQUIREMENTS:
+FR-006

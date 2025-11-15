@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00089
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00089
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Medium
+  PIN_Code_State: Invalid_Format
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-447022
+  Order_Quantity: 3
+  Order_Total: 855.06
+  Password: Test@123
+  Phone: +1-511-315-5618
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 285.02
+  Product_SKU: SKU-18789
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-890780610
+  User_Type: Visitor
+  ZIP_Code: 21081
+
+RELATED REQUIREMENTS:
+FR-003

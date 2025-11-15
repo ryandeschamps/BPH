@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-092_V00013
+
+SCENARIO: Activate/Deactivate Product Category
+VARIANT: V00013
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate categories, so that I can control category visibility.
+
+GIVEN:
+- Admin is logged in with account sarah.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Report_Period: Date_Range
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-942312
+  Order_Quantity: 2
+  Order_Total: 184.88
+  Password: weak
+  Phone: +1-558-261-1712
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 92.44
+  Product_SKU: SKU-68560
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-578564905
+  User_Type: Admin
+  ZIP_Code: 86703
+
+RELATED REQUIREMENTS:
+FR-018

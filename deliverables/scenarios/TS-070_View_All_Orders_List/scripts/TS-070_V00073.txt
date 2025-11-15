@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-070_V00073
+
+SCENARIO: Edit Profile Details
+VARIANT: V00073
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to edit my email and phone number, so that I can keep my information current.
+
+GIVEN:
+- Admin is logged in with account emily.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Profile Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Order_Filter: By_Date
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-575212
+  Order_Quantity: 3
+  Order_Total: 88.17
+  Password: weak
+  Phone: +1-247-822-8714
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 29.39
+  Product_SKU: SKU-37645
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-311823296
+  User_Type: Admin
+  ZIP_Code: 56528
+
+RELATED REQUIREMENTS:
+FR-010

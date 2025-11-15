@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-002_V00059
+
+SCENARIO: Registration with Invalid Email Format
+VARIANT: V00059
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate my email format during registration, so that I provide a valid email address.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: john.williams@example.com
+- User enters phone: +1-411-369-9576
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_Format: Invalid_Domain
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-492801
+  Order_Quantity: 3
+  Order_Total: 297.96
+  Password: weak
+  Phone: +1-411-369-9576
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 99.32
+  Product_SKU: SKU-96639
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-455745704
+  User_Type: Visitor
+  ZIP_Code: 31689
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00077
+
+SCENARIO: Track Current Order Status
+VARIANT: V00077
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account james.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Message_Type: Feedback
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-212317
+  Order_Quantity: 1
+  Order_Total: 60.81
+  Password: weak
+  Phone: +1-792-542-1620
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 60.81
+  Product_SKU: SKU-65783
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-535087156
+  User_Type: Buyer
+  ZIP_Code: 59130
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

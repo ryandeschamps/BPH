@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00115
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00115
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account michael.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Removal_Action: Remove_All
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-329529
+  Order_Quantity: 1
+  Order_Total: 259.83
+  Password: weak
+  Phone: +1-388-500-2313
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 259.83
+  Product_SKU: SKU-24436
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-446756637
+  User_Type: Buyer
+  ZIP_Code: 19711
+
+RELATED REQUIREMENTS:
+FR-007

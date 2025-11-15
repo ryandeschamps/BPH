@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-002_V00019
+
+SCENARIO: Registration with Invalid Email Format
+VARIANT: V00019
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate my email format during registration, so that I provide a valid email address.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: jane.davis@example.com
+- User enters phone: +1-305-894-4482
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Email_Format: Missing_At
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-680805
+  Order_Quantity: 2
+  Order_Total: 56.3
+  Password: weak
+  Phone: +1-305-894-4482
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 28.15
+  Product_SKU: SKU-82543
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-961967880
+  User_Type: Visitor
+  ZIP_Code: 36475
+
+RELATED REQUIREMENTS:
+FR-002

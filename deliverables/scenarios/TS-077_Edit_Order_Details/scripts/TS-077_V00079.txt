@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-077_V00079
+
+SCENARIO: View All Buyers List
+VARIANT: V00079
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view list of all registered buyers, so that I can manage customers.
+
+GIVEN:
+- Admin is logged in with account sarah.jones@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View All Buyers List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Edit_Type: Quantity
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-669922
+  Order_Quantity: 1
+  Order_Total: 28.82
+  Password: weak
+  Phone: +1-772-511-3789
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 28.82
+  Product_SKU: SKU-88157
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-590641391
+  User_Type: Admin
+  ZIP_Code: 54670
+
+RELATED REQUIREMENTS:
+FR-016

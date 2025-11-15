@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00254
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00254
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for mary.miller@example.com
+
+WHEN:
+- User enters email: mary.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-101211
+  Order_Quantity: 5
+  Order_Total: 375.0
+  Password: weak
+  Phone: +1-409-205-1989
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 75.0
+  Product_SKU: SKU-24259
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-726144941
+  User_Type: Visitor
+  ZIP_Code: 30342
+
+RELATED REQUIREMENTS:
+FR-001

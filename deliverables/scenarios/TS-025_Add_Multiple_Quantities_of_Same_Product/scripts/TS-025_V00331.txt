@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00331
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00331
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account emily.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Quantity: Hundred
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-248894
+  Order_Quantity: 4
+  Order_Total: 767.68
+  Password: weak
+  Phone: +1-604-209-1068
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 191.92
+  Product_SKU: SKU-76477
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-646583527
+  User_Type: Buyer
+  ZIP_Code: 64605
+
+RELATED REQUIREMENTS:
+FR-004

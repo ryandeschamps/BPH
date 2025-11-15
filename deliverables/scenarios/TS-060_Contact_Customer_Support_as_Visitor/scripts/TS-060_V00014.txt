@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-060_V00014
+
+SCENARIO: View Shipping Tracking Information
+VARIANT: V00014
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer with a shipped order, I want to see tracking information (carrier, tracking ID), so that I can track my package.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Shipping Tracking Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Message_Type: Question
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-311387
+  Order_Quantity: 3
+  Order_Total: 645.21
+  Password: weak
+  Phone: +1-442-214-3469
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 215.07
+  Product_SKU: SKU-92984
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-236862785
+  User_Type: Visitor
+  ZIP_Code: 42383
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

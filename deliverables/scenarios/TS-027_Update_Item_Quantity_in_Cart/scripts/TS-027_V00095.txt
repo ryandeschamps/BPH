@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00095
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00095
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Quantity_Change: Decrease
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-915358
+  Order_Quantity: 2
+  Order_Total: 445.2
+  Password: weak
+  Phone: +1-242-222-7160
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 222.6
+  Product_SKU: SKU-32780
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-682617708
+  User_Type: Buyer
+  ZIP_Code: 11519
+
+RELATED REQUIREMENTS:
+FR-005

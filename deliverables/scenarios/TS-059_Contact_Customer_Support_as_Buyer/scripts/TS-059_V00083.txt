@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00083
+
+SCENARIO: Track Current Order Status
+VARIANT: V00083
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Message_Type: Feedback
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-522260
+  Order_Quantity: 2
+  Order_Total: 307.72
+  Password: weak
+  Phone: +1-248-287-8375
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Casual Shirt
+  Product_Price: 153.86
+  Product_SKU: SKU-42598
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-812741373
+  User_Type: Buyer
+  ZIP_Code: 98345
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

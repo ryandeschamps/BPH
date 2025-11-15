@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00675
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00675
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.johnson@example.com
+
+WHEN:
+- User enters email: sarah.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: One
+  Sub_Category_Type: Accessories
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-409059
+  Order_Quantity: 5
+  Order_Total: 990.95
+  Password: weak
+  Phone: +1-708-908-3531
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 198.19
+  Product_SKU: SKU-44551
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-472939969
+  User_Type: Visitor
+  ZIP_Code: 11475
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00724
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00724
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: lisa.williams@example.com
+- User enters phone: +1-325-174-2310
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Weak_Password
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Field_Values: Weak_Password
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-255933
+  Order_Quantity: 3
+  Order_Total: 236.31
+  Password: weak
+  Phone: +1-325-174-2310
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 78.77
+  Product_SKU: SKU-23788
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-579985932
+  User_Type: Visitor
+  ZIP_Code: 60390
+
+RELATED REQUIREMENTS:
+FR-002

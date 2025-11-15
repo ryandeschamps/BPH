@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-067_V00045
+
+SCENARIO: Share Product on Social Media as Guest
+VARIANT: V00045
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a guest user, I want to share a product on social media, so that I can show it to friends without logging in.
+
+GIVEN:
+- Admin is logged in with account sarah.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Edit_Field: Email
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-114140
+  Order_Quantity: 1
+  Order_Total: 275.68
+  Password: weak
+  Phone: +1-394-633-5396
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 275.68
+  Product_SKU: SKU-70860
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-448828197
+  User_Type: Admin
+  ZIP_Code: 99282
+
+RELATED REQUIREMENTS:
+FR-009

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00571
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00571
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account david.williams@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Buyer
+  Variation_Availability: All_Available
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-412481
+  Order_Quantity: 2
+  Order_Total: 191.3
+  Password: weak
+  Phone: +1-210-840-6723
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 95.65
+  Product_SKU: SKU-66235
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-969164700
+  User_Type: Buyer
+  ZIP_Code: 99778
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00153
+
+SCENARIO: Product Search with No Results
+VARIANT: V00153
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Sort_By: Oldest_First
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-908946
+  Order_Quantity: 3
+  Order_Total: 717.66
+  Password: weak
+  Phone: +1-496-622-2822
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 239.22
+  Product_SKU: SKU-90085
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-196132324
+  User_Type: Visitor
+  ZIP_Code: 34856
+
+RELATED REQUIREMENTS:
+FR-003

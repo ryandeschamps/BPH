@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00025
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00025
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account sarah.jones@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Wrong_Username
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-500881
+  Order_Quantity: 2
+  Order_Total: 353.66
+  Password: weak
+  Phone: +1-687-395-5555
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 176.83
+  Product_SKU: SKU-12080
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-144069429
+  User_Type: Admin
+  ZIP_Code: 72155
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

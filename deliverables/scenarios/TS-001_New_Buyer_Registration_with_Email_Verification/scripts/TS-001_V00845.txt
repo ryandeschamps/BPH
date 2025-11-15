@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00845
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00845
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.garcia@example.com
+- User enters phone: +1-975-894-3151
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Duplicate_Email
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Field_Values: Duplicate_Email
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-311937
+  Order_Quantity: 1
+  Order_Total: 203.86
+  Password: weak
+  Phone: +1-975-894-3151
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 203.86
+  Product_SKU: SKU-85796
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-602783851
+  User_Type: Visitor
+  ZIP_Code: 11425
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00289
+
+SCENARIO: Product Browse by Category
+VARIANT: V00289
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-882194
+  Order_Quantity: 5
+  Order_Total: 1068.25
+  Password: weak
+  Phone: +1-509-912-3169
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 213.65
+  Product_SKU: SKU-27991
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-131226478
+  User_Type: Visitor
+  ZIP_Code: 26125
+
+RELATED REQUIREMENTS:
+FR-003

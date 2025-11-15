@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00024
+
+SCENARIO: Product Search with No Results
+VARIANT: V00024
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Sort_By: Price_Low_High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-213567
+  Order_Quantity: 1
+  Order_Total: 125.26
+  Password: weak
+  Phone: +1-841-499-8226
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 125.26
+  Product_SKU: SKU-73708
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-524877802
+  User_Type: Visitor
+  ZIP_Code: 49881
+
+RELATED REQUIREMENTS:
+FR-003

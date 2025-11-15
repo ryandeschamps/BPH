@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00071
+
+SCENARIO: Export Report to PDF
+VARIANT: V00071
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Error_Type: 500
+  Network_Speed: Medium
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-893536
+  Order_Quantity: 4
+  Order_Total: 624.08
+  Password: weak
+  Phone: +1-876-794-1456
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 156.02
+  Product_SKU: SKU-18795
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-223129911
+  User_Type: N/A
+  ZIP_Code: 94986
+
+RELATED REQUIREMENTS:
+FR-022

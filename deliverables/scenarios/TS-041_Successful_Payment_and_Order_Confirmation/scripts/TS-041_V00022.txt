@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00022
+
+SCENARIO: View Wishlist Items
+VARIANT: V00022
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account emily.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_Delivery: Delivered
+  Network_Speed: High
+  Order_Size: Single_Item
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 03/26
+  Card_Number: 4532-****-****-2684
+  Device: Mobile
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-396536
+  Order_Quantity: 1
+  Order_Total: 115.26
+  Password: weak
+  Phone: +1-497-974-8381
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 115.26
+  Product_SKU: SKU-81637
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-433213868
+  User_Type: Buyer
+  ZIP_Code: 16895
+
+RELATED REQUIREMENTS:
+FR-006

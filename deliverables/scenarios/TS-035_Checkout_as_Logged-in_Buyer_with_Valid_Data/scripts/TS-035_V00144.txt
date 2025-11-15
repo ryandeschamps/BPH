@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00144
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00144
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account lisa.jones@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Edge
+  Cart_Items: Multiple
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 02/27
+  Card_Number: 4532-****-****-2522
+  Device: Tablet
+  Email: lisa.jones@example.com
+  First_Name: Lisa
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-559966
+  Order_Quantity: 5
+  Order_Total: 176.15
+  Password: Test@123
+  Phone: +1-257-432-8261
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 35.23
+  Product_SKU: SKU-96315
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-911949288
+  User_Type: Buyer
+  ZIP_Code: 79602
+
+RELATED REQUIREMENTS:
+FR-007

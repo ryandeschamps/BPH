@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00527
+
+SCENARIO: Forgot Password Request
+VARIANT: V00527
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account jane.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: One_Result
+  Search_Query: Single_Keyword
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-580802
+  Order_Quantity: 4
+  Order_Total: 1044.76
+  Password: Test@123
+  Phone: +1-576-785-4833
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 261.19
+  Product_SKU: SKU-36782
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-749694120
+  User_Type: Buyer
+  ZIP_Code: 37293
+
+RELATED REQUIREMENTS:
+FR-001

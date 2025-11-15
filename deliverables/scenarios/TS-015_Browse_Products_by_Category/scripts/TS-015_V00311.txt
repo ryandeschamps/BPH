@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00311
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00311
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for david.jones@example.com
+
+WHEN:
+- User enters email: david.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Type: Kids
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Count: Many
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-162829
+  Order_Quantity: 1
+  Order_Total: 268.13
+  Password: weak
+  Phone: +1-335-575-3727
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 268.13
+  Product_SKU: SKU-67424
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-980233780
+  User_Type: Visitor
+  ZIP_Code: 80315
+
+RELATED REQUIREMENTS:
+FR-014

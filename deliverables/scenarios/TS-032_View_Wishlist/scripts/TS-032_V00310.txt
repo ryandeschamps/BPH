@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00310
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00310
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account robert.johnson@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: High
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-586330
+  Order_Quantity: 3
+  Order_Total: 407.07
+  Password: weak
+  Phone: +1-264-625-4358
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 135.69
+  Product_SKU: SKU-97131
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-849438377
+  User_Type: Buyer
+  ZIP_Code: 23685
+
+RELATED REQUIREMENTS:
+FR-007

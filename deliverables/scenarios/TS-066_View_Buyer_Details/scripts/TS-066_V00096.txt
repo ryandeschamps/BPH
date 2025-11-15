@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00096
+
+SCENARIO: View Own Reviews
+VARIANT: V00096
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account john.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: Has_Orders
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-703531
+  Order_Quantity: 1
+  Order_Total: 121.78
+  Password: weak
+  Phone: +1-874-739-1651
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 121.78
+  Product_SKU: SKU-95176
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-625155611
+  User_Type: Admin
+  ZIP_Code: 72538
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

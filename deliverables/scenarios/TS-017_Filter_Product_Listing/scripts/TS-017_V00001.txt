@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00001
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00001
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Filter_Type: Size
+  Filter_Value: Single_Value
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-125510
+  Order_Quantity: 2
+  Order_Total: 249.5
+  Password: weak
+  Phone: +1-357-919-9390
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 124.75
+  Product_SKU: SKU-97582
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-700263107
+  User_Type: Visitor
+  ZIP_Code: 32359
+
+RELATED REQUIREMENTS:
+FR-003

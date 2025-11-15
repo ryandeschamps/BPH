@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-032",
+  "scenario_title": "View Wishlist",
+  "variant_count": 324,
+  "expected_variant_count": 324,
+  "parameters": {
+    "User_Type": 1,
+    "Wishlist_State": 3,
+    "Item_Availability": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-032_View_Wishlist/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00122
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00122
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for michael.rodriguez@example.com
+
+WHEN:
+- User enters email: michael.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Empty_Email
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-607783
+  Order_Quantity: 1
+  Order_Total: 132.36
+  Password: weak
+  Phone: +1-743-133-7862
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 132.36
+  Product_SKU: SKU-84094
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-214289864
+  User_Type: Visitor
+  ZIP_Code: 34166
+
+RELATED REQUIREMENTS:
+FR-001

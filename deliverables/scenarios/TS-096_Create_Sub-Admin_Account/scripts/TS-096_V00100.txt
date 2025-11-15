@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00100
+
+SCENARIO: Edit Product Details
+VARIANT: V00100
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account robert.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Role_Type: Customer_Support
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-412814
+  Order_Quantity: 5
+  Order_Total: 1094.95
+  Password: weak
+  Phone: +1-936-571-7839
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 218.99
+  Product_SKU: SKU-98936
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-453622279
+  User_Type: Admin
+  ZIP_Code: 29714
+
+RELATED REQUIREMENTS:
+FR-019

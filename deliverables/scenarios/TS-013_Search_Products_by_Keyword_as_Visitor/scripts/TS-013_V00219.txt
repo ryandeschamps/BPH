@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00219
+
+SCENARIO: Forgot Password Request
+VARIANT: V00219
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Many_Results
+  Search_Query: Partial_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-337722
+  Order_Quantity: 1
+  Order_Total: 211.0
+  Password: Test@123
+  Phone: +1-433-153-1623
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 211.0
+  Product_SKU: SKU-78733
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-610787375
+  User_Type: Visitor
+  ZIP_Code: 37697
+
+RELATED REQUIREMENTS:
+FR-001

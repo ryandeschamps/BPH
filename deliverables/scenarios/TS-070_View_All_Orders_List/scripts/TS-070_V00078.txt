@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-070_V00078
+
+SCENARIO: Edit Profile Details
+VARIANT: V00078
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to edit my email and phone number, so that I can keep my information current.
+
+GIVEN:
+- Admin is logged in with account sarah.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Profile Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Order_Filter: By_Date
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-794906
+  Order_Quantity: 2
+  Order_Total: 159.56
+  Password: weak
+  Phone: +1-434-833-1476
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Wool Sweater
+  Product_Price: 79.78
+  Product_SKU: SKU-36413
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-468955913
+  User_Type: Admin
+  ZIP_Code: 17692
+
+RELATED REQUIREMENTS:
+FR-010

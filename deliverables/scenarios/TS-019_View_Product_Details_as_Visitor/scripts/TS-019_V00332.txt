@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00332
+
+SCENARIO: Product Browse by Category
+VARIANT: V00332
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Image_Count: Multiple_Images
+  Network_Speed: Medium
+  Product_State: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-936883
+  Order_Quantity: 2
+  Order_Total: 167.84
+  Password: weak
+  Phone: +1-661-704-3540
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 83.92
+  Product_SKU: SKU-29474
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-572913794
+  User_Type: Visitor
+  ZIP_Code: 95543
+
+RELATED REQUIREMENTS:
+FR-003

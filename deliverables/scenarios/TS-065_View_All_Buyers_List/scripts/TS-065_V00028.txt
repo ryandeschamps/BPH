@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-065_V00028
+
+SCENARIO: Prevent Review from Non-Purchaser
+VARIANT: V00028
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a system, I want to prevent users from reviewing products they haven't purchased, so that reviews are authentic.
+
+GIVEN:
+- Admin is logged in with account jane.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Prevent Review from Non-Purchaser
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Buyer_Filter: All
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-568849
+  Order_Quantity: 3
+  Order_Total: 816.06
+  Password: weak
+  Phone: +1-693-701-8941
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 272.02
+  Product_SKU: SKU-17155
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-758374673
+  User_Type: Admin
+  ZIP_Code: 16692
+
+RELATED REQUIREMENTS:
+FR-011

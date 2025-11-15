@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00544
+
+SCENARIO: Forgot Password Request
+VARIANT: V00544
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account sarah.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: Many_Results
+  Search_Query: Multiple_Keywords
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-437289
+  Order_Quantity: 1
+  Order_Total: 279.29
+  Password: Test@123
+  Phone: +1-744-958-9800
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Wool Sweater
+  Product_Price: 279.29
+  Product_SKU: SKU-93504
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-801951372
+  User_Type: Buyer
+  ZIP_Code: 74096
+
+RELATED REQUIREMENTS:
+FR-001

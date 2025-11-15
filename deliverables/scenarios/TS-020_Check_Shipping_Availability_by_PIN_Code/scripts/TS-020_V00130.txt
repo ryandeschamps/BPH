@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00130
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00130
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  PIN_Code_State: Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-739791
+  Order_Quantity: 1
+  Order_Total: 173.3
+  Password: weak
+  Phone: +1-513-234-3818
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 173.3
+  Product_SKU: SKU-79800
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-847465234
+  User_Type: Visitor
+  ZIP_Code: 51382
+
+RELATED REQUIREMENTS:
+FR-003

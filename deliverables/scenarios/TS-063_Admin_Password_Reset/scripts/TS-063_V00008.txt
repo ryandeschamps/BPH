@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-063_V00008
+
+SCENARIO: Post Rating for Purchased Product
+VARIANT: V00008
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to post a rating (1-5 stars), so that I can share my opinion.
+
+GIVEN:
+- Admin is logged in with account sarah.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Post Rating for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  Reset_State: Valid
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-639012
+  Order_Quantity: 5
+  Order_Total: 487.8
+  Password: weak
+  Phone: +1-818-534-1244
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 97.56
+  Product_SKU: SKU-79392
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-225889869
+  User_Type: Admin
+  ZIP_Code: 72087
+
+RELATED REQUIREMENTS:
+FR-011

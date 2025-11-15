@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00318
+
+SCENARIO: Product Search with No Results
+VARIANT: V00318
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account lisa.williams@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Sort_By: Newest_First
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-589395
+  Order_Quantity: 4
+  Order_Total: 805.28
+  Password: weak
+  Phone: +1-870-647-2563
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 201.32
+  Product_SKU: SKU-88837
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-408426928
+  User_Type: Buyer
+  ZIP_Code: 55872
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00333
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00333
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.miller@example.com
+
+WHEN:
+- User enters email: mary.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Type: Kids
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: Few
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-142133
+  Order_Quantity: 5
+  Order_Total: 725.6
+  Password: weak
+  Phone: +1-407-168-3031
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 145.12
+  Product_SKU: SKU-43202
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-921924261
+  User_Type: Visitor
+  ZIP_Code: 18650
+
+RELATED REQUIREMENTS:
+FR-014

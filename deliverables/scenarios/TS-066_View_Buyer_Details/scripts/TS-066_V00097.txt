@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00097
+
+SCENARIO: View Own Reviews
+VARIANT: V00097
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account james.rodriguez@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: Has_Orders
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-155873
+  Order_Quantity: 2
+  Order_Total: 64.56
+  Password: weak
+  Phone: +1-544-319-1891
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 32.28
+  Product_SKU: SKU-29845
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-771263197
+  User_Type: Admin
+  ZIP_Code: 73274
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00062
+
+SCENARIO: Add New Product
+VARIANT: V00062
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account lisa.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Report_Period: Week
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-998454
+  Order_Quantity: 4
+  Order_Total: 152.4
+  Password: weak
+  Phone: +1-216-380-2953
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 38.1
+  Product_SKU: SKU-86047
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-611139947
+  User_Type: Admin
+  ZIP_Code: 36051
+
+RELATED REQUIREMENTS:
+FR-019

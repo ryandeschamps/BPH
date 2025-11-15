@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-040_V00147
+
+SCENARIO: Add Product to Wishlist as Logged-In Buyer
+VARIANT: V00147
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:19
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my wishlist, so that I can save items for later consideration.
+
+GIVEN:
+- Buyer is logged in with account lisa.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Logged-In Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Bank: BofA
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  Payment_Status: Failed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-268655
+  Order_Quantity: 1
+  Order_Total: 152.88
+  Password: weak
+  Phone: +1-946-517-9722
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 152.88
+  Product_SKU: SKU-85481
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-214132691
+  User_Type: Buyer
+  ZIP_Code: 82879
+
+RELATED REQUIREMENTS:
+FR-006

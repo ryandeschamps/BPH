@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00452
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00452
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: john.martinez@example.com
+- User enters phone: +1-812-131-2436
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: All_Valid
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Field_Values: All_Valid
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-935551
+  Order_Quantity: 1
+  Order_Total: 205.99
+  Password: weak
+  Phone: +1-812-131-2436
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 205.99
+  Product_SKU: SKU-13118
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-128025949
+  User_Type: Visitor
+  ZIP_Code: 41140
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-086_V00008
+
+SCENARIO: Update Order Status to Delivered
+VARIANT: V00008
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Delivered, so that the order lifecycle is complete.
+
+GIVEN:
+- Admin is logged in with account emily.brown@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Delivered
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Status: Active
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-741492
+  Order_Quantity: 2
+  Order_Total: 356.9
+  Password: weak
+  Phone: +1-657-318-6416
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 178.45
+  Product_SKU: SKU-85591
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-517393752
+  User_Type: Admin
+  ZIP_Code: 71784
+
+RELATED REQUIREMENTS:
+FR-017

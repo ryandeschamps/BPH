@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00241
+
+SCENARIO: Product Search with No Results
+VARIANT: V00241
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account michael.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Sort_By: Price_High_Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-305539
+  Order_Quantity: 3
+  Order_Total: 181.8
+  Password: weak
+  Phone: +1-938-927-8196
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 60.6
+  Product_SKU: SKU-29432
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-442231085
+  User_Type: Buyer
+  ZIP_Code: 82152
+
+RELATED REQUIREMENTS:
+FR-003

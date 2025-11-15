@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00529
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00529
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account emily.smith@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_Items: Mixed_Prices
+  Device: Tablet
+  Network_Speed: High
+  Shipping_Cost: Express
+  Tax_Applicable: Yes
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-187636
+  Order_Quantity: 2
+  Order_Total: 343.42
+  Password: weak
+  Phone: +1-882-628-7562
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 171.71
+  Product_SKU: SKU-50250
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-817172676
+  User_Type: Buyer
+  ZIP_Code: 74376
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

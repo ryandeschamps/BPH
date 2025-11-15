@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00038
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00038
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account mary.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Chrome
+  Cart_Items: Multiple
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 06/28
+  Card_Number: 4532-****-****-1122
+  Device: Desktop
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-527058
+  Order_Quantity: 4
+  Order_Total: 1083.56
+  Password: Test@123
+  Phone: +1-342-320-2888
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 270.89
+  Product_SKU: SKU-33330
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-399505322
+  User_Type: Buyer
+  ZIP_Code: 65550
+
+RELATED REQUIREMENTS:
+FR-007

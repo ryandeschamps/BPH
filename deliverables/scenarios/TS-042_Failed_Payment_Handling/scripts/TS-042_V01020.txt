@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01020
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01020
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account lisa.johnson@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Failure_Reason: Network_Error
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 07/26
+  Card_Number: 4532-****-****-1615
+  Device: Desktop
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-613113
+  Order_Quantity: 4
+  Order_Total: 673.96
+  Password: weak
+  Phone: +1-669-621-5010
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 168.49
+  Product_SKU: SKU-64004
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-850672023
+  User_Type: Buyer
+  ZIP_Code: 69157
+
+RELATED REQUIREMENTS:
+FR-006

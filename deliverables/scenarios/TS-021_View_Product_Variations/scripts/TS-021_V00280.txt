@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00280
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00280
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Visitor
+  Variation_Availability: Some_Out_Of_Stock
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.brown@example.com
+  First_Name: Mary
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-824768
+  Order_Quantity: 1
+  Order_Total: 88.35
+  Password: weak
+  Phone: +1-768-965-9062
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 88.35
+  Product_SKU: SKU-98864
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-887579752
+  User_Type: Visitor
+  ZIP_Code: 16721
+
+RELATED REQUIREMENTS:
+FR-003

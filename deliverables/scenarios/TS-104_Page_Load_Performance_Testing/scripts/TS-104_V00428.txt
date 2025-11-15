@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00428
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00428
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Load_Time: Slow
+  Network_Speed: Medium
+  Page_Type: Cart
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-404182
+  Order_Quantity: 4
+  Order_Total: 813.24
+  Password: weak
+  Phone: +1-439-110-3107
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 203.31
+  Product_SKU: SKU-49060
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-426305732
+  User_Type: N/A
+  ZIP_Code: 33474
+
+RELATED REQUIREMENTS:
+FR-022

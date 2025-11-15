@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00092
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00092
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Load_Time: Slow
+  Network_Speed: Medium
+  Page_Type: Home
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-488112
+  Order_Quantity: 5
+  Order_Total: 657.7
+  Password: weak
+  Phone: +1-546-956-7708
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 131.54
+  Product_SKU: SKU-59516
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-292594450
+  User_Type: N/A
+  ZIP_Code: 70286
+
+RELATED REQUIREMENTS:
+FR-022

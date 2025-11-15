@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00348
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00348
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account mary.johnson@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Card_Type: Discover
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 07/27
+  Card_Number: 4532-****-****-4224
+  Device: Mobile
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-225474
+  Order_Quantity: 3
+  Order_Total: 622.59
+  Password: weak
+  Phone: +1-640-956-6195
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 207.53
+  Product_SKU: SKU-26155
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-175609972
+  User_Type: Buyer
+  ZIP_Code: 42615
+
+RELATED REQUIREMENTS:
+FR-006

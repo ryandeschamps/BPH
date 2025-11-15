@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00548
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00548
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: robert.williams@example.com
+- User enters phone: +1-313-678-9771
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Email
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Email
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Field_Values: Missing_Email
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-175178
+  Order_Quantity: 1
+  Order_Total: 43.38
+  Password: weak
+  Phone: +1-313-678-9771
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 43.38
+  Product_SKU: SKU-72894
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-797813291
+  User_Type: Visitor
+  ZIP_Code: 15057
+
+RELATED REQUIREMENTS:
+FR-002

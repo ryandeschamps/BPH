@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00106
+
+SCENARIO: View Wishlist Items
+VARIANT: V00106
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account jane.brown@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Email_Delivery: Delivered
+  Network_Speed: High
+  Order_Size: Multiple_Items
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 01/26
+  Card_Number: 4532-****-****-6175
+  Device: Tablet
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-624618
+  Order_Quantity: 5
+  Order_Total: 995.2
+  Password: weak
+  Phone: +1-349-117-3063
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 199.04
+  Product_SKU: SKU-62425
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-328306176
+  User_Type: Buyer
+  ZIP_Code: 59524
+
+RELATED REQUIREMENTS:
+FR-006

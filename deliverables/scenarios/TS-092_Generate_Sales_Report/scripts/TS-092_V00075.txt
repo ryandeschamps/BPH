@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-092_V00075
+
+SCENARIO: Activate/Deactivate Product Category
+VARIANT: V00075
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate categories, so that I can control category visibility.
+
+GIVEN:
+- Admin is logged in with account david.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Report_Period: Year
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.garcia@example.com
+  First_Name: David
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-385859
+  Order_Quantity: 1
+  Order_Total: 81.25
+  Password: weak
+  Phone: +1-727-107-6799
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 81.25
+  Product_SKU: SKU-50800
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-487891878
+  User_Type: Admin
+  ZIP_Code: 26404
+
+RELATED REQUIREMENTS:
+FR-018

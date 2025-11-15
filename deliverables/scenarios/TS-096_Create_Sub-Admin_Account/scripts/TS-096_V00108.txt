@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00108
+
+SCENARIO: Edit Product Details
+VARIANT: V00108
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account jane.rodriguez@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Low
+  Role_Type: Customer_Support
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-183482
+  Order_Quantity: 1
+  Order_Total: 256.48
+  Password: weak
+  Phone: +1-558-540-5065
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 256.48
+  Product_SKU: SKU-78072
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-956587985
+  User_Type: Admin
+  ZIP_Code: 94423
+
+RELATED REQUIREMENTS:
+FR-019

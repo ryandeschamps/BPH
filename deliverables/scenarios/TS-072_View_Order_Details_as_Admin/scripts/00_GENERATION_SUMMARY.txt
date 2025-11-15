@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:35
+Total Scripts: 108
+Total Scenarios: 1
+Generation Time: 0.0 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-072: Manage Address Book
+  Variants: 108
+  Files: TS-072_V*.txt

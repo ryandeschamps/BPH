@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00094
+
+SCENARIO: Create New Product Category
+VARIANT: V00094
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account jane.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  CMS_Page: Privacy_Policy
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-685927
+  Order_Quantity: 4
+  Order_Total: 580.76
+  Password: weak
+  Phone: +1-278-379-9528
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 145.19
+  Product_SKU: SKU-36961
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-742856394
+  User_Type: Admin
+  ZIP_Code: 30604
+
+RELATED REQUIREMENTS:
+FR-018

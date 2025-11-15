@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00067
+
+SCENARIO: Edit Product Details
+VARIANT: V00067
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account james.brown@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Role_Type: Order_Manager
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-263060
+  Order_Quantity: 1
+  Order_Total: 216.87
+  Password: weak
+  Phone: +1-608-860-1748
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 216.87
+  Product_SKU: SKU-46159
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-294477207
+  User_Type: Admin
+  ZIP_Code: 83172
+
+RELATED REQUIREMENTS:
+FR-019

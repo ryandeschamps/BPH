@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00202
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00202
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account lisa.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Quantity: Five
+  Stock_Level: Exact_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.brown@example.com
+  First_Name: Lisa
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-438482
+  Order_Quantity: 1
+  Order_Total: 209.26
+  Password: weak
+  Phone: +1-298-817-3200
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 209.26
+  Product_SKU: SKU-16388
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-173641915
+  User_Type: Buyer
+  ZIP_Code: 33172
+
+RELATED REQUIREMENTS:
+FR-004

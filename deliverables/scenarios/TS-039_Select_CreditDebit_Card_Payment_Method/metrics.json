@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-039",
+  "scenario_title": "Select Credit/Debit Card Payment Method",
+  "variant_count": 864,
+  "expected_variant_count": 864,
+  "parameters": {
+    "User_Type": 1,
+    "Payment_Method": 2,
+    "Card_Type": 4,
+    "Payment_Status": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-039_Select_CreditDebit_Card_Payment_Method/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

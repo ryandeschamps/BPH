@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00023
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00023
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Redirect_Action: Login
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.williams@example.com
+  First_Name: Michael
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-827370
+  Order_Quantity: 3
+  Order_Total: 320.7
+  Password: weak
+  Phone: +1-334-767-1369
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 106.9
+  Product_SKU: SKU-30059
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-368604001
+  User_Type: Visitor
+  ZIP_Code: 60653
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

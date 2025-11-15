@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01082
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01082
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for jane.williams@example.com
+
+WHEN:
+- User enters email: jane.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Product_Count: One
+  Sub_Category_Type: TShirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-331246
+  Order_Quantity: 4
+  Order_Total: 80.92
+  Password: weak
+  Phone: +1-687-509-8701
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 20.23
+  Product_SKU: SKU-42948
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-472696665
+  User_Type: Buyer
+  ZIP_Code: 35740
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

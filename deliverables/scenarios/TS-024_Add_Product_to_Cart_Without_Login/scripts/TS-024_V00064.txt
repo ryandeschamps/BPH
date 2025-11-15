@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-024_V00064
+
+SCENARIO: View Product Listing with Thumbnail and Price
+VARIANT: V00064
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product thumbnails, names, and prices in listings, so that I can quickly evaluate options.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Listing with Thumbnail and Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Redirect_Action: Register
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-888570
+  Order_Quantity: 4
+  Order_Total: 629.12
+  Password: weak
+  Phone: +1-819-185-9193
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 157.28
+  Product_SKU: SKU-29531
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-300488363
+  User_Type: Visitor
+  ZIP_Code: 42323
+
+RELATED REQUIREMENTS:
+FR-004

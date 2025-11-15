@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00614
+
+SCENARIO: Forgot Password Request
+VARIANT: V00614
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account sarah.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: One_Result
+  Search_Query: Multiple_Keywords
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-518267
+  Order_Quantity: 4
+  Order_Total: 183.72
+  Password: Test@123
+  Phone: +1-833-768-2971
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 45.93
+  Product_SKU: SKU-78065
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-341663820
+  User_Type: Buyer
+  ZIP_Code: 84155
+
+RELATED REQUIREMENTS:
+FR-001

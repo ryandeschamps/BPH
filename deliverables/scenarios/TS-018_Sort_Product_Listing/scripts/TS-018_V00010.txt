@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00010
+
+SCENARIO: Product Search with No Results
+VARIANT: V00010
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: High
+  Sort_By: Price_Low_High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-196064
+  Order_Quantity: 5
+  Order_Total: 576.95
+  Password: weak
+  Phone: +1-987-811-7914
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 115.39
+  Product_SKU: SKU-91279
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-918959598
+  User_Type: Visitor
+  ZIP_Code: 32069
+
+RELATED REQUIREMENTS:
+FR-003

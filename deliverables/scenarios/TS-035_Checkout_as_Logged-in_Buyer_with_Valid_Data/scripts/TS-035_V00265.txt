@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00265
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00265
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account sarah.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Firefox
+  Cart_Items: Multiple
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 03/30
+  Card_Number: 4532-****-****-6934
+  Device: Mobile
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-811986
+  Order_Quantity: 4
+  Order_Total: 707.08
+  Password: Test@123
+  Phone: +1-469-654-5391
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 176.77
+  Product_SKU: SKU-49941
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-958884332
+  User_Type: Buyer
+  ZIP_Code: 14258
+
+RELATED REQUIREMENTS:
+FR-007

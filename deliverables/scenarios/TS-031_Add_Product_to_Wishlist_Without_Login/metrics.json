@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-031",
+  "scenario_title": "Add Product to Wishlist Without Login",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Redirect_Action": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-031_Add_Product_to_Wishlist_Without_Login/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

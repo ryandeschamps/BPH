@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-095_V00009
+
+SCENARIO: Add Product Variants (Size and Color)
+VARIANT: V00009
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to add product variants with different sizes and colors, so that buyers have options.
+
+GIVEN:
+- Admin is logged in with account jane.smith@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product Variants (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Export_Format: Excel
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-729705
+  Order_Quantity: 2
+  Order_Total: 62.18
+  Password: weak
+  Phone: +1-319-342-8979
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 31.09
+  Product_SKU: SKU-91137
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-555605764
+  User_Type: Admin
+  ZIP_Code: 96469
+
+RELATED REQUIREMENTS:
+FR-019

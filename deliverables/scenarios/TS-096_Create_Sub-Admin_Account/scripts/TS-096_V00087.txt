@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00087
+
+SCENARIO: Edit Product Details
+VARIANT: V00087
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account michael.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Role_Type: Customer_Support
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-173853
+  Order_Quantity: 5
+  Order_Total: 1129.25
+  Password: weak
+  Phone: +1-916-620-5971
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 225.85
+  Product_SKU: SKU-41504
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-169998476
+  User_Type: Admin
+  ZIP_Code: 88074
+
+RELATED REQUIREMENTS:
+FR-019

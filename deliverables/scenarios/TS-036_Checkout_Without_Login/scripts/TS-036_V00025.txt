@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-036_V00025
+
+SCENARIO: Remove Item from Cart
+VARIANT: V00025
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to remove items from my cart, so that I don't purchase unwanted products.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Redirect_Action: Login
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-547171
+  Order_Quantity: 2
+  Order_Total: 270.48
+  Password: weak
+  Phone: +1-907-841-4400
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 135.24
+  Product_SKU: SKU-71662
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-712618595
+  User_Type: Visitor
+  ZIP_Code: 12787
+
+RELATED REQUIREMENTS:
+FR-007

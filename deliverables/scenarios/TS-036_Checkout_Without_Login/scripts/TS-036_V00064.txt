@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-036_V00064
+
+SCENARIO: Remove Item from Cart
+VARIANT: V00064
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to remove items from my cart, so that I don't purchase unwanted products.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Redirect_Action: Register
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-154993
+  Order_Quantity: 3
+  Order_Total: 440.43
+  Password: weak
+  Phone: +1-569-340-3073
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 146.81
+  Product_SKU: SKU-99095
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-335405111
+  User_Type: Visitor
+  ZIP_Code: 68903
+
+RELATED REQUIREMENTS:
+FR-007

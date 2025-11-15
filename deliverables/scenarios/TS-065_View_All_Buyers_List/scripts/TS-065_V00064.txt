@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-065_V00064
+
+SCENARIO: Prevent Review from Non-Purchaser
+VARIANT: V00064
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a system, I want to prevent users from reviewing products they haven't purchased, so that reviews are authentic.
+
+GIVEN:
+- Admin is logged in with account lisa.davis@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Prevent Review from Non-Purchaser
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Buyer_Filter: Active
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-421859
+  Order_Quantity: 5
+  Order_Total: 1068.45
+  Password: weak
+  Phone: +1-716-198-2391
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 213.69
+  Product_SKU: SKU-45872
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-909977665
+  User_Type: Admin
+  ZIP_Code: 54808
+
+RELATED REQUIREMENTS:
+FR-011

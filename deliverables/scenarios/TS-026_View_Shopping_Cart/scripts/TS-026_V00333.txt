@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00333
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00333
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Mixed_Variations
+  Device: Tablet
+  Item_Availability: All_Available
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-352655
+  Order_Quantity: 5
+  Order_Total: 107.8
+  Password: weak
+  Phone: +1-980-145-7863
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 21.56
+  Product_SKU: SKU-28923
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-990257880
+  User_Type: Buyer
+  ZIP_Code: 67393
+
+RELATED REQUIREMENTS:
+FR-005

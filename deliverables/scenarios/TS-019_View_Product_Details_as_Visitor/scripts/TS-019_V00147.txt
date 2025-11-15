@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00147
+
+SCENARIO: Product Browse by Category
+VARIANT: V00147
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single_Image
+  Network_Speed: Low
+  Product_State: No_Variations
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-587383
+  Order_Quantity: 1
+  Order_Total: 243.85
+  Password: weak
+  Phone: +1-274-452-5989
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 243.85
+  Product_SKU: SKU-37662
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-740677972
+  User_Type: Visitor
+  ZIP_Code: 41807
+
+RELATED REQUIREMENTS:
+FR-003

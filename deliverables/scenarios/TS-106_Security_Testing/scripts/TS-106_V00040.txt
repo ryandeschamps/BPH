@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00040
+
+SCENARIO: Export Report to Excel
+VARIANT: V00040
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Security_Type: HTTPS
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-655624
+  Order_Quantity: 5
+  Order_Total: 1212.75
+  Password: weak
+  Phone: +1-254-790-4634
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 242.55
+  Product_SKU: SKU-81737
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-505140478
+  User_Type: N/A
+  ZIP_Code: 46217
+
+RELATED REQUIREMENTS:
+FR-022

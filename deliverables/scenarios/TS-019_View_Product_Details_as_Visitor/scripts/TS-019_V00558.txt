@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00558
+
+SCENARIO: Product Browse by Category
+VARIANT: V00558
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account lisa.miller@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Image_Count: Multiple_Images
+  Network_Speed: Low
+  Product_State: No_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-252045
+  Order_Quantity: 4
+  Order_Total: 677.64
+  Password: weak
+  Phone: +1-474-418-7689
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 169.41
+  Product_SKU: SKU-42240
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-502261753
+  User_Type: Buyer
+  ZIP_Code: 38573
+
+RELATED REQUIREMENTS:
+FR-003

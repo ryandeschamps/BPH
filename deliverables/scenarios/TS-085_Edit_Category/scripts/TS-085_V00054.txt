@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-085_V00054
+
+SCENARIO: Update Order Status to Shipped with Tracking
+VARIANT: V00054
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Shipped and add tracking details (carrier, tracking ID), so that buyers can track their shipment.
+
+GIVEN:
+- Admin is logged in with account mary.williams@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Shipped with Tracking
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Edit_Field: Description
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-165131
+  Order_Quantity: 1
+  Order_Total: 218.9
+  Password: weak
+  Phone: +1-500-550-1271
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 218.9
+  Product_SKU: SKU-29746
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-473863212
+  User_Type: Admin
+  ZIP_Code: 15325
+
+RELATED REQUIREMENTS:
+FR-017

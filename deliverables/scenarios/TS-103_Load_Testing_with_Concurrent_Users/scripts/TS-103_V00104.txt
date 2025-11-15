@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00104
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00104
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Load_Type: Concurrent_Users
+  Network_Speed: Medium
+  User_Count: 150
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-239631
+  Order_Quantity: 5
+  Order_Total: 546.35
+  Password: weak
+  Phone: +1-795-730-3438
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 109.27
+  Product_SKU: SKU-19770
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-319879517
+  User_Type: N/A
+  ZIP_Code: 53715
+
+RELATED REQUIREMENTS:
+FR-022

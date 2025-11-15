@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00004
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00004
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: emily.johnson@example.com
+- User enters phone: +1-767-286-5261
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Email_State: Active_Account
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-678437
+  Order_Quantity: 5
+  Order_Total: 950.05
+  Password: weak
+  Phone: +1-767-286-5261
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 190.01
+  Product_SKU: SKU-57542
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-319992853
+  User_Type: Visitor
+  ZIP_Code: 84261
+
+RELATED REQUIREMENTS:
+FR-002

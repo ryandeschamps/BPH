@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-048_V00013
+
+SCENARIO: Use Same Address for Billing and Shipping
+VARIANT: V00013
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:24
+
+DESCRIPTION:
+As a buyer, I want to use the same address for billing and shipping, so that I don't have to enter it twice.
+
+GIVEN:
+- Buyer is logged in with account mary.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Use Same Address for Billing and Shipping
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Product_State: Not_Purchased
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-749140
+  Order_Quantity: 3
+  Order_Total: 775.5
+  Password: weak
+  Phone: +1-695-131-8707
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 258.5
+  Product_SKU: SKU-18011
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-672407508
+  User_Type: Buyer
+  ZIP_Code: 41488
+
+RELATED REQUIREMENTS:
+FR-008

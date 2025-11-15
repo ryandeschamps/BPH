@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00006
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00006
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Never_Had_Items
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-708401
+  Order_Quantity: 1
+  Order_Total: 159.86
+  Password: weak
+  Phone: +1-841-678-4337
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 159.86
+  Product_SKU: SKU-27771
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-810358352
+  User_Type: Buyer
+  ZIP_Code: 81704
+
+RELATED REQUIREMENTS:
+FR-005

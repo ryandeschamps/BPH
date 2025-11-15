@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00050
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00050
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Rating_Range: Medium_Rated
+  Review_Count: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-948873
+  Order_Quantity: 4
+  Order_Total: 334.04
+  Password: weak
+  Phone: +1-556-534-9978
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 83.51
+  Product_SKU: SKU-68907
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-908809737
+  User_Type: Visitor
+  ZIP_Code: 58852
+
+RELATED REQUIREMENTS:
+FR-003

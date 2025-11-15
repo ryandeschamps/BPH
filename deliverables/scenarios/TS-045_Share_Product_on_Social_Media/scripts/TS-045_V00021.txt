@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-045_V00021
+
+SCENARIO: Proceed to Checkout from Cart
+VARIANT: V00021
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:23
+
+DESCRIPTION:
+As a buyer, I want to proceed to checkout from my cart, so that I can complete my purchase.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to robert.garcia@example.com
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Social_Platform: Facebook
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-952398
+  Order_Quantity: 5
+  Order_Total: 486.2
+  Password: weak
+  Phone: +1-480-389-6126
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 97.24
+  Product_SKU: SKU-89074
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-222566892
+  User_Type: Visitor
+  ZIP_Code: 39573
+
+RELATED REQUIREMENTS:
+FR-008

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-081_V00006
+
+SCENARIO: View All Orders List
+VARIANT: V00006
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to view list of all orders with current status, so that I can manage order fulfillment.
+
+GIVEN:
+- Admin is logged in with account lisa.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View All Orders List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Product_Status: Inactive
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-869453
+  Order_Quantity: 3
+  Order_Total: 742.41
+  Password: weak
+  Phone: +1-446-607-7414
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 247.47
+  Product_SKU: SKU-23337
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-661849671
+  User_Type: Admin
+  ZIP_Code: 67500
+
+RELATED REQUIREMENTS:
+FR-017

@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00025
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00025
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.rodriguez@example.com
+- User enters phone: +1-993-647-4166
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Email_State: Active_Account
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-304597
+  Order_Quantity: 5
+  Order_Total: 513.3
+  Password: weak
+  Phone: +1-993-647-4166
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 102.66
+  Product_SKU: SKU-20693
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-349024265
+  User_Type: Visitor
+  ZIP_Code: 33080
+
+RELATED REQUIREMENTS:
+FR-002

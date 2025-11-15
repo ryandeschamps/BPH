@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-012_V00054
+
+SCENARIO: First-Time Social Login Account Creation
+VARIANT: V00054
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a visitor using social login for the first time, I want the system to auto-create my account, so that I don't need to fill registration forms.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.garcia@example.com
+
+WHEN:
+- User enters email: emily.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Email_State: Invalid_Format
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-801488
+  Order_Quantity: 5
+  Order_Total: 1270.25
+  Password: weak
+  Phone: +1-805-299-7238
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 254.05
+  Product_SKU: SKU-94926
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-774849674
+  User_Type: Visitor
+  ZIP_Code: 28550
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

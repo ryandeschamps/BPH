@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00170
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00170
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Filter_Type: Price_Range
+  Filter_Value: Single_Value
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-360548
+  Order_Quantity: 2
+  Order_Total: 205.44
+  Password: weak
+  Phone: +1-242-660-3135
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 102.72
+  Product_SKU: SKU-25183
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-953893281
+  User_Type: Visitor
+  ZIP_Code: 26035
+
+RELATED REQUIREMENTS:
+FR-003

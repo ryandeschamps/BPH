@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00563
+
+SCENARIO: Product Browse by Category
+VARIANT: V00563
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account james.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Image_Count: Multiple_Images
+  Network_Speed: Medium
+  Product_State: No_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-461944
+  Order_Quantity: 5
+  Order_Total: 1009.75
+  Password: weak
+  Phone: +1-739-164-1254
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Wool Sweater
+  Product_Price: 201.95
+  Product_SKU: SKU-55025
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-425808001
+  User_Type: Buyer
+  ZIP_Code: 47830
+
+RELATED REQUIREMENTS:
+FR-003

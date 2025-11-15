@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00455
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00455
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account james.johnson@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_Items: Mixed_Prices
+  Device: Mobile
+  Network_Speed: Medium
+  Shipping_Cost: Standard
+  Tax_Applicable: Yes
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-780330
+  Order_Quantity: 3
+  Order_Total: 591.63
+  Password: weak
+  Phone: +1-286-108-6757
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 197.21
+  Product_SKU: SKU-35560
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-472909453
+  User_Type: Buyer
+  ZIP_Code: 81387
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

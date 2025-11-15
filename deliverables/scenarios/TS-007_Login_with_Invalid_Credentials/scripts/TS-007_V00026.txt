@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00026
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00026
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for james.williams@example.com
+
+WHEN:
+- User enters email: james.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Wrong_Email
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-975507
+  Order_Quantity: 1
+  Order_Total: 61.31
+  Password: weak
+  Phone: +1-460-457-3283
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 61.31
+  Product_SKU: SKU-98907
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-209293410
+  User_Type: Visitor
+  ZIP_Code: 19960
+
+RELATED REQUIREMENTS:
+FR-001

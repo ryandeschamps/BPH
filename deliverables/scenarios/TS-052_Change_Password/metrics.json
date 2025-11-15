@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-052",
+  "scenario_title": "Change Password",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Password_Validity": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-052_Change_Password/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

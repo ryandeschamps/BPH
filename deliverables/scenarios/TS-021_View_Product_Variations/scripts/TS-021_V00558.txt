@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00558
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00558
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Buyer
+  Variation_Availability: All_Available
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-722239
+  Order_Quantity: 5
+  Order_Total: 372.65
+  Password: weak
+  Phone: +1-983-964-9194
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 74.53
+  Product_SKU: SKU-80289
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-139277214
+  User_Type: Buyer
+  ZIP_Code: 68108
+
+RELATED REQUIREMENTS:
+FR-003

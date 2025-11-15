@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00121
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00121
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account mary.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: High
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.brown@example.com
+  First_Name: Mary
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-478564
+  Order_Quantity: 4
+  Order_Total: 681.2
+  Password: weak
+  Phone: +1-970-210-4582
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 170.3
+  Product_SKU: SKU-46380
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-843882630
+  User_Type: Buyer
+  ZIP_Code: 48608
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00131
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00131
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- Buyer is logged in with account james.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Zero
+  Search_Query: No_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-204404
+  Order_Quantity: 4
+  Order_Total: 369.12
+  Password: Test@123
+  Phone: +1-641-106-7220
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 92.28
+  Product_SKU: SKU-15378
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-271132240
+  User_Type: Buyer
+  ZIP_Code: 79704
+
+RELATED REQUIREMENTS:
+FR-001

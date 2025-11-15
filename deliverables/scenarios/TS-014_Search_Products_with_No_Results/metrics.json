@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-014",
+  "scenario_title": "Search Products with No Results",
+  "variant_count": 216,
+  "expected_variant_count": 216,
+  "parameters": {
+    "User_Type": 2,
+    "Input_Validity": 1,
+    "Search_Query": 3,
+    "Results_Count": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-014_Search_Products_with_No_Results/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-072_V00015
+
+SCENARIO: Manage Address Book
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to add, edit, and delete addresses in my address book, so that I can quickly select addresses during checkout.
+
+GIVEN:
+- Admin is logged in with account lisa.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Manage Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Order_Details: Basic
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.brown@example.com
+  First_Name: Lisa
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-906203
+  Order_Quantity: 2
+  Order_Total: 312.98
+  Password: weak
+  Phone: +1-336-477-5999
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 156.49
+  Product_SKU: SKU-94582
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-820109440
+  User_Type: Admin
+  ZIP_Code: 66352
+
+RELATED REQUIREMENTS:
+FR-010

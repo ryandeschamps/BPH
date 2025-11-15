@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00823
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00823
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.rodriguez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Failure_Reason: Declined
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 12/26
+  Card_Number: 4532-****-****-9964
+  Device: Mobile
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-969802
+  Order_Quantity: 4
+  Order_Total: 1166.92
+  Password: weak
+  Phone: +1-715-943-5854
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 291.73
+  Product_SKU: SKU-84616
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-476397817
+  User_Type: Buyer
+  ZIP_Code: 88718
+
+RELATED REQUIREMENTS:
+FR-006

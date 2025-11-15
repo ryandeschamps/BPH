@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00541
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00541
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account robert.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Buyer
+  Variation_Availability: All_Available
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-161942
+  Order_Quantity: 1
+  Order_Total: 118.08
+  Password: weak
+  Phone: +1-980-835-3062
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 118.08
+  Product_SKU: SKU-63917
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-746866354
+  User_Type: Buyer
+  ZIP_Code: 55512
+
+RELATED REQUIREMENTS:
+FR-003

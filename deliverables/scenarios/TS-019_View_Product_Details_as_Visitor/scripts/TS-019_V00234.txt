@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00234
+
+SCENARIO: Product Browse by Category
+VARIANT: V00234
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Image_Count: Single_Image
+  Network_Speed: Low
+  Product_State: Has_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-712665
+  Order_Quantity: 5
+  Order_Total: 482.25
+  Password: weak
+  Phone: +1-665-420-1746
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 96.45
+  Product_SKU: SKU-28440
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-972919843
+  User_Type: Visitor
+  ZIP_Code: 46232
+
+RELATED REQUIREMENTS:
+FR-003

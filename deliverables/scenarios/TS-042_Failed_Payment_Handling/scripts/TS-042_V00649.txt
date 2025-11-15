@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00649
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00649
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account james.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Failure_Reason: Invalid_Card
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 05/29
+  Card_Number: 4532-****-****-9005
+  Device: Desktop
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-546906
+  Order_Quantity: 1
+  Order_Total: 287.78
+  Password: weak
+  Phone: +1-718-364-6682
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 287.78
+  Product_SKU: SKU-16909
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-385409126
+  User_Type: Buyer
+  ZIP_Code: 27068
+
+RELATED REQUIREMENTS:
+FR-006

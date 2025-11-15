@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-068_V00005
+
+SCENARIO: Share Product on Social Media as Buyer
+VARIANT: V00005
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a buyer, I want to share a product on social media, so that I can recommend it to my network.
+
+GIVEN:
+- Admin is logged in with account robert.brown@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Buyer_Status: Active
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-903643
+  Order_Quantity: 1
+  Order_Total: 177.54
+  Password: weak
+  Phone: +1-766-998-1264
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Wool Sweater
+  Product_Price: 177.54
+  Product_SKU: SKU-34678
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-600662795
+  User_Type: Admin
+  ZIP_Code: 81278
+
+RELATED REQUIREMENTS:
+FR-009

@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-005_V00007
+
+SCENARIO: Registration Without Accepting Terms and Conditions
+VARIANT: V00007
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a visitor, I want to be prevented from registering if I don't accept terms, so that the website ensures legal compliance.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: emily.garcia@example.com
+- User enters phone: +1-674-131-7010
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  Terms_Accepted: No
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-232872
+  Order_Quantity: 5
+  Order_Total: 628.4
+  Password: weak
+  Phone: +1-674-131-7010
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 125.68
+  Product_SKU: SKU-79387
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-399022585
+  User_Type: Visitor
+  ZIP_Code: 35504
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00069
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00069
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account sarah.rodriguez@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-556246
+  Order_Quantity: 5
+  Order_Total: 608.4
+  Password: Test@123
+  Phone: +1-983-922-4741
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 121.68
+  Product_SKU: SKU-68341
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-292676745
+  User_Type: Buyer
+  ZIP_Code: 70402
+
+RELATED REQUIREMENTS:
+FR-002

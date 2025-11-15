@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00041
+
+SCENARIO: View Own Reviews
+VARIANT: V00041
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account jane.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Buyer_Status: Inactive
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-926015
+  Order_Quantity: 4
+  Order_Total: 349.84
+  Password: weak
+  Phone: +1-447-531-2327
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 87.46
+  Product_SKU: SKU-93109
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-330779660
+  User_Type: Admin
+  ZIP_Code: 45483
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

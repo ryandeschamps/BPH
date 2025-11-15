@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00069
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00069
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account robert.rodriguez@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Empty
+  Device: Mobile
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-572352
+  Order_Quantity: 1
+  Order_Total: 95.98
+  Password: weak
+  Phone: +1-910-132-2806
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 95.98
+  Product_SKU: SKU-82124
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-385712694
+  User_Type: Buyer
+  ZIP_Code: 40974
+
+RELATED REQUIREMENTS:
+FR-005

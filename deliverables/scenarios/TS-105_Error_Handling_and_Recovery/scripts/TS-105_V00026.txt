@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00026
+
+SCENARIO: Export Report to PDF
+VARIANT: V00026
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Error_Type: 404
+  Network_Speed: Medium
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-497616
+  Order_Quantity: 1
+  Order_Total: 285.2
+  Password: weak
+  Phone: +1-684-778-2768
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 285.2
+  Product_SKU: SKU-65987
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-893464187
+  User_Type: N/A
+  ZIP_Code: 64115
+
+RELATED REQUIREMENTS:
+FR-022

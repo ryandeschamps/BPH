@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00161
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00161
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account michael.brown@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Card_Type: Mastercard
+  Device: Tablet
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  Payment_Status: Declined
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 09/29
+  Card_Number: 4532-****-****-2521
+  Device: Tablet
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-913148
+  Order_Quantity: 1
+  Order_Total: 40.05
+  Password: weak
+  Phone: +1-931-832-2592
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 40.05
+  Product_SKU: SKU-56605
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-892552968
+  User_Type: Buyer
+  ZIP_Code: 61710
+
+RELATED REQUIREMENTS:
+FR-006

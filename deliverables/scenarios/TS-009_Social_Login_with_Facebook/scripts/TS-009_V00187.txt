@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00187
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00187
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for mary.smith@example.com
+
+WHEN:
+- User enters email: mary.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.smith@example.com
+  First_Name: Mary
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-460706
+  Order_Quantity: 2
+  Order_Total: 365.98
+  Password: weak
+  Phone: +1-397-465-7160
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 182.99
+  Product_SKU: SKU-47427
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-977347760
+  User_Type: Visitor
+  ZIP_Code: 10473
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

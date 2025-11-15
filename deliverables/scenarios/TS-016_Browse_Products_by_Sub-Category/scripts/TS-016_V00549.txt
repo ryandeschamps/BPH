@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00549
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00549
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for james.williams@example.com
+
+WHEN:
+- User enters email: james.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: None
+  Sub_Category_Type: Dresses
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-453757
+  Order_Quantity: 5
+  Order_Total: 1397.65
+  Password: weak
+  Phone: +1-716-408-7644
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 279.53
+  Product_SKU: SKU-78698
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-379296937
+  User_Type: Visitor
+  ZIP_Code: 55628
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

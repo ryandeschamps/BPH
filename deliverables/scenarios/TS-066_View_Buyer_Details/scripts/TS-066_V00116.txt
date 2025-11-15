@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00116
+
+SCENARIO: View Own Reviews
+VARIANT: V00116
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account david.brown@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Buyer_Status: No_Orders
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-897022
+  Order_Quantity: 1
+  Order_Total: 188.22
+  Password: weak
+  Phone: +1-640-832-5298
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 188.22
+  Product_SKU: SKU-52993
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-895261424
+  User_Type: Admin
+  ZIP_Code: 52761
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

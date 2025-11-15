@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00034
+
+SCENARIO: Product Browse by Category
+VARIANT: V00034
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: Active
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-687700
+  Order_Quantity: 2
+  Order_Total: 283.32
+  Password: weak
+  Phone: +1-310-341-7261
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 141.66
+  Product_SKU: SKU-11392
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-377354823
+  User_Type: Visitor
+  ZIP_Code: 16304
+
+RELATED REQUIREMENTS:
+FR-003

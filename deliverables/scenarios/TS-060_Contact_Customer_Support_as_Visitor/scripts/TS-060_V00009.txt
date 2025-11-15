@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-060_V00009
+
+SCENARIO: View Shipping Tracking Information
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer with a shipped order, I want to see tracking information (carrier, tracking ID), so that I can track my package.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Shipping Tracking Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Message_Type: Question
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-122976
+  Order_Quantity: 3
+  Order_Total: 102.33
+  Password: weak
+  Phone: +1-579-276-8110
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 34.11
+  Product_SKU: SKU-44038
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-823665425
+  User_Type: Visitor
+  ZIP_Code: 15188
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

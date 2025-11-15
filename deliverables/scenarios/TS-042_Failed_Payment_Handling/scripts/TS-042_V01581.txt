@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01581
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01581
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account michael.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Failure_Reason: Network_Error
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-143249
+  Order_Quantity: 4
+  Order_Total: 1099.88
+  Password: weak
+  Phone: +1-730-801-4863
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 274.97
+  Product_SKU: SKU-43868
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-492295864
+  User_Type: Buyer
+  ZIP_Code: 98616
+
+RELATED REQUIREMENTS:
+FR-006

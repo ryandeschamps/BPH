@@ -1,0 +1,81 @@
+TEST SCRIPT: TS-044_V00150
+
+SCENARIO: Checkout Directly from Wishlist
+VARIANT: V00150
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to checkout items directly from my wishlist, so that I can quickly purchase saved items.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to robert.garcia@example.com
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Email_Delivery: Delayed
+  Network_Speed: Low
+  Order_Status: In_Process
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-661204
+  Order_Quantity: 2
+  Order_Total: 497.6
+  Password: weak
+  Phone: +1-374-267-3667
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 248.8
+  Product_SKU: SKU-91685
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-549421505
+  User_Type: Buyer
+  ZIP_Code: 36134
+
+RELATED REQUIREMENTS:
+FR-006, FR-008

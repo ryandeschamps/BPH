@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00209
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00209
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Has_Items
+  Device: Desktop
+  Network_Speed: Medium
+  Product_Variation: Size_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-197042
+  Order_Quantity: 5
+  Order_Total: 795.8
+  Password: weak
+  Phone: +1-769-323-6207
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 159.16
+  Product_SKU: SKU-10253
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-739389984
+  User_Type: Buyer
+  ZIP_Code: 66605
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00555
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00555
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account jane.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: Low
+  Product_Variation: Size_And_Color
+  Quantity: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-894885
+  Order_Quantity: 3
+  Order_Total: 728.22
+  Password: weak
+  Phone: +1-709-263-6944
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 242.74
+  Product_SKU: SKU-75137
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-689988882
+  User_Type: Buyer
+  ZIP_Code: 36425
+
+RELATED REQUIREMENTS:
+FR-003

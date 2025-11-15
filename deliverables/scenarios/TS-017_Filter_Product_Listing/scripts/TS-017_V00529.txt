@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00529
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00529
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account sarah.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Filter_Type: Multiple_Filters
+  Filter_Value: Single_Value
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-540504
+  Order_Quantity: 1
+  Order_Total: 288.42
+  Password: weak
+  Phone: +1-523-965-4538
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 288.42
+  Product_SKU: SKU-85061
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-357522189
+  User_Type: Buyer
+  ZIP_Code: 33340
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00038
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00038
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Single_Item
+  Device: Desktop
+  Network_Speed: Medium
+  Removal_Action: Remove_All
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-363532
+  Order_Quantity: 4
+  Order_Total: 346.16
+  Password: weak
+  Phone: +1-763-934-7446
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 86.54
+  Product_SKU: SKU-82850
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-776073817
+  User_Type: Buyer
+  ZIP_Code: 86515
+
+RELATED REQUIREMENTS:
+FR-005

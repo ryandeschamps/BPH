@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00015
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00015
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account sarah.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Account_State: Active_Verified
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-494705
+  Order_Quantity: 5
+  Order_Total: 1097.9
+  Password: Test@123
+  Phone: +1-462-161-9833
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 219.58
+  Product_SKU: SKU-93089
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-675840874
+  User_Type: Buyer
+  ZIP_Code: 74307
+
+RELATED REQUIREMENTS:
+FR-002

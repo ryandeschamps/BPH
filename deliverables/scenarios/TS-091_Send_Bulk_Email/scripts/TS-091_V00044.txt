@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-091_V00044
+
+SCENARIO: Edit Product Category
+VARIANT: V00044
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to edit category details, so that I can update category information.
+
+GIVEN:
+- Admin is logged in with account mary.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  Target_Audience: Filtered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-524095
+  Order_Quantity: 4
+  Order_Total: 345.12
+  Password: weak
+  Phone: +1-364-398-9259
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 86.28
+  Product_SKU: SKU-55252
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-538082231
+  User_Type: Admin
+  ZIP_Code: 59228
+
+RELATED REQUIREMENTS:
+FR-018

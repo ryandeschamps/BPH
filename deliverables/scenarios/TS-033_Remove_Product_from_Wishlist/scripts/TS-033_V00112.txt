@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00112
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00112
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account mary.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Removal_Action: Remove_All
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-396953
+  Order_Quantity: 3
+  Order_Total: 720.21
+  Password: weak
+  Phone: +1-954-408-2895
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 240.07
+  Product_SKU: SKU-15176
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-159558746
+  User_Type: Buyer
+  ZIP_Code: 77432
+
+RELATED REQUIREMENTS:
+FR-007

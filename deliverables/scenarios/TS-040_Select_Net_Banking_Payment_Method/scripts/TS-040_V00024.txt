@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-040_V00024
+
+SCENARIO: Add Product to Wishlist as Logged-In Buyer
+VARIANT: V00024
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:19
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my wishlist, so that I can save items for later consideration.
+
+GIVEN:
+- Buyer is logged in with account sarah.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Logged-In Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Bank: Chase
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-242180
+  Order_Quantity: 3
+  Order_Total: 765.09
+  Password: weak
+  Phone: +1-974-523-5333
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Wool Sweater
+  Product_Price: 255.03
+  Product_SKU: SKU-48201
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-551632094
+  User_Type: Buyer
+  ZIP_Code: 13659
+
+RELATED REQUIREMENTS:
+FR-006

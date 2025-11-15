@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00041
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00041
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account michael.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Single_Item
+  Device: Mobile
+  Network_Speed: Medium
+  Removal_Action: Remove_All
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-194538
+  Order_Quantity: 2
+  Order_Total: 387.66
+  Password: weak
+  Phone: +1-791-934-4386
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 193.83
+  Product_SKU: SKU-81002
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-635977988
+  User_Type: Buyer
+  ZIP_Code: 66562
+
+RELATED REQUIREMENTS:
+FR-005

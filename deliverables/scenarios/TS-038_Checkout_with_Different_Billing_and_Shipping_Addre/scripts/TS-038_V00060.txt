@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00060
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00060
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account emily.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Both_New
+  Address_Type: Different_Addresses
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 10/30
+  Card_Number: 4532-****-****-6011
+  Device: Mobile
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-136835
+  Order_Quantity: 2
+  Order_Total: 509.84
+  Password: weak
+  Phone: +1-806-619-8695
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 254.92
+  Product_SKU: SKU-75502
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-146123293
+  User_Type: Buyer
+  ZIP_Code: 68114
+
+RELATED REQUIREMENTS:
+FR-007

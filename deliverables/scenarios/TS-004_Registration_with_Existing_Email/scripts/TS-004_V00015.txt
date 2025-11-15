@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00015
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.smith@example.com
+- User enters phone: +1-995-486-1174
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Email_State: Active_Account
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-704252
+  Order_Quantity: 1
+  Order_Total: 199.36
+  Password: weak
+  Phone: +1-995-486-1174
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 199.36
+  Product_SKU: SKU-37221
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-412852629
+  User_Type: Visitor
+  ZIP_Code: 12596
+
+RELATED REQUIREMENTS:
+FR-002

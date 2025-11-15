@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00670
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00670
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for james.rodriguez@example.com
+
+WHEN:
+- User enters email: james.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Product_Count: One
+  Sub_Category_Type: Accessories
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-752305
+  Order_Quantity: 5
+  Order_Total: 1192.4
+  Password: weak
+  Phone: +1-884-201-1121
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 238.48
+  Product_SKU: SKU-78982
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-402211016
+  User_Type: Visitor
+  ZIP_Code: 22696
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

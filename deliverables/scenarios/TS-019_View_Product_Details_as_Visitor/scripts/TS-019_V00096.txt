@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00096
+
+SCENARIO: Product Browse by Category
+VARIANT: V00096
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Image_Count: Single_Image
+  Network_Speed: Low
+  Product_State: Has_Variations
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-756862
+  Order_Quantity: 4
+  Order_Total: 441.4
+  Password: weak
+  Phone: +1-598-496-6517
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 110.35
+  Product_SKU: SKU-67066
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-929443717
+  User_Type: Visitor
+  ZIP_Code: 47687
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00309
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00309
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Quantity: Ten
+  Stock_Level: Exact_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-861165
+  Order_Quantity: 3
+  Order_Total: 822.45
+  Password: weak
+  Phone: +1-732-400-5989
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 274.15
+  Product_SKU: SKU-62359
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-689249271
+  User_Type: Buyer
+  ZIP_Code: 20724
+
+RELATED REQUIREMENTS:
+FR-004

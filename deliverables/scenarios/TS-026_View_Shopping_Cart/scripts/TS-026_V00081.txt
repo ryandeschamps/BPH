@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00081
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00081
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account sarah.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Empty
+  Device: Tablet
+  Item_Availability: Price_Changed
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-305463
+  Order_Quantity: 1
+  Order_Total: 199.65
+  Password: weak
+  Phone: +1-552-531-4400
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 199.65
+  Product_SKU: SKU-52983
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-371364225
+  User_Type: Buyer
+  ZIP_Code: 64836
+
+RELATED REQUIREMENTS:
+FR-005

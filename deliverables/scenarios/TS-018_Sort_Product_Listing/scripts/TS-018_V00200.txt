@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00200
+
+SCENARIO: Product Search with No Results
+VARIANT: V00200
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account john.smith@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Sort_By: Price_Low_High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-965013
+  Order_Quantity: 4
+  Order_Total: 591.24
+  Password: weak
+  Phone: +1-985-804-4624
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 147.81
+  Product_SKU: SKU-90851
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-517011004
+  User_Type: Buyer
+  ZIP_Code: 87084
+
+RELATED REQUIREMENTS:
+FR-003

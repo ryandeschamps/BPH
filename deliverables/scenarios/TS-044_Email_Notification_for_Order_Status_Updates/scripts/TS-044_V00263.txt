@@ -1,0 +1,81 @@
+TEST SCRIPT: TS-044_V00263
+
+SCENARIO: Checkout Directly from Wishlist
+VARIANT: V00263
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to checkout items directly from my wishlist, so that I can quickly purchase saved items.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to david.jones@example.com
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Email_Delivery: Delayed
+  Network_Speed: Medium
+  Order_Status: Shipped
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-305400
+  Order_Quantity: 3
+  Order_Total: 649.14
+  Password: weak
+  Phone: +1-762-326-7908
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 216.38
+  Product_SKU: SKU-60293
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-163731028
+  User_Type: Buyer
+  ZIP_Code: 30664
+
+RELATED REQUIREMENTS:
+FR-006, FR-008

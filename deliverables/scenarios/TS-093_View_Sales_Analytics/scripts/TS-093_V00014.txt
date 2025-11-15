@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00014
+
+SCENARIO: Add New Product
+VARIANT: V00014
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account james.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Report_Period: Today
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-880153
+  Order_Quantity: 4
+  Order_Total: 238.64
+  Password: weak
+  Phone: +1-649-572-3564
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 59.66
+  Product_SKU: SKU-85195
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-294848961
+  User_Type: Admin
+  ZIP_Code: 30326
+
+RELATED REQUIREMENTS:
+FR-019

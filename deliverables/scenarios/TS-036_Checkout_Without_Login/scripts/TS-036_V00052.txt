@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-036_V00052
+
+SCENARIO: Remove Item from Cart
+VARIANT: V00052
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to remove items from my cart, so that I don't purchase unwanted products.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Redirect_Action: Register
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-313434
+  Order_Quantity: 5
+  Order_Total: 1087.2
+  Password: weak
+  Phone: +1-223-124-9772
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 217.44
+  Product_SKU: SKU-91330
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-147713539
+  User_Type: Visitor
+  ZIP_Code: 23572
+
+RELATED REQUIREMENTS:
+FR-007

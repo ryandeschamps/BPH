@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00450
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00450
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account robert.brown@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Rating_Range: High_Rated
+  Review_Count: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-215428
+  Order_Quantity: 2
+  Order_Total: 97.06
+  Password: weak
+  Phone: +1-558-398-4425
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 48.53
+  Product_SKU: SKU-51280
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-912679032
+  User_Type: Buyer
+  ZIP_Code: 79045
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00009
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00009
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account michael.davis@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Account_State: Active_Verified
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-300676
+  Order_Quantity: 3
+  Order_Total: 811.38
+  Password: Test@123
+  Phone: +1-277-745-2605
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 270.46
+  Product_SKU: SKU-16436
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-749544681
+  User_Type: Buyer
+  ZIP_Code: 63813
+
+RELATED REQUIREMENTS:
+FR-002

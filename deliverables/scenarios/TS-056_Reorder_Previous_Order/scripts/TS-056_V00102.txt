@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-056_V00102
+
+SCENARIO: Checkout Without Login
+VARIANT: V00102
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a guest user, I want to be required to login before checkout, so that the system can track my order.
+
+GIVEN:
+- Buyer is logged in with account john.garcia@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for john.garcia@example.com
+
+WHEN:
+- User enters email: john.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Reorder_Items: Out_Of_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-551835
+  Order_Quantity: 5
+  Order_Total: 378.0
+  Password: weak
+  Phone: +1-441-320-4899
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 75.6
+  Product_SKU: SKU-71134
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-401421929
+  User_Type: Buyer
+  ZIP_Code: 77320
+
+RELATED REQUIREMENTS:
+FR-008

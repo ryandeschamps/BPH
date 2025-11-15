@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00051
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00051
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Redirect_Action: Register
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.martinez@example.com
+  First_Name: Jane
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-189392
+  Order_Quantity: 2
+  Order_Total: 150.6
+  Password: weak
+  Phone: +1-714-105-3744
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 75.3
+  Product_SKU: SKU-96224
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-513448226
+  User_Type: Visitor
+  ZIP_Code: 31521
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

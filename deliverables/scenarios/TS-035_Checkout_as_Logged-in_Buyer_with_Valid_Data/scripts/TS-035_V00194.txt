@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00194
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00194
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Firefox
+  Cart_Items: Multiple
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 05/28
+  Card_Number: 4532-****-****-7239
+  Device: Mobile
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-101057
+  Order_Quantity: 2
+  Order_Total: 335.72
+  Password: Test@123
+  Phone: +1-852-515-7395
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 167.86
+  Product_SKU: SKU-16187
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-208448757
+  User_Type: Buyer
+  ZIP_Code: 54420
+
+RELATED REQUIREMENTS:
+FR-007

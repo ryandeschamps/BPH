@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00039
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00039
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Load_Type: Concurrent_Users
+  Network_Speed: Low
+  User_Count: 100
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-979253
+  Order_Quantity: 4
+  Order_Total: 1142.88
+  Password: weak
+  Phone: +1-804-685-7691
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 285.72
+  Product_SKU: SKU-82181
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-950760370
+  User_Type: N/A
+  ZIP_Code: 61444
+
+RELATED REQUIREMENTS:
+FR-022

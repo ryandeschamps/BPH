@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-074_V00002
+
+SCENARIO: Submit Contact Support Request as Buyer
+VARIANT: V00002
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As a buyer, I want to contact support via email form, so that I can get help with my queries.
+
+GIVEN:
+- Admin is logged in with account robert.smith@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Submit Contact Support Request as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Status_Change: Confirmed_To_InProcess
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-921085
+  Order_Quantity: 4
+  Order_Total: 951.4
+  Password: weak
+  Phone: +1-742-348-1125
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 237.85
+  Product_SKU: SKU-12048
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-103391049
+  User_Type: Admin
+  ZIP_Code: 39963
+
+RELATED REQUIREMENTS:
+FR-013

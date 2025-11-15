@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00045
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00045
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account lisa.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-976737
+  Order_Quantity: 5
+  Order_Total: 1387.9
+  Password: Test@123
+  Phone: +1-224-624-4875
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 277.58
+  Product_SKU: SKU-71542
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-281861636
+  User_Type: Buyer
+  ZIP_Code: 41390
+
+RELATED REQUIREMENTS:
+FR-002

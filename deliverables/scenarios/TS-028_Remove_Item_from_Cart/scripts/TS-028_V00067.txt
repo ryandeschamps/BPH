@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00067
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00067
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account mary.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Single_Item
+  Device: Mobile
+  Network_Speed: High
+  Removal_Action: Remove_All
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-177587
+  Order_Quantity: 5
+  Order_Total: 366.0
+  Password: weak
+  Phone: +1-947-174-1623
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 73.2
+  Product_SKU: SKU-92497
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-833561191
+  User_Type: Buyer
+  ZIP_Code: 13263
+
+RELATED REQUIREMENTS:
+FR-005

@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00150
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00150
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account sarah.brown@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 09/25
+  Card_Number: 4532-****-****-5597
+  Device: Mobile
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-894057
+  Order_Quantity: 3
+  Order_Total: 742.86
+  Password: weak
+  Phone: +1-611-309-6215
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 247.62
+  Product_SKU: SKU-45283
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-313825756
+  User_Type: Buyer
+  ZIP_Code: 74957
+
+RELATED REQUIREMENTS:
+FR-007

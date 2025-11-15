@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00461
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00461
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Load_Time: Fast
+  Network_Speed: Medium
+  Page_Type: Checkout
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-436146
+  Order_Quantity: 5
+  Order_Total: 1259.55
+  Password: weak
+  Phone: +1-780-741-1493
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 251.91
+  Product_SKU: SKU-12957
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-259534788
+  User_Type: N/A
+  ZIP_Code: 19842
+
+RELATED REQUIREMENTS:
+FR-022

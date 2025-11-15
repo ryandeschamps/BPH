@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00555
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00555
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: robert.rodriguez@example.com
+- User enters phone: +1-683-248-6234
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Email
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Email
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Field_Values: Missing_Email
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-291894
+  Order_Quantity: 1
+  Order_Total: 74.74
+  Password: weak
+  Phone: +1-683-248-6234
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 74.74
+  Product_SKU: SKU-79007
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-342981916
+  User_Type: Visitor
+  ZIP_Code: 27207
+
+RELATED REQUIREMENTS:
+FR-002

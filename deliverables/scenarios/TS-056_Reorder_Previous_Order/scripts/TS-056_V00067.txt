@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-056_V00067
+
+SCENARIO: Checkout Without Login
+VARIANT: V00067
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a guest user, I want to be required to login before checkout, so that the system can track my order.
+
+GIVEN:
+- Buyer is logged in with account robert.johnson@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for robert.johnson@example.com
+
+WHEN:
+- User enters email: robert.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Reorder_Items: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-882724
+  Order_Quantity: 3
+  Order_Total: 381.72
+  Password: weak
+  Phone: +1-862-526-2232
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 127.24
+  Product_SKU: SKU-37398
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-223738086
+  User_Type: Buyer
+  ZIP_Code: 93324
+
+RELATED REQUIREMENTS:
+FR-008

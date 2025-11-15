@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00050
+
+SCENARIO: Track Current Order Status
+VARIANT: V00050
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account mary.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Message_Type: Complaint
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-595006
+  Order_Quantity: 5
+  Order_Total: 1235.9
+  Password: weak
+  Phone: +1-650-651-6241
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 247.18
+  Product_SKU: SKU-26879
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-392743340
+  User_Type: Buyer
+  ZIP_Code: 70778
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

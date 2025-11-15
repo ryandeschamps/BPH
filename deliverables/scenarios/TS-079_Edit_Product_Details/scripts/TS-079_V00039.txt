@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00039
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00039
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account lisa.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Edit_Field: Price
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-629607
+  Order_Quantity: 5
+  Order_Total: 553.0
+  Password: weak
+  Phone: +1-886-506-1481
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 110.6
+  Product_SKU: SKU-55906
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-950261218
+  User_Type: Admin
+  ZIP_Code: 12698
+
+RELATED REQUIREMENTS:
+FR-016

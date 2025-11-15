@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00588
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00588
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account james.williams@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Low
+  Rating_Range: High_Rated
+  Review_Count: Few_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-210349
+  Order_Quantity: 1
+  Order_Total: 129.33
+  Password: weak
+  Phone: +1-997-119-5973
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 129.33
+  Product_SKU: SKU-32822
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-675323143
+  User_Type: Buyer
+  ZIP_Code: 96950
+
+RELATED REQUIREMENTS:
+FR-003

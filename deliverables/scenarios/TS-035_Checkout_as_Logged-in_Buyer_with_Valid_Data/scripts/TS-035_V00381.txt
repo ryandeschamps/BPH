@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00381
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00381
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account john.jones@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Safari
+  Cart_Items: Single
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.jones@example.com
+  First_Name: John
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-837695
+  Order_Quantity: 2
+  Order_Total: 270.2
+  Password: Test@123
+  Phone: +1-378-559-6661
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 135.1
+  Product_SKU: SKU-31652
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-209194938
+  User_Type: Buyer
+  ZIP_Code: 94907
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-024_V00093
+
+SCENARIO: View Product Listing with Thumbnail and Price
+VARIANT: V00093
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product thumbnails, names, and prices in listings, so that I can quickly evaluate options.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Listing with Thumbnail and Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Redirect_Action: Cancel
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-475643
+  Order_Quantity: 5
+  Order_Total: 1337.25
+  Password: weak
+  Phone: +1-569-268-4141
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 267.45
+  Product_SKU: SKU-45830
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-892008677
+  User_Type: Visitor
+  ZIP_Code: 22354
+
+RELATED REQUIREMENTS:
+FR-004

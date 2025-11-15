@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00501
+
+SCENARIO: Product Browse by Category
+VARIANT: V00501
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account emily.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Image_Count: Multiple_Images
+  Network_Speed: Low
+  Product_State: Has_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-991310
+  Order_Quantity: 5
+  Order_Total: 1445.65
+  Password: weak
+  Phone: +1-598-532-9680
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 289.13
+  Product_SKU: SKU-37136
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-562017996
+  User_Type: Buyer
+  ZIP_Code: 96275
+
+RELATED REQUIREMENTS:
+FR-003

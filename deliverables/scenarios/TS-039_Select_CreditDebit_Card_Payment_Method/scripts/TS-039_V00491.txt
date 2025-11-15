@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00491
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00491
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account david.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Card_Type: Visa
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  Payment_Status: Declined
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 10/29
+  Card_Number: 4532-****-****-6380
+  Device: Mobile
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-183403
+  Order_Quantity: 2
+  Order_Total: 309.46
+  Password: weak
+  Phone: +1-739-545-4051
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Wool Sweater
+  Product_Price: 154.73
+  Product_SKU: SKU-48602
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-751465756
+  User_Type: Buyer
+  ZIP_Code: 89211
+
+RELATED REQUIREMENTS:
+FR-006

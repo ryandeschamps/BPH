@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00324
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00324
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account john.garcia@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Multiple_Items
+  Device: Tablet
+  Item_Availability: Price_Changed
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-827569
+  Order_Quantity: 5
+  Order_Total: 306.9
+  Password: weak
+  Phone: +1-469-763-3761
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 61.38
+  Product_SKU: SKU-44204
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-648841087
+  User_Type: Buyer
+  ZIP_Code: 16234
+
+RELATED REQUIREMENTS:
+FR-005

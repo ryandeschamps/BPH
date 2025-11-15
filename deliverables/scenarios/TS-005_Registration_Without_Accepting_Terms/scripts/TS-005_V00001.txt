@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-005_V00001
+
+SCENARIO: Registration Without Accepting Terms and Conditions
+VARIANT: V00001
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a visitor, I want to be prevented from registering if I don't accept terms, so that the website ensures legal compliance.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.rodriguez@example.com
+- User enters phone: +1-935-654-9282
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  Terms_Accepted: No
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-964214
+  Order_Quantity: 3
+  Order_Total: 146.43
+  Password: weak
+  Phone: +1-935-654-9282
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 48.81
+  Product_SKU: SKU-39923
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-217889796
+  User_Type: Visitor
+  ZIP_Code: 37983
+
+RELATED REQUIREMENTS:
+FR-002

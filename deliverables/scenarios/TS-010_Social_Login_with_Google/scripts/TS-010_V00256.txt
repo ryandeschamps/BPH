@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00256
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00256
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for mary.martinez@example.com
+
+WHEN:
+- User enters email: mary.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-532858
+  Order_Quantity: 1
+  Order_Total: 107.2
+  Password: weak
+  Phone: +1-986-706-5909
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 107.2
+  Product_SKU: SKU-85361
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-846265305
+  User_Type: Visitor
+  ZIP_Code: 92238
+
+RELATED REQUIREMENTS:
+FR-001

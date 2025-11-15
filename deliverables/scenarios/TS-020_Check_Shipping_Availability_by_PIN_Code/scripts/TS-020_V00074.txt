@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00074
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00074
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  PIN_Code_State: Invalid_Format
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-495857
+  Order_Quantity: 2
+  Order_Total: 581.34
+  Password: Test@123
+  Phone: +1-375-778-4803
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 290.67
+  Product_SKU: SKU-78819
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-474681370
+  User_Type: Visitor
+  ZIP_Code: 96459
+
+RELATED REQUIREMENTS:
+FR-003

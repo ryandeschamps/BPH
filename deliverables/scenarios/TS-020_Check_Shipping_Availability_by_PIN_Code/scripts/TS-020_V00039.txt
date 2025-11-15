@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00039
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00039
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  PIN_Code_State: Not_Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-336752
+  Order_Quantity: 2
+  Order_Total: 570.68
+  Password: Test@123
+  Phone: +1-806-686-9623
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 285.34
+  Product_SKU: SKU-95262
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-888516667
+  User_Type: Visitor
+  ZIP_Code: 40853
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01471
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01471
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account james.johnson@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Failure_Reason: Timeout
+  Network_Speed: High
+  Payment_Method: Net_Banking
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-502960
+  Order_Quantity: 5
+  Order_Total: 1352.45
+  Password: weak
+  Phone: +1-746-723-1391
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 270.49
+  Product_SKU: SKU-11027
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-698566583
+  User_Type: Buyer
+  ZIP_Code: 72632
+
+RELATED REQUIREMENTS:
+FR-006

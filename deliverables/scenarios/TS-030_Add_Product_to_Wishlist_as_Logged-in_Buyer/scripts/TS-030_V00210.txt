@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00210
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00210
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account sarah.jones@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+  Wishlist_State: Product_Already_In_Wishlist
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-316636
+  Order_Quantity: 3
+  Order_Total: 470.22
+  Password: weak
+  Phone: +1-299-549-9924
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 156.74
+  Product_SKU: SKU-14918
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-188633848
+  User_Type: Buyer
+  ZIP_Code: 14416
+
+RELATED REQUIREMENTS:
+FR-005

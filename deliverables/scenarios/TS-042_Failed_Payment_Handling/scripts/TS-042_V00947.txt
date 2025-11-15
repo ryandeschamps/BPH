@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00947
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00947
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account robert.brown@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Failure_Reason: Timeout
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 06/27
+  Card_Number: 4532-****-****-3753
+  Device: Desktop
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-849526
+  Order_Quantity: 2
+  Order_Total: 420.2
+  Password: weak
+  Phone: +1-887-784-9108
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 210.1
+  Product_SKU: SKU-21075
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-611007538
+  User_Type: Buyer
+  ZIP_Code: 18045
+
+RELATED REQUIREMENTS:
+FR-006

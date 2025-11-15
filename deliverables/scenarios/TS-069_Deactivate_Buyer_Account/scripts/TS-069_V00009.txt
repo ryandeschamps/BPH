@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-069_V00009
+
+SCENARIO: View My Account Profile
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a buyer, I want to view my profile details (name, email, phone), so that I can verify my information.
+
+GIVEN:
+- Admin is logged in with account james.smith@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View My Account Profile
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Buyer_Status: Inactive
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-555773
+  Order_Quantity: 3
+  Order_Total: 382.14
+  Password: weak
+  Phone: +1-733-277-3953
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 127.38
+  Product_SKU: SKU-61774
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-749358382
+  User_Type: Admin
+  ZIP_Code: 22092
+
+RELATED REQUIREMENTS:
+FR-010

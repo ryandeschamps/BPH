@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00003
+
+SCENARIO: Track Current Order Status
+VARIANT: V00003
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Message_Type: Question
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-322858
+  Order_Quantity: 4
+  Order_Total: 583.16
+  Password: weak
+  Phone: +1-778-699-1397
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 145.79
+  Product_SKU: SKU-93430
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-891540254
+  User_Type: Buyer
+  ZIP_Code: 81879
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

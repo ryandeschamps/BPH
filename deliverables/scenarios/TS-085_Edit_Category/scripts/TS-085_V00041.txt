@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-085_V00041
+
+SCENARIO: Update Order Status to Shipped with Tracking
+VARIANT: V00041
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Shipped and add tracking details (carrier, tracking ID), so that buyers can track their shipment.
+
+GIVEN:
+- Admin is logged in with account robert.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Shipped with Tracking
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Edit_Field: Description
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-654726
+  Order_Quantity: 2
+  Order_Total: 420.36
+  Password: weak
+  Phone: +1-538-940-5933
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 210.18
+  Product_SKU: SKU-83233
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-937996061
+  User_Type: Admin
+  ZIP_Code: 43188
+
+RELATED REQUIREMENTS:
+FR-017

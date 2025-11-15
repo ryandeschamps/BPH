@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00073
+
+SCENARIO: Product Browse by Category
+VARIANT: V00073
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: Has_Variations
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-870936
+  Order_Quantity: 1
+  Order_Total: 65.42
+  Password: weak
+  Phone: +1-874-261-3265
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 65.42
+  Product_SKU: SKU-69251
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-804076104
+  User_Type: Visitor
+  ZIP_Code: 24932
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00151
+
+SCENARIO: Change Password
+VARIANT: V00151
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account john.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Order_Status: Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-489402
+  Order_Quantity: 3
+  Order_Total: 842.46
+  Password: weak
+  Phone: +1-929-268-4081
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 280.82
+  Product_SKU: SKU-20947
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-788486009
+  User_Type: Admin
+  ZIP_Code: 70541
+
+RELATED REQUIREMENTS:
+FR-010

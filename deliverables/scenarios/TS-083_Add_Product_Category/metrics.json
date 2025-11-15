@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-083",
+  "scenario_title": "Add Product Category",
+  "variant_count": 36,
+  "expected_variant_count": 36,
+  "parameters": {
+    "User_Type": 1,
+    "Category_Level": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-083_Add_Product_Category/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

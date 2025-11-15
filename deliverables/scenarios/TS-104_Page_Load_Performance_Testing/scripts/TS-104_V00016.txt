@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00016
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00016
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Load_Time: Fast
+  Network_Speed: High
+  Page_Type: Home
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-287288
+  Order_Quantity: 1
+  Order_Total: 114.85
+  Password: weak
+  Phone: +1-991-944-5909
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 114.85
+  Product_SKU: SKU-76600
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-492421857
+  User_Type: N/A
+  ZIP_Code: 22770
+
+RELATED REQUIREMENTS:
+FR-022

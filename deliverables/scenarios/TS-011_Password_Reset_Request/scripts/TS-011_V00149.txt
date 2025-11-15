@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00149
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00149
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account mary.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for mary.miller@example.com
+
+WHEN:
+- User enters email: mary.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Email_State: Verified
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Reset_Link_State: Expired
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-297689
+  Order_Quantity: 5
+  Order_Total: 715.65
+  Password: Test@123
+  Phone: +1-724-627-4102
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 143.13
+  Product_SKU: SKU-24880
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-341524831
+  User_Type: Buyer
+  ZIP_Code: 65282
+
+RELATED REQUIREMENTS:
+FR-001

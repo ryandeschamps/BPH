@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-049_V00027
+
+SCENARIO: Select Address from Address Book
+VARIANT: V00027
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:25
+
+DESCRIPTION:
+As a buyer with saved addresses, I want to select from my address book, so that I don't have to re-enter addresses.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Select Address from Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-485225
+  Order_Quantity: 1
+  Order_Total: 265.92
+  Password: weak
+  Phone: +1-822-113-4458
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 265.92
+  Product_SKU: SKU-51778
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-550119754
+  User_Type: Visitor
+  ZIP_Code: 66098
+
+RELATED REQUIREMENTS:
+FR-008, FR-010

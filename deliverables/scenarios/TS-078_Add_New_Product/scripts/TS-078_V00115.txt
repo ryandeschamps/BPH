@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00115
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00115
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account robert.brown@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Image_Count: Multiple
+  Network_Speed: High
+  Product_Type: With_Variations
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-675460
+  Order_Quantity: 2
+  Order_Total: 531.66
+  Password: weak
+  Phone: +1-276-505-1389
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 265.83
+  Product_SKU: SKU-69831
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-787889787
+  User_Type: Admin
+  ZIP_Code: 95719
+
+RELATED REQUIREMENTS:
+FR-016

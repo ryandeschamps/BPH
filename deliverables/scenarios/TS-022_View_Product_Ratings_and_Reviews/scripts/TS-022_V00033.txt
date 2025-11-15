@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00033
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00033
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Low
+  Rating_Range: High_Rated
+  Review_Count: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-807922
+  Order_Quantity: 5
+  Order_Total: 703.7
+  Password: weak
+  Phone: +1-367-842-8272
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 140.74
+  Product_SKU: SKU-48539
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-591148289
+  User_Type: Visitor
+  ZIP_Code: 60811
+
+RELATED REQUIREMENTS:
+FR-003

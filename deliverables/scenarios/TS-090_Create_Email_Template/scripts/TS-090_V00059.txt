@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-090_V00059
+
+SCENARIO: Create Product Sub-Category
+VARIANT: V00059
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create sub-categories under categories, so that I can further organize products.
+
+GIVEN:
+- Admin is logged in with account lisa.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Create Product Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Template_Type: Transactional
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-572227
+  Order_Quantity: 1
+  Order_Total: 139.11
+  Password: weak
+  Phone: +1-495-443-8201
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 139.11
+  Product_SKU: SKU-61934
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-960145465
+  User_Type: Admin
+  ZIP_Code: 57533
+
+RELATED REQUIREMENTS:
+FR-018

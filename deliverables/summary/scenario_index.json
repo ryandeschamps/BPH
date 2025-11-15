@@ -1,0 +1,1971 @@
+{
+  "generated_at": "2025-11-15T19:51:53.217071",
+  "scenarios_dir": "deliverables/scenarios",
+  "total_scenarios": 106,
+  "scenarios": [
+    {
+      "scenario_id": "TS-001",
+      "title": "New Buyer Registration with Email Verification",
+      "directory": "TS-001_New_Buyer_Registration_with_Email_Verification",
+      "variant_count": 864,
+      "test_data_count": 864,
+      "script_count": 865,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 2,
+        "Field_Values": 12,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-002",
+      "title": "Registration with Invalid Email Format",
+      "directory": "TS-002_Registration_with_Invalid_Email_Format",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Email_Format": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-003",
+      "title": "Registration with Password Mismatch",
+      "directory": "TS-003_Registration_with_Password_Mismatch",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Password_State": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-004",
+      "title": "Registration with Existing Email",
+      "directory": "TS-004_Registration_with_Existing_Email",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Email_State": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-005",
+      "title": "Registration Without Accepting Terms",
+      "directory": "TS-005_Registration_Without_Accepting_Terms",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Terms_Accepted": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-006",
+      "title": "Login with Valid Email and Password",
+      "directory": "TS-006_Login_with_Valid_Email_and_Password",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Account_State": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-007",
+      "title": "Login with Invalid Credentials",
+      "directory": "TS-007_Login_with_Invalid_Credentials",
+      "variant_count": 180,
+      "test_data_count": 180,
+      "script_count": 181,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Credential_Error": 5,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-008",
+      "title": "Login with Unverified Email",
+      "directory": "TS-008_Login_with_Unverified_Email",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Account_State": 1,
+        "Email_Verification": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-009",
+      "title": "Social Login with Facebook",
+      "directory": "TS-009_Social_Login_with_Facebook",
+      "variant_count": 288,
+      "test_data_count": 288,
+      "script_count": 289,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Auth_Method": 1,
+        "Input_Validity": 2,
+        "OAuth_State": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-010",
+      "title": "Social Login with Google",
+      "directory": "TS-010_Social_Login_with_Google",
+      "variant_count": 288,
+      "test_data_count": 288,
+      "script_count": 289,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Auth_Method": 1,
+        "Input_Validity": 2,
+        "OAuth_State": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-011",
+      "title": "Password Reset Request",
+      "directory": "TS-011_Password_Reset_Request",
+      "variant_count": 216,
+      "test_data_count": 216,
+      "script_count": 217,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Email_State": 2,
+        "Reset_Link_State": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-012",
+      "title": "Password Reset with Invalid Email",
+      "directory": "TS-012_Password_Reset_with_Invalid_Email",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Email_State": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-013",
+      "title": "Search Products by Keyword as Visitor",
+      "directory": "TS-013_Search_Products_by_Keyword_as_Visitor",
+      "variant_count": 864,
+      "test_data_count": 864,
+      "script_count": 865,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Input_Validity": 1,
+        "Search_Query": 4,
+        "Results_Count": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-014",
+      "title": "Search Products with No Results",
+      "directory": "TS-014_Search_Products_with_No_Results",
+      "variant_count": 216,
+      "test_data_count": 216,
+      "script_count": 217,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Input_Validity": 1,
+        "Search_Query": 3,
+        "Results_Count": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-015",
+      "title": "Browse Products by Category",
+      "directory": "TS-015_Browse_Products_by_Category",
+      "variant_count": 864,
+      "test_data_count": 864,
+      "script_count": 865,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Category_Type": 3,
+        "Product_Count": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-016",
+      "title": "Browse Products by Sub-Category",
+      "directory": "TS-016_Browse_Products_by_Sub-Category",
+      "variant_count": 1440,
+      "test_data_count": 1440,
+      "script_count": 1441,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Sub_Category_Type": 5,
+        "Product_Count": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-017",
+      "title": "Filter Product Listing",
+      "directory": "TS-017_Filter_Product_Listing",
+      "variant_count": 576,
+      "test_data_count": 576,
+      "script_count": 577,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Filter_Type": 4,
+        "Filter_Value": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-018",
+      "title": "Sort Product Listing",
+      "directory": "TS-018_Sort_Product_Listing",
+      "variant_count": 360,
+      "test_data_count": 360,
+      "script_count": 361,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Sort_By": 5,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-019",
+      "title": "View Product Details as Visitor",
+      "directory": "TS-019_View_Product_Details_as_Visitor",
+      "variant_count": 720,
+      "test_data_count": 720,
+      "script_count": 721,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Product_State": 5,
+        "Image_Count": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-020",
+      "title": "Check Shipping Availability by PIN Code",
+      "directory": "TS-020_Check_Shipping_Availability_by_PIN_Code",
+      "variant_count": 432,
+      "test_data_count": 432,
+      "script_count": 433,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Input_Validity": 2,
+        "PIN_Code_State": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-021",
+      "title": "View Product Variations",
+      "directory": "TS-021_View_Product_Variations",
+      "variant_count": 648,
+      "test_data_count": 648,
+      "script_count": 649,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Variation_Type": 3,
+        "Variation_Availability": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-022",
+      "title": "View Product Ratings and Reviews",
+      "directory": "TS-022_View_Product_Ratings_and_Reviews",
+      "variant_count": 864,
+      "test_data_count": 864,
+      "script_count": 865,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Review_Count": 3,
+        "Rating_Range": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-023",
+      "title": "Add Product to Cart as Logged-in Buyer",
+      "directory": "TS-023_Add_Product_to_Cart_as_Logged-in_Buyer",
+      "variant_count": 576,
+      "test_data_count": 576,
+      "script_count": 577,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Product_Variation": 4,
+        "Quantity": 2,
+        "Cart_State": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-024",
+      "title": "Add Product to Cart Without Login",
+      "directory": "TS-024_Add_Product_to_Cart_Without_Login",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Redirect_Action": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-025",
+      "title": "Add Multiple Quantities of Same Product",
+      "directory": "TS-025_Add_Multiple_Quantities_of_Same_Product",
+      "variant_count": 432,
+      "test_data_count": 432,
+      "script_count": 433,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Quantity": 4,
+        "Stock_Level": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-026",
+      "title": "View Shopping Cart",
+      "directory": "TS-026_View_Shopping_Cart",
+      "variant_count": 432,
+      "test_data_count": 432,
+      "script_count": 433,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Cart_State": 4,
+        "Item_Availability": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-027",
+      "title": "Update Item Quantity in Cart",
+      "directory": "TS-027_Update_Item_Quantity_in_Cart",
+      "variant_count": 288,
+      "test_data_count": 288,
+      "script_count": 289,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Quantity_Change": 4,
+        "Stock_Level": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-028",
+      "title": "Remove Item from Cart",
+      "directory": "TS-028_Remove_Item_from_Cart",
+      "variant_count": 216,
+      "test_data_count": 216,
+      "script_count": 217,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Cart_State": 2,
+        "Removal_Action": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-029",
+      "title": "View Empty Cart",
+      "directory": "TS-029_View_Empty_Cart",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Cart_State": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-030",
+      "title": "Add Product to Wishlist as Logged-in Buyer",
+      "directory": "TS-030_Add_Product_to_Wishlist_as_Logged-in_Buyer",
+      "variant_count": 216,
+      "test_data_count": 216,
+      "script_count": 217,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Wishlist_State": 3,
+        "Product_State": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-031",
+      "title": "Add Product to Wishlist Without Login",
+      "directory": "TS-031_Add_Product_to_Wishlist_Without_Login",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Redirect_Action": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-032",
+      "title": "View Wishlist",
+      "directory": "TS-032_View_Wishlist",
+      "variant_count": 324,
+      "test_data_count": 324,
+      "script_count": 325,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Wishlist_State": 3,
+        "Item_Availability": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-033",
+      "title": "Remove Product from Wishlist",
+      "directory": "TS-033_Remove_Product_from_Wishlist",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Wishlist_State": 2,
+        "Removal_Action": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-034",
+      "title": "Move Product from Wishlist to Cart",
+      "directory": "TS-034_Move_Product_from_Wishlist_to_Cart",
+      "variant_count": 216,
+      "test_data_count": 216,
+      "script_count": 217,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Product_State": 3,
+        "Cart_State": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-035",
+      "title": "Checkout as Logged-in Buyer with Valid Data",
+      "directory": "TS-035_Checkout_as_Logged-in_Buyer_with_Valid_Data",
+      "variant_count": 432,
+      "test_data_count": 432,
+      "script_count": 433,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Payment_Method": 3,
+        "Address_State": 2,
+        "Cart_Items": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-036",
+      "title": "Checkout Without Login",
+      "directory": "TS-036_Checkout_Without_Login",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Redirect_Action": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-037",
+      "title": "Checkout with Same Billing and Shipping Address",
+      "directory": "TS-037_Checkout_with_Same_Billing_and_Shipping_Address",
+      "variant_count": 216,
+      "test_data_count": 216,
+      "script_count": 217,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Address_Type": 1,
+        "Address_State": 2,
+        "Payment_Method": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-038",
+      "title": "Checkout with Different Billing and Shipping Addre",
+      "directory": "TS-038_Checkout_with_Different_Billing_and_Shipping_Addre",
+      "variant_count": 324,
+      "test_data_count": 324,
+      "script_count": 325,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Address_Type": 1,
+        "Address_State": 3,
+        "Payment_Method": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-039",
+      "title": "Select CreditDebit Card Payment Method",
+      "directory": "TS-039_Select_CreditDebit_Card_Payment_Method",
+      "variant_count": 864,
+      "test_data_count": 864,
+      "script_count": 865,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Payment_Method": 2,
+        "Card_Type": 4,
+        "Payment_Status": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-040",
+      "title": "Select Net Banking Payment Method",
+      "directory": "TS-040_Select_Net_Banking_Payment_Method",
+      "variant_count": 432,
+      "test_data_count": 432,
+      "script_count": 433,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Payment_Method": 1,
+        "Bank": 4,
+        "Payment_Status": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-041",
+      "title": "Successful Payment and Order Confirmation",
+      "directory": "TS-041_Successful_Payment_and_Order_Confirmation",
+      "variant_count": 432,
+      "test_data_count": 432,
+      "script_count": 433,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Payment_Method": 3,
+        "Order_Size": 2,
+        "Email_Delivery": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-042",
+      "title": "Failed Payment Handling",
+      "directory": "TS-042_Failed_Payment_Handling",
+      "variant_count": 1620,
+      "test_data_count": 1620,
+      "script_count": 1621,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Payment_Method": 3,
+        "Failure_Reason": 5,
+        "Retry_Action": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-043",
+      "title": "View Order Summary Before Payment",
+      "directory": "TS-043_View_Order_Summary_Before_Payment",
+      "variant_count": 648,
+      "test_data_count": 648,
+      "script_count": 649,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Cart_Items": 3,
+        "Shipping_Cost": 3,
+        "Tax_Applicable": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-044",
+      "title": "Email Notification for Order Status Updates",
+      "directory": "TS-044_Email_Notification_for_Order_Status_Updates",
+      "variant_count": 432,
+      "test_data_count": 432,
+      "script_count": 433,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Order_Status": 4,
+        "Email_Delivery": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-045",
+      "title": "Share Product on Social Media",
+      "directory": "TS-045_Share_Product_on_Social_Media",
+      "variant_count": 288,
+      "test_data_count": 288,
+      "script_count": 289,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 2,
+        "Social_Platform": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-046",
+      "title": "Share Order on Social Media",
+      "directory": "TS-046_Share_Order_on_Social_Media",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Social_Platform": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-047",
+      "title": "Submit Product Review",
+      "directory": "TS-047_Submit_Product_Review",
+      "variant_count": 180,
+      "test_data_count": 180,
+      "script_count": 181,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Product_State": 1,
+        "Rating": 5,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-048",
+      "title": "Submit Review Without Purchase",
+      "directory": "TS-048_Submit_Review_Without_Purchase",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Product_State": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-049",
+      "title": "View User Profile as Visitor",
+      "directory": "TS-049_View_User_Profile_as_Visitor",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-050",
+      "title": "View User Profile as Logged-in Buyer",
+      "directory": "TS-050_View_User_Profile_as_Logged-in_Buyer",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-051",
+      "title": "Update Profile Information",
+      "directory": "TS-051_Update_Profile_Information",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Field_Updated": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-052",
+      "title": "Change Password",
+      "directory": "TS-052_Change_Password",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Password_Validity": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-053",
+      "title": "Manage Saved Addresses",
+      "directory": "TS-053_Manage_Saved_Addresses",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Address_Action": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-054",
+      "title": "View Order History",
+      "directory": "TS-054_View_Order_History",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Order_Count": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-055",
+      "title": "View Order Details",
+      "directory": "TS-055_View_Order_Details",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Order_Status": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-056",
+      "title": "Reorder Previous Order",
+      "directory": "TS-056_Reorder_Previous_Order",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Reorder_Items": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-057",
+      "title": "Track Order Shipment",
+      "directory": "TS-057_Track_Order_Shipment",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Order_Status": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-058",
+      "title": "Cancel Order",
+      "directory": "TS-058_Cancel_Order",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-059",
+      "title": "Contact Customer Support as Buyer",
+      "directory": "TS-059_Contact_Customer_Support_as_Buyer",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Message_Type": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-060",
+      "title": "Contact Customer Support as Visitor",
+      "directory": "TS-060_Contact_Customer_Support_as_Visitor",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Message_Type": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-061",
+      "title": "Admin Login with Valid Credentials",
+      "directory": "TS-061_Admin_Login_with_Valid_Credentials",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-062",
+      "title": "Admin Login with Invalid Credentials",
+      "directory": "TS-062_Admin_Login_with_Invalid_Credentials",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Input_Validity": 1,
+        "Credential_Error": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-063",
+      "title": "Admin Password Reset",
+      "directory": "TS-063_Admin_Password_Reset",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Reset_State": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-064",
+      "title": "View Admin Dashboard",
+      "directory": "TS-064_View_Admin_Dashboard",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-065",
+      "title": "View All Buyers List",
+      "directory": "TS-065_View_All_Buyers_List",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Buyer_Filter": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-066",
+      "title": "View Buyer Details",
+      "directory": "TS-066_View_Buyer_Details",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Buyer_Status": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-067",
+      "title": "Edit Buyer Information",
+      "directory": "TS-067_Edit_Buyer_Information",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Edit_Field": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-068",
+      "title": "Activate Buyer Account",
+      "directory": "TS-068_Activate_Buyer_Account",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Buyer_Status": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-069",
+      "title": "Deactivate Buyer Account",
+      "directory": "TS-069_Deactivate_Buyer_Account",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Buyer_Status": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-070",
+      "title": "View All Orders List",
+      "directory": "TS-070_View_All_Orders_List",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Order_Filter": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-071",
+      "title": "Filter Orders by Status",
+      "directory": "TS-071_Filter_Orders_by_Status",
+      "variant_count": 180,
+      "test_data_count": 180,
+      "script_count": 181,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Order_Status": 5,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-072",
+      "title": "View Order Details as Admin",
+      "directory": "TS-072_View_Order_Details_as_Admin",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Order_Details": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-073",
+      "title": "Update Order Status to Confirmed",
+      "directory": "TS-073_Update_Order_Status_to_Confirmed",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Status_Change": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-074",
+      "title": "Update Order Status to In Process",
+      "directory": "TS-074_Update_Order_Status_to_In_Process",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Status_Change": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-075",
+      "title": "Update Order Status to Shipped",
+      "directory": "TS-075_Update_Order_Status_to_Shipped",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Status_Change": 1,
+        "Tracking_Data": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-076",
+      "title": "Update Order Status to Delivered",
+      "directory": "TS-076_Update_Order_Status_to_Delivered",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Status_Change": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-077",
+      "title": "Edit Order Details",
+      "directory": "TS-077_Edit_Order_Details",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Edit_Type": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-078",
+      "title": "Add New Product",
+      "directory": "TS-078_Add_New_Product",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Product_Type": 2,
+        "Image_Count": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-079",
+      "title": "Edit Product Details",
+      "directory": "TS-079_Edit_Product_Details",
+      "variant_count": 180,
+      "test_data_count": 180,
+      "script_count": 181,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Edit_Field": 5,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-080",
+      "title": "Activate Product",
+      "directory": "TS-080_Activate_Product",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Product_Status": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-081",
+      "title": "Deactivate Product",
+      "directory": "TS-081_Deactivate_Product",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Product_Status": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-082",
+      "title": "Delete Product",
+      "directory": "TS-082_Delete_Product",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Product_Status": 1,
+        "Has_Orders": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-083",
+      "title": "Add Product Category",
+      "directory": "TS-083_Add_Product_Category",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Category_Level": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-084",
+      "title": "Add Product Sub-Category",
+      "directory": "TS-084_Add_Product_Sub-Category",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Category_Level": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-085",
+      "title": "Edit Category",
+      "directory": "TS-085_Edit_Category",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Edit_Field": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-086",
+      "title": "Delete Category",
+      "directory": "TS-086_Delete_Category",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Category_Status": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-087",
+      "title": "Approve Product Review",
+      "directory": "TS-087_Approve_Product_Review",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Review_Status": 1,
+        "Action": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-088",
+      "title": "Reject Product Review",
+      "directory": "TS-088_Reject_Product_Review",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Review_Status": 1,
+        "Action": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-089",
+      "title": "Manage CMS Pages",
+      "directory": "TS-089_Manage_CMS_Pages",
+      "variant_count": 144,
+      "test_data_count": 144,
+      "script_count": 145,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "CMS_Page": 4,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-090",
+      "title": "Create Email Template",
+      "directory": "TS-090_Create_Email_Template",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Template_Type": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-091",
+      "title": "Send Bulk Email",
+      "directory": "TS-091_Send_Bulk_Email",
+      "variant_count": 72,
+      "test_data_count": 72,
+      "script_count": 73,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Target_Audience": 2,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-092",
+      "title": "Generate Sales Report",
+      "directory": "TS-092_Generate_Sales_Report",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Report_Period": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-093",
+      "title": "View Sales Analytics",
+      "directory": "TS-093_View_Sales_Analytics",
+      "variant_count": 180,
+      "test_data_count": 180,
+      "script_count": 181,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Report_Period": 5,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-094",
+      "title": "Export Report as PDF",
+      "directory": "TS-094_Export_Report_as_PDF",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Export_Format": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-095",
+      "title": "Export Report as Excel",
+      "directory": "TS-095_Export_Report_as_Excel",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Export_Format": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-096",
+      "title": "Create Sub-Admin Account",
+      "directory": "TS-096_Create_Sub-Admin_Account",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Role_Type": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-097",
+      "title": "Edit Sub-Admin Account",
+      "directory": "TS-097_Edit_Sub-Admin_Account",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Edit_Type": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-098",
+      "title": "Activate Sub-Admin Account",
+      "directory": "TS-098_Activate_Sub-Admin_Account",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Sub_Admin_Status": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-099",
+      "title": "Deactivate Sub-Admin Account",
+      "directory": "TS-099_Deactivate_Sub-Admin_Account",
+      "variant_count": 36,
+      "test_data_count": 36,
+      "script_count": 37,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Sub_Admin_Status": 1,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-100",
+      "title": "View Customer Feedback",
+      "directory": "TS-100_View_Customer_Feedback",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Feedback_Type": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-101",
+      "title": "Manage Payment Gateway Settings",
+      "directory": "TS-101_Manage_Payment_Gateway_Settings",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Payment_Status": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-102",
+      "title": "Configure Bank Account Details",
+      "directory": "TS-102_Configure_Bank_Account_Details",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "User_Type": 1,
+        "Bank_Field": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-103",
+      "title": "Load Testing with Concurrent Users",
+      "directory": "TS-103_Load_Testing_with_Concurrent_Users",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "Load_Type": 1,
+        "User_Count": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-104",
+      "title": "Page Load Performance Testing",
+      "directory": "TS-104_Page_Load_Performance_Testing",
+      "variant_count": 540,
+      "test_data_count": 540,
+      "script_count": 541,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "Page_Type": 5,
+        "Load_Time": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-105",
+      "title": "Error Handling and Recovery",
+      "directory": "TS-105_Error_Handling_and_Recovery",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "Error_Type": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    },
+    {
+      "scenario_id": "TS-106",
+      "title": "Security Testing",
+      "directory": "TS-106_Security_Testing",
+      "variant_count": 108,
+      "test_data_count": 108,
+      "script_count": 109,
+      "optimized_count": 0,
+      "coverage_pct": 0.0,
+      "parameters": {
+        "Security_Type": 3,
+        "Browser": 4,
+        "Device": 3,
+        "Network_Speed": 3
+      },
+      "status": "success"
+    }
+  ]
+}

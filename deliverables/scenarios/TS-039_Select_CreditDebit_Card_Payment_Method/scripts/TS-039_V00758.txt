@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00758
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00758
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account james.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Card_Type: Discover
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 10/26
+  Card_Number: 4532-****-****-3570
+  Device: Desktop
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-935251
+  Order_Quantity: 4
+  Order_Total: 183.04
+  Password: weak
+  Phone: +1-693-983-8422
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 45.76
+  Product_SKU: SKU-17363
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-811612321
+  User_Type: Buyer
+  ZIP_Code: 60138
+
+RELATED REQUIREMENTS:
+FR-006

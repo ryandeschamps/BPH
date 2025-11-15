@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00129
+
+SCENARIO: Create New Product Category
+VARIANT: V00129
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account david.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  CMS_Page: Terms
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-267197
+  Order_Quantity: 5
+  Order_Total: 824.6
+  Password: weak
+  Phone: +1-410-752-1716
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 164.92
+  Product_SKU: SKU-60446
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-750839977
+  User_Type: Admin
+  ZIP_Code: 72155
+
+RELATED REQUIREMENTS:
+FR-018

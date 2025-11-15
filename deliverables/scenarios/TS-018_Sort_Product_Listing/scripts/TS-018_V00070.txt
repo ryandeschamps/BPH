@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00070
+
+SCENARIO: Product Search with No Results
+VARIANT: V00070
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: High
+  Sort_By: Price_High_Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-241086
+  Order_Quantity: 4
+  Order_Total: 714.68
+  Password: weak
+  Phone: +1-781-836-4216
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 178.67
+  Product_SKU: SKU-40999
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-651432907
+  User_Type: Visitor
+  ZIP_Code: 23276
+
+RELATED REQUIREMENTS:
+FR-003

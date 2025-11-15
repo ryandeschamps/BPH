@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00027
+
+SCENARIO: Forgot Password Request
+VARIANT: V00027
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Many_Results
+  Search_Query: Single_Keyword
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-219021
+  Order_Quantity: 3
+  Order_Total: 529.17
+  Password: Test@123
+  Phone: +1-469-959-2755
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 176.39
+  Product_SKU: SKU-87230
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-442483521
+  User_Type: Visitor
+  ZIP_Code: 80936
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-094_V00033
+
+SCENARIO: Upload Product Images
+VARIANT: V00033
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to upload multiple product images and set thumbnail, so that buyers can see the product.
+
+GIVEN:
+- Admin is logged in with account james.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Upload Product Images
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Export_Format: PDF
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-701524
+  Order_Quantity: 3
+  Order_Total: 122.52
+  Password: weak
+  Phone: +1-578-830-3038
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 40.84
+  Product_SKU: SKU-22920
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-933401549
+  User_Type: Admin
+  ZIP_Code: 90669
+
+RELATED REQUIREMENTS:
+FR-019

@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-003_V00054
+
+SCENARIO: Registration with Mismatched Passwords
+VARIANT: V00054
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate that my password and confirm password match, so that I don't lock myself out with a typo.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: robert.williams@example.com
+- User enters phone: +1-614-335-3174
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  Password_State: Mismatch_Multiple_Chars
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-358512
+  Order_Quantity: 5
+  Order_Total: 747.5
+  Password: weak
+  Phone: +1-614-335-3174
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 149.5
+  Product_SKU: SKU-54453
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-673063255
+  User_Type: Visitor
+  ZIP_Code: 97412
+
+RELATED REQUIREMENTS:
+FR-002

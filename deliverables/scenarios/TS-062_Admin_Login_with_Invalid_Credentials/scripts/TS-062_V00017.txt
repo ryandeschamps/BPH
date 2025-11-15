@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00017
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00017
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account lisa.garcia@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Wrong_Username
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-212014
+  Order_Quantity: 5
+  Order_Total: 325.4
+  Password: weak
+  Phone: +1-325-577-6107
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 65.08
+  Product_SKU: SKU-65770
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-574215232
+  User_Type: Admin
+  ZIP_Code: 47950
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

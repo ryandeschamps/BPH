@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00427
+
+SCENARIO: Product Browse by Category
+VARIANT: V00427
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account robert.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Image_Count: Multiple_Images
+  Network_Speed: High
+  Product_State: Active
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-734342
+  Order_Quantity: 1
+  Order_Total: 210.74
+  Password: weak
+  Phone: +1-338-905-5584
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 210.74
+  Product_SKU: SKU-49454
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-874017271
+  User_Type: Buyer
+  ZIP_Code: 41367
+
+RELATED REQUIREMENTS:
+FR-003

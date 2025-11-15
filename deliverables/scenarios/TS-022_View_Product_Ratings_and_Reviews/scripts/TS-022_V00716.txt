@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00716
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00716
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account emily.garcia@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Rating_Range: Mixed_Ratings
+  Review_Count: Few_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-464287
+  Order_Quantity: 2
+  Order_Total: 498.58
+  Password: weak
+  Phone: +1-263-278-5869
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 249.29
+  Product_SKU: SKU-11784
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-509661930
+  User_Type: Buyer
+  ZIP_Code: 21665
+
+RELATED REQUIREMENTS:
+FR-003

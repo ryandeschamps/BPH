@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00056
+
+SCENARIO: Edit Product Details
+VARIANT: V00056
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account sarah.miller@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Role_Type: Order_Manager
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-796744
+  Order_Quantity: 2
+  Order_Total: 54.36
+  Password: weak
+  Phone: +1-576-929-8671
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 27.18
+  Product_SKU: SKU-36808
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-157864000
+  User_Type: Admin
+  ZIP_Code: 18179
+
+RELATED REQUIREMENTS:
+FR-019

@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00211
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00211
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account sarah.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Edge
+  Cart_Items: Multiple
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 07/28
+  Card_Number: 4532-****-****-8903
+  Device: Mobile
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-345713
+  Order_Quantity: 4
+  Order_Total: 221.52
+  Password: Test@123
+  Phone: +1-592-366-4061
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 55.38
+  Product_SKU: SKU-47672
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-638319733
+  User_Type: Buyer
+  ZIP_Code: 14929
+
+RELATED REQUIREMENTS:
+FR-007

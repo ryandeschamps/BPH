@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00244
+
+SCENARIO: View Wishlist Items
+VARIANT: V00244
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account david.miller@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Email_Delivery: Delivered
+  Network_Speed: High
+  Order_Size: Multiple_Items
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 01/29
+  Card_Number: 4532-****-****-1070
+  Device: Desktop
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-972613
+  Order_Quantity: 4
+  Order_Total: 361.56
+  Password: weak
+  Phone: +1-376-859-2793
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 90.39
+  Product_SKU: SKU-31901
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-890964908
+  User_Type: Buyer
+  ZIP_Code: 67394
+
+RELATED REQUIREMENTS:
+FR-006

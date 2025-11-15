@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00086
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00086
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.smith@example.com
+- User enters phone: +1-808-948-8075
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Email_State: Unverified_Account
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-370546
+  Order_Quantity: 3
+  Order_Total: 312.9
+  Password: weak
+  Phone: +1-808-948-8075
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 104.3
+  Product_SKU: SKU-22154
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-520677018
+  User_Type: Visitor
+  ZIP_Code: 85676
+
+RELATED REQUIREMENTS:
+FR-002

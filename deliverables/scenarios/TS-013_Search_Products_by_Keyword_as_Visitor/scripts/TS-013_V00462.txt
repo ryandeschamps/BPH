@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00462
+
+SCENARIO: Forgot Password Request
+VARIANT: V00462
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Many_Results
+  Search_Query: Single_Keyword
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-871216
+  Order_Quantity: 5
+  Order_Total: 1242.45
+  Password: Test@123
+  Phone: +1-647-175-6932
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 248.49
+  Product_SKU: SKU-32058
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-922242834
+  User_Type: Buyer
+  ZIP_Code: 36642
+
+RELATED REQUIREMENTS:
+FR-001

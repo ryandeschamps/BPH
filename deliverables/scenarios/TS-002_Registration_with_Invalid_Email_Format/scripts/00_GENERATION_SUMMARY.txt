@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:42:58
+Total Scripts: 144
+Total Scenarios: 1
+Generation Time: 0.0 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-002: Registration with Invalid Email Format
+  Variants: 144
+  Files: TS-002_V*.txt

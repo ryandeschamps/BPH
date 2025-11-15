@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00032
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00032
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account james.smith@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Single_Item
+  Device: Mobile
+  Network_Speed: Medium
+  Removal_Action: Remove_One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-971497
+  Order_Quantity: 5
+  Order_Total: 898.85
+  Password: weak
+  Phone: +1-263-802-7779
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 179.77
+  Product_SKU: SKU-10754
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-279426905
+  User_Type: Buyer
+  ZIP_Code: 48621
+
+RELATED REQUIREMENTS:
+FR-005

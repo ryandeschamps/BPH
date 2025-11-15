@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00031
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00031
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account james.johnson@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Order_Status: Open
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-285152
+  Order_Quantity: 5
+  Order_Total: 755.9
+  Password: weak
+  Phone: +1-243-391-2833
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 151.18
+  Product_SKU: SKU-50182
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-454345675
+  User_Type: Buyer
+  ZIP_Code: 26097
+
+RELATED REQUIREMENTS:
+FR-008

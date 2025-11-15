@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00052
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00052
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account robert.rodriguez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: High
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-517028
+  Order_Quantity: 1
+  Order_Total: 25.39
+  Password: weak
+  Phone: +1-724-284-3180
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 25.39
+  Product_SKU: SKU-42811
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-738052439
+  User_Type: Buyer
+  ZIP_Code: 42442
+
+RELATED REQUIREMENTS:
+FR-007

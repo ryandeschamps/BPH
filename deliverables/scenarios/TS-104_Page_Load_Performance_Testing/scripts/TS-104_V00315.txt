@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00315
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00315
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Load_Time: Slow
+  Network_Speed: Low
+  Page_Type: Product_Detail
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-285592
+  Order_Quantity: 4
+  Order_Total: 336.08
+  Password: weak
+  Phone: +1-544-631-6802
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 84.02
+  Product_SKU: SKU-71259
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-790479850
+  User_Type: N/A
+  ZIP_Code: 58371
+
+RELATED REQUIREMENTS:
+FR-022

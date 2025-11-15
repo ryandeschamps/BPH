@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00638
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00638
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Failure_Reason: Insufficient_Funds
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 09/26
+  Card_Number: 4532-****-****-3540
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-488026
+  Order_Quantity: 1
+  Order_Total: 144.08
+  Password: weak
+  Phone: +1-476-348-2572
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 144.08
+  Product_SKU: SKU-71620
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-200683473
+  User_Type: Buyer
+  ZIP_Code: 76543
+
+RELATED REQUIREMENTS:
+FR-006

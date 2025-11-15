@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00009
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Card_Type: Visa
+  Device: Tablet
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 10/27
+  Card_Number: 4532-****-****-9241
+  Device: Tablet
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-919959
+  Order_Quantity: 3
+  Order_Total: 828.09
+  Password: weak
+  Phone: +1-965-156-5148
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 276.03
+  Product_SKU: SKU-29256
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-922674330
+  User_Type: Buyer
+  ZIP_Code: 52439
+
+RELATED REQUIREMENTS:
+FR-006

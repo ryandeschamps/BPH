@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00088
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00088
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Load_Type: Concurrent_Users
+  Network_Speed: High
+  User_Count: 150
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-195468
+  Order_Quantity: 5
+  Order_Total: 214.15
+  Password: weak
+  Phone: +1-496-676-8831
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 42.83
+  Product_SKU: SKU-21916
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-574829033
+  User_Type: N/A
+  ZIP_Code: 77368
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00300
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00300
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account jane.rodriguez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Mixed
+  Address_Type: Different_Addresses
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-430330
+  Order_Quantity: 5
+  Order_Total: 1017.2
+  Password: weak
+  Phone: +1-821-811-6563
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 203.44
+  Product_SKU: SKU-11563
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-547715282
+  User_Type: Buyer
+  ZIP_Code: 98545
+
+RELATED REQUIREMENTS:
+FR-007

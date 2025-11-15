@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-012_V00031
+
+SCENARIO: First-Time Social Login Account Creation
+VARIANT: V00031
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a visitor using social login for the first time, I want the system to auto-create my account, so that I don't need to fill registration forms.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.martinez@example.com
+
+WHEN:
+- User enters email: emily.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Email_State: Not_Registered
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-644510
+  Order_Quantity: 5
+  Order_Total: 464.7
+  Password: weak
+  Phone: +1-443-358-1375
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 92.94
+  Product_SKU: SKU-71528
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-886878957
+  User_Type: Visitor
+  ZIP_Code: 66852
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

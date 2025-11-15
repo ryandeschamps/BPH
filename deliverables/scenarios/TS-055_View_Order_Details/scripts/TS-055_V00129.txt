@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00129
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00129
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-966910
+  Order_Quantity: 3
+  Order_Total: 157.56
+  Password: weak
+  Phone: +1-510-173-4325
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 52.52
+  Product_SKU: SKU-30574
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-420765453
+  User_Type: Buyer
+  ZIP_Code: 99307
+
+RELATED REQUIREMENTS:
+FR-008

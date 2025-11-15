@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-060_V00057
+
+SCENARIO: View Shipping Tracking Information
+VARIANT: V00057
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer with a shipped order, I want to see tracking information (carrier, tracking ID), so that I can track my package.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Shipping Tracking Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Message_Type: Inquiry
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-720893
+  Order_Quantity: 2
+  Order_Total: 303.78
+  Password: weak
+  Phone: +1-523-394-7892
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 151.89
+  Product_SKU: SKU-61455
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-426767474
+  User_Type: Visitor
+  ZIP_Code: 44726
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00029
+
+SCENARIO: View Wishlist Items
+VARIANT: V00029
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account robert.jones@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Email_Delivery: Delivered
+  Network_Speed: Medium
+  Order_Size: Single_Item
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 05/25
+  Card_Number: 4532-****-****-9386
+  Device: Desktop
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-440348
+  Order_Quantity: 1
+  Order_Total: 107.36
+  Password: weak
+  Phone: +1-835-118-7650
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 107.36
+  Product_SKU: SKU-90053
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-134567555
+  User_Type: Buyer
+  ZIP_Code: 37343
+
+RELATED REQUIREMENTS:
+FR-006

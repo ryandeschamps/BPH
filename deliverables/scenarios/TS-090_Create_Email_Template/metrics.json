@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-090",
+  "scenario_title": "Create Email Template",
+  "variant_count": 72,
+  "expected_variant_count": 72,
+  "parameters": {
+    "User_Type": 1,
+    "Template_Type": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-090_Create_Email_Template/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

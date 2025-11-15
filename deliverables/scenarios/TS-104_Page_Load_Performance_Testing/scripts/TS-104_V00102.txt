@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00102
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00102
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Load_Time: Slow
+  Network_Speed: Low
+  Page_Type: Home
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-522636
+  Order_Quantity: 2
+  Order_Total: 43.74
+  Password: weak
+  Phone: +1-763-728-2252
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 21.87
+  Product_SKU: SKU-20360
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-801733424
+  User_Type: N/A
+  ZIP_Code: 88952
+
+RELATED REQUIREMENTS:
+FR-022

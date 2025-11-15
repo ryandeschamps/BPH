@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00073
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00073
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account michael.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Single_Item
+  Device: Desktop
+  Network_Speed: High
+  Removal_Action: Remove_Last_Item
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-383418
+  Order_Quantity: 4
+  Order_Total: 425.2
+  Password: weak
+  Phone: +1-650-150-2279
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 106.3
+  Product_SKU: SKU-49364
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-662117373
+  User_Type: Buyer
+  ZIP_Code: 68745
+
+RELATED REQUIREMENTS:
+FR-005

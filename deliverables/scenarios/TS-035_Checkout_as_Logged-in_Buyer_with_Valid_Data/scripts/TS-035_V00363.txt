@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00363
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00363
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account john.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Chrome
+  Cart_Items: Single
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-432570
+  Order_Quantity: 2
+  Order_Total: 440.86
+  Password: Test@123
+  Phone: +1-501-966-9495
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 220.43
+  Product_SKU: SKU-61299
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-760246357
+  User_Type: Buyer
+  ZIP_Code: 46989
+
+RELATED REQUIREMENTS:
+FR-007

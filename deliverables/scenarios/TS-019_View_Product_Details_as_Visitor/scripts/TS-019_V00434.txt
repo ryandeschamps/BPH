@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00434
+
+SCENARIO: Product Browse by Category
+VARIANT: V00434
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account lisa.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single_Image
+  Network_Speed: Medium
+  Product_State: Has_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-652955
+  Order_Quantity: 2
+  Order_Total: 225.84
+  Password: weak
+  Phone: +1-699-486-8326
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 112.92
+  Product_SKU: SKU-70234
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-444233541
+  User_Type: Buyer
+  ZIP_Code: 91692
+
+RELATED REQUIREMENTS:
+FR-003

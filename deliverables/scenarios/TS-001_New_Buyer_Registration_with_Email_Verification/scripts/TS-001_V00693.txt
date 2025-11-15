@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00693
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00693
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: mary.smith@example.com
+- User enters phone: +1-345-644-3182
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Password
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Password
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Field_Values: Missing_Password
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.smith@example.com
+  First_Name: Mary
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-418482
+  Order_Quantity: 5
+  Order_Total: 198.2
+  Password: weak
+  Phone: +1-345-644-3182
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 39.64
+  Product_SKU: SKU-99894
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-347482348
+  User_Type: Visitor
+  ZIP_Code: 98738
+
+RELATED REQUIREMENTS:
+FR-002

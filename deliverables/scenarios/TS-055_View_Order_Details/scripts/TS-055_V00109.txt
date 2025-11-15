@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00109
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00109
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account john.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-741883
+  Order_Quantity: 1
+  Order_Total: 203.34
+  Password: weak
+  Phone: +1-588-942-2589
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 203.34
+  Product_SKU: SKU-26008
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-431319110
+  User_Type: Buyer
+  ZIP_Code: 35575
+
+RELATED REQUIREMENTS:
+FR-008

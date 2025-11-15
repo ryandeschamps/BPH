@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00073
+
+SCENARIO: Export Report to PDF
+VARIANT: V00073
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Error_Type: Timeout
+  Network_Speed: High
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-942585
+  Order_Quantity: 5
+  Order_Total: 1253.6
+  Password: weak
+  Phone: +1-901-477-6963
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 250.72
+  Product_SKU: SKU-90387
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-223552321
+  User_Type: N/A
+  ZIP_Code: 32660
+
+RELATED REQUIREMENTS:
+FR-022

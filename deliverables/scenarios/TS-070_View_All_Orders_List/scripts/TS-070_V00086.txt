@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-070_V00086
+
+SCENARIO: Edit Profile Details
+VARIANT: V00086
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to edit my email and phone number, so that I can keep my information current.
+
+GIVEN:
+- Admin is logged in with account michael.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Profile Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Order_Filter: By_Date
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-827192
+  Order_Quantity: 1
+  Order_Total: 215.14
+  Password: weak
+  Phone: +1-339-624-8194
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Canvas Sneakers
+  Product_Price: 215.14
+  Product_SKU: SKU-93962
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-923465205
+  User_Type: Admin
+  ZIP_Code: 21485
+
+RELATED REQUIREMENTS:
+FR-010

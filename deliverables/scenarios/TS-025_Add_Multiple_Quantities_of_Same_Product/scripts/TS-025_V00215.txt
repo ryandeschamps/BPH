@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00215
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00215
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account emily.brown@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Medium
+  Quantity: Five
+  Stock_Level: Exact_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-606863
+  Order_Quantity: 1
+  Order_Total: 189.77
+  Password: weak
+  Phone: +1-858-440-5196
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 189.77
+  Product_SKU: SKU-53322
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-589891439
+  User_Type: Buyer
+  ZIP_Code: 61641
+
+RELATED REQUIREMENTS:
+FR-004

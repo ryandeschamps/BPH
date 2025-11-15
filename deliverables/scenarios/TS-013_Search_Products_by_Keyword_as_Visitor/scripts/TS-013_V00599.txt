@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00599
+
+SCENARIO: Forgot Password Request
+VARIANT: V00599
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account mary.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Few_Results
+  Search_Query: Multiple_Keywords
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-933208
+  Order_Quantity: 4
+  Order_Total: 596.24
+  Password: Test@123
+  Phone: +1-721-517-5685
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 149.06
+  Product_SKU: SKU-83624
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-404915112
+  User_Type: Buyer
+  ZIP_Code: 86947
+
+RELATED REQUIREMENTS:
+FR-001

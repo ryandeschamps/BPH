@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00222
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00222
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account john.brown@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Chrome
+  Cart_Items: Single
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 05/26
+  Card_Number: 4532-****-****-3189
+  Device: Mobile
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-427825
+  Order_Quantity: 1
+  Order_Total: 74.21
+  Password: Test@123
+  Phone: +1-630-168-2158
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 74.21
+  Product_SKU: SKU-39039
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-435955416
+  User_Type: Buyer
+  ZIP_Code: 53829
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01532
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01532
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account sarah.smith@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Failure_Reason: Network_Error
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-526579
+  Order_Quantity: 2
+  Order_Total: 493.52
+  Password: weak
+  Phone: +1-574-507-8957
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Silk Scarf
+  Product_Price: 246.76
+  Product_SKU: SKU-62933
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-398496273
+  User_Type: Buyer
+  ZIP_Code: 20386
+
+RELATED REQUIREMENTS:
+FR-006

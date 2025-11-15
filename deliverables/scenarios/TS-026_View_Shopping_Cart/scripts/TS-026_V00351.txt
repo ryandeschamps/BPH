@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00351
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00351
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account mary.miller@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Mixed_Variations
+  Device: Tablet
+  Item_Availability: All_Available
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-680545
+  Order_Quantity: 2
+  Order_Total: 488.06
+  Password: weak
+  Phone: +1-568-618-3142
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 244.03
+  Product_SKU: SKU-97674
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-633134835
+  User_Type: Buyer
+  ZIP_Code: 67213
+
+RELATED REQUIREMENTS:
+FR-005

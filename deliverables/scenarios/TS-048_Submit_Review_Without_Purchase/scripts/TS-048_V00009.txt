@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-048_V00009
+
+SCENARIO: Use Same Address for Billing and Shipping
+VARIANT: V00009
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:24
+
+DESCRIPTION:
+As a buyer, I want to use the same address for billing and shipping, so that I don't have to enter it twice.
+
+GIVEN:
+- Buyer is logged in with account lisa.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Use Same Address for Billing and Shipping
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Product_State: Not_Purchased
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-516607
+  Order_Quantity: 2
+  Order_Total: 484.44
+  Password: weak
+  Phone: +1-222-969-8255
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 242.22
+  Product_SKU: SKU-46210
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-298853762
+  User_Type: Buyer
+  ZIP_Code: 26226
+
+RELATED REQUIREMENTS:
+FR-008

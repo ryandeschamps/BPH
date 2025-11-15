@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-040",
+  "scenario_title": "Select Net Banking Payment Method",
+  "variant_count": 432,
+  "expected_variant_count": 432,
+  "parameters": {
+    "User_Type": 1,
+    "Payment_Method": 1,
+    "Bank": 4,
+    "Payment_Status": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-040_Select_Net_Banking_Payment_Method/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

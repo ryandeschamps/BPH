@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00048
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00048
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account jane.martinez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Firefox
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.martinez@example.com
+  First_Name: Jane
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-194407
+  Order_Quantity: 1
+  Order_Total: 63.79
+  Password: Test@123
+  Phone: +1-612-323-4456
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 63.79
+  Product_SKU: SKU-36198
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-409352159
+  User_Type: Buyer
+  ZIP_Code: 27229
+
+RELATED REQUIREMENTS:
+FR-002

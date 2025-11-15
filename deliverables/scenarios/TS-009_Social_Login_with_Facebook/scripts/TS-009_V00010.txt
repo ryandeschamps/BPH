@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-009_V00010
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00010
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for john.rodriguez@example.com
+
+WHEN:
+- User enters email: john.rodriguez@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Firefox
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-141263
+  Order_Quantity: 1
+  Order_Total: 103.02
+  Password: Test@123
+  Phone: +1-978-267-5534
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 103.02
+  Product_SKU: SKU-97887
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-654673383
+  User_Type: Visitor
+  ZIP_Code: 25909
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

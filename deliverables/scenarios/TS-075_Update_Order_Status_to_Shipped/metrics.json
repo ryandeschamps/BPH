@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-075",
+  "scenario_title": "Update Order Status to Shipped",
+  "variant_count": 72,
+  "expected_variant_count": 72,
+  "parameters": {
+    "User_Type": 1,
+    "Status_Change": 1,
+    "Tracking_Data": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-075_Update_Order_Status_to_Shipped/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

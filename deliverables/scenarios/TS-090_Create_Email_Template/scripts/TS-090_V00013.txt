@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-090_V00013
+
+SCENARIO: Create Product Sub-Category
+VARIANT: V00013
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create sub-categories under categories, so that I can further organize products.
+
+GIVEN:
+- Admin is logged in with account david.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Create Product Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Template_Type: Promotional
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.garcia@example.com
+  First_Name: David
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-989610
+  Order_Quantity: 5
+  Order_Total: 1466.7
+  Password: weak
+  Phone: +1-438-138-6490
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 293.34
+  Product_SKU: SKU-34011
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-662568750
+  User_Type: Admin
+  ZIP_Code: 18208
+
+RELATED REQUIREMENTS:
+FR-018

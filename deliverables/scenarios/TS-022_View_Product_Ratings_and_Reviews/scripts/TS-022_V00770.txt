@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00770
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00770
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Rating_Range: Medium_Rated
+  Review_Count: Many_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-330714
+  Order_Quantity: 3
+  Order_Total: 864.6
+  Password: weak
+  Phone: +1-867-960-6395
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 288.2
+  Product_SKU: SKU-87175
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-782211848
+  User_Type: Buyer
+  ZIP_Code: 75848
+
+RELATED REQUIREMENTS:
+FR-003

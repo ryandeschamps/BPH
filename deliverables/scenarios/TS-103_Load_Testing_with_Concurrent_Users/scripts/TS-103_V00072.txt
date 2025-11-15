@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00072
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00072
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Load_Type: Concurrent_Users
+  Network_Speed: Low
+  User_Count: 100
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-971147
+  Order_Quantity: 4
+  Order_Total: 1002.32
+  Password: weak
+  Phone: +1-535-652-4772
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 250.58
+  Product_SKU: SKU-19406
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-256996256
+  User_Type: N/A
+  ZIP_Code: 42094
+
+RELATED REQUIREMENTS:
+FR-022

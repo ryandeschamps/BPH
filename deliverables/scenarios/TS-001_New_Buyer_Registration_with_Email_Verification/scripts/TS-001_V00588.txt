@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00588
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00588
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.miller@example.com
+- User enters phone: +1-213-588-5422
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Email
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Invalid_Email
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Field_Values: Invalid_Email
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-507628
+  Order_Quantity: 5
+  Order_Total: 1272.4
+  Password: weak
+  Phone: +1-213-588-5422
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 254.48
+  Product_SKU: SKU-19978
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-778816719
+  User_Type: Visitor
+  ZIP_Code: 45235
+
+RELATED REQUIREMENTS:
+FR-002

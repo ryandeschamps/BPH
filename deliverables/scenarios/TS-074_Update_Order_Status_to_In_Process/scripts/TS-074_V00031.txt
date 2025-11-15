@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-074_V00031
+
+SCENARIO: Submit Contact Support Request as Buyer
+VARIANT: V00031
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As a buyer, I want to contact support via email form, so that I can get help with my queries.
+
+GIVEN:
+- Admin is logged in with account emily.williams@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Submit Contact Support Request as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Status_Change: Confirmed_To_InProcess
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.williams@example.com
+  First_Name: Emily
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-173865
+  Order_Quantity: 4
+  Order_Total: 1033.88
+  Password: weak
+  Phone: +1-308-198-6605
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Wool Sweater
+  Product_Price: 258.47
+  Product_SKU: SKU-56895
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-633083283
+  User_Type: Admin
+  ZIP_Code: 57391
+
+RELATED REQUIREMENTS:
+FR-013

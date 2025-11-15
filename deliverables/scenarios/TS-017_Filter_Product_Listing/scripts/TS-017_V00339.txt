@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00339
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00339
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account lisa.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Filter_Type: Size
+  Filter_Value: Multiple_Values
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.brown@example.com
+  First_Name: Lisa
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-246929
+  Order_Quantity: 2
+  Order_Total: 355.48
+  Password: weak
+  Phone: +1-948-177-9207
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Silk Scarf
+  Product_Price: 177.74
+  Product_SKU: SKU-66906
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-504566785
+  User_Type: Buyer
+  ZIP_Code: 95547
+
+RELATED REQUIREMENTS:
+FR-003

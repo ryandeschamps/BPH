@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00818
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00818
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account michael.smith@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for michael.smith@example.com
+
+WHEN:
+- User enters email: michael.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Type: Kids
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Count: One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.smith@example.com
+  First_Name: Michael
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-938217
+  Order_Quantity: 4
+  Order_Total: 547.16
+  Password: weak
+  Phone: +1-998-703-9225
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 136.79
+  Product_SKU: SKU-91060
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-157204664
+  User_Type: Buyer
+  ZIP_Code: 88316
+
+RELATED REQUIREMENTS:
+FR-014

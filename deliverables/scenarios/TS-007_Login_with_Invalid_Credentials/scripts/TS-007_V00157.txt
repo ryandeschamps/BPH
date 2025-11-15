@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00157
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00157
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for lisa.johnson@example.com
+
+WHEN:
+- User enters email: lisa.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Empty_Password
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-482535
+  Order_Quantity: 4
+  Order_Total: 123.36
+  Password: weak
+  Phone: +1-406-191-4297
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 30.84
+  Product_SKU: SKU-25477
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-310652797
+  User_Type: Visitor
+  ZIP_Code: 90144
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00517
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00517
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Empty
+  Device: Mobile
+  Network_Speed: High
+  Product_Variation: Size_And_Color
+  Quantity: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-644859
+  Order_Quantity: 5
+  Order_Total: 902.5
+  Password: weak
+  Phone: +1-486-428-8868
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 180.5
+  Product_SKU: SKU-66167
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-468429552
+  User_Type: Buyer
+  ZIP_Code: 95301
+
+RELATED REQUIREMENTS:
+FR-003

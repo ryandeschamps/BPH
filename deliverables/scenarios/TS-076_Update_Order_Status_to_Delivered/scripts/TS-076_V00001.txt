@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-076_V00001
+
+SCENARIO: View Admin Dashboard
+VARIANT: V00001
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to view dashboard with key metrics (active buyers, products, revenue), so that I can monitor business performance.
+
+GIVEN:
+- Admin is logged in with account lisa.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: View Admin Dashboard
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Status_Change: Shipped_To_Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-702461
+  Order_Quantity: 3
+  Order_Total: 397.29
+  Password: weak
+  Phone: +1-710-176-4504
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 132.43
+  Product_SKU: SKU-39058
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-319060453
+  User_Type: Admin
+  ZIP_Code: 66954
+
+RELATED REQUIREMENTS:
+FR-015

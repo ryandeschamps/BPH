@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00312
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00312
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account emily.davis@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_Items: Multiple
+  Device: Mobile
+  Network_Speed: Low
+  Shipping_Cost: Express
+  Tax_Applicable: Yes
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-781232
+  Order_Quantity: 3
+  Order_Total: 607.59
+  Password: weak
+  Phone: +1-561-900-1475
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 202.53
+  Product_SKU: SKU-71912
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-557910069
+  User_Type: Buyer
+  ZIP_Code: 99774
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

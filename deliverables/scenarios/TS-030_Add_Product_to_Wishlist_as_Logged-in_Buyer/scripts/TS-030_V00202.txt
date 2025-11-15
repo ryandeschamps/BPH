@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00202
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00202
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+  Wishlist_State: Product_Already_In_Wishlist
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-161446
+  Order_Quantity: 5
+  Order_Total: 450.15
+  Password: weak
+  Phone: +1-924-839-9516
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 90.03
+  Product_SKU: SKU-80136
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-169096610
+  User_Type: Buyer
+  ZIP_Code: 54001
+
+RELATED REQUIREMENTS:
+FR-005

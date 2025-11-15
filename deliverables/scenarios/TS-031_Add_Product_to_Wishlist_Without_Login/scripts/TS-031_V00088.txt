@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00088
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00088
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Redirect_Action: Cancel
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-963369
+  Order_Quantity: 5
+  Order_Total: 1266.3
+  Password: weak
+  Phone: +1-485-427-1951
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 253.26
+  Product_SKU: SKU-14056
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-474986837
+  User_Type: Visitor
+  ZIP_Code: 27077
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

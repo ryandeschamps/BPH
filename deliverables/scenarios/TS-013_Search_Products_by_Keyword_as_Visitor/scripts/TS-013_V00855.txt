@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00855
+
+SCENARIO: Forgot Password Request
+VARIANT: V00855
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account robert.davis@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: One_Result
+  Search_Query: Exact_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-244447
+  Order_Quantity: 2
+  Order_Total: 518.28
+  Password: Test@123
+  Phone: +1-837-960-9800
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 259.14
+  Product_SKU: SKU-57891
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-501469239
+  User_Type: Buyer
+  ZIP_Code: 63660
+
+RELATED REQUIREMENTS:
+FR-001

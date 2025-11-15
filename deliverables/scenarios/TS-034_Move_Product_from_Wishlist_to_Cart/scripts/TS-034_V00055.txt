@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00055
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00055
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account david.martinez@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Has_Items
+  Device: Desktop
+  Network_Speed: High
+  Product_State: In_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-478486
+  Order_Quantity: 5
+  Order_Total: 1100.3
+  Password: weak
+  Phone: +1-707-313-3432
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 220.06
+  Product_SKU: SKU-68861
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-477001689
+  User_Type: Buyer
+  ZIP_Code: 82965
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

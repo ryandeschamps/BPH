@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00445
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00445
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: john.johnson@example.com
+- User enters phone: +1-819-436-8098
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: All_Valid
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Field_Values: All_Valid
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-219735
+  Order_Quantity: 4
+  Order_Total: 819.44
+  Password: weak
+  Phone: +1-819-436-8098
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 204.86
+  Product_SKU: SKU-65197
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-778993885
+  User_Type: Visitor
+  ZIP_Code: 92387
+
+RELATED REQUIREMENTS:
+FR-002

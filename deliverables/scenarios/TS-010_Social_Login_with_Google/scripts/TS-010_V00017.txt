@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-010_V00017
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00017
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for michael.jones@example.com
+
+WHEN:
+- User enters email: michael.jones@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Medium
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-754351
+  Order_Quantity: 3
+  Order_Total: 584.97
+  Password: Test@123
+  Phone: +1-574-374-6456
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 194.99
+  Product_SKU: SKU-22097
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-195336624
+  User_Type: Visitor
+  ZIP_Code: 91254
+
+RELATED REQUIREMENTS:
+FR-001

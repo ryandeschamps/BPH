@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00320
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00320
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Rating_Range: High_Rated
+  Review_Count: Many_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-488407
+  Order_Quantity: 2
+  Order_Total: 272.48
+  Password: weak
+  Phone: +1-814-128-4357
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 136.24
+  Product_SKU: SKU-90572
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-677164808
+  User_Type: Visitor
+  ZIP_Code: 31494
+
+RELATED REQUIREMENTS:
+FR-003

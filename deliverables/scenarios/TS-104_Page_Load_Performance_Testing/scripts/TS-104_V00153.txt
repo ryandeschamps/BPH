@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00153
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00153
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Load_Time: Medium
+  Network_Speed: Low
+  Page_Type: Product_Listing
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.jones@example.com
+  First_Name: John
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-968144
+  Order_Quantity: 3
+  Order_Total: 231.81
+  Password: weak
+  Phone: +1-301-105-3041
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 77.27
+  Product_SKU: SKU-63818
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-730369662
+  User_Type: N/A
+  ZIP_Code: 94289
+
+RELATED REQUIREMENTS:
+FR-022

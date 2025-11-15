@@ -1,0 +1,79 @@
+TEST SCRIPT: TS-001_V00302
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00302
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: james.miller@example.com
+- User enters phone: +1-958-317-8040
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for james.miller@example.com
+- Verification email sent to james.miller@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Field_Values: Weak_Password
+  Input_Validity: Valid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-199627
+  Order_Quantity: 2
+  Order_Total: 226.82
+  Password: Test@123
+  Phone: +1-958-317-8040
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 113.41
+  Product_SKU: SKU-34938
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-494339083
+  User_Type: Visitor
+  ZIP_Code: 99309
+
+RELATED REQUIREMENTS:
+FR-002

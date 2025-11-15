@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-092_V00051
+
+SCENARIO: Activate/Deactivate Product Category
+VARIANT: V00051
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate categories, so that I can control category visibility.
+
+GIVEN:
+- Admin is logged in with account sarah.martinez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Report_Period: Month
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-597193
+  Order_Quantity: 3
+  Order_Total: 522.42
+  Password: weak
+  Phone: +1-518-198-2133
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 174.14
+  Product_SKU: SKU-16528
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-606625561
+  User_Type: Admin
+  ZIP_Code: 92319
+
+RELATED REQUIREMENTS:
+FR-018

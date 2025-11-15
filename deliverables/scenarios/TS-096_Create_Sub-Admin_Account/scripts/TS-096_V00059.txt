@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00059
+
+SCENARIO: Edit Product Details
+VARIANT: V00059
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account lisa.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Role_Type: Order_Manager
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-195435
+  Order_Quantity: 4
+  Order_Total: 647.4
+  Password: weak
+  Phone: +1-499-177-9601
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 161.85
+  Product_SKU: SKU-98841
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-888485806
+  User_Type: Admin
+  ZIP_Code: 29588
+
+RELATED REQUIREMENTS:
+FR-019

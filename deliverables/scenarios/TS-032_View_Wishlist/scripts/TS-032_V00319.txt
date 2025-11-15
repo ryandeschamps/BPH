@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00319
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00319
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account robert.rodriguez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: High
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-760196
+  Order_Quantity: 4
+  Order_Total: 610.88
+  Password: weak
+  Phone: +1-912-735-6798
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 152.72
+  Product_SKU: SKU-91611
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-121806435
+  User_Type: Buyer
+  ZIP_Code: 60938
+
+RELATED REQUIREMENTS:
+FR-007

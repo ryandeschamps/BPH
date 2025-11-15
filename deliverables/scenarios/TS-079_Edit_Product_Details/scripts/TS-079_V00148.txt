@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00148
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00148
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account john.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Edit_Field: Variations
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-497567
+  Order_Quantity: 2
+  Order_Total: 173.14
+  Password: weak
+  Phone: +1-496-620-9200
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 86.57
+  Product_SKU: SKU-46611
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-227500572
+  User_Type: Admin
+  ZIP_Code: 12862
+
+RELATED REQUIREMENTS:
+FR-016

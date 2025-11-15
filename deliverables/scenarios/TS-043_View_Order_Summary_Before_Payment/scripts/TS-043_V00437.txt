@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00437
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00437
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account sarah.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_Items: Mixed_Prices
+  Device: Mobile
+  Network_Speed: Medium
+  Shipping_Cost: Standard
+  Tax_Applicable: Yes
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-840189
+  Order_Quantity: 1
+  Order_Total: 110.07
+  Password: weak
+  Phone: +1-765-578-8470
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 110.07
+  Product_SKU: SKU-14994
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-875852779
+  User_Type: Buyer
+  ZIP_Code: 45668
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

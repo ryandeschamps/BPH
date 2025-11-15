@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00255
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00255
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account john.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Quantity_Change: Zero
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-974701
+  Order_Quantity: 3
+  Order_Total: 514.56
+  Password: weak
+  Phone: +1-290-447-8360
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 171.52
+  Product_SKU: SKU-39465
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-726629326
+  User_Type: Buyer
+  ZIP_Code: 60415
+
+RELATED REQUIREMENTS:
+FR-005

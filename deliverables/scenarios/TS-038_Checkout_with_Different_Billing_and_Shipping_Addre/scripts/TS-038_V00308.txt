@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00308
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00308
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account john.brown@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Mixed
+  Address_Type: Different_Addresses
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-445010
+  Order_Quantity: 5
+  Order_Total: 609.2
+  Password: weak
+  Phone: +1-844-285-2907
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 121.84
+  Product_SKU: SKU-26489
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-796861973
+  User_Type: Buyer
+  ZIP_Code: 30059
+
+RELATED REQUIREMENTS:
+FR-007

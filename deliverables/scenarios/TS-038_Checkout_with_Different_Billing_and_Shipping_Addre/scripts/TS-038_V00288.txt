@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00288
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00288
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account john.martinez@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Mixed
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 01/26
+  Card_Number: 4532-****-****-1427
+  Device: Tablet
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-211166
+  Order_Quantity: 1
+  Order_Total: 113.5
+  Password: weak
+  Phone: +1-762-264-9638
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 113.5
+  Product_SKU: SKU-57528
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-647507466
+  User_Type: Buyer
+  ZIP_Code: 66032
+
+RELATED REQUIREMENTS:
+FR-007

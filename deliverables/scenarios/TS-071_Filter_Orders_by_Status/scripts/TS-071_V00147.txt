@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00147
+
+SCENARIO: Change Password
+VARIANT: V00147
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account james.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Order_Status: Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-189764
+  Order_Quantity: 2
+  Order_Total: 46.5
+  Password: weak
+  Phone: +1-889-351-2016
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 23.25
+  Product_SKU: SKU-43791
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-122247100
+  User_Type: Admin
+  ZIP_Code: 33473
+
+RELATED REQUIREMENTS:
+FR-010

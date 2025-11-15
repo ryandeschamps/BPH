@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00275
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00275
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account mary.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: Medium
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.brown@example.com
+  First_Name: Mary
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-379522
+  Order_Quantity: 4
+  Order_Total: 1188.48
+  Password: weak
+  Phone: +1-218-621-8961
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 297.12
+  Product_SKU: SKU-74972
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-518950024
+  User_Type: Buyer
+  ZIP_Code: 91292
+
+RELATED REQUIREMENTS:
+FR-007

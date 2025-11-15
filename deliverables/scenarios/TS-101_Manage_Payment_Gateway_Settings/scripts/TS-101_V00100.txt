@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00100
+
+SCENARIO: Approve Product Review
+VARIANT: V00100
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account emily.jones@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Payment_Status: Failed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-620109
+  Order_Quantity: 1
+  Order_Total: 55.78
+  Password: weak
+  Phone: +1-696-135-1602
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 55.78
+  Product_SKU: SKU-13180
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-872345639
+  User_Type: Admin
+  ZIP_Code: 94451
+
+RELATED REQUIREMENTS:
+FR-021

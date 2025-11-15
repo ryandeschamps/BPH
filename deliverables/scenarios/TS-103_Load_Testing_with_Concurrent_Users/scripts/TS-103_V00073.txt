@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00073
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00073
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Load_Type: Concurrent_Users
+  Network_Speed: High
+  User_Count: 150
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-352793
+  Order_Quantity: 1
+  Order_Total: 38.88
+  Password: weak
+  Phone: +1-616-903-2486
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 38.88
+  Product_SKU: SKU-23660
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-314852078
+  User_Type: N/A
+  ZIP_Code: 18434
+
+RELATED REQUIREMENTS:
+FR-022

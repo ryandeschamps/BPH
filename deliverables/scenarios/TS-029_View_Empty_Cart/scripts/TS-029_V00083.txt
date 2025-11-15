@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00083
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00083
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account michael.davis@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Items_Removed
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-528500
+  Order_Quantity: 2
+  Order_Total: 566.6
+  Password: weak
+  Phone: +1-737-926-3984
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 283.3
+  Product_SKU: SKU-18829
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-565855746
+  User_Type: Buyer
+  ZIP_Code: 21018
+
+RELATED REQUIREMENTS:
+FR-005

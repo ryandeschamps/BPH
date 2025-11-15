@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00100
+
+SCENARIO: Create New Product Category
+VARIANT: V00100
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account john.martinez@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  CMS_Page: Privacy_Policy
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-668184
+  Order_Quantity: 5
+  Order_Total: 740.3
+  Password: weak
+  Phone: +1-960-572-5640
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 148.06
+  Product_SKU: SKU-56504
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-302882187
+  User_Type: Admin
+  ZIP_Code: 35536
+
+RELATED REQUIREMENTS:
+FR-018

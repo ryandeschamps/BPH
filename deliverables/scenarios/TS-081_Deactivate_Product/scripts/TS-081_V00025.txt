@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-081_V00025
+
+SCENARIO: View All Orders List
+VARIANT: V00025
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to view list of all orders with current status, so that I can manage order fulfillment.
+
+GIVEN:
+- Admin is logged in with account jane.brown@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View All Orders List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Product_Status: Inactive
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-226418
+  Order_Quantity: 4
+  Order_Total: 444.88
+  Password: weak
+  Phone: +1-950-570-1813
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 111.22
+  Product_SKU: SKU-16978
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-310575058
+  User_Type: Admin
+  ZIP_Code: 24480
+
+RELATED REQUIREMENTS:
+FR-017

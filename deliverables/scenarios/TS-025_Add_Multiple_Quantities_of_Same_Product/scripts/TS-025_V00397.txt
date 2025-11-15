@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00397
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00397
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account jane.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Quantity: Hundred
+  Stock_Level: Exact_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-526369
+  Order_Quantity: 3
+  Order_Total: 212.82
+  Password: weak
+  Phone: +1-566-442-7246
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 70.94
+  Product_SKU: SKU-75562
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-409955615
+  User_Type: Buyer
+  ZIP_Code: 24756
+
+RELATED REQUIREMENTS:
+FR-004

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-067_V00069
+
+SCENARIO: Share Product on Social Media as Guest
+VARIANT: V00069
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a guest user, I want to share a product on social media, so that I can show it to friends without logging in.
+
+GIVEN:
+- Admin is logged in with account john.garcia@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Edit_Field: Email
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-803004
+  Order_Quantity: 4
+  Order_Total: 171.56
+  Password: weak
+  Phone: +1-355-987-8636
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 42.89
+  Product_SKU: SKU-45503
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-761484651
+  User_Type: Admin
+  ZIP_Code: 76141
+
+RELATED REQUIREMENTS:
+FR-009

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00039
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00039
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Redirect_Action: Register
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-499180
+  Order_Quantity: 2
+  Order_Total: 212.74
+  Password: weak
+  Phone: +1-738-307-8266
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Wool Sweater
+  Product_Price: 106.37
+  Product_SKU: SKU-38945
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-505153208
+  User_Type: Visitor
+  ZIP_Code: 25499
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

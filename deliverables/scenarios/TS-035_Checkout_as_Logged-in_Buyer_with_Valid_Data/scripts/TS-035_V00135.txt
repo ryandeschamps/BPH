@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00135
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00135
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Safari
+  Cart_Items: Multiple
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 08/28
+  Card_Number: 4532-****-****-7008
+  Device: Tablet
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-469845
+  Order_Quantity: 3
+  Order_Total: 355.5
+  Password: Test@123
+  Phone: +1-455-966-8835
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 118.5
+  Product_SKU: SKU-77202
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-719099279
+  User_Type: Buyer
+  ZIP_Code: 37757
+
+RELATED REQUIREMENTS:
+FR-007

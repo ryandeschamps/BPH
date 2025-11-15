@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00808
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00808
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account david.rodriguez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Card_Type: Discover
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Payment_Status: Declined
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 01/30
+  Card_Number: 4532-****-****-2684
+  Device: Tablet
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-940682
+  Order_Quantity: 1
+  Order_Total: 215.85
+  Password: weak
+  Phone: +1-836-109-9995
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 215.85
+  Product_SKU: SKU-38112
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-129808565
+  User_Type: Buyer
+  ZIP_Code: 67930
+
+RELATED REQUIREMENTS:
+FR-006

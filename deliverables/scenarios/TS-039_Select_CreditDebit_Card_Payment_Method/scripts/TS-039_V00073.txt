@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00073
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00073
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Card_Type: Visa
+  Device: Desktop
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Payment_Status: Timeout
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 02/30
+  Card_Number: 4532-****-****-8701
+  Device: Desktop
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-839265
+  Order_Quantity: 1
+  Order_Total: 134.17
+  Password: weak
+  Phone: +1-709-916-6848
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 134.17
+  Product_SKU: SKU-53956
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-848345466
+  User_Type: Buyer
+  ZIP_Code: 88164
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00150
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00150
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Quantity: Five
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-100082
+  Order_Quantity: 4
+  Order_Total: 292.88
+  Password: weak
+  Phone: +1-997-831-2994
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 73.22
+  Product_SKU: SKU-80607
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-982676371
+  User_Type: Buyer
+  ZIP_Code: 12462
+
+RELATED REQUIREMENTS:
+FR-004

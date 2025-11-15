@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00086
+
+SCENARIO: Export Report to PDF
+VARIANT: V00086
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Error_Type: Timeout
+  Network_Speed: Medium
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.brown@example.com
+  First_Name: Lisa
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-949798
+  Order_Quantity: 4
+  Order_Total: 629.0
+  Password: weak
+  Phone: +1-739-561-9641
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 157.25
+  Product_SKU: SKU-20477
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-523508657
+  User_Type: N/A
+  ZIP_Code: 80364
+
+RELATED REQUIREMENTS:
+FR-022

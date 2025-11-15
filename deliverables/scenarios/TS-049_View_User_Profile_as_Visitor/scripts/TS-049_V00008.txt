@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-049_V00008
+
+SCENARIO: Select Address from Address Book
+VARIANT: V00008
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:25
+
+DESCRIPTION:
+As a buyer with saved addresses, I want to select from my address book, so that I don't have to re-enter addresses.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Select Address from Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-827866
+  Order_Quantity: 1
+  Order_Total: 289.81
+  Password: weak
+  Phone: +1-937-503-2637
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 289.81
+  Product_SKU: SKU-19649
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-214173265
+  User_Type: Visitor
+  ZIP_Code: 35952
+
+RELATED REQUIREMENTS:
+FR-008, FR-010

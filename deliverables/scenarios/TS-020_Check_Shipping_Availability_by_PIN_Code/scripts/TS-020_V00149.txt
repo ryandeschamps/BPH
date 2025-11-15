@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00149
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00149
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  PIN_Code_State: Not_Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-247506
+  Order_Quantity: 5
+  Order_Total: 1138.9
+  Password: weak
+  Phone: +1-316-269-6269
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 227.78
+  Product_SKU: SKU-88681
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-477235786
+  User_Type: Visitor
+  ZIP_Code: 96140
+
+RELATED REQUIREMENTS:
+FR-003

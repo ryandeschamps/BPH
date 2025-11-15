@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-091_V00054
+
+SCENARIO: Edit Product Category
+VARIANT: V00054
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to edit category details, so that I can update category information.
+
+GIVEN:
+- Admin is logged in with account lisa.miller@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Target_Audience: Filtered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-204054
+  Order_Quantity: 1
+  Order_Total: 253.68
+  Password: weak
+  Phone: +1-446-614-6396
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 253.68
+  Product_SKU: SKU-75839
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-969048558
+  User_Type: Admin
+  ZIP_Code: 53443
+
+RELATED REQUIREMENTS:
+FR-018

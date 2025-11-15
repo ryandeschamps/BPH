@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00009
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Zero
+  Search_Query: No_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-286942
+  Order_Quantity: 2
+  Order_Total: 211.56
+  Password: Test@123
+  Phone: +1-929-933-7606
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 105.78
+  Product_SKU: SKU-83397
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-678961969
+  User_Type: Visitor
+  ZIP_Code: 52748
+
+RELATED REQUIREMENTS:
+FR-001

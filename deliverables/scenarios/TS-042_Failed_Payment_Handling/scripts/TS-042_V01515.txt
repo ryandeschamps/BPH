@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01515
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01515
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account emily.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Failure_Reason: Network_Error
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-859578
+  Order_Quantity: 1
+  Order_Total: 296.4
+  Password: weak
+  Phone: +1-559-910-6272
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 296.4
+  Product_SKU: SKU-55932
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-254340484
+  User_Type: Buyer
+  ZIP_Code: 59178
+
+RELATED REQUIREMENTS:
+FR-006

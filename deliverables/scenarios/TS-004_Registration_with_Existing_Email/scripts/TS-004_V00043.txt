@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00043
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00043
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: mary.garcia@example.com
+- User enters phone: +1-551-425-6952
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Email_State: Inactive_Account
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-528869
+  Order_Quantity: 5
+  Order_Total: 505.05
+  Password: weak
+  Phone: +1-551-425-6952
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 101.01
+  Product_SKU: SKU-57752
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-393621947
+  User_Type: Visitor
+  ZIP_Code: 21838
+
+RELATED REQUIREMENTS:
+FR-002

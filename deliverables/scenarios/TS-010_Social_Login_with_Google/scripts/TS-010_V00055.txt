@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-010_V00055
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00055
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for michael.miller@example.com
+
+WHEN:
+- User enters email: michael.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-495119
+  Order_Quantity: 2
+  Order_Total: 264.02
+  Password: Test@123
+  Phone: +1-775-240-3345
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 132.01
+  Product_SKU: SKU-51768
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-357818454
+  User_Type: Visitor
+  ZIP_Code: 77626
+
+RELATED REQUIREMENTS:
+FR-001

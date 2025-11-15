@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00156
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00156
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account michael.miller@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 03/27
+  Card_Number: 4532-****-****-1005
+  Device: Desktop
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-620123
+  Order_Quantity: 3
+  Order_Total: 360.6
+  Password: weak
+  Phone: +1-549-588-5884
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 120.2
+  Product_SKU: SKU-65850
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-713347977
+  User_Type: Buyer
+  ZIP_Code: 46978
+
+RELATED REQUIREMENTS:
+FR-007

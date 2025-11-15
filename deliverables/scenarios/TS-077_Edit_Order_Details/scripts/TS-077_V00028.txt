@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-077_V00028
+
+SCENARIO: View All Buyers List
+VARIANT: V00028
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view list of all registered buyers, so that I can manage customers.
+
+GIVEN:
+- Admin is logged in with account sarah.davis@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View All Buyers List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Edit_Type: Address
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-313079
+  Order_Quantity: 1
+  Order_Total: 122.21
+  Password: weak
+  Phone: +1-609-684-8241
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 122.21
+  Product_SKU: SKU-66245
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-414674528
+  User_Type: Admin
+  ZIP_Code: 45159
+
+RELATED REQUIREMENTS:
+FR-016

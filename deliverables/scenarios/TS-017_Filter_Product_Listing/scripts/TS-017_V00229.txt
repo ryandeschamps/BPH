@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00229
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00229
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Filter_Type: Multiple_Filters
+  Filter_Value: Single_Value
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-557838
+  Order_Quantity: 5
+  Order_Total: 134.95
+  Password: weak
+  Phone: +1-517-269-1044
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 26.99
+  Product_SKU: SKU-61553
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-381094936
+  User_Type: Visitor
+  ZIP_Code: 30726
+
+RELATED REQUIREMENTS:
+FR-003

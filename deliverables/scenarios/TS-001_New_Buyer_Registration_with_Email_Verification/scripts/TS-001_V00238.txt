@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00238
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00238
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: james.smith@example.com
+- User enters phone: +1-351-416-5882
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Contact
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for james.smith@example.com
+- Verification email sent to james.smith@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Field_Values: Invalid_Contact
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-614498
+  Order_Quantity: 5
+  Order_Total: 1183.1
+  Password: Test@123
+  Phone: +1-351-416-5882
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 236.62
+  Product_SKU: SKU-77886
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-548138156
+  User_Type: Visitor
+  ZIP_Code: 37305
+
+RELATED REQUIREMENTS:
+FR-002

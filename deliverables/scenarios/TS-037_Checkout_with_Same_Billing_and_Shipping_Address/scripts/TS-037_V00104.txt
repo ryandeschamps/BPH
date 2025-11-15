@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00104
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00104
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account robert.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-382879
+  Order_Quantity: 3
+  Order_Total: 263.4
+  Password: weak
+  Phone: +1-857-636-1837
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 87.8
+  Product_SKU: SKU-50439
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-994710628
+  User_Type: Buyer
+  ZIP_Code: 12289
+
+RELATED REQUIREMENTS:
+FR-007

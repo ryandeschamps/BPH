@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-074_V00005
+
+SCENARIO: Submit Contact Support Request as Buyer
+VARIANT: V00005
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As a buyer, I want to contact support via email form, so that I can get help with my queries.
+
+GIVEN:
+- Admin is logged in with account sarah.martinez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Submit Contact Support Request as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  Status_Change: Confirmed_To_InProcess
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-471520
+  Order_Quantity: 4
+  Order_Total: 1042.68
+  Password: weak
+  Phone: +1-387-555-8688
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 260.67
+  Product_SKU: SKU-73890
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-337189797
+  User_Type: Admin
+  ZIP_Code: 23258
+
+RELATED REQUIREMENTS:
+FR-013

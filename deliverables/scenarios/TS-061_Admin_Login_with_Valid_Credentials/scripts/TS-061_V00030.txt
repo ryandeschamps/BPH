@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-061_V00030
+
+SCENARIO: Reorder Previous Order Items
+VARIANT: V00030
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to quickly reorder items from a previous order, so that I can repurchase without searching again.
+
+GIVEN:
+- Admin is logged in with account mary.williams@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Reorder Previous Order Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-620602
+  Order_Quantity: 4
+  Order_Total: 675.52
+  Password: Test@123
+  Phone: +1-423-518-8457
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Silk Scarf
+  Product_Price: 168.88
+  Product_SKU: SKU-86263
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-275581625
+  User_Type: Admin
+  ZIP_Code: 62507
+
+RELATED REQUIREMENTS:
+FR-012

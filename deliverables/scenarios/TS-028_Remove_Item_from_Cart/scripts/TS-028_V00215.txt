@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00215
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00215
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account mary.miller@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Multiple_Items
+  Device: Tablet
+  Network_Speed: Medium
+  Removal_Action: Remove_Last_Item
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-821068
+  Order_Quantity: 5
+  Order_Total: 1420.1
+  Password: weak
+  Phone: +1-423-499-4755
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 284.02
+  Product_SKU: SKU-48620
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-922714682
+  User_Type: Buyer
+  ZIP_Code: 22560
+
+RELATED REQUIREMENTS:
+FR-005

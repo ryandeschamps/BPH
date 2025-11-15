@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00991
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00991
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account michael.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for michael.johnson@example.com
+
+WHEN:
+- User enters email: michael.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: None
+  Sub_Category_Type: Jeans
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-568238
+  Order_Quantity: 4
+  Order_Total: 597.28
+  Password: weak
+  Phone: +1-555-303-1301
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 149.32
+  Product_SKU: SKU-59681
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-652475915
+  User_Type: Buyer
+  ZIP_Code: 95235
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

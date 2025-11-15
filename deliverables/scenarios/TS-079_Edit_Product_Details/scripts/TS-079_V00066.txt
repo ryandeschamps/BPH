@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00066
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00066
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account david.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Edit_Field: Price
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-751680
+  Order_Quantity: 2
+  Order_Total: 581.12
+  Password: weak
+  Phone: +1-307-364-9729
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 290.56
+  Product_SKU: SKU-88015
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-309223749
+  User_Type: Admin
+  ZIP_Code: 20352
+
+RELATED REQUIREMENTS:
+FR-016

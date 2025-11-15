@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00030
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00030
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for james.johnson@example.com
+
+WHEN:
+- User enters email: james.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Credential_Error: Wrong_Email
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-463448
+  Order_Quantity: 1
+  Order_Total: 232.24
+  Password: weak
+  Phone: +1-326-186-5757
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 232.24
+  Product_SKU: SKU-63223
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-251251409
+  User_Type: Visitor
+  ZIP_Code: 61746
+
+RELATED REQUIREMENTS:
+FR-001

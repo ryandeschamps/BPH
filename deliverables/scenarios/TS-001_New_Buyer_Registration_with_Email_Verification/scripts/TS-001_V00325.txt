@@ -1,0 +1,79 @@
+TEST SCRIPT: TS-001_V00325
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00325
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.smith@example.com
+- User enters phone: +1-330-290-1115
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for david.smith@example.com
+- Verification email sent to david.smith@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Field_Values: Password_Mismatch
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-957225
+  Order_Quantity: 1
+  Order_Total: 222.81
+  Password: Test@123
+  Phone: +1-330-290-1115
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 222.81
+  Product_SKU: SKU-42531
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-348634429
+  User_Type: Visitor
+  ZIP_Code: 10620
+
+RELATED REQUIREMENTS:
+FR-002

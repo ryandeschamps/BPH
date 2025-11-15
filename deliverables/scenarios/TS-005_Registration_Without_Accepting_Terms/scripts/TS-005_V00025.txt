@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-005_V00025
+
+SCENARIO: Registration Without Accepting Terms and Conditions
+VARIANT: V00025
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a visitor, I want to be prevented from registering if I don't accept terms, so that the website ensures legal compliance.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: lisa.johnson@example.com
+- User enters phone: +1-213-189-2340
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  Terms_Accepted: No
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-210976
+  Order_Quantity: 4
+  Order_Total: 767.68
+  Password: weak
+  Phone: +1-213-189-2340
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 191.92
+  Product_SKU: SKU-16473
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-526081254
+  User_Type: Visitor
+  ZIP_Code: 25327
+
+RELATED REQUIREMENTS:
+FR-002

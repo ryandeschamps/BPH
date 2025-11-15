@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00258
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00258
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account lisa.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: Low
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-566219
+  Order_Quantity: 4
+  Order_Total: 362.36
+  Password: weak
+  Phone: +1-299-640-8218
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 90.59
+  Product_SKU: SKU-76266
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-459819924
+  User_Type: Buyer
+  ZIP_Code: 33468
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00202
+
+SCENARIO: View Wishlist Items
+VARIANT: V00202
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account mary.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_Delivery: Delayed
+  Network_Speed: High
+  Order_Size: Single_Item
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 12/25
+  Card_Number: 4532-****-****-1771
+  Device: Mobile
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-709010
+  Order_Quantity: 4
+  Order_Total: 1046.0
+  Password: weak
+  Phone: +1-381-528-6660
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 261.5
+  Product_SKU: SKU-45999
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-161905807
+  User_Type: Buyer
+  ZIP_Code: 40931
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00021
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00021
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.smith@example.com
+
+WHEN:
+- User enters email: emily.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Product_Count: Many
+  Sub_Category_Type: Shirts
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-159861
+  Order_Quantity: 5
+  Order_Total: 1027.9
+  Password: weak
+  Phone: +1-715-152-1622
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 205.58
+  Product_SKU: SKU-48478
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-384148572
+  User_Type: Visitor
+  ZIP_Code: 85124
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

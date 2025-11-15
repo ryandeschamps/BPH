@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00283
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00283
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account david.williams@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Quantity_Change: Zero
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-596841
+  Order_Quantity: 3
+  Order_Total: 813.72
+  Password: weak
+  Phone: +1-435-295-6675
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 271.24
+  Product_SKU: SKU-46628
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-254484786
+  User_Type: Buyer
+  ZIP_Code: 36239
+
+RELATED REQUIREMENTS:
+FR-005

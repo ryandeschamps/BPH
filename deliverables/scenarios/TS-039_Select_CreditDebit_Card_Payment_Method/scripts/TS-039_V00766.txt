@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00766
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00766
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account sarah.davis@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Card_Type: Discover
+  Device: Desktop
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 10/26
+  Card_Number: 4532-****-****-9679
+  Device: Desktop
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-771630
+  Order_Quantity: 1
+  Order_Total: 263.58
+  Password: weak
+  Phone: +1-513-403-7703
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 263.58
+  Product_SKU: SKU-27930
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-227822875
+  User_Type: Buyer
+  ZIP_Code: 91843
+
+RELATED REQUIREMENTS:
+FR-006

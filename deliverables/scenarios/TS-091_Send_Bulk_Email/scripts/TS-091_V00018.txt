@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-091_V00018
+
+SCENARIO: Edit Product Category
+VARIANT: V00018
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to edit category details, so that I can update category information.
+
+GIVEN:
+- Admin is logged in with account robert.davis@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Target_Audience: All_Buyers
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-593412
+  Order_Quantity: 3
+  Order_Total: 621.36
+  Password: weak
+  Phone: +1-933-315-5097
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 207.12
+  Product_SKU: SKU-82112
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-620133212
+  User_Type: Admin
+  ZIP_Code: 18816
+
+RELATED REQUIREMENTS:
+FR-018

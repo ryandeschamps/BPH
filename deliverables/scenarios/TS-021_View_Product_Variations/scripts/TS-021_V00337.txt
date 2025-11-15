@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00337
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00337
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Buyer
+  Variation_Availability: All_Available
+  Variation_Type: Size_Only
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-650589
+  Order_Quantity: 3
+  Order_Total: 638.13
+  Password: weak
+  Phone: +1-579-611-7445
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 212.71
+  Product_SKU: SKU-18890
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-488953116
+  User_Type: Buyer
+  ZIP_Code: 82036
+
+RELATED REQUIREMENTS:
+FR-003

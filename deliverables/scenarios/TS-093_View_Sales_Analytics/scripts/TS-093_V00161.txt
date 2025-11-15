@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00161
+
+SCENARIO: Add New Product
+VARIANT: V00161
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account robert.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Medium
+  Report_Period: Custom
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-478888
+  Order_Quantity: 4
+  Order_Total: 897.04
+  Password: weak
+  Phone: +1-506-475-6057
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 224.26
+  Product_SKU: SKU-54352
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-552877751
+  User_Type: Admin
+  ZIP_Code: 29020
+
+RELATED REQUIREMENTS:
+FR-019

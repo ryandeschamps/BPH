@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00177
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00177
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- Buyer is logged in with account john.rodriguez@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Zero
+  Search_Query: Typo
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-231355
+  Order_Quantity: 2
+  Order_Total: 60.92
+  Password: Test@123
+  Phone: +1-949-564-4893
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 30.46
+  Product_SKU: SKU-47539
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-547256931
+  User_Type: Buyer
+  ZIP_Code: 98726
+
+RELATED REQUIREMENTS:
+FR-001

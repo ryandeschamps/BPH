@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-008_V00048
+
+SCENARIO: Login with Invalid Credentials
+VARIANT: V00048
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer, I want to be notified when my login credentials are incorrect, so that I can retry or reset my password.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.garcia@example.com
+
+WHEN:
+- User enters email: sarah.garcia@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Account_State: Unverified
+  Browser: Firefox
+  Device: Desktop
+  Email_Verification: Link_Expired
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-929414
+  Order_Quantity: 2
+  Order_Total: 152.24
+  Password: Test@123
+  Phone: +1-890-860-2187
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 76.12
+  Product_SKU: SKU-78094
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-678954994
+  User_Type: Buyer
+  ZIP_Code: 88976
+
+RELATED REQUIREMENTS:
+FR-001

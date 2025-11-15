@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00086
+
+SCENARIO: View Own Reviews
+VARIANT: V00086
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account david.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Status: Has_Orders
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-829806
+  Order_Quantity: 3
+  Order_Total: 501.54
+  Password: weak
+  Phone: +1-730-312-6448
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 167.18
+  Product_SKU: SKU-62333
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-177383543
+  User_Type: Admin
+  ZIP_Code: 74111
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

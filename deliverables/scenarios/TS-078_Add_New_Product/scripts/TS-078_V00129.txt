@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00129
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00129
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account michael.garcia@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Image_Count: Multiple
+  Network_Speed: Low
+  Product_Type: With_Variations
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-645945
+  Order_Quantity: 2
+  Order_Total: 104.42
+  Password: weak
+  Phone: +1-428-550-4002
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 52.21
+  Product_SKU: SKU-35461
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-621292650
+  User_Type: Admin
+  ZIP_Code: 20593
+
+RELATED REQUIREMENTS:
+FR-016

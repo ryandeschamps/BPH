@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-085_V00031
+
+SCENARIO: Update Order Status to Shipped with Tracking
+VARIANT: V00031
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Shipped and add tracking details (carrier, tracking ID), so that buyers can track their shipment.
+
+GIVEN:
+- Admin is logged in with account michael.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Shipped with Tracking
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Edit_Field: Name
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-697698
+  Order_Quantity: 1
+  Order_Total: 230.83
+  Password: weak
+  Phone: +1-270-582-8115
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 230.83
+  Product_SKU: SKU-77448
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-168617481
+  User_Type: Admin
+  ZIP_Code: 55484
+
+RELATED REQUIREMENTS:
+FR-017

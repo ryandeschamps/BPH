@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00042
+
+SCENARIO: Create New Product Category
+VARIANT: V00042
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account lisa.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  CMS_Page: Contact_Us
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-115552
+  Order_Quantity: 4
+  Order_Total: 965.72
+  Password: weak
+  Phone: +1-360-396-5942
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 241.43
+  Product_SKU: SKU-99803
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-701537976
+  User_Type: Admin
+  ZIP_Code: 81209
+
+RELATED REQUIREMENTS:
+FR-018

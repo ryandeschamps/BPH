@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00432
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00432
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account lisa.rodriguez@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Low
+  Quantity: Hundred
+  Stock_Level: Exact_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-627313
+  Order_Quantity: 4
+  Order_Total: 568.08
+  Password: weak
+  Phone: +1-256-269-7726
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 142.02
+  Product_SKU: SKU-87167
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-781625321
+  User_Type: Buyer
+  ZIP_Code: 88638
+
+RELATED REQUIREMENTS:
+FR-004

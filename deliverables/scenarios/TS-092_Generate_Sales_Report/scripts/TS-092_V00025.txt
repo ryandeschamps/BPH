@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-092_V00025
+
+SCENARIO: Activate/Deactivate Product Category
+VARIANT: V00025
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate categories, so that I can control category visibility.
+
+GIVEN:
+- Admin is logged in with account emily.martinez@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Report_Period: Date_Range
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-788262
+  Order_Quantity: 5
+  Order_Total: 943.9
+  Password: weak
+  Phone: +1-720-361-3666
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 188.78
+  Product_SKU: SKU-39938
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-601293256
+  User_Type: Admin
+  ZIP_Code: 83972
+
+RELATED REQUIREMENTS:
+FR-018

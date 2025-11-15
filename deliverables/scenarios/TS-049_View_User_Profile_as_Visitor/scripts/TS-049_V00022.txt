@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-049_V00022
+
+SCENARIO: Select Address from Address Book
+VARIANT: V00022
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:25
+
+DESCRIPTION:
+As a buyer with saved addresses, I want to select from my address book, so that I don't have to re-enter addresses.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Select Address from Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-213663
+  Order_Quantity: 5
+  Order_Total: 932.35
+  Password: weak
+  Phone: +1-256-882-1457
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 186.47
+  Product_SKU: SKU-73061
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-895135803
+  User_Type: Visitor
+  ZIP_Code: 79798
+
+RELATED REQUIREMENTS:
+FR-008, FR-010

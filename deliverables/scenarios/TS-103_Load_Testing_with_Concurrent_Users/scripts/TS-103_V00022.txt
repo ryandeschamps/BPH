@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00022
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00022
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Load_Type: Concurrent_Users
+  Network_Speed: High
+  User_Count: 50
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-903228
+  Order_Quantity: 3
+  Order_Total: 706.17
+  Password: weak
+  Phone: +1-722-502-5903
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 235.39
+  Product_SKU: SKU-65816
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-528749785
+  User_Type: N/A
+  ZIP_Code: 89501
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00133
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00133
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.jones@example.com
+
+WHEN:
+- User enters email: emily.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Empty_Email
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-105004
+  Order_Quantity: 4
+  Order_Total: 405.72
+  Password: weak
+  Phone: +1-398-140-8961
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Denim Jeans
+  Product_Price: 101.43
+  Product_SKU: SKU-75842
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-662843936
+  User_Type: Visitor
+  ZIP_Code: 70026
+
+RELATED REQUIREMENTS:
+FR-001

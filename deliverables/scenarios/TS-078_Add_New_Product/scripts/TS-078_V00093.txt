@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00093
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00093
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account michael.brown@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Image_Count: Single
+  Network_Speed: Low
+  Product_Type: With_Variations
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-519640
+  Order_Quantity: 3
+  Order_Total: 334.8
+  Password: weak
+  Phone: +1-244-268-1717
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 111.6
+  Product_SKU: SKU-38747
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-547001821
+  User_Type: Admin
+  ZIP_Code: 79466
+
+RELATED REQUIREMENTS:
+FR-016

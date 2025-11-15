@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00085
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00085
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Removal_Action: Remove_One
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-593080
+  Order_Quantity: 1
+  Order_Total: 110.39
+  Password: weak
+  Phone: +1-780-733-1380
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 110.39
+  Product_SKU: SKU-40459
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-702423891
+  User_Type: Buyer
+  ZIP_Code: 61169
+
+RELATED REQUIREMENTS:
+FR-007

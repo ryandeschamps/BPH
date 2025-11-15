@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-073_V00015
+
+SCENARIO: Logout
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to logout of my account, so that I can secure my session on shared devices.
+
+GIVEN:
+- Admin is logged in with account david.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Logout
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Status_Change: Open_To_Confirmed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-474839
+  Order_Quantity: 1
+  Order_Total: 190.77
+  Password: weak
+  Phone: +1-583-778-7877
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 190.77
+  Product_SKU: SKU-88400
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-419440640
+  User_Type: Admin
+  ZIP_Code: 32967
+
+RELATED REQUIREMENTS:
+FR-010

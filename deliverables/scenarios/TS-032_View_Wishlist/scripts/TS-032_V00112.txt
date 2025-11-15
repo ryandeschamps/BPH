@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00112
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00112
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account emily.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Item_Availability: All_Available
+  Network_Speed: High
+  User_Type: Buyer
+  Wishlist_State: Single_Item
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-812971
+  Order_Quantity: 1
+  Order_Total: 89.34
+  Password: weak
+  Phone: +1-611-820-7643
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 89.34
+  Product_SKU: SKU-13790
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-296515764
+  User_Type: Buyer
+  ZIP_Code: 89464
+
+RELATED REQUIREMENTS:
+FR-007

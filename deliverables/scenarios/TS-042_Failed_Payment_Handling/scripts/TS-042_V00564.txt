@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00564
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00564
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Failure_Reason: Insufficient_Funds
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 07/25
+  Card_Number: 4532-****-****-3538
+  Device: Mobile
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-445191
+  Order_Quantity: 5
+  Order_Total: 562.25
+  Password: weak
+  Phone: +1-665-154-8535
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 112.45
+  Product_SKU: SKU-16463
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-635321100
+  User_Type: Buyer
+  ZIP_Code: 90274
+
+RELATED REQUIREMENTS:
+FR-006

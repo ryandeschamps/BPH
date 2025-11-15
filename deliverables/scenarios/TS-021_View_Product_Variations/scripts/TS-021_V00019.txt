@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00019
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00019
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Visitor
+  Variation_Availability: All_Available
+  Variation_Type: Size_Only
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-435431
+  Order_Quantity: 5
+  Order_Total: 474.7
+  Password: weak
+  Phone: +1-587-578-9818
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 94.94
+  Product_SKU: SKU-11112
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-727488193
+  User_Type: Visitor
+  ZIP_Code: 79074
+
+RELATED REQUIREMENTS:
+FR-003

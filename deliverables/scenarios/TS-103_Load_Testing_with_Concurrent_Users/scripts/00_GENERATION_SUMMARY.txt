@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:48
+Total Scripts: 108
+Total Scenarios: 1
+Generation Time: 0.0 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-103: Generate Products Uploaded Report
+  Variants: 108
+  Files: TS-103_V*.txt

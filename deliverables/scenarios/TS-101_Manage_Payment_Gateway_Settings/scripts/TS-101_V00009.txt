@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00009
+
+SCENARIO: Approve Product Review
+VARIANT: V00009
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account david.williams@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Payment_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-470655
+  Order_Quantity: 3
+  Order_Total: 490.71
+  Password: weak
+  Phone: +1-536-748-7239
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 163.57
+  Product_SKU: SKU-78785
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-713884129
+  User_Type: Admin
+  ZIP_Code: 45414
+
+RELATED REQUIREMENTS:
+FR-021

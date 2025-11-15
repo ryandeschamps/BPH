@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00115
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00115
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account mary.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 04/25
+  Card_Number: 4532-****-****-6921
+  Device: Tablet
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-290412
+  Order_Quantity: 4
+  Order_Total: 1030.44
+  Password: weak
+  Phone: +1-512-127-1134
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 257.61
+  Product_SKU: SKU-39286
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-136981978
+  User_Type: Buyer
+  ZIP_Code: 82587
+
+RELATED REQUIREMENTS:
+FR-007

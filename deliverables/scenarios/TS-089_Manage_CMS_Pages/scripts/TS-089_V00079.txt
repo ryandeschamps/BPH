@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00079
+
+SCENARIO: Create New Product Category
+VARIANT: V00079
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account david.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  CMS_Page: Privacy_Policy
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.garcia@example.com
+  First_Name: David
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-432239
+  Order_Quantity: 1
+  Order_Total: 276.76
+  Password: weak
+  Phone: +1-594-876-5268
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 276.76
+  Product_SKU: SKU-37847
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-702067750
+  User_Type: Admin
+  ZIP_Code: 77715
+
+RELATED REQUIREMENTS:
+FR-018

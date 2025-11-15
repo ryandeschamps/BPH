@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00444
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00444
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account lisa.smith@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Filter_Type: Price_Range
+  Filter_Value: Single_Value
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-762648
+  Order_Quantity: 5
+  Order_Total: 395.3
+  Password: weak
+  Phone: +1-374-472-6932
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 79.06
+  Product_SKU: SKU-15924
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-830167815
+  User_Type: Buyer
+  ZIP_Code: 78718
+
+RELATED REQUIREMENTS:
+FR-003

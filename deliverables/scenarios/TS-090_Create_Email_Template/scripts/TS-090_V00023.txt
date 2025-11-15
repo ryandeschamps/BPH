@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-090_V00023
+
+SCENARIO: Create Product Sub-Category
+VARIANT: V00023
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create sub-categories under categories, so that I can further organize products.
+
+GIVEN:
+- Admin is logged in with account mary.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Create Product Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Template_Type: Promotional
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-335897
+  Order_Quantity: 3
+  Order_Total: 844.26
+  Password: weak
+  Phone: +1-555-818-4827
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 281.42
+  Product_SKU: SKU-38802
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-242670721
+  User_Type: Admin
+  ZIP_Code: 58913
+
+RELATED REQUIREMENTS:
+FR-018

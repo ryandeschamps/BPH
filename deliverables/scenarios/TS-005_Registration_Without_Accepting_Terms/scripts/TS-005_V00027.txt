@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-005_V00027
+
+SCENARIO: Registration Without Accepting Terms and Conditions
+VARIANT: V00027
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a visitor, I want to be prevented from registering if I don't accept terms, so that the website ensures legal compliance.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: james.jones@example.com
+- User enters phone: +1-589-747-6646
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  Terms_Accepted: No
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.jones@example.com
+  First_Name: James
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-832671
+  Order_Quantity: 1
+  Order_Total: 249.73
+  Password: weak
+  Phone: +1-589-747-6646
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 249.73
+  Product_SKU: SKU-66032
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-981629060
+  User_Type: Visitor
+  ZIP_Code: 81745
+
+RELATED REQUIREMENTS:
+FR-002

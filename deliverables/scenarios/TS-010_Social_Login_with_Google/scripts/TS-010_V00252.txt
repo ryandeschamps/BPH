@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00252
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00252
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.martinez@example.com
+
+WHEN:
+- User enters email: mary.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Edge
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: Already_Linked
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-444689
+  Order_Quantity: 3
+  Order_Total: 536.46
+  Password: weak
+  Phone: +1-934-471-2901
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 178.82
+  Product_SKU: SKU-59858
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-749986368
+  User_Type: Visitor
+  ZIP_Code: 47169
+
+RELATED REQUIREMENTS:
+FR-001

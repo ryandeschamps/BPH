@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00096
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00096
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for james.smith@example.com
+
+WHEN:
+- User enters email: james.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Both_Wrong
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-136625
+  Order_Quantity: 4
+  Order_Total: 1077.12
+  Password: weak
+  Phone: +1-283-405-9606
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 269.28
+  Product_SKU: SKU-88877
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-934560169
+  User_Type: Visitor
+  ZIP_Code: 76288
+
+RELATED REQUIREMENTS:
+FR-001

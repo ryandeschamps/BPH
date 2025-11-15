@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00338
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00338
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account john.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Failure_Reason: Timeout
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 04/27
+  Card_Number: 4532-****-****-5201
+  Device: Mobile
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-248579
+  Order_Quantity: 3
+  Order_Total: 658.44
+  Password: weak
+  Phone: +1-941-904-5321
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 219.48
+  Product_SKU: SKU-66761
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-540807430
+  User_Type: Buyer
+  ZIP_Code: 88787
+
+RELATED REQUIREMENTS:
+FR-006

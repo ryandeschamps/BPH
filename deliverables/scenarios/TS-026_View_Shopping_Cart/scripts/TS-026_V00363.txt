@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00363
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00363
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account emily.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Mixed_Variations
+  Device: Desktop
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-474204
+  Order_Quantity: 4
+  Order_Total: 293.52
+  Password: weak
+  Phone: +1-356-471-9365
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 73.38
+  Product_SKU: SKU-12804
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-373868663
+  User_Type: Buyer
+  ZIP_Code: 63305
+
+RELATED REQUIREMENTS:
+FR-005

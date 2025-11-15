@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00002
+
+SCENARIO: Export Report to Excel
+VARIANT: V00002
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Security_Type: SSL_Certificate
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-927824
+  Order_Quantity: 5
+  Order_Total: 1320.2
+  Password: weak
+  Phone: +1-732-483-6940
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 264.04
+  Product_SKU: SKU-28154
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-604338340
+  User_Type: N/A
+  ZIP_Code: 94107
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00427
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00427
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for michael.miller@example.com
+
+WHEN:
+- User enters email: michael.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Category_Type: Kids
+  Device: Mobile
+  Network_Speed: High
+  Product_Count: None
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-623590
+  Order_Quantity: 4
+  Order_Total: 213.44
+  Password: weak
+  Phone: +1-878-215-8711
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 53.36
+  Product_SKU: SKU-84626
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-155583639
+  User_Type: Visitor
+  ZIP_Code: 64653
+
+RELATED REQUIREMENTS:
+FR-014

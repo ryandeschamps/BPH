@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-063_V00015
+
+SCENARIO: Post Rating for Purchased Product
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to post a rating (1-5 stars), so that I can share my opinion.
+
+GIVEN:
+- Admin is logged in with account david.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Post Rating for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Reset_State: Valid
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.garcia@example.com
+  First_Name: David
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-651209
+  Order_Quantity: 2
+  Order_Total: 72.38
+  Password: weak
+  Phone: +1-248-583-1250
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 36.19
+  Product_SKU: SKU-22286
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-982096717
+  User_Type: Admin
+  ZIP_Code: 14967
+
+RELATED REQUIREMENTS:
+FR-011

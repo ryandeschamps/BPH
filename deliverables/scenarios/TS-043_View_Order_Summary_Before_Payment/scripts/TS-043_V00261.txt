@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00261
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00261
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_Items: Multiple
+  Device: Tablet
+  Network_Speed: Low
+  Shipping_Cost: Standard
+  Tax_Applicable: No
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-139178
+  Order_Quantity: 3
+  Order_Total: 355.29
+  Password: weak
+  Phone: +1-769-453-7575
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 118.43
+  Product_SKU: SKU-75790
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-356775324
+  User_Type: Buyer
+  ZIP_Code: 42587
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

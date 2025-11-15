@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00133
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00133
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Visitor
+  Variation_Availability: All_Available
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-219926
+  Order_Quantity: 5
+  Order_Total: 1230.65
+  Password: weak
+  Phone: +1-915-984-8722
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 246.13
+  Product_SKU: SKU-73399
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-353640881
+  User_Type: Visitor
+  ZIP_Code: 75243
+
+RELATED REQUIREMENTS:
+FR-003

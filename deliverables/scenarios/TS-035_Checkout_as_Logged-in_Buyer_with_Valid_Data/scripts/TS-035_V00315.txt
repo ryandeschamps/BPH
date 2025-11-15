@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00315
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00315
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account jane.miller@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Safari
+  Cart_Items: Single
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-344230
+  Order_Quantity: 4
+  Order_Total: 848.48
+  Password: Test@123
+  Phone: +1-522-403-4639
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 212.12
+  Product_SKU: SKU-85647
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-937087184
+  User_Type: Buyer
+  ZIP_Code: 67260
+
+RELATED REQUIREMENTS:
+FR-007

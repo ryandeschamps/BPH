@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00374
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00374
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account lisa.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Quantity: Hundred
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-723448
+  Order_Quantity: 3
+  Order_Total: 550.32
+  Password: weak
+  Phone: +1-333-965-5109
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 183.44
+  Product_SKU: SKU-13662
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-196314914
+  User_Type: Buyer
+  ZIP_Code: 94308
+
+RELATED REQUIREMENTS:
+FR-004

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-067_V00037
+
+SCENARIO: Share Product on Social Media as Guest
+VARIANT: V00037
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a guest user, I want to share a product on social media, so that I can show it to friends without logging in.
+
+GIVEN:
+- Admin is logged in with account sarah.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Edit_Field: Email
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-629149
+  Order_Quantity: 4
+  Order_Total: 753.08
+  Password: weak
+  Phone: +1-394-798-6689
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 188.27
+  Product_SKU: SKU-59526
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-959945190
+  User_Type: Admin
+  ZIP_Code: 11644
+
+RELATED REQUIREMENTS:
+FR-009

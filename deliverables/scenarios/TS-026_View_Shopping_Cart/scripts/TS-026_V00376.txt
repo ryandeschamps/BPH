@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00376
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00376
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Mixed_Variations
+  Device: Tablet
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-786630
+  Order_Quantity: 2
+  Order_Total: 66.36
+  Password: weak
+  Phone: +1-717-637-4587
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 33.18
+  Product_SKU: SKU-41644
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-615585534
+  User_Type: Buyer
+  ZIP_Code: 30543
+
+RELATED REQUIREMENTS:
+FR-005

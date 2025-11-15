@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00106
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00106
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account david.smith@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Credential_Error: Both
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-609522
+  Order_Quantity: 1
+  Order_Total: 288.86
+  Password: weak
+  Phone: +1-827-477-3076
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 288.86
+  Product_SKU: SKU-17861
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-587509545
+  User_Type: Admin
+  ZIP_Code: 81070
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

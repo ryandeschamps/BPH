@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00274
+
+SCENARIO: Forgot Password Request
+VARIANT: V00274
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: Few_Results
+  Search_Query: Partial_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-906812
+  Order_Quantity: 2
+  Order_Total: 483.52
+  Password: Test@123
+  Phone: +1-362-889-8235
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 241.76
+  Product_SKU: SKU-47972
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-915204696
+  User_Type: Visitor
+  ZIP_Code: 53904
+
+RELATED REQUIREMENTS:
+FR-001

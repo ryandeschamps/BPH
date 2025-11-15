@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01490
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01490
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Failure_Reason: Timeout
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-598918
+  Order_Quantity: 2
+  Order_Total: 557.96
+  Password: weak
+  Phone: +1-272-904-5553
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 278.98
+  Product_SKU: SKU-49875
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-351136914
+  User_Type: Buyer
+  ZIP_Code: 36886
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00395
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00395
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account robert.davis@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Medium
+  Quantity: Hundred
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-275940
+  Order_Quantity: 1
+  Order_Total: 208.21
+  Password: weak
+  Phone: +1-644-776-2245
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Denim Jeans
+  Product_Price: 208.21
+  Product_SKU: SKU-98702
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-631399783
+  User_Type: Buyer
+  ZIP_Code: 27745
+
+RELATED REQUIREMENTS:
+FR-004

@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:24
+Total Scripts: 36
+Total Scenarios: 1
+Generation Time: 0.0 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-048: Use Same Address for Billing and Shipping
+  Variants: 36
+  Files: TS-048_V*.txt

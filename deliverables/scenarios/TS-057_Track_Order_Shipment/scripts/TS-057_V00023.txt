@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-057_V00023
+
+SCENARIO: View Order History
+VARIANT: V00023
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a buyer, I want to view my past orders, so that I can track my purchase history.
+
+GIVEN:
+- Buyer is logged in with account lisa.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Order History
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Order_Status: Shipped
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-208595
+  Order_Quantity: 5
+  Order_Total: 476.05
+  Password: weak
+  Phone: +1-251-133-4098
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 95.21
+  Product_SKU: SKU-59778
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-932644585
+  User_Type: Buyer
+  ZIP_Code: 82912
+
+RELATED REQUIREMENTS:
+FR-012

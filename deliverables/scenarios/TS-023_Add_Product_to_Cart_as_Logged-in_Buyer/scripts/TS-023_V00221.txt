@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00221
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00221
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Empty
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Variation: Size_Selected
+  Quantity: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-165517
+  Order_Quantity: 3
+  Order_Total: 474.63
+  Password: weak
+  Phone: +1-557-445-8454
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 158.21
+  Product_SKU: SKU-81813
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-464773901
+  User_Type: Buyer
+  ZIP_Code: 71022
+
+RELATED REQUIREMENTS:
+FR-003

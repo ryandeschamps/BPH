@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00166
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00166
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account mary.johnson@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Failure_Reason: Invalid_Card
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 04/26
+  Card_Number: 4532-****-****-6109
+  Device: Mobile
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-312472
+  Order_Quantity: 5
+  Order_Total: 634.4
+  Password: weak
+  Phone: +1-601-145-7962
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 126.88
+  Product_SKU: SKU-58545
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-363139937
+  User_Type: Buyer
+  ZIP_Code: 44472
+
+RELATED REQUIREMENTS:
+FR-006

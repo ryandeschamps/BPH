@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-072",
+  "scenario_title": "View Order Details as Admin",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Order_Details": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-072_View_Order_Details_as_Admin/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

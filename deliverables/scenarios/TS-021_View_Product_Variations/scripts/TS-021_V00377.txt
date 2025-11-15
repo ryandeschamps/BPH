@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00377
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00377
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account lisa.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Buyer
+  Variation_Availability: Some_Out_Of_Stock
+  Variation_Type: Size_Only
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-140991
+  Order_Quantity: 2
+  Order_Total: 110.74
+  Password: weak
+  Phone: +1-224-387-7642
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Casual Shirt
+  Product_Price: 55.37
+  Product_SKU: SKU-67325
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-766200510
+  User_Type: Buyer
+  ZIP_Code: 59195
+
+RELATED REQUIREMENTS:
+FR-003

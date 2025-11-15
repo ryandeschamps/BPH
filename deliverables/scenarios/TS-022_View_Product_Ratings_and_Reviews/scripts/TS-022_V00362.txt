@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00362
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00362
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Rating_Range: Low_Rated
+  Review_Count: Many_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-209556
+  Order_Quantity: 2
+  Order_Total: 232.16
+  Password: weak
+  Phone: +1-519-241-7468
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 116.08
+  Product_SKU: SKU-86810
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-476966909
+  User_Type: Visitor
+  ZIP_Code: 99451
+
+RELATED REQUIREMENTS:
+FR-003

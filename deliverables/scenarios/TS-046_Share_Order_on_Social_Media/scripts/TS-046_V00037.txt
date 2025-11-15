@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-046_V00037
+
+SCENARIO: Enter Billing Address During Checkout
+VARIANT: V00037
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:23
+
+DESCRIPTION:
+As a buyer, I want to enter my billing address during checkout, so that payment can be processed.
+
+GIVEN:
+- Buyer is logged in with account john.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to john.miller@example.com
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Social_Platform: Twitter
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-115641
+  Order_Quantity: 5
+  Order_Total: 1478.65
+  Password: weak
+  Phone: +1-331-493-7098
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 295.73
+  Product_SKU: SKU-99839
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-277564558
+  User_Type: Buyer
+  ZIP_Code: 44594
+
+RELATED REQUIREMENTS:
+FR-008

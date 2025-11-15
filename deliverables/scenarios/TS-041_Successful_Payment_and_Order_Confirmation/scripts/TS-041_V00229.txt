@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00229
+
+SCENARIO: View Wishlist Items
+VARIANT: V00229
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account john.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Email_Delivery: Delivered
+  Network_Speed: High
+  Order_Size: Multiple_Items
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 06/26
+  Card_Number: 4532-****-****-8186
+  Device: Mobile
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-491100
+  Order_Quantity: 1
+  Order_Total: 122.8
+  Password: weak
+  Phone: +1-697-619-1365
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 122.8
+  Product_SKU: SKU-29755
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-846963826
+  User_Type: Buyer
+  ZIP_Code: 61902
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-060",
+  "scenario_title": "Contact Customer Support as Visitor",
+  "variant_count": 72,
+  "expected_variant_count": 72,
+  "parameters": {
+    "User_Type": 1,
+    "Message_Type": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-060_Contact_Customer_Support_as_Visitor/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

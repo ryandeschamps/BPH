@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-070_V00063
+
+SCENARIO: Edit Profile Details
+VARIANT: V00063
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to edit my email and phone number, so that I can keep my information current.
+
+GIVEN:
+- Admin is logged in with account john.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Profile Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Order_Filter: By_Status
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-114777
+  Order_Quantity: 5
+  Order_Total: 534.45
+  Password: weak
+  Phone: +1-400-919-4708
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 106.89
+  Product_SKU: SKU-24959
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-795816500
+  User_Type: Admin
+  ZIP_Code: 27566
+
+RELATED REQUIREMENTS:
+FR-010

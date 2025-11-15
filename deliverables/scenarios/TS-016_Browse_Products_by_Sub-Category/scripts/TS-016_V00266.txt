@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00266
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00266
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for jane.miller@example.com
+
+WHEN:
+- User enters email: jane.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Count: None
+  Sub_Category_Type: Jeans
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-618570
+  Order_Quantity: 1
+  Order_Total: 80.21
+  Password: weak
+  Phone: +1-901-125-9501
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 80.21
+  Product_SKU: SKU-84213
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-542855655
+  User_Type: Visitor
+  ZIP_Code: 25606
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

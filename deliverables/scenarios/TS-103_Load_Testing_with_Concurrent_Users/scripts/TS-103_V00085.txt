@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00085
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00085
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Load_Type: Concurrent_Users
+  Network_Speed: High
+  User_Count: 150
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-366808
+  Order_Quantity: 5
+  Order_Total: 951.5
+  Password: weak
+  Phone: +1-369-145-4231
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 190.3
+  Product_SKU: SKU-32113
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-937567477
+  User_Type: N/A
+  ZIP_Code: 11922
+
+RELATED REQUIREMENTS:
+FR-022

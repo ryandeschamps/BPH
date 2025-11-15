@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01288
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01288
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account lisa.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for lisa.smith@example.com
+
+WHEN:
+- User enters email: lisa.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: None
+  Sub_Category_Type: Dresses
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-503463
+  Order_Quantity: 4
+  Order_Total: 375.92
+  Password: weak
+  Phone: +1-762-394-4667
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 93.98
+  Product_SKU: SKU-80874
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-722697746
+  User_Type: Buyer
+  ZIP_Code: 40853
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00101
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00101
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Items_Removed
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-586824
+  Order_Quantity: 2
+  Order_Total: 435.52
+  Password: weak
+  Phone: +1-800-358-6847
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 217.76
+  Product_SKU: SKU-81313
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-152784821
+  User_Type: Buyer
+  ZIP_Code: 84433
+
+RELATED REQUIREMENTS:
+FR-005

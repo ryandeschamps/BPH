@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00350
+
+SCENARIO: Product Search with No Results
+VARIANT: V00350
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account john.davis@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Sort_By: Oldest_First
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-701666
+  Order_Quantity: 2
+  Order_Total: 154.08
+  Password: weak
+  Phone: +1-752-649-4849
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 77.04
+  Product_SKU: SKU-83235
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-803348386
+  User_Type: Buyer
+  ZIP_Code: 13173
+
+RELATED REQUIREMENTS:
+FR-003

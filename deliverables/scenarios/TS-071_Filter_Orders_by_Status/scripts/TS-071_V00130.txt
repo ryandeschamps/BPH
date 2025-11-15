@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00130
+
+SCENARIO: Change Password
+VARIANT: V00130
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account michael.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Order_Status: Shipped
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-652574
+  Order_Quantity: 4
+  Order_Total: 979.0
+  Password: weak
+  Phone: +1-462-917-6710
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 244.75
+  Product_SKU: SKU-31012
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-228581111
+  User_Type: Admin
+  ZIP_Code: 47333
+
+RELATED REQUIREMENTS:
+FR-010

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00455
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00455
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account sarah.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Buyer
+  Variation_Availability: All_Available
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-410136
+  Order_Quantity: 3
+  Order_Total: 154.59
+  Password: weak
+  Phone: +1-388-759-5100
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 51.53
+  Product_SKU: SKU-86226
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-747741903
+  User_Type: Buyer
+  ZIP_Code: 42417
+
+RELATED REQUIREMENTS:
+FR-003

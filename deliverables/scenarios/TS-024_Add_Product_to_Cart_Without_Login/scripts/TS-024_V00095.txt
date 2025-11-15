@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-024_V00095
+
+SCENARIO: View Product Listing with Thumbnail and Price
+VARIANT: V00095
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product thumbnails, names, and prices in listings, so that I can quickly evaluate options.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Listing with Thumbnail and Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Redirect_Action: Cancel
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-403246
+  Order_Quantity: 3
+  Order_Total: 69.12
+  Password: weak
+  Phone: +1-910-590-3692
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 23.04
+  Product_SKU: SKU-72336
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-180804096
+  User_Type: Visitor
+  ZIP_Code: 42903
+
+RELATED REQUIREMENTS:
+FR-004

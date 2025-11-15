@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-086_V00019
+
+SCENARIO: Update Order Status to Delivered
+VARIANT: V00019
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Delivered, so that the order lifecycle is complete.
+
+GIVEN:
+- Admin is logged in with account mary.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Delivered
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Status: Active
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-573758
+  Order_Quantity: 5
+  Order_Total: 1202.1
+  Password: weak
+  Phone: +1-784-857-9340
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 240.42
+  Product_SKU: SKU-32858
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-494583364
+  User_Type: Admin
+  ZIP_Code: 52494
+
+RELATED REQUIREMENTS:
+FR-017

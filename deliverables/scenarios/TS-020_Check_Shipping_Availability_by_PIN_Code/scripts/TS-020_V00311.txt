@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00311
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00311
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- Buyer is logged in with account jane.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  PIN_Code_State: Invalid_Format
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-473573
+  Order_Quantity: 3
+  Order_Total: 370.5
+  Password: Test@123
+  Phone: +1-487-930-1418
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 123.5
+  Product_SKU: SKU-12571
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-490203087
+  User_Type: Buyer
+  ZIP_Code: 29395
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-074_V00006
+
+SCENARIO: Submit Contact Support Request as Buyer
+VARIANT: V00006
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As a buyer, I want to contact support via email form, so that I can get help with my queries.
+
+GIVEN:
+- Admin is logged in with account john.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Submit Contact Support Request as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Status_Change: Confirmed_To_InProcess
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-434707
+  Order_Quantity: 3
+  Order_Total: 607.11
+  Password: weak
+  Phone: +1-487-890-5561
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 202.37
+  Product_SKU: SKU-84727
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-137009527
+  User_Type: Admin
+  ZIP_Code: 91690
+
+RELATED REQUIREMENTS:
+FR-013

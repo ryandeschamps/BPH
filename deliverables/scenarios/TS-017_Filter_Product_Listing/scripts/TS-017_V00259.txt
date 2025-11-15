@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00259
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00259
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Filter_Type: Multiple_Filters
+  Filter_Value: Multiple_Values
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-702852
+  Order_Quantity: 3
+  Order_Total: 321.54
+  Password: weak
+  Phone: +1-351-670-3009
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 107.18
+  Product_SKU: SKU-63231
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-311683345
+  User_Type: Visitor
+  ZIP_Code: 32580
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00557
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00557
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: michael.rodriguez@example.com
+- User enters phone: +1-317-985-1379
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Email
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Email
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Field_Values: Missing_Email
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-746951
+  Order_Quantity: 5
+  Order_Total: 787.15
+  Password: weak
+  Phone: +1-317-985-1379
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 157.43
+  Product_SKU: SKU-92619
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-387563369
+  User_Type: Visitor
+  ZIP_Code: 97788
+
+RELATED REQUIREMENTS:
+FR-002

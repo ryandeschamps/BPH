@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00160
+
+SCENARIO: Add New Product
+VARIANT: V00160
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account james.garcia@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Report_Period: Custom
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-326278
+  Order_Quantity: 2
+  Order_Total: 291.36
+  Password: weak
+  Phone: +1-711-121-7183
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 145.68
+  Product_SKU: SKU-60549
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-550072604
+  User_Type: Admin
+  ZIP_Code: 22452
+
+RELATED REQUIREMENTS:
+FR-019

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00059
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00059
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account michael.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-518015
+  Order_Quantity: 3
+  Order_Total: 698.73
+  Password: weak
+  Phone: +1-265-795-9168
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 232.91
+  Product_SKU: SKU-66886
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-187625421
+  User_Type: Buyer
+  ZIP_Code: 62316
+
+RELATED REQUIREMENTS:
+FR-005

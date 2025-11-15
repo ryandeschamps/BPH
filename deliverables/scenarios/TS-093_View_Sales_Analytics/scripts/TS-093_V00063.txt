@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00063
+
+SCENARIO: Add New Product
+VARIANT: V00063
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account john.williams@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Report_Period: Week
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-784932
+  Order_Quantity: 3
+  Order_Total: 758.88
+  Password: weak
+  Phone: +1-255-678-5710
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 252.96
+  Product_SKU: SKU-40280
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-290171583
+  User_Type: Admin
+  ZIP_Code: 92486
+
+RELATED REQUIREMENTS:
+FR-019

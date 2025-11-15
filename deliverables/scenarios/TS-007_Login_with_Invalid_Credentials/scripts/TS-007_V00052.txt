@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00052
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00052
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.jones@example.com
+
+WHEN:
+- User enters email: emily.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Wrong_Password
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-193721
+  Order_Quantity: 3
+  Order_Total: 197.22
+  Password: weak
+  Phone: +1-523-997-7483
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Wool Sweater
+  Product_Price: 65.74
+  Product_SKU: SKU-71116
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-381204145
+  User_Type: Visitor
+  ZIP_Code: 19401
+
+RELATED REQUIREMENTS:
+FR-001

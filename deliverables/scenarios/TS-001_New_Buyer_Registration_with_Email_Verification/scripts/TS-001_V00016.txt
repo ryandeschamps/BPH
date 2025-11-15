@@ -1,0 +1,79 @@
+TEST SCRIPT: TS-001_V00016
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00016
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: mary.garcia@example.com
+- User enters phone: +1-409-716-7546
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for mary.garcia@example.com
+- Verification email sent to mary.garcia@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Field_Values: All_Valid
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-547066
+  Order_Quantity: 2
+  Order_Total: 358.46
+  Password: Test@123
+  Phone: +1-409-716-7546
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 179.23
+  Product_SKU: SKU-56762
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-747275638
+  User_Type: Visitor
+  ZIP_Code: 63880
+
+RELATED REQUIREMENTS:
+FR-002

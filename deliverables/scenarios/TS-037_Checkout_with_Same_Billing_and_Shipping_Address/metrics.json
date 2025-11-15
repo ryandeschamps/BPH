@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-037",
+  "scenario_title": "Checkout with Same Billing and Shipping Address",
+  "variant_count": 216,
+  "expected_variant_count": 216,
+  "parameters": {
+    "User_Type": 1,
+    "Address_Type": 1,
+    "Address_State": 2,
+    "Payment_Method": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-037_Checkout_with_Same_Billing_and_Shipping_Address/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

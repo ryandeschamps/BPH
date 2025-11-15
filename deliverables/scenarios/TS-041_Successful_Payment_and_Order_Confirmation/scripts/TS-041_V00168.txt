@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00168
+
+SCENARIO: View Wishlist Items
+VARIANT: V00168
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account james.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_Delivery: Delivered
+  Network_Speed: Low
+  Order_Size: Single_Item
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 07/29
+  Card_Number: 4532-****-****-4227
+  Device: Mobile
+  Email: james.jones@example.com
+  First_Name: James
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-366254
+  Order_Quantity: 2
+  Order_Total: 159.12
+  Password: weak
+  Phone: +1-710-174-1133
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 79.56
+  Product_SKU: SKU-56220
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-320029318
+  User_Type: Buyer
+  ZIP_Code: 15469
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00072
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00072
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Edge
+  Cart_Items: Multiple
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 08/30
+  Card_Number: 4532-****-****-6958
+  Device: Tablet
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-314572
+  Order_Quantity: 4
+  Order_Total: 251.04
+  Password: Test@123
+  Phone: +1-907-902-1880
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 62.76
+  Product_SKU: SKU-41917
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-483722435
+  User_Type: Buyer
+  ZIP_Code: 42886
+
+RELATED REQUIREMENTS:
+FR-007

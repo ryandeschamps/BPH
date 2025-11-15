@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00046
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00046
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account jane.garcia@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Single_Item
+  Device: Desktop
+  Network_Speed: High
+  Removal_Action: Remove_All
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-148509
+  Order_Quantity: 2
+  Order_Total: 269.74
+  Password: weak
+  Phone: +1-247-798-2665
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 134.87
+  Product_SKU: SKU-22555
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-375157851
+  User_Type: Buyer
+  ZIP_Code: 17533
+
+RELATED REQUIREMENTS:
+FR-005

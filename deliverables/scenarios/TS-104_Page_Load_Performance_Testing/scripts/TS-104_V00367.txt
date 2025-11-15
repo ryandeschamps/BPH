@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00367
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00367
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Load_Time: Medium
+  Network_Speed: High
+  Page_Type: Cart
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-723069
+  Order_Quantity: 1
+  Order_Total: 40.1
+  Password: weak
+  Phone: +1-654-274-7892
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 40.1
+  Product_SKU: SKU-82220
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-961469778
+  User_Type: N/A
+  ZIP_Code: 74817
+
+RELATED REQUIREMENTS:
+FR-022

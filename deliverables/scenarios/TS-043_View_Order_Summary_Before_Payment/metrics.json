@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-043",
+  "scenario_title": "View Order Summary Before Payment",
+  "variant_count": 648,
+  "expected_variant_count": 648,
+  "parameters": {
+    "User_Type": 1,
+    "Cart_Items": 3,
+    "Shipping_Cost": 3,
+    "Tax_Applicable": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-043_View_Order_Summary_Before_Payment/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

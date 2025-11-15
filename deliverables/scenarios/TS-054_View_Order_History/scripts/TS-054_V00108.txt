@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-054_V00108
+
+SCENARIO: Payment Failure Handling
+VARIANT: V00108
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to be notified if my payment fails, so that I can retry with different payment method.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to sarah.garcia@example.com
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Low
+  Order_Count: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-605648
+  Order_Quantity: 3
+  Order_Total: 851.13
+  Password: weak
+  Phone: +1-593-392-1792
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 283.71
+  Product_SKU: SKU-29900
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-289340622
+  User_Type: Buyer
+  ZIP_Code: 72065
+
+RELATED REQUIREMENTS:
+FR-008, FR-020

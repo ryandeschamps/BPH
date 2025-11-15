@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00124
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00124
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account lisa.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Quantity: Five
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.jones@example.com
+  First_Name: Lisa
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-476938
+  Order_Quantity: 1
+  Order_Total: 202.74
+  Password: weak
+  Phone: +1-547-231-8589
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 202.74
+  Product_SKU: SKU-32594
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-460175866
+  User_Type: Buyer
+  ZIP_Code: 86262
+
+RELATED REQUIREMENTS:
+FR-004

@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00175
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00175
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for james.garcia@example.com
+
+WHEN:
+- User enters email: james.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Credential_Error: Empty_Password
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-505974
+  Order_Quantity: 1
+  Order_Total: 153.88
+  Password: weak
+  Phone: +1-345-299-9847
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 153.88
+  Product_SKU: SKU-86444
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-843219823
+  User_Type: Visitor
+  ZIP_Code: 52650
+
+RELATED REQUIREMENTS:
+FR-001

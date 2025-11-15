@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-057_V00042
+
+SCENARIO: View Order History
+VARIANT: V00042
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a buyer, I want to view my past orders, so that I can track my purchase history.
+
+GIVEN:
+- Buyer is logged in with account sarah.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Order History
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-351432
+  Order_Quantity: 1
+  Order_Total: 68.17
+  Password: weak
+  Phone: +1-829-518-2389
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 68.17
+  Product_SKU: SKU-90827
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-829111713
+  User_Type: Buyer
+  ZIP_Code: 25503
+
+RELATED REQUIREMENTS:
+FR-012

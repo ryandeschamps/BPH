@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00250
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00250
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account robert.smith@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Mixed
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 09/25
+  Card_Number: 4532-****-****-5882
+  Device: Tablet
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-744912
+  Order_Quantity: 3
+  Order_Total: 342.63
+  Password: weak
+  Phone: +1-515-211-8400
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Casual Shirt
+  Product_Price: 114.21
+  Product_SKU: SKU-15273
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-623066420
+  User_Type: Buyer
+  ZIP_Code: 37425
+
+RELATED REQUIREMENTS:
+FR-007

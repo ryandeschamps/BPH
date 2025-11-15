@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00067
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00067
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 12/28
+  Card_Number: 4532-****-****-4833
+  Device: Mobile
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-691989
+  Order_Quantity: 3
+  Order_Total: 654.21
+  Password: weak
+  Phone: +1-796-604-1986
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 218.07
+  Product_SKU: SKU-32462
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-212904787
+  User_Type: Buyer
+  ZIP_Code: 73813
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-003_V00047
+
+SCENARIO: Registration with Mismatched Passwords
+VARIANT: V00047
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate that my password and confirm password match, so that I don't lock myself out with a typo.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: mary.johnson@example.com
+- User enters phone: +1-627-653-7888
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  Password_State: Mismatch_Multiple_Chars
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-907997
+  Order_Quantity: 3
+  Order_Total: 593.16
+  Password: weak
+  Phone: +1-627-653-7888
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 197.72
+  Product_SKU: SKU-52773
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-350981693
+  User_Type: Visitor
+  ZIP_Code: 74227
+
+RELATED REQUIREMENTS:
+FR-002

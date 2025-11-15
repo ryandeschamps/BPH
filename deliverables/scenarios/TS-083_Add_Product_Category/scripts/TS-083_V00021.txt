@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-083_V00021
+
+SCENARIO: Update Order Status to Confirmed
+VARIANT: V00021
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status from Open to Confirmed, so that I can indicate order acceptance.
+
+GIVEN:
+- Admin is logged in with account mary.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Confirmed
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Level: Top_Level
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-451900
+  Order_Quantity: 3
+  Order_Total: 536.67
+  Password: weak
+  Phone: +1-595-496-8345
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 178.89
+  Product_SKU: SKU-21946
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-504412443
+  User_Type: Admin
+  ZIP_Code: 17016
+
+RELATED REQUIREMENTS:
+FR-017

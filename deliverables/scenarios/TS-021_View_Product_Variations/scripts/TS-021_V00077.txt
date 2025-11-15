@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00077
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00077
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Visitor
+  Variation_Availability: All_Out_Of_Stock
+  Variation_Type: Size_Only
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-556666
+  Order_Quantity: 5
+  Order_Total: 568.05
+  Password: weak
+  Phone: +1-207-912-9398
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 113.61
+  Product_SKU: SKU-87769
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-162079829
+  User_Type: Visitor
+  ZIP_Code: 66711
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00354
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00354
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account lisa.rodriguez@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Failure_Reason: Timeout
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 11/29
+  Card_Number: 4532-****-****-9169
+  Device: Desktop
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-368135
+  Order_Quantity: 5
+  Order_Total: 289.55
+  Password: weak
+  Phone: +1-847-402-9940
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 57.91
+  Product_SKU: SKU-60109
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-486290138
+  User_Type: Buyer
+  ZIP_Code: 47388
+
+RELATED REQUIREMENTS:
+FR-006

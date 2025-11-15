@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01456
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01456
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Failure_Reason: Timeout
+  Network_Speed: High
+  Payment_Method: Net_Banking
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-150283
+  Order_Quantity: 3
+  Order_Total: 742.38
+  Password: weak
+  Phone: +1-306-151-1724
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 247.46
+  Product_SKU: SKU-50877
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-506086705
+  User_Type: Buyer
+  ZIP_Code: 51005
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00111
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00111
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Single_Item
+  Device: Desktop
+  Item_Availability: All_Available
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-147026
+  Order_Quantity: 2
+  Order_Total: 543.8
+  Password: weak
+  Phone: +1-640-116-2900
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 271.9
+  Product_SKU: SKU-27691
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-904879918
+  User_Type: Buyer
+  ZIP_Code: 38179
+
+RELATED REQUIREMENTS:
+FR-005

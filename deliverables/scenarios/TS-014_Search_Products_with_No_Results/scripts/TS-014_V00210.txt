@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00210
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00210
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- Buyer is logged in with account james.davis@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Zero
+  Search_Query: Special_Characters
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-684659
+  Order_Quantity: 1
+  Order_Total: 27.12
+  Password: Test@123
+  Phone: +1-991-349-3122
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 27.12
+  Product_SKU: SKU-38665
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-586993732
+  User_Type: Buyer
+  ZIP_Code: 66202
+
+RELATED REQUIREMENTS:
+FR-001

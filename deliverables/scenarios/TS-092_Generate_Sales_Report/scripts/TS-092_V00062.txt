@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-092_V00062
+
+SCENARIO: Activate/Deactivate Product Category
+VARIANT: V00062
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate categories, so that I can control category visibility.
+
+GIVEN:
+- Admin is logged in with account robert.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Report_Period: Month
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-393491
+  Order_Quantity: 2
+  Order_Total: 343.48
+  Password: weak
+  Phone: +1-713-602-5409
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 171.74
+  Product_SKU: SKU-41459
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-916207479
+  User_Type: Admin
+  ZIP_Code: 62728
+
+RELATED REQUIREMENTS:
+FR-018

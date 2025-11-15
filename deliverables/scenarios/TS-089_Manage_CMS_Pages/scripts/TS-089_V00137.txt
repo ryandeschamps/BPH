@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00137
+
+SCENARIO: Create New Product Category
+VARIANT: V00137
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account mary.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  CMS_Page: Terms
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-652634
+  Order_Quantity: 4
+  Order_Total: 350.52
+  Password: weak
+  Phone: +1-717-362-1067
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 87.63
+  Product_SKU: SKU-35730
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-646103334
+  User_Type: Admin
+  ZIP_Code: 16280
+
+RELATED REQUIREMENTS:
+FR-018

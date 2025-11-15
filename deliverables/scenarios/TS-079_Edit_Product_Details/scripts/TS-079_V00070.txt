@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00070
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00070
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account david.miller@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Edit_Field: Price
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-130507
+  Order_Quantity: 4
+  Order_Total: 965.8
+  Password: weak
+  Phone: +1-922-747-1472
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 241.45
+  Product_SKU: SKU-24511
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-826509718
+  User_Type: Admin
+  ZIP_Code: 82178
+
+RELATED REQUIREMENTS:
+FR-016

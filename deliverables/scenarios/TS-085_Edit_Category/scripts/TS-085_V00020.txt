@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-085_V00020
+
+SCENARIO: Update Order Status to Shipped with Tracking
+VARIANT: V00020
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Shipped and add tracking details (carrier, tracking ID), so that buyers can track their shipment.
+
+GIVEN:
+- Admin is logged in with account robert.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Shipped with Tracking
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Edit_Field: Name
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-748638
+  Order_Quantity: 5
+  Order_Total: 966.95
+  Password: weak
+  Phone: +1-455-552-4313
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 193.39
+  Product_SKU: SKU-73536
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-848982927
+  User_Type: Admin
+  ZIP_Code: 25436
+
+RELATED REQUIREMENTS:
+FR-017

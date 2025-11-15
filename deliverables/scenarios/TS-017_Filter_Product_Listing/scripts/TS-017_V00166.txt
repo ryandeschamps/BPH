@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00166
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00166
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Filter_Type: Price_Range
+  Filter_Value: Single_Value
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-440334
+  Order_Quantity: 4
+  Order_Total: 426.52
+  Password: weak
+  Phone: +1-487-850-8566
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 106.63
+  Product_SKU: SKU-79609
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-153263095
+  User_Type: Visitor
+  ZIP_Code: 37534
+
+RELATED REQUIREMENTS:
+FR-003

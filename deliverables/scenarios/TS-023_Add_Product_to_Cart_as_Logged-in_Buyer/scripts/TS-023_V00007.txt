@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00007
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00007
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account john.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Empty
+  Device: Tablet
+  Network_Speed: High
+  Product_Variation: No_Variation
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-166644
+  Order_Quantity: 1
+  Order_Total: 208.87
+  Password: weak
+  Phone: +1-243-436-8066
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 208.87
+  Product_SKU: SKU-75244
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-766106795
+  User_Type: Buyer
+  ZIP_Code: 76791
+
+RELATED REQUIREMENTS:
+FR-003

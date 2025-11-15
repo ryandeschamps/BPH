@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00090
+
+SCENARIO: Export Report to PDF
+VARIANT: V00090
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Error_Type: Timeout
+  Network_Speed: Low
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-165339
+  Order_Quantity: 5
+  Order_Total: 1345.75
+  Password: weak
+  Phone: +1-633-964-3328
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 269.15
+  Product_SKU: SKU-92299
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-121114606
+  User_Type: N/A
+  ZIP_Code: 67015
+
+RELATED REQUIREMENTS:
+FR-022

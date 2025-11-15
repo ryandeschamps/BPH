@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00125
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00125
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for lisa.garcia@example.com
+
+WHEN:
+- User enters email: lisa.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Men
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Count: None
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-145171
+  Order_Quantity: 3
+  Order_Total: 323.67
+  Password: weak
+  Phone: +1-408-583-6812
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 107.89
+  Product_SKU: SKU-56770
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-861838425
+  User_Type: Visitor
+  ZIP_Code: 68539
+
+RELATED REQUIREMENTS:
+FR-014

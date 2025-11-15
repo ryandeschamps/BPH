@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00285
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00285
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for jane.martinez@example.com
+
+WHEN:
+- User enters email: jane.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.martinez@example.com
+  First_Name: Jane
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-410331
+  Order_Quantity: 3
+  Order_Total: 336.0
+  Password: weak
+  Phone: +1-275-430-5711
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 112.0
+  Product_SKU: SKU-92938
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-630848443
+  User_Type: Visitor
+  ZIP_Code: 35072
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00056
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00056
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account sarah.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Edit_Type: Password
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-177652
+  Order_Quantity: 2
+  Order_Total: 67.9
+  Password: weak
+  Phone: +1-314-681-6463
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 33.95
+  Product_SKU: SKU-31976
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-391136816
+  User_Type: Admin
+  ZIP_Code: 93104
+
+RELATED REQUIREMENTS:
+FR-019

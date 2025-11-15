@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00033
+
+SCENARIO: Export Report to Excel
+VARIANT: V00033
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Low
+  Security_Type: SSL_Certificate
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.smith@example.com
+  First_Name: Mary
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-149882
+  Order_Quantity: 1
+  Order_Total: 216.61
+  Password: weak
+  Phone: +1-450-870-3221
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 216.61
+  Product_SKU: SKU-34612
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-478076038
+  User_Type: N/A
+  ZIP_Code: 77510
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00315
+
+SCENARIO: Product Browse by Category
+VARIANT: V00315
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Image_Count: Single_Image
+  Network_Speed: Low
+  Product_State: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-361111
+  Order_Quantity: 4
+  Order_Total: 493.72
+  Password: weak
+  Phone: +1-996-999-3155
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 123.43
+  Product_SKU: SKU-76354
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-894405935
+  User_Type: Visitor
+  ZIP_Code: 57911
+
+RELATED REQUIREMENTS:
+FR-003

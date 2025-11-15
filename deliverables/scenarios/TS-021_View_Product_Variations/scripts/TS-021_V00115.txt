@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00115
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00115
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Visitor
+  Variation_Availability: All_Available
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-667964
+  Order_Quantity: 3
+  Order_Total: 790.8
+  Password: weak
+  Phone: +1-842-898-3935
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 263.6
+  Product_SKU: SKU-96731
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-146816146
+  User_Type: Visitor
+  ZIP_Code: 51058
+
+RELATED REQUIREMENTS:
+FR-003

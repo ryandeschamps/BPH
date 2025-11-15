@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00097
+
+SCENARIO: Reject Product Review
+VARIANT: V00097
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account mary.brown@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Bank_Field: Bank_Name
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.brown@example.com
+  First_Name: Mary
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-618346
+  Order_Quantity: 5
+  Order_Total: 1247.75
+  Password: weak
+  Phone: +1-586-758-4633
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 249.55
+  Product_SKU: SKU-17001
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-548446828
+  User_Type: Admin
+  ZIP_Code: 29417
+
+RELATED REQUIREMENTS:
+FR-021

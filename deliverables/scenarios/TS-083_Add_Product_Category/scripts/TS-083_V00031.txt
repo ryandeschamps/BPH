@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-083_V00031
+
+SCENARIO: Update Order Status to Confirmed
+VARIANT: V00031
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status from Open to Confirmed, so that I can indicate order acceptance.
+
+GIVEN:
+- Admin is logged in with account emily.johnson@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Confirmed
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Category_Level: Top_Level
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-195760
+  Order_Quantity: 3
+  Order_Total: 899.34
+  Password: weak
+  Phone: +1-364-684-8113
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 299.78
+  Product_SKU: SKU-10108
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-929177244
+  User_Type: Admin
+  ZIP_Code: 37298
+
+RELATED REQUIREMENTS:
+FR-017

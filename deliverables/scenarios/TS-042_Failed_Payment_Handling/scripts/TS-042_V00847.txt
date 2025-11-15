@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00847
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00847
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account lisa.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Failure_Reason: Declined
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 12/25
+  Card_Number: 4532-****-****-2536
+  Device: Desktop
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-701666
+  Order_Quantity: 5
+  Order_Total: 118.45
+  Password: weak
+  Phone: +1-512-650-5102
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 23.69
+  Product_SKU: SKU-60227
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-236149028
+  User_Type: Buyer
+  ZIP_Code: 47463
+
+RELATED REQUIREMENTS:
+FR-006

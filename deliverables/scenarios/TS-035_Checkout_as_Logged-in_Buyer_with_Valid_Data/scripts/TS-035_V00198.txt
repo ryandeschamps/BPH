@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00198
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00198
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Firefox
+  Cart_Items: Multiple
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 11/29
+  Card_Number: 4532-****-****-6352
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-133814
+  Order_Quantity: 2
+  Order_Total: 394.76
+  Password: Test@123
+  Phone: +1-775-656-4669
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 197.38
+  Product_SKU: SKU-73943
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-257882972
+  User_Type: Buyer
+  ZIP_Code: 56272
+
+RELATED REQUIREMENTS:
+FR-007

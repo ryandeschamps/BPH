@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00546
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00546
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account james.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for james.garcia@example.com
+
+WHEN:
+- User enters email: james.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Type: Men
+  Device: Mobile
+  Network_Speed: Low
+  Product_Count: None
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-982727
+  Order_Quantity: 3
+  Order_Total: 818.94
+  Password: weak
+  Phone: +1-934-429-4055
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 272.98
+  Product_SKU: SKU-94793
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-736259231
+  User_Type: Buyer
+  ZIP_Code: 85771
+
+RELATED REQUIREMENTS:
+FR-014

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-057_V00004
+
+SCENARIO: View Order History
+VARIANT: V00004
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a buyer, I want to view my past orders, so that I can track my purchase history.
+
+GIVEN:
+- Buyer is logged in with account david.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Order History
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Order_Status: Shipped
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-485329
+  Order_Quantity: 2
+  Order_Total: 576.72
+  Password: weak
+  Phone: +1-683-426-9755
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 288.36
+  Product_SKU: SKU-38722
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-254810337
+  User_Type: Buyer
+  ZIP_Code: 71868
+
+RELATED REQUIREMENTS:
+FR-012

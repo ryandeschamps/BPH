@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00773
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00773
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account james.brown@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Failure_Reason: Declined
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 12/30
+  Card_Number: 4532-****-****-1670
+  Device: Tablet
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-308730
+  Order_Quantity: 1
+  Order_Total: 209.51
+  Password: weak
+  Phone: +1-896-154-9090
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Silk Scarf
+  Product_Price: 209.51
+  Product_SKU: SKU-18014
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-443637871
+  User_Type: Buyer
+  ZIP_Code: 38625
+
+RELATED REQUIREMENTS:
+FR-006

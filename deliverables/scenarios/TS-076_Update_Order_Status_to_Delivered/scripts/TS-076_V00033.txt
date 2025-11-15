@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-076_V00033
+
+SCENARIO: View Admin Dashboard
+VARIANT: V00033
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to view dashboard with key metrics (active buyers, products, revenue), so that I can monitor business performance.
+
+GIVEN:
+- Admin is logged in with account lisa.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: View Admin Dashboard
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Low
+  Status_Change: Shipped_To_Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-555352
+  Order_Quantity: 2
+  Order_Total: 183.76
+  Password: weak
+  Phone: +1-714-810-9767
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 91.88
+  Product_SKU: SKU-30629
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-336235275
+  User_Type: Admin
+  ZIP_Code: 21323
+
+RELATED REQUIREMENTS:
+FR-015

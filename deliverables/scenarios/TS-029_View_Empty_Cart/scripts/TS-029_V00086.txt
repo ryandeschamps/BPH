@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00086
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00086
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account john.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Items_Removed
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-281473
+  Order_Quantity: 2
+  Order_Total: 226.34
+  Password: weak
+  Phone: +1-288-560-1914
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 113.17
+  Product_SKU: SKU-20019
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-796043057
+  User_Type: Buyer
+  ZIP_Code: 69473
+
+RELATED REQUIREMENTS:
+FR-005

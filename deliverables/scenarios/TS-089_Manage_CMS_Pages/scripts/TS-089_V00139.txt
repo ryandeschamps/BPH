@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00139
+
+SCENARIO: Create New Product Category
+VARIANT: V00139
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account sarah.rodriguez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  CMS_Page: Terms
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-443667
+  Order_Quantity: 4
+  Order_Total: 730.28
+  Password: weak
+  Phone: +1-529-710-8271
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 182.57
+  Product_SKU: SKU-33452
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-394451958
+  User_Type: Admin
+  ZIP_Code: 30826
+
+RELATED REQUIREMENTS:
+FR-018

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-065_V00073
+
+SCENARIO: Prevent Review from Non-Purchaser
+VARIANT: V00073
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a system, I want to prevent users from reviewing products they haven't purchased, so that reviews are authentic.
+
+GIVEN:
+- Admin is logged in with account john.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Prevent Review from Non-Purchaser
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Buyer_Filter: Inactive
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-726429
+  Order_Quantity: 5
+  Order_Total: 1296.85
+  Password: weak
+  Phone: +1-707-684-8013
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 259.37
+  Product_SKU: SKU-82586
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-703675413
+  User_Type: Admin
+  ZIP_Code: 46186
+
+RELATED REQUIREMENTS:
+FR-011

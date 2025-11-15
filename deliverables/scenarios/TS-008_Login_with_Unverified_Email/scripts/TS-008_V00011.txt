@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-008_V00011
+
+SCENARIO: Login with Invalid Credentials
+VARIANT: V00011
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer, I want to be notified when my login credentials are incorrect, so that I can retry or reset my password.
+
+GIVEN:
+- Buyer is logged in with account john.miller@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for john.miller@example.com
+
+WHEN:
+- User enters email: john.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Account_State: Unverified
+  Browser: Firefox
+  Device: Desktop
+  Email_Verification: Not_Clicked
+  Input_Validity: Valid
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-182844
+  Order_Quantity: 2
+  Order_Total: 297.14
+  Password: Test@123
+  Phone: +1-893-716-2959
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 148.57
+  Product_SKU: SKU-55244
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-583156304
+  User_Type: Buyer
+  ZIP_Code: 45119
+
+RELATED REQUIREMENTS:
+FR-001

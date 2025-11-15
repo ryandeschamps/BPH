@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00122
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00122
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account lisa.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Quantity_Change: Decrease
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.jones@example.com
+  First_Name: Lisa
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-350585
+  Order_Quantity: 5
+  Order_Total: 1389.4
+  Password: weak
+  Phone: +1-669-903-6177
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 277.88
+  Product_SKU: SKU-10195
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-893132091
+  User_Type: Buyer
+  ZIP_Code: 49783
+
+RELATED REQUIREMENTS:
+FR-005

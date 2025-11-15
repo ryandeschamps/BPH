@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00560
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00560
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account john.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for john.davis@example.com
+
+WHEN:
+- User enters email: john.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Type: Men
+  Device: Desktop
+  Network_Speed: Medium
+  Product_Count: None
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-203283
+  Order_Quantity: 3
+  Order_Total: 64.2
+  Password: weak
+  Phone: +1-902-721-1121
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 21.4
+  Product_SKU: SKU-62916
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-812405321
+  User_Type: Buyer
+  ZIP_Code: 42528
+
+RELATED REQUIREMENTS:
+FR-014

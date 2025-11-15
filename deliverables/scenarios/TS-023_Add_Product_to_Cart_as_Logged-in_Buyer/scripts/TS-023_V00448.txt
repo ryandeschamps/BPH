@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00448
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00448
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account john.williams@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Empty
+  Device: Tablet
+  Network_Speed: High
+  Product_Variation: Size_And_Color
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-580128
+  Order_Quantity: 4
+  Order_Total: 274.8
+  Password: weak
+  Phone: +1-920-926-9361
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 68.7
+  Product_SKU: SKU-66823
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-367413590
+  User_Type: Buyer
+  ZIP_Code: 22432
+
+RELATED REQUIREMENTS:
+FR-003

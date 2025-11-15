@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00052
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00052
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 05/25
+  Card_Number: 4532-****-****-7757
+  Device: Tablet
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-915917
+  Order_Quantity: 3
+  Order_Total: 141.75
+  Password: weak
+  Phone: +1-891-814-1674
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 47.25
+  Product_SKU: SKU-53430
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-428844751
+  User_Type: Buyer
+  ZIP_Code: 50144
+
+RELATED REQUIREMENTS:
+FR-007

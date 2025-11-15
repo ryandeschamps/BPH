@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00203
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00203
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account jane.brown@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: Medium
+  User_Type: Buyer
+  Wishlist_State: Single_Item
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-646558
+  Order_Quantity: 4
+  Order_Total: 1008.28
+  Password: weak
+  Phone: +1-532-634-8181
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 252.07
+  Product_SKU: SKU-70444
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-239161252
+  User_Type: Buyer
+  ZIP_Code: 22341
+
+RELATED REQUIREMENTS:
+FR-007

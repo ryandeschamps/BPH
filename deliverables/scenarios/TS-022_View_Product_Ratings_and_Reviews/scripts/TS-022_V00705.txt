@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00705
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00705
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Rating_Range: Mixed_Ratings
+  Review_Count: Few_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-238290
+  Order_Quantity: 3
+  Order_Total: 651.33
+  Password: weak
+  Phone: +1-678-588-6322
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 217.11
+  Product_SKU: SKU-61659
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-532032198
+  User_Type: Buyer
+  ZIP_Code: 41183
+
+RELATED REQUIREMENTS:
+FR-003

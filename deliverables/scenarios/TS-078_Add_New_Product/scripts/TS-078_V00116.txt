@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00116
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00116
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account james.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Image_Count: Multiple
+  Network_Speed: Medium
+  Product_Type: With_Variations
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-291700
+  Order_Quantity: 2
+  Order_Total: 574.36
+  Password: weak
+  Phone: +1-427-406-8066
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 287.18
+  Product_SKU: SKU-24696
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-280958722
+  User_Type: Admin
+  ZIP_Code: 51944
+
+RELATED REQUIREMENTS:
+FR-016

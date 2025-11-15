@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00405
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00405
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account james.williams@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Mixed_Variations
+  Device: Tablet
+  Item_Availability: Price_Changed
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-889996
+  Order_Quantity: 5
+  Order_Total: 1191.4
+  Password: weak
+  Phone: +1-866-169-5511
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 238.28
+  Product_SKU: SKU-72555
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-463855464
+  User_Type: Buyer
+  ZIP_Code: 86599
+
+RELATED REQUIREMENTS:
+FR-005

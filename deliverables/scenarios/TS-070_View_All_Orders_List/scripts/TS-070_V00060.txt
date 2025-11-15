@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-070_V00060
+
+SCENARIO: Edit Profile Details
+VARIANT: V00060
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to edit my email and phone number, so that I can keep my information current.
+
+GIVEN:
+- Admin is logged in with account james.martinez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Profile Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Order_Filter: By_Status
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-735172
+  Order_Quantity: 3
+  Order_Total: 502.47
+  Password: weak
+  Phone: +1-402-214-3422
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 167.49
+  Product_SKU: SKU-74725
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-647088815
+  User_Type: Admin
+  ZIP_Code: 77294
+
+RELATED REQUIREMENTS:
+FR-010

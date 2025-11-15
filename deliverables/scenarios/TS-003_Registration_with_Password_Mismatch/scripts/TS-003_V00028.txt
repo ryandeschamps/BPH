@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-003_V00028
+
+SCENARIO: Registration with Mismatched Passwords
+VARIANT: V00028
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate that my password and confirm password match, so that I don't lock myself out with a typo.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: jane.davis@example.com
+- User enters phone: +1-631-677-9966
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  Password_State: Mismatch_One_Char
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-122051
+  Order_Quantity: 1
+  Order_Total: 131.25
+  Password: weak
+  Phone: +1-631-677-9966
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 131.25
+  Product_SKU: SKU-89923
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-326127764
+  User_Type: Visitor
+  ZIP_Code: 24026
+
+RELATED REQUIREMENTS:
+FR-002

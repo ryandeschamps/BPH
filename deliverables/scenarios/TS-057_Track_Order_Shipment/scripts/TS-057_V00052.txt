@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-057_V00052
+
+SCENARIO: View Order History
+VARIANT: V00052
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a buyer, I want to view my past orders, so that I can track my purchase history.
+
+GIVEN:
+- Buyer is logged in with account john.rodriguez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Order History
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-624632
+  Order_Quantity: 3
+  Order_Total: 795.87
+  Password: weak
+  Phone: +1-296-882-5265
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 265.29
+  Product_SKU: SKU-91883
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-896323258
+  User_Type: Buyer
+  ZIP_Code: 44012
+
+RELATED REQUIREMENTS:
+FR-012

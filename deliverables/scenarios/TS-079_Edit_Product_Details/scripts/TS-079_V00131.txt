@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-079_V00131
+
+SCENARIO: Activate/Deactivate Buyer Account
+VARIANT: V00131
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate buyer accounts, so that I can manage access.
+
+GIVEN:
+- Admin is logged in with account lisa.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Buyer Account
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Edit_Field: Images
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-829589
+  Order_Quantity: 5
+  Order_Total: 1343.4
+  Password: weak
+  Phone: +1-844-601-4886
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 268.68
+  Product_SKU: SKU-34532
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-779314826
+  User_Type: Admin
+  ZIP_Code: 48503
+
+RELATED REQUIREMENTS:
+FR-016

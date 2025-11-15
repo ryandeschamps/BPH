@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00099
+
+SCENARIO: Export Report to Excel
+VARIANT: V00099
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Security_Type: Encrypted_Data
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-947658
+  Order_Quantity: 5
+  Order_Total: 1417.85
+  Password: weak
+  Phone: +1-440-657-1150
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 283.57
+  Product_SKU: SKU-71190
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-907942851
+  User_Type: N/A
+  ZIP_Code: 68719
+
+RELATED REQUIREMENTS:
+FR-022

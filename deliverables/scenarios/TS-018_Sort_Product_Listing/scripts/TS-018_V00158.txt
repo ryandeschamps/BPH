@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00158
+
+SCENARIO: Product Search with No Results
+VARIANT: V00158
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Sort_By: Oldest_First
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-704982
+  Order_Quantity: 2
+  Order_Total: 98.58
+  Password: weak
+  Phone: +1-302-834-5041
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 49.29
+  Product_SKU: SKU-59195
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-111798390
+  User_Type: Visitor
+  ZIP_Code: 27824
+
+RELATED REQUIREMENTS:
+FR-003

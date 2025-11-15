@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-077_V00075
+
+SCENARIO: View All Buyers List
+VARIANT: V00075
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view list of all registered buyers, so that I can manage customers.
+
+GIVEN:
+- Admin is logged in with account emily.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View All Buyers List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Edit_Type: Quantity
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-662096
+  Order_Quantity: 4
+  Order_Total: 578.6
+  Password: weak
+  Phone: +1-445-920-2075
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 144.65
+  Product_SKU: SKU-56763
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-930170147
+  User_Type: Admin
+  ZIP_Code: 11396
+
+RELATED REQUIREMENTS:
+FR-016

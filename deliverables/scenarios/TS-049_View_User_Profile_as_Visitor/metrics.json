@@ -1,0 +1,15 @@
+{
+  "scenario_id": "TS-049",
+  "scenario_title": "View User Profile as Visitor",
+  "variant_count": 36,
+  "expected_variant_count": 36,
+  "parameters": {
+    "User_Type": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-049_View_User_Profile_as_Visitor/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

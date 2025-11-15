@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00007
+
+SCENARIO: Add New Product
+VARIANT: V00007
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account sarah.davis@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Report_Period: Today
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-234660
+  Order_Quantity: 4
+  Order_Total: 859.36
+  Password: weak
+  Phone: +1-501-249-4789
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 214.84
+  Product_SKU: SKU-69069
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-470352622
+  User_Type: Admin
+  ZIP_Code: 48499
+
+RELATED REQUIREMENTS:
+FR-019

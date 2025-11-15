@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00158
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00158
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for jane.johnson@example.com
+
+WHEN:
+- User enters email: jane.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-590957
+  Order_Quantity: 5
+  Order_Total: 176.2
+  Password: weak
+  Phone: +1-711-511-9734
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 35.24
+  Product_SKU: SKU-61359
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-501036978
+  User_Type: Visitor
+  ZIP_Code: 81268
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

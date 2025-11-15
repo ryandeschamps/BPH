@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00544
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00544
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account sarah.martinez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_Items: Mixed_Prices
+  Device: Mobile
+  Network_Speed: High
+  Shipping_Cost: Express
+  Tax_Applicable: No
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-347100
+  Order_Quantity: 4
+  Order_Total: 755.2
+  Password: weak
+  Phone: +1-341-650-9559
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 188.8
+  Product_SKU: SKU-40141
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-562317495
+  User_Type: Buyer
+  ZIP_Code: 18552
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

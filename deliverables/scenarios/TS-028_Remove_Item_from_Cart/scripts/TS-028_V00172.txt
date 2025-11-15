@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00172
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00172
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account lisa.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Multiple_Items
+  Device: Desktop
+  Network_Speed: High
+  Removal_Action: Remove_All
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-467708
+  Order_Quantity: 4
+  Order_Total: 161.88
+  Password: weak
+  Phone: +1-590-572-4932
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 40.47
+  Product_SKU: SKU-62349
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-473842926
+  User_Type: Buyer
+  ZIP_Code: 59233
+
+RELATED REQUIREMENTS:
+FR-005

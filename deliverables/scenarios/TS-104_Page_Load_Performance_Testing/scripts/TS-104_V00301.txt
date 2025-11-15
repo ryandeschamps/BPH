@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00301
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00301
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Load_Time: Slow
+  Network_Speed: High
+  Page_Type: Product_Detail
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-955464
+  Order_Quantity: 5
+  Order_Total: 1129.65
+  Password: weak
+  Phone: +1-530-681-7496
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 225.93
+  Product_SKU: SKU-56535
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-811443950
+  User_Type: N/A
+  ZIP_Code: 97505
+
+RELATED REQUIREMENTS:
+FR-022

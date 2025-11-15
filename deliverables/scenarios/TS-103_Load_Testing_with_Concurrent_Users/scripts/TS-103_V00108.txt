@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00108
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00108
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Load_Type: Concurrent_Users
+  Network_Speed: Low
+  User_Count: 150
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-528342
+  Order_Quantity: 5
+  Order_Total: 1492.35
+  Password: weak
+  Phone: +1-785-157-3156
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 298.47
+  Product_SKU: SKU-31257
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-777012295
+  User_Type: N/A
+  ZIP_Code: 98581
+
+RELATED REQUIREMENTS:
+FR-022

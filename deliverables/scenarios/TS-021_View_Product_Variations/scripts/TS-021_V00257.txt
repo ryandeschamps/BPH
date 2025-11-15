@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00257
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00257
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Visitor
+  Variation_Availability: Some_Out_Of_Stock
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-424632
+  Order_Quantity: 3
+  Order_Total: 535.32
+  Password: weak
+  Phone: +1-465-715-1798
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 178.44
+  Product_SKU: SKU-43372
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-100480421
+  User_Type: Visitor
+  ZIP_Code: 83529
+
+RELATED REQUIREMENTS:
+FR-003

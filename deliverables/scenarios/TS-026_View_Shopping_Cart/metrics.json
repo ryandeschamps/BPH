@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-026",
+  "scenario_title": "View Shopping Cart",
+  "variant_count": 432,
+  "expected_variant_count": 432,
+  "parameters": {
+    "User_Type": 1,
+    "Cart_State": 4,
+    "Item_Availability": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-026_View_Shopping_Cart/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

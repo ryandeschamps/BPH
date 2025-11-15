@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00045
+
+SCENARIO: Edit Product Details
+VARIANT: V00045
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account mary.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Role_Type: Order_Manager
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-459254
+  Order_Quantity: 4
+  Order_Total: 310.32
+  Password: weak
+  Phone: +1-930-954-4558
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 77.58
+  Product_SKU: SKU-44897
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-402205718
+  User_Type: Admin
+  ZIP_Code: 77880
+
+RELATED REQUIREMENTS:
+FR-019

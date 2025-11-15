@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-084_V00019
+
+SCENARIO: Update Order Status to In Process
+VARIANT: V00019
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status to In Process, so that buyers know their order is being prepared.
+
+GIVEN:
+- Admin is logged in with account lisa.garcia@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to In Process
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Level: Sub_Level
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-187735
+  Order_Quantity: 1
+  Order_Total: 133.71
+  Password: weak
+  Phone: +1-543-281-1555
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 133.71
+  Product_SKU: SKU-43136
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-784959849
+  User_Type: Admin
+  ZIP_Code: 59009
+
+RELATED REQUIREMENTS:
+FR-017

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00015
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account john.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Image_Count: Single
+  Network_Speed: Low
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-550375
+  Order_Quantity: 2
+  Order_Total: 523.4
+  Password: weak
+  Phone: +1-230-342-7420
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 261.7
+  Product_SKU: SKU-87420
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-817415574
+  User_Type: Admin
+  ZIP_Code: 39492
+
+RELATED REQUIREMENTS:
+FR-016

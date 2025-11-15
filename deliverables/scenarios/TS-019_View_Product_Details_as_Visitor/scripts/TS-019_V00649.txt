@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00649
+
+SCENARIO: Product Browse by Category
+VARIANT: V00649
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-440969
+  Order_Quantity: 5
+  Order_Total: 1313.75
+  Password: weak
+  Phone: +1-921-158-3295
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 262.75
+  Product_SKU: SKU-53021
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-172093854
+  User_Type: Buyer
+  ZIP_Code: 43586
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00152
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00152
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.johnson@example.com
+- User enters phone: +1-573-554-9718
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Email
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for david.johnson@example.com
+- Verification email sent to david.johnson@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Field_Values: Invalid_Email
+  Input_Validity: Valid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-498832
+  Order_Quantity: 3
+  Order_Total: 827.01
+  Password: Test@123
+  Phone: +1-573-554-9718
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 275.67
+  Product_SKU: SKU-46037
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-341956055
+  User_Type: Visitor
+  ZIP_Code: 34906
+
+RELATED REQUIREMENTS:
+FR-002

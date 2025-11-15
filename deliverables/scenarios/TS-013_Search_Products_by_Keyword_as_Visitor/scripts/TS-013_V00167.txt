@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00167
+
+SCENARIO: Forgot Password Request
+VARIANT: V00167
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Few_Results
+  Search_Query: Multiple_Keywords
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.williams@example.com
+  First_Name: Emily
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-354434
+  Order_Quantity: 5
+  Order_Total: 705.9
+  Password: Test@123
+  Phone: +1-296-181-5726
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 141.18
+  Product_SKU: SKU-37773
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-900775833
+  User_Type: Visitor
+  ZIP_Code: 75524
+
+RELATED REQUIREMENTS:
+FR-001

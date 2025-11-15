@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00060
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00060
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account sarah.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.miller@example.com
+
+WHEN:
+- User enters email: sarah.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_State: Registered
+  Input_Validity: Valid
+  Network_Speed: Low
+  Reset_Link_State: Expired
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-110087
+  Order_Quantity: 1
+  Order_Total: 71.5
+  Password: Test@123
+  Phone: +1-792-728-7154
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 71.5
+  Product_SKU: SKU-37125
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-169624543
+  User_Type: Buyer
+  ZIP_Code: 41884
+
+RELATED REQUIREMENTS:
+FR-001

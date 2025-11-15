@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-075_V00056
+
+SCENARIO: Admin Receives Support Request Email
+VARIANT: V00056
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to receive email notifications for support requests, so that I can respond to customer queries.
+
+GIVEN:
+- Admin is logged in with account john.smith@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: Admin Receives Support Request Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Status_Change: InProcess_To_Shipped
+  Tracking_Data: Partial
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-699445
+  Order_Quantity: 4
+  Order_Total: 963.8
+  Password: weak
+  Phone: +1-713-924-4628
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 240.95
+  Product_SKU: SKU-91967
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-600077985
+  User_Type: Admin
+  ZIP_Code: 55187
+
+RELATED REQUIREMENTS:
+FR-013, FR-027

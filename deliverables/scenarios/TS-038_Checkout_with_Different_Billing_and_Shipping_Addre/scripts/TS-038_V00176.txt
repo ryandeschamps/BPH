@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00176
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00176
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account sarah.smith@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 05/30
+  Card_Number: 4532-****-****-6272
+  Device: Mobile
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-313752
+  Order_Quantity: 2
+  Order_Total: 573.72
+  Password: weak
+  Phone: +1-464-202-7021
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 286.86
+  Product_SKU: SKU-16542
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-767797942
+  User_Type: Buyer
+  ZIP_Code: 86248
+
+RELATED REQUIREMENTS:
+FR-007

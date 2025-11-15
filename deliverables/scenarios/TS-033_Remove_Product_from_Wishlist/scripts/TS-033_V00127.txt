@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00127
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00127
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account michael.brown@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Removal_Action: Remove_All
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-681015
+  Order_Quantity: 2
+  Order_Total: 315.62
+  Password: weak
+  Phone: +1-579-986-8068
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 157.81
+  Product_SKU: SKU-23759
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-637295791
+  User_Type: Buyer
+  ZIP_Code: 38049
+
+RELATED REQUIREMENTS:
+FR-007

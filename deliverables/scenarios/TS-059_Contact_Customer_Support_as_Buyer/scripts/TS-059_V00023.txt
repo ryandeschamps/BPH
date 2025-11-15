@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00023
+
+SCENARIO: Track Current Order Status
+VARIANT: V00023
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account john.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Message_Type: Question
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.jones@example.com
+  First_Name: John
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-793119
+  Order_Quantity: 4
+  Order_Total: 941.88
+  Password: weak
+  Phone: +1-293-880-1597
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 235.47
+  Product_SKU: SKU-47878
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-848120961
+  User_Type: Buyer
+  ZIP_Code: 18359
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

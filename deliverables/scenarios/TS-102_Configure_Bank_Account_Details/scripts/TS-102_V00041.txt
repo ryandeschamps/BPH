@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00041
+
+SCENARIO: Reject Product Review
+VARIANT: V00041
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account david.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Bank_Field: Routing
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-790259
+  Order_Quantity: 3
+  Order_Total: 725.19
+  Password: weak
+  Phone: +1-439-902-4870
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Sports Shorts
+  Product_Price: 241.73
+  Product_SKU: SKU-46208
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-812662884
+  User_Type: Admin
+  ZIP_Code: 91342
+
+RELATED REQUIREMENTS:
+FR-021

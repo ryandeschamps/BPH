@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00242
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00242
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for sarah.davis@example.com
+
+WHEN:
+- User enters email: sarah.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  OAuth_State: Already_Linked
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-957034
+  Order_Quantity: 4
+  Order_Total: 134.28
+  Password: weak
+  Phone: +1-697-606-4558
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 33.57
+  Product_SKU: SKU-97771
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-283436698
+  User_Type: Visitor
+  ZIP_Code: 43920
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

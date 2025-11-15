@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-088_V00009
+
+SCENARIO: Edit Order Details
+VARIANT: V00009
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to edit order information if needed, so that I can correct errors.
+
+GIVEN:
+- Admin is logged in with account david.smith@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Action: Reject
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-544332
+  Order_Quantity: 3
+  Order_Total: 704.22
+  Password: weak
+  Phone: +1-329-849-2726
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 234.74
+  Product_SKU: SKU-88528
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-622780636
+  User_Type: Admin
+  ZIP_Code: 53091
+
+RELATED REQUIREMENTS:
+FR-017

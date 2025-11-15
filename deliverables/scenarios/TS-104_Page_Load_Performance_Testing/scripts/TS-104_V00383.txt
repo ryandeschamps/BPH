@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00383
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00383
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Load_Time: Medium
+  Network_Speed: Medium
+  Page_Type: Cart
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-656707
+  Order_Quantity: 3
+  Order_Total: 580.65
+  Password: weak
+  Phone: +1-648-602-9414
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 193.55
+  Product_SKU: SKU-30251
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-996721611
+  User_Type: N/A
+  ZIP_Code: 92175
+
+RELATED REQUIREMENTS:
+FR-022

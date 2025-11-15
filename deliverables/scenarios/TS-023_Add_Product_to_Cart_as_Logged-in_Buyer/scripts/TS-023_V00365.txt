@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00365
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00365
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Empty
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Variation: Color_Selected
+  Quantity: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-314678
+  Order_Quantity: 4
+  Order_Total: 961.92
+  Password: weak
+  Phone: +1-561-911-2011
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 240.48
+  Product_SKU: SKU-59454
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-460102232
+  User_Type: Buyer
+  ZIP_Code: 37826
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00060
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00060
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account jane.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Wrong_Password
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-612920
+  Order_Quantity: 5
+  Order_Total: 1279.85
+  Password: weak
+  Phone: +1-606-501-5188
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 255.97
+  Product_SKU: SKU-63324
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-684660226
+  User_Type: Admin
+  ZIP_Code: 43966
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

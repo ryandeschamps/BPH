@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00067
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00067
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for jane.miller@example.com
+
+WHEN:
+- User enters email: jane.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Credential_Error: Wrong_Password
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-832057
+  Order_Quantity: 1
+  Order_Total: 234.06
+  Password: weak
+  Phone: +1-204-221-2937
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Casual Shirt
+  Product_Price: 234.06
+  Product_SKU: SKU-65458
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-133915477
+  User_Type: Visitor
+  ZIP_Code: 43598
+
+RELATED REQUIREMENTS:
+FR-001

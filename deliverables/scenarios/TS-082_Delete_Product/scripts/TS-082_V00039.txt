@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-082_V00039
+
+SCENARIO: Filter Orders by Status
+VARIANT: V00039
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to filter orders by status (Open, Confirmed, In Process, Shipped, Delivered), so that I can focus on specific order groups.
+
+GIVEN:
+- Admin is logged in with account emily.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Filter Orders by Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Has_Orders: No
+  Network_Speed: Low
+  Product_Status: Any
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-673218
+  Order_Quantity: 5
+  Order_Total: 1199.45
+  Password: weak
+  Phone: +1-280-342-4523
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 239.89
+  Product_SKU: SKU-58547
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-750757106
+  User_Type: Admin
+  ZIP_Code: 35454
+
+RELATED REQUIREMENTS:
+FR-017

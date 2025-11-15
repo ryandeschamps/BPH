@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00090
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00090
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account robert.williams@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Both
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-141826
+  Order_Quantity: 3
+  Order_Total: 417.3
+  Password: weak
+  Phone: +1-240-522-4033
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 139.1
+  Product_SKU: SKU-16971
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-601368763
+  User_Type: Admin
+  ZIP_Code: 84985
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

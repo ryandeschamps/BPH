@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00136
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00136
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account lisa.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 08/26
+  Card_Number: 4532-****-****-3284
+  Device: Desktop
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-771128
+  Order_Quantity: 5
+  Order_Total: 1455.55
+  Password: weak
+  Phone: +1-870-949-8166
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 291.11
+  Product_SKU: SKU-12504
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-740002233
+  User_Type: Buyer
+  ZIP_Code: 16516
+
+RELATED REQUIREMENTS:
+FR-007

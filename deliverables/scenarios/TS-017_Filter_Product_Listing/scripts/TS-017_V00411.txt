@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00411
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00411
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account michael.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Filter_Type: Color
+  Filter_Value: Multiple_Values
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-305298
+  Order_Quantity: 5
+  Order_Total: 524.95
+  Password: weak
+  Phone: +1-607-245-6620
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 104.99
+  Product_SKU: SKU-79761
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-612966719
+  User_Type: Buyer
+  ZIP_Code: 27601
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00803
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00803
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Failure_Reason: Declined
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 02/29
+  Card_Number: 4532-****-****-7230
+  Device: Desktop
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-985989
+  Order_Quantity: 1
+  Order_Total: 44.95
+  Password: weak
+  Phone: +1-943-381-9487
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 44.95
+  Product_SKU: SKU-65406
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-800047912
+  User_Type: Buyer
+  ZIP_Code: 90783
+
+RELATED REQUIREMENTS:
+FR-006

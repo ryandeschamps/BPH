@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00728
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00728
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account james.davis@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for james.davis@example.com
+
+WHEN:
+- User enters email: james.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Type: Kids
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Count: Many
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-234285
+  Order_Quantity: 5
+  Order_Total: 1222.55
+  Password: weak
+  Phone: +1-737-263-6071
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 244.51
+  Product_SKU: SKU-33080
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-611001060
+  User_Type: Buyer
+  ZIP_Code: 51300
+
+RELATED REQUIREMENTS:
+FR-014

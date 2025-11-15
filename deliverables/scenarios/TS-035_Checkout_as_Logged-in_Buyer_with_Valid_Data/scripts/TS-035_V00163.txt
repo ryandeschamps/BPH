@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00163
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00163
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account sarah.martinez@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Safari
+  Cart_Items: Single
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 10/30
+  Card_Number: 4532-****-****-8564
+  Device: Desktop
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-172102
+  Order_Quantity: 3
+  Order_Total: 96.51
+  Password: Test@123
+  Phone: +1-852-477-1491
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 32.17
+  Product_SKU: SKU-25213
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-778215477
+  User_Type: Buyer
+  ZIP_Code: 57755
+
+RELATED REQUIREMENTS:
+FR-007

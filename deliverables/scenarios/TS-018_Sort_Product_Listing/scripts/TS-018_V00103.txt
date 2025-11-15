@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00103
+
+SCENARIO: Product Search with No Results
+VARIANT: V00103
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Sort_By: Rating_High_Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.miller@example.com
+  First_Name: Lisa
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-636390
+  Order_Quantity: 3
+  Order_Total: 77.22
+  Password: weak
+  Phone: +1-415-563-2260
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 25.74
+  Product_SKU: SKU-70643
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-213412615
+  User_Type: Visitor
+  ZIP_Code: 21101
+
+RELATED REQUIREMENTS:
+FR-003

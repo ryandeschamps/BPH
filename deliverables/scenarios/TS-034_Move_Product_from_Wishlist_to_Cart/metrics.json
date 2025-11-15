@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-034",
+  "scenario_title": "Move Product from Wishlist to Cart",
+  "variant_count": 216,
+  "expected_variant_count": 216,
+  "parameters": {
+    "User_Type": 1,
+    "Product_State": 3,
+    "Cart_State": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-034_Move_Product_from_Wishlist_to_Cart/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

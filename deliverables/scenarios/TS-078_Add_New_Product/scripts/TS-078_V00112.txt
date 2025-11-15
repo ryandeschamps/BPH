@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00112
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00112
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account james.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Image_Count: Multiple
+  Network_Speed: High
+  Product_Type: With_Variations
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-768429
+  Order_Quantity: 4
+  Order_Total: 1159.64
+  Password: weak
+  Phone: +1-576-389-4339
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 289.91
+  Product_SKU: SKU-88662
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-963550855
+  User_Type: Admin
+  ZIP_Code: 22894
+
+RELATED REQUIREMENTS:
+FR-016

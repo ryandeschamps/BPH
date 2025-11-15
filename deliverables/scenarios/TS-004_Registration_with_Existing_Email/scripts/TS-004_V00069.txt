@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-004_V00069
+
+SCENARIO: Registration with Duplicate Email
+VARIANT: V00069
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want to be notified if my email is already registered, so that I can login instead of creating a duplicate account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.smith@example.com
+- User enters phone: +1-366-915-8041
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Email_State: Inactive_Account
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-766241
+  Order_Quantity: 5
+  Order_Total: 1416.25
+  Password: weak
+  Phone: +1-366-915-8041
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 283.25
+  Product_SKU: SKU-87426
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-649905352
+  User_Type: Visitor
+  ZIP_Code: 13134
+
+RELATED REQUIREMENTS:
+FR-002

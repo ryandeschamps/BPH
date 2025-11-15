@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-030",
+  "scenario_title": "Add Product to Wishlist as Logged-in Buyer",
+  "variant_count": 216,
+  "expected_variant_count": 216,
+  "parameters": {
+    "User_Type": 1,
+    "Wishlist_State": 3,
+    "Product_State": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-030_Add_Product_to_Wishlist_as_Logged-in_Buyer/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

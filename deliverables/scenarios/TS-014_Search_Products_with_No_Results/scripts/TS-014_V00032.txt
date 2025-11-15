@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00032
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00032
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Zero
+  Search_Query: No_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-196592
+  Order_Quantity: 5
+  Order_Total: 535.95
+  Password: Test@123
+  Phone: +1-401-467-6547
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 107.19
+  Product_SKU: SKU-37023
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-397375187
+  User_Type: Visitor
+  ZIP_Code: 87345
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00093
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00093
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Load_Type: Concurrent_Users
+  Network_Speed: Low
+  User_Count: 150
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-728736
+  Order_Quantity: 4
+  Order_Total: 1085.68
+  Password: weak
+  Phone: +1-619-485-7532
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 271.42
+  Product_SKU: SKU-91345
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-338133538
+  User_Type: N/A
+  ZIP_Code: 25024
+
+RELATED REQUIREMENTS:
+FR-022

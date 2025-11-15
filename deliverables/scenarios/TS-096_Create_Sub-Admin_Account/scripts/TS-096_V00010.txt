@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00010
+
+SCENARIO: Edit Product Details
+VARIANT: V00010
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account jane.rodriguez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: High
+  Role_Type: Content_Manager
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-955950
+  Order_Quantity: 1
+  Order_Total: 224.18
+  Password: weak
+  Phone: +1-867-191-8387
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 224.18
+  Product_SKU: SKU-67786
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-866133072
+  User_Type: Admin
+  ZIP_Code: 56473
+
+RELATED REQUIREMENTS:
+FR-019

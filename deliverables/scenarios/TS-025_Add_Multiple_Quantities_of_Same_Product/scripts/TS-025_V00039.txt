@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00039
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00039
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account james.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Quantity: Two
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-831433
+  Order_Quantity: 4
+  Order_Total: 1050.96
+  Password: weak
+  Phone: +1-254-735-9219
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 262.74
+  Product_SKU: SKU-72761
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-956124778
+  User_Type: Buyer
+  ZIP_Code: 95849
+
+RELATED REQUIREMENTS:
+FR-004

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00283
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00283
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account michael.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Failure_Reason: Declined
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 01/27
+  Card_Number: 4532-****-****-5815
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-725076
+  Order_Quantity: 5
+  Order_Total: 237.1
+  Password: weak
+  Phone: +1-285-279-8014
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Canvas Sneakers
+  Product_Price: 47.42
+  Product_SKU: SKU-30364
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-635949193
+  User_Type: Buyer
+  ZIP_Code: 70285
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00050
+
+SCENARIO: Approve Product Review
+VARIANT: V00050
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account sarah.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Status: Completed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-427260
+  Order_Quantity: 5
+  Order_Total: 837.45
+  Password: weak
+  Phone: +1-834-644-2609
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 167.49
+  Product_SKU: SKU-24170
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-793086453
+  User_Type: Admin
+  ZIP_Code: 89822
+
+RELATED REQUIREMENTS:
+FR-021

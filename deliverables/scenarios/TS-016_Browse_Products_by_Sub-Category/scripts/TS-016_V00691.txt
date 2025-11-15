@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00691
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00691
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for robert.jones@example.com
+
+WHEN:
+- User enters email: robert.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: None
+  Sub_Category_Type: Accessories
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-578969
+  Order_Quantity: 3
+  Order_Total: 408.69
+  Password: weak
+  Phone: +1-926-169-7913
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 136.23
+  Product_SKU: SKU-34459
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-207949389
+  User_Type: Visitor
+  ZIP_Code: 79258
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

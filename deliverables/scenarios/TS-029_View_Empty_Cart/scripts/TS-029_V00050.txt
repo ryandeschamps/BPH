@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00050
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00050
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account mary.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Previously_Had_Items
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-336219
+  Order_Quantity: 2
+  Order_Total: 329.76
+  Password: weak
+  Phone: +1-632-572-7076
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 164.88
+  Product_SKU: SKU-54683
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-752168398
+  User_Type: Buyer
+  ZIP_Code: 50262
+
+RELATED REQUIREMENTS:
+FR-005

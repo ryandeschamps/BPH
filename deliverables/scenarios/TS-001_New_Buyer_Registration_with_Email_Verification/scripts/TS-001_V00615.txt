@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00615
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00615
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: emily.johnson@example.com
+- User enters phone: +1-407-203-8759
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Contact
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Contact
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Field_Values: Missing_Contact
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-260709
+  Order_Quantity: 5
+  Order_Total: 1098.4
+  Password: weak
+  Phone: +1-407-203-8759
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 219.68
+  Product_SKU: SKU-93300
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-141608455
+  User_Type: Visitor
+  ZIP_Code: 91085
+
+RELATED REQUIREMENTS:
+FR-002

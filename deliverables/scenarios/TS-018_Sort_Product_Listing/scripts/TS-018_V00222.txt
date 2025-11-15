@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00222
+
+SCENARIO: Product Search with No Results
+VARIANT: V00222
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account mary.jones@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Sort_By: Price_High_Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-388573
+  Order_Quantity: 4
+  Order_Total: 420.56
+  Password: weak
+  Phone: +1-567-309-8271
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 105.14
+  Product_SKU: SKU-49795
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-259396452
+  User_Type: Buyer
+  ZIP_Code: 78548
+
+RELATED REQUIREMENTS:
+FR-003

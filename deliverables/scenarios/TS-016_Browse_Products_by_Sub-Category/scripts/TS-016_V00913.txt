@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00913
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00913
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account michael.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for michael.davis@example.com
+
+WHEN:
+- User enters email: michael.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Product_Count: Few
+  Sub_Category_Type: Jeans
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-463583
+  Order_Quantity: 1
+  Order_Total: 267.55
+  Password: weak
+  Phone: +1-659-108-2977
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 267.55
+  Product_SKU: SKU-98235
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-468989765
+  User_Type: Buyer
+  ZIP_Code: 34193
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

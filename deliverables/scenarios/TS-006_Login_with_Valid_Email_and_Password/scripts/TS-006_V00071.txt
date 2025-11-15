@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00071
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00071
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account michael.brown@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Edge
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-850137
+  Order_Quantity: 1
+  Order_Total: 203.81
+  Password: Test@123
+  Phone: +1-988-861-7131
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 203.81
+  Product_SKU: SKU-87842
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-270803435
+  User_Type: Buyer
+  ZIP_Code: 49055
+
+RELATED REQUIREMENTS:
+FR-002

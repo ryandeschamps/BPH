@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00666
+
+SCENARIO: Product Browse by Category
+VARIANT: V00666
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account david.davis@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Image_Count: Single_Image
+  Network_Speed: Low
+  Product_State: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-103304
+  Order_Quantity: 2
+  Order_Total: 185.9
+  Password: weak
+  Phone: +1-517-855-1441
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 92.95
+  Product_SKU: SKU-48476
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-413501896
+  User_Type: Buyer
+  ZIP_Code: 63435
+
+RELATED REQUIREMENTS:
+FR-003

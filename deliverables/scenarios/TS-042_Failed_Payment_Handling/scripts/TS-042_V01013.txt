@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01013
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01013
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account john.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Failure_Reason: Network_Error
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 12/26
+  Card_Number: 4532-****-****-7535
+  Device: Mobile
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-341781
+  Order_Quantity: 5
+  Order_Total: 572.45
+  Password: weak
+  Phone: +1-547-512-7370
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 114.49
+  Product_SKU: SKU-80839
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-941529292
+  User_Type: Buyer
+  ZIP_Code: 13490
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-049_V00009
+
+SCENARIO: Select Address from Address Book
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:25
+
+DESCRIPTION:
+As a buyer with saved addresses, I want to select from my address book, so that I don't have to re-enter addresses.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Select Address from Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-304817
+  Order_Quantity: 3
+  Order_Total: 162.39
+  Password: weak
+  Phone: +1-936-413-5639
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 54.13
+  Product_SKU: SKU-21329
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-990428371
+  User_Type: Visitor
+  ZIP_Code: 96112
+
+RELATED REQUIREMENTS:
+FR-008, FR-010

@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00131
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00131
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account sarah.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Removal_Action: Remove_All
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-959357
+  Order_Quantity: 3
+  Order_Total: 104.76
+  Password: weak
+  Phone: +1-315-221-4353
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 34.92
+  Product_SKU: SKU-33204
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-361940420
+  User_Type: Buyer
+  ZIP_Code: 47661
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-085_V00006
+
+SCENARIO: Update Order Status to Shipped with Tracking
+VARIANT: V00006
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Shipped and add tracking details (carrier, tracking ID), so that buyers can track their shipment.
+
+GIVEN:
+- Admin is logged in with account james.brown@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Shipped with Tracking
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Edit_Field: Name
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-883773
+  Order_Quantity: 3
+  Order_Total: 815.91
+  Password: weak
+  Phone: +1-366-453-4073
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 271.97
+  Product_SKU: SKU-50873
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-461922455
+  User_Type: Admin
+  ZIP_Code: 85853
+
+RELATED REQUIREMENTS:
+FR-017

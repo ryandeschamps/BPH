@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-074_V00004
+
+SCENARIO: Submit Contact Support Request as Buyer
+VARIANT: V00004
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As a buyer, I want to contact support via email form, so that I can get help with my queries.
+
+GIVEN:
+- Admin is logged in with account jane.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Submit Contact Support Request as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Status_Change: Confirmed_To_InProcess
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-194119
+  Order_Quantity: 5
+  Order_Total: 1175.2
+  Password: weak
+  Phone: +1-320-114-3412
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 235.04
+  Product_SKU: SKU-53587
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-130173442
+  User_Type: Admin
+  ZIP_Code: 85778
+
+RELATED REQUIREMENTS:
+FR-013

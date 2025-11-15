@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00195
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00195
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account james.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: Low
+  Product_State: Price_Changed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-290194
+  Order_Quantity: 4
+  Order_Total: 292.48
+  Password: weak
+  Phone: +1-546-857-2906
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Wool Sweater
+  Product_Price: 73.12
+  Product_SKU: SKU-78683
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-425563139
+  User_Type: Buyer
+  ZIP_Code: 34656
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

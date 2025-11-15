@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-009_V00006
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00006
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.williams@example.com
+
+WHEN:
+- User enters email: mary.williams@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-702329
+  Order_Quantity: 5
+  Order_Total: 964.9
+  Password: Test@123
+  Phone: +1-420-607-5526
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 192.98
+  Product_SKU: SKU-99007
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-669782624
+  User_Type: Visitor
+  ZIP_Code: 31577
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

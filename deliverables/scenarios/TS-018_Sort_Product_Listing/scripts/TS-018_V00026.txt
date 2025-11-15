@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00026
+
+SCENARIO: Product Search with No Results
+VARIANT: V00026
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Sort_By: Price_Low_High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.brown@example.com
+  First_Name: Mary
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-865931
+  Order_Quantity: 2
+  Order_Total: 388.26
+  Password: weak
+  Phone: +1-364-604-4128
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 194.13
+  Product_SKU: SKU-93976
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-841895155
+  User_Type: Visitor
+  ZIP_Code: 15430
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00069
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00069
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account sarah.jones@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Both_New
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 08/25
+  Card_Number: 4532-****-****-2314
+  Device: Mobile
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-358472
+  Order_Quantity: 1
+  Order_Total: 273.43
+  Password: weak
+  Phone: +1-604-938-1298
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 273.43
+  Product_SKU: SKU-72646
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-735619978
+  User_Type: Buyer
+  ZIP_Code: 22726
+
+RELATED REQUIREMENTS:
+FR-007

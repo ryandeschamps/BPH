@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-074_V00024
+
+SCENARIO: Submit Contact Support Request as Buyer
+VARIANT: V00024
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As a buyer, I want to contact support via email form, so that I can get help with my queries.
+
+GIVEN:
+- Admin is logged in with account james.johnson@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Submit Contact Support Request as Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Status_Change: Confirmed_To_InProcess
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-196484
+  Order_Quantity: 1
+  Order_Total: 29.73
+  Password: weak
+  Phone: +1-597-625-5056
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 29.73
+  Product_SKU: SKU-96536
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-954322173
+  User_Type: Admin
+  ZIP_Code: 17126
+
+RELATED REQUIREMENTS:
+FR-013

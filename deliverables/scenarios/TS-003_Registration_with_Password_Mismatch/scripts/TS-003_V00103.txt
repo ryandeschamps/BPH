@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-003_V00103
+
+SCENARIO: Registration with Mismatched Passwords
+VARIANT: V00103
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate that my password and confirm password match, so that I don't lock myself out with a typo.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.miller@example.com
+- User enters phone: +1-206-537-3391
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  Password_State: Empty_Confirm
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-666543
+  Order_Quantity: 1
+  Order_Total: 54.74
+  Password: weak
+  Phone: +1-206-537-3391
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 54.74
+  Product_SKU: SKU-89961
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-238270785
+  User_Type: Visitor
+  ZIP_Code: 81149
+
+RELATED REQUIREMENTS:
+FR-002

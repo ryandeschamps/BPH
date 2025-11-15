@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-061_V00003
+
+SCENARIO: Reorder Previous Order Items
+VARIANT: V00003
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to quickly reorder items from a previous order, so that I can repurchase without searching again.
+
+GIVEN:
+- Admin is logged in with account emily.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Reorder Previous Order Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-452513
+  Order_Quantity: 1
+  Order_Total: 238.15
+  Password: Test@123
+  Phone: +1-764-873-6903
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 238.15
+  Product_SKU: SKU-68861
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-447067332
+  User_Type: Admin
+  ZIP_Code: 89455
+
+RELATED REQUIREMENTS:
+FR-012

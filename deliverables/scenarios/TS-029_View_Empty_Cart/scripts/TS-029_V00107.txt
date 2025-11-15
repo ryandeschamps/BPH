@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00107
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00107
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account john.martinez@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Items_Removed
+  Device: Tablet
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-208066
+  Order_Quantity: 1
+  Order_Total: 41.17
+  Password: weak
+  Phone: +1-681-144-8183
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 41.17
+  Product_SKU: SKU-27461
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-420479916
+  User_Type: Buyer
+  ZIP_Code: 49073
+
+RELATED REQUIREMENTS:
+FR-005

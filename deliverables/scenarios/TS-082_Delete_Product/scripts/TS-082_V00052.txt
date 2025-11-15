@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-082_V00052
+
+SCENARIO: Filter Orders by Status
+VARIANT: V00052
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to filter orders by status (Open, Confirmed, In Process, Shipped, Delivered), so that I can focus on specific order groups.
+
+GIVEN:
+- Admin is logged in with account james.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Filter Orders by Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Has_Orders: No
+  Network_Speed: High
+  Product_Status: Any
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-359907
+  Order_Quantity: 3
+  Order_Total: 535.68
+  Password: weak
+  Phone: +1-772-724-3076
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Canvas Sneakers
+  Product_Price: 178.56
+  Product_SKU: SKU-54287
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-897334837
+  User_Type: Admin
+  ZIP_Code: 50759
+
+RELATED REQUIREMENTS:
+FR-017

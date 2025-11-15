@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00763
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00763
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account emily.brown@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.brown@example.com
+
+WHEN:
+- User enters email: emily.brown@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Type: Kids
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: Few
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.brown@example.com
+  First_Name: Emily
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-366738
+  Order_Quantity: 5
+  Order_Total: 777.45
+  Password: weak
+  Phone: +1-277-484-9799
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 155.49
+  Product_SKU: SKU-61437
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-647091129
+  User_Type: Buyer
+  ZIP_Code: 64192
+
+RELATED REQUIREMENTS:
+FR-014

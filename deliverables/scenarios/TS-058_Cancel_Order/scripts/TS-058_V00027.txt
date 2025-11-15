@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-058_V00027
+
+SCENARIO: View Order Details
+VARIANT: V00027
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to view detailed information about a specific order, so that I can review what I purchased.
+
+GIVEN:
+- Buyer is logged in with account john.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-557391
+  Order_Quantity: 5
+  Order_Total: 850.4
+  Password: weak
+  Phone: +1-759-304-4229
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 170.08
+  Product_SKU: SKU-76925
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-625684475
+  User_Type: Buyer
+  ZIP_Code: 73703
+
+RELATED REQUIREMENTS:
+FR-012

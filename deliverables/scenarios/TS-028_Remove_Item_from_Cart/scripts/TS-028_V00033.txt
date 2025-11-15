@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00033
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00033
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account james.garcia@example.com
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Single_Item
+  Device: Mobile
+  Network_Speed: Low
+  Removal_Action: Remove_One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-160681
+  Order_Quantity: 4
+  Order_Total: 915.92
+  Password: weak
+  Phone: +1-839-369-7666
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 228.98
+  Product_SKU: SKU-20047
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-907515570
+  User_Type: Buyer
+  ZIP_Code: 79564
+
+RELATED REQUIREMENTS:
+FR-005

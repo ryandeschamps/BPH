@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00147
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00147
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for lisa.martinez@example.com
+
+WHEN:
+- User enters email: lisa.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Credential_Error: Empty_Password
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-982049
+  Order_Quantity: 2
+  Order_Total: 215.78
+  Password: weak
+  Phone: +1-828-181-4832
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 107.89
+  Product_SKU: SKU-44601
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-211197545
+  User_Type: Visitor
+  ZIP_Code: 46519
+
+RELATED REQUIREMENTS:
+FR-001

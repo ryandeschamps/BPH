@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00081
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00081
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: michael.rodriguez@example.com
+- User enters phone: +1-803-139-7303
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_LastName
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for michael.rodriguez@example.com
+- Verification email sent to michael.rodriguez@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Field_Values: Missing_LastName
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-432861
+  Order_Quantity: 4
+  Order_Total: 303.72
+  Password: Test@123
+  Phone: +1-803-139-7303
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 75.93
+  Product_SKU: SKU-19925
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-442357889
+  User_Type: Visitor
+  ZIP_Code: 19257
+
+RELATED REQUIREMENTS:
+FR-002

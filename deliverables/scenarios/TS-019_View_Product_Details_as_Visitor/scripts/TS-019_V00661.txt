@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00661
+
+SCENARIO: Product Browse by Category
+VARIANT: V00661
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account john.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-423166
+  Order_Quantity: 4
+  Order_Total: 604.48
+  Password: weak
+  Phone: +1-480-834-3377
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 151.12
+  Product_SKU: SKU-67340
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-290167930
+  User_Type: Buyer
+  ZIP_Code: 47680
+
+RELATED REQUIREMENTS:
+FR-003

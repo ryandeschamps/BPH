@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-001",
+  "scenario_title": "New Buyer Registration with Email Verification",
+  "variant_count": 864,
+  "expected_variant_count": 864,
+  "parameters": {
+    "User_Type": 1,
+    "Input_Validity": 2,
+    "Field_Values": 12,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-001_New_Buyer_Registration_with_Email_Verification/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

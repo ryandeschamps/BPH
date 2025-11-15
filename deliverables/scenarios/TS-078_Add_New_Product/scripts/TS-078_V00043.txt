@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00043
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00043
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account emily.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Image_Count: Multiple
+  Network_Speed: High
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-474479
+  Order_Quantity: 5
+  Order_Total: 426.95
+  Password: weak
+  Phone: +1-536-487-3815
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 85.39
+  Product_SKU: SKU-20928
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-635645656
+  User_Type: Admin
+  ZIP_Code: 59388
+
+RELATED REQUIREMENTS:
+FR-016

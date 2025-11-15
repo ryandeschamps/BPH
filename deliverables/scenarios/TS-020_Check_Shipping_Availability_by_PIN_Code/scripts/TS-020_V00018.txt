@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00018
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00018
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  PIN_Code_State: Available
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.jones@example.com
+  First_Name: Lisa
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-549560
+  Order_Quantity: 2
+  Order_Total: 524.02
+  Password: Test@123
+  Phone: +1-473-788-9954
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 262.01
+  Product_SKU: SKU-83435
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-629304481
+  User_Type: Visitor
+  ZIP_Code: 90001
+
+RELATED REQUIREMENTS:
+FR-003

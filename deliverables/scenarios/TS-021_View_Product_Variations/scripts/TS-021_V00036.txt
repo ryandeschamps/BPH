@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00036
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00036
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Visitor
+  Variation_Availability: All_Available
+  Variation_Type: Size_Only
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-285521
+  Order_Quantity: 1
+  Order_Total: 257.5
+  Password: weak
+  Phone: +1-656-286-8173
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 257.5
+  Product_SKU: SKU-29058
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-196664449
+  User_Type: Visitor
+  ZIP_Code: 25248
+
+RELATED REQUIREMENTS:
+FR-003

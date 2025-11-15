@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00071
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00071
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Both_New
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 09/28
+  Card_Number: 4532-****-****-9949
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-499959
+  Order_Quantity: 2
+  Order_Total: 367.4
+  Password: weak
+  Phone: +1-856-350-2612
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 183.7
+  Product_SKU: SKU-31641
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-680210603
+  User_Type: Buyer
+  ZIP_Code: 51009
+
+RELATED REQUIREMENTS:
+FR-007

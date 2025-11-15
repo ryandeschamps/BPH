@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-056_V00054
+
+SCENARIO: Checkout Without Login
+VARIANT: V00054
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a guest user, I want to be required to login before checkout, so that the system can track my order.
+
+GIVEN:
+- Buyer is logged in with account michael.brown@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for michael.brown@example.com
+
+WHEN:
+- User enters email: michael.brown@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Reorder_Items: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-229286
+  Order_Quantity: 1
+  Order_Total: 239.39
+  Password: weak
+  Phone: +1-216-937-2833
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 239.39
+  Product_SKU: SKU-97082
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-693538249
+  User_Type: Buyer
+  ZIP_Code: 99071
+
+RELATED REQUIREMENTS:
+FR-008

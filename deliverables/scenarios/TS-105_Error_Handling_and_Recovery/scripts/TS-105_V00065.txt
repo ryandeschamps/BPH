@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00065
+
+SCENARIO: Export Report to PDF
+VARIANT: V00065
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Error_Type: 500
+  Network_Speed: Medium
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-132146
+  Order_Quantity: 1
+  Order_Total: 68.41
+  Password: weak
+  Phone: +1-770-874-5217
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 68.41
+  Product_SKU: SKU-17740
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-530368718
+  User_Type: N/A
+  ZIP_Code: 40810
+
+RELATED REQUIREMENTS:
+FR-022

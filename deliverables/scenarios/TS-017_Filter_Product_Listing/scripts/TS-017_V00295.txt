@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00295
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00295
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account lisa.jones@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Filter_Type: Size
+  Filter_Value: Single_Value
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.jones@example.com
+  First_Name: Lisa
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-569913
+  Order_Quantity: 3
+  Order_Total: 813.66
+  Password: weak
+  Phone: +1-549-508-1180
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 271.22
+  Product_SKU: SKU-48393
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-937097848
+  User_Type: Buyer
+  ZIP_Code: 70091
+
+RELATED REQUIREMENTS:
+FR-003

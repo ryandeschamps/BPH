@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00052
+
+SCENARIO: Track Current Order Status
+VARIANT: V00052
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account mary.rodriguez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Message_Type: Complaint
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-139980
+  Order_Quantity: 3
+  Order_Total: 575.04
+  Password: weak
+  Phone: +1-708-667-5941
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 191.68
+  Product_SKU: SKU-31769
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-839120360
+  User_Type: Buyer
+  ZIP_Code: 93229
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

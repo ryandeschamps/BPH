@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-091_V00005
+
+SCENARIO: Edit Product Category
+VARIANT: V00005
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to edit category details, so that I can update category information.
+
+GIVEN:
+- Admin is logged in with account john.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  Target_Audience: All_Buyers
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-190968
+  Order_Quantity: 3
+  Order_Total: 795.21
+  Password: weak
+  Phone: +1-956-438-8273
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 265.07
+  Product_SKU: SKU-35490
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-414219358
+  User_Type: Admin
+  ZIP_Code: 30289
+
+RELATED REQUIREMENTS:
+FR-018

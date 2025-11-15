@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00135
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00135
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account michael.davis@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-156923
+  Order_Quantity: 4
+  Order_Total: 774.04
+  Password: weak
+  Phone: +1-615-774-7968
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 193.51
+  Product_SKU: SKU-56978
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-772592550
+  User_Type: Buyer
+  ZIP_Code: 18660
+
+RELATED REQUIREMENTS:
+FR-008

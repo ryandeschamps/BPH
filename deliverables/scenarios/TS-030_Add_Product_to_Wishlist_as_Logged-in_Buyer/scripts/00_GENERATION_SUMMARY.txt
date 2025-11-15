@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:14
+Total Scripts: 216
+Total Scenarios: 1
+Generation Time: 0.1 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-030: Check Shipping Availability for Unavailable ZIP
+  Variants: 216
+  Files: TS-030_V*.txt

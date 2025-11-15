@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00309
+
+SCENARIO: View Wishlist Items
+VARIANT: V00309
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account emily.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Email_Delivery: Delivered
+  Network_Speed: Low
+  Order_Size: Single_Item
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-764831
+  Order_Quantity: 3
+  Order_Total: 742.59
+  Password: weak
+  Phone: +1-707-861-8236
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 247.53
+  Product_SKU: SKU-67604
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-519877810
+  User_Type: Buyer
+  ZIP_Code: 35196
+
+RELATED REQUIREMENTS:
+FR-006

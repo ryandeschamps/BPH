@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00613
+
+SCENARIO: Forgot Password Request
+VARIANT: V00613
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account emily.smith@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: One_Result
+  Search_Query: Multiple_Keywords
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-450580
+  Order_Quantity: 4
+  Order_Total: 812.0
+  Password: Test@123
+  Phone: +1-684-347-6413
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 203.0
+  Product_SKU: SKU-43549
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-883580369
+  User_Type: Buyer
+  ZIP_Code: 66090
+
+RELATED REQUIREMENTS:
+FR-001

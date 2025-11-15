@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-075_V00036
+
+SCENARIO: Admin Receives Support Request Email
+VARIANT: V00036
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to receive email notifications for support requests, so that I can respond to customer queries.
+
+GIVEN:
+- Admin is logged in with account jane.johnson@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: Admin Receives Support Request Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Low
+  Status_Change: InProcess_To_Shipped
+  Tracking_Data: Complete
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-632653
+  Order_Quantity: 3
+  Order_Total: 849.57
+  Password: weak
+  Phone: +1-508-674-4673
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 283.19
+  Product_SKU: SKU-96418
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-618209744
+  User_Type: Admin
+  ZIP_Code: 88642
+
+RELATED REQUIREMENTS:
+FR-013, FR-027

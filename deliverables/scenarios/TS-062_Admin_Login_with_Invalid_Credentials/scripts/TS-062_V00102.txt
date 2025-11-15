@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00102
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00102
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account jane.williams@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Credential_Error: Both
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-506970
+  Order_Quantity: 2
+  Order_Total: 236.66
+  Password: weak
+  Phone: +1-908-652-6267
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 118.33
+  Product_SKU: SKU-92966
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-632020586
+  User_Type: Admin
+  ZIP_Code: 24342
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

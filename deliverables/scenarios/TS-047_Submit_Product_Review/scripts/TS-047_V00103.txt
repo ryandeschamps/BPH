@@ -1,0 +1,81 @@
+TEST SCRIPT: TS-047_V00103
+
+SCENARIO: Enter Shipping Address During Checkout
+VARIANT: V00103
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:24
+
+DESCRIPTION:
+As a buyer, I want to enter my shipping address during checkout, so that my order is delivered to the correct location.
+
+GIVEN:
+- Buyer is logged in with account emily.garcia@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to emily.garcia@example.com
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Product_State: Purchased
+  Rating: 3_Star
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-661959
+  Order_Quantity: 2
+  Order_Total: 277.22
+  Password: weak
+  Phone: +1-592-417-6628
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 138.61
+  Product_SKU: SKU-10179
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-377213217
+  User_Type: Buyer
+  ZIP_Code: 82636
+
+RELATED REQUIREMENTS:
+FR-008

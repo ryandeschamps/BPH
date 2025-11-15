@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00505
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00505
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account john.smith@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Buyer
+  Variation_Availability: All_Out_Of_Stock
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-257917
+  Order_Quantity: 4
+  Order_Total: 194.0
+  Password: weak
+  Phone: +1-290-703-8935
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 48.5
+  Product_SKU: SKU-26648
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-754902960
+  User_Type: Buyer
+  ZIP_Code: 80908
+
+RELATED REQUIREMENTS:
+FR-003

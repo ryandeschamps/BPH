@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-054",
+  "scenario_title": "View Order History",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Order_Count": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-054_View_Order_History/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

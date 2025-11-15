@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-002_V00068
+
+SCENARIO: Registration with Invalid Email Format
+VARIANT: V00068
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate my email format during registration, so that I provide a valid email address.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: james.davis@example.com
+- User enters phone: +1-569-326-7012
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Email_Format: Invalid_Domain
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-679272
+  Order_Quantity: 2
+  Order_Total: 228.06
+  Password: weak
+  Phone: +1-569-326-7012
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 114.03
+  Product_SKU: SKU-64249
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-130708476
+  User_Type: Visitor
+  ZIP_Code: 71381
+
+RELATED REQUIREMENTS:
+FR-002

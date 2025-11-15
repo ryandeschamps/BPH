@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00844
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00844
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for michael.martinez@example.com
+
+WHEN:
+- User enters email: michael.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: None
+  Sub_Category_Type: Shirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-746657
+  Order_Quantity: 5
+  Order_Total: 1024.85
+  Password: weak
+  Phone: +1-905-975-9873
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 204.97
+  Product_SKU: SKU-67403
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-164075957
+  User_Type: Buyer
+  ZIP_Code: 86164
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

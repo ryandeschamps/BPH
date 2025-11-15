@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-072_V00037
+
+SCENARIO: Manage Address Book
+VARIANT: V00037
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to add, edit, and delete addresses in my address book, so that I can quickly select addresses during checkout.
+
+GIVEN:
+- Admin is logged in with account james.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Manage Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Order_Details: With_Items
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-261826
+  Order_Quantity: 4
+  Order_Total: 430.44
+  Password: weak
+  Phone: +1-344-902-2784
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 107.61
+  Product_SKU: SKU-66256
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-883552325
+  User_Type: Admin
+  ZIP_Code: 71135
+
+RELATED REQUIREMENTS:
+FR-010

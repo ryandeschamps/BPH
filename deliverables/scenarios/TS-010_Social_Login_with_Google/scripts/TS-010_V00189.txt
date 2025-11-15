@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00189
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00189
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.garcia@example.com
+
+WHEN:
+- User enters email: emily.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-681718
+  Order_Quantity: 5
+  Order_Total: 186.75
+  Password: weak
+  Phone: +1-528-497-8506
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 37.35
+  Product_SKU: SKU-64200
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-514481255
+  User_Type: Visitor
+  ZIP_Code: 57082
+
+RELATED REQUIREMENTS:
+FR-001

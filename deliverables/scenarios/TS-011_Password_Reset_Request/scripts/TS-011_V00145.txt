@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00145
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00145
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for robert.garcia@example.com
+
+WHEN:
+- User enters email: robert.garcia@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Email_State: Verified
+  Input_Validity: Valid
+  Network_Speed: High
+  Reset_Link_State: Expired
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-457262
+  Order_Quantity: 4
+  Order_Total: 272.4
+  Password: Test@123
+  Phone: +1-452-716-4015
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 68.1
+  Product_SKU: SKU-63630
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-406507250
+  User_Type: Buyer
+  ZIP_Code: 24472
+
+RELATED REQUIREMENTS:
+FR-001

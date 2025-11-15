@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00289
+
+SCENARIO: Product Search with No Results
+VARIANT: V00289
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Sort_By: Newest_First
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-537061
+  Order_Quantity: 4
+  Order_Total: 514.52
+  Password: weak
+  Phone: +1-206-324-9931
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Denim Jeans
+  Product_Price: 128.63
+  Product_SKU: SKU-98260
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-675837111
+  User_Type: Buyer
+  ZIP_Code: 17313
+
+RELATED REQUIREMENTS:
+FR-003

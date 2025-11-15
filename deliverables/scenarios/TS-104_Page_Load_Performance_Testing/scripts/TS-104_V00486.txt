@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00486
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00486
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Load_Time: Medium
+  Network_Speed: Low
+  Page_Type: Checkout
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-474462
+  Order_Quantity: 1
+  Order_Total: 67.54
+  Password: weak
+  Phone: +1-870-463-5410
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 67.54
+  Product_SKU: SKU-66863
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-679066198
+  User_Type: N/A
+  ZIP_Code: 81527
+
+RELATED REQUIREMENTS:
+FR-022

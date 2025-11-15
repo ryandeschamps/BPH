@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00010
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00010
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account james.brown@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Image_Count: Single
+  Network_Speed: High
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-422152
+  Order_Quantity: 4
+  Order_Total: 310.64
+  Password: weak
+  Phone: +1-756-841-8577
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 77.66
+  Product_SKU: SKU-70802
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-257280407
+  User_Type: Admin
+  ZIP_Code: 87347
+
+RELATED REQUIREMENTS:
+FR-016

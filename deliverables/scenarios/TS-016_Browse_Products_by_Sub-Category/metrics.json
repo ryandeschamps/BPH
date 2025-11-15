@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-016",
+  "scenario_title": "Browse Products by Sub-Category",
+  "variant_count": 1440,
+  "expected_variant_count": 1440,
+  "parameters": {
+    "User_Type": 2,
+    "Sub_Category_Type": 5,
+    "Product_Count": 4,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-016_Browse_Products_by_Sub-Category/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

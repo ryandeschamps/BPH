@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-094_V00023
+
+SCENARIO: Upload Product Images
+VARIANT: V00023
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to upload multiple product images and set thumbnail, so that buyers can see the product.
+
+GIVEN:
+- Admin is logged in with account jane.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Upload Product Images
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Export_Format: PDF
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-929079
+  Order_Quantity: 1
+  Order_Total: 94.32
+  Password: weak
+  Phone: +1-275-911-1241
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 94.32
+  Product_SKU: SKU-88011
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-133799149
+  User_Type: Admin
+  ZIP_Code: 14810
+
+RELATED REQUIREMENTS:
+FR-019

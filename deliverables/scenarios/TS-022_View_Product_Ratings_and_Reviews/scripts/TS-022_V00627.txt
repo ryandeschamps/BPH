@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00627
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00627
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Rating_Range: Medium_Rated
+  Review_Count: Few_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-519923
+  Order_Quantity: 5
+  Order_Total: 1085.15
+  Password: weak
+  Phone: +1-760-812-2177
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 217.03
+  Product_SKU: SKU-55764
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-303366042
+  User_Type: Buyer
+  ZIP_Code: 56408
+
+RELATED REQUIREMENTS:
+FR-003

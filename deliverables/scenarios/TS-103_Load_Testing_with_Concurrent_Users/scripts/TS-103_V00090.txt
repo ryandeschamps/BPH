@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00090
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00090
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Load_Type: Concurrent_Users
+  Network_Speed: Low
+  User_Count: 150
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-759707
+  Order_Quantity: 3
+  Order_Total: 419.37
+  Password: weak
+  Phone: +1-313-211-4937
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 139.79
+  Product_SKU: SKU-20192
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-892648576
+  User_Type: N/A
+  ZIP_Code: 88574
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00068
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00068
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account mary.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Quantity_Change: Increase
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-142978
+  Order_Quantity: 5
+  Order_Total: 895.4
+  Password: weak
+  Phone: +1-911-688-3232
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 179.08
+  Product_SKU: SKU-82368
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-420763380
+  User_Type: Buyer
+  ZIP_Code: 39388
+
+RELATED REQUIREMENTS:
+FR-005

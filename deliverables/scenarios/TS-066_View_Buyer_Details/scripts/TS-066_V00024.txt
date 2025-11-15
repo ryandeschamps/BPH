@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00024
+
+SCENARIO: View Own Reviews
+VARIANT: V00024
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account michael.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: Active
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.smith@example.com
+  First_Name: Michael
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-170325
+  Order_Quantity: 2
+  Order_Total: 171.3
+  Password: weak
+  Phone: +1-724-615-7117
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 85.65
+  Product_SKU: SKU-61882
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-648710795
+  User_Type: Admin
+  ZIP_Code: 67377
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

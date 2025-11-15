@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00014
+
+SCENARIO: Approve Product Review
+VARIANT: V00014
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account lisa.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-536328
+  Order_Quantity: 1
+  Order_Total: 75.09
+  Password: weak
+  Phone: +1-326-222-9401
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 75.09
+  Product_SKU: SKU-31423
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-870199215
+  User_Type: Admin
+  ZIP_Code: 94275
+
+RELATED REQUIREMENTS:
+FR-021

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-083_V00022
+
+SCENARIO: Update Order Status to Confirmed
+VARIANT: V00022
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status from Open to Confirmed, so that I can indicate order acceptance.
+
+GIVEN:
+- Admin is logged in with account lisa.davis@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Confirmed
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Level: Top_Level
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-912434
+  Order_Quantity: 1
+  Order_Total: 266.66
+  Password: weak
+  Phone: +1-884-543-3524
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Sports Shorts
+  Product_Price: 266.66
+  Product_SKU: SKU-21953
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-987623957
+  User_Type: Admin
+  ZIP_Code: 19603
+
+RELATED REQUIREMENTS:
+FR-017

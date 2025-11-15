@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-069_V00015
+
+SCENARIO: View My Account Profile
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a buyer, I want to view my profile details (name, email, phone), so that I can verify my information.
+
+GIVEN:
+- Admin is logged in with account jane.martinez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View My Account Profile
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Status: Inactive
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.martinez@example.com
+  First_Name: Jane
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-337555
+  Order_Quantity: 2
+  Order_Total: 597.64
+  Password: weak
+  Phone: +1-712-864-7629
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 298.82
+  Product_SKU: SKU-67091
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-663170396
+  User_Type: Admin
+  ZIP_Code: 47608
+
+RELATED REQUIREMENTS:
+FR-010

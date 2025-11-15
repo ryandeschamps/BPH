@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01395
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01395
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.smith@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Failure_Reason: Declined
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-767904
+  Order_Quantity: 4
+  Order_Total: 1031.32
+  Password: weak
+  Phone: +1-970-329-4166
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 257.83
+  Product_SKU: SKU-71454
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-614810122
+  User_Type: Buyer
+  ZIP_Code: 17822
+
+RELATED REQUIREMENTS:
+FR-006

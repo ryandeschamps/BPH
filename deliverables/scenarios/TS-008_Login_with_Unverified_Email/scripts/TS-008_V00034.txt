@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-008_V00034
+
+SCENARIO: Login with Invalid Credentials
+VARIANT: V00034
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer, I want to be notified when my login credentials are incorrect, so that I can retry or reset my password.
+
+GIVEN:
+- Buyer is logged in with account emily.williams@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.williams@example.com
+
+WHEN:
+- User enters email: emily.williams@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Account_State: Unverified
+  Browser: Edge
+  Device: Tablet
+  Email_Verification: Not_Clicked
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.williams@example.com
+  First_Name: Emily
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-550893
+  Order_Quantity: 4
+  Order_Total: 1138.72
+  Password: Test@123
+  Phone: +1-971-355-4821
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 284.68
+  Product_SKU: SKU-11382
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-383942369
+  User_Type: Buyer
+  ZIP_Code: 67729
+
+RELATED REQUIREMENTS:
+FR-001

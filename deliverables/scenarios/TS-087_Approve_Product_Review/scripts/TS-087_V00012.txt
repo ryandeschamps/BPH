@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-087_V00012
+
+SCENARIO: View Order Details
+VARIANT: V00012
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to view complete order details (items, prices, addresses, payment status), so that I can fulfill orders correctly.
+
+GIVEN:
+- Admin is logged in with account sarah.jones@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Action: Approve
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Low
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-274051
+  Order_Quantity: 4
+  Order_Total: 808.96
+  Password: weak
+  Phone: +1-562-572-1232
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 202.24
+  Product_SKU: SKU-79570
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-522228593
+  User_Type: Admin
+  ZIP_Code: 61355
+
+RELATED REQUIREMENTS:
+FR-017

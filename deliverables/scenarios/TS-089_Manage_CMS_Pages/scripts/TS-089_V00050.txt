@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00050
+
+SCENARIO: Create New Product Category
+VARIANT: V00050
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account emily.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  CMS_Page: Contact_Us
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-986698
+  Order_Quantity: 3
+  Order_Total: 280.68
+  Password: weak
+  Phone: +1-807-456-8082
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 93.56
+  Product_SKU: SKU-82150
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-365693063
+  User_Type: Admin
+  ZIP_Code: 41070
+
+RELATED REQUIREMENTS:
+FR-018

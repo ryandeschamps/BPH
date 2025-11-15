@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00800
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00800
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account lisa.davis@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for lisa.davis@example.com
+
+WHEN:
+- User enters email: lisa.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Count: One
+  Sub_Category_Type: Shirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.davis@example.com
+  First_Name: Lisa
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-590169
+  Order_Quantity: 5
+  Order_Total: 916.85
+  Password: weak
+  Phone: +1-499-280-1455
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 183.37
+  Product_SKU: SKU-55363
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-266292993
+  User_Type: Buyer
+  ZIP_Code: 11076
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

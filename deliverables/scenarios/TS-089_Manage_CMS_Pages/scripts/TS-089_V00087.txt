@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00087
+
+SCENARIO: Create New Product Category
+VARIANT: V00087
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account james.johnson@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  CMS_Page: Privacy_Policy
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-265526
+  Order_Quantity: 4
+  Order_Total: 1171.04
+  Password: weak
+  Phone: +1-760-333-5130
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 292.76
+  Product_SKU: SKU-40768
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-486517125
+  User_Type: Admin
+  ZIP_Code: 26518
+
+RELATED REQUIREMENTS:
+FR-018

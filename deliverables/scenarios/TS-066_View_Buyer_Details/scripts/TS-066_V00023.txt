@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00023
+
+SCENARIO: View Own Reviews
+VARIANT: V00023
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account mary.garcia@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Buyer_Status: Active
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-371501
+  Order_Quantity: 5
+  Order_Total: 510.1
+  Password: weak
+  Phone: +1-400-471-1006
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 102.02
+  Product_SKU: SKU-24452
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-706570670
+  User_Type: Admin
+  ZIP_Code: 60891
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

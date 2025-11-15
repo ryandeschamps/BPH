@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00037
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00037
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account robert.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Credential_Error: Wrong_Password
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-546608
+  Order_Quantity: 4
+  Order_Total: 176.16
+  Password: weak
+  Phone: +1-404-493-3617
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Silk Scarf
+  Product_Price: 44.04
+  Product_SKU: SKU-84129
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-523803232
+  User_Type: Admin
+  ZIP_Code: 85175
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00124
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00124
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account james.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Has_Items
+  Device: Tablet
+  Network_Speed: High
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.jones@example.com
+  First_Name: James
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-867264
+  Order_Quantity: 5
+  Order_Total: 965.5
+  Password: weak
+  Phone: +1-344-720-8955
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 193.1
+  Product_SKU: SKU-71187
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-478408562
+  User_Type: Buyer
+  ZIP_Code: 33867
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

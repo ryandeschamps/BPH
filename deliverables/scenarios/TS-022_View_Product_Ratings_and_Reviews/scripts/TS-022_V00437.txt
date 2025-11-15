@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00437
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00437
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account sarah.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  Rating_Range: High_Rated
+  Review_Count: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-901096
+  Order_Quantity: 3
+  Order_Total: 754.8
+  Password: weak
+  Phone: +1-686-710-3449
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 251.6
+  Product_SKU: SKU-77808
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-187140149
+  User_Type: Buyer
+  ZIP_Code: 44012
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00085
+
+SCENARIO: Export Report to Excel
+VARIANT: V00085
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Security_Type: Encrypted_Data
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-978801
+  Order_Quantity: 1
+  Order_Total: 259.83
+  Password: weak
+  Phone: +1-987-529-5665
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 259.83
+  Product_SKU: SKU-77340
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-414632140
+  User_Type: N/A
+  ZIP_Code: 73606
+
+RELATED REQUIREMENTS:
+FR-022

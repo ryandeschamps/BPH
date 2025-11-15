@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00007
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00007
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account john.martinez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Product_State: In_Stock
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.martinez@example.com
+  First_Name: John
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-249904
+  Order_Quantity: 4
+  Order_Total: 724.6
+  Password: weak
+  Phone: +1-529-935-4849
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 181.15
+  Product_SKU: SKU-88433
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-759236903
+  User_Type: Buyer
+  ZIP_Code: 50166
+
+RELATED REQUIREMENTS:
+FR-005

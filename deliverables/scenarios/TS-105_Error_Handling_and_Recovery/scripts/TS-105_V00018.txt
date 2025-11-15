@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00018
+
+SCENARIO: Export Report to PDF
+VARIANT: V00018
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Error_Type: 404
+  Network_Speed: Low
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-761074
+  Order_Quantity: 4
+  Order_Total: 376.96
+  Password: weak
+  Phone: +1-895-656-5300
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 94.24
+  Product_SKU: SKU-89410
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-751303094
+  User_Type: N/A
+  ZIP_Code: 71726
+
+RELATED REQUIREMENTS:
+FR-022

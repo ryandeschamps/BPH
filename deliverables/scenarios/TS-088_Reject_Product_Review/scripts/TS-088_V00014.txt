@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-088_V00014
+
+SCENARIO: Edit Order Details
+VARIANT: V00014
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to edit order information if needed, so that I can correct errors.
+
+GIVEN:
+- Admin is logged in with account mary.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Action: Reject
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-968208
+  Order_Quantity: 4
+  Order_Total: 90.28
+  Password: weak
+  Phone: +1-507-982-9926
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 22.57
+  Product_SKU: SKU-80445
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-431358829
+  User_Type: Admin
+  ZIP_Code: 64916
+
+RELATED REQUIREMENTS:
+FR-017

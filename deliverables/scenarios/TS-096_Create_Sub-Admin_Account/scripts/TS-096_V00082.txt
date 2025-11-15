@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00082
+
+SCENARIO: Edit Product Details
+VARIANT: V00082
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account jane.rodriguez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: High
+  Role_Type: Customer_Support
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-896348
+  Order_Quantity: 4
+  Order_Total: 673.92
+  Password: weak
+  Phone: +1-818-907-6838
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 168.48
+  Product_SKU: SKU-69344
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-592934538
+  User_Type: Admin
+  ZIP_Code: 68855
+
+RELATED REQUIREMENTS:
+FR-019

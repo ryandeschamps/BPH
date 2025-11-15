@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-051",
+  "scenario_title": "Update Profile Information",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Field_Updated": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-051_Update_Profile_Information/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

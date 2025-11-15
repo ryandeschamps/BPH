@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-073_V00004
+
+SCENARIO: Logout
+VARIANT: V00004
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to logout of my account, so that I can secure my session on shared devices.
+
+GIVEN:
+- Admin is logged in with account sarah.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Logout
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: High
+  Status_Change: Open_To_Confirmed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-837214
+  Order_Quantity: 3
+  Order_Total: 503.7
+  Password: weak
+  Phone: +1-994-698-3456
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Casual Shirt
+  Product_Price: 167.9
+  Product_SKU: SKU-30042
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-628280051
+  User_Type: Admin
+  ZIP_Code: 24848
+
+RELATED REQUIREMENTS:
+FR-010

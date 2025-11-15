@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00045
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00045
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Single_Item
+  Device: Tablet
+  Network_Speed: Low
+  Removal_Action: Remove_All
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-964836
+  Order_Quantity: 2
+  Order_Total: 453.48
+  Password: weak
+  Phone: +1-535-512-5965
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 226.74
+  Product_SKU: SKU-92945
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-717073878
+  User_Type: Buyer
+  ZIP_Code: 93687
+
+RELATED REQUIREMENTS:
+FR-005

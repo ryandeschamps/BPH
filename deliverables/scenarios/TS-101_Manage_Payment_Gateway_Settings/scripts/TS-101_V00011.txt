@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00011
+
+SCENARIO: Approve Product Review
+VARIANT: V00011
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account james.rodriguez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-904183
+  Order_Quantity: 1
+  Order_Total: 158.13
+  Password: weak
+  Phone: +1-200-407-6588
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 158.13
+  Product_SKU: SKU-89120
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-291241528
+  User_Type: Admin
+  ZIP_Code: 18493
+
+RELATED REQUIREMENTS:
+FR-021

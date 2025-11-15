@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00344
+
+SCENARIO: Forgot Password Request
+VARIANT: V00344
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Many_Results
+  Search_Query: Exact_Match
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-143945
+  Order_Quantity: 1
+  Order_Total: 49.65
+  Password: Test@123
+  Phone: +1-426-961-8774
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 49.65
+  Product_SKU: SKU-40450
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-800352386
+  User_Type: Visitor
+  ZIP_Code: 45784
+
+RELATED REQUIREMENTS:
+FR-001

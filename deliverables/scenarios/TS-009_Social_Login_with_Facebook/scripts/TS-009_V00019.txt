@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-009_V00019
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00019
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for james.garcia@example.com
+
+WHEN:
+- User enters email: james.garcia@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-955466
+  Order_Quantity: 3
+  Order_Total: 897.87
+  Password: Test@123
+  Phone: +1-309-673-8027
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 299.29
+  Product_SKU: SKU-68366
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-159800618
+  User_Type: Visitor
+  ZIP_Code: 37420
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

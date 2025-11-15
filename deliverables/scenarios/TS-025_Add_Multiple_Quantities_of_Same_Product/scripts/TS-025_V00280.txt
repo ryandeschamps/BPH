@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-025_V00280
+
+SCENARIO: View Product Ratings in Listing
+VARIANT: V00280
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product ratings in the listing, so that I can judge product quality before clicking.
+
+GIVEN:
+- Buyer is logged in with account mary.rodriguez@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings in Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Quantity: Ten
+  Stock_Level: Insufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-908117
+  Order_Quantity: 1
+  Order_Total: 86.48
+  Password: weak
+  Phone: +1-626-585-9584
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 86.48
+  Product_SKU: SKU-23837
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-511337814
+  User_Type: Buyer
+  ZIP_Code: 25816
+
+RELATED REQUIREMENTS:
+FR-004

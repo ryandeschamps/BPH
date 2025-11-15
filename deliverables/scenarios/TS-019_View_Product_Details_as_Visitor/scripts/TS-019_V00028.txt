@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00028
+
+SCENARIO: Product Browse by Category
+VARIANT: V00028
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Image_Count: Single_Image
+  Network_Speed: High
+  Product_State: Active
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-650753
+  Order_Quantity: 4
+  Order_Total: 164.72
+  Password: weak
+  Phone: +1-245-130-9264
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 41.18
+  Product_SKU: SKU-34440
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-786939901
+  User_Type: Visitor
+  ZIP_Code: 51261
+
+RELATED REQUIREMENTS:
+FR-003

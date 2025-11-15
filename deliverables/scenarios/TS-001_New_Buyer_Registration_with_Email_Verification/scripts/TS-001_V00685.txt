@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00685
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00685
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: james.williams@example.com
+- User enters phone: +1-490-182-6332
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Password
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Password
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Field_Values: Missing_Password
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-587287
+  Order_Quantity: 5
+  Order_Total: 878.25
+  Password: weak
+  Phone: +1-490-182-6332
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Leather Jacket
+  Product_Price: 175.65
+  Product_SKU: SKU-50325
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-622972272
+  User_Type: Visitor
+  ZIP_Code: 72477
+
+RELATED REQUIREMENTS:
+FR-002

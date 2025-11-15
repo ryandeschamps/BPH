@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00034
+
+SCENARIO: Track Current Order Status
+VARIANT: V00034
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account james.jones@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Message_Type: Question
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.jones@example.com
+  First_Name: James
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-756078
+  Order_Quantity: 2
+  Order_Total: 552.9
+  Password: weak
+  Phone: +1-452-929-7636
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 276.45
+  Product_SKU: SKU-50297
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-737838385
+  User_Type: Buyer
+  ZIP_Code: 19238
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

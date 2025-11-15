@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00025
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00025
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account emily.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Edit_Type: Username
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-967746
+  Order_Quantity: 5
+  Order_Total: 718.15
+  Password: weak
+  Phone: +1-976-649-6928
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 143.63
+  Product_SKU: SKU-96347
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-638797656
+  User_Type: Admin
+  ZIP_Code: 25711
+
+RELATED REQUIREMENTS:
+FR-019

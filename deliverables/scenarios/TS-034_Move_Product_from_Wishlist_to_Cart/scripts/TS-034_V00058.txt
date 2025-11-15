@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00058
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00058
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: High
+  Product_State: In_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-732143
+  Order_Quantity: 1
+  Order_Total: 69.54
+  Password: weak
+  Phone: +1-397-803-6311
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 69.54
+  Product_SKU: SKU-24893
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-361549839
+  User_Type: Buyer
+  ZIP_Code: 65712
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

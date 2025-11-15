@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-082_V00027
+
+SCENARIO: Filter Orders by Status
+VARIANT: V00027
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to filter orders by status (Open, Confirmed, In Process, Shipped, Delivered), so that I can focus on specific order groups.
+
+GIVEN:
+- Admin is logged in with account james.smith@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Filter Orders by Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Has_Orders: Yes
+  Network_Speed: Low
+  Product_Status: Any
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-844447
+  Order_Quantity: 4
+  Order_Total: 615.96
+  Password: weak
+  Phone: +1-238-398-5280
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 153.99
+  Product_SKU: SKU-14851
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-689930634
+  User_Type: Admin
+  ZIP_Code: 98379
+
+RELATED REQUIREMENTS:
+FR-017

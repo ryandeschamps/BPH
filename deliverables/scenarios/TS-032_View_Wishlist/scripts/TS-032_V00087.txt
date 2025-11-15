@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00087
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00087
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: Low
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-529425
+  Order_Quantity: 1
+  Order_Total: 141.5
+  Password: weak
+  Phone: +1-393-494-9393
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 141.5
+  Product_SKU: SKU-56367
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-743631265
+  User_Type: Buyer
+  ZIP_Code: 20786
+
+RELATED REQUIREMENTS:
+FR-007

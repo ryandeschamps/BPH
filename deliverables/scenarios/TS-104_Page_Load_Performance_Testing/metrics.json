@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-104",
+  "scenario_title": "Page Load Performance Testing",
+  "variant_count": 540,
+  "expected_variant_count": 540,
+  "parameters": {
+    "Page_Type": 5,
+    "Load_Time": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-104_Page_Load_Performance_Testing/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

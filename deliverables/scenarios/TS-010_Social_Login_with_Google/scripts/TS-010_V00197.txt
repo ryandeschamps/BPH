@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00197
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00197
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for lisa.smith@example.com
+
+WHEN:
+- User enters email: lisa.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Firefox
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-325505
+  Order_Quantity: 3
+  Order_Total: 574.26
+  Password: weak
+  Phone: +1-201-702-6890
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 191.42
+  Product_SKU: SKU-41452
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-424908208
+  User_Type: Visitor
+  ZIP_Code: 10089
+
+RELATED REQUIREMENTS:
+FR-001

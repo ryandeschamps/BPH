@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00232
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00232
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Filter_Type: Multiple_Filters
+  Filter_Value: Single_Value
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-633760
+  Order_Quantity: 3
+  Order_Total: 610.53
+  Password: weak
+  Phone: +1-378-696-5992
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 203.51
+  Product_SKU: SKU-71528
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-515321808
+  User_Type: Visitor
+  ZIP_Code: 97194
+
+RELATED REQUIREMENTS:
+FR-003

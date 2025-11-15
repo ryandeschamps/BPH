@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00567
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00567
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account mary.miller@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Rating_Range: Mixed_Ratings
+  Review_Count: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-168700
+  Order_Quantity: 5
+  Order_Total: 559.5
+  Password: weak
+  Phone: +1-223-777-6519
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 111.9
+  Product_SKU: SKU-63179
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-601672853
+  User_Type: Buyer
+  ZIP_Code: 59325
+
+RELATED REQUIREMENTS:
+FR-003

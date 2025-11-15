@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-080_V00027
+
+SCENARIO: Edit Buyer Account Information
+VARIANT: V00027
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to edit buyer account details, so that I can correct information when needed.
+
+GIVEN:
+- Admin is logged in with account david.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Buyer Account Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Product_Status: Active
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.garcia@example.com
+  First_Name: David
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-143829
+  Order_Quantity: 5
+  Order_Total: 1262.15
+  Password: weak
+  Phone: +1-345-466-5760
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 252.43
+  Product_SKU: SKU-75446
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-197161971
+  User_Type: Admin
+  ZIP_Code: 53077
+
+RELATED REQUIREMENTS:
+FR-016

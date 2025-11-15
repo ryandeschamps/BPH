@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00178
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00178
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for james.garcia@example.com
+
+WHEN:
+- User enters email: james.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Edge
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: Authorized
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-593897
+  Order_Quantity: 5
+  Order_Total: 337.8
+  Password: weak
+  Phone: +1-970-997-2468
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Summer Dress
+  Product_Price: 67.56
+  Product_SKU: SKU-16250
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-661588088
+  User_Type: Visitor
+  ZIP_Code: 34635
+
+RELATED REQUIREMENTS:
+FR-001

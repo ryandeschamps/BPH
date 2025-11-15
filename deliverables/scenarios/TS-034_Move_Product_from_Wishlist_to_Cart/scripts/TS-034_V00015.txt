@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00015
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00015
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account mary.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Empty
+  Device: Mobile
+  Network_Speed: Low
+  Product_State: In_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-320339
+  Order_Quantity: 5
+  Order_Total: 583.0
+  Password: weak
+  Phone: +1-764-104-7267
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 116.6
+  Product_SKU: SKU-58306
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-863048546
+  User_Type: Buyer
+  ZIP_Code: 52401
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

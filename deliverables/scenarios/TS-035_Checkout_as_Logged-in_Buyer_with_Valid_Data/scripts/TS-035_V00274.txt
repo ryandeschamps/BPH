@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00274
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00274
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account james.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Safari
+  Cart_Items: Multiple
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 12/28
+  Card_Number: 4532-****-****-9993
+  Device: Mobile
+  Email: james.smith@example.com
+  First_Name: James
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-122075
+  Order_Quantity: 4
+  Order_Total: 282.76
+  Password: Test@123
+  Phone: +1-935-624-2861
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 70.69
+  Product_SKU: SKU-31466
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-910492927
+  User_Type: Buyer
+  ZIP_Code: 61566
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00067
+
+SCENARIO: Export Report to PDF
+VARIANT: V00067
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Error_Type: 500
+  Network_Speed: High
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-420370
+  Order_Quantity: 3
+  Order_Total: 74.67
+  Password: weak
+  Phone: +1-927-277-2154
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 24.89
+  Product_SKU: SKU-42691
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-167788417
+  User_Type: N/A
+  ZIP_Code: 77598
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00708
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00708
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: james.johnson@example.com
+- User enters phone: +1-330-439-7812
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Password
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Password
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Field_Values: Missing_Password
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-302138
+  Order_Quantity: 2
+  Order_Total: 346.28
+  Password: weak
+  Phone: +1-330-439-7812
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 173.14
+  Product_SKU: SKU-55417
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-624208437
+  User_Type: Visitor
+  ZIP_Code: 65998
+
+RELATED REQUIREMENTS:
+FR-002

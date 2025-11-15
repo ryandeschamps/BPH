@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-082_V00049
+
+SCENARIO: Filter Orders by Status
+VARIANT: V00049
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to filter orders by status (Open, Confirmed, In Process, Shipped, Delivered), so that I can focus on specific order groups.
+
+GIVEN:
+- Admin is logged in with account emily.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Filter Orders by Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Has_Orders: No
+  Network_Speed: High
+  Product_Status: Any
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-369605
+  Order_Quantity: 5
+  Order_Total: 1425.2
+  Password: weak
+  Phone: +1-536-156-7852
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 285.04
+  Product_SKU: SKU-35590
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-144393450
+  User_Type: Admin
+  ZIP_Code: 43783
+
+RELATED REQUIREMENTS:
+FR-017

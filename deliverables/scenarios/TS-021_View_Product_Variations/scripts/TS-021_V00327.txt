@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00327
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00327
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account robert.brown@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Buyer
+  Variation_Availability: All_Available
+  Variation_Type: Size_Only
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-336961
+  Order_Quantity: 5
+  Order_Total: 802.25
+  Password: weak
+  Phone: +1-543-253-3688
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 160.45
+  Product_SKU: SKU-45323
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-304302337
+  User_Type: Buyer
+  ZIP_Code: 21262
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00140
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00140
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account lisa.smith@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 03/27
+  Card_Number: 4532-****-****-5218
+  Device: Mobile
+  Email: lisa.smith@example.com
+  First_Name: Lisa
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-542677
+  Order_Quantity: 3
+  Order_Total: 848.88
+  Password: weak
+  Phone: +1-731-544-8146
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Canvas Sneakers
+  Product_Price: 282.96
+  Product_SKU: SKU-50374
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-297695199
+  User_Type: Buyer
+  ZIP_Code: 11578
+
+RELATED REQUIREMENTS:
+FR-007

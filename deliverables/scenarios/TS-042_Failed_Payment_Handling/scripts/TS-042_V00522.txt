@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00522
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00522
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account robert.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Failure_Reason: Network_Error
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 07/25
+  Card_Number: 4532-****-****-2367
+  Device: Tablet
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-467932
+  Order_Quantity: 4
+  Order_Total: 176.0
+  Password: weak
+  Phone: +1-929-209-1606
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 44.0
+  Product_SKU: SKU-84239
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-440249174
+  User_Type: Buyer
+  ZIP_Code: 30311
+
+RELATED REQUIREMENTS:
+FR-006

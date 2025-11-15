@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-056_V00087
+
+SCENARIO: Checkout Without Login
+VARIANT: V00087
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a guest user, I want to be required to login before checkout, so that the system can track my order.
+
+GIVEN:
+- Buyer is logged in with account sarah.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.davis@example.com
+
+WHEN:
+- User enters email: sarah.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Reorder_Items: Out_Of_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-683881
+  Order_Quantity: 2
+  Order_Total: 321.38
+  Password: weak
+  Phone: +1-484-299-8473
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Wool Sweater
+  Product_Price: 160.69
+  Product_SKU: SKU-43442
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-348258267
+  User_Type: Buyer
+  ZIP_Code: 28415
+
+RELATED REQUIREMENTS:
+FR-008

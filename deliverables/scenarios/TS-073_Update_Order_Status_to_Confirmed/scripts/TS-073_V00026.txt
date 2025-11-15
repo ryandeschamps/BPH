@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-073_V00026
+
+SCENARIO: Logout
+VARIANT: V00026
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:35
+
+DESCRIPTION:
+As a buyer, I want to logout of my account, so that I can secure my session on shared devices.
+
+GIVEN:
+- Admin is logged in with account michael.davis@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Logout
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Status_Change: Open_To_Confirmed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-958982
+  Order_Quantity: 2
+  Order_Total: 354.32
+  Password: weak
+  Phone: +1-816-775-3106
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 177.16
+  Product_SKU: SKU-75698
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-783650969
+  User_Type: Admin
+  ZIP_Code: 80118
+
+RELATED REQUIREMENTS:
+FR-010

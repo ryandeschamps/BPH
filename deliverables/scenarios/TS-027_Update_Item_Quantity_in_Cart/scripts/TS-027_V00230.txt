@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00230
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00230
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account robert.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Quantity_Change: Zero
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-222781
+  Order_Quantity: 4
+  Order_Total: 1151.72
+  Password: weak
+  Phone: +1-623-899-2206
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Casual Shirt
+  Product_Price: 287.93
+  Product_SKU: SKU-13750
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-826766033
+  User_Type: Buyer
+  ZIP_Code: 45958
+
+RELATED REQUIREMENTS:
+FR-005

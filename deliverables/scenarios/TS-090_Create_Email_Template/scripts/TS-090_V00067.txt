@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-090_V00067
+
+SCENARIO: Create Product Sub-Category
+VARIANT: V00067
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create sub-categories under categories, so that I can further organize products.
+
+GIVEN:
+- Admin is logged in with account jane.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Create Product Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Template_Type: Transactional
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.davis@example.com
+  First_Name: Jane
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-653661
+  Order_Quantity: 1
+  Order_Total: 212.97
+  Password: weak
+  Phone: +1-745-634-3774
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 212.97
+  Product_SKU: SKU-72239
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-307872583
+  User_Type: Admin
+  ZIP_Code: 84416
+
+RELATED REQUIREMENTS:
+FR-018

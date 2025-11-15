@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-067_V00074
+
+SCENARIO: Share Product on Social Media as Guest
+VARIANT: V00074
+PRIORITY: Low
+GENERATED: 2025-11-15 19:43:33
+
+DESCRIPTION:
+As a guest user, I want to share a product on social media, so that I can show it to friends without logging in.
+
+GIVEN:
+- Admin is logged in with account sarah.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Share Product on Social Media as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Edit_Field: Phone
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-925197
+  Order_Quantity: 2
+  Order_Total: 158.04
+  Password: weak
+  Phone: +1-482-942-7840
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 79.02
+  Product_SKU: SKU-98606
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-150990716
+  User_Type: Admin
+  ZIP_Code: 24725
+
+RELATED REQUIREMENTS:
+FR-009

@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00081
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00081
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account david.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Chrome
+  Cart_Items: Single
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 05/26
+  Card_Number: 4532-****-****-1139
+  Device: Tablet
+  Email: david.garcia@example.com
+  First_Name: David
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-620973
+  Order_Quantity: 1
+  Order_Total: 113.72
+  Password: Test@123
+  Phone: +1-613-842-4931
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 113.72
+  Product_SKU: SKU-25949
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-196036120
+  User_Type: Buyer
+  ZIP_Code: 82186
+
+RELATED REQUIREMENTS:
+FR-007

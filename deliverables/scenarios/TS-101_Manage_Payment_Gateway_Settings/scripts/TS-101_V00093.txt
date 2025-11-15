@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00093
+
+SCENARIO: Approve Product Review
+VARIANT: V00093
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account robert.smith@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Payment_Status: Failed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-643498
+  Order_Quantity: 2
+  Order_Total: 303.1
+  Password: weak
+  Phone: +1-537-727-9496
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 151.55
+  Product_SKU: SKU-95574
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-188537356
+  User_Type: Admin
+  ZIP_Code: 95718
+
+RELATED REQUIREMENTS:
+FR-021

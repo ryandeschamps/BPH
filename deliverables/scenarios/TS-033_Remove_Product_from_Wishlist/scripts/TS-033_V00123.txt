@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00123
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00123
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account james.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Removal_Action: Remove_All
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-181369
+  Order_Quantity: 2
+  Order_Total: 521.8
+  Password: weak
+  Phone: +1-796-864-6248
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 260.9
+  Product_SKU: SKU-64099
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-177565511
+  User_Type: Buyer
+  ZIP_Code: 80382
+
+RELATED REQUIREMENTS:
+FR-007

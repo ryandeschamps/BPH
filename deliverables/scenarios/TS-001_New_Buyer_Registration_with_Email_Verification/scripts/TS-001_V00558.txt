@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00558
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00558
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: michael.davis@example.com
+- User enters phone: +1-994-870-6196
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Email
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_Email
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Field_Values: Missing_Email
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.davis@example.com
+  First_Name: Michael
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-836328
+  Order_Quantity: 2
+  Order_Total: 379.2
+  Password: weak
+  Phone: +1-994-870-6196
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 189.6
+  Product_SKU: SKU-27888
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-213341767
+  User_Type: Visitor
+  ZIP_Code: 43974
+
+RELATED REQUIREMENTS:
+FR-002

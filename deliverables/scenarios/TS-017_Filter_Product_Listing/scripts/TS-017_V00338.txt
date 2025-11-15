@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00338
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00338
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account john.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Filter_Type: Size
+  Filter_Value: Multiple_Values
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-361145
+  Order_Quantity: 3
+  Order_Total: 508.62
+  Password: weak
+  Phone: +1-778-333-8533
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 169.54
+  Product_SKU: SKU-41888
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-574902156
+  User_Type: Buyer
+  ZIP_Code: 30925
+
+RELATED REQUIREMENTS:
+FR-003

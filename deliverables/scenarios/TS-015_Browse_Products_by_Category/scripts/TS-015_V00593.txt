@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00593
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00593
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account robert.williams@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for robert.williams@example.com
+
+WHEN:
+- User enters email: robert.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Women
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Count: Many
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-893948
+  Order_Quantity: 1
+  Order_Total: 86.3
+  Password: weak
+  Phone: +1-202-193-4299
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 86.3
+  Product_SKU: SKU-38056
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-418069930
+  User_Type: Buyer
+  ZIP_Code: 38584
+
+RELATED REQUIREMENTS:
+FR-014

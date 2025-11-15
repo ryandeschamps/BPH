@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00675
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00675
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: robert.johnson@example.com
+- User enters phone: +1-402-630-1873
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Contact
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Invalid_Contact
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Field_Values: Invalid_Contact
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-415747
+  Order_Quantity: 5
+  Order_Total: 1149.2
+  Password: weak
+  Phone: +1-402-630-1873
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 229.84
+  Product_SKU: SKU-79691
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-275873727
+  User_Type: Visitor
+  ZIP_Code: 41663
+
+RELATED REQUIREMENTS:
+FR-002

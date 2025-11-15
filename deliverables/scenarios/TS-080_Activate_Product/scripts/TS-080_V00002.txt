@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-080_V00002
+
+SCENARIO: Edit Buyer Account Information
+VARIANT: V00002
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to edit buyer account details, so that I can correct information when needed.
+
+GIVEN:
+- Admin is logged in with account james.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Edit Buyer Account Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Product_Status: Active
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-411592
+  Order_Quantity: 5
+  Order_Total: 204.8
+  Password: weak
+  Phone: +1-742-868-7718
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 40.96
+  Product_SKU: SKU-16303
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-942619167
+  User_Type: Admin
+  ZIP_Code: 35174
+
+RELATED REQUIREMENTS:
+FR-016

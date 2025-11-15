@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00334
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00334
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for james.johnson@example.com
+
+WHEN:
+- User enters email: james.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: Few
+  Sub_Category_Type: TShirts
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-616053
+  Order_Quantity: 2
+  Order_Total: 168.14
+  Password: weak
+  Phone: +1-933-116-8303
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 84.07
+  Product_SKU: SKU-57151
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-728102618
+  User_Type: Visitor
+  ZIP_Code: 66598
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

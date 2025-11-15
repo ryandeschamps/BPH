@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00347
+
+SCENARIO: Product Browse by Category
+VARIANT: V00347
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Image_Count: Multiple_Images
+  Network_Speed: Medium
+  Product_State: No_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-998588
+  Order_Quantity: 5
+  Order_Total: 888.5
+  Password: weak
+  Phone: +1-803-827-2425
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 177.7
+  Product_SKU: SKU-59649
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-143612656
+  User_Type: Visitor
+  ZIP_Code: 81651
+
+RELATED REQUIREMENTS:
+FR-003

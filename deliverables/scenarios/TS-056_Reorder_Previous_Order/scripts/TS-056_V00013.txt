@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-056_V00013
+
+SCENARIO: Checkout Without Login
+VARIANT: V00013
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a guest user, I want to be required to login before checkout, so that the system can track my order.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for jane.williams@example.com
+
+WHEN:
+- User enters email: jane.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Reorder_Items: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-812711
+  Order_Quantity: 2
+  Order_Total: 413.68
+  Password: weak
+  Phone: +1-625-756-2177
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 206.84
+  Product_SKU: SKU-78190
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-147887962
+  User_Type: Buyer
+  ZIP_Code: 83106
+
+RELATED REQUIREMENTS:
+FR-008

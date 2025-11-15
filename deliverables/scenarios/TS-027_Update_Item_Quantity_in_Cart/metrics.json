@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-027",
+  "scenario_title": "Update Item Quantity in Cart",
+  "variant_count": 288,
+  "expected_variant_count": 288,
+  "parameters": {
+    "User_Type": 1,
+    "Quantity_Change": 4,
+    "Stock_Level": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-027_Update_Item_Quantity_in_Cart/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

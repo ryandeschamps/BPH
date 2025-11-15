@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00088
+
+SCENARIO: View Wishlist Items
+VARIANT: V00088
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account robert.garcia@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Email_Delivery: Delivered
+  Network_Speed: High
+  Order_Size: Multiple_Items
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 09/30
+  Card_Number: 4532-****-****-2866
+  Device: Tablet
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-188549
+  Order_Quantity: 1
+  Order_Total: 202.52
+  Password: weak
+  Phone: +1-441-127-2718
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 202.52
+  Product_SKU: SKU-83479
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-936119274
+  User_Type: Buyer
+  ZIP_Code: 39522
+
+RELATED REQUIREMENTS:
+FR-006

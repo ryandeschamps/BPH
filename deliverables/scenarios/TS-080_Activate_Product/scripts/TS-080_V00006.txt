@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-080_V00006
+
+SCENARIO: Edit Buyer Account Information
+VARIANT: V00006
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:38
+
+DESCRIPTION:
+As an admin, I want to edit buyer account details, so that I can correct information when needed.
+
+GIVEN:
+- Admin is logged in with account jane.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Buyer Account Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Product_Status: Active
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-757837
+  Order_Quantity: 4
+  Order_Total: 1063.44
+  Password: weak
+  Phone: +1-631-389-4733
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Canvas Sneakers
+  Product_Price: 265.86
+  Product_SKU: SKU-15519
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-524283369
+  User_Type: Admin
+  ZIP_Code: 10999
+
+RELATED REQUIREMENTS:
+FR-016

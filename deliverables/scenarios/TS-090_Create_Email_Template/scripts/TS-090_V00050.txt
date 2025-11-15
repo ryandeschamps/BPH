@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-090_V00050
+
+SCENARIO: Create Product Sub-Category
+VARIANT: V00050
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create sub-categories under categories, so that I can further organize products.
+
+GIVEN:
+- Admin is logged in with account sarah.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Create Product Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Template_Type: Transactional
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-819544
+  Order_Quantity: 5
+  Order_Total: 1491.2
+  Password: weak
+  Phone: +1-675-994-9744
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 298.24
+  Product_SKU: SKU-52520
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-550129001
+  User_Type: Admin
+  ZIP_Code: 38204
+
+RELATED REQUIREMENTS:
+FR-018

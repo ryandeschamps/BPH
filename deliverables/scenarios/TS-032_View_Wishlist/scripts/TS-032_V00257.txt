@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00257
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00257
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account mary.rodriguez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Item_Availability: Some_Out_Of_Stock
+  Network_Speed: Medium
+  User_Type: Buyer
+  Wishlist_State: Multiple_Items
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-250614
+  Order_Quantity: 4
+  Order_Total: 154.92
+  Password: weak
+  Phone: +1-341-542-1530
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 38.73
+  Product_SKU: SKU-67368
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-979237838
+  User_Type: Buyer
+  ZIP_Code: 56789
+
+RELATED REQUIREMENTS:
+FR-007

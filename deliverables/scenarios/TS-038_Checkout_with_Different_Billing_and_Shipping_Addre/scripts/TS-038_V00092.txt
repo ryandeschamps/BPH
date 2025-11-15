@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00092
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00092
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account mary.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Both_New
+  Address_Type: Different_Addresses
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-177977
+  Order_Quantity: 5
+  Order_Total: 186.5
+  Password: weak
+  Phone: +1-676-973-5467
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 37.3
+  Product_SKU: SKU-82380
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-523344069
+  User_Type: Buyer
+  ZIP_Code: 79585
+
+RELATED REQUIREMENTS:
+FR-007

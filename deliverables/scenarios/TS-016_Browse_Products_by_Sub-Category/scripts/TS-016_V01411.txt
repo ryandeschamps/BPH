@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01411
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01411
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account jane.brown@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for jane.brown@example.com
+
+WHEN:
+- User enters email: jane.brown@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: None
+  Sub_Category_Type: Accessories
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-259303
+  Order_Quantity: 4
+  Order_Total: 724.08
+  Password: weak
+  Phone: +1-202-316-1221
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 181.02
+  Product_SKU: SKU-40468
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-348180842
+  User_Type: Buyer
+  ZIP_Code: 41422
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

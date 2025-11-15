@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-095_V00023
+
+SCENARIO: Add Product Variants (Size and Color)
+VARIANT: V00023
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to add product variants with different sizes and colors, so that buyers have options.
+
+GIVEN:
+- Admin is logged in with account john.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product Variants (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Export_Format: Excel
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.jones@example.com
+  First_Name: John
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-560754
+  Order_Quantity: 3
+  Order_Total: 680.01
+  Password: weak
+  Phone: +1-833-872-1617
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 226.67
+  Product_SKU: SKU-82671
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-147492816
+  User_Type: Admin
+  ZIP_Code: 53976
+
+RELATED REQUIREMENTS:
+FR-019

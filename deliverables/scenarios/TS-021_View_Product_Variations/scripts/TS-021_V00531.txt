@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00531
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00531
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account michael.rodriguez@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Buyer
+  Variation_Availability: All_Out_Of_Stock
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-870598
+  Order_Quantity: 1
+  Order_Total: 116.76
+  Password: weak
+  Phone: +1-345-146-1010
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 116.76
+  Product_SKU: SKU-35654
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-187356500
+  User_Type: Buyer
+  ZIP_Code: 66579
+
+RELATED REQUIREMENTS:
+FR-003

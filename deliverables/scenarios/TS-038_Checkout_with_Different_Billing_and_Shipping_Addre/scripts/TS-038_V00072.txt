@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00072
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00072
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Both_New
+  Address_Type: Different_Addresses
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 03/29
+  Card_Number: 4532-****-****-5235
+  Device: Tablet
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-150046
+  Order_Quantity: 4
+  Order_Total: 705.4
+  Password: weak
+  Phone: +1-522-391-2223
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 176.35
+  Product_SKU: SKU-91769
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-215985146
+  User_Type: Buyer
+  ZIP_Code: 31262
+
+RELATED REQUIREMENTS:
+FR-007

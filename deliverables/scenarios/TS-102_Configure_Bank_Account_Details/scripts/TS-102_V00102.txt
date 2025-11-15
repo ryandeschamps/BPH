@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00102
+
+SCENARIO: Reject Product Review
+VARIANT: V00102
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account robert.garcia@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Bank_Field: Bank_Name
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-633566
+  Order_Quantity: 4
+  Order_Total: 104.08
+  Password: weak
+  Phone: +1-609-404-4388
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 26.02
+  Product_SKU: SKU-78363
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-392589849
+  User_Type: Admin
+  ZIP_Code: 48219
+
+RELATED REQUIREMENTS:
+FR-021

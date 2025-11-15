@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00085
+
+SCENARIO: Reject Product Review
+VARIANT: V00085
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account robert.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Bank_Field: Bank_Name
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.garcia@example.com
+  First_Name: Robert
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-826411
+  Order_Quantity: 1
+  Order_Total: 155.76
+  Password: weak
+  Phone: +1-742-888-3725
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 155.76
+  Product_SKU: SKU-98280
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-542400097
+  User_Type: Admin
+  ZIP_Code: 29312
+
+RELATED REQUIREMENTS:
+FR-021

@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00158
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00158
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for robert.martinez@example.com
+
+WHEN:
+- User enters email: robert.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Credential_Error: Empty_Password
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-434502
+  Order_Quantity: 1
+  Order_Total: 220.85
+  Password: weak
+  Phone: +1-851-902-9166
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 220.85
+  Product_SKU: SKU-98734
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-943977329
+  User_Type: Visitor
+  ZIP_Code: 34637
+
+RELATED REQUIREMENTS:
+FR-001

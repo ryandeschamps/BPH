@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00394
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00394
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- Buyer is logged in with account emily.jones@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: High
+  PIN_Code_State: Not_Available
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-823701
+  Order_Quantity: 2
+  Order_Total: 368.26
+  Password: weak
+  Phone: +1-222-606-6480
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 184.13
+  Product_SKU: SKU-69636
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-340619580
+  User_Type: Buyer
+  ZIP_Code: 24837
+
+RELATED REQUIREMENTS:
+FR-003

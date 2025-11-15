@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00037
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00037
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account john.williams@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 09/29
+  Card_Number: 4532-****-****-7702
+  Device: Desktop
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-998267
+  Order_Quantity: 4
+  Order_Total: 113.96
+  Password: weak
+  Phone: +1-490-910-3206
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 28.49
+  Product_SKU: SKU-86443
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-437222697
+  User_Type: Buyer
+  ZIP_Code: 74241
+
+RELATED REQUIREMENTS:
+FR-007

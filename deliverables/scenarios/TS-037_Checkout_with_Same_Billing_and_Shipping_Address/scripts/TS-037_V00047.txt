@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00047
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00047
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account emily.martinez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 11/26
+  Card_Number: 4532-****-****-9401
+  Device: Desktop
+  Email: emily.martinez@example.com
+  First_Name: Emily
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-176296
+  Order_Quantity: 4
+  Order_Total: 540.0
+  Password: weak
+  Phone: +1-760-261-9576
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Leather Jacket
+  Product_Price: 135.0
+  Product_SKU: SKU-71537
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-673771265
+  User_Type: Buyer
+  ZIP_Code: 75522
+
+RELATED REQUIREMENTS:
+FR-007

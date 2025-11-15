@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-077_V00041
+
+SCENARIO: View All Buyers List
+VARIANT: V00041
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view list of all registered buyers, so that I can manage customers.
+
+GIVEN:
+- Admin is logged in with account robert.martinez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View All Buyers List
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Edit_Type: Items
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-463531
+  Order_Quantity: 2
+  Order_Total: 246.66
+  Password: weak
+  Phone: +1-457-722-8600
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Wool Sweater
+  Product_Price: 123.33
+  Product_SKU: SKU-56496
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-300268141
+  User_Type: Admin
+  ZIP_Code: 40662
+
+RELATED REQUIREMENTS:
+FR-016

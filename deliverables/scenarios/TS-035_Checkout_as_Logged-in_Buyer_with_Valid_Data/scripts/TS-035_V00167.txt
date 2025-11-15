@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00167
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00167
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account lisa.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Safari
+  Cart_Items: Single
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 12/29
+  Card_Number: 4532-****-****-7772
+  Device: Mobile
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-802788
+  Order_Quantity: 5
+  Order_Total: 590.35
+  Password: Test@123
+  Phone: +1-560-885-9984
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 118.07
+  Product_SKU: SKU-44871
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-761502373
+  User_Type: Buyer
+  ZIP_Code: 85641
+
+RELATED REQUIREMENTS:
+FR-007

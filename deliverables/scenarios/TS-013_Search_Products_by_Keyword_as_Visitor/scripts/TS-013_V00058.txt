@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00058
+
+SCENARIO: Forgot Password Request
+VARIANT: V00058
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: Few_Results
+  Search_Query: Single_Keyword
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-653921
+  Order_Quantity: 3
+  Order_Total: 500.58
+  Password: Test@123
+  Phone: +1-243-616-3966
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Silk Scarf
+  Product_Price: 166.86
+  Product_SKU: SKU-96208
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-377777781
+  User_Type: Visitor
+  ZIP_Code: 85011
+
+RELATED REQUIREMENTS:
+FR-001

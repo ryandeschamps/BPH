@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00523
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00523
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Rating_Range: Low_Rated
+  Review_Count: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-243053
+  Order_Quantity: 4
+  Order_Total: 1057.72
+  Password: weak
+  Phone: +1-583-552-6056
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 264.43
+  Product_SKU: SKU-52617
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-519979565
+  User_Type: Buyer
+  ZIP_Code: 34462
+
+RELATED REQUIREMENTS:
+FR-003

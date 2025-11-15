@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-048_V00002
+
+SCENARIO: Use Same Address for Billing and Shipping
+VARIANT: V00002
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:24
+
+DESCRIPTION:
+As a buyer, I want to use the same address for billing and shipping, so that I don't have to enter it twice.
+
+GIVEN:
+- Buyer is logged in with account jane.miller@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Use Same Address for Billing and Shipping
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Product_State: Not_Purchased
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-857322
+  Order_Quantity: 3
+  Order_Total: 362.58
+  Password: weak
+  Phone: +1-446-931-6737
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Canvas Sneakers
+  Product_Price: 120.86
+  Product_SKU: SKU-62844
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-120829566
+  User_Type: Buyer
+  ZIP_Code: 15863
+
+RELATED REQUIREMENTS:
+FR-008

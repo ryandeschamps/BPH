@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-089_V00120
+
+SCENARIO: Create New Product Category
+VARIANT: V00120
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:42
+
+DESCRIPTION:
+As an admin, I want to create new product categories, so that I can organize products.
+
+GIVEN:
+- Admin is logged in with account michael.miller@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Create New Product Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  CMS_Page: Terms
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-192924
+  Order_Quantity: 4
+  Order_Total: 141.52
+  Password: weak
+  Phone: +1-576-627-4299
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 35.38
+  Product_SKU: SKU-17398
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-163822265
+  User_Type: Admin
+  ZIP_Code: 46397
+
+RELATED REQUIREMENTS:
+FR-018

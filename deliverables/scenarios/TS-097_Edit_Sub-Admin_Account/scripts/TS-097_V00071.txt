@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00071
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00071
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account michael.johnson@example.com
+- Using Edge browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Edit_Type: Password
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-930033
+  Order_Quantity: 4
+  Order_Total: 1036.48
+  Password: weak
+  Phone: +1-973-656-2783
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 259.12
+  Product_SKU: SKU-32873
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-386591604
+  User_Type: Admin
+  ZIP_Code: 91874
+
+RELATED REQUIREMENTS:
+FR-019

@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-038",
+  "scenario_title": "Checkout with Different Billing and Shipping Addresses",
+  "variant_count": 324,
+  "expected_variant_count": 324,
+  "parameters": {
+    "User_Type": 1,
+    "Address_Type": 1,
+    "Address_State": 3,
+    "Payment_Method": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-038_Checkout_with_Different_Billing_and_Shipping_Addre/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

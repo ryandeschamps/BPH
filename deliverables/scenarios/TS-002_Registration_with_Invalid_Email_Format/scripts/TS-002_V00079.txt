@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-002_V00079
+
+SCENARIO: Registration with Invalid Email Format
+VARIANT: V00079
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate my email format during registration, so that I provide a valid email address.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: mary.miller@example.com
+- User enters phone: +1-630-118-5485
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Email_Format: Special_Chars
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-305749
+  Order_Quantity: 3
+  Order_Total: 699.09
+  Password: weak
+  Phone: +1-630-118-5485
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 233.03
+  Product_SKU: SKU-66174
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-766039798
+  User_Type: Visitor
+  ZIP_Code: 13692
+
+RELATED REQUIREMENTS:
+FR-002

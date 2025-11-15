@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00285
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00285
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.brown@example.com
+- User enters phone: +1-448-875-6319
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Password
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for david.brown@example.com
+- Verification email sent to david.brown@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Field_Values: Missing_Password
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.brown@example.com
+  First_Name: David
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-724435
+  Order_Quantity: 2
+  Order_Total: 167.8
+  Password: Test@123
+  Phone: +1-448-875-6319
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Cotton T-Shirt
+  Product_Price: 83.9
+  Product_SKU: SKU-20877
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-311027210
+  User_Type: Visitor
+  ZIP_Code: 41173
+
+RELATED REQUIREMENTS:
+FR-002

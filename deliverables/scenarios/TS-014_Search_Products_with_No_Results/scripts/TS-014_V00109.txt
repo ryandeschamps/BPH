@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00109
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00109
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  Results_Count: Zero
+  Search_Query: No_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-981435
+  Order_Quantity: 2
+  Order_Total: 220.02
+  Password: Test@123
+  Phone: +1-475-790-9290
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 110.01
+  Product_SKU: SKU-27703
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-135981334
+  User_Type: Buyer
+  ZIP_Code: 53890
+
+RELATED REQUIREMENTS:
+FR-001

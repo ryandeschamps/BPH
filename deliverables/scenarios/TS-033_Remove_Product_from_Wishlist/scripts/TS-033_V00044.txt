@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00044
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00044
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account jane.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  Removal_Action: Remove_All
+  User_Type: Buyer
+  Wishlist_State: Single_Item
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.miller@example.com
+  First_Name: Jane
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-628541
+  Order_Quantity: 3
+  Order_Total: 896.19
+  Password: weak
+  Phone: +1-208-146-1591
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 298.73
+  Product_SKU: SKU-44691
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-983351712
+  User_Type: Buyer
+  ZIP_Code: 82840
+
+RELATED REQUIREMENTS:
+FR-007

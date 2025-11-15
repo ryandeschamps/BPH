@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-049_V00019
+
+SCENARIO: Select Address from Address Book
+VARIANT: V00019
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:25
+
+DESCRIPTION:
+As a buyer with saved addresses, I want to select from my address book, so that I don't have to re-enter addresses.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Select Address from Address Book
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-772497
+  Order_Quantity: 2
+  Order_Total: 194.34
+  Password: weak
+  Phone: +1-910-302-8277
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 97.17
+  Product_SKU: SKU-76445
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-382948413
+  User_Type: Visitor
+  ZIP_Code: 15972
+
+RELATED REQUIREMENTS:
+FR-008, FR-010

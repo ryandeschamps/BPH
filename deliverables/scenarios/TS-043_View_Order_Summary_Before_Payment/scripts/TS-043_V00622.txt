@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00622
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00622
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account james.martinez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_Items: Mixed_Prices
+  Device: Desktop
+  Network_Speed: High
+  Shipping_Cost: Free
+  Tax_Applicable: No
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-335611
+  Order_Quantity: 4
+  Order_Total: 986.88
+  Password: weak
+  Phone: +1-312-795-3821
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 246.72
+  Product_SKU: SKU-83104
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-371135570
+  User_Type: Buyer
+  ZIP_Code: 84514
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

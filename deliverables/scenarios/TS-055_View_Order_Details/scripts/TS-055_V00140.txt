@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-055_V00140
+
+SCENARIO: Order Confirmation Email
+VARIANT: V00140
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to receive an order confirmation email after successful payment, so that I have proof of purchase.
+
+GIVEN:
+- Buyer is logged in with account mary.garcia@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Order Confirmation Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: Medium
+  Order_Status: Delivered
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-454839
+  Order_Quantity: 4
+  Order_Total: 231.72
+  Password: weak
+  Phone: +1-713-607-1019
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 57.93
+  Product_SKU: SKU-30164
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-344441288
+  User_Type: Buyer
+  ZIP_Code: 51039
+
+RELATED REQUIREMENTS:
+FR-008

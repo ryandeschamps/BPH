@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00137
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00137
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account sarah.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Edge
+  Cart_Items: Multiple
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 11/26
+  Card_Number: 4532-****-****-1933
+  Device: Desktop
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-347449
+  Order_Quantity: 2
+  Order_Total: 519.54
+  Password: Test@123
+  Phone: +1-687-355-4974
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 259.77
+  Product_SKU: SKU-33550
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-709636659
+  User_Type: Buyer
+  ZIP_Code: 26793
+
+RELATED REQUIREMENTS:
+FR-007

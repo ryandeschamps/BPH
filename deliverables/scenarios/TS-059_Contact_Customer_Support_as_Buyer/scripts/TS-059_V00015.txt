@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00015
+
+SCENARIO: Track Current Order Status
+VARIANT: V00015
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account david.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Message_Type: Question
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-262797
+  Order_Quantity: 2
+  Order_Total: 496.76
+  Password: weak
+  Phone: +1-402-312-4239
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 248.38
+  Product_SKU: SKU-61440
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-675679859
+  User_Type: Buyer
+  ZIP_Code: 47686
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

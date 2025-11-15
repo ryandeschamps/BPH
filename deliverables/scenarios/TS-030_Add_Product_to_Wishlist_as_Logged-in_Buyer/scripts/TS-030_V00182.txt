@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00182
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00182
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account james.jones@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+  Wishlist_State: Product_Already_In_Wishlist
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.jones@example.com
+  First_Name: James
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-337432
+  Order_Quantity: 1
+  Order_Total: 90.7
+  Password: weak
+  Phone: +1-526-113-8628
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Canvas Sneakers
+  Product_Price: 90.7
+  Product_SKU: SKU-94910
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-493871184
+  User_Type: Buyer
+  ZIP_Code: 22813
+
+RELATED REQUIREMENTS:
+FR-005

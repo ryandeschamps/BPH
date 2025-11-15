@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-065",
+  "scenario_title": "View All Buyers List",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Buyer_Filter": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-065_View_All_Buyers_List/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

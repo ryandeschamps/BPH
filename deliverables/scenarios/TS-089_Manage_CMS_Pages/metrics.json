@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-089",
+  "scenario_title": "Manage CMS Pages",
+  "variant_count": 144,
+  "expected_variant_count": 144,
+  "parameters": {
+    "User_Type": 1,
+    "CMS_Page": 4,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-089_Manage_CMS_Pages/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

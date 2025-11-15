@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-007_V00180
+
+SCENARIO: Login with Valid Credentials
+VARIANT: V00180
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a registered buyer, I want to login with my email and password, so that I can access my account.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.williams@example.com
+
+WHEN:
+- User enters email: sarah.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Credential_Error: Empty_Password
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-775027
+  Order_Quantity: 1
+  Order_Total: 181.61
+  Password: weak
+  Phone: +1-531-414-4289
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 181.61
+  Product_SKU: SKU-97936
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-999556484
+  User_Type: Visitor
+  ZIP_Code: 15126
+
+RELATED REQUIREMENTS:
+FR-001

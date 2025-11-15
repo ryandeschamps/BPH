@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-031_V00097
+
+SCENARIO: View Product Ratings and Reviews
+VARIANT: V00097
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to read ratings and reviews from other buyers, so that I can make informed purchase decisions.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Ratings and Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Redirect_Action: Cancel
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-600309
+  Order_Quantity: 3
+  Order_Total: 618.12
+  Password: weak
+  Phone: +1-396-746-6185
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 206.04
+  Product_SKU: SKU-11370
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-244007092
+  User_Type: Visitor
+  ZIP_Code: 66471
+
+RELATED REQUIREMENTS:
+FR-005, FR-011

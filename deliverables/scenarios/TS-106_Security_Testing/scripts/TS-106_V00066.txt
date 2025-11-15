@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00066
+
+SCENARIO: Export Report to Excel
+VARIANT: V00066
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Security_Type: HTTPS
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-650013
+  Order_Quantity: 3
+  Order_Total: 62.67
+  Password: weak
+  Phone: +1-362-800-5804
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 20.89
+  Product_SKU: SKU-22873
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-865855110
+  User_Type: N/A
+  ZIP_Code: 51267
+
+RELATED REQUIREMENTS:
+FR-022

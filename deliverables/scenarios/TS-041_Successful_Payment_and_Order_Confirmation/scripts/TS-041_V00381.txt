@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00381
+
+SCENARIO: View Wishlist Items
+VARIANT: V00381
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account john.williams@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Email_Delivery: Delivered
+  Network_Speed: Low
+  Order_Size: Multiple_Items
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-383634
+  Order_Quantity: 2
+  Order_Total: 398.06
+  Password: weak
+  Phone: +1-504-141-6732
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 199.03
+  Product_SKU: SKU-17287
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-670615901
+  User_Type: Buyer
+  ZIP_Code: 45317
+
+RELATED REQUIREMENTS:
+FR-006

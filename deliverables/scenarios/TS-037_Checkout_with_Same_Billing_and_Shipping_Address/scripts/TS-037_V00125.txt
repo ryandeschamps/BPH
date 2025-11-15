@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00125
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00125
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account sarah.rodriguez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved
+  Address_Type: Same_Address
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 07/30
+  Card_Number: 4532-****-****-8509
+  Device: Tablet
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-422712
+  Order_Quantity: 5
+  Order_Total: 262.2
+  Password: weak
+  Phone: +1-578-104-9456
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Casual Shirt
+  Product_Price: 52.44
+  Product_SKU: SKU-50783
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-666607017
+  User_Type: Buyer
+  ZIP_Code: 16135
+
+RELATED REQUIREMENTS:
+FR-007

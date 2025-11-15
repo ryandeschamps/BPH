@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-098_V00034
+
+SCENARIO: View Payment Information
+VARIANT: V00034
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to view my bank account details for receiving payments, so that I can verify payment settings.
+
+GIVEN:
+- Admin is logged in with account mary.williams@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to mary.williams@example.com
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: High
+  Sub_Admin_Status: Active
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-151092
+  Order_Quantity: 5
+  Order_Total: 1322.55
+  Password: weak
+  Phone: +1-969-200-5135
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 264.51
+  Product_SKU: SKU-49199
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-427099977
+  User_Type: Admin
+  ZIP_Code: 62518
+
+RELATED REQUIREMENTS:
+FR-020

@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-008_V00070
+
+SCENARIO: Login with Invalid Credentials
+VARIANT: V00070
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer, I want to be notified when my login credentials are incorrect, so that I can retry or reset my password.
+
+GIVEN:
+- Buyer is logged in with account lisa.martinez@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for lisa.martinez@example.com
+
+WHEN:
+- User enters email: lisa.martinez@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Account_State: Unverified
+  Browser: Edge
+  Device: Tablet
+  Email_Verification: Link_Expired
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-968569
+  Order_Quantity: 2
+  Order_Total: 460.58
+  Password: Test@123
+  Phone: +1-343-436-9996
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 230.29
+  Product_SKU: SKU-30065
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-181947919
+  User_Type: Buyer
+  ZIP_Code: 26441
+
+RELATED REQUIREMENTS:
+FR-001

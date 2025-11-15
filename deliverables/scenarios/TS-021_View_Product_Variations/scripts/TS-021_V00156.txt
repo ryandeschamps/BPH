@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00156
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00156
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Low
+  User_Type: Visitor
+  Variation_Availability: Some_Out_Of_Stock
+  Variation_Type: Color_Only
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-318909
+  Order_Quantity: 4
+  Order_Total: 1105.48
+  Password: weak
+  Phone: +1-650-117-8940
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 276.37
+  Product_SKU: SKU-73736
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-139027580
+  User_Type: Visitor
+  ZIP_Code: 64435
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00040
+
+SCENARIO: View Wishlist Items
+VARIANT: V00040
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account john.smith@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Email_Delivery: Delayed
+  Network_Speed: High
+  Order_Size: Single_Item
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 09/30
+  Card_Number: 4532-****-****-1008
+  Device: Mobile
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-304181
+  Order_Quantity: 4
+  Order_Total: 985.92
+  Password: weak
+  Phone: +1-645-744-3302
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 246.48
+  Product_SKU: SKU-83607
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-136090785
+  User_Type: Buyer
+  ZIP_Code: 89837
+
+RELATED REQUIREMENTS:
+FR-006

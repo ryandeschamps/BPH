@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00204
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00204
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account michael.johnson@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Has_Items
+  Device: Mobile
+  Network_Speed: Low
+  Product_State: Price_Changed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-426661
+  Order_Quantity: 3
+  Order_Total: 82.23
+  Password: weak
+  Phone: +1-284-817-4648
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 27.41
+  Product_SKU: SKU-29704
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-739213126
+  User_Type: Buyer
+  ZIP_Code: 58284
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

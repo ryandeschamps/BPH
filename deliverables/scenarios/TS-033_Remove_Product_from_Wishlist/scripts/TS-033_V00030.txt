@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-033_V00030
+
+SCENARIO: Add Product to Cart as Logged-In Buyer
+VARIANT: V00030
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my cart, so that I can purchase them later.
+
+GIVEN:
+- Buyer is logged in with account mary.rodriguez@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Removal_Action: Remove_One
+  User_Type: Buyer
+  Wishlist_State: Single_Item
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-180144
+  Order_Quantity: 3
+  Order_Total: 764.04
+  Password: weak
+  Phone: +1-965-733-1002
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Wool Sweater
+  Product_Price: 254.68
+  Product_SKU: SKU-45603
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-529116192
+  User_Type: Buyer
+  ZIP_Code: 24430
+
+RELATED REQUIREMENTS:
+FR-007

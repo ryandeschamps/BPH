@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-034_V00206
+
+SCENARIO: Add Product with Variant Selection to Cart
+VARIANT: V00206
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to select size and color before adding to cart, so that I get the right product variant.
+
+GIVEN:
+- Buyer is logged in with account emily.miller@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Has_Items
+  Device: Tablet
+  Network_Speed: Medium
+  Product_State: Price_Changed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-114523
+  Order_Quantity: 4
+  Order_Total: 196.04
+  Password: weak
+  Phone: +1-634-702-2707
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 49.01
+  Product_SKU: SKU-89673
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-468499739
+  User_Type: Buyer
+  ZIP_Code: 41260
+
+RELATED REQUIREMENTS:
+FR-007, FR-005

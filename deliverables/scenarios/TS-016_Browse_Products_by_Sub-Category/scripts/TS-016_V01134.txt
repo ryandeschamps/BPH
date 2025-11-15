@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01134
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01134
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account robert.brown@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for robert.brown@example.com
+
+WHEN:
+- User enters email: robert.brown@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: None
+  Sub_Category_Type: TShirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-260255
+  Order_Quantity: 1
+  Order_Total: 131.94
+  Password: weak
+  Phone: +1-382-139-3179
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Denim Jeans
+  Product_Price: 131.94
+  Product_SKU: SKU-32356
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-719417564
+  User_Type: Buyer
+  ZIP_Code: 74009
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

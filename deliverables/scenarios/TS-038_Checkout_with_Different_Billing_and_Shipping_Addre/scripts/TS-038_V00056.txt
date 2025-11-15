@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00056
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00056
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account sarah.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Both_New
+  Address_Type: Different_Addresses
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 04/29
+  Card_Number: 4532-****-****-4396
+  Device: Desktop
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-271243
+  Order_Quantity: 1
+  Order_Total: 136.66
+  Password: weak
+  Phone: +1-245-847-2048
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 136.66
+  Product_SKU: SKU-85981
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-615198977
+  User_Type: Buyer
+  ZIP_Code: 61842
+
+RELATED REQUIREMENTS:
+FR-007

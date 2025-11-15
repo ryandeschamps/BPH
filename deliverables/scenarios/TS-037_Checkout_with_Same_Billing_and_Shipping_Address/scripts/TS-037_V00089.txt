@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00089
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00089
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account michael.garcia@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-300339
+  Order_Quantity: 1
+  Order_Total: 25.48
+  Password: weak
+  Phone: +1-989-160-6444
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Leather Jacket
+  Product_Price: 25.48
+  Product_SKU: SKU-31024
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-318589924
+  User_Type: Buyer
+  ZIP_Code: 98764
+
+RELATED REQUIREMENTS:
+FR-007

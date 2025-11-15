@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00728
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00728
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.miller@example.com
+- User enters phone: +1-588-762-3877
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Weak_Password
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Field_Values: Weak_Password
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-604396
+  Order_Quantity: 1
+  Order_Total: 226.79
+  Password: weak
+  Phone: +1-588-762-3877
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 226.79
+  Product_SKU: SKU-24601
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-701379609
+  User_Type: Visitor
+  ZIP_Code: 75664
+
+RELATED REQUIREMENTS:
+FR-002

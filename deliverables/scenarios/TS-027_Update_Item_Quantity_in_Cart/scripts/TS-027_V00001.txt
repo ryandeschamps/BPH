@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-027_V00001
+
+SCENARIO: View Product Images Gallery
+VARIANT: V00001
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a user, I want to view multiple product images in a gallery, so that I can see the product from different angles.
+
+GIVEN:
+- Buyer is logged in with account james.martinez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Images Gallery
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Quantity_Change: Increase
+  Stock_Level: Sufficient
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.martinez@example.com
+  First_Name: James
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-906977
+  Order_Quantity: 4
+  Order_Total: 444.48
+  Password: weak
+  Phone: +1-992-327-2201
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 111.12
+  Product_SKU: SKU-25668
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-265334264
+  User_Type: Buyer
+  ZIP_Code: 78134
+
+RELATED REQUIREMENTS:
+FR-005

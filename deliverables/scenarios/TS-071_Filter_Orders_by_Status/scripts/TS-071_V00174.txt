@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00174
+
+SCENARIO: Change Password
+VARIANT: V00174
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account john.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Order_Status: Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-659084
+  Order_Quantity: 5
+  Order_Total: 240.05
+  Password: weak
+  Phone: +1-625-245-5728
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 48.01
+  Product_SKU: SKU-24194
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-931885350
+  User_Type: Admin
+  ZIP_Code: 65922
+
+RELATED REQUIREMENTS:
+FR-010

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00163
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00163
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account robert.rodriguez@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Multiple_Items
+  Device: Desktop
+  Network_Speed: High
+  Removal_Action: Remove_All
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-807469
+  Order_Quantity: 4
+  Order_Total: 300.56
+  Password: weak
+  Phone: +1-750-545-8279
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 75.14
+  Product_SKU: SKU-14052
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-559551953
+  User_Type: Buyer
+  ZIP_Code: 13822
+
+RELATED REQUIREMENTS:
+FR-005

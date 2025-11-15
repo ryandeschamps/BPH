@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00306
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00306
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.rodriguez@example.com
+
+WHEN:
+- User enters email: mary.rodriguez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Kids
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: Many
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-479545
+  Order_Quantity: 4
+  Order_Total: 1091.76
+  Password: weak
+  Phone: +1-308-600-4567
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 272.94
+  Product_SKU: SKU-67710
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-129270942
+  User_Type: Visitor
+  ZIP_Code: 55861
+
+RELATED REQUIREMENTS:
+FR-014

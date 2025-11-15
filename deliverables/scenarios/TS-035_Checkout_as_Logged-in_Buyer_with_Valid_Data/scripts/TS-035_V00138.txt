@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00138
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00138
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account lisa.jones@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Edge
+  Cart_Items: Multiple
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 05/25
+  Card_Number: 4532-****-****-9372
+  Device: Desktop
+  Email: lisa.jones@example.com
+  First_Name: Lisa
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-509136
+  Order_Quantity: 5
+  Order_Total: 892.45
+  Password: Test@123
+  Phone: +1-851-950-5877
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 178.49
+  Product_SKU: SKU-78798
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-880000115
+  User_Type: Buyer
+  ZIP_Code: 98033
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00555
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00555
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account michael.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Rating_Range: Mixed_Ratings
+  Review_Count: No_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-704153
+  Order_Quantity: 4
+  Order_Total: 1011.68
+  Password: weak
+  Phone: +1-588-548-7204
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 252.92
+  Product_SKU: SKU-98002
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-838637683
+  User_Type: Buyer
+  ZIP_Code: 86318
+
+RELATED REQUIREMENTS:
+FR-003

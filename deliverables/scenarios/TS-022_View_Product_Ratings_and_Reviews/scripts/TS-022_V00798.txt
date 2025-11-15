@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00798
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00798
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- Buyer is logged in with account mary.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  Rating_Range: Low_Rated
+  Review_Count: Many_Reviews
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-466224
+  Order_Quantity: 1
+  Order_Total: 163.33
+  Password: weak
+  Phone: +1-669-754-4537
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 163.33
+  Product_SKU: SKU-53025
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-917618188
+  User_Type: Buyer
+  ZIP_Code: 19484
+
+RELATED REQUIREMENTS:
+FR-003

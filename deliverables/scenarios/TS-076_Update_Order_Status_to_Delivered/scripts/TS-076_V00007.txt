@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-076_V00007
+
+SCENARIO: View Admin Dashboard
+VARIANT: V00007
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to view dashboard with key metrics (active buyers, products, revenue), so that I can monitor business performance.
+
+GIVEN:
+- Admin is logged in with account emily.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: View Admin Dashboard
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Status_Change: Shipped_To_Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-202519
+  Order_Quantity: 3
+  Order_Total: 151.86
+  Password: weak
+  Phone: +1-880-831-1754
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 50.62
+  Product_SKU: SKU-42474
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-999174167
+  User_Type: Admin
+  ZIP_Code: 66346
+
+RELATED REQUIREMENTS:
+FR-015

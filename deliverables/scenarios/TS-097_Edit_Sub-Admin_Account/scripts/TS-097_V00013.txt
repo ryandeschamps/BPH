@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-097_V00013
+
+SCENARIO: Activate/Deactivate Product
+VARIANT: V00013
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to activate or deactivate products, so that I can control product availability.
+
+GIVEN:
+- Admin is logged in with account lisa.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Activate/Deactivate Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Edit_Type: Username
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-254173
+  Order_Quantity: 4
+  Order_Total: 449.56
+  Password: weak
+  Phone: +1-441-667-7530
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Silk Scarf
+  Product_Price: 112.39
+  Product_SKU: SKU-86957
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-518211789
+  User_Type: Admin
+  ZIP_Code: 81558
+
+RELATED REQUIREMENTS:
+FR-019

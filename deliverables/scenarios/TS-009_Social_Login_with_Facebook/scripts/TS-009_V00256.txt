@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00256
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00256
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for lisa.johnson@example.com
+
+WHEN:
+- User enters email: lisa.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Chrome
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-684181
+  Order_Quantity: 5
+  Order_Total: 951.7
+  Password: weak
+  Phone: +1-634-350-2249
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 190.34
+  Product_SKU: SKU-27486
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-398403068
+  User_Type: Visitor
+  ZIP_Code: 28239
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

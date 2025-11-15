@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00167
+
+SCENARIO: View Wishlist Items
+VARIANT: V00167
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account jane.martinez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_Delivery: Delivered
+  Network_Speed: Medium
+  Order_Size: Single_Item
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 08/30
+  Card_Number: 4532-****-****-3755
+  Device: Mobile
+  Email: jane.martinez@example.com
+  First_Name: Jane
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-694852
+  Order_Quantity: 3
+  Order_Total: 789.93
+  Password: weak
+  Phone: +1-680-549-3181
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 263.31
+  Product_SKU: SKU-94488
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-897037688
+  User_Type: Buyer
+  ZIP_Code: 85862
+
+RELATED REQUIREMENTS:
+FR-006

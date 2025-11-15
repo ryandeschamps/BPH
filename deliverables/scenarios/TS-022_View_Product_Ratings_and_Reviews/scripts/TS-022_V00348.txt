@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-022_V00348
+
+SCENARIO: Sort Product Listing by Price
+VARIANT: V00348
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to sort products by price (low to high or high to low), so that I can find products in my budget.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Rating_Range: Medium_Rated
+  Review_Count: Many_Reviews
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-809374
+  Order_Quantity: 1
+  Order_Total: 62.6
+  Password: weak
+  Phone: +1-505-431-8246
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 62.6
+  Product_SKU: SKU-59298
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-234518505
+  User_Type: Visitor
+  ZIP_Code: 52339
+
+RELATED REQUIREMENTS:
+FR-003

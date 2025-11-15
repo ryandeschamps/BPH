@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00472
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00472
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account sarah.smith@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for sarah.smith@example.com
+
+WHEN:
+- User enters email: sarah.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Type: Men
+  Device: Mobile
+  Network_Speed: High
+  Product_Count: Few
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-620032
+  Order_Quantity: 3
+  Order_Total: 501.3
+  Password: weak
+  Phone: +1-477-408-4013
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 167.1
+  Product_SKU: SKU-12862
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-805680600
+  User_Type: Buyer
+  ZIP_Code: 92565
+
+RELATED REQUIREMENTS:
+FR-014

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00117
+
+SCENARIO: View Wishlist Items
+VARIANT: V00117
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account james.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Email_Delivery: Delayed
+  Network_Speed: Low
+  Order_Size: Multiple_Items
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 08/28
+  Card_Number: 4532-****-****-3265
+  Device: Tablet
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-247567
+  Order_Quantity: 1
+  Order_Total: 23.41
+  Password: weak
+  Phone: +1-872-836-7067
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 23.41
+  Product_SKU: SKU-43251
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-956964000
+  User_Type: Buyer
+  ZIP_Code: 61956
+
+RELATED REQUIREMENTS:
+FR-006

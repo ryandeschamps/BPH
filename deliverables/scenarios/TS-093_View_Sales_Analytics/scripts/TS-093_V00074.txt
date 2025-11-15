@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-093_V00074
+
+SCENARIO: Add New Product
+VARIANT: V00074
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:43
+
+DESCRIPTION:
+As an admin, I want to add new products with details (name, description, price, category, images, variants), so that I can sell them on the website.
+
+GIVEN:
+- Admin is logged in with account david.rodriguez@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add New Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Report_Period: Month
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-560461
+  Order_Quantity: 3
+  Order_Total: 196.98
+  Password: weak
+  Phone: +1-965-841-3700
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 65.66
+  Product_SKU: SKU-65393
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-216105411
+  User_Type: Admin
+  ZIP_Code: 30014
+
+RELATED REQUIREMENTS:
+FR-019

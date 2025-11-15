@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00879
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00879
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account lisa.martinez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for lisa.martinez@example.com
+
+WHEN:
+- User enters email: lisa.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Product_Count: Many
+  Sub_Category_Type: Jeans
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-599154
+  Order_Quantity: 2
+  Order_Total: 107.0
+  Password: weak
+  Phone: +1-739-412-3707
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 53.5
+  Product_SKU: SKU-67882
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-498183829
+  User_Type: Buyer
+  ZIP_Code: 85343
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

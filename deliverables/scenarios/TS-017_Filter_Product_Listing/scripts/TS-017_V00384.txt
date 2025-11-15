@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00384
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00384
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Filter_Type: Color
+  Filter_Value: Single_Value
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-846637
+  Order_Quantity: 2
+  Order_Total: 46.38
+  Password: weak
+  Phone: +1-548-734-2949
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 23.19
+  Product_SKU: SKU-75838
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-529786226
+  User_Type: Buyer
+  ZIP_Code: 71531
+
+RELATED REQUIREMENTS:
+FR-003

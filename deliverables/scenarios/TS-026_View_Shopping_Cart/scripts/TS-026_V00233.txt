@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00233
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00233
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account james.garcia@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Multiple_Items
+  Device: Tablet
+  Item_Availability: All_Available
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-196010
+  Order_Quantity: 1
+  Order_Total: 281.81
+  Password: weak
+  Phone: +1-625-282-7485
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 281.81
+  Product_SKU: SKU-38755
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-743321002
+  User_Type: Buyer
+  ZIP_Code: 85082
+
+RELATED REQUIREMENTS:
+FR-005

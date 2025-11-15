@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-082_V00013
+
+SCENARIO: Filter Orders by Status
+VARIANT: V00013
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to filter orders by status (Open, Confirmed, In Process, Shipped, Delivered), so that I can focus on specific order groups.
+
+GIVEN:
+- Admin is logged in with account lisa.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Filter Orders by Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Has_Orders: Yes
+  Network_Speed: High
+  Product_Status: Any
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-496425
+  Order_Quantity: 1
+  Order_Total: 22.29
+  Password: weak
+  Phone: +1-316-280-7782
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 22.29
+  Product_SKU: SKU-62065
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-323679877
+  User_Type: Admin
+  ZIP_Code: 48519
+
+RELATED REQUIREMENTS:
+FR-017

@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00205
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00205
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: jane.johnson@example.com
+- User enters phone: +1-915-849-2646
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Contact
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for jane.johnson@example.com
+- Verification email sent to jane.johnson@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Field_Values: Missing_Contact
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-116719
+  Order_Quantity: 4
+  Order_Total: 1020.4
+  Password: Test@123
+  Phone: +1-915-849-2646
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 255.1
+  Product_SKU: SKU-84069
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-677507599
+  User_Type: Visitor
+  ZIP_Code: 81141
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00344
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00344
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Load_Time: Fast
+  Network_Speed: Medium
+  Page_Type: Cart
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-853521
+  Order_Quantity: 4
+  Order_Total: 1025.76
+  Password: weak
+  Phone: +1-758-827-5439
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 256.44
+  Product_SKU: SKU-57721
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-679381568
+  User_Type: N/A
+  ZIP_Code: 14075
+
+RELATED REQUIREMENTS:
+FR-022

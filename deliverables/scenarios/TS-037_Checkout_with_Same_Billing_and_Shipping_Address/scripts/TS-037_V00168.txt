@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00168
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00168
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account james.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: Saved
+  Address_Type: Same_Address
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 02/30
+  Card_Number: 4532-****-****-4433
+  Device: Mobile
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-549388
+  Order_Quantity: 4
+  Order_Total: 1060.88
+  Password: weak
+  Phone: +1-347-186-3633
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 265.22
+  Product_SKU: SKU-96640
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-543693255
+  User_Type: Buyer
+  ZIP_Code: 60542
+
+RELATED REQUIREMENTS:
+FR-007

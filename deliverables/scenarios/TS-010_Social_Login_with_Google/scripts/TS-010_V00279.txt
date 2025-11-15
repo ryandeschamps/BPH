@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00279
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00279
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.jones@example.com
+
+WHEN:
+- User enters email: emily.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-211159
+  Order_Quantity: 4
+  Order_Total: 562.88
+  Password: weak
+  Phone: +1-652-351-2596
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Denim Jeans
+  Product_Price: 140.72
+  Product_SKU: SKU-75883
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-656907702
+  User_Type: Visitor
+  ZIP_Code: 38626
+
+RELATED REQUIREMENTS:
+FR-001

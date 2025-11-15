@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-010_V00244
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00244
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for mary.jones@example.com
+
+WHEN:
+- User enters email: mary.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  OAuth_State: Already_Linked
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-150430
+  Order_Quantity: 1
+  Order_Total: 187.69
+  Password: weak
+  Phone: +1-928-963-8566
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 187.69
+  Product_SKU: SKU-65031
+  Product_Size: XL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-956399951
+  User_Type: Visitor
+  ZIP_Code: 54345
+
+RELATED REQUIREMENTS:
+FR-001

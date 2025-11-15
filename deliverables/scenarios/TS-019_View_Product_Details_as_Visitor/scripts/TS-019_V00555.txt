@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00555
+
+SCENARIO: Product Browse by Category
+VARIANT: V00555
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account mary.johnson@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Image_Count: Multiple_Images
+  Network_Speed: Low
+  Product_State: No_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-897511
+  Order_Quantity: 2
+  Order_Total: 47.8
+  Password: weak
+  Phone: +1-246-656-5688
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 23.9
+  Product_SKU: SKU-11797
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-773834668
+  User_Type: Buyer
+  ZIP_Code: 14309
+
+RELATED REQUIREMENTS:
+FR-003

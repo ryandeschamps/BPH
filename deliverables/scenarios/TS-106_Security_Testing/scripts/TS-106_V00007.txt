@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00007
+
+SCENARIO: Export Report to Excel
+VARIANT: V00007
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Security_Type: SSL_Certificate
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-890585
+  Order_Quantity: 5
+  Order_Total: 1225.35
+  Password: weak
+  Phone: +1-266-880-5212
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Summer Dress
+  Product_Price: 245.07
+  Product_SKU: SKU-24710
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-675950774
+  User_Type: N/A
+  ZIP_Code: 24565
+
+RELATED REQUIREMENTS:
+FR-022

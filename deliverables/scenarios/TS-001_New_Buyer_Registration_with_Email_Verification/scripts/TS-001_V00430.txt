@@ -1,0 +1,79 @@
+TEST SCRIPT: TS-001_V00430
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00430
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: robert.rodriguez@example.com
+- User enters phone: +1-757-217-3114
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for robert.rodriguez@example.com
+- Verification email sent to robert.rodriguez@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Field_Values: Duplicate_Email
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-546007
+  Order_Quantity: 3
+  Order_Total: 492.84
+  Password: Test@123
+  Phone: +1-757-217-3114
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 164.28
+  Product_SKU: SKU-58022
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-432644504
+  User_Type: Visitor
+  ZIP_Code: 70141
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00099
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00099
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account robert.jones@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Single_Item
+  Device: Tablet
+  Network_Speed: Low
+  Removal_Action: Remove_Last_Item
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-513048
+  Order_Quantity: 1
+  Order_Total: 199.75
+  Password: weak
+  Phone: +1-635-804-4458
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Winter Coat
+  Product_Price: 199.75
+  Product_SKU: SKU-88146
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-832288848
+  User_Type: Buyer
+  ZIP_Code: 30441
+
+RELATED REQUIREMENTS:
+FR-005

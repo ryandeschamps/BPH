@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00067
+
+SCENARIO: Approve Product Review
+VARIANT: V00067
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account david.davis@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Network_Speed: High
+  Payment_Status: Completed
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-836764
+  Order_Quantity: 4
+  Order_Total: 278.2
+  Password: weak
+  Phone: +1-825-314-3615
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 69.55
+  Product_SKU: SKU-61046
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-640353465
+  User_Type: Admin
+  ZIP_Code: 69575
+
+RELATED REQUIREMENTS:
+FR-021

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-059_V00103
+
+SCENARIO: Track Current Order Status
+VARIANT: V00103
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:29
+
+DESCRIPTION:
+As a buyer, I want to see the current status of my order (Confirmed, In Process, Shipped, Delivered), so that I know when to expect delivery.
+
+GIVEN:
+- Buyer is logged in with account john.williams@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Track Current Order Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Message_Type: Feedback
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-610773
+  Order_Quantity: 2
+  Order_Total: 292.46
+  Password: weak
+  Phone: +1-421-581-7316
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 146.23
+  Product_SKU: SKU-96236
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-842495561
+  User_Type: Buyer
+  ZIP_Code: 50793
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00043
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00043
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Previously_Had_Items
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-618954
+  Order_Quantity: 4
+  Order_Total: 1100.92
+  Password: weak
+  Phone: +1-221-560-4913
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 275.23
+  Product_SKU: SKU-97591
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-779411146
+  User_Type: Buyer
+  ZIP_Code: 94525
+
+RELATED REQUIREMENTS:
+FR-005

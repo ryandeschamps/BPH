@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00212
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00212
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.martinez@example.com
+- User enters phone: +1-950-457-5440
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_Contact
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for sarah.martinez@example.com
+- Verification email sent to sarah.martinez@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Field_Values: Missing_Contact
+  Input_Validity: Valid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-762854
+  Order_Quantity: 3
+  Order_Total: 492.18
+  Password: Test@123
+  Phone: +1-950-457-5440
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 164.06
+  Product_SKU: SKU-84223
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-695683902
+  User_Type: Visitor
+  ZIP_Code: 71503
+
+RELATED REQUIREMENTS:
+FR-002

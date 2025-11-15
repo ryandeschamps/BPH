@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-060_V00060
+
+SCENARIO: View Shipping Tracking Information
+VARIANT: V00060
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer with a shipped order, I want to see tracking information (carrier, tracking ID), so that I can track my package.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Shipping Tracking Information
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Message_Type: Inquiry
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-948981
+  Order_Quantity: 4
+  Order_Total: 1065.12
+  Password: weak
+  Phone: +1-714-384-8649
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Summer Dress
+  Product_Price: 266.28
+  Product_SKU: SKU-97260
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-376487394
+  User_Type: Visitor
+  ZIP_Code: 40425
+
+RELATED REQUIREMENTS:
+FR-012, FR-017

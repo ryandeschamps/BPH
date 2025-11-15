@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00757
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00757
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account mary.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for mary.davis@example.com
+
+WHEN:
+- User enters email: mary.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: Few
+  Sub_Category_Type: Shirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-667898
+  Order_Quantity: 2
+  Order_Total: 554.54
+  Password: weak
+  Phone: +1-613-908-7143
+  Product_Category: Men
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 277.27
+  Product_SKU: SKU-82598
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-517035118
+  User_Type: Buyer
+  ZIP_Code: 23794
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

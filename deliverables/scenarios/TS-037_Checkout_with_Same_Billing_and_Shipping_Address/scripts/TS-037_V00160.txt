@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00160
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00160
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved
+  Address_Type: Same_Address
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 03/30
+  Card_Number: 4532-****-****-7925
+  Device: Tablet
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-613563
+  Order_Quantity: 1
+  Order_Total: 183.84
+  Password: weak
+  Phone: +1-950-206-8741
+  Product_Category: Women
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 183.84
+  Product_SKU: SKU-90192
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-478720770
+  User_Type: Buyer
+  ZIP_Code: 10461
+
+RELATED REQUIREMENTS:
+FR-007

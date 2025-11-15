@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00834
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00834
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account sarah.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.davis@example.com
+
+WHEN:
+- User enters email: sarah.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Type: Kids
+  Device: Mobile
+  Network_Speed: Low
+  Product_Count: None
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-882982
+  Order_Quantity: 1
+  Order_Total: 46.81
+  Password: weak
+  Phone: +1-708-510-3601
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Denim Jeans
+  Product_Price: 46.81
+  Product_SKU: SKU-76567
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-697779650
+  User_Type: Buyer
+  ZIP_Code: 28338
+
+RELATED REQUIREMENTS:
+FR-014

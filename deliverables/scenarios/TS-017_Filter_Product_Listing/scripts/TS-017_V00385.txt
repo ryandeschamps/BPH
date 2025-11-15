@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00385
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00385
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account sarah.williams@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Filter_Type: Color
+  Filter_Value: Single_Value
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-677187
+  Order_Quantity: 5
+  Order_Total: 638.4
+  Password: weak
+  Phone: +1-797-642-1465
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 127.68
+  Product_SKU: SKU-61927
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-405343260
+  User_Type: Buyer
+  ZIP_Code: 84252
+
+RELATED REQUIREMENTS:
+FR-003

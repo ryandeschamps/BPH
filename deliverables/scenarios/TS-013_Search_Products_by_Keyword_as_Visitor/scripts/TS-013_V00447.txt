@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00447
+
+SCENARIO: Forgot Password Request
+VARIANT: V00447
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account sarah.johnson@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  Results_Count: Many_Results
+  Search_Query: Single_Keyword
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-275754
+  Order_Quantity: 1
+  Order_Total: 98.58
+  Password: Test@123
+  Phone: +1-293-951-5646
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 98.58
+  Product_SKU: SKU-40740
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-766090708
+  User_Type: Buyer
+  ZIP_Code: 52878
+
+RELATED REQUIREMENTS:
+FR-001

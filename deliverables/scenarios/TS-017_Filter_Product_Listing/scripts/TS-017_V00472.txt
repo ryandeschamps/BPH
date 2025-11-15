@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00472
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00472
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- Buyer is logged in with account sarah.davis@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Filter_Type: Price_Range
+  Filter_Value: Multiple_Values
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.davis@example.com
+  First_Name: Sarah
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-969747
+  Order_Quantity: 2
+  Order_Total: 575.36
+  Password: weak
+  Phone: +1-373-571-6835
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 287.68
+  Product_SKU: SKU-49460
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-553275179
+  User_Type: Buyer
+  ZIP_Code: 72186
+
+RELATED REQUIREMENTS:
+FR-003

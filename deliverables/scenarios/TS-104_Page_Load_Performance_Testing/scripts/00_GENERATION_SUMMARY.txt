@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:48
+Total Scripts: 540
+Total Scenarios: 1
+Generation Time: 0.2 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-104: Generate Revenue Report
+  Variants: 540
+  Files: TS-104_V*.txt

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00057
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00057
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account david.miller@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Safari
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-321594
+  Order_Quantity: 5
+  Order_Total: 174.3
+  Password: Test@123
+  Phone: +1-475-909-2758
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 34.86
+  Product_SKU: SKU-10706
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-240903510
+  User_Type: Buyer
+  ZIP_Code: 84917
+
+RELATED REQUIREMENTS:
+FR-002

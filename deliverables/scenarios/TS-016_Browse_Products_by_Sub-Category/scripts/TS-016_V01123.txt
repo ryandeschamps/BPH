@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01123
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01123
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for sarah.garcia@example.com
+
+WHEN:
+- User enters email: sarah.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: None
+  Sub_Category_Type: TShirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-685404
+  Order_Quantity: 5
+  Order_Total: 1222.85
+  Password: weak
+  Phone: +1-580-666-7164
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Leather Jacket
+  Product_Price: 244.57
+  Product_SKU: SKU-28001
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-152133428
+  User_Type: Buyer
+  ZIP_Code: 81727
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

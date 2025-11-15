@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-075_V00048
+
+SCENARIO: Admin Receives Support Request Email
+VARIANT: V00048
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to receive email notifications for support requests, so that I can respond to customer queries.
+
+GIVEN:
+- Admin is logged in with account david.williams@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Low
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: Admin Receives Support Request Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Low
+  Status_Change: InProcess_To_Shipped
+  Tracking_Data: Partial
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-666924
+  Order_Quantity: 1
+  Order_Total: 60.86
+  Password: weak
+  Phone: +1-482-658-9288
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 60.86
+  Product_SKU: SKU-58765
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-569772649
+  User_Type: Admin
+  ZIP_Code: 20364
+
+RELATED REQUIREMENTS:
+FR-013, FR-027

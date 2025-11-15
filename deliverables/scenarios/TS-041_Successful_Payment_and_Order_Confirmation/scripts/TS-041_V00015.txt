@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00015
+
+SCENARIO: View Wishlist Items
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account jane.brown@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Email_Delivery: Delivered
+  Network_Speed: Low
+  Order_Size: Single_Item
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 10/29
+  Card_Number: 4532-****-****-3137
+  Device: Mobile
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-800195
+  Order_Quantity: 4
+  Order_Total: 487.48
+  Password: weak
+  Phone: +1-220-491-8304
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 121.87
+  Product_SKU: SKU-98903
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-634563693
+  User_Type: Buyer
+  ZIP_Code: 91822
+
+RELATED REQUIREMENTS:
+FR-006

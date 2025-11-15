@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00061
+
+SCENARIO: Edit Product Details
+VARIANT: V00061
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account michael.rodriguez@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Role_Type: Order_Manager
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.rodriguez@example.com
+  First_Name: Michael
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-603579
+  Order_Quantity: 1
+  Order_Total: 192.54
+  Password: weak
+  Phone: +1-587-561-8421
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Silk Scarf
+  Product_Price: 192.54
+  Product_SKU: SKU-17194
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-141852989
+  User_Type: Admin
+  ZIP_Code: 35720
+
+RELATED REQUIREMENTS:
+FR-019

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-029",
+  "scenario_title": "View Empty Cart",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Cart_State": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-029_View_Empty_Cart/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

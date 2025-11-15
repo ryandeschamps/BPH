@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00058
+
+SCENARIO: Export Report to PDF
+VARIANT: V00058
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Error_Type: 500
+  Network_Speed: High
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-298027
+  Order_Quantity: 3
+  Order_Total: 544.35
+  Password: weak
+  Phone: +1-490-209-9059
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 181.45
+  Product_SKU: SKU-27779
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-661224102
+  User_Type: N/A
+  ZIP_Code: 48753
+
+RELATED REQUIREMENTS:
+FR-022

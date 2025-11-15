@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-094_V00026
+
+SCENARIO: Upload Product Images
+VARIANT: V00026
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to upload multiple product images and set thumbnail, so that buyers can see the product.
+
+GIVEN:
+- Admin is logged in with account sarah.martinez@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Upload Product Images
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Export_Format: PDF
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-288101
+  Order_Quantity: 2
+  Order_Total: 233.0
+  Password: weak
+  Phone: +1-291-835-5704
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Casual Shirt
+  Product_Price: 116.5
+  Product_SKU: SKU-89153
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-599986250
+  User_Type: Admin
+  ZIP_Code: 56082
+
+RELATED REQUIREMENTS:
+FR-019

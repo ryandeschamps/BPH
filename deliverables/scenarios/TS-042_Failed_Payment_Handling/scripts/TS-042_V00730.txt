@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00730
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00730
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account sarah.garcia@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Failure_Reason: Invalid_Card
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 02/25
+  Card_Number: 4532-****-****-8950
+  Device: Desktop
+  Email: sarah.garcia@example.com
+  First_Name: Sarah
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-383674
+  Order_Quantity: 2
+  Order_Total: 571.78
+  Password: weak
+  Phone: +1-622-123-1378
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Denim Jeans
+  Product_Price: 285.89
+  Product_SKU: SKU-59352
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-621611979
+  User_Type: Buyer
+  ZIP_Code: 10943
+
+RELATED REQUIREMENTS:
+FR-006

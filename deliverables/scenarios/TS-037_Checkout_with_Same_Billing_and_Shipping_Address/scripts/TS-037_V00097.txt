@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00097
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00097
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account james.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-197466
+  Order_Quantity: 2
+  Order_Total: 180.0
+  Password: weak
+  Phone: +1-753-740-9583
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 90.0
+  Product_SKU: SKU-15929
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-283856172
+  User_Type: Buyer
+  ZIP_Code: 30253
+
+RELATED REQUIREMENTS:
+FR-007

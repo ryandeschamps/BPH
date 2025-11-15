@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00305
+
+SCENARIO: View Wishlist Items
+VARIANT: V00305
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account michael.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Email_Delivery: Delivered
+  Network_Speed: Medium
+  Order_Size: Single_Item
+  Payment_Method: Net_Banking
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-705275
+  Order_Quantity: 3
+  Order_Total: 212.52
+  Password: weak
+  Phone: +1-384-364-2898
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Wool Sweater
+  Product_Price: 70.84
+  Product_SKU: SKU-54442
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-119021928
+  User_Type: Buyer
+  ZIP_Code: 23311
+
+RELATED REQUIREMENTS:
+FR-006

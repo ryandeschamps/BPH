@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00504
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00504
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account robert.smith@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for robert.smith@example.com
+
+WHEN:
+- User enters email: robert.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Category_Type: Men
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: Few
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-326050
+  Order_Quantity: 5
+  Order_Total: 844.0
+  Password: weak
+  Phone: +1-690-740-2249
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Sports Shorts
+  Product_Price: 168.8
+  Product_SKU: SKU-35111
+  Product_Size: L
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-488488418
+  User_Type: Buyer
+  ZIP_Code: 63018
+
+RELATED REQUIREMENTS:
+FR-014

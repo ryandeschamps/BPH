@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-062",
+  "scenario_title": "Admin Login with Invalid Credentials",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Input_Validity": 1,
+    "Credential_Error": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-062_Admin_Login_with_Invalid_Credentials/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

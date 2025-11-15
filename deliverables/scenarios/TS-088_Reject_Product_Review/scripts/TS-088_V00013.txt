@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-088_V00013
+
+SCENARIO: Edit Order Details
+VARIANT: V00013
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to edit order information if needed, so that I can correct errors.
+
+GIVEN:
+- Admin is logged in with account emily.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Action: Reject
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-545337
+  Order_Quantity: 3
+  Order_Total: 760.62
+  Password: weak
+  Phone: +1-275-109-3294
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 253.54
+  Product_SKU: SKU-89558
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-790105017
+  User_Type: Admin
+  ZIP_Code: 47886
+
+RELATED REQUIREMENTS:
+FR-017

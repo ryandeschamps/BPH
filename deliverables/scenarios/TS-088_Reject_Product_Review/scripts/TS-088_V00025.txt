@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-088_V00025
+
+SCENARIO: Edit Order Details
+VARIANT: V00025
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to edit order information if needed, so that I can correct errors.
+
+GIVEN:
+- Admin is logged in with account emily.rodriguez@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Edit Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Action: Reject
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-466772
+  Order_Quantity: 5
+  Order_Total: 672.9
+  Password: weak
+  Phone: +1-926-931-3063
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Denim Jeans
+  Product_Price: 134.58
+  Product_SKU: SKU-51438
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-855456374
+  User_Type: Admin
+  ZIP_Code: 40817
+
+RELATED REQUIREMENTS:
+FR-017

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-041_V00284
+
+SCENARIO: View Wishlist Items
+VARIANT: V00284
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to view all items in my wishlist, so that I can review products I saved.
+
+GIVEN:
+- Buyer is logged in with account david.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Wishlist Items
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Email_Delivery: Delayed
+  Network_Speed: Medium
+  Order_Size: Multiple_Items
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 02/30
+  Card_Number: 4532-****-****-1817
+  Device: Mobile
+  Email: david.martinez@example.com
+  First_Name: David
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-137080
+  Order_Quantity: 5
+  Order_Total: 766.45
+  Password: weak
+  Phone: +1-596-394-9754
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 153.29
+  Product_SKU: SKU-36619
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-981909442
+  User_Type: Buyer
+  ZIP_Code: 54660
+
+RELATED REQUIREMENTS:
+FR-006

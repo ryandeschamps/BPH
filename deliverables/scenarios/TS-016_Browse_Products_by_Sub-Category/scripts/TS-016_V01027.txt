@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01027
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01027
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account jane.williams@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for jane.williams@example.com
+
+WHEN:
+- User enters email: jane.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: Many
+  Sub_Category_Type: TShirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.williams@example.com
+  First_Name: Jane
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-174661
+  Order_Quantity: 5
+  Order_Total: 393.35
+  Password: weak
+  Phone: +1-350-410-1334
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Sports Shorts
+  Product_Price: 78.67
+  Product_SKU: SKU-72863
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-712402875
+  User_Type: Buyer
+  ZIP_Code: 10832
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-015",
+  "scenario_title": "Browse Products by Category",
+  "variant_count": 864,
+  "expected_variant_count": 864,
+  "parameters": {
+    "User_Type": 2,
+    "Category_Type": 3,
+    "Product_Count": 4,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-015_Browse_Products_by_Category/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

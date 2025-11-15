@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-087_V00027
+
+SCENARIO: View Order Details
+VARIANT: V00027
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to view complete order details (items, prices, addresses, payment status), so that I can fulfill orders correctly.
+
+GIVEN:
+- Admin is logged in with account emily.jones@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Action: Approve
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-947380
+  Order_Quantity: 3
+  Order_Total: 879.87
+  Password: weak
+  Phone: +1-830-568-9008
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 293.29
+  Product_SKU: SKU-95072
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-230026384
+  User_Type: Admin
+  ZIP_Code: 74138
+
+RELATED REQUIREMENTS:
+FR-017

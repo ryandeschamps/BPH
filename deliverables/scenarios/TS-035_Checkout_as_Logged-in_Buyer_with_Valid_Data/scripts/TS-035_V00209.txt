@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00209
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00209
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Edge
+  Cart_Items: Multiple
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 08/30
+  Card_Number: 4532-****-****-3941
+  Device: Desktop
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-739196
+  Order_Quantity: 4
+  Order_Total: 1064.28
+  Password: Test@123
+  Phone: +1-664-703-5052
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 266.07
+  Product_SKU: SKU-34872
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-312477803
+  User_Type: Buyer
+  ZIP_Code: 57585
+
+RELATED REQUIREMENTS:
+FR-007

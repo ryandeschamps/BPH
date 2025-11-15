@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00079
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00079
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: michael.johnson@example.com
+- User enters phone: +1-838-442-8920
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_LastName
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for michael.johnson@example.com
+- Verification email sent to michael.johnson@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Field_Values: Missing_LastName
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-796363
+  Order_Quantity: 1
+  Order_Total: 298.97
+  Password: Test@123
+  Phone: +1-838-442-8920
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Winter Coat
+  Product_Price: 298.97
+  Product_SKU: SKU-52925
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-958041150
+  User_Type: Visitor
+  ZIP_Code: 34136
+
+RELATED REQUIREMENTS:
+FR-002

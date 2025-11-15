@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00041
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00041
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account john.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for john.miller@example.com
+
+WHEN:
+- User enters email: john.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Email_State: Registered
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Reset_Link_State: Expired
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-302772
+  Order_Quantity: 4
+  Order_Total: 1195.76
+  Password: Test@123
+  Phone: +1-648-431-6199
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 298.94
+  Product_SKU: SKU-31854
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-573648054
+  User_Type: Buyer
+  ZIP_Code: 13165
+
+RELATED REQUIREMENTS:
+FR-001

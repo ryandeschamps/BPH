@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00147
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00147
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account michael.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Chrome
+  Cart_Items: Single
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: ***
+  Card_Expiry: 06/26
+  Card_Number: 4532-****-****-6120
+  Device: Desktop
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-437063
+  Order_Quantity: 3
+  Order_Total: 410.73
+  Password: Test@123
+  Phone: +1-330-640-9995
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 136.91
+  Product_SKU: SKU-63018
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-270337071
+  User_Type: Buyer
+  ZIP_Code: 85788
+
+RELATED REQUIREMENTS:
+FR-007

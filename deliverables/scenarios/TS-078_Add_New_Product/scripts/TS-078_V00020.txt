@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00020
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00020
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account emily.johnson@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Image_Count: Single
+  Network_Speed: Medium
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.johnson@example.com
+  First_Name: Emily
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-148424
+  Order_Quantity: 4
+  Order_Total: 925.32
+  Password: weak
+  Phone: +1-582-427-9687
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 231.33
+  Product_SKU: SKU-82256
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-212553653
+  User_Type: Admin
+  ZIP_Code: 97267
+
+RELATED REQUIREMENTS:
+FR-016

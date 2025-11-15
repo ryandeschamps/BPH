@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-084_V00025
+
+SCENARIO: Update Order Status to In Process
+VARIANT: V00025
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status to In Process, so that buyers know their order is being prepared.
+
+GIVEN:
+- Admin is logged in with account jane.jones@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to In Process
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Level: Sub_Level
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-368238
+  Order_Quantity: 1
+  Order_Total: 96.36
+  Password: weak
+  Phone: +1-962-262-4024
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Leather Jacket
+  Product_Price: 96.36
+  Product_SKU: SKU-43780
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-512908970
+  User_Type: Admin
+  ZIP_Code: 33744
+
+RELATED REQUIREMENTS:
+FR-017

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-101_V00020
+
+SCENARIO: Approve Product Review
+VARIANT: V00020
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to approve reviews submitted by buyers, so that they appear on the product page.
+
+GIVEN:
+- Admin is logged in with account mary.brown@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Approve Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.brown@example.com
+  First_Name: Mary
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-621056
+  Order_Quantity: 2
+  Order_Total: 412.1
+  Password: weak
+  Phone: +1-957-116-7230
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Cotton T-Shirt
+  Product_Price: 206.05
+  Product_SKU: SKU-27052
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-697858086
+  User_Type: Admin
+  ZIP_Code: 54244
+
+RELATED REQUIREMENTS:
+FR-021

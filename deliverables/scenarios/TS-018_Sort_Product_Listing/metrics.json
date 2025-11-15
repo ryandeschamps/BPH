@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-018",
+  "scenario_title": "Sort Product Listing",
+  "variant_count": 360,
+  "expected_variant_count": 360,
+  "parameters": {
+    "User_Type": 2,
+    "Sort_By": 5,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-018_Sort_Product_Listing/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

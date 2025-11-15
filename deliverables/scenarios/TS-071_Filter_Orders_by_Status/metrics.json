@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-071",
+  "scenario_title": "Filter Orders by Status",
+  "variant_count": 180,
+  "expected_variant_count": 180,
+  "parameters": {
+    "User_Type": 1,
+    "Order_Status": 5,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-071_Filter_Orders_by_Status/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

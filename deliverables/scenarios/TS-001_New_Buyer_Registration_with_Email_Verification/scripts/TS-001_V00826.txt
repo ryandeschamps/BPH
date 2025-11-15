@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-001_V00826
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00826
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.miller@example.com
+- User enters phone: +1-851-845-5403
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Terms_Not_Accepted
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Field_Values: Terms_Not_Accepted
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-558628
+  Order_Quantity: 2
+  Order_Total: 495.38
+  Password: weak
+  Phone: +1-851-845-5403
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 247.69
+  Product_SKU: SKU-56416
+  Product_Size: XS
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-390196894
+  User_Type: Visitor
+  ZIP_Code: 50591
+
+RELATED REQUIREMENTS:
+FR-002

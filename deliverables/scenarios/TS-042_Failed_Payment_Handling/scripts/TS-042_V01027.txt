@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01027
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01027
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account james.brown@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Failure_Reason: Network_Error
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 08/27
+  Card_Number: 4532-****-****-6476
+  Device: Desktop
+  Email: james.brown@example.com
+  First_Name: James
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-572143
+  Order_Quantity: 5
+  Order_Total: 871.1
+  Password: weak
+  Phone: +1-698-740-5826
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Cotton T-Shirt
+  Product_Price: 174.22
+  Product_SKU: SKU-63936
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-528891738
+  User_Type: Buyer
+  ZIP_Code: 36028
+
+RELATED REQUIREMENTS:
+FR-006

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-046",
+  "scenario_title": "Share Order on Social Media",
+  "variant_count": 144,
+  "expected_variant_count": 144,
+  "parameters": {
+    "User_Type": 1,
+    "Social_Platform": 4,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-046_Share_Order_on_Social_Media/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

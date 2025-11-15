@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00325
+
+SCENARIO: Product Search with No Results
+VARIANT: V00325
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account emily.davis@example.com
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: High
+  Sort_By: Oldest_First
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.davis@example.com
+  First_Name: Emily
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-922372
+  Order_Quantity: 4
+  Order_Total: 1132.24
+  Password: weak
+  Phone: +1-564-734-7566
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 283.06
+  Product_SKU: SKU-95128
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-725268107
+  User_Type: Buyer
+  ZIP_Code: 12497
+
+RELATED REQUIREMENTS:
+FR-003

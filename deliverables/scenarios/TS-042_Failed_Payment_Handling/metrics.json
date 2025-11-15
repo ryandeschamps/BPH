@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-042",
+  "scenario_title": "Failed Payment Handling",
+  "variant_count": 1620,
+  "expected_variant_count": 1620,
+  "parameters": {
+    "User_Type": 1,
+    "Payment_Method": 3,
+    "Failure_Reason": 5,
+    "Retry_Action": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-042_Failed_Payment_Handling/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

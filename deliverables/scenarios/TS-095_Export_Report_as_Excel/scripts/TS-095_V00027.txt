@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-095_V00027
+
+SCENARIO: Add Product Variants (Size and Color)
+VARIANT: V00027
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to add product variants with different sizes and colors, so that buyers have options.
+
+GIVEN:
+- Admin is logged in with account mary.johnson@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product Variants (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Export_Format: Excel
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-857580
+  Order_Quantity: 3
+  Order_Total: 449.34
+  Password: weak
+  Phone: +1-633-699-4959
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 149.78
+  Product_SKU: SKU-90640
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-724492940
+  User_Type: Admin
+  ZIP_Code: 83804
+
+RELATED REQUIREMENTS:
+FR-019

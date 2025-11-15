@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00145
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00145
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Load_Time: Medium
+  Network_Speed: High
+  Page_Type: Product_Listing
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.brown@example.com
+  First_Name: Sarah
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-352420
+  Order_Quantity: 3
+  Order_Total: 407.04
+  Password: weak
+  Phone: +1-950-205-7826
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Winter Coat
+  Product_Price: 135.68
+  Product_SKU: SKU-20899
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-823192525
+  User_Type: N/A
+  ZIP_Code: 23432
+
+RELATED REQUIREMENTS:
+FR-022

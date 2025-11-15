@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00617
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00617
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:09
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- Buyer is logged in with account james.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Buyer
+  Variation_Availability: All_Out_Of_Stock
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.garcia@example.com
+  First_Name: James
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-175153
+  Order_Quantity: 2
+  Order_Total: 91.84
+  Password: weak
+  Phone: +1-788-444-5811
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 45.92
+  Product_SKU: SKU-94508
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-907166819
+  User_Type: Buyer
+  ZIP_Code: 91473
+
+RELATED REQUIREMENTS:
+FR-003

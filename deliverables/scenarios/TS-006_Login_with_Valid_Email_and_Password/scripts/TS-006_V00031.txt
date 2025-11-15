@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00031
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00031
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Account_State: Active_Verified
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-836406
+  Order_Quantity: 1
+  Order_Total: 180.63
+  Password: Test@123
+  Phone: +1-801-750-2067
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 180.63
+  Product_SKU: SKU-80853
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-513474716
+  User_Type: Buyer
+  ZIP_Code: 54006
+
+RELATED REQUIREMENTS:
+FR-002

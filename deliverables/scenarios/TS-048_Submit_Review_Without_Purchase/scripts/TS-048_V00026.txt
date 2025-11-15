@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-048_V00026
+
+SCENARIO: Use Same Address for Billing and Shipping
+VARIANT: V00026
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:24
+
+DESCRIPTION:
+As a buyer, I want to use the same address for billing and shipping, so that I don't have to enter it twice.
+
+GIVEN:
+- Buyer is logged in with account mary.williams@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Use Same Address for Billing and Shipping
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Product_State: Not_Purchased
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-577061
+  Order_Quantity: 4
+  Order_Total: 386.4
+  Password: weak
+  Phone: +1-251-333-3628
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 96.6
+  Product_SKU: SKU-45859
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-952080517
+  User_Type: Buyer
+  ZIP_Code: 75390
+
+RELATED REQUIREMENTS:
+FR-008

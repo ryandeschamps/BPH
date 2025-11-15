@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-012_V00001
+
+SCENARIO: First-Time Social Login Account Creation
+VARIANT: V00001
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a visitor using social login for the first time, I want the system to auto-create my account, so that I don't need to fill registration forms.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for james.williams@example.com
+
+WHEN:
+- User enters email: james.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Email_State: Not_Registered
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.williams@example.com
+  First_Name: James
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-302167
+  Order_Quantity: 1
+  Order_Total: 199.75
+  Password: weak
+  Phone: +1-732-162-7914
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 199.75
+  Product_SKU: SKU-90923
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-766507573
+  User_Type: Visitor
+  ZIP_Code: 70499
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00089
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00089
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account john.garcia@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Empty
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Variation: No_Variation
+  Quantity: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-217132
+  Order_Quantity: 4
+  Order_Total: 767.12
+  Password: weak
+  Phone: +1-615-404-5623
+  Product_Category: Women
+  Product_Color: Brown
+  Product_Name: Summer Dress
+  Product_Price: 191.78
+  Product_SKU: SKU-16789
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-738979358
+  User_Type: Buyer
+  ZIP_Code: 18520
+
+RELATED REQUIREMENTS:
+FR-003

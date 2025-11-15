@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00160
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00160
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account james.rodriguez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Cart_State: Multiple_Items
+  Device: Tablet
+  Network_Speed: High
+  Removal_Action: Remove_All
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.rodriguez@example.com
+  First_Name: James
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-386431
+  Order_Quantity: 4
+  Order_Total: 139.64
+  Password: weak
+  Phone: +1-356-417-8041
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Denim Jeans
+  Product_Price: 34.91
+  Product_SKU: SKU-33101
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-401598735
+  User_Type: Buyer
+  ZIP_Code: 53630
+
+RELATED REQUIREMENTS:
+FR-005

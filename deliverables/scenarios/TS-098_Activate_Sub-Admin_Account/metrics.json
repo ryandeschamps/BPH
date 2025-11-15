@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-098",
+  "scenario_title": "Activate Sub-Admin Account",
+  "variant_count": 36,
+  "expected_variant_count": 36,
+  "parameters": {
+    "User_Type": 1,
+    "Sub_Admin_Status": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-098_Activate_Sub-Admin_Account/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

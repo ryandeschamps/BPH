@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00237
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00237
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account robert.smith@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Saved_Address
+  Browser: Safari
+  Cart_Items: Single
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 04/27
+  Card_Number: 4532-****-****-6324
+  Device: Desktop
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-888502
+  Order_Quantity: 4
+  Order_Total: 843.2
+  Password: Test@123
+  Phone: +1-502-798-8418
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 210.8
+  Product_SKU: SKU-20795
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-455521524
+  User_Type: Buyer
+  ZIP_Code: 50538
+
+RELATED REQUIREMENTS:
+FR-007

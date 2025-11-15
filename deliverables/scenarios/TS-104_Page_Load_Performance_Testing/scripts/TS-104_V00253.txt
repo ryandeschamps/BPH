@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-104_V00253
+
+SCENARIO: Generate Revenue Report
+VARIANT: V00253
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:48
+
+DESCRIPTION:
+As an admin, I want to generate revenue reports by date/week/month/year, so that I can track sales performance.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Generate Revenue Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Load_Time: Medium
+  Network_Speed: High
+  Page_Type: Product_Detail
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.williams@example.com
+  First_Name: Emily
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-359181
+  Order_Quantity: 3
+  Order_Total: 424.29
+  Password: weak
+  Phone: +1-740-854-5925
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 141.43
+  Product_SKU: SKU-89484
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-214727119
+  User_Type: N/A
+  ZIP_Code: 79449
+
+RELATED REQUIREMENTS:
+FR-022

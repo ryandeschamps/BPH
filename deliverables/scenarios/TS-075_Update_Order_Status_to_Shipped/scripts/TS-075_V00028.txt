@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-075_V00028
+
+SCENARIO: Admin Receives Support Request Email
+VARIANT: V00028
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to receive email notifications for support requests, so that I can respond to customer queries.
+
+GIVEN:
+- Admin is logged in with account robert.miller@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: Admin Receives Support Request Email
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: High
+  Status_Change: InProcess_To_Shipped
+  Tracking_Data: Complete
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: High
+  Order_ID: ORD-520971
+  Order_Quantity: 3
+  Order_Total: 158.67
+  Password: weak
+  Phone: +1-474-327-9992
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Casual Shirt
+  Product_Price: 52.89
+  Product_SKU: SKU-55130
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-294918542
+  User_Type: Admin
+  ZIP_Code: 77107
+
+RELATED REQUIREMENTS:
+FR-013, FR-027

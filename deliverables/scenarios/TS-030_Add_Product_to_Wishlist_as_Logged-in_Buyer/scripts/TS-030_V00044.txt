@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-030_V00044
+
+SCENARIO: Check Shipping Availability for Unavailable ZIP
+VARIANT: V00044
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:14
+
+DESCRIPTION:
+As a user, I want to be notified if shipping is not available to my ZIP code, so that I don't waste time adding to cart.
+
+GIVEN:
+- Buyer is logged in with account john.rodriguez@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability for Unavailable ZIP
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Medium
+  Product_State: Out_Of_Stock
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-749256
+  Order_Quantity: 1
+  Order_Total: 48.5
+  Password: weak
+  Phone: +1-561-810-8758
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 48.5
+  Product_SKU: SKU-26266
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-813382332
+  User_Type: Buyer
+  ZIP_Code: 76182
+
+RELATED REQUIREMENTS:
+FR-005

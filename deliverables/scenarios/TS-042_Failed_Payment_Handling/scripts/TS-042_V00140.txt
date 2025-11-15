@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00140
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00140
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account michael.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Failure_Reason: Invalid_Card
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 09/28
+  Card_Number: 4532-****-****-9358
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-702743
+  Order_Quantity: 4
+  Order_Total: 806.08
+  Password: weak
+  Phone: +1-786-678-2061
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 201.52
+  Product_SKU: SKU-66561
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-456347602
+  User_Type: Buyer
+  ZIP_Code: 83415
+
+RELATED REQUIREMENTS:
+FR-006

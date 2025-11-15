@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-096_V00039
+
+SCENARIO: Edit Product Details
+VARIANT: V00039
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:45
+
+DESCRIPTION:
+As an admin, I want to edit product information, so that I can update product details.
+
+GIVEN:
+- Admin is logged in with account mary.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Edit Product Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Low
+  Role_Type: Order_Manager
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-983636
+  Order_Quantity: 5
+  Order_Total: 1004.45
+  Password: weak
+  Phone: +1-815-741-6495
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Summer Dress
+  Product_Price: 200.89
+  Product_SKU: SKU-84508
+  Product_Size: XXL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-104137190
+  User_Type: Admin
+  ZIP_Code: 15650
+
+RELATED REQUIREMENTS:
+FR-019

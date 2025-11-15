@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00687
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00687
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account jane.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for jane.garcia@example.com
+
+WHEN:
+- User enters email: jane.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Type: Women
+  Device: Desktop
+  Network_Speed: Low
+  Product_Count: None
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.garcia@example.com
+  First_Name: Jane
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-398821
+  Order_Quantity: 2
+  Order_Total: 361.96
+  Password: weak
+  Phone: +1-996-604-7355
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Winter Coat
+  Product_Price: 180.98
+  Product_SKU: SKU-97783
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-499143716
+  User_Type: Buyer
+  ZIP_Code: 79244
+
+RELATED REQUIREMENTS:
+FR-014

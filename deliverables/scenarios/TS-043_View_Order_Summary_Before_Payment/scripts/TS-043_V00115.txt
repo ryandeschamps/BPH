@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00115
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00115
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_Items: Single
+  Device: Tablet
+  Network_Speed: High
+  Shipping_Cost: Express
+  Tax_Applicable: No
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-949400
+  Order_Quantity: 2
+  Order_Total: 495.9
+  Password: weak
+  Phone: +1-550-103-6806
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Leather Jacket
+  Product_Price: 247.95
+  Product_SKU: SKU-64515
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-789778966
+  User_Type: Buyer
+  ZIP_Code: 80972
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00067
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00067
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account sarah.martinez@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Card_Type: Visa
+  Device: Mobile
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Payment_Status: Declined
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 12/30
+  Card_Number: 4532-****-****-6670
+  Device: Mobile
+  Email: sarah.martinez@example.com
+  First_Name: Sarah
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-780148
+  Order_Quantity: 5
+  Order_Total: 861.3
+  Password: weak
+  Phone: +1-860-138-9517
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 172.26
+  Product_SKU: SKU-65100
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-939439968
+  User_Type: Buyer
+  ZIP_Code: 68466
+
+RELATED REQUIREMENTS:
+FR-006

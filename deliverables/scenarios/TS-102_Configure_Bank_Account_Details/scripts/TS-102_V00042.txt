@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-102_V00042
+
+SCENARIO: Reject Product Review
+VARIANT: V00042
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to reject inappropriate reviews, so that I can maintain review quality.
+
+GIVEN:
+- Admin is logged in with account mary.johnson@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Reject Product Review
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Bank_Field: Routing
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.johnson@example.com
+  First_Name: Mary
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-457416
+  Order_Quantity: 5
+  Order_Total: 1359.9
+  Password: weak
+  Phone: +1-593-369-4642
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Winter Coat
+  Product_Price: 271.98
+  Product_SKU: SKU-19843
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-329606799
+  User_Type: Admin
+  ZIP_Code: 36601
+
+RELATED REQUIREMENTS:
+FR-021

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00212
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00212
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account david.miller@example.com
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Single_Item
+  Device: Mobile
+  Item_Availability: Price_Changed
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-254215
+  Order_Quantity: 4
+  Order_Total: 988.04
+  Password: weak
+  Phone: +1-677-475-8548
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 247.01
+  Product_SKU: SKU-74932
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-778532102
+  User_Type: Buyer
+  ZIP_Code: 26929
+
+RELATED REQUIREMENTS:
+FR-005

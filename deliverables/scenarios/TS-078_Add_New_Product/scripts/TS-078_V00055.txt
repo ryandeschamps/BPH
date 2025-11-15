@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-078_V00055
+
+SCENARIO: View Buyer Account Details
+VARIANT: V00055
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:37
+
+DESCRIPTION:
+As an admin, I want to view detailed buyer information (profile, addresses, orders, wishlist, cart), so that I can assist customers.
+
+GIVEN:
+- Admin is logged in with account lisa.jones@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Buyer Account Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Image_Count: Multiple
+  Network_Speed: High
+  Product_Type: Simple
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.jones@example.com
+  First_Name: Lisa
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-525004
+  Order_Quantity: 3
+  Order_Total: 330.87
+  Password: weak
+  Phone: +1-680-886-7493
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Summer Dress
+  Product_Price: 110.29
+  Product_SKU: SKU-64560
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-219192790
+  User_Type: Admin
+  ZIP_Code: 29755
+
+RELATED REQUIREMENTS:
+FR-016

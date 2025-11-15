@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00610
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00610
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account robert.rodriguez@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Card_Type: Mastercard
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Payment_Status: Declined
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 07/26
+  Card_Number: 4532-****-****-2636
+  Device: Tablet
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-171890
+  Order_Quantity: 1
+  Order_Total: 248.52
+  Password: weak
+  Phone: +1-632-304-5633
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Silk Scarf
+  Product_Price: 248.52
+  Product_SKU: SKU-70891
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-410556395
+  User_Type: Buyer
+  ZIP_Code: 68282
+
+RELATED REQUIREMENTS:
+FR-006

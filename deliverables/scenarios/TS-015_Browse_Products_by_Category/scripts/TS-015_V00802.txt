@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00802
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00802
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account james.johnson@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for james.johnson@example.com
+
+WHEN:
+- User enters email: james.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Kids
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-418348
+  Order_Quantity: 5
+  Order_Total: 1253.85
+  Password: weak
+  Phone: +1-926-310-7581
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Wool Sweater
+  Product_Price: 250.77
+  Product_SKU: SKU-79705
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-344664557
+  User_Type: Buyer
+  ZIP_Code: 44181
+
+RELATED REQUIREMENTS:
+FR-014

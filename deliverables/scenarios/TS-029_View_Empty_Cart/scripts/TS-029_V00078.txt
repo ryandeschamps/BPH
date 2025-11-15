@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00078
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00078
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account john.jones@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Items_Removed
+  Device: Mobile
+  Network_Speed: Low
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.jones@example.com
+  First_Name: John
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-192395
+  Order_Quantity: 4
+  Order_Total: 668.28
+  Password: weak
+  Phone: +1-208-798-5441
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Silk Scarf
+  Product_Price: 167.07
+  Product_SKU: SKU-61108
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-139679125
+  User_Type: Buyer
+  ZIP_Code: 99055
+
+RELATED REQUIREMENTS:
+FR-005

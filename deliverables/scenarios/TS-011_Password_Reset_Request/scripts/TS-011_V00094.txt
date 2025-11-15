@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00094
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00094
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for michael.martinez@example.com
+
+WHEN:
+- User enters email: michael.martinez@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_State: Registered
+  Input_Validity: Valid
+  Network_Speed: High
+  Reset_Link_State: Already_Used
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-980450
+  Order_Quantity: 2
+  Order_Total: 596.58
+  Password: Test@123
+  Phone: +1-932-534-5386
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Winter Coat
+  Product_Price: 298.29
+  Product_SKU: SKU-90497
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-760119579
+  User_Type: Buyer
+  ZIP_Code: 94810
+
+RELATED REQUIREMENTS:
+FR-001

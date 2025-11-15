@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:03
+Total Scripts: 864
+Total Scenarios: 1
+Generation Time: 0.3 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-013: Forgot Password Request
+  Variants: 864
+  Files: TS-013_V*.txt

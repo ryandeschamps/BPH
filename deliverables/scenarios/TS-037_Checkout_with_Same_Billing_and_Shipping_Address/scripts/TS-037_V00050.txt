@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00050
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00050
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account mary.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New
+  Address_Type: Same_Address
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Payment_Method: Debit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 02/28
+  Card_Number: 4532-****-****-4313
+  Device: Mobile
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-964169
+  Order_Quantity: 1
+  Order_Total: 126.52
+  Password: weak
+  Phone: +1-341-461-7633
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Canvas Sneakers
+  Product_Price: 126.52
+  Product_SKU: SKU-91284
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-355194848
+  User_Type: Buyer
+  ZIP_Code: 46559
+
+RELATED REQUIREMENTS:
+FR-007

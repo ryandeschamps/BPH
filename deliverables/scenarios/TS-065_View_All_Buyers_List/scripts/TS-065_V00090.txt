@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-065_V00090
+
+SCENARIO: Prevent Review from Non-Purchaser
+VARIANT: V00090
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a system, I want to prevent users from reviewing products they haven't purchased, so that reviews are authentic.
+
+GIVEN:
+- Admin is logged in with account robert.miller@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Prevent Review from Non-Purchaser
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Filter: Inactive
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-427012
+  Order_Quantity: 1
+  Order_Total: 72.98
+  Password: weak
+  Phone: +1-810-441-4389
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Denim Jeans
+  Product_Price: 72.98
+  Product_SKU: SKU-51998
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-519117213
+  User_Type: Admin
+  ZIP_Code: 86805
+
+RELATED REQUIREMENTS:
+FR-011

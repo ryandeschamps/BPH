@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-024_V00079
+
+SCENARIO: View Product Listing with Thumbnail and Price
+VARIANT: V00079
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:11
+
+DESCRIPTION:
+As a user, I want to see product thumbnails, names, and prices in listings, so that I can quickly evaluate options.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Listing with Thumbnail and Price
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: High
+  Redirect_Action: Cancel
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.brown@example.com
+  First_Name: Lisa
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-846459
+  Order_Quantity: 1
+  Order_Total: 217.13
+  Password: weak
+  Phone: +1-512-462-5452
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 217.13
+  Product_SKU: SKU-57210
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-824036252
+  User_Type: Visitor
+  ZIP_Code: 72973
+
+RELATED REQUIREMENTS:
+FR-004

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-063_V00041
+
+SCENARIO: Post Rating for Purchased Product
+VARIANT: V00041
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to post a rating (1-5 stars), so that I can share my opinion.
+
+GIVEN:
+- Admin is logged in with account lisa.rodriguez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Post Rating for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Network_Speed: Medium
+  Reset_State: Expired
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.rodriguez@example.com
+  First_Name: Lisa
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-930843
+  Order_Quantity: 5
+  Order_Total: 1319.05
+  Password: weak
+  Phone: +1-245-879-7518
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 263.81
+  Product_SKU: SKU-96298
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-175224351
+  User_Type: Admin
+  ZIP_Code: 80787
+
+RELATED REQUIREMENTS:
+FR-011

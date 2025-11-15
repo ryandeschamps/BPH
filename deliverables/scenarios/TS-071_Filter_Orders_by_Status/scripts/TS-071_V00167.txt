@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-071_V00167
+
+SCENARIO: Change Password
+VARIANT: V00167
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:34
+
+DESCRIPTION:
+As a buyer, I want to change my password, so that I can maintain account security.
+
+GIVEN:
+- Admin is logged in with account michael.miller@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Change Password
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  Order_Status: Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.miller@example.com
+  First_Name: Michael
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-343862
+  Order_Quantity: 4
+  Order_Total: 167.44
+  Password: weak
+  Phone: +1-449-513-3427
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 41.86
+  Product_SKU: SKU-41294
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-478479698
+  User_Type: Admin
+  ZIP_Code: 87258
+
+RELATED REQUIREMENTS:
+FR-010

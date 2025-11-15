@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-040_V00335
+
+SCENARIO: Add Product to Wishlist as Logged-In Buyer
+VARIANT: V00335
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:19
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my wishlist, so that I can save items for later consideration.
+
+GIVEN:
+- Buyer is logged in with account john.johnson@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Logged-In Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Bank: Citi
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Method: Net_Banking
+  Payment_Status: Success
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.johnson@example.com
+  First_Name: John
+  Last_Name: Johnson
+  Network_Speed: Medium
+  Order_ID: ORD-990993
+  Order_Quantity: 1
+  Order_Total: 272.44
+  Password: weak
+  Phone: +1-604-125-5316
+  Product_Category: Kids
+  Product_Color: Beige
+  Product_Name: Denim Jeans
+  Product_Price: 272.44
+  Product_SKU: SKU-64984
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-694367761
+  User_Type: Buyer
+  ZIP_Code: 45600
+
+RELATED REQUIREMENTS:
+FR-006

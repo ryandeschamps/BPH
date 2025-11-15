@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00186
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00186
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account john.garcia@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for john.garcia@example.com
+
+WHEN:
+- User enters email: john.garcia@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Email_State: Verified
+  Input_Validity: Valid
+  Network_Speed: Low
+  Reset_Link_State: Already_Used
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-885281
+  Order_Quantity: 1
+  Order_Total: 164.19
+  Password: Test@123
+  Phone: +1-854-333-8793
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 164.19
+  Product_SKU: SKU-93531
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-778651968
+  User_Type: Buyer
+  ZIP_Code: 64819
+
+RELATED REQUIREMENTS:
+FR-001

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01059
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01059
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for jane.jones@example.com
+
+WHEN:
+- User enters email: jane.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Low
+  Product_Count: Few
+  Sub_Category_Type: TShirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-671218
+  Order_Quantity: 2
+  Order_Total: 526.12
+  Password: weak
+  Phone: +1-393-934-2934
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Wool Sweater
+  Product_Price: 263.06
+  Product_SKU: SKU-79678
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-894109389
+  User_Type: Buyer
+  ZIP_Code: 26877
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-087_V00013
+
+SCENARIO: View Order Details
+VARIANT: V00013
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to view complete order details (items, prices, addresses, payment status), so that I can fulfill orders correctly.
+
+GIVEN:
+- Admin is logged in with account sarah.smith@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Action: Approve
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-539703
+  Order_Quantity: 2
+  Order_Total: 307.5
+  Password: weak
+  Phone: +1-243-300-8330
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 153.75
+  Product_SKU: SKU-19677
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-743856457
+  User_Type: Admin
+  ZIP_Code: 83067
+
+RELATED REQUIREMENTS:
+FR-017

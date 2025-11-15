@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-041",
+  "scenario_title": "Successful Payment and Order Confirmation",
+  "variant_count": 432,
+  "expected_variant_count": 432,
+  "parameters": {
+    "User_Type": 1,
+    "Payment_Method": 3,
+    "Order_Size": 2,
+    "Email_Delivery": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-041_Successful_Payment_and_Order_Confirmation/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

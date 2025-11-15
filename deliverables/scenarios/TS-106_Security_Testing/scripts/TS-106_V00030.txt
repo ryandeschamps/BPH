@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00030
+
+SCENARIO: Export Report to Excel
+VARIANT: V00030
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Low
+  Security_Type: SSL_Certificate
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.williams@example.com
+  First_Name: Mary
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-513225
+  Order_Quantity: 4
+  Order_Total: 100.96
+  Password: weak
+  Phone: +1-224-640-8791
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 25.24
+  Product_SKU: SKU-98886
+  Product_Size: L
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-471788057
+  User_Type: N/A
+  ZIP_Code: 24607
+
+RELATED REQUIREMENTS:
+FR-022

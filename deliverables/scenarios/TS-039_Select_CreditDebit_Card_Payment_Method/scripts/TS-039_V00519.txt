@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00519
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00519
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account robert.davis@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Card_Type: Visa
+  Device: Mobile
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  Payment_Status: Timeout
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 02/29
+  Card_Number: 4532-****-****-6031
+  Device: Mobile
+  Email: robert.davis@example.com
+  First_Name: Robert
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-739265
+  Order_Quantity: 2
+  Order_Total: 539.02
+  Password: weak
+  Phone: +1-285-499-8196
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 269.51
+  Product_SKU: SKU-49460
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-916650328
+  User_Type: Buyer
+  ZIP_Code: 86431
+
+RELATED REQUIREMENTS:
+FR-006

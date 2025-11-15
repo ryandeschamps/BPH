@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00664
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00664
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: david.davis@example.com
+- User enters phone: +1-670-933-7644
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Contact
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Invalid_Contact
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Field_Values: Invalid_Contact
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.davis@example.com
+  First_Name: David
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-998416
+  Order_Quantity: 1
+  Order_Total: 122.61
+  Password: weak
+  Phone: +1-670-933-7644
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 122.61
+  Product_SKU: SKU-77335
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-143381122
+  User_Type: Visitor
+  ZIP_Code: 28801
+
+RELATED REQUIREMENTS:
+FR-002

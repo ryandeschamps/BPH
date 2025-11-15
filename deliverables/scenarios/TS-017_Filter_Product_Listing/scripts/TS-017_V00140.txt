@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-017_V00140
+
+SCENARIO: Product Keyword Search as Guest
+VARIANT: V00140
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:06
+
+DESCRIPTION:
+As a guest user, I want to search for products using keywords, so that I can find specific items without logging in.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Filter_Type: Color
+  Filter_Value: Multiple_Values
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-864512
+  Order_Quantity: 3
+  Order_Total: 837.21
+  Password: weak
+  Phone: +1-748-182-4901
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Wool Sweater
+  Product_Price: 279.07
+  Product_SKU: SKU-75369
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-160594872
+  User_Type: Visitor
+  ZIP_Code: 98139
+
+RELATED REQUIREMENTS:
+FR-003

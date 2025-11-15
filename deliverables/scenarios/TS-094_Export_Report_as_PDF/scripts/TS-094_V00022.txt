@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-094_V00022
+
+SCENARIO: Upload Product Images
+VARIANT: V00022
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:44
+
+DESCRIPTION:
+As an admin, I want to upload multiple product images and set thumbnail, so that buyers can see the product.
+
+GIVEN:
+- Admin is logged in with account james.johnson@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Upload Product Images
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Export_Format: PDF
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: james.johnson@example.com
+  First_Name: James
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-989629
+  Order_Quantity: 5
+  Order_Total: 448.6
+  Password: weak
+  Phone: +1-876-501-9410
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Cotton T-Shirt
+  Product_Price: 89.72
+  Product_SKU: SKU-47643
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-959788425
+  User_Type: Admin
+  ZIP_Code: 65974
+
+RELATED REQUIREMENTS:
+FR-019

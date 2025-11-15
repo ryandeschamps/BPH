@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-082_V00062
+
+SCENARIO: Filter Orders by Status
+VARIANT: V00062
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to filter orders by status (Open, Confirmed, In Process, Shipped, Delivered), so that I can focus on specific order groups.
+
+GIVEN:
+- Admin is logged in with account david.miller@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Filter Orders by Status
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Has_Orders: No
+  Network_Speed: Medium
+  Product_Status: Any
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.miller@example.com
+  First_Name: David
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-857039
+  Order_Quantity: 2
+  Order_Total: 378.68
+  Password: weak
+  Phone: +1-907-954-7722
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 189.34
+  Product_SKU: SKU-46140
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-712207448
+  User_Type: Admin
+  ZIP_Code: 35349
+
+RELATED REQUIREMENTS:
+FR-017

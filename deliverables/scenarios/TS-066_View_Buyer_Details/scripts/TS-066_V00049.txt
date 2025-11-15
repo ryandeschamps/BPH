@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00049
+
+SCENARIO: View Own Reviews
+VARIANT: V00049
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account lisa.garcia@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Status: Inactive
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-785336
+  Order_Quantity: 2
+  Order_Total: 275.78
+  Password: weak
+  Phone: +1-818-632-4265
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 137.89
+  Product_SKU: SKU-81743
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-517561128
+  User_Type: Admin
+  ZIP_Code: 44816
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

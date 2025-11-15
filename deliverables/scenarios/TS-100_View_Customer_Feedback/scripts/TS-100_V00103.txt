@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-100_V00103
+
+SCENARIO: View Order Payment Status
+VARIANT: V00103
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:46
+
+DESCRIPTION:
+As an admin, I want to view payment status for each order, so that I can track revenue.
+
+GIVEN:
+- Admin is logged in with account emily.smith@example.com
+- Using Edge browser on Mobile device
+- Network speed: High
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to emily.smith@example.com
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Mobile
+  Feedback_Type: Feedback
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-100696
+  Order_Quantity: 4
+  Order_Total: 761.68
+  Password: weak
+  Phone: +1-717-989-2707
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Casual Shirt
+  Product_Price: 190.42
+  Product_SKU: SKU-76870
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-898122668
+  User_Type: Admin
+  ZIP_Code: 80612
+
+RELATED REQUIREMENTS:
+FR-020, FR-017

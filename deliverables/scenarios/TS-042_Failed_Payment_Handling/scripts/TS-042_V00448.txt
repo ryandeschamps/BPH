@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00448
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00448
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account michael.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Failure_Reason: Network_Error
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  Retry_Action: Retry_Same_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 12/26
+  Card_Number: 4532-****-****-7141
+  Device: Tablet
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-359129
+  Order_Quantity: 1
+  Order_Total: 132.62
+  Password: weak
+  Phone: +1-431-722-4443
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 132.62
+  Product_SKU: SKU-69512
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-726213260
+  User_Type: Buyer
+  ZIP_Code: 44125
+
+RELATED REQUIREMENTS:
+FR-006

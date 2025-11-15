@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00513
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00513
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account michael.smith@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Cart_State: Empty
+  Device: Tablet
+  Network_Speed: Low
+  Product_Variation: Size_And_Color
+  Quantity: Multiple
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.smith@example.com
+  First_Name: Michael
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-398390
+  Order_Quantity: 4
+  Order_Total: 1086.64
+  Password: weak
+  Phone: +1-297-929-1513
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Casual Shirt
+  Product_Price: 271.66
+  Product_SKU: SKU-86617
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-704031283
+  User_Type: Buyer
+  ZIP_Code: 82087
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,71 @@
+TEST SCRIPT: TS-032_V00089
+
+SCENARIO: Add Product to Cart as Guest User
+VARIANT: V00089
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:15
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login/register when adding to cart, so that I can save my cart items.
+
+GIVEN:
+- Buyer is logged in with account james.davis@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Item_Availability: Price_Changed
+  Network_Speed: Medium
+  User_Type: Buyer
+  Wishlist_State: Empty
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.davis@example.com
+  First_Name: James
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-552609
+  Order_Quantity: 2
+  Order_Total: 319.52
+  Password: weak
+  Phone: +1-927-541-9085
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Silk Scarf
+  Product_Price: 159.76
+  Product_SKU: SKU-13681
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-475241997
+  User_Type: Buyer
+  ZIP_Code: 48332
+
+RELATED REQUIREMENTS:
+FR-007

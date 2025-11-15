@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:22
+Total Scripts: 432
+Total Scenarios: 1
+Generation Time: 0.1 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-044: Checkout Directly from Wishlist
+  Variants: 432
+  Files: TS-044_V*.txt

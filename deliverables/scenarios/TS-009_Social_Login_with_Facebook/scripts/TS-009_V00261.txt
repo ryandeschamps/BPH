@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00261
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00261
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for james.miller@example.com
+
+WHEN:
+- User enters email: james.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Invalid
+  Network_Speed: Low
+  OAuth_State: New_Account
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-914251
+  Order_Quantity: 1
+  Order_Total: 65.92
+  Password: weak
+  Phone: +1-644-964-9463
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 65.92
+  Product_SKU: SKU-48045
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-349355084
+  User_Type: Visitor
+  ZIP_Code: 95061
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

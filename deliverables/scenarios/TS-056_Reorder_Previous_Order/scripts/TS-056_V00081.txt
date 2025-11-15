@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-056_V00081
+
+SCENARIO: Checkout Without Login
+VARIANT: V00081
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:28
+
+DESCRIPTION:
+As a guest user, I want to be required to login before checkout, so that the system can track my order.
+
+GIVEN:
+- Buyer is logged in with account james.miller@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for james.miller@example.com
+
+WHEN:
+- User enters email: james.miller@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Reorder_Items: Out_Of_Stock
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.miller@example.com
+  First_Name: James
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-383126
+  Order_Quantity: 1
+  Order_Total: 125.28
+  Password: weak
+  Phone: +1-620-464-7153
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Canvas Sneakers
+  Product_Price: 125.28
+  Product_SKU: SKU-65855
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-727549955
+  User_Type: Buyer
+  ZIP_Code: 79481
+
+RELATED REQUIREMENTS:
+FR-008

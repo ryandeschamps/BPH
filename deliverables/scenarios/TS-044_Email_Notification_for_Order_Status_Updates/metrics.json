@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-044",
+  "scenario_title": "Email Notification for Order Status Updates",
+  "variant_count": 432,
+  "expected_variant_count": 432,
+  "parameters": {
+    "User_Type": 1,
+    "Order_Status": 4,
+    "Email_Delivery": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-044_Email_Notification_for_Order_Status_Updates/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

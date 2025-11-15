@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-105_V00049
+
+SCENARIO: Export Report to PDF
+VARIANT: V00049
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to PDF format, so that I can share with stakeholders.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Export Report to PDF
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Error_Type: 500
+  Network_Speed: High
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.garcia@example.com
+  First_Name: John
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-272750
+  Order_Quantity: 5
+  Order_Total: 1372.25
+  Password: weak
+  Phone: +1-826-809-3985
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Leather Jacket
+  Product_Price: 274.45
+  Product_SKU: SKU-37364
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-276713443
+  User_Type: N/A
+  ZIP_Code: 88420
+
+RELATED REQUIREMENTS:
+FR-022

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01323
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01323
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account mary.garcia@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.garcia@example.com
+
+WHEN:
+- User enters email: mary.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: Many
+  Sub_Category_Type: Accessories
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: Low
+  Order_ID: ORD-707578
+  Order_Quantity: 3
+  Order_Total: 658.74
+  Password: weak
+  Phone: +1-721-912-4920
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 219.58
+  Product_SKU: SKU-42598
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-983675920
+  User_Type: Buyer
+  ZIP_Code: 37251
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

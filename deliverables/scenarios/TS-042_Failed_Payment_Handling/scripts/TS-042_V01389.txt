@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V01389
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V01389
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:21
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account sarah.miller@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Failure_Reason: Declined
+  Network_Speed: Low
+  Payment_Method: Net_Banking
+  Retry_Action: Cancel
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.miller@example.com
+  First_Name: Sarah
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-304125
+  Order_Quantity: 3
+  Order_Total: 587.07
+  Password: weak
+  Phone: +1-874-616-9555
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 195.69
+  Product_SKU: SKU-45119
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-425231261
+  User_Type: Buyer
+  ZIP_Code: 69822
+
+RELATED REQUIREMENTS:
+FR-006

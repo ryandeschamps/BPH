@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-019_V00509
+
+SCENARIO: Product Browse by Category
+VARIANT: V00509
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a category, so that I can explore products in areas I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account robert.rodriguez@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Image_Count: Single_Image
+  Network_Speed: Medium
+  Product_State: No_Variations
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-410031
+  Order_Quantity: 4
+  Order_Total: 749.56
+  Password: weak
+  Phone: +1-332-741-1111
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 187.39
+  Product_SKU: SKU-99883
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-166462610
+  User_Type: Buyer
+  ZIP_Code: 28977
+
+RELATED REQUIREMENTS:
+FR-003

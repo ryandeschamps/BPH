@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-062_V00023
+
+SCENARIO: Order Status Email Notifications
+VARIANT: V00023
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:30
+
+DESCRIPTION:
+As a buyer, I want to receive email notifications when my order status changes, so that I'm informed of progress.
+
+GIVEN:
+- Admin is logged in with account mary.davis@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Order Status Email Notifications
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Credential_Error: Wrong_Username
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-384945
+  Order_Quantity: 1
+  Order_Total: 115.54
+  Password: weak
+  Phone: +1-538-374-1739
+  Product_Category: Kids
+  Product_Color: Gray
+  Product_Name: Silk Scarf
+  Product_Price: 115.54
+  Product_SKU: SKU-39391
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-323515465
+  User_Type: Admin
+  ZIP_Code: 48511
+
+RELATED REQUIREMENTS:
+FR-008, FR-017

@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00048
+
+SCENARIO: Export Report to Excel
+VARIANT: V00048
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Firefox browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Network_Speed: Low
+  Security_Type: HTTPS
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.martinez@example.com
+  First_Name: Robert
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-526274
+  Order_Quantity: 3
+  Order_Total: 889.92
+  Password: weak
+  Phone: +1-636-401-8030
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 296.64
+  Product_SKU: SKU-46529
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-440412261
+  User_Type: N/A
+  ZIP_Code: 76212
+
+RELATED REQUIREMENTS:
+FR-022

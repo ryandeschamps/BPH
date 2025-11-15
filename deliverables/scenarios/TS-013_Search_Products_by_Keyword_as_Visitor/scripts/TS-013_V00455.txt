@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-013_V00455
+
+SCENARIO: Forgot Password Request
+VARIANT: V00455
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:02
+
+DESCRIPTION:
+As a buyer who forgot my password, I want to request a password reset link, so that I can regain access to my account.
+
+GIVEN:
+- Buyer is logged in with account john.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Forgot Password Request
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Many_Results
+  Search_Query: Single_Keyword
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.rodriguez@example.com
+  First_Name: John
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-370805
+  Order_Quantity: 5
+  Order_Total: 1438.7
+  Password: Test@123
+  Phone: +1-361-350-7798
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 287.74
+  Product_SKU: SKU-26889
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-702358572
+  User_Type: Buyer
+  ZIP_Code: 20061
+
+RELATED REQUIREMENTS:
+FR-001

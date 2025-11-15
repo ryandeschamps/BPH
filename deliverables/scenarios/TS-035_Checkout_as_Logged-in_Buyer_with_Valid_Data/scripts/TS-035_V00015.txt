@@ -1,0 +1,73 @@
+TEST SCRIPT: TS-035_V00015
+
+SCENARIO: Update Product Quantity in Cart
+VARIANT: V00015
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:16
+
+DESCRIPTION:
+As a buyer, I want to update quantities of items in my cart, so that I can order the right amount.
+
+GIVEN:
+- Buyer is logged in with account jane.rodriguez@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Low
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Address_State: New_Address
+  Browser: Firefox
+  Cart_Items: Single
+  Device: Mobile
+  Input_Validity: Valid
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 11/28
+  Card_Number: 4532-****-****-9928
+  Device: Mobile
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: Low
+  Order_ID: ORD-983757
+  Order_Quantity: 2
+  Order_Total: 111.42
+  Password: Test@123
+  Phone: +1-439-362-6627
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Silk Scarf
+  Product_Price: 55.71
+  Product_SKU: SKU-53085
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-917719641
+  User_Type: Buyer
+  ZIP_Code: 75092
+
+RELATED REQUIREMENTS:
+FR-007

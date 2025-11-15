@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-026_V00214
+
+SCENARIO: View Product Details as Guest
+VARIANT: V00214
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:12
+
+DESCRIPTION:
+As a guest user, I want to view detailed product information, so that I can evaluate the product before deciding to register/login.
+
+GIVEN:
+- Buyer is logged in with account david.rodriguez@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Details as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Single_Item
+  Device: Tablet
+  Item_Availability: Price_Changed
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.rodriguez@example.com
+  First_Name: David
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-571973
+  Order_Quantity: 1
+  Order_Total: 30.97
+  Password: weak
+  Phone: +1-829-593-3000
+  Product_Category: Women
+  Product_Color: Blue
+  Product_Name: Canvas Sneakers
+  Product_Price: 30.97
+  Product_SKU: SKU-59324
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-232684263
+  User_Type: Buyer
+  ZIP_Code: 45586
+
+RELATED REQUIREMENTS:
+FR-005

@@ -1,0 +1,15 @@
+{
+  "scenario_id": "TS-058",
+  "scenario_title": "Cancel Order",
+  "variant_count": 36,
+  "expected_variant_count": 36,
+  "parameters": {
+    "User_Type": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-058_Cancel_Order/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-021_V00236
+
+SCENARIO: Apply Filters to Product Listing
+VARIANT: V00236
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to filter products by price, size, color, and other attributes, so that I can find products matching my preferences.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Apply Filters to Product Listing
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Visitor
+  Variation_Availability: All_Available
+  Variation_Type: Size_And_Color
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.miller@example.com
+  First_Name: John
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-367290
+  Order_Quantity: 1
+  Order_Total: 41.88
+  Password: weak
+  Phone: +1-933-350-2614
+  Product_Category: Women
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 41.88
+  Product_SKU: SKU-85429
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-923205399
+  User_Type: Visitor
+  ZIP_Code: 48338
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,77 @@
+TEST SCRIPT: TS-002_V00085
+
+SCENARIO: Registration with Invalid Email Format
+VARIANT: V00085
+PRIORITY: High
+GENERATED: 2025-11-15 19:42:58
+
+DESCRIPTION:
+As a visitor, I want the system to validate my email format during registration, so that I provide a valid email address.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: High
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: lisa.martinez@example.com
+- User enters phone: +1-811-425-8053
+- User enters password: weak
+- User confirms password: SecurePass123!
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: 
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Email_Format: Special_Chars
+  Input_Validity: Invalid
+  Network_Speed: High
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.martinez@example.com
+  First_Name: Lisa
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-263694
+  Order_Quantity: 2
+  Order_Total: 237.66
+  Password: weak
+  Phone: +1-811-425-8053
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Silk Scarf
+  Product_Price: 118.83
+  Product_SKU: SKU-84504
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-670787421
+  User_Type: Visitor
+  ZIP_Code: 46666
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-103_V00009
+
+SCENARIO: Generate Products Uploaded Report
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:47
+
+DESCRIPTION:
+As an admin, I want to generate reports on products uploaded by date range, so that I can track catalog growth.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Generate Products Uploaded Report
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Load_Type: Concurrent_Users
+  Network_Speed: Low
+  User_Count: 50
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-360205
+  Order_Quantity: 1
+  Order_Total: 273.1
+  Password: weak
+  Phone: +1-491-838-1735
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 273.1
+  Product_SKU: SKU-84232
+  Product_Size: S
+  Product_Sub_Category: Jackets
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-174290560
+  User_Type: N/A
+  ZIP_Code: 63782
+
+RELATED REQUIREMENTS:
+FR-022

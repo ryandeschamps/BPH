@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01276
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01276
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account mary.martinez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for mary.martinez@example.com
+
+WHEN:
+- User enters email: mary.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: None
+  Sub_Category_Type: Dresses
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: mary.martinez@example.com
+  First_Name: Mary
+  Last_Name: Martinez
+  Network_Speed: High
+  Order_ID: ORD-175045
+  Order_Quantity: 2
+  Order_Total: 594.32
+  Password: weak
+  Phone: +1-446-139-4173
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 297.16
+  Product_SKU: SKU-94293
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-459039813
+  User_Type: Buyer
+  ZIP_Code: 99057
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

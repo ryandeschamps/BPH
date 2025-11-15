@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-053_V00095
+
+SCENARIO: Payment with Net Banking
+VARIANT: V00095
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:27
+
+DESCRIPTION:
+As a buyer, I want to pay using net banking, so that I can complete my purchase without a card.
+
+GIVEN:
+- Buyer is logged in with account sarah.rodriguez@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is on the checkout page
+- Shopping cart state: Items in cart
+
+WHEN:
+- User selects payment method: Credit_Card
+- User enters card number: 4111-1111-1111-1111
+- User enters cardholder name: John Doe
+- User enters expiry: 12/25
+- User enters CVV: 123
+- User confirms shipping address
+- User clicks 'Place Order' button
+
+THEN:
+- Payment is processed successfully
+- Order is created in the system
+- Order confirmation page is displayed
+- Confirmation email is sent to user
+- Shopping cart is cleared
+
+EXPECTED RESULT:
+- Order record created in database with status 'Pending' or 'Processing'
+- Payment transaction recorded
+- Inventory updated
+- Confirmation email sent to sarah.rodriguez@example.com
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Address_Action: Delete
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: sarah.rodriguez@example.com
+  First_Name: Sarah
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-805793
+  Order_Quantity: 4
+  Order_Total: 470.76
+  Password: weak
+  Phone: +1-457-839-6469
+  Product_Category: Women
+  Product_Color: Burgundy
+  Product_Name: Sports Shorts
+  Product_Price: 117.69
+  Product_SKU: SKU-18081
+  Product_Size: XXL
+  Product_Sub_Category: T-Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-627581071
+  User_Type: Buyer
+  ZIP_Code: 78329
+
+RELATED REQUIREMENTS:
+FR-008, FR-020

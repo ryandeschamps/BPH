@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-064_V00018
+
+SCENARIO: Write Review for Purchased Product
+VARIANT: V00018
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:31
+
+DESCRIPTION:
+As a buyer who purchased a product, I want to write a detailed review, so that I can help other buyers.
+
+GIVEN:
+- Admin is logged in with account michael.martinez@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Low
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: Write Review for Purchased Product
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: Low
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Low
+  Order_ID: ORD-525432
+  Order_Quantity: 2
+  Order_Total: 460.98
+  Password: weak
+  Phone: +1-569-165-2439
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Wool Sweater
+  Product_Price: 230.49
+  Product_SKU: SKU-27567
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-963979222
+  User_Type: Admin
+  ZIP_Code: 75799
+
+RELATED REQUIREMENTS:
+FR-011

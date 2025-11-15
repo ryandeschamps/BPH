@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-086_V00004
+
+SCENARIO: Update Order Status to Delivered
+VARIANT: V00004
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:40
+
+DESCRIPTION:
+As an admin, I want to mark order as Delivered, so that the order lifecycle is complete.
+
+GIVEN:
+- Admin is logged in with account robert.jones@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Delivered
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Category_Status: Active
+  Device: Mobile
+  Network_Speed: High
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.jones@example.com
+  First_Name: Robert
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-604464
+  Order_Quantity: 5
+  Order_Total: 1231.0
+  Password: weak
+  Phone: +1-660-563-2305
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 246.2
+  Product_SKU: SKU-48108
+  Product_Size: S
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-171461059
+  User_Type: Admin
+  ZIP_Code: 50556
+
+RELATED REQUIREMENTS:
+FR-017

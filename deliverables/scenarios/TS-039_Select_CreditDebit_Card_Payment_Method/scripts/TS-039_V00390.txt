@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00390
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00390
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account michael.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Card_Type: Discover
+  Device: Desktop
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  Payment_Status: Declined
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 01/26
+  Card_Number: 4532-****-****-9979
+  Device: Desktop
+  Email: michael.johnson@example.com
+  First_Name: Michael
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-313118
+  Order_Quantity: 2
+  Order_Total: 438.0
+  Password: weak
+  Phone: +1-784-542-7231
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Canvas Sneakers
+  Product_Price: 219.0
+  Product_SKU: SKU-10073
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-517004340
+  User_Type: Buyer
+  ZIP_Code: 84832
+
+RELATED REQUIREMENTS:
+FR-006

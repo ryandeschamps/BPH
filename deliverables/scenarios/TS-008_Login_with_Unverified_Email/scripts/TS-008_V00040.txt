@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-008_V00040
+
+SCENARIO: Login with Invalid Credentials
+VARIANT: V00040
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer, I want to be notified when my login credentials are incorrect, so that I can retry or reset my password.
+
+GIVEN:
+- Buyer is logged in with account michael.williams@example.com
+- Using Chrome browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for michael.williams@example.com
+
+WHEN:
+- User enters email: michael.williams@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Account_State: Unverified
+  Browser: Chrome
+  Device: Mobile
+  Email_Verification: Link_Expired
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: michael.williams@example.com
+  First_Name: Michael
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-386268
+  Order_Quantity: 3
+  Order_Total: 602.31
+  Password: Test@123
+  Phone: +1-392-124-1621
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Sports Shorts
+  Product_Price: 200.77
+  Product_SKU: SKU-66090
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-478703973
+  User_Type: Buyer
+  ZIP_Code: 58197
+
+RELATED REQUIREMENTS:
+FR-001

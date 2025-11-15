@@ -1,0 +1,37 @@
+# Combinatorial Test Execution Plan (Pairwise)
+
+**Generated:** 2025-11-15 19:43:40
+
+**Mode:** Variant Selection
+
+## Coverage Statistics
+
+- **Total Parameter Pairs:** 66
+- **Covered Pairs:** 66
+- **Coverage Percentage:** 100.00%
+- **Test Cases Generated:** 12
+
+## About This Plan
+
+This plan selects an optimal subset of predefined variants to achieve maximum pairwise coverage. The selection ensures that all critical parameter interactions are tested while minimizing redundant test executions.
+
+## Test Cases
+
+| Test Case | Variant ID | Scenario_ID | Browser | Category_Status | Device | Network_Speed | User_Type |
+|-----------|------------|---|---|---|---|---|---|
+| 1 | V00001 | TS-086 | Chrome | Active | Desktop | High | Admin |
+| 2 | V00014 | TS-086 | Firefox | Active | Mobile | Medium | Admin |
+| 3 | V00027 | TS-086 | Safari | Active | Tablet | Low | Admin |
+| 4 | V00029 | TS-086 | Edge | Active | Desktop | Medium | Admin |
+| 5 | V00006 | TS-086 | Chrome | Active | Mobile | Low | Admin |
+| 6 | V00008 | TS-086 | Chrome | Active | Tablet | Medium | Admin |
+| 7 | V00012 | TS-086 | Firefox | Active | Desktop | Low | Admin |
+| 8 | V00016 | TS-086 | Firefox | Active | Tablet | High | Admin |
+| 9 | V00022 | TS-086 | Safari | Active | Mobile | High | Admin |
+| 10 | V00020 | TS-086 | Safari | Active | Desktop | Medium | Admin |
+| 11 | V00031 | TS-086 | Edge | Active | Mobile | High | Admin |
+| 12 | V00036 | TS-086 | Edge | Active | Tablet | Low | Admin |
+
+---
+
+**Note:** This is an automated test plan generated using pairwise combinatorial testing techniques. For complex scenarios or higher-order interactions (3-way, 4-way), consider using specialized tools like `allpairspy`, `PICT`, or `ACTS`.

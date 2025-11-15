@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00559
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00559
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for jane.brown@example.com
+
+WHEN:
+- User enters email: jane.brown@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: None
+  Sub_Category_Type: Dresses
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-443177
+  Order_Quantity: 5
+  Order_Total: 1019.85
+  Password: weak
+  Phone: +1-310-951-2885
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 203.97
+  Product_SKU: SKU-45335
+  Product_Size: XS
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-250333263
+  User_Type: Visitor
+  ZIP_Code: 77875
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

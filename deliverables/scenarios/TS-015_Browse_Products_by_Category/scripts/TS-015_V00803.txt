@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00803
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00803
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account michael.jones@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for michael.jones@example.com
+
+WHEN:
+- User enters email: michael.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Kids
+  Device: Desktop
+  Network_Speed: Medium
+  Product_Count: One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.jones@example.com
+  First_Name: Michael
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-895613
+  Order_Quantity: 4
+  Order_Total: 383.68
+  Password: weak
+  Phone: +1-561-782-6080
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Leather Jacket
+  Product_Price: 95.92
+  Product_SKU: SKU-95773
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-697247539
+  User_Type: Buyer
+  ZIP_Code: 98664
+
+RELATED REQUIREMENTS:
+FR-014

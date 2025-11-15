@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-010_V00044
+
+SCENARIO: Login with Facebook Social Login
+VARIANT: V00044
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Facebook account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Chrome browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for robert.brown@example.com
+
+WHEN:
+- User enters email: robert.brown@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Auth_Method: Google
+  Browser: Chrome
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: Medium
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.brown@example.com
+  First_Name: Robert
+  Last_Name: Brown
+  Network_Speed: Medium
+  Order_ID: ORD-812484
+  Order_Quantity: 1
+  Order_Total: 254.35
+  Password: Test@123
+  Phone: +1-369-702-1152
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Silk Scarf
+  Product_Price: 254.35
+  Product_SKU: SKU-96607
+  Product_Size: XS
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-648203537
+  User_Type: Visitor
+  ZIP_Code: 35880
+
+RELATED REQUIREMENTS:
+FR-001

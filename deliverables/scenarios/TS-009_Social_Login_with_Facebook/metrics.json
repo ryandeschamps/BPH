@@ -1,0 +1,18 @@
+{
+  "scenario_id": "TS-009",
+  "scenario_title": "Social Login with Facebook",
+  "variant_count": 288,
+  "expected_variant_count": 288,
+  "parameters": {
+    "User_Type": 1,
+    "Auth_Method": 1,
+    "Input_Validity": 2,
+    "OAuth_State": 4,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-009_Social_Login_with_Facebook/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

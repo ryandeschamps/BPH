@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00564
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00564
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account john.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for john.williams@example.com
+
+WHEN:
+- User enters email: john.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Type: Men
+  Device: Mobile
+  Network_Speed: Low
+  Product_Count: None
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: john.williams@example.com
+  First_Name: John
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-831353
+  Order_Quantity: 1
+  Order_Total: 102.61
+  Password: weak
+  Phone: +1-817-723-1123
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Summer Dress
+  Product_Price: 102.61
+  Product_SKU: SKU-88476
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-694599124
+  User_Type: Buyer
+  ZIP_Code: 34509
+
+RELATED REQUIREMENTS:
+FR-014

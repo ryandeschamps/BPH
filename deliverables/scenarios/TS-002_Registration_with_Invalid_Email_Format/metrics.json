@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-002",
+  "scenario_title": "Registration with Invalid Email Format",
+  "variant_count": 144,
+  "expected_variant_count": 144,
+  "parameters": {
+    "User_Type": 1,
+    "Input_Validity": 1,
+    "Email_Format": 4,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-002_Registration_with_Invalid_Email_Format/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

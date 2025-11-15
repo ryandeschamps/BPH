@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-076_V00016
+
+SCENARIO: View Admin Dashboard
+VARIANT: V00016
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:36
+
+DESCRIPTION:
+As an admin, I want to view dashboard with key metrics (active buyers, products, revenue), so that I can monitor business performance.
+
+GIVEN:
+- Admin is logged in with account robert.smith@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the admin dashboard
+
+WHEN:
+- User performs the action described in scenario: View Admin Dashboard
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Status_Change: Shipped_To_Delivered
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.smith@example.com
+  First_Name: Robert
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-864220
+  Order_Quantity: 1
+  Order_Total: 47.48
+  Password: weak
+  Phone: +1-433-868-1150
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Silk Scarf
+  Product_Price: 47.48
+  Product_SKU: SKU-59101
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-193528722
+  User_Type: Admin
+  ZIP_Code: 88879
+
+RELATED REQUIREMENTS:
+FR-015

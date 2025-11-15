@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-083_V00023
+
+SCENARIO: Update Order Status to Confirmed
+VARIANT: V00023
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:39
+
+DESCRIPTION:
+As an admin, I want to update order status from Open to Confirmed, so that I can indicate order acceptance.
+
+GIVEN:
+- Admin is logged in with account jane.smith@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Update Order Status to Confirmed
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Category_Level: Top_Level
+  Device: Mobile
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: jane.smith@example.com
+  First_Name: Jane
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-433796
+  Order_Quantity: 3
+  Order_Total: 169.47
+  Password: weak
+  Phone: +1-880-135-4140
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 56.49
+  Product_SKU: SKU-62232
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-724230925
+  User_Type: Admin
+  ZIP_Code: 82756
+
+RELATED REQUIREMENTS:
+FR-017

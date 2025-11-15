@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-029_V00070
+
+SCENARIO: Check Shipping Availability by ZIP Code
+VARIANT: V00070
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to check if shipping is available to my ZIP code, so that I know if I can order the product.
+
+GIVEN:
+- Buyer is logged in with account john.brown@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Check Shipping Availability by ZIP Code
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_State: Previously_Had_Items
+  Device: Tablet
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.brown@example.com
+  First_Name: John
+  Last_Name: Brown
+  Network_Speed: High
+  Order_ID: ORD-953724
+  Order_Quantity: 3
+  Order_Total: 767.46
+  Password: weak
+  Phone: +1-629-124-9176
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 255.82
+  Product_SKU: SKU-81254
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-627230579
+  User_Type: Buyer
+  ZIP_Code: 29725
+
+RELATED REQUIREMENTS:
+FR-005

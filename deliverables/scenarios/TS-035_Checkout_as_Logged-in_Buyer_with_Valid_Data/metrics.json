@@ -1,0 +1,19 @@
+{
+  "scenario_id": "TS-035",
+  "scenario_title": "Checkout as Logged-in Buyer with Valid Data",
+  "variant_count": 432,
+  "expected_variant_count": 432,
+  "parameters": {
+    "User_Type": 1,
+    "Input_Validity": 1,
+    "Payment_Method": 3,
+    "Address_State": 2,
+    "Cart_Items": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-035_Checkout_as_Logged-in_Buyer_with_Valid_Data/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

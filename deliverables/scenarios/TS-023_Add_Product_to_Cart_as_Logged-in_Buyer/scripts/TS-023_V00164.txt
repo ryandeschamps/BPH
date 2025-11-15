@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-023_V00164
+
+SCENARIO: Sort Product Listing by Popularity
+VARIANT: V00164
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:10
+
+DESCRIPTION:
+As a user, I want to sort products by popularity, so that I can see the most popular items first.
+
+GIVEN:
+- Buyer is logged in with account john.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Sort Product Listing by Popularity
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Empty
+  Device: Desktop
+  Network_Speed: Medium
+  Product_Variation: Size_Selected
+  Quantity: Single
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: john.davis@example.com
+  First_Name: John
+  Last_Name: Davis
+  Network_Speed: Medium
+  Order_ID: ORD-174949
+  Order_Quantity: 1
+  Order_Total: 67.19
+  Password: weak
+  Phone: +1-982-921-6510
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 67.19
+  Product_SKU: SKU-56073
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-465065828
+  User_Type: Buyer
+  ZIP_Code: 61341
+
+RELATED REQUIREMENTS:
+FR-003

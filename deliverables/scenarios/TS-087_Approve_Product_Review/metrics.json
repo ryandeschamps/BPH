@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-087",
+  "scenario_title": "Approve Product Review",
+  "variant_count": 36,
+  "expected_variant_count": 36,
+  "parameters": {
+    "User_Type": 1,
+    "Review_Status": 1,
+    "Action": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-087_Approve_Product_Review/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

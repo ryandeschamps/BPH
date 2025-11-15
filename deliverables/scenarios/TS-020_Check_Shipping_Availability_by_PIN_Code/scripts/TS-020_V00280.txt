@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00280
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00280
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- Buyer is logged in with account sarah.smith@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  PIN_Code_State: Not_Available
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.smith@example.com
+  First_Name: Sarah
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-612618
+  Order_Quantity: 2
+  Order_Total: 516.22
+  Password: Test@123
+  Phone: +1-536-641-8146
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Sports Shorts
+  Product_Price: 258.11
+  Product_SKU: SKU-78159
+  Product_Size: XXL
+  Product_Sub_Category: Jeans
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-336595308
+  User_Type: Buyer
+  ZIP_Code: 59375
+
+RELATED REQUIREMENTS:
+FR-003

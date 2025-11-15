@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-020_V00388
+
+SCENARIO: Product Browse by Sub-Category
+VARIANT: V00388
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:08
+
+DESCRIPTION:
+As a user, I want to browse products by selecting a sub-category, so that I can narrow down to specific product types.
+
+GIVEN:
+- Buyer is logged in with account lisa.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Product Browse by Sub-Category
+
+THEN:
+- System displays appropriate error message
+- Action is NOT completed
+
+EXPECTED RESULT:
+- System state unchanged
+- Error logged appropriately
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Invalid
+  Network_Speed: High
+  PIN_Code_State: Not_Available
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.johnson@example.com
+  First_Name: Lisa
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-346130
+  Order_Quantity: 4
+  Order_Total: 230.36
+  Password: weak
+  Phone: +1-547-212-8016
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Canvas Sneakers
+  Product_Price: 57.59
+  Product_SKU: SKU-45092
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-849147691
+  User_Type: Buyer
+  ZIP_Code: 78361
+
+RELATED REQUIREMENTS:
+FR-003

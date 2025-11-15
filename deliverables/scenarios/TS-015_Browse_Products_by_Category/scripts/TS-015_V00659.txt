@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00659
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00659
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account emily.jones@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+- User is on the login page
+- User account exists for emily.jones@example.com
+
+WHEN:
+- User enters email: emily.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Women
+  Device: Desktop
+  Network_Speed: Medium
+  Product_Count: One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.jones@example.com
+  First_Name: Emily
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-781568
+  Order_Quantity: 3
+  Order_Total: 185.67
+  Password: weak
+  Phone: +1-509-293-8108
+  Product_Category: Kids
+  Product_Color: Navy
+  Product_Name: Winter Coat
+  Product_Price: 61.89
+  Product_SKU: SKU-88580
+  Product_Size: M
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-383365576
+  User_Type: Buyer
+  ZIP_Code: 61230
+
+RELATED REQUIREMENTS:
+FR-014

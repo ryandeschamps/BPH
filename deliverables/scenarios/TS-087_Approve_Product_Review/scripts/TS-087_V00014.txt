@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-087_V00014
+
+SCENARIO: View Order Details
+VARIANT: V00014
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:41
+
+DESCRIPTION:
+As an admin, I want to view complete order details (items, prices, addresses, payment status), so that I can fulfill orders correctly.
+
+GIVEN:
+- Admin is logged in with account mary.miller@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Order Details
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Action: Approve
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: Medium
+  Review_Status: Pending
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.miller@example.com
+  First_Name: Mary
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-901405
+  Order_Quantity: 3
+  Order_Total: 252.84
+  Password: weak
+  Phone: +1-318-815-5716
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 84.28
+  Product_SKU: SKU-99508
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-602657463
+  User_Type: Admin
+  ZIP_Code: 19113
+
+RELATED REQUIREMENTS:
+FR-017

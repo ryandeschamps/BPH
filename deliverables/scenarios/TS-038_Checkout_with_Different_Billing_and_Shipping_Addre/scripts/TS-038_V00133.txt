@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-038_V00133
+
+SCENARIO: Empty Cart Handling
+VARIANT: V00133
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a buyer with an empty cart, I want to see a message indicating my cart is empty, so that I know to add items.
+
+GIVEN:
+- Buyer is logged in with account lisa.williams@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Both_Saved
+  Address_Type: Different_Addresses
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 02/28
+  Card_Number: 4532-****-****-3408
+  Device: Tablet
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-578354
+  Order_Quantity: 4
+  Order_Total: 1000.2
+  Password: weak
+  Phone: +1-866-251-4813
+  Product_Category: Men
+  Product_Color: Black
+  Product_Name: Wool Sweater
+  Product_Price: 250.05
+  Product_SKU: SKU-42722
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-638663271
+  User_Type: Buyer
+  ZIP_Code: 22175
+
+RELATED REQUIREMENTS:
+FR-007

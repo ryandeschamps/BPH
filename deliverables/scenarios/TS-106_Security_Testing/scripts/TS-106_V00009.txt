@@ -1,0 +1,66 @@
+TEST SCRIPT: TS-106_V00009
+
+SCENARIO: Export Report to Excel
+VARIANT: V00009
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:49
+
+DESCRIPTION:
+As an admin, I want to export reports to Excel format, so that I can perform further analysis.
+
+GIVEN:
+- User has role: User
+- Using Chrome browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Export Report to Excel
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Network_Speed: Low
+  Security_Type: SSL_Certificate
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: jane.brown@example.com
+  First_Name: Jane
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-973018
+  Order_Quantity: 1
+  Order_Total: 239.67
+  Password: weak
+  Phone: +1-306-534-9359
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Wool Sweater
+  Product_Price: 239.67
+  Product_SKU: SKU-89654
+  Product_Size: S
+  Product_Sub_Category: T-Shirts
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-830831646
+  User_Type: N/A
+  ZIP_Code: 37549
+
+RELATED REQUIREMENTS:
+FR-022

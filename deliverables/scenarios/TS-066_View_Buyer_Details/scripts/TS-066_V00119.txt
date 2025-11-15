@@ -1,0 +1,67 @@
+TEST SCRIPT: TS-066_V00119
+
+SCENARIO: View Own Reviews
+VARIANT: V00119
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:32
+
+DESCRIPTION:
+As a buyer, I want to view reviews I've written, so that I can track my feedback.
+
+GIVEN:
+- Admin is logged in with account mary.rodriguez@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: View Own Reviews
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Buyer_Status: No_Orders
+  Device: Desktop
+  Network_Speed: Medium
+  User_Type: Admin
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.rodriguez@example.com
+  First_Name: Mary
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-171578
+  Order_Quantity: 3
+  Order_Total: 192.87
+  Password: weak
+  Phone: +1-460-255-7915
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Cotton T-Shirt
+  Product_Price: 64.29
+  Product_SKU: SKU-29787
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-271067552
+  User_Type: Admin
+  ZIP_Code: 48058
+
+RELATED REQUIREMENTS:
+FR-011, FR-010

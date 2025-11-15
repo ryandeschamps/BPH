@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00133
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00133
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account mary.davis@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Address_State: Saved
+  Address_Type: Same_Address
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: High
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 10/25
+  Card_Number: 4532-****-****-8045
+  Device: Tablet
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: High
+  Order_ID: ORD-833083
+  Order_Quantity: 2
+  Order_Total: 78.64
+  Password: weak
+  Phone: +1-579-814-4924
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 39.32
+  Product_SKU: SKU-57625
+  Product_Size: XS
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-686600420
+  User_Type: Buyer
+  ZIP_Code: 70639
+
+RELATED REQUIREMENTS:
+FR-007

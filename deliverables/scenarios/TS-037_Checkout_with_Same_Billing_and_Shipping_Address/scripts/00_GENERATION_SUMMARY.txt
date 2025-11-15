@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:17
+Total Scripts: 216
+Total Scenarios: 1
+Generation Time: 0.1 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-037: View Cart Subtotal and Total
+  Variants: 216
+  Files: TS-037_V*.txt

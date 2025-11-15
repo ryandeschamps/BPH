@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-009_V00248
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00248
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for mary.garcia@example.com
+
+WHEN:
+- User enters email: mary.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- System displays error: 'Invalid email or password'
+- User is NOT authenticated
+- User remains on login page
+
+EXPECTED RESULT:
+- No session created
+- Failed login attempt logged
+- Verified on Edge/Mobile
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Edge
+  Device: Mobile
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  OAuth_State: Already_Linked
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.garcia@example.com
+  First_Name: Mary
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-900175
+  Order_Quantity: 3
+  Order_Total: 249.9
+  Password: weak
+  Phone: +1-588-330-3960
+  Product_Category: Women
+  Product_Color: Green
+  Product_Name: Cotton T-Shirt
+  Product_Price: 83.3
+  Product_SKU: SKU-92145
+  Product_Size: M
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-162303660
+  User_Type: Visitor
+  ZIP_Code: 18307
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

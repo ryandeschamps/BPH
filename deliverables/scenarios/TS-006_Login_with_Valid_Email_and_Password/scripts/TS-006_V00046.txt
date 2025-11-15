@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00046
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00046
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account david.johnson@example.com
+- Using Firefox browser on Desktop device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Firefox
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: david.johnson@example.com
+  First_Name: David
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-360867
+  Order_Quantity: 1
+  Order_Total: 280.13
+  Password: Test@123
+  Phone: +1-760-189-2503
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 280.13
+  Product_SKU: SKU-93596
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-509889039
+  User_Type: Buyer
+  ZIP_Code: 24419
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,68 @@
+TEST SCRIPT: TS-006_V00061
+
+SCENARIO: Email Verification Link Validation
+VARIANT: V00061
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:59
+
+DESCRIPTION:
+As a new buyer, I want to verify my email address via verification link, so that I can activate my account.
+
+GIVEN:
+- Buyer is logged in with account emily.rodriguez@example.com
+- Using Safari browser on Tablet device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Email Verification Link Validation
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Account_State: Active_Multiple_Sessions
+  Browser: Safari
+  Device: Tablet
+  Input_Validity: Valid
+  Network_Speed: High
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.rodriguez@example.com
+  First_Name: Emily
+  Last_Name: Rodriguez
+  Network_Speed: High
+  Order_ID: ORD-127338
+  Order_Quantity: 3
+  Order_Total: 382.11
+  Password: Test@123
+  Phone: +1-491-777-3886
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 127.37
+  Product_SKU: SKU-56064
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-988904119
+  User_Type: Buyer
+  ZIP_Code: 58186
+
+RELATED REQUIREMENTS:
+FR-002

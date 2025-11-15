@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00282
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00282
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account sarah.jones@example.com
+- Using Edge browser on Desktop device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Desktop
+  Failure_Reason: Declined
+  Network_Speed: Low
+  Payment_Method: Credit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 02/29
+  Card_Number: 4532-****-****-4731
+  Device: Desktop
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-795787
+  Order_Quantity: 4
+  Order_Total: 1107.44
+  Password: weak
+  Phone: +1-742-433-5648
+  Product_Category: Kids
+  Product_Color: White
+  Product_Name: Winter Coat
+  Product_Price: 276.86
+  Product_SKU: SKU-61772
+  Product_Size: XXL
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-450337970
+  User_Type: Buyer
+  ZIP_Code: 29702
+
+RELATED REQUIREMENTS:
+FR-006

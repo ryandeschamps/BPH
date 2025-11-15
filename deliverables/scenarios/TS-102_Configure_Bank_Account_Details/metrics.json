@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-102",
+  "scenario_title": "Configure Bank Account Details",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Bank_Field": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-102_Configure_Bank_Account_Details/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

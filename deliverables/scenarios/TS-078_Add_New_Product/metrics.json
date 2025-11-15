@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-078",
+  "scenario_title": "Add New Product",
+  "variant_count": 144,
+  "expected_variant_count": 144,
+  "parameters": {
+    "User_Type": 1,
+    "Product_Type": 2,
+    "Image_Count": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-078_Add_New_Product/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

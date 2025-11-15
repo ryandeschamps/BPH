@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00554
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00554
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account david.williams@example.com
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for david.williams@example.com
+
+WHEN:
+- User enters email: david.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Men
+  Device: Mobile
+  Network_Speed: Medium
+  Product_Count: None
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.williams@example.com
+  First_Name: David
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-234520
+  Order_Quantity: 4
+  Order_Total: 283.84
+  Password: weak
+  Phone: +1-579-717-6529
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Winter Coat
+  Product_Price: 70.96
+  Product_SKU: SKU-45838
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-890061557
+  User_Type: Buyer
+  ZIP_Code: 49607
+
+RELATED REQUIREMENTS:
+FR-014

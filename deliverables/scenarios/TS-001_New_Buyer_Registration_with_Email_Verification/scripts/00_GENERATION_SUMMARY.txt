@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:42:57
+Total Scripts: 864
+Total Scenarios: 1
+Generation Time: 0.2 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-001: New Buyer Registration with Email Verification
+  Variants: 864
+  Files: TS-001_V*.txt

@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00736
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00736
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account robert.johnson@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for robert.johnson@example.com
+
+WHEN:
+- User enters email: robert.johnson@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: Many
+  Sub_Category_Type: Shirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: robert.johnson@example.com
+  First_Name: Robert
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-507275
+  Order_Quantity: 1
+  Order_Total: 255.94
+  Password: weak
+  Phone: +1-593-892-6830
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Cotton T-Shirt
+  Product_Price: 255.94
+  Product_SKU: SKU-83630
+  Product_Size: XL
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-790337090
+  User_Type: Buyer
+  ZIP_Code: 13775
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

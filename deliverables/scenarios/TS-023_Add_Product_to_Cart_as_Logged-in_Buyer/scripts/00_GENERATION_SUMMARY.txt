@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:10
+Total Scripts: 576
+Total Scenarios: 1
+Generation Time: 0.2 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-023: Sort Product Listing by Popularity
+  Variants: 576
+  Files: TS-023_V*.txt

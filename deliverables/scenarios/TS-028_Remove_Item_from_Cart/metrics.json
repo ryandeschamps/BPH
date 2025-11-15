@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-028",
+  "scenario_title": "Remove Item from Cart",
+  "variant_count": 216,
+  "expected_variant_count": 216,
+  "parameters": {
+    "User_Type": 1,
+    "Cart_State": 2,
+    "Removal_Action": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-028_Remove_Item_from_Cart/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

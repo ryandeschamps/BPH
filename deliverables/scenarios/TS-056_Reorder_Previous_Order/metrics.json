@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-056",
+  "scenario_title": "Reorder Previous Order",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Reorder_Items": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-056_Reorder_Previous_Order/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

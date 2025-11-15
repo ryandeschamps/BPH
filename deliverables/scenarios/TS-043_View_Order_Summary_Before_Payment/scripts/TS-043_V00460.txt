@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00460
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00460
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account jane.johnson@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_Items: Mixed_Prices
+  Device: Desktop
+  Network_Speed: High
+  Shipping_Cost: Standard
+  Tax_Applicable: Yes
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.johnson@example.com
+  First_Name: Jane
+  Last_Name: Johnson
+  Network_Speed: High
+  Order_ID: ORD-909652
+  Order_Quantity: 2
+  Order_Total: 312.42
+  Password: weak
+  Phone: +1-320-133-2105
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Winter Coat
+  Product_Price: 156.21
+  Product_SKU: SKU-97843
+  Product_Size: XL
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-989831282
+  User_Type: Buyer
+  ZIP_Code: 73625
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

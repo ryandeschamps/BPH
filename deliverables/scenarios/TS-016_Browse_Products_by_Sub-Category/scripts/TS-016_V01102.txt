@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01102
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01102
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Safari browser on Mobile device
+- Network speed: High
+- User is on the login page
+- User account exists for david.jones@example.com
+
+WHEN:
+- User enters email: david.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Network_Speed: High
+  Product_Count: One
+  Sub_Category_Type: TShirts
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-240318
+  Order_Quantity: 2
+  Order_Total: 318.26
+  Password: weak
+  Phone: +1-420-185-4743
+  Product_Category: Men
+  Product_Color: Beige
+  Product_Name: Leather Jacket
+  Product_Price: 159.13
+  Product_SKU: SKU-69811
+  Product_Size: M
+  Product_Sub_Category: Jackets
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-451075218
+  User_Type: Buyer
+  ZIP_Code: 17036
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

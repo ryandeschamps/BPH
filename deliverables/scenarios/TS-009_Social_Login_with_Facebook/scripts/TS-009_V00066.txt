@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-009_V00066
+
+SCENARIO: Login with Unverified Email
+VARIANT: V00066
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:00
+
+DESCRIPTION:
+As a buyer who hasn't verified email, I want to be prevented from logging in, so that email verification is enforced.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Edge browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for emily.smith@example.com
+
+WHEN:
+- User enters email: emily.smith@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Visitor dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Auth_Method: Facebook
+  Browser: Edge
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Low
+  OAuth_State: Denied
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-564852
+  Order_Quantity: 3
+  Order_Total: 691.68
+  Password: Test@123
+  Phone: +1-801-315-8510
+  Product_Category: Women
+  Product_Color: Red
+  Product_Name: Silk Scarf
+  Product_Price: 230.56
+  Product_SKU: SKU-61104
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-417953023
+  User_Type: Visitor
+  ZIP_Code: 82601
+
+RELATED REQUIREMENTS:
+FR-001, FR-002

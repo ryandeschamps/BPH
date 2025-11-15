@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00828
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00828
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account sarah.jones@example.com
+- Using Edge browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for sarah.jones@example.com
+
+WHEN:
+- User enters email: sarah.jones@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Category_Type: Kids
+  Device: Tablet
+  Network_Speed: Low
+  Product_Count: One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: Low
+  Order_ID: ORD-995937
+  Order_Quantity: 5
+  Order_Total: 268.4
+  Password: weak
+  Phone: +1-707-600-2381
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Canvas Sneakers
+  Product_Price: 53.68
+  Product_SKU: SKU-54570
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-123691957
+  User_Type: Buyer
+  ZIP_Code: 60422
+
+RELATED REQUIREMENTS:
+FR-014

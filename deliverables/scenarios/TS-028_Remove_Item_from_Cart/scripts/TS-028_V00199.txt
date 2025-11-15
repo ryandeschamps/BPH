@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-028_V00199
+
+SCENARIO: View Product Variations (Size and Color)
+VARIANT: V00199
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:13
+
+DESCRIPTION:
+As a user, I want to see available sizes and colors for a product, so that I can select my preferred variant.
+
+GIVEN:
+- Buyer is logged in with account robert.williams@example.com
+- Using Safari browser on Desktop device
+- Network speed: High
+- User is viewing a product page
+
+WHEN:
+- User performs the action described in scenario: View Product Variations (Size and Color)
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Cart_State: Multiple_Items
+  Device: Desktop
+  Network_Speed: High
+  Removal_Action: Remove_Last_Item
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: robert.williams@example.com
+  First_Name: Robert
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-504076
+  Order_Quantity: 5
+  Order_Total: 683.25
+  Password: weak
+  Phone: +1-446-796-9220
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Denim Jeans
+  Product_Price: 136.65
+  Product_SKU: SKU-34647
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-630007344
+  User_Type: Buyer
+  ZIP_Code: 17917
+
+RELATED REQUIREMENTS:
+FR-005

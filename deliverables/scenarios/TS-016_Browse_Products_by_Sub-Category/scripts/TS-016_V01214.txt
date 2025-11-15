@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01214
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01214
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account michael.martinez@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for michael.martinez@example.com
+
+WHEN:
+- User enters email: michael.martinez@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Network_Speed: Medium
+  Product_Count: Few
+  Sub_Category_Type: Dresses
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: michael.martinez@example.com
+  First_Name: Michael
+  Last_Name: Martinez
+  Network_Speed: Medium
+  Order_ID: ORD-222761
+  Order_Quantity: 2
+  Order_Total: 109.78
+  Password: weak
+  Phone: +1-412-785-5614
+  Product_Category: Kids
+  Product_Color: Red
+  Product_Name: Denim Jeans
+  Product_Price: 54.89
+  Product_SKU: SKU-28681
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-428413393
+  User_Type: Buyer
+  ZIP_Code: 61590
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

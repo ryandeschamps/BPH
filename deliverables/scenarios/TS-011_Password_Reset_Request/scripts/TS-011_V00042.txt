@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00042
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00042
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account robert.miller@example.com
+- Using Chrome browser on Mobile device
+- Network speed: Low
+- User is on the login page
+- User account exists for robert.miller@example.com
+
+WHEN:
+- User enters email: robert.miller@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Mobile
+  Email_State: Registered
+  Input_Validity: Valid
+  Network_Speed: Low
+  Reset_Link_State: Expired
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.miller@example.com
+  First_Name: Robert
+  Last_Name: Miller
+  Network_Speed: Low
+  Order_ID: ORD-358422
+  Order_Quantity: 1
+  Order_Total: 156.39
+  Password: Test@123
+  Phone: +1-464-620-9210
+  Product_Category: Men
+  Product_Color: Green
+  Product_Name: Casual Shirt
+  Product_Price: 156.39
+  Product_SKU: SKU-12130
+  Product_Size: XL
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-413335183
+  User_Type: Buyer
+  ZIP_Code: 97165
+
+RELATED REQUIREMENTS:
+FR-001

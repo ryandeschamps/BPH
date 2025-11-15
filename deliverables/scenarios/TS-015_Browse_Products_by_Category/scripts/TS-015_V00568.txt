@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00568
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00568
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account lisa.garcia@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for lisa.garcia@example.com
+
+WHEN:
+- User enters email: lisa.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Category_Type: Men
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: None
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: lisa.garcia@example.com
+  First_Name: Lisa
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-339582
+  Order_Quantity: 4
+  Order_Total: 1063.56
+  Password: weak
+  Phone: +1-251-353-7532
+  Product_Category: Men
+  Product_Color: Brown
+  Product_Name: Denim Jeans
+  Product_Price: 265.89
+  Product_SKU: SKU-42454
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-735201174
+  User_Type: Buyer
+  ZIP_Code: 98963
+
+RELATED REQUIREMENTS:
+FR-014

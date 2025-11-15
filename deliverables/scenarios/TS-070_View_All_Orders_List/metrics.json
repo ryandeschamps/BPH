@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-070",
+  "scenario_title": "View All Orders List",
+  "variant_count": 108,
+  "expected_variant_count": 108,
+  "parameters": {
+    "User_Type": 1,
+    "Order_Filter": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-070_View_All_Orders_List/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-014_V00119
+
+SCENARIO: Password Reset via Email Link
+VARIANT: V00119
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:03
+
+DESCRIPTION:
+As a buyer, I want to reset my password using the email link, so that I can create a new password and login.
+
+GIVEN:
+- Buyer is logged in with account sarah.jones@example.com
+- Using Firefox browser on Desktop device
+- Network speed: Medium
+
+WHEN:
+- User performs the action described in scenario: Password Reset via Email Link
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Desktop
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Results_Count: Zero
+  Search_Query: No_Match
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.jones@example.com
+  First_Name: Sarah
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-993860
+  Order_Quantity: 3
+  Order_Total: 338.73
+  Password: Test@123
+  Phone: +1-825-484-1308
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 112.91
+  Product_SKU: SKU-55406
+  Product_Size: XS
+  Product_Sub_Category: Jackets
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-362464086
+  User_Type: Buyer
+  ZIP_Code: 51909
+
+RELATED REQUIREMENTS:
+FR-001

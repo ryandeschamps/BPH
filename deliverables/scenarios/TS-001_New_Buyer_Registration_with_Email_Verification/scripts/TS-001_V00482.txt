@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00482
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00482
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: emily.miller@example.com
+- User enters phone: +1-223-825-8128
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_FirstName
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_FirstName
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Field_Values: Missing_FirstName
+  Input_Validity: Invalid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: emily.miller@example.com
+  First_Name: Emily
+  Last_Name: Miller
+  Network_Speed: Medium
+  Order_ID: ORD-610560
+  Order_Quantity: 1
+  Order_Total: 192.95
+  Password: weak
+  Phone: +1-223-825-8128
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Silk Scarf
+  Product_Price: 192.95
+  Product_SKU: SKU-27365
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-669756826
+  User_Type: Visitor
+  ZIP_Code: 22194
+
+RELATED REQUIREMENTS:
+FR-002

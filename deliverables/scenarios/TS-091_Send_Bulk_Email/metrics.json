@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-091",
+  "scenario_title": "Send Bulk Email",
+  "variant_count": 72,
+  "expected_variant_count": 72,
+  "parameters": {
+    "User_Type": 1,
+    "Target_Audience": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-091_Send_Bulk_Email/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

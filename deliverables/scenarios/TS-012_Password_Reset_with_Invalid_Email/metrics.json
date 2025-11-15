@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-012",
+  "scenario_title": "Password Reset with Invalid Email",
+  "variant_count": 72,
+  "expected_variant_count": 72,
+  "parameters": {
+    "User_Type": 1,
+    "Input_Validity": 1,
+    "Email_State": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-012_Password_Reset_with_Invalid_Email/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

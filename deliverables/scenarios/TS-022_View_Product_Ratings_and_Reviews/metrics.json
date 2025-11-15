@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-022",
+  "scenario_title": "View Product Ratings and Reviews",
+  "variant_count": 864,
+  "expected_variant_count": 864,
+  "parameters": {
+    "User_Type": 2,
+    "Review_Count": 3,
+    "Rating_Range": 4,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-022_View_Product_Ratings_and_Reviews/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-043_V00065
+
+SCENARIO: Move Item from Wishlist to Cart
+VARIANT: V00065
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:22
+
+DESCRIPTION:
+As a buyer, I want to move wishlist items to my cart, so that I can proceed to purchase.
+
+GIVEN:
+- Buyer is logged in with account jane.rodriguez@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Cart_Items: Single
+  Device: Desktop
+  Network_Speed: Medium
+  Shipping_Cost: Standard
+  Tax_Applicable: No
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: jane.rodriguez@example.com
+  First_Name: Jane
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-644308
+  Order_Quantity: 2
+  Order_Total: 378.08
+  Password: weak
+  Phone: +1-216-743-9446
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Summer Dress
+  Product_Price: 189.04
+  Product_SKU: SKU-80855
+  Product_Size: XS
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: DHL
+  Tracking_ID: TRK-409244064
+  User_Type: Buyer
+  ZIP_Code: 99752
+
+RELATED REQUIREMENTS:
+FR-006, FR-007

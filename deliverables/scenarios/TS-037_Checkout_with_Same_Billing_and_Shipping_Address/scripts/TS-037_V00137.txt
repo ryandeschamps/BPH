@@ -1,0 +1,72 @@
+TEST SCRIPT: TS-037_V00137
+
+SCENARIO: View Cart Subtotal and Total
+VARIANT: V00137
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:17
+
+DESCRIPTION:
+As a buyer, I want to see item prices, subtotal, and total in my cart, so that I know how much I'll pay.
+
+GIVEN:
+- Buyer is logged in with account david.jones@example.com
+- Using Edge browser on Desktop device
+- Network speed: Medium
+- User has access to shopping cart
+
+WHEN:
+- User selects quantity: 1
+- User clicks 'Add to Cart' button
+
+THEN:
+- Item is added to shopping cart
+- Cart quantity badge is updated
+- Success message is displayed: 'Item added to cart'
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Address_State: Saved
+  Address_Type: Same_Address
+  Browser: Edge
+  Device: Desktop
+  Network_Speed: Medium
+  Payment_Method: Credit_Card
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Edge
+  CVV: ***
+  Card_Expiry: 07/26
+  Card_Number: 4532-****-****-7629
+  Device: Desktop
+  Email: david.jones@example.com
+  First_Name: David
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-609431
+  Order_Quantity: 2
+  Order_Total: 523.68
+  Password: weak
+  Phone: +1-889-985-5157
+  Product_Category: Men
+  Product_Color: Navy
+  Product_Name: Denim Jeans
+  Product_Price: 261.84
+  Product_SKU: SKU-81733
+  Product_Size: L
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-654701587
+  User_Type: Buyer
+  ZIP_Code: 68457
+
+RELATED REQUIREMENTS:
+FR-007

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-036",
+  "scenario_title": "Checkout Without Login",
+  "variant_count": 72,
+  "expected_variant_count": 72,
+  "parameters": {
+    "User_Type": 1,
+    "Redirect_Action": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-036_Checkout_Without_Login/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

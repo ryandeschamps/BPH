@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-039_V00531
+
+SCENARIO: Add Product to Wishlist as Guest
+VARIANT: V00531
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:18
+
+DESCRIPTION:
+As a guest user, I want to be prompted to login when adding to wishlist, so that my wishlist is saved.
+
+GIVEN:
+- Buyer is logged in with account michael.brown@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Guest
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Card_Type: Visa
+  Device: Tablet
+  Network_Speed: Low
+  Payment_Method: Debit_Card
+  Payment_Status: Timeout
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: ***
+  Card_Expiry: 06/28
+  Card_Number: 4532-****-****-5148
+  Device: Tablet
+  Email: michael.brown@example.com
+  First_Name: Michael
+  Last_Name: Brown
+  Network_Speed: Low
+  Order_ID: ORD-711142
+  Order_Quantity: 1
+  Order_Total: 161.22
+  Password: weak
+  Phone: +1-558-834-1157
+  Product_Category: Men
+  Product_Color: Burgundy
+  Product_Name: Cotton T-Shirt
+  Product_Price: 161.22
+  Product_SKU: SKU-48794
+  Product_Size: XL
+  Product_Sub_Category: Accessories
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-913540263
+  User_Type: Buyer
+  ZIP_Code: 87834
+
+RELATED REQUIREMENTS:
+FR-006

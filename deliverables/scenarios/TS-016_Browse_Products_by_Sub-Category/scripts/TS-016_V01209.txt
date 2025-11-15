@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V01209
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V01209
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account mary.davis@example.com
+- Using Safari browser on Desktop device
+- Network speed: Low
+- User is on the login page
+- User account exists for mary.davis@example.com
+
+WHEN:
+- User enters email: mary.davis@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Desktop
+  Network_Speed: Low
+  Product_Count: Few
+  Sub_Category_Type: Dresses
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: mary.davis@example.com
+  First_Name: Mary
+  Last_Name: Davis
+  Network_Speed: Low
+  Order_ID: ORD-177979
+  Order_Quantity: 5
+  Order_Total: 1422.55
+  Password: weak
+  Phone: +1-245-567-5327
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Leather Jacket
+  Product_Price: 284.51
+  Product_SKU: SKU-38605
+  Product_Size: L
+  Product_Sub_Category: Jackets
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-269985587
+  User_Type: Buyer
+  ZIP_Code: 43489
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-020",
+  "scenario_title": "Check Shipping Availability by PIN Code",
+  "variant_count": 432,
+  "expected_variant_count": 432,
+  "parameters": {
+    "User_Type": 2,
+    "Input_Validity": 2,
+    "PIN_Code_State": 3,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-020_Check_Shipping_Availability_by_PIN_Code/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

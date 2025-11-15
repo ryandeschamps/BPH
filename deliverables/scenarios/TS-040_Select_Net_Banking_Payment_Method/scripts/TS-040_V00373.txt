@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-040_V00373
+
+SCENARIO: Add Product to Wishlist as Logged-In Buyer
+VARIANT: V00373
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:19
+
+DESCRIPTION:
+As a logged-in buyer, I want to add products to my wishlist, so that I can save items for later consideration.
+
+GIVEN:
+- Buyer is logged in with account mary.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Add Product to Wishlist as Logged-In Buyer
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Bank: Citi
+  Browser: Firefox
+  Device: Mobile
+  Network_Speed: High
+  Payment_Method: Net_Banking
+  Payment_Status: Failed
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: mary.jones@example.com
+  First_Name: Mary
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-704636
+  Order_Quantity: 5
+  Order_Total: 1358.2
+  Password: weak
+  Phone: +1-374-962-5953
+  Product_Category: Kids
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 271.64
+  Product_SKU: SKU-64707
+  Product_Size: S
+  Product_Sub_Category: Shirts
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-999639009
+  User_Type: Buyer
+  ZIP_Code: 85691
+
+RELATED REQUIREMENTS:
+FR-006

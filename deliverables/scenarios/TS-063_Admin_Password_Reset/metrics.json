@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-063",
+  "scenario_title": "Admin Password Reset",
+  "variant_count": 72,
+  "expected_variant_count": 72,
+  "parameters": {
+    "User_Type": 1,
+    "Reset_State": 2,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-063_Admin_Password_Reset/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

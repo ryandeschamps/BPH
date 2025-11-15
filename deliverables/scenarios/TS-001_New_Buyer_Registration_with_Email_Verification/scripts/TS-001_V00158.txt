@@ -1,0 +1,80 @@
+TEST SCRIPT: TS-001_V00158
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00158
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Firefox browser on Mobile device
+- Network speed: Medium
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: robert.rodriguez@example.com
+- User enters phone: +1-430-103-2258
+- User enters password: Test@123
+- User confirms password: SecurePass123!
+- Data validation issue: Invalid_Email
+- User clicks 'Register' button
+
+THEN:
+- System creates new user account
+- Verification email is sent to user's email address
+- Success message is displayed: 'Registration successful. Please check your email to verify your account.'
+- User is redirected to login page or verification page
+
+EXPECTED RESULT:
+- Database contains new user record for robert.rodriguez@example.com
+- Verification email sent to robert.rodriguez@example.com
+- User account status = 'Unverified' or 'Pending Verification'
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Field_Values: Invalid_Email
+  Input_Validity: Valid
+  Network_Speed: Medium
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: robert.rodriguez@example.com
+  First_Name: Robert
+  Last_Name: Rodriguez
+  Network_Speed: Medium
+  Order_ID: ORD-443227
+  Order_Quantity: 3
+  Order_Total: 698.04
+  Password: Test@123
+  Phone: +1-430-103-2258
+  Product_Category: Kids
+  Product_Color: Brown
+  Product_Name: Silk Scarf
+  Product_Price: 232.68
+  Product_SKU: SKU-65453
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 789 Pine Rd, Chicago, IL 60601
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-531866456
+  User_Type: Visitor
+  ZIP_Code: 45472
+
+RELATED REQUIREMENTS:
+FR-002

@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00197
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00197
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account james.jones@example.com
+- Using Firefox browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for james.jones@example.com
+
+WHEN:
+- User enters email: james.jones@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Tablet
+  Email_State: Verified
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Reset_Link_State: Already_Used
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: james.jones@example.com
+  First_Name: James
+  Last_Name: Jones
+  Network_Speed: Medium
+  Order_ID: ORD-718300
+  Order_Quantity: 3
+  Order_Total: 400.77
+  Password: Test@123
+  Phone: +1-479-646-6648
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Sports Shorts
+  Product_Price: 133.59
+  Product_SKU: SKU-15451
+  Product_Size: L
+  Product_Sub_Category: Jeans
+  Rating: 3
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-543480975
+  User_Type: Buyer
+  ZIP_Code: 49352
+
+RELATED REQUIREMENTS:
+FR-001

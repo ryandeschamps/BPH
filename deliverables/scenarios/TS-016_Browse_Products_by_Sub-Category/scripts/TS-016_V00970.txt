@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-016_V00970
+
+SCENARIO: Sub-Admin Login with Role-Based Access
+VARIANT: V00970
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:05
+
+DESCRIPTION:
+As a sub-admin, I want to login with my credentials and see only the sections I have access to, so that I can perform my assigned tasks.
+
+GIVEN:
+- Buyer is logged in with account emily.garcia@example.com
+- Using Edge browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.garcia@example.com
+
+WHEN:
+- User enters email: emily.garcia@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: One
+  Sub_Category_Type: Jeans
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.garcia@example.com
+  First_Name: Emily
+  Last_Name: Garcia
+  Network_Speed: High
+  Order_ID: ORD-232318
+  Order_Quantity: 2
+  Order_Total: 586.8
+  Password: weak
+  Phone: +1-963-568-2591
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Denim Jeans
+  Product_Price: 293.4
+  Product_SKU: SKU-31963
+  Product_Size: M
+  Product_Sub_Category: Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-927453922
+  User_Type: Buyer
+  ZIP_Code: 82008
+
+RELATED REQUIREMENTS:
+FR-014, FR-024

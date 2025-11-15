@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:11
+Total Scripts: 432
+Total Scenarios: 1
+Generation Time: 0.1 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-025: View Product Ratings in Listing
+  Variants: 432
+  Files: TS-025_V*.txt

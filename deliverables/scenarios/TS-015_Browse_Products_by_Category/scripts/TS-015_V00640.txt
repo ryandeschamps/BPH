@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00640
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00640
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account sarah.williams@example.com
+- Using Edge browser on Desktop device
+- Network speed: High
+- User is on the login page
+- User account exists for sarah.williams@example.com
+
+WHEN:
+- User enters email: sarah.williams@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Edge/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Edge
+  Category_Type: Women
+  Device: Desktop
+  Network_Speed: High
+  Product_Count: Few
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Edge
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: sarah.williams@example.com
+  First_Name: Sarah
+  Last_Name: Williams
+  Network_Speed: High
+  Order_ID: ORD-331046
+  Order_Quantity: 1
+  Order_Total: 246.76
+  Password: weak
+  Phone: +1-750-600-3697
+  Product_Category: Kids
+  Product_Color: Green
+  Product_Name: Sports Shorts
+  Product_Price: 246.76
+  Product_SKU: SKU-91762
+  Product_Size: M
+  Product_Sub_Category: T-Shirts
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-687563870
+  User_Type: Buyer
+  ZIP_Code: 71715
+
+RELATED REQUIREMENTS:
+FR-014

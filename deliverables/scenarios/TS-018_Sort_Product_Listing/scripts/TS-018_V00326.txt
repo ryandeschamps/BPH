@@ -1,0 +1,70 @@
+TEST SCRIPT: TS-018_V00326
+
+SCENARIO: Product Search with No Results
+VARIANT: V00326
+PRIORITY: Medium
+GENERATED: 2025-11-15 19:43:07
+
+DESCRIPTION:
+As a user, I want to see a helpful message when my search returns no results, so that I can try different keywords.
+
+GIVEN:
+- Buyer is logged in with account michael.garcia@example.com
+- Using Chrome browser on Desktop device
+- Network speed: Medium
+- User is on the product search page
+
+WHEN:
+- User enters search term: 'product'
+- User clicks 'Search' button
+
+THEN:
+- Search results are displayed
+- Results are relevant to search term
+- Product count is shown
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Chrome/Desktop
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Desktop
+  Network_Speed: Medium
+  Sort_By: Oldest_First
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Desktop
+  Email: michael.garcia@example.com
+  First_Name: Michael
+  Last_Name: Garcia
+  Network_Speed: Medium
+  Order_ID: ORD-357686
+  Order_Quantity: 3
+  Order_Total: 782.31
+  Password: weak
+  Phone: +1-809-902-9873
+  Product_Category: Men
+  Product_Color: Blue
+  Product_Name: Casual Shirt
+  Product_Price: 260.77
+  Product_SKU: SKU-62189
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-487124941
+  User_Type: Buyer
+  ZIP_Code: 30866
+
+RELATED REQUIREMENTS:
+FR-003

@@ -1,0 +1,14 @@
+TEST SCRIPT GENERATION SUMMARY
+================================================================================
+
+Generated: 2025-11-15 19:43:05
+Total Scripts: 1440
+Total Scenarios: 1
+Generation Time: 0.4 seconds
+
+SCRIPTS BY SCENARIO:
+--------------------------------------------------------------------------------
+
+TS-016: Sub-Admin Login with Role-Based Access
+  Variants: 1440
+  Files: TS-016_V*.txt

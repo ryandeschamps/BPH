@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00117
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00117
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account lisa.williams@example.com
+- Using Chrome browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for lisa.williams@example.com
+
+WHEN:
+- User enters email: lisa.williams@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Chrome/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Chrome
+  Device: Tablet
+  Email_State: Verified
+  Input_Validity: Valid
+  Network_Speed: Low
+  Reset_Link_State: Valid
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Chrome
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Low
+  Order_ID: ORD-638789
+  Order_Quantity: 5
+  Order_Total: 546.85
+  Password: Test@123
+  Phone: +1-962-518-3231
+  Product_Category: Men
+  Product_Color: Red
+  Product_Name: Summer Dress
+  Product_Price: 109.37
+  Product_SKU: SKU-15899
+  Product_Size: XL
+  Product_Sub_Category: T-Shirts
+  Rating: 2
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 654 Maple Dr, Phoenix, AZ 85001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-803972418
+  User_Type: Buyer
+  ZIP_Code: 96845
+
+RELATED REQUIREMENTS:
+FR-001

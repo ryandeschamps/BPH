@@ -1,0 +1,78 @@
+TEST SCRIPT: TS-001_V00531
+
+SCENARIO: New Buyer Registration with Email Verification
+VARIANT: V00531
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:42:57
+
+DESCRIPTION:
+As a visitor, I want to register on the website with my email and personal details, so that I can create an account and make purchases.
+
+GIVEN:
+- User is a visitor (not logged in)
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the registration page
+- Registration system is active and accepting new users
+
+WHEN:
+- User enters first name: John
+- User enters last name: Doe
+- User enters email: sarah.johnson@example.com
+- User enters phone: +1-813-387-1190
+- User enters password: weak
+- User confirms password: SecurePass123!
+- Data validation issue: Missing_LastName
+- User clicks 'Register' button
+
+THEN:
+- System displays validation error for: Missing_LastName
+- User account is NOT created
+- User remains on registration page
+
+EXPECTED RESULT:
+- No database changes
+- No email sent
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Field_Values: Missing_LastName
+  Input_Validity: Invalid
+  Network_Speed: Low
+  User_Type: Visitor
+
+TEST DATA:
+  Billing_Address: 321 Elm St, Houston, TX 77001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: sarah.johnson@example.com
+  First_Name: Sarah
+  Last_Name: Johnson
+  Network_Speed: Low
+  Order_ID: ORD-916161
+  Order_Quantity: 2
+  Order_Total: 362.08
+  Password: weak
+  Phone: +1-813-387-1190
+  Product_Category: Women
+  Product_Color: Navy
+  Product_Name: Summer Dress
+  Product_Price: 181.04
+  Product_SKU: SKU-14784
+  Product_Size: M
+  Product_Sub_Category: Dresses
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: UPS
+  Tracking_ID: TRK-108485093
+  User_Type: Visitor
+  ZIP_Code: 15387
+
+RELATED REQUIREMENTS:
+FR-002

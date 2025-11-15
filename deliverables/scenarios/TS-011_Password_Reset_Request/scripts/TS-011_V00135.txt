@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00135
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00135
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account david.smith@example.com
+- Using Safari browser on Tablet device
+- Network speed: Low
+- User is on the login page
+- User account exists for david.smith@example.com
+
+WHEN:
+- User enters email: david.smith@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Email_State: Verified
+  Input_Validity: Valid
+  Network_Speed: Low
+  Reset_Link_State: Valid
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: david.smith@example.com
+  First_Name: David
+  Last_Name: Smith
+  Network_Speed: Low
+  Order_ID: ORD-960582
+  Order_Quantity: 1
+  Order_Total: 179.25
+  Password: Test@123
+  Phone: +1-251-221-5500
+  Product_Category: Men
+  Product_Color: White
+  Product_Name: Wool Sweater
+  Product_Price: 179.25
+  Product_SKU: SKU-68830
+  Product_Size: XXL
+  Product_Sub_Category: Accessories
+  Rating: 5
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 123 Main St, New York, NY 10001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-112793246
+  User_Type: Buyer
+  ZIP_Code: 82385
+
+RELATED REQUIREMENTS:
+FR-001

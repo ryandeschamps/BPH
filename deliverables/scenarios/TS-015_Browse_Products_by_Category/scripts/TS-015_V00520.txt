@@ -1,0 +1,74 @@
+TEST SCRIPT: TS-015_V00520
+
+SCENARIO: Admin Login to Admin Panel
+VARIANT: V00520
+PRIORITY: Critical
+GENERATED: 2025-11-15 19:43:04
+
+DESCRIPTION:
+As an admin, I want to login to the admin panel with my credentials, so that I can manage the website.
+
+GIVEN:
+- Buyer is logged in with account emily.smith@example.com
+- Using Firefox browser on Tablet device
+- Network speed: High
+- User is on the login page
+- User account exists for emily.smith@example.com
+
+WHEN:
+- User enters email: emily.smith@example.com
+- User enters password: weak
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Firefox/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Category_Type: Men
+  Device: Tablet
+  Network_Speed: High
+  Product_Count: One
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 123 Main St, New York, NY 10001
+  Browser: Firefox
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: emily.smith@example.com
+  First_Name: Emily
+  Last_Name: Smith
+  Network_Speed: High
+  Order_ID: ORD-759621
+  Order_Quantity: 3
+  Order_Total: 537.06
+  Password: weak
+  Phone: +1-480-786-9363
+  Product_Category: Women
+  Product_Color: Gray
+  Product_Name: Sports Shorts
+  Product_Price: 179.02
+  Product_SKU: SKU-99309
+  Product_Size: S
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-182821214
+  User_Type: Buyer
+  ZIP_Code: 26459
+
+RELATED REQUIREMENTS:
+FR-014

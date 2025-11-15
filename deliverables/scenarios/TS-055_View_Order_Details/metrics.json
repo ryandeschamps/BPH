@@ -1,0 +1,16 @@
+{
+  "scenario_id": "TS-055",
+  "scenario_title": "View Order Details",
+  "variant_count": 144,
+  "expected_variant_count": 144,
+  "parameters": {
+    "User_Type": 1,
+    "Order_Status": 4,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-055_View_Order_Details/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

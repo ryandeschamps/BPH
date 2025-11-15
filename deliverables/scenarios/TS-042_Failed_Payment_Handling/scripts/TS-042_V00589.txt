@@ -1,0 +1,69 @@
+TEST SCRIPT: TS-042_V00589
+
+SCENARIO: Remove Item from Wishlist
+VARIANT: V00589
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:20
+
+DESCRIPTION:
+As a buyer, I want to remove items from my wishlist, so that I can keep only items I'm interested in.
+
+GIVEN:
+- Buyer is logged in with account jane.jones@example.com
+- Using Firefox browser on Mobile device
+- Network speed: High
+
+WHEN:
+- User performs the action described in scenario: Remove Item from Wishlist
+
+THEN:
+- Action is completed successfully
+- System displays success confirmation
+
+EXPECTED RESULT:
+- System state updated correctly
+- All business rules satisfied
+- Verified on Firefox/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Firefox
+  Device: Mobile
+  Failure_Reason: Insufficient_Funds
+  Network_Speed: High
+  Payment_Method: Debit_Card
+  Retry_Action: Change_Method
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Firefox
+  CVV: ***
+  Card_Expiry: 04/27
+  Card_Number: 4532-****-****-2803
+  Device: Mobile
+  Email: jane.jones@example.com
+  First_Name: Jane
+  Last_Name: Jones
+  Network_Speed: High
+  Order_ID: ORD-546677
+  Order_Quantity: 4
+  Order_Total: 1178.32
+  Password: weak
+  Phone: +1-704-118-9419
+  Product_Category: Kids
+  Product_Color: Burgundy
+  Product_Name: Denim Jeans
+  Product_Price: 294.58
+  Product_SKU: SKU-10971
+  Product_Size: L
+  Product_Sub_Category: Accessories
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: USPS
+  Tracking_ID: TRK-782328560
+  User_Type: Buyer
+  ZIP_Code: 72275
+
+RELATED REQUIREMENTS:
+FR-006

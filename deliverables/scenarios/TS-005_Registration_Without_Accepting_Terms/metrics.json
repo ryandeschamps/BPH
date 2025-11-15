@@ -1,0 +1,17 @@
+{
+  "scenario_id": "TS-005",
+  "scenario_title": "Registration Without Accepting Terms",
+  "variant_count": 36,
+  "expected_variant_count": 36,
+  "parameters": {
+    "User_Type": 1,
+    "Input_Validity": 1,
+    "Terms_Accepted": 1,
+    "Browser": 4,
+    "Device": 3,
+    "Network_Speed": 3
+  },
+  "output_file": "deliverables/scenarios/TS-005_Registration_Without_Accepting_Terms/variants.csv",
+  "status": "success",
+  "error_message": ""
+}

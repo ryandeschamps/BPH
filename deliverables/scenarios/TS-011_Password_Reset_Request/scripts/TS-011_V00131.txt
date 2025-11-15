@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00131
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00131
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account lisa.williams@example.com
+- Using Safari browser on Mobile device
+- Network speed: Medium
+- User is on the login page
+- User account exists for lisa.williams@example.com
+
+WHEN:
+- User enters email: lisa.williams@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Mobile
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Mobile
+  Email_State: Verified
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Reset_Link_State: Valid
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Mobile
+  Email: lisa.williams@example.com
+  First_Name: Lisa
+  Last_Name: Williams
+  Network_Speed: Medium
+  Order_ID: ORD-338890
+  Order_Quantity: 1
+  Order_Total: 184.18
+  Password: Test@123
+  Phone: +1-535-489-5040
+  Product_Category: Kids
+  Product_Color: Black
+  Product_Name: Cotton T-Shirt
+  Product_Price: 184.18
+  Product_SKU: SKU-61412
+  Product_Size: S
+  Product_Sub_Category: Dresses
+  Rating: 1
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 456 Oak Ave, Los Angeles, CA 90001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-236184966
+  User_Type: Buyer
+  ZIP_Code: 41414
+
+RELATED REQUIREMENTS:
+FR-001

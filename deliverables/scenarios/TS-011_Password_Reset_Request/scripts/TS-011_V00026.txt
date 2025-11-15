@@ -1,0 +1,75 @@
+TEST SCRIPT: TS-011_V00026
+
+SCENARIO: Login with Google Social Login
+VARIANT: V00026
+PRIORITY: High
+GENERATED: 2025-11-15 19:43:01
+
+DESCRIPTION:
+As a buyer, I want to login using my Google account, so that I can access the website without creating separate credentials.
+
+GIVEN:
+- Buyer is logged in with account john.smith@example.com
+- Using Safari browser on Tablet device
+- Network speed: Medium
+- User is on the login page
+- User account exists for john.smith@example.com
+
+WHEN:
+- User enters email: john.smith@example.com
+- User enters password: Test@123
+- User clicks 'Login' button
+
+THEN:
+- User is successfully authenticated
+- User is redirected to Buyer dashboard/home page
+- User session is established
+- User name is displayed in header
+
+EXPECTED RESULT:
+- User session cookie/token is created
+- Last login timestamp is updated in database
+- Verified on Safari/Tablet
+
+VARIANT PARAMETERS:
+  Browser: Safari
+  Device: Tablet
+  Email_State: Registered
+  Input_Validity: Valid
+  Network_Speed: Medium
+  Reset_Link_State: Valid
+  User_Type: Buyer
+
+TEST DATA:
+  Billing_Address: 789 Pine Rd, Chicago, IL 60601
+  Browser: Safari
+  CVV: N/A
+  Card_Expiry: N/A
+  Card_Number: N/A
+  Device: Tablet
+  Email: john.smith@example.com
+  First_Name: John
+  Last_Name: Smith
+  Network_Speed: Medium
+  Order_ID: ORD-379178
+  Order_Quantity: 1
+  Order_Total: 84.75
+  Password: Test@123
+  Phone: +1-547-350-4726
+  Product_Category: Women
+  Product_Color: Beige
+  Product_Name: Silk Scarf
+  Product_Price: 84.75
+  Product_SKU: SKU-31787
+  Product_Size: XXL
+  Product_Sub_Category: Dresses
+  Rating: 4
+  Review_Text: Great product! Would recommend to others. Quali...
+  Shipping_Address: 321 Elm St, Houston, TX 77001
+  Shipping_Carrier: FedEx
+  Tracking_ID: TRK-801607003
+  User_Type: Buyer
+  ZIP_Code: 91092
+
+RELATED REQUIREMENTS:
+FR-001
